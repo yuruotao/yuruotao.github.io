@@ -1,3 +1,111 @@
+/* size system: 13.33 16 19.2 23.04 27.65 33.18 39.81 
+color system: palatte: #E63946 #F1FAEE #A8DADC #457B9D #1D3557
+ color #E63946: close colors: tints: #e94d59 shades: #cf333f
+ color #: close colors: tints: # shades: #
+ color #1D3557: close colors: tints: #344968 shades: #1a304e
+
+ 
+ 
+ 
+ 
+ */
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Marcellus", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* hero section starts */
+header {
+  height: 100vh;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0.671)),
+    url(../content_files/image/fox3.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+nav {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #fff;
+}
+
+.nav_text {
+  margin-bottom: 30px;
+  font-family: "Rubik", sans-serif;
+  width: 400px;
+  position: absolute;
+  right: 55%;
+  top: 20%;
+}
+
+.big_header {
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: 10%;
+  color: white;
+  margin-bottom: 20px;
+}
+.big_header_text {
+  margin-bottom: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: white;
+}
+
+.nav_button {
+  margin-bottom: 30px;
+  font-family: "Rubik", sans-serif;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  align-items: center;
+  border: #e63946;
+  background-color: #e63946;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 32px;
+  border-radius: 55px;
+  text-transform: uppercase;
+  line-height: 2;
+}
+.nav_button:hover {
+  border: #eb616b;
+  background-color: #eb616b;
+  cursor: pointer;
+}
+
+section {
+  padding: 96px 0;
+}
+
+.container {
+  margin: 0 auto;
 }
