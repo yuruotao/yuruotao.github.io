@@ -6,10 +6,9 @@ color system: palatte: #E63946 #F1FAEE #A8DADC #457B9D #1D3557
 
  
  
- 
- 
  */
 
+/* overall settings start*/
 * {
   margin: 0;
   padding: 0;
@@ -25,38 +24,104 @@ html {
 
 body {
   min-height: 100vh;
-  max-width: 120rem;
+  max-width: 100rem;
   margin-left: auto;
   margin-right: auto;
 }
+/* overall settings end */
 
-/* hero section starts */
+/* header starts */
+/* navigator starts */
 header {
-  height: 41vh;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0.671)),
-    url(../content_files/image/fox3.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
-}
-
-nav {
-  font-size: 2rem;
-  font-weight: 700;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3rem;
-  padding-top: 3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1faee;
+
+  height: 9.6rem;
+  padding: 2.4rem 4.8rem;
+  gap: 10rem;
+}
+
+.logo {
+  height: 3rem;
+  display: inline-block;
+}
+
+.logo_container {
+  display: block;
+  justify-items: center;
+  align-self: center;
+}
+
+.nav {
+  display: flex;
+  align-content: space-between;
+  gap: 16rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 3.2rem;
+}
+
+.nav-link {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #457b9d;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  transition: all 0.3s;
+  color: #000;
+}
+
+.nav_button {
+  font-family: "Rubik", sans-serif;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  align-items: center;
+  border: #eb616b;
+  background-color: #eb616b;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 3.2rem;
+  border-radius: 5.5rem;
+  text-transform: uppercase;
+  line-height: 2;
+  letter-spacing: 100%;
+}
+
+.nav_button:hover,
+.nav_button:active {
+  transition: all 0.3s;
+  border: #e63946;
+  background-color: #e63946;
+  cursor: pointer;
   color: #fff;
 }
 
-.nav_text {
+/* navigator ends */
+
+/* header body */
+
+.header_text {
   margin-bottom: 3rem;
   font-family: "Rubik", sans-serif;
   width: 40rem;
@@ -73,33 +138,12 @@ nav {
   color: white;
   margin-bottom: 2rem;
 }
+
 .big_header_text {
   margin-bottom: 3rem;
   font-weight: 600;
   line-height: 1.2;
   color: white;
-}
-
-.nav_button {
-  margin-bottom: 3rem;
-  font-family: "Rubik", sans-serif;
-  display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 700;
-  align-items: center;
-  border: #e63946;
-  background-color: #e63946;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.6rem 3.2rem;
-  border-radius: 5.5rem;
-  text-transform: uppercase;
-  line-height: 2;
-}
-.nav_button:hover {
-  border: #eb616b;
-  background-color: #eb616b;
-  cursor: pointer;
 }
 
 section {
@@ -109,3 +153,10 @@ section {
 .container {
   margin: 0 auto;
 }
+
+/* header background
+  background-image: linear-gradient(rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0.671)),
+  url(../content_files/image/fox3.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: contain; */
