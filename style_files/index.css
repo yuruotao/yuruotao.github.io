@@ -18,81 +18,81 @@ color system: palatte: #E63946 #F1FAEE #A8DADC #457B9D #1D3557
 
 html {
   color: #333;
-  font-size: 16px;
+  font-size: 62.5%;
   font-weight: 400;
   font-family: "Marcellus", sans-serif;
 }
 
 body {
   min-height: 100vh;
-  max-width: 1200px;
+  max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* hero section starts */
 header {
-  height: 100vh;
-  font-size: 20px;
+  height: 41vh;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0.671)),
     url(../content_files/image/fox3.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
 }
 
 nav {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   color: #fff;
 }
 
 .nav_text {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
   font-family: "Rubik", sans-serif;
-  width: 400px;
+  width: 40rem;
   position: absolute;
-  right: 55%;
+  right: 50%;
   top: 20%;
 }
 
 .big_header {
-  font-size: 80px;
+  font-size: 8rem;
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: 10%;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .big_header_text {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
   font-weight: 600;
   line-height: 1.2;
   color: white;
 }
 
 .nav_button {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
   font-family: "Rubik", sans-serif;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
   align-items: center;
   border: #e63946;
   background-color: #e63946;
   color: #fff;
   text-decoration: none;
-  padding: 6px 32px;
-  border-radius: 55px;
+  padding: 0.6rem 3.2rem;
+  border-radius: 5.5rem;
   text-transform: uppercase;
   line-height: 2;
 }
@@ -103,7 +103,7 @@ nav {
 }
 
 section {
-  padding: 96px 0;
+  padding: 9.6rem 0;
 }
 
 .container {
