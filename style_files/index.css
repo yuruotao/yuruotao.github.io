@@ -18,7 +18,7 @@ color system: palatte: #E63946 #F1FAEE #A8DADC #457B9D #1D3557
 }
 
 html {
-  color: #333;
+  color: #262626;
   font-size: 62.5%;
   font-weight: 400;
   font-family: "Marcellus", sans-serif;
@@ -35,6 +35,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  text-size-adjust: 100%;
 }
 
 /* overall settings end */
@@ -43,85 +44,63 @@ body {
 /* navigator starts */
 header {
   font-family: "Rubik", sans-serif;
+
   display: flex;
+  align-content: space-between;
   justify-content: start;
   flex-direction: column;
   align-items: center;
+
   background-color: #fff;
 
-  height: 7rem;
-  padding: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: thin solid#262626;
 }
 
-.nav {
-  display: flex;
-  align-content: space-between;
-  gap: 10rem;
-}
-
+/* fold navigator starts */
 .nav_fold {
+  display: flex;
+  flex-wrap: wrap;
+  grid-auto-flow: column;
+
+  width: 100%;
   background-color: #000;
+  color: #fff;
+  height: 3.5rem;
+  top: 0px;
+  /* z-index: ; */
+  box-shadow: rgb(219, 219, 219) 0px -0.0625rem 0px inset;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+
+  align-items: center;
+  position: relative;
+  text-align: left;
+}
+
+/* fold navigator ends */
+
+.nav_sticky {
+  background-color: #fff;
+
+  display: flex;
+  gap: 15rem;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-items: center;
   gap: 3.2rem;
-}
-
-.nav-link {
-  font-family: "Rubik", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #457b9d;
-}
-
-.nav-link:link,
-.nav-link:visited {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: all 0.3s;
-}
-
-.nav-link:hover,
-.nav-link:active {
-  transition: all 0.3s;
-  color: #000;
-}
-
-.nav_button {
-  font-family: "Rubik", sans-serif;
-  display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 700;
-  align-items: center;
-  border: #eb616b;
-  background-color: #eb616b;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.6rem 3.2rem;
-  border-radius: 5.5rem;
-  text-transform: uppercase;
-  line-height: 2;
-  letter-spacing: 100%;
-}
-
-.nav_button:hover,
-.nav_button:active {
-  transition: all 0.3s;
-  border: #e63946;
-  background-color: #e63946;
-  cursor: pointer;
-  color: #fff;
 }
 
 /* navigator ends */
 
-/* header body */
+.container {
+  margin-top: 10rem;
+}
 
 /* 
 .header_text {
@@ -168,21 +147,28 @@ background-size: contain; */
 /* logo container and logo */
 .logo_black {
   display: inline-block;
+  text-decoration: none;
 }
 
 .logo_white {
   filter: brightness(0) invert(1);
   display: inline-block;
+  text-decoration: none;
+}
+
+.logo_huge {
+  height: 8rem;
 }
 
 .logo_big {
   height: 6rem;
-  display: inline-block;
 }
 
 .logo_small {
   height: 4rem;
-  display: inline-block;
+  position: relative;
+  width: 100%;
+  align-items: center;
 }
 
 .logo_container {
@@ -192,28 +178,144 @@ background-size: contain; */
 
 /* buttons */
 
-.button_full {
-  font-family: "Rubik", sans-serif;
+.button_full,
+.button_full:visited,
+.button_full::after {
   display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 700;
-  align-items: center;
-  border: #eb616b;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 2;
+  padding: 0.3rem 3rem;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: 0.2rem solid #eb616b;
   background-color: #eb616b;
   color: #fff;
-  text-decoration: none;
-  padding: 0.6rem 3.2rem;
+
   border-radius: 5.5rem;
-  text-transform: uppercase;
+}
+
+.button_full:hover,
+.button_full:active {
+  transition: all 0.3s;
+  border: 0.2rem solid #e63946;
+  background-color: #e63946;
+  cursor: pointer;
+  color: #fff;
+}
+
+.button_empty,
+.button_empty:visited,
+.button_empty::after {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
   line-height: 2;
-  letter-spacing: 100%;
+  padding: 0.6rem 3.2rem;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: 0.2rem solid #1d3557;
+  background-color: #fff;
+  color: #1d3557;
+
+  border-radius: 5.5rem;
 }
 
-.button_empty {
+.button_empty:hover,
+.button_empty:active {
+  transition: all 0.3s;
+  border: 0.2rem solid #e63946;
+  background-color: #e63946;
+  cursor: pointer;
+  color: #fff;
 }
 
-.button_show_all {
+.button_show_all,
+.button_show_all:visited,
+.button_show_all::after {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 2;
+  padding: 0.6rem 3.2rem;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: 0.2rem solid #1d3557;
+  background-color: #fff;
+  color: #1d3557;
+
+  border-radius: 5.5rem;
 }
+/* link visit effect start */
+
+.link_animate1,
+.link_animate1::after,
+.link_animate1:link,
+.link_animate1:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1d3557;
+
+  background: linear-gradient(#e63946 0 0) var(--p, 0%) / var(--p, 0%) no-repeat;
+  transition: 0.4s, background-position 0s;
+}
+
+.link_animate1:hover,
+.link_animate1:active {
+  --p: 100%;
+  color: #fff;
+}
+/* link with animation1 stop */
+
+.link_animate2,
+.link_animate2:visited,
+.link_animate2::after {
+  display: inline-block;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: #1d3557;
+
+  background: linear-gradient(#e63946 0 0) no-repeat var(--p, 200%) 100% / 200%
+    var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.link_animate2:hover,
+.link_animate2:active {
+  --p: 100%;
+  --t: 0.3s;
+  cursor: pointer;
+  color: white;
+}
+
+/* link with animation2 stop */
+
+/* link visit effect over */
 
 /* round components */
 
@@ -227,4 +329,9 @@ background-size: contain; */
 }
 
 .round_top {
+}
+
+/* specifically centering */
+.side_button {
+  width: ;
 }
