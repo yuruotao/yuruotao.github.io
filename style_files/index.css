@@ -9,7 +9,9 @@ color system: palatte: #E63946 #F1FAEE #A8DADC #457B9D #1D3557
  */
 
 /* overall settings start*/
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,45 +22,45 @@ html {
   font-size: 62.5%;
   font-weight: 400;
   font-family: "Marcellus", sans-serif;
+  box-sizing: border-box;
 }
 
-body {
-  min-height: 100vh;
-  max-width: 100rem;
-  margin-left: auto;
-  margin-right: auto;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 /* overall settings end */
 
 /* header starts */
 /* navigator starts */
 header {
+  font-family: "Rubik", sans-serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-direction: column;
   align-items: center;
-  background-color: #f1faee;
+  background-color: #fff;
 
-  height: 9.6rem;
-  padding: 2.4rem 4.8rem;
-  gap: 10rem;
-}
-
-.logo {
-  height: 3rem;
-  display: inline-block;
-}
-
-.logo_container {
-  display: block;
-  justify-items: center;
-  align-self: center;
+  height: 7rem;
+  padding: 1.5rem;
 }
 
 .nav {
   display: flex;
   align-content: space-between;
-  gap: 16rem;
+  gap: 10rem;
+}
+
+.nav_fold {
+  background-color: #000;
 }
 
 .nav-list {
@@ -71,7 +73,7 @@ header {
 
 .nav-link {
   font-family: "Rubik", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #457b9d;
 }
@@ -81,7 +83,7 @@ header {
   display: inline-block;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1rem;
   transition: all 0.3s;
 }
 
@@ -121,6 +123,7 @@ header {
 
 /* header body */
 
+/* 
 .header_text {
   margin-bottom: 3rem;
   font-family: "Rubik", sans-serif;
@@ -135,7 +138,7 @@ header {
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: 10%;
-  color: white;
+  color: #333;
   margin-bottom: 2rem;
 }
 
@@ -160,3 +163,68 @@ section {
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: contain; */
+
+/* components */
+/* logo container and logo */
+.logo_black {
+  display: inline-block;
+}
+
+.logo_white {
+  filter: brightness(0) invert(1);
+  display: inline-block;
+}
+
+.logo_big {
+  height: 6rem;
+  display: inline-block;
+}
+
+.logo_small {
+  height: 4rem;
+  display: inline-block;
+}
+
+.logo_container {
+  display: block;
+  align-self: center;
+}
+
+/* buttons */
+
+.button_full {
+  font-family: "Rubik", sans-serif;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  align-items: center;
+  border: #eb616b;
+  background-color: #eb616b;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 3.2rem;
+  border-radius: 5.5rem;
+  text-transform: uppercase;
+  line-height: 2;
+  letter-spacing: 100%;
+}
+
+.button_empty {
+}
+
+.button_show_all {
+}
+
+/* round components */
+
+.round {
+}
+
+.round_red {
+}
+
+.round_message {
+}
+
+.round_top {
+}
