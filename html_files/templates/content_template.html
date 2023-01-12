@@ -147,7 +147,8 @@ if(window.WebyGam) {
                         <li class="nav-item text-uppercase fade align-items-center d-none d-lg-flex">
                             <!-- point to papers -->
                             <!-- controlled by main-bundle -->
-                            <a aria-controls="journal-menu" aria-expanded="false" href="/papers" role="button" data-toggle="collapse" class="d-flex align-items-center accordion__toggle collapsed nav-link" data-target="#journal-menu">
+                            <!-- corresponding to the 2nd menu -->
+                            <a aria-controls="papers-menu" aria-expanded="false" href="/papers" role="button" data-toggle="collapse" class="d-flex align-items-center accordion__toggle collapsed nav-link" data-target="#papers-menu">
                             <span>papers</span>
                             <i class="icon-arrow-down ml-1"></i>
                         </a>
@@ -203,7 +204,7 @@ if(window.WebyGam) {
         </div>
     </nav>
         
-    <!-- contents in the lower button -->
+    <!-- contents in the lower button, projects -->
     <div id="journal-menu" data-slider-vport="screen-xl" class="collapse journal-menu bg-black-gray viewport-slider border-top border-dark-divider">
         <div class="journal-menu__container text-uppercase">
             <div class="slideshow">
@@ -211,57 +212,11 @@ if(window.WebyGam) {
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="journal-menu__item">
-                                <a href="/journal/science" title="Science" class="text-center text-light d-flex flex-column h-100">
-                                    <img src="/cms/asset/4e534987-197f-42ff-bf40-904306c0cec5/science.2023.379.issue-6627.cover.gif" loading="lazy" width="226" height="287" class="journal-menu__img mb-3">
-                                    <div class="journal-menu__text">science</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="journal-menu__item">
-                                <a href="/journal/sciadv" title="Science" class="text-center text-light d-flex flex-column h-100">
-                                    <img src="/cms/asset/57f02039-a3af-46c8-86e7-9f18473c4dc4/sciadv.2023.9.issue-1.cover.gif" loading="lazy" width="226" height="287" class="journal-menu__img mb-3">
-                                    <div class="journal-menu__text">science advances</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="journal-menu__item">
-                                <a href="/journal/sciimmunol" title="Science" class="text-center text-light d-flex flex-column h-100">
-                                    <img src="/cms/asset/85f99421-d45f-455d-b988-d03d83624407/sciimmunol.2023.8.issue-79.cover.gif" loading="lazy" width="226" height="287" class="journal-menu__img mb-3">
-                                    <div class="journal-menu__text">science immunology</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="journal-menu__item">
-                                <a href="/journal/scirobotics" title="Science" class="text-center text-light d-flex flex-column h-100">
-                                    <img src="/cms/asset/56f4b30d-f936-46be-a40c-99722e73e4e5/scirobotics.2022.7.issue-73.cover.gif" loading="lazy" width="226" height="287" class="journal-menu__img mb-3">
-                                    <div class="journal-menu__text">science robotics</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="journal-menu__item">
-                                <a href="/journal/signaling" title="Science" class="text-center text-light d-flex flex-column h-100">
-                                    <img src="/cms/asset/1e279a0e-e1fc-4983-9f3d-11b039211691/signaling.2023.16.issue-767.cover.gif" loading="lazy" width="226" height="287" class="journal-menu__img mb-3">
-                                    <div class="journal-menu__text">science signaling</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="journal-menu__item">
-                                <a href="/journal/stm" title="Science" class="text-center text-light d-flex flex-column h-100">
-                                    <img src="/cms/asset/1e15ac4b-2acc-490c-a379-65ca1ca8917e/stm.2023.15.issue-677.cover.gif" loading="lazy" width="226" height="287" class="journal-menu__img mb-3">
-                                    <div class="journal-menu__text">science translational medicine</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="journal-menu__item">
-                                <a href="https://spj.sciencemag.org/" title="Science Partner Journals" class="text-center text-light d-flex flex-column h-100">
-                                    <img src="/products/aaas/releasedAssets/images/spj-cover.png" loading="lazy" width="348" height="440" class="journal-menu__img mb-3">
-                                    <div class="journal-menu__text">science partner journals</div>
+                                <!-- point to project -->
+                                <a href="/html_files/projects/" title="Science" class="text-center text-light d-flex flex-column h-100">
+                                    <!-- point to project cover -->
+                                    <img src="/" loading="lazy" width="226" height="287" class="journal-menu__img mb-3" alt="the cover image for project1">
+                                    <div class="journal-menu__text">project1</div>
                                 </a>
                             </div>
                         </div>
@@ -272,8 +227,31 @@ if(window.WebyGam) {
             <a data-toggle="collapse" href="#journal-menu" role="button" aria-expanded="false" aria-controls="journal-menu" class="journal-menu__overlay header-overlay"></a>
     </div>
 
-    
+    <!-- contents in the lower button no.2, papers-->
+    <div id="papers-menu" data-slider-vport="screen-xl" class="collapse journal-menu bg-black-gray viewport-slider border-top border-dark-divider">
+        <div class="journal-menu__container text-uppercase">
+            <div class="slideshow">
+                <div data-loop="false" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="journal-menu__item">
+                                <!-- point to papers -->
+                                <a href="/" title="Science" class="text-center text-light d-flex flex-column h-100">
+                                    <!-- point to the cover of the paper -->
+                                    <img src="/" loading="lazy" width="226" height="287" class="journal-menu__img mb-3">
+                                    <div class="journal-menu__text">paper1</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <a data-toggle="collapse" href="#journal-menu" role="button" aria-expanded="false" aria-controls="journal-menu" class="journal-menu__overlay header-overlay"></a>
+    </div>
 
+
+    <!-- search need to be modified -->
     <!-- searcher expand content -->
     <div id="header-quick-search-wrapper" class="bg-black-gray header-quick-search collapse border-dark-divider border-top">
         <div class="container-fluid text-white">
@@ -286,9 +264,9 @@ if(window.WebyGam) {
                     <div aria-labelledby="#trigger-quick-search-form-0" id="quick-search-form-0" data-parent=".quick-search__items" role="tabpanel" class="collapse show ">
                         <form action="/action/doSearch" name="defaultQuickSearch" method="get">
                             <fieldset>
-                                <legend class="sr-only">Quick Search anywhere</legend>
+                                <legend class="sr-only">Quick Search Everywhere</legend>
                                 <div class="input-group option-0   animation-underline">
-                                    <label for="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac010" class="sr-only">Enter Search Term</label>
+                                    <label for="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac010" class="sr-only">Enter Search Keywords</label>
                                     <input type="search" id="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac010" name="AllField" autocomplete="off" placeholder="Enter Search Term" data-auto-complete-max-words="7" data-auto-complete-max-chars="32" data-contributors-conf="3" data-topics-conf="3" data-publication-titles-conf="3" data-history-items-conf="3" value="" class="quick-search__input form-control autocomplete"/>
                                 </div>
                             </fieldset>
@@ -379,7 +357,7 @@ if(window.WebyGam) {
           <h6 class="header-trending__title mini-title text-uppercase text-white font-weight-bold mb-2">Trending Terms:</h6>
           <ul class="text-uppercase list-unstyled pt-1 header-trending__list font-weight-bold list-inline">
             <li class="pb-3 pr-3 list-inline-item">
-              <a href="/action/doSearch?AllField=covid-19" class="btn btn-outline-primary--on-dark">intelligence</a>
+              <a href="/html_files/projects/intelligence.html" class="btn btn-outline-primary--on-dark">intelligence</a>
             </li>
             <li class="pb-3 pr-3 list-inline-item">
               <a href="/action/doSearch?AllField=climate" class="btn btn-outline-primary--on-dark">brain-computer interface</a>
@@ -410,10 +388,10 @@ if(window.WebyGam) {
                 <div class="header-sidebar__top__links pb-4">
                     <div class="d-flex justify-content-center">
                         <!-- need to be redirected to email send -->
-                        <a href="/action/ssostart?redirectUri=/doi/10.1126/sciadv.ade2988" class="text-uppercase btn btn-outline-dark mini-title mr-3 font-weight-bold">send message</a>
+                        <a href="/message.html" class="text-uppercase btn btn-outline-dark mini-title mr-3 font-weight-bold">send message</a>
                         <div class="pb-ad">
                             <!-- redirect to CV -->
-                            <a href="/action/clickThrough?id=501021&url=https%3A%2F%2Fpromo.aaas.org%2Fscience%2Fjoin%2F%3FCTC%3DSMLDJN&loc=%2Fdoi%2F10.1126%2Fsciadv.ade2988&pubId=41964753&placeholderId=501021&productId=501021" class="text-uppercase btn btn-primary mini-title text-white">Curriculum Vitae</a>
+                            <a href="/resume.html" class="text-uppercase btn btn-primary mini-title text-white">Curriculum Vitae</a>
                         </div>
                     </div>
                 </div>
@@ -432,7 +410,7 @@ if(window.WebyGam) {
 
                 <!-- links -->
                 <div class="nav-item font-weight-bolder">
-                    <a href="/" class="nav-link text-uppercase mini-title">yuruotao.com</a>
+                    <a href="/index.html" class="nav-link text-uppercase mini-title">yuruotao.com</a>
                 </div>
             </div>
 
@@ -441,19 +419,19 @@ if(window.WebyGam) {
         <div class="header-sidebar__bottom">
             <ul class="header-sidebar__nav border-top text-uppercase list-unstyled pt-3 mt-1 mb-0">
                 <li class="nav-item nav-item--secondary font-weight-bold">
-                    <a href="/custom-publishing" class="nav-link">learning</a>
+                    <a href="/learning.html" class="nav-link">learning</a>
                 </li>
                 <li class="nav-item nav-item--secondary font-weight-bold">
-                    <a href="/collections" class="nav-link">projects</a>
+                    <a href="/projects.html" class="nav-link">projects</a>
                 </li>
                 <li class="nav-item nav-item--secondary font-weight-bold">
-                    <a href="/videos" class="nav-link">papers</a>
+                    <a href="/papers.html" class="nav-link">papers</a>
                 </li>
                 <li class="nav-item nav-item--secondary font-weight-bold">
-                    <a href="/podcasts" class="nav-link">shikemanping</a>
+                    <a href="/shikemanping.html" class="nav-link">shikemanping</a>
                 </li>
                 <li class="nav-item nav-item--secondary font-weight-bold">
-                    <a href="/podcasts" class="nav-link">about</a>
+                    <a href="/ABOUT.html" class="nav-link">about</a>
                 </li>
             </ul>
 
@@ -480,7 +458,7 @@ if(window.WebyGam) {
                 </li>
                 <li class="nav-item header-social-media__item">
                     <!-- email respond html -->
-                    <a href="/content/page/email-alerts-and-rss-feeds" title="RSS feeds" class="nav-link btn">
+                    <a href="/message.html" title="RSS feeds" class="nav-link btn">
                     <i aria-hidden="true" class="icon-rss"></i>
                     </a>
                 </li>
@@ -495,19 +473,19 @@ if(window.WebyGam) {
 
                 <!-- change the logo here -->
                 <div class="header-sidebar-footer__logo">
-                    <img src="/specs/products/aaas/releasedAssets/images/logo.svg" alt="AAAS Logo"/>
+                    <img src="/resources/icon_svg/skmp_svg_black.svg" alt="Logo for yuruotao.com"/>
                 </div>
 
                 <!-- redirect to the 3 pages -->
                 <ul class="header-sidebar-footer__links list-inline">
                     <li class="list-inline-item header-sidebar-footer__links__item">
-                    <a href="/content/page/terms-service">Terms of Service</a>
+                    <a href="/ABOUT.html">Terms of Service</a>
                     </li>
                     <li class="list-inline-item header-sidebar-footer__links__item">
-                    <a href="/content/page/privacy-policy">Privacy Policy</a>
+                    <a href="/ABOUT.html">Privacy Policy</a>
                     </li>
                     <li class="list-inline-item header-sidebar-footer__links__item">
-                    <a href="/content/page/accessibility">Accessibility</a>
+                    <a href="/ABOUT.html">Accessibility</a>
                     </li>
                 </ul>
             </div>
@@ -527,16 +505,17 @@ if(window.WebyGam) {
         </button>
 
         <div class="navbar-in d-flex justify-content-start justify-content-sm-between container-fluid m-xl-auto w-100 px-0 px-lg-3 position-relative">
+            
             <!-- change the logo and redirect here -->
-            <a class="main-header__secondary__logo" href="/journal/sciadv">
-                <img src="/pb-assets/images/logos/sciadv-logo-1620488349693.svg"/>
+            <a class="main-header__secondary__logo" href="/index.html">
+                <img src="/resources/favicon/favicon.ico"/>
             </a>
 
         <div id="main-menu" data-parent="Science Advances" class="main-menu align-items-center">
             <div class="main-menu__nav d-flex justify-content-center">
                 <ul class="navbar-nav flex-row">
                     <li class="nav-item">
-                        <a id="menu-item-0" tabindex="" class="nav-link" href="/toc/sciadv/current">News</a>
+                        <a id="menu-item-0" tabindex="" class="nav-link" href="/index.html">News</a>
                     </li>
                     <li class="nav-item">
                         
@@ -545,9 +524,9 @@ if(window.WebyGam) {
             <div class="dropdown">
               <a id="menu-item-3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">About</a>
               <div aria-labelledby="menu-item-3" class="dropdown-menu">
-                <a href="/content/page/science-advances-mission-and-scope" class="dropdown-item">Why the website</a>
-                <a href="/content/page/science-advances-mission-and-scope" class="dropdown-item">Contents</a>
-                <a href="/content/page/science-advances-editorial-board" class="dropdown-item">About the author</a>
+                <a href="/ABOUT.html" class="dropdown-item">Why the website</a>
+                <a href="/index.html" class="dropdown-item">Contents</a>
+                <a href="/ABOUT.html" class="dropdown-item">About the author</a>
                 </div>
             </div>
           </li>
@@ -557,7 +536,7 @@ if(window.WebyGam) {
         <ul class="nav d-flex align-items-center h-100">
           <li class="nav-item align-items-center pr-0">
             <!-- redirect -->
-            <a href="https://cts.sciencemag.org/" class="btn py-1 px-3 mini-title btn-outline-secondary">Send Message</a>
+            <a href="/message.html" class="btn py-1 px-3 mini-title btn-outline-secondary">Send Message</a>
           </li>
           <li class="nav-item menu-more pr-0">
               <div class="dropdown">
@@ -570,7 +549,7 @@ if(window.WebyGam) {
     </div>
 
     <!-- redirect to sign up for email -->
-    <a href="/action/showPreferences?menuTab=Alerts" class="d-none d-xl-flex btn text-primary mini-title header-link p-0 mr-2x">GET UPDATE EMAIL</a>
+    <a href="/message.html" class="d-none d-xl-flex btn text-primary mini-title header-link p-0 mr-2x">GET UPDATE EMAIL</a>
 </div></div></div>
         
         <div>
@@ -582,18 +561,20 @@ if(window.WebyGam) {
         <div class="article-container">
 
         <!-- import css -->
-        <link id="build-style-article" rel="stylesheet" type="text/css" href="/products/aaas/releasedAssets/css/build-article-5421643ead8b85d2264d.css"/><article xmlns="http://www.w3.org/1999/xhtml" data-design="pill" data-has="right-rail" data-type="research-article" vocab="http://schema.org/" typeof="ScholarlyArticle" lang="en"><header data-extent="frontmatter"><div class="core-container"><div class="mb-1_5x mt-3">
+        <link id="build-style-article" rel="stylesheet" type="text/css" href="/products/aaas/releasedAssets/css/build-article-5421643ead8b85d2264d.css"/>
+        <article xmlns="http://www.w3.org/1999/xhtml" data-design="pill" data-has="right-rail" data-type="research-article" vocab="http://schema.org/" typeof="ScholarlyArticle" lang="en">
+            <header data-extent="frontmatter"><div class="core-container"><div class="mb-1_5x mt-3">
 
         <nav class="breadcrumbs">
             <div class="d-none d-sm-flex align-items-center">
                 <!-- redirect to home -->
-                <a href="https://www.science.org/" title="Home" class="crumb text-uppercase prev-crumb">Home</a>
+                <a href="/index.html" title="Home" class="crumb text-uppercase prev-crumb">Home</a>
                 <i class="icon-arrow-right mx-1"></i>
                 <!-- redirect to field -->
-                <a href="/journal/sciadv" title="Science Advances" class="crumb text-uppercase prev-crumb">shikemanping</a>
+                <a href="/" title="1st level" class="crumb text-uppercase prev-crumb">1st level</a>
                 <i class="icon-arrow-right mx-1"></i>
                 <!-- redirect to issue number, but same as the above -->
-                <a href="/toc/sciadv/8/51" title="Vol. 8, No. 51" class="crumb text-uppercase prev-crumb">Vol. 8, No. 51</a>
+                <a href="/" title="2nd level" class="crumb text-uppercase prev-crumb">2nd level</a>
                 <i class="icon-arrow-right mx-1"></i>
                 <!-- redirect to article itself -->
                 <span class="crumb text-uppercase current-crumb">Article title</span>
@@ -602,7 +583,8 @@ if(window.WebyGam) {
             <div class="d-flex d-sm-none align-items-center">
                 <i class="icon-arrow-left mr-1"></i>
                 <!-- whatever, redirect -->
-                <a href="/toc/sciadv/8/51" title="Back To Vol. 8, No. 51" class="crumb text-uppercase current-crumb">Back To Vol. 8, No. 51</a>
+                <!-- 2nd level back -->
+                <a href="/" title="Back" class="crumb text-uppercase current-crumb">Back</a>
             </div>
         </nav>
 
@@ -614,7 +596,7 @@ if(window.WebyGam) {
             <span>Essay</span>
         </div>
         <div class="meta-panel__overline">
-            <span>Politics</span>
+            <span>essay domain</span>
         </div>
     </div>
     <div class="meta-panel__right-content">
@@ -649,40 +631,93 @@ if(window.WebyGam) {
     </div>
 </div>
 </div>
-<h1 property="name">Title </h1>
+<h1 property="name">article Title </h1>
 <div class="contributors">
     <!-- authors -->
     <span class="authors">
         <span role="list">
             <span property="author" typeof="Person" role="listitem">
                 <a href="#con1">
-                    <span property="givenName">Min Hyouk</span>
-                    <span property="familyName">Kim</span>
+                    <span property="givenName">1st</span>
+                    <span property="familyName">author</span>
                 </a>
-                <a class="orcid-id" href="https://orcid.org/0000-0002-2225-0874" property="identifier" target="_blank">https://orcid.org/0000-0002-2225-0874</a>
             </span>, 
             <span property="author" typeof="Person" role="listitem">
                 <a href="#con2">
-                    <span property="givenName">Min Woo</span> 
-                    <span property="familyName">Jeong</span>
+                    <span property="givenName">2nd</span> 
+                    <span property="familyName">author</span>
                 </a> 
-                <a class="orcid-id" href="https://orcid.org/0000-0001-6305-1110" property="identifier" target="_blank">https://orcid.org/0000-0001-6305-1110</a>
             </span>
             <span data-displayed-on="sm" aria-hidden="true">, 
             <span>
                 <span data-action="reveal">[...]</span>
             </span> 
         </span>
-        <span data-hidden-on="sm">, <span property="author" typeof="Person" role="listitem"><a href="#con3"><span property="givenName">Jun Su</span> <span property="familyName">Kim</span></a></span></span><span data-hidden-on="sm">, <span property="author" typeof="Person" role="listitem"><a href="#con4"><span property="givenName">Tae Uk</span> <span property="familyName">Nam</span></a></span></span><span data-displayed-on="md" aria-hidden="true">, <span><span data-action="reveal">[...]</span></span> </span><span data-hidden-on="sm md">, <span property="author" typeof="Person" role="listitem"><a href="#con5"><span property="givenName">Ngoc Thanh Phuong</span> <span property="familyName">Vo</span></a></span></span><span data-hidden-on="sm md">, <span property="author" typeof="Person" role="listitem"><a href="#con6"><span property="givenName">Lihua</span> <span property="familyName">Jin</span></a> <a class="orcid-id" href="https://orcid.org/0000-0001-7812-9056" property="identifier" target="_blank">https://orcid.org/0000-0001-7812-9056</a></span></span><span data-hidden-on="sm md">, <span property="author" typeof="Person" role="listitem"><a href="#con7"><span property="givenName">Tae Il</span> <span property="familyName">Lee</span></a> <a class="orcid-id" href="https://orcid.org/0000-0001-9423-0912" property="identifier" target="_blank">https://orcid.org/0000-0001-9423-0912</a>
-        <a href="/cdn-cgi/l/email-protection#3541071b5950500202755254565d5a5b1b54561b5e470a5656085f4c5a5d755e5d401b54561b5e47" property="email"><span class="__cf_email__" data-cfemail="f98dcbd7959c9cceceb99e989a919697d7989ad7928b">[email&#160;protected]</span></a></span></span>, and <span property="author" typeof="Person" role="listitem"><a href="#con8"><span property="givenName">Jin Young</span> <span property="familyName">Oh</span></a> <a class="orcid-id" href="https://orcid.org/0000-0003-2260-9960" property="identifier" target="_blank">https://orcid.org/0000-0003-2260-9960</a> <a href="/cdn-cgi/l/email-protection#6115534f0d0404565621060002090e0f4f00024f0a135e02025c0b180e09210a09144f00024f0a13" property="email"><span class="__cf_email__" data-cfemail="5c286e723039396b6b1c3b3d3f343332723d3f72372e">[email&#160;protected]</span></a></span><span data-displayed-on="sm" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+5 authors</span></span> </span><span data-displayed-on="md" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+3 authors</span></span> </span><span data-displayed-on="none" data-on-display="sm md" aria-hidden="true"> <span data-action="hide">fewer</span></span></span></span>
-        
-        <a href="#tab-contributors" class="to-authors-affiliations" data-id="article-authors-viewall">Authors Info &amp; Affiliations</a></div><div class="core-self-citation"><div property="isPartOf" typeof="Periodical">
-            <span property="name">yuruotao.com</span>
-        </div>
-        <div class="core-date-published">
-            <span property="datePublished">21 Dec 2022</span>
-        </div>
+        <span data-hidden-on="sm">
+            <!-- 3rd author -->
+            <!-- <span property="author" typeof="Person" role="listitem">
+                <a href="#con3">
+                    <span property="givenName">Jun Su</span> 
+                    <span property="familyName">Kim</span>
+                </a>
+            </span> -->
+        </span>
+        <span data-hidden-on="sm">
+            <!-- 4th author -->
+            <!-- <span property="author" typeof="Person" role="listitem">
+                <a href="#con4">
+                    <span property="givenName">Tae Uk</span> 
+                    <span property="familyName">Nam</span>
+                </a>
+            </span> -->
+        </span>
+        <span data-displayed-on="md" aria-hidden="true">, 
+            <span>
+                <span data-action="reveal">[...]</span>
+            </span> 
+        </span>
+        <span data-hidden-on="sm md">
+            <!-- 5th author -->
+        </span>
+        <span data-hidden-on="sm md">
+            <!-- 6th author -->
+            <!-- <span property="author" typeof="Person" role="listitem">
+                <a href="#con6">
+                    <span property="givenName">Lihua</span> 
+                    <span property="familyName">Jin</span>
+                </a> 
+                <a class="orcid-id" href="https://orcid.org/0000-0001-7812-9056" property="identifier" target="_blank">https://orcid.org/0000-0001-7812-9056</a>
+            </span> -->
+        </span>
+        <span data-hidden-on="sm md">
+            <!-- up to 7 authors -->
+            <!-- <span property="author" typeof="Person" role="listitem">
+                <a href="#con7"><span property="givenName">Tae Il</span> 
+                    <span property="familyName">Lee</span>
+                </a>  -->
+        </span>
+    <span data-displayed-on="sm" aria-hidden="true">
+        <span>
+            <span data-action="reveal" data-style="btn">+5 authors</span>
+        </span> 
+    </span>
+    <span data-displayed-on="md" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+3 authors</span>
+</span> 
+</span>
+<span data-displayed-on="none" data-on-display="sm md" aria-hidden="true"> <span data-action="hide">fewer</span>
+</span>
+</span>
+</span>  
+</div>
+
+<div class="core-self-citation">
+    <div property="isPartOf" typeof="Periodical">
+        <span property="name">yuruotao.com</span>
     </div>
+    <div class="core-date-published">
+        <span property="datePublished">21 Dec 2022</span>
+    </div>
+</div>
 
     <!-- info panel -->
     <div class="info-panel">
@@ -694,7 +729,8 @@ if(window.WebyGam) {
         
             <!-- previous article and next article -->
             <nav title="Content Navigation" class="content-navigation">
-                <a href="/doi/10.1126/sciadv.ade2450" title="Touch IoT enabled by wireless self-sensing and haptic-reproducing electronic skin" class="content-navigation__prev">
+                <!-- modify the href -->
+                <a href="/" title="previous article title" class="content-navigation__prev">
                     <div aria-hidden="true" class="content-navigation__hint">
                         <div class="content-navigation__hint__content">
                             <h6>PREVIOUS ARTICLE</h6>
@@ -705,11 +741,12 @@ if(window.WebyGam) {
                     <span>Previous</span>
                 </a>
 
-                <a href="/doi/10.1126/sciadv.ade3201" title="Biodegradable, three-dimensional colorimetric fliers for environmental monitoring" class="content-navigation__next">
+                <!-- modify the href -->
+                <a href="/" title="next article title" class="content-navigation__next">
                     <div aria-hidden="true" class="content-navigation__hint">
                         <div class="content-navigation__hint__content">
                             <h6>NEXT ARTICLE</h6>
-                            <div>Biodegradable, three-dimensional colorimetric fliers for environmental monitoring</div>
+                            <div>next article</div>
                         </div>
                     </div>
                     <span>Next</span>
@@ -717,16 +754,15 @@ if(window.WebyGam) {
                 </a>
             </nav>
         </div>
-        
-
-</div>
+    </div>
 </div>
 
 <!-- small functions above the abstract -->
 <div class="info-panel__right-content">
 
 <div class="info-panel__formats info-panel__item">
-    <a href="https://www.science.org/doi/epdf/10.1126/sciadv.ade2988" title="PDF" data-toggle="tooltip" class="btn btn--slim btn-secondary">
+    <!-- link to the pdf file of the article -->
+    <a href="/" title="PDF" data-toggle="tooltip" class="btn btn--slim btn-secondary">
         <i aria-hidden="true" class="icon-pdf"></i>
     </a>
 </div>
@@ -762,10 +798,10 @@ if(window.WebyGam) {
                         <a href="#sec-4">MATERIALS AND METHODS</a>
                     </li>
                     <li>
-                        <a href="#acknowledgments">Acknowledgments</a>
+                        <a href="#acknowledgments">ACKNOWLEDGEMENTS</a>
                     </li>
                     <li>
-                        <a href="#supplementary-materials">Supplementary Materials</a>
+                        <a href="#supplementary-materials">SUPPLIMENTARY MATERIALS</a>
                     </li>
                     <li>
                         <a href="#bibliography">REFERENCES AND NOTES</a>
@@ -789,9 +825,12 @@ if(window.WebyGam) {
                 <div class="current-issue-aside__cover">
                     <div class="cover-image flat d-flex justify-content-center flex-column">
                         <div data-is-viewable="true" class="cover-image__image">
+
                             <!-- propganda image -->
-                            <a href="/toc/sciadv/9/1" title="View Science Advances current issue" class="d-block">
-                                <img src="/cdn-cgi/image/width=400/cms/asset/683ae5d3-e36f-4809-9e22-adfc4cbe481e/sciadv.2023.9.issue-1.largecover.jpg" alt="Science Advances cover image"></a>
+                            <!-- link to the outstanding image of the field -->
+                            <!--  -->
+                            <a href="/" title="current column cover image" class="d-block">
+                                <img src="/" alt="cover image"></a>
                             </div>
                         </div>
                     </div>
@@ -804,7 +843,8 @@ if(window.WebyGam) {
             <div class="card-content">
                 <div class="card-header">
                     <h3 class="card__title">
-                        <a href="/doi/10.1126/sciadv.abm7047" title="Human generation times across the past 250,000 years" class="text-reset animation-underline">Bitch...........</a>
+                        <!--  -->
+                        <a href="/" title="Human generation times across the past 250,000 years" class="text-reset animation-underline">Bitch...........</a>
                     </h3>
                     <ul class="card-meta align-middle pl-0">
                         <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2" data-visible-items-md="4" data-visible-items="9" data-truncate-less="less" data-truncate-more="authors" data-truncate-dots="true">
@@ -824,6 +864,7 @@ if(window.WebyGam) {
 
 </div>
 <div class="d-flex justify-content-end btn--more__wrapper">
+    <!-- direct to the current folder -->
     <a href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
         <span>More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
@@ -833,10 +874,7 @@ if(window.WebyGam) {
 
 </div></div></div></section>
 
-<div class="aside-ads">
-        <div data-widget-def="literatumAd" data-widget-id="d9c37dd2-7a6d-4012-aeb1-014af2d32163" class="text-center">
-        </div>
-</div><section>
+<section>
 
 <h4 class="main-title-2--decorated h4 hawkeye-side-position-node">LATEST</h4>
 <div class="mt-4">
@@ -846,18 +884,21 @@ if(window.WebyGam) {
         <article class="card-do card-do--news-feature border-bottom border-light-gray card-do--news-article-aside pb-3 mb-3">
 	<div class="card-content">
 		<div class="card-meta text-uppercase">
-			<span class="card-meta__category"><a href="/news/scienceinsider" class="text-decoration-none"><span>ScienceInsider</span></a></span><time class="border-left">10 Jan 2023</time>
+            <!-- direct to the latest column -->
+			<span class="card-meta__category"><a href="/" class="text-decoration-none"><span>latest column</span></a></span><time class="border-left">date and time</time>
 		</div>
 		<div class="card-header mb-2">
-			<a href="/content/article/u-s-gun-research-report-child-access-prevention-laws-cut-firearm-deaths" title="Laws that keep kids away from guns reduce deaths, whereas others lead to more shootings" class="text-reset animation-underline">
-				Laws that keep kids away from guns reduce deaths, whereas others lead to more shootings
+            <!--  -->
+			<a href="/" title="latest article title" class="text-reset animation-underline">
+				latest passage title
 			</a>
 		</div>
 	</div>
 </article>
 
 <div class="d-flex justify-content-end btn--more__wrapper">
-    <a href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+    <!-- direct to the latest corresponding column -->
+    <a href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
         <span>More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
@@ -871,19 +912,95 @@ if(window.WebyGam) {
     <div class="core-container">
         <section id="abstract" property="abstract" typeof="Text" role="doc-abstract">
             <h2 property="name">Abstract</h2>
-            <div role="paragraph">ABstract content</div>
+            <div role="paragraph">Abstract content</div>
         </section>
     </div>
 </div>
 
+
+<!-- article content -->
 <section id="bodymatter" data-extent="bodymatter" property="articleBody" typeof="Text">
     <div class="core-container">
+
         <section id="sec-1" data-type="introduction">
             <h2>INTRODUCTION</h2>
-            <div role="paragraph">With rapid advances in bio-integrated electronics, devices are required to have a skin-like stretchable form, and there have been numerous studies to make electronic components stretchable (<a href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a>, <a href="#R2" role="doc-biblioref" data-xml-rid="R2"><i>2</i></a>). In electronics, a transistor is known as the most essential switching component; however, it is difficult to fabricate a transistor having mechanical stretchability. Organic thin-film field-effect transistors (OTFTs) have been considered as essential stretchable building blocks in the era of skin-inspired electronics (<a href="#R3" role="doc-biblioref" data-xml-rid="R3"><i>3</i></a>–<a href="#R5" role="doc-biblioref" data-xml-rid="R5"><i>5</i></a>). To obtain stretchable OTFTs for bioelectronics applications, all the materials they comprise, such as semiconductors, conductors, and dielectrics, must be mechanically stretchable with a high strain compliance and biocompatibility.</div><div role="paragraph">As intrinsically stretchable dielectrics, various commercialized elastomers, such as highly reliable cross-linked polydimethylsiloxane (PDMS), thermoplastic polyurethane, and styrene-ethylene-butylene-styrene (SEBS), have been successfully used; however, well-developed materials are still lacking to provide stretchability to semiconductors and conductors (<a href="#R3" role="doc-biblioref" data-xml-rid="R3"><i>3</i></a>–<a href="#R7" role="doc-biblioref" data-xml-rid="R7"><i>7</i></a>). Recently, massive efforts toward developing intrinsically stretchable semiconductors have led to many promising achievements (<a href="#R3" role="doc-biblioref" data-xml-rid="R3"><i>3</i></a>–<a href="#R12" role="doc-biblioref" data-xml-rid="R12"><i>12</i></a>). Unfortunately, only a few cases of stretchable electrodes for OTFTs have been reported but not fully studied, despite its importance (table S1).</div><div role="paragraph">In general, a key role of the electrode in the stretchable OTFT is to inject electric current into the semiconductor, which requires appropriate work function, mechanical stretchability, and durability. As a stretchable electrode for the stretchable OTFTs, single-wall carbon nanotubes (SWCNTs) having a high work function and moderate electric resistance have been widely used because electrical percolation in their network structure is well maintained under mechanical strain (<a href="#R13" role="doc-biblioref" data-xml-rid="R13"><i>13</i></a>–<a href="#R16" role="doc-biblioref" data-xml-rid="R16"><i>16</i></a>). However, in terms of biocompatibility, SWCNTs are toxic and can cause inflammatory responses, malignant transformation, DNA damage, and mutation, all of which are still under debate in the research field of biomaterials (<a href="#R17" role="doc-biblioref" data-xml-rid="R17"><i>17</i></a>–<a href="#R19" role="doc-biblioref" data-xml-rid="R19"><i>19</i></a>). Consequently, the use of SWCNTs in bioelectronics has been declining gradually (<a href="#R20" role="doc-biblioref" data-xml-rid="R20"><i>20</i></a>). Poly(3,4-ethylenedioxythiophene):poly(styrenesulfonate) (PEDOT:PSS) has been considered as another material for stretchable electrodes. It has intrinsic flexibility with a high work function and is able to form a smooth electrical contact with other organic semiconductors (<a href="#R21" role="doc-biblioref" data-xml-rid="R21"><i>21</i></a>–<a href="#R23" role="doc-biblioref" data-xml-rid="R23"><i>23</i></a>). Methods of incorporating stretchability in PEDOT:PSS electrodes include either blending plasticizers with PEDOT:PSS or a newly designed cross-linkable PEDOT:PSS with elastic polymers (<a href="#R21" role="doc-biblioref" data-xml-rid="R21"><i>21</i></a>, <a href="#R23" role="doc-biblioref" data-xml-rid="R23"><i>23</i></a>). Although PEDOT:PSS has an attractive merit in terms of excellent hole injection for OTFTs, its inherent air instability due to oxidation and relatively low electrical conductivity may limit its use in future bioelectronic applications (<a href="#R24" role="doc-biblioref" data-xml-rid="R24"><i>24</i></a>–<a href="#R27" role="doc-biblioref" data-xml-rid="R27"><i>27</i></a>).</div><div role="paragraph">Noble metal deposition through various methods such as physical vapor deposition, ion implantation, and chemical reduction has been suggested for stretchable and soft electrodes (<a href="#R28" role="doc-biblioref" data-xml-rid="R28"><i>28</i></a>–<a href="#R32" role="doc-biblioref" data-xml-rid="R32"><i>32</i></a>). Recently, microcrack-based noble metal films on insulating elastomers such as PDMS and SEBS have been reported as an alternative stretchable electrode for organic electrochemical transistors and OTFTs (<a href="#R8" role="doc-biblioref" data-xml-rid="R8"><i>8</i></a>, <i><a href="#R33" role="doc-biblioref" data-xml-rid="R33"><i>33</i></a></i>). The microcracked Au film on elastomers maintains their conducting pathway while releasing applied stress, which makes it a stretchable electrode; however, there are problems such as continuous change in electrical resistance and microscale morphological instability on strain. Moreover, a serious drawback of the microcrack-based stretchable electrodes is delamination wear under repeatable mechanical deformation due to its poor adhesion. Adhesion strength in withstanding all-round deformation needs to be considered as another important requirement for stretchable electrodes because hard packaging is not available in bioelectronics, as the sensation of foreign substances in contact with human skin should be minimized. The aforementioned studies have not taken into consideration the delamination wear, and their technology readiness level has not yet reached the stage where mechanical durability has been considered for stretchable semiconductor devices.</div><div role="paragraph">In this work, we introduce a mechanically robust stretchable semiconductor metallization based on silver (Ag) metal-elastic semiconductor intermixing that can meet all the requirements for the stretchable OTFTs. As a noble metal, Ag has the highest electrical conductivity among metals, has a reasonable price compared to Au, and has easier processability than SWCNT, which is conventionally used in organic electronics. The metal-elastic semiconductor intermixing occurred during thermal evaporation, allowing silver atoms to diffuse into the elastomeric semiconducting film, which can be systematically controlled by the metal deposition rate, enabling mechanically durable and highly stretchable semiconductor metallization. The stretchable Ag metallization exhibited a high tolerance to more than 10,000 stretches at 100% strain without mechanical delamination, while it injected the charge carriers efficiently into the elastic semiconductor without changes in resistance even under 100% strain. Using the highly stretchable, electrically conductive, and even mechanically durable Ag metallization of intrinsically stretchable semiconductor surfaces, skin-like stretchable OTFTs were successfully fabricated. Last, we demonstrated a fully stretchable strain-insensitive 5 × 5 active-matrix OTFT array for skin-inspired electronics.</div></section><section id="sec-2" data-type="results"><h2>RESULTS</h2><div role="paragraph"><a href="#F1">Figure 1A</a> illustrates Ag metallization of an elastic semiconductor. When Ag is deposited on the elastic semiconductor using a high-vacuum thermal evaporator, some Ag atoms with high kinetic energy diffuse and start to form Ag nanoclusters inside the surface of the elastic semiconductor layer, and the others with low energy start to nucleate and grow on the surface. As interconnecting the Ag nanoclusters inside and Ag thin film on the surface, the Ag metallization is completed in the form of a continuous thin film rooted in the elastomeric semiconductor, where there is a Ag cluster–elastic semiconductor intermixing region that acts as a physical glue layer, which provides the Ag film with high mechanical stretchability and strong adhesion. Formation of the continuous thin film was observed from atomic force microscopy (AFM) phase images of the nanofiber-based elastic semiconductor film before (bottom) and after (top) metallization (<a href="#F1">Fig. 1B</a>).</div><div class="figure-wrap" data-specific-use="distribute"><figure id="F1" class="graphic"><img src="/cms/10.1126/sciadv.ade2988/asset/999fa77f-dd25-4dce-a5e3-35245f2ac703/assets/images/large/sciadv.ade2988-f1.jpg" height="3608" width="3600" aria-labelledby="F1" loading="lazy" /><figcaption><div class="caption"><span class="heading">Fig. 1</span>. Stretchable metallization and characterizations.</div><div class="notes"><div role="doc-footnote">(<b>A</b>) Schematic of stretchable metallization. (<b>B</b>) AFM images of surface morphology before and after metallization on a nanofiber-based semiconducting film. Scale bars, 1 μm. (<b>C</b>) Transfer curves and (<b>D</b>) field-effect mobilities of organic field-effect transistors (OFETs) with different metal electrodes (Ag, Au, and Cu). (<b>E</b>) Output curve of OFET with a Ag-metallized electrode. (<b>F</b>) Resistance of OFET with Ag electrode as a function of channel length for extracting contact resistance. (<b>G</b>) Calculated Schottky barrier of OFET with Ag electrode as a function of drain voltage and gate voltage. (<b>H</b>) XPS spectra in the range of 360 to 376 eV, showing Ag 3d peak as a function of etching time (inset: XPS of Ag 3d 5/2 peaks containing silver oxide, AgO, and Ag<sub>2</sub>O information). a.u., arbitrary units. (<b>I</b>) Ag atomic percent and Ag<sub>2</sub>O/Ag ratio of the Ag-metallized film as a function of etching time. (<b>J</b>) Conductivity of the Ag-metallized film as a function of thickness on elastic substrate. (<b>K</b>) Resistance of the Ag film on an elastic substrate with different thicknesses as a function of strain. (<b>L</b>) Optical microscope (OM) images of different thicknesses of Ag-metallized film after 100% stretching (top) and crack fraction on that strain % (bottom). (<b>M</b>) Resistance of Ag films with various deposition rate conditions on strain. (<b>N</b>) OM images of different deposition rates of Ag-metallized film after 100% stretching (top) and crack fraction on that strain % (bottom).</div></div></figcaption></figure></div><div role="paragraph">To verify the capability of Ag metallization as source/drain electrodes, we fabricated OTFTs with a thin-film elastic semiconductor consisting of a SEBS elastomer and nanofiber-based poly(2,5-bis(2-octyldodecyl)-3,6-di(thiophen-2-yl) diketopyrrolo[3,4-c] pyrrole-1,4-dione-alt-thieno[3,2-b] thiophen) (DPPT-TT) through the nanoconfinement effect (fig. S1) (<a href="#R4" role="doc-biblioref" data-xml-rid="R4"><i>4</i></a>, <a href="#R11" role="doc-biblioref" data-xml-rid="R11"><i>11</i></a>). The DPPT-TT nanofibrils were observed in the AFM images (<a href="#F1">Fig. 1B</a>). The OTFTs showed higher mobility (0.36 cm<sup>2</sup>/Vs) with Ag than the other noble metals (Cu: 0.003 cm<sup>2</sup>/Vs and even Au: 0.084 cm<sup>2</sup>/Vs) (<a href="#F1">Fig. 1, C and D</a>), although Au is expected to be the most suitable p-type ohmic contact for OTFTs owing to its high work function (5.0 eV) compared with the other noble metals (Cu: 4.7 eV and Ag: 4.3 eV) and lower barrier (Φ<sub>B</sub>) for hole injection into polymer semiconductors (<i><a href="#R34" role="doc-biblioref" data-xml-rid="R34"><i>34</i></a>–<a href="#R36" role="doc-biblioref" data-xml-rid="R36"><i>36</i></a></i>) . Moreover, the OTFTs with Ag metallization exhibited typical ohmic-contact output curves (<a href="#F1">Fig. 1E</a>). Ag exhibited the lowest contact resistance (<i>R</i><sub>C</sub>) (0.17 megohms) among the metals (Au and Cu), which is comparable to that of previously reported stretchable CNT and PEDOT:PSS electrodes (<a href="#F1">Fig. 1F</a> and figs. S2 to S4) (<a href="#R4" role="doc-biblioref" data-xml-rid="R4"><i>4</i></a>, <a href="#R23" role="doc-biblioref" data-xml-rid="R23"><i>23</i></a>), and its effective hole injection barrier was approximately 0.1 eV, which is negligible compared to the conventional injection barrier of more than 0.2 eV (<a href="#F1">Fig. 1G</a> and fig. S5) (<i><a href="#R37" role="doc-biblioref" data-xml-rid="R37"><i>37</i></a></i>).</div><div role="paragraph">To elucidate the reason for these results, the work function of the Ag electrode was measured using photoelectron spectroscopy in air (fig. S6) as 4.77 eV, which is higher than the theoretical value (4.3 eV) in vacuum. According to the literature, the work function (Φ<sub>W</sub>) of Ag is known to be in the range of 4.3 to 4.8 eV, depending on the environment or processing (<i><a href="#R37" role="doc-biblioref" data-xml-rid="R37"><i>37</i></a></i>, <i><a href="#R38" role="doc-biblioref" data-xml-rid="R38"><i>38</i></a></i>). It is thought that the Ag metallization in this work has a sufficiently high work function to form an ohmic contact. To gain further insight into the superior hole injection, the composition change at the interface between Ag and the polymer semiconductor in the depth direction was analyzed using x-ray photoelectron spectroscopy (XPS) depth profiling, and the results showed that a native silver oxide layer (Ag<i><sub>x</sub></i>O) having a high work function (Φ<sub>W</sub> = 5.2 eV) is formed at the interface, as shown in <a href="#F1">Fig. 1 (H and I)</a> and figs. S7 and S8, which implies that the native oxide could be superior to Au (Φ<sub>W</sub> = 4.6 eV, measured in air; fig. S6B) in creating a low-resistance ohmic contact for hole injection into the elastic semiconducting film (highest occupied molecular orbital level = 5.04 eV; fig. S6C). The presence of Ag<i><sub>x</sub></i>O could result in the Ag electrode having the lowest contact resistance (<i>R</i><sub>C</sub>) and an effective injection barrier (Φ<sub>B</sub>).</div><div role="paragraph">Electrical conductivity of the Ag metallization as a function of thickness defined by a thickness monitor was estimated as shown in <a href="#F1">Fig. 1J</a>. As the thickness increased, electrical conductivity increased sharply to 12,532 ± 409 S/cm (50 nm) and then leveled off (metallic conductivity, &gt;10<sup>4</sup> S/cm). This result reflects the formation of a continuous Ag thin film formed after approximately 50 nm of deposition. The similar thickness dependence of electrical conductivity was observed in Ag metallization even on a SEBS elastomer substrate (fig. S9). Moreover, the initial resistance of the Ag metallization on the elastomeric semiconducting film was maintained over half a year (193 days) in air at the same level as those stored in a glove box (fig. S10). The mechanical stretchability of the Ag metallization was substantially affected above and below an approximate value of 50 nm. Ag electrodes of thickness less than 50 nm almost preserved their initial resistance even at 100% strain without electrical sacrifice, as shown in <a href="#F1">Fig. 1K</a>, which presents the highest conductivity or lowest resistance among previously reported stretchable electrodes for the stretchable organic transistors (table S1). The microscale morphology of the 50-nm Ag metallization on an elastic semiconductor under pristine (0% strain) and 100% strain conditions was investigated using an optical microscope (OM), as shown in fig. S11, and hardly any microcracks could be observed in the two OM images. In contrast to the case of Ag, several microcracks were observed in the other noble metals (Au and Cu) over all thickness range from 30 to 100 nm under 100% strain (figs. S12 and S13). The fraction of crack area for all noble metal films was quantified as shown in figs. S14 to S17. While Au and Cu films showed several microcracks from 25% strain for all thickness ranges (30 to 100 nm) with highly strain-sensitive resistance change resulting in electrical disconnection (fig. S18), in the case of Ag, only several microscale cracks were observed for samples with thickness of greater than 50 nm at 100% strain (<a href="#F1">Fig. 1L</a>). There was an optimal thickness (50 nm) of Ag metallization that consisted of the metal-elastic semiconductor intermixing region and pure metal region to balance the electrical conductivity and mechanical stretchability.</div><div role="paragraph">In addition, we found that the deposition rate of Ag is a significant processing parameter to affect the crack morphology and resistance change of metallization under strain (<a href="#F1">Fig. 1, M and N</a>, and figs. S19 and S20). A faster rate of deposition of more than 3 Å/s makes the metallization strain sensitive with a large crack area fraction (&gt;48%), whereas the metallization has a relatively strain-insensitive resistivity with negligible crack area fraction below 2 and up to 100% strain at a slower rate of deposition (0.5 to 1 Å/s). This result reflects that the formation of metal-elastic semiconductor intermixing can be affected by the deposition rate. A faster deposition rate leads to a faster metal film formation on the surface because newly deposited Ag atoms are consumed in the growth of the thin film rather than diffusing inside. A slower deposition rate of Ag metallization provides a higher probability of forming a metal-elastic semiconductor intermixing region, yielding higher initial resistance and a gradual increase in resistance on strain due to the thinner metal layer. Thus, a moderate deposition rate (2 Å/s) for metallization was applied to mechanical robust stretchable metallization, balancing between metal-elastic semiconductor intermixing for adhesion and metal layer for resistivity. In contrast, other noble metals have no correlation between the deposition rate of metals and crack formation under strain. For all deposition rates, Au and Cu films showed strain-sensitive resistance and severe microcrack formation on strain (figs. S21 to S25).</div><div role="paragraph">To obtain direct evidence of the existence of the metal-elastic semiconductor intermixing, XPS depth profile analysis of metallization films was performed as shown in <a href="#F2">Fig. 2A</a> and fig. S26. A metal-elastic semiconductor intermixing region (atomic percent in the middle of metal region: Ag: 73.1% and C<sub>Ag</sub>: 26.9%, indicating DPPT-TT:SEBS composite) was observed in the Ag metallization, whereas other noble metals have pure metal atomic percent in metal region (Au: 95%; Cu: 99%) and elastic semiconducting film (C<sub>Au</sub>: 5%; C<sub>Cu</sub>: 1%), which indicates that there is no metal-elastic semiconductor intermixing. Compared to other noble metals, Ag is known to have a high diffusion coefficient in polymers. The relative surface diffusion coefficients for Ag, Au, and Cu are 100, 2, and 1, respectively, at room temperature (<i><a href="#R39" role="doc-biblioref" data-xml-rid="R39"><i>39</i></a></i>). Thus, when Ag, with a superior diffusion rate, is deposited on an elastic polymer semiconductor film, a mixing layer could be formed, and it is possible for the film to have a strong mechanical adhesion.</div><div class="figure-wrap" data-specific-use="distribute"><figure id="F2" class="graphic"><img src="/cms/10.1126/sciadv.ade2988/asset/c5857119-5440-4b06-83cd-6bf8ccba72d2/assets/images/large/sciadv.ade2988-f2.jpg" height="3236" width="3600" aria-labelledby="F2" loading="lazy" /><figcaption><div class="caption"><span class="heading">Fig. 2</span>. Mechanical robustness of stretchable metallization and mechanism analysis.</div><div class="notes"><div role="doc-footnote">(<b>A</b>) XPS depth profiling of the Ag-metallized film (inset: sample structure for XPS analysis). (<b>B</b>) Conductivity changes of the Ag-metallized film on an elastic substrate at different strains (25, 50, and 100%) during multiple stretches up to 10,000 cycles. (<b>C</b>) Conductivity changes of the Ag-metallized film on an elastic substrate during adhesive tape tests. (<b>D</b>) STEM images of the Ag-metallized film on an elastic substrate with 0, 50, and 100% strain and (<b>E</b>) EDS component mapping images (Ag, C, and S atoms) of the Ag-metallized film at 100% strain. Scale bars, 3 μm. (<b>F</b>) Cross-sectional TEM images and EDS component mapping images for Ag, C, and S atoms. Scale bars, 50 nm. (<b>G</b>) Schematic of the suggested mechanism of mechanically robust stretchable metallization on an elastic semiconducting film.</div></div></figcaption></figure></div><div role="paragraph">To evaluate the stretching endurance of the Ag-metallized electrode (50 nm), its electrical resistance was tracked during 10,000 stretches with 25, 50, 75, and 100% strain amplitudes, respectively (<a href="#F2">Fig. 2B</a>). The Ag-metallized electrode almost preserved its initial electrical resistance without plastic deformation even after severe multiple stretches (fig. S27). Furthermore, to estimate the adhesion durability of the Ag-metallized electrode under harsh conditions, a delamination wear test was performed using commercial adhesive 3M tape (3M 810 tape, adhesion force: 2.2 N/cm; fig. S28 and movie S1), and the results thus obtained are presented in <a href="#F2">Fig. 2C</a>. The initial morphology and electrical conductivity of the Ag-metallized electrode were unexpectedly almost preserved without delamination, even after five tape detaches (fig. S29). Because a noble metal forms a physical binding to an organic polymer instead of a chemical bonding, it is known that a deposited noble metal film is easily delaminated from an elastic organic polymer even by a very weak external force (<i><a href="#R40" role="doc-biblioref" data-xml-rid="R40"><i>40</i></a></i>,<i> <a href="#R41" role="doc-biblioref" data-xml-rid="R41"><i>41</i></a></i>). However, the Ag metallization in this study exhibited unprecedented stretching endurance and adhesion durability.</div><div role="paragraph">To further investigate the strong adhesion of the deposited Ag film on the elastic semiconducting polymer, the nanoscale morphology of the Ag film under strain was determined using scanning transmission electron microscopy (STEM) and AFM (fig. S30). <a href="#F2">Figure 2D</a> presents the STEM images of the 50-nm-thick Ag film under various strains (0, 50, and 100%). The pristine Ag film (0% strain) exhibited a uniform surface morphology. When the strain increased to 50%, the film started to tear and exhibited nanoscale cracks instead of delamination as a method of releasing the external stress. When the strain further increased to 100%, the cracks enlarged more but did not catastrophically propagate through the film, maintaining the geometrical connectivity of the Ag film. Element mapping results from the energy-dispersive x-ray spectroscopy (EDS) of the STEM image under 100% strain show that Ag, sulfur (S) of DPPT-TT, and carbon (C) of DPPT-TT have almost the same spatial distribution with those without stretching (<a href="#F2">Fig. 2, D and E</a>, and figs. S31 to S33). This result implies that Ag and the semiconductor polymer are strongly bound to each other as they are not mutually spaced apart under strain.</div><div role="paragraph">Furthermore, to reveal the reason for the strong adhesion, the cross section of the interface between the 50-nm Ag film and elastic semiconductor polymer was directly observed through TEM (fig. S34). <a href="#F2">Figure 2F</a> presents a cross-sectional TEM image and the EDS mapping at the interface. The results indicate that there are three separate layers (top: 20-nm-thick Ag; middle: 30-nm-think Ag-semiconductor mixture; and bottom: 60-nm-thick elastic semiconductor polymer). Ag atoms and polymers could have an extremely large number of physical binding sites in the intermixing layer, forming strong adhesion. Besides the contribution to adhesion, such an intermixing Ag-polymer structure also significantly contributes to the high stretchability and conductivity of the Ag metallization. The comprehensive mechanism of the highly stretchable and adhesive electrode on elastic semiconductor is schematically illustrated in <a href="#F2">Fig. 2G</a>.</div><div role="paragraph">With these advantages of stretchable Ag metallization, we fabricated fully stretchable OTFTs in a top-contact-and-bottom-gate structure with Ag electrodes, DPPT-TT/SEBS nanoconfined stretchable semiconductor, and a SEBS dielectric, as shown in <a href="#F3">Fig. 3A</a> and fig. S35. The devices exhibited typical transfer curves and output performance, as shown in <a href="#F3">Fig. 3 (B and C)</a>. The average field-effect mobility of the 25 devices was 0.288 cm<sup>2</sup>/Vs with a reliability factor of 0.99 ± 0.003, which indicates that the fully stretchable devices are highly reliable in terms of charge carrier transport (<i><a href="#R42" role="doc-biblioref" data-xml-rid="R42"><i>42</i></a></i>,<i> <a href="#R43" role="doc-biblioref" data-xml-rid="R43"><i>43</i></a></i>). Moreover, the transistors have successfully worked at low operating voltage down to 5 V with a similar shape of transfer curve (fig. S36). However, for further higher on-current at low operating voltage, the current devices require high-mobility semiconductor and high-<i>k</i> dielectric materials. When the device was stretched along the channel length and width direction of up to 100% strain, the devices maintained their field-effect mobilities and on-off ratios near the values of 0.183 cm<sup>2</sup>/Vs and 3.94 × 10<sup>4</sup> as shown in <a href="#F3">Fig. 3 (D and E)</a>, respectively (fig. S37). Even under a 100% cyclic tensile strain applied more than 10,000 times, the fully stretchable OTFTs maintained their initial electrical properties irrespective of the stretching direction (<a href="#F3">Fig. 3, F and G</a>, and figs. S38 to S45). To the best of our knowledge, this is the harshest stretching durability test among those previously reported for highly reliable stretchable OTFTs. Moreover, the stretchable OTFT was successfully operated on even biaxial strain up to 30% while maintaining the initial electrical performance (fig. S46). This mechanically robust and stretchable Ag metallization was also verified on another promising semiconducting polymer (indacenodithiophene-<i>co</i>-benzothiadiazole):SEBS blend system as shown in figs. S47 to S49.</div><div class="figure-wrap" data-specific-use="distribute"><figure id="F3" class="graphic"><img src="/cms/10.1126/sciadv.ade2988/asset/475143d4-d575-4cad-b3fc-8556951b8ca4/assets/images/large/sciadv.ade2988-f3.jpg" height="1730" width="3900" aria-labelledby="F3" loading="lazy" /><figcaption><div class="caption"><span class="heading">Fig. 3</span>. Fully stretchable OFET characterization.</div><div class="notes"><div role="doc-footnote">(<b>A</b>) Schematic of fully stretchable OFET structure. (<b>B</b>) Transfer curves of all devices and (<b>C</b>) typical output curve of a fully stretchable organic transistor. (<b>D</b>) Mobility and on/off current ratio of a fully stretchable organic transistor as a function of parallel stretching directions and (<b>E</b>) perpendicular directions to channel current direction. (<b>F</b>) Field-effect mobility and on/off current ratio changes of fully stretchable transistors at different strains (25, 50, 75, and 100%) during multiple stretching cycles up to 10,000 times for parallel and (<b>G</b>) perpendicular stretching directions.</div></div></figcaption></figure></div><div role="paragraph">For practical feasibility of the stretchable Ag metallization, we fabricated a fully stretchable strain-insensitive 5 × 5 active-matrix array of OTFTs, as shown in <a href="#F4">Fig. 4A</a>. A specific OM image of a device in an active-matrix array is presented in <a href="#F4">Fig. 4B</a>. All the stretchable OTFTs performed well, and the transfer characteristics and statistical distribution of the field-effect mobilities are presented in <a href="#F4">Fig. 4</a> (C and D, respectively). The typical output curve shown in <a href="#F4">Fig. 4E</a> indicates that the Ag-metallized electrode forms an ohmic contact on the DPPT-TT/SEBS nanoconfined stretchable semiconductor in the active-matrix array. The values of the field-effect mobility and on/off ratio of the 25 OTFTs in the active-matrix array are mapped, as shown in <a href="#F4">Fig. 4</a> (F and G), and the results show that the OTFTs in the array exhibited low performance variability. All the transistors exhibited extremely high reliability factors (&gt;0.96) as an indicator (1: ideal; 0: nonideal) representing the degree of overestimation and miscalculation of the mobility (<a href="#F4">Fig. 4H</a>) (<i><a href="#R42" role="doc-biblioref" data-xml-rid="R42"><i>42</i></a></i>, <i><a href="#R43" role="doc-biblioref" data-xml-rid="R43"><i>43</i></a></i>)]. Moreover, the cyclic strain-stress characteristics of the active-matrix array were measured, as shown in <a href="#F4">Fig. 4I</a>, and the results show that it is highly elastic up to 100% strain and has lower Young’s modulus (0.005 MPa) than that of human skin (10<sup>−1</sup> MPa), which can significantly reduce the feeling of irritation caused by foreign matter on skin. These are essential mechanical properties for a device to be integrated on human skin. Last, the reliability of the active-matrix array under arbitrary deformations experienced on the human skin was estimated. <a href="#F4">Figure 4J</a> presents the mobility changes of the active-matrix array under various deformations, such as attaching to curved skin (arm), biaxial stretching (30%), and even indenting (depth: 1 cm) with a cotton swab (<a href="#F4">Fig. 4, K to M</a>, and fig. S50). In situ measurement of the active-matrix transistor during various deformations in series is shown in fig. S51 and movie S2. The electrical property of the active-matrix array preserved the initial field-effect mobility well under all the harsh conditions.</div><div class="figure-wrap" data-specific-use="distribute"><figure id="F4" class="graphic"><img src="/cms/10.1126/sciadv.ade2988/asset/10bd482a-c011-43d5-889e-fd36dfd716ca/assets/images/large/sciadv.ade2988-f4.jpg" height="3121" width="3600" aria-labelledby="F4" loading="lazy" /><figcaption><div class="caption"><span class="heading">Fig. 4</span>. Skin-like organic transistor active-matrix array.</div><div class="notes"><div role="doc-footnote">(<b>A</b>) Schematic of the skin-like organic transistor active-matrix array structure. (<b>B</b>) OM image of a channel in the active-matrix array. (<b>C</b>) Transfer curves of all devices in the skin-like organic transistor active-matrix array. (<b>D</b>) Distribution of field-effect mobilities of the active-matrix array. (<b>E</b>) Typical output curve of a skin-like active-matrix organic transistor. (<b>F</b>) Three-dimensional mapping of mobility and (<b>G</b>) on/off current ratio of all pixel devices in the active-matrix array. (<b>H</b>) Distribution of reliability factor from all devices in stretchable active-matrix transistors. (<b>I</b>) Cyclic stress-strain curves of the skin-like organic transistor active-matrix array for extracting its Young’s modulus. (<b>J</b>) Mobilities of stretchable active-matrix transistors under various conditions. (<b>K</b>) Photographs of stretchable active matrix on human skin, (<b>L</b>) under biaxial stretching, and (<b>M</b>) under indenting.</div></div></figcaption></figure></div></section><section id="sec-3" data-type="discussion"><h2>DISCUSSION</h2><div role="paragraph">In summary, we introduced Ag metallization of elastomeric semiconductors with excellent stretching endurance and adhesion durability for stretchable OTFTs. The metallization is based on the unique property of Ag atoms, which have high diffusivity as compared to other metals in a polymer matrix. Therefore, the nucleation and growth of a thermally evaporated Ag thin film occur from inside the elastomeric semiconductor, and the intermixing of the Ag nanoclusters and polymer chains at the interface occurs between the Ag thin film and elastomeric semiconductor film, which enhances the adhesion between them. In contrast to previously reported stretchable electrodes, our Ag-metallized electrodes on elastomeric semiconductor films exhibited high conductivity (&gt;10<sup>4</sup> S/cm). High conductivity was maintained, and no delamination was observed even when the Ag-metallized electrodes are subjected to 100% tensile strain for 10,000 stretching cycles and several adhesive tape tests. Owing to the enhanced adhesion, the Ag-metallized electrode released the applied external strain by forming nanoscale cracks, thus enabling it to exhibit excellent stretching endurance and adhesion durability under various deformations. In addition to the superior mechanical durability, it was found that Ag metallization forms Ag<sub>2</sub>O with a high work function (Φ = 5.2 eV) in the intermixing layer, which effectively lowers the hole injection barrier at the interface between the Ag-metallized electrode and the elastomeric semiconductor film. Last, to demonstrate the application potential of the stretchable Ag metallization in stretchable OTFTs, we fabricated a fully stretchable strain-insensitive 5 × 5 active-matrix OTFT array using the Ag metallization technique, and all the transistors in the array exhibited a highly stable electrical performance while being attached to curved human skin, biaxially stretched, and even severely indented. With our straightforward thermal evaporation–based strategy for preparing stretchable metallization, we believe that Ag metallization could aid in allowing stretchable OTFTs to progress toward the realization of skin-inspired electronics.</div></section><section id="sec-4" data-type="materials methods"><h2>MATERIALS AND METHODS</h2><section id="sec-4-1"><h3>Materials</h3><div role="paragraph">Ag (silver, 99.99%, 3- to 5-mm granule), Au (gold, 99.99%, 3 mm–by–3 mm pellet), and Cu (copper, 99.99%, 3 mm–by–5 mm pellet) were purchased from SYSCIENCE. DPPT-TT was purchased from Derthon. Three types of SEBS were provided from AsahiKASEI. H1221 (S/EB weight ratio, 12/88), H1062 (S/EB weight ratio, 18/82), and H1052 (S/EB weight ratio, 20/80) were used as the elastic matrix of the semiconducting layer, elastic substrate, and dielectric layer, respectively. All chemicals were used as received without further purification.</div></section><section id="sec-4-2"><h3>Stretchable metallization and characterization</h3><div role="paragraph">The elastic substrates for stretchable metallization were prepared by casting SEBS H1062 (100 mg/ml in toluene) onto a slide glass. After drying for overnight, each metal was evaporated on elastic substrates in high vacuum (below 5.0 × 10<sup>−6</sup> torr). The conductivity of the electrodes was measured using a four-probe meter (MITSUBISHI, MCP-T610). The work functions of each metal electrode were measured using a photoelectron spectroscope (RKI INSTRUMENTS, AC-2). The stretchable metallization was analyzed using an OM (Leica, DM4 M) for micromorphology, AFM (Bruker, Dimension 3100 SPM) for nanoscale morphology, XPS (Thermo Electron, K-Alpha) for atomic components, and high-resolution TEM and STEM with EDS mapping (JEOL, JEM ARM 200F NEOARM, at 200 kV) for nanostructure and atomic morphology. Cyclic stretching tests were performed using a handmade machine (stretching rate: 100 cm/min).</div></section><section id="sec-4-3"><h3>Device fabrication and measurement</h3><div role="paragraph">(i) For rigid substrate-based organic field-effect transistors (OFETs): The solution for the semiconductor was prepared by dissolving 1 weight % of DPPT-TT and SEBS H1221 with 1:9 weight ratio in anhydrous chlorobenzene at 120°C for overnight. For the fabrication of the semiconducting film, these solutions with filtration using a 0.2-μm Polytetrafluoroethylene-D filter were spin-coated on an octadecyltrimethoxysilane (OTS)–treated Si wafer with 300 nm of SiO<sub>2</sub> layer at 1000 rpm for 1 min and then annealed at 180°C for 1 hour under a N<sub>2</sub> atmosphere glove box [H<sub>2</sub>O &lt; 0.01 parts per million (ppm) and O<sub>2</sub> &lt; 0.01 ppm]. The dielectric layer was prepared by spin-coating SEBS H1052 solution (60 mg/ml in toluene) onto an indium tin oxide (ITO; gate electrode; sheet resistance, 20 ohm/square) glass substrate. The semiconducting films were then transferred using a PDMS stamp from the OTS-Si wafer onto the SEBS/ITO glass substrate. Last, source and drain electrode with different metals were evaporated using a thermal evaporator (<i>W</i>: 1000 μm; <i>L</i>: 150 μm). Figure S1 shows the schematic illustration of the device fabrication in detail. For stabilization of the transferred films, all devices were aged overnight in an autodry desiccator after metal evaporation. All electrical characteristics of OFET were measured using a probe station connected to a KEITHLEY 4200 under ambient condition. (ii) For fully stretchable OFET and active-matrix transistor array: A stretchable Ag (50 nm) gate electrode was prepared on the elastic substrate by thermal evaporating under high vacuum (below 5.0 × 10<sup>−6</sup> torr). The spin-coated dielectric layer (1.5 μm) and semiconducting thin-film (90 nm) on the OTS-treated Si wafer were transfer-printed on the Ag (gate electrode)–deposited elastic substrate. Then, source and drain electrodes were thermally evaporated on the elastic semiconducting film. The changed capacitances of the stretchable SEBS dielectric according to applied strain are summarized in tables S2 and S3. The strain-stress curves of the fully stretchable active-matrix transistor array were obtained by a force tester (AND, MCT-2150; strain rate: 100 cm/min).</div></section></section><section id="acknowledgments" role="doc-acknowledgments"><h2>Acknowledgments</h2><div role="paragraph"><b>Funding:</b> This research was supported by the National Research Foundation of Korea (NRF) (grant nos. 2021R1C1C1009925, 2020R1A6A1A03048004, 2019R1A6C101052, and 2020R1A6C101A184) and funded by the Korea Evaluation Institute of Industrial Technology (nos. 20015898, 20016252, and 20012710). This work was also supported by the Korea Institute for Advanced of Technology (KIAT) and the Ministry of Trade, Industry and Energy (MOTIE) of the Republic of Korea (nos. P0017363 and 20019105, Development of high-durability film capacitors for greencar power conversion system).</div><div role="paragraph"><b>Author contributions:</b> M.H.K. and J.Y.O. conceived the study and designed the experiments. M.H.K., M.W.J., J.S.K., T.U.N., and N.T.P.V. performed all experimental and data analysis. M.H.K., T.I.L., and J.Y.O. wrote the manuscript. T.I.L. and J.Y.O. supervised the project. All the authors contributed to the final version of the manuscript.</div><div role="paragraph"><b>Competing interests:</b> The authors declare that they have no competing interests.</div><div role="paragraph"><b>Data and materials availability:</b> All data needed to evaluate the conclusions in the paper are present in the paper and/or the Supplementary Materials.</div></section>
-
+            <!-- (<a href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a>, <a href="#R2" role="doc-biblioref" data-xml-rid="R2"><i>2</i></a>) -->
+            <div role="paragraph">para1</div>
             
+            <div role="paragraph">para2</div>
+            
+            <div role="paragraph">para3</div>
+        </section>
+        
+        <section id="sec-2" data-type="results">
+            <h2>RESULTS</h2>
+            <div role="paragraph">
+                <!--  -->
+                <a href="#F1">Figure 1A</a>
+                <figure id="F1" class="graphic">
+                    <!-- link to the image -->
+                    <img src="/" height="3608" width="3600" aria-labelledby="F1" loading="lazy" />
+                    <figcaption>
+                        <div class="caption">
+                            <span class="heading">Fig. 1</span>. Stretchable metallization and characterizations.
+                        </div>
+                        <div class="notes">
+                            <div role="doc-footnote">(<b>A</b>) Schematic of stretchable metallization.
+                                <sub>2</sub> 
+                            </div>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+                
+            <div role="paragraph">
+                para2
+            </div>
+            </section>
+            <section id="sec-3" data-type="discussion">
+                <h2>DISCUSSION</h2>
+                <div role="paragraph">In summary,</div>
+            </section>
+            
+            <section id="sec-4" data-type="materials methods">
+                <h2>MATERIALS AND METHODS</h2>
+                
+                <section id="sec-4-1">
+                    <h3>Materials</h3>
+                    
+                    <div role="paragraph">
+                        paapapap
+                    </div>
+                </section>
+                
+                <section id="sec-4-2">
+                    <h3>Stretchable metallization and characterization</h3>
+                    <div role="paragraph">
+                        pppppppppppp
+                    </div>
+                </section>
+                
+                <section id="sec-4-3">
+                    <h3>Device fabrication and measurement</h3>
+                    <div role="paragraph">
 
+                    </div>
+                </section>
+            </section>
+            
+            <section id="acknowledgments" role="doc-acknowledgments">
+                <h2>Acknowledgments</h2>
+                <div role="paragraph">
+                    <b>Funding:</b> 
+                </div>
+                <div role="paragraph">
+                    <b>Author contributions:</b>manuscript.
+                </div>
+                <div role="paragraph"><b>Competing interests:</b>no competing interests.
+                </div>
+                <div role="paragraph"><b>Data and materials availability:</b> All data needed to evaluate the conclusions in the paper are present in the paper and/or the Supplementary Materials.
+                </div>
+            </section>
     </div>
 </section>
 
@@ -894,7 +1011,7 @@ if(window.WebyGam) {
 
             <h2>Supplementary Materials</h2>
             <section id="sec-5-1">
-                <h3>This PDF file includes:</h3>
+                <h3>This file includes:</h3>
                 <div class="core-supplementary-material">
                     <div class="core-description">
                         <div>Figs. S1 to S51</div>
@@ -932,6 +1049,7 @@ if(window.WebyGam) {
 
         <section id="bibliography" role="doc-bibliography">
             <h2>REFERENCES AND NOTES</h2>
+
             <div role="list">
                 <div role="doc-biblioentry listitem" data-has="label">
                     <div class="label">1</div>
@@ -970,11 +1088,9 @@ if(window.WebyGam) {
                 </div>
             </div>
         </div>
-
-        <div role="doc-biblioentry listitem" data-has="label">
-            <div class="label">3</div><div id="R3" class="citations"><div class="citation"><div class="citation-content">J. Y. Oh, S. Rondeau-Gagné, Y.-C. Chiu, A. Chortos, F. Lissel, G.-J. N. Wang, B. C. Schroeder, T. Kurosawa, J. Lopez, T. Katsumata, J. Xu, C. Zhu, X. Gu, W.-G. Bae, Y. Kim, L. Jin, J. W. Chung, J. B.-H. Tok, Z. Bao,Intrinsically stretchable and healable semiconducting polymer for organic transistors. <em>Nature</em><b>539</b>,411–415 (2016).</div><div class="external-links"><div><a href="https://doi.org/10.1038/nature20102" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/27853213" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000388161700050" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Intrinsically+stretchable+and+healable+semiconducting+polymer+for+organic+transistors&amp;author=J.+Y.+Oh&amp;author=S.+Rondeau-Gagn%C3%A9&amp;author=Y.-C.+Chiu&amp;author=A.+Chortos&amp;author=F.+Lissel&amp;author=G.-J.+N.+Wang&amp;author=B.+C.+Schroeder&amp;author=T.+Kurosawa&amp;author=J.+Lopez&amp;author=T.+Katsumata&amp;author=J.+Xu&amp;author=C.+Zhu&amp;publication_year=2016&amp;journal=Nature&amp;pages=411-415&amp;doi=10.1038%2Fnature20102&amp;pmid=27853213" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">4</div><div id="R4" class="citations"><div class="citation"><div class="citation-content">J. Xu, S. Wang, G.-J. N. Wang, C. Zhu, S. Luo, L. Jin, X. Gu, S. Chen, V. R. Feig, J. W. F. To, S. Rondeau-Gagné, J. Park, B. C. Schroeder, C. Lu, J. Y. Oh, Y. Wang, Y.-H. Kim, H. Yan, R. Sinclair, D. Zhou, G. Xue, B. Murmann, C. Linder, W. Cai, J. B.-H. Tok, J. W. Chung, Z. Bao,Highly stretchable polymer semiconductor films through the nanoconfinement effect. <em>Science</em><b>355</b>,59–64 (2017).</div><div class="external-links"><div><a href="https://doi.org/10.1126/science.aah4496" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/28059762" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000391739900042" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Highly+stretchable+polymer+semiconductor+films+through+the+nanoconfinement+effect&amp;author=J.+Xu&amp;author=S.+Wang&amp;author=G.-J.+N.+Wang&amp;author=C.+Zhu&amp;author=S.+Luo&amp;author=L.+Jin&amp;author=X.+Gu&amp;author=S.+Chen&amp;author=V.+R.+Feig&amp;author=J.%C2%A0W.%C2%A0F.+To&amp;author=S.+Rondeau-Gagn%C3%A9&amp;author=J.+Park&amp;publication_year=2017&amp;journal=Science&amp;pages=59-64&amp;doi=10.1126%2Fscience.aah4496&amp;pmid=28059762" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">5</div><div id="R5" class="citations"><div class="citation"><div class="citation-content">W. Wang, S. Wang, R. Rastak, Y. Ochial, S. Niu, Y. Jiang, P. K. Arunachala, Y. Zheng, J. Xu, N. Matsuhisa, X. Yan, S.-K. Kwon, M. Miyakawa, Z. Zhang, R. Ning, A. M. Foudeh, Y. Yun, C. Linder, J. B.-H. Tok, Z. Bao,Strain-insensitive intrinsically stretchable transistors and circuits. <em>Nat. Electron.</em><b>4</b>,143–150 (2021).</div><div class="external-links"><div><a href="https://doi.org/10.1038/s41928-020-00525-1" target="_blank">Crossref</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Strain-insensitive+intrinsically+stretchable+transistors+and+circuits&amp;author=W.+Wang&amp;author=S.+Wang&amp;author=R.+Rastak&amp;author=Y.+Ochial&amp;author=S.+Niu&amp;author=Y.+Jiang&amp;author=P.+K.+Arunachala&amp;author=Y.+Zheng&amp;author=J.+Xu&amp;author=N.+Matsuhisa&amp;author=X.+Yan&amp;author=S.-K.+Kwon&amp;publication_year=2021&amp;journal=Nat.+Electron.&amp;pages=143-150&amp;doi=10.1038%2Fs41928-020-00525-1" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">6</div><div id="R6" class="citations"><div class="citation"><div class="citation-content">A. Chortos, J. Lim, J. W. F. To, M. Vosgueritchian, T. J. Dusseault, T.-H. Kim, S. Hwang, Z. Bao,Highly stretchable transistors using a microcracked organic semiconductor. <em>Adv. Mater.</em><b>26</b>,4253–4259 (2014).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adma.201305462" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/24740928" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000339007000006" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Highly+stretchable+transistors+using+a+microcracked+organic+semiconductor&amp;author=A.+Chortos&amp;author=J.+Lim&amp;author=J.%C2%A0W.%C2%A0F.+To&amp;author=M.+Vosgueritchian&amp;author=T.+J.+Dusseault&amp;author=T.-H.+Kim&amp;author=S.+Hwang&amp;author=Z.+Bao&amp;publication_year=2014&amp;journal=Adv.+Mater.&amp;pages=4253-4259&amp;doi=10.1002%2Fadma.201305462&amp;pmid=24740928" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">7</div><div id="R7" class="citations"><div class="citation"><div class="citation-content">B. Kang, E. Song, S. B. Lee, B.-G. Chae, H. Ahn, K. Cho,Stretchable polymer gate dielectric with segmented elastomeric network for organic soft electronics. <em>Chem. Mater.</em><b>30</b>,6353–6360 (2018).</div><div class="external-links"><div><a href="https://doi.org/10.1021/acs.chemmater.8b02388" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000445972100018" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Stretchable+polymer+gate+dielectric+with+segmented+elastomeric+network+for+organic+soft+electronics&amp;author=B.+Kang&amp;author=E.+Song&amp;author=S.+B.+Lee&amp;author=B.-G.+Chae&amp;author=H.+Ahn&amp;author=K.+Cho&amp;publication_year=2018&amp;journal=Chem.+Mater.&amp;pages=6353-6360&amp;doi=10.1021%2Facs.chemmater.8b02388" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">8</div><div id="R8" class="citations"><div class="citation"><div class="citation-content">J. Y. Oh, D. Son, T. Katsumata, Y. Lee, Y. Kim, J. Lopez, H.-C. Wu, J. Kang, J. Park, X. Gu, J. Mun, N. G.-J. Wang, Y. Yin, W. Cai, Y. Yun, J. B.-H. Tok, Z. Bao,Stretchable self-healable semiconducting polymer film for active-matrix strain-sensing array. <em>Sci. Adv.</em><b>5</b>,eaav3097 (2019).</div><div class="external-links"><div><a href="https://doi.org/10.1126/sciadv.aav3097" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/31723597" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000499736100004" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Stretchable+self-healable+semiconducting+polymer+film+for+active-matrix+strain-sensing+array&amp;author=J.+Y.+Oh&amp;author=D.+Son&amp;author=T.+Katsumata&amp;author=Y.+Lee&amp;author=Y.+Kim&amp;author=J.+Lopez&amp;author=H.-C.+Wu&amp;author=J.+Kang&amp;author=J.+Park&amp;author=X.+Gu&amp;author=J.+Mun&amp;author=N.+G.-J.+Wang&amp;publication_year=2019&amp;journal=Sci.+Adv.&amp;pages=eaav3097&amp;doi=10.1126%2Fsciadv.aav3097&amp;pmid=31723597" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">9</div><div id="R9" class="citations"><div class="citation"><div class="citation-content">K. Sim, Z. Rao, H.-J. Kim, A. Thukral, H. Shim, C. Yu,Fully rubbery integrated electronics from high effective mobility intrinsically stretchable semiconductors. <em>Sci. Adv.</em><b>5</b>,eaav5749 (2019).</div><div class="external-links"><div><a href="https://doi.org/10.1126/sciadv.aav5749" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/30746492" target="_blank">PubMed</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Fully+rubbery+integrated+electronics+from+high+effective+mobility+intrinsically+stretchable+semiconductors&amp;author=K.+Sim&amp;author=Z.+Rao&amp;author=H.-J.+Kim&amp;author=A.+Thukral&amp;author=H.+Shim&amp;author=C.+Yu&amp;publication_year=2019&amp;journal=Sci.+Adv.&amp;pages=eaav5749&amp;doi=10.1126%2Fsciadv.aav5749&amp;pmid=30746492" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">10</div><div id="R10" class="citations"><div class="citation"><div class="citation-content">G.-J. N. Wang, L. Shaw, J. Xu, T. Kurosawa, B. C. Schroeder, J. Y. Oh, S. J. Benight, Z. Bao,Inducing elasticity through oligo-siloxane crosslinks for intrinsically stretchable semiconducting polymers. <em>Adv. Funct. Mater.</em><b>26</b>,7254–7262 (2016).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adfm.201602603" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000387545200005" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Inducing+elasticity+through+oligo-siloxane+crosslinks+for+intrinsically+stretchable+semiconducting+polymers&amp;author=G.-J.+N.+Wang&amp;author=L.+Shaw&amp;author=J.+Xu&amp;author=T.+Kurosawa&amp;author=B.+C.+Schroeder&amp;author=J.+Y.+Oh&amp;author=S.+J.+Benight&amp;author=Z.+Bao&amp;publication_year=2016&amp;journal=Adv.+Funct.+Mater.&amp;pages=7254-7262&amp;doi=10.1002%2Fadfm.201602603" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">11</div><div id="R11" class="citations"><div class="citation"><div class="citation-content">J. Xu, H.-C. Wu, C. Zhu, A. Ehrlich, L. Shaw, M. Nikolka, S. Wang, F. Molina-Lopez, X. Gu, S. Luo, D. Zhou, Y.-H. Kim, G.-J. N. Wang, K. Gu, V. R. Feig, S. Chen, Y. Kim, T. Katsumata, Y.-Q. Zheng, H. Yan, J. W. Chung, J. Lopez, B. Murmann, Z. Bao,Multi-scale ordering in highly stretchable polymer semiconducting films. <em>Nat. Mater.</em><b>18</b>,594–601 (2019).</div><div class="external-links"><div><a href="https://doi.org/10.1038/s41563-019-0340-5" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/30988452" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000468511800018" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Multi-scale+ordering+in+highly+stretchable+polymer+semiconducting+films&amp;author=J.+Xu&amp;author=H.-C.+Wu&amp;author=C.+Zhu&amp;author=A.+Ehrlich&amp;author=L.+Shaw&amp;author=M.+Nikolka&amp;author=S.+Wang&amp;author=F.+Molina-Lopez&amp;author=X.+Gu&amp;author=S.+Luo&amp;author=D.+Zhou&amp;author=Y.-H.+Kim&amp;publication_year=2019&amp;journal=Nat.+Mater.&amp;pages=594-601&amp;doi=10.1038%2Fs41563-019-0340-5&amp;pmid=30988452" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">12</div><div id="R12" class="citations"><div class="citation"><div class="citation-content">S. Wang, J. Xu, W. Wang, G.-J. N. Wang, R. Rastak, F. Molina-Lopez, J. W. Chung, S. Niu, V. R. Feig, J. Lopez, T. Lei, S.-K. Kwon, Y. Kim, A. M. Foudeh, A. Ehrlich, A. Gasperini, Y. Yun, B. Murmann, J. B.-H. Tok, Z. Bao,Skin electronics from scalable fabrication of an intrinsically stretchable transistor array. <em>Nature</em><b>555</b>,83–88 (2018).</div><div class="external-links"><div><a href="https://doi.org/10.1038/nature25494" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/29466334" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000426247600036" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Skin+electronics+from+scalable+fabrication+of+an+intrinsically+stretchable+transistor+array&amp;author=S.+Wang&amp;author=J.+Xu&amp;author=W.+Wang&amp;author=G.-J.+N.+Wang&amp;author=R.+Rastak&amp;author=F.+Molina-Lopez&amp;author=J.+W.+Chung&amp;author=S.+Niu&amp;author=V.+R.+Feig&amp;author=J.+Lopez&amp;author=T.+Lei&amp;author=S.-K.+Kwon&amp;publication_year=2018&amp;journal=Nature&amp;pages=83-88&amp;doi=10.1038%2Fnature25494&amp;pmid=29466334" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">13</div><div id="R13" class="citations"><div class="citation"><div class="citation-content">A. Chortos, G. I. Koleilat, R. Pfattner, D. Kong, P. Lin, R. Nur, T. Lei, H. Wang, N. Liu, Y.-C. Lai, M.-G. Kim, J. W. Chung, S. Lee, Z. Bao,Mechanically durable and highly stretchable transistors employing carbon nanotube semiconductor and electrodes. <em>Adv. Mater.</em><b>28</b>,4441–4448 (2015).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adma.201501828" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/26179120" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000377123500014" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Mechanically+durable+and+highly+stretchable+transistors+employing+carbon+nanotube+semiconductor+and+electrodes&amp;author=A.+Chortos&amp;author=G.+I.+Koleilat&amp;author=R.+Pfattner&amp;author=D.+Kong&amp;author=P.+Lin&amp;author=R.+Nur&amp;author=T.+Lei&amp;author=H.+Wang&amp;author=N.+Liu&amp;author=Y.-C.+Lai&amp;author=M.-G.+Kim&amp;author=J.+W.+Chung&amp;publication_year=2015&amp;journal=Adv.+Mater.&amp;pages=4441-4448&amp;doi=10.1002%2Fadma.201501828&amp;pmid=26179120" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">14</div><div id="R14" class="citations"><div class="citation"><div class="citation-content">A. Chortos, C. Zhu, J. Y. Oh, X. Yan, I. Pochorovski, J. W.-F. To, N. Liu, U. Kraft, B. Murmann, Z. Bao,Investigating limiting factors in stretchable all-carbon transistors for reliable stretchable electronics. <em>ACS Nano</em><b>11</b>,7925–7937 (2017).</div><div class="external-links"><div><a href="https://doi.org/10.1021/acsnano.7b02458" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/28745872" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000408520900041" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Investigating+limiting+factors+in+stretchable+all-carbon+transistors+for+reliable+stretchable+electronics&amp;author=A.+Chortos&amp;author=C.+Zhu&amp;author=J.+Y.+Oh&amp;author=X.+Yan&amp;author=I.+Pochorovski&amp;author=J.+W.-F.+To&amp;author=N.+Liu&amp;author=U.+Kraft&amp;author=B.+Murmann&amp;author=Z.+Bao&amp;publication_year=2017&amp;journal=ACS+Nano&amp;pages=7925-7937&amp;doi=10.1021%2Facsnano.7b02458&amp;pmid=28745872" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">15</div><div id="R15" class="citations"><div class="citation"><div class="citation-content">N. Liu, A. Chortos, T. Lei, L. Jin, T. R. Kim, W.-G. Bae, C. Zhu, S. Wang, R. Pfattner, X. Chen, R. Sinclair, Z. Bao,Ultratransparent and stretchable graphene electrodes. <em>Sci. Adv.</em><b>3</b>,e1700159 (2017).</div><div class="external-links"><div><a href="https://doi.org/10.1126/sciadv.1700159" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/28913422" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000411592600018" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Ultratransparent+and+stretchable+graphene+electrodes&amp;author=N.+Liu&amp;author=A.+Chortos&amp;author=T.+Lei&amp;author=L.+Jin&amp;author=T.+R.+Kim&amp;author=W.-G.+Bae&amp;author=C.+Zhu&amp;author=S.+Wang&amp;author=R.+Pfattner&amp;author=X.+Chen&amp;author=R.+Sinclair&amp;author=Z.+Bao&amp;publication_year=2017&amp;journal=Sci.+Adv.&amp;pages=e1700159&amp;doi=10.1126%2Fsciadv.1700159&amp;pmid=28913422" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">16</div><div id="R16" class="citations"><div class="citation"><div class="citation-content">C. Zhu, A. Chortos, Y. Wang, R. Pfattner, T. Lei, A. C. Hinckley, I. Pochorovski, X. Yan, J. W.-F. To, J. Y. Oh, J. B.-H. Tok, Z. Bao, B. Murmann,Stretchable temperature-sensing circuits with strain suppression based on carbon nanotube transistors. <em>Nat. Electron.</em><b>1</b>,183–190 (2018).</div><div class="external-links"><div><a href="https://doi.org/10.1038/s41928-018-0041-0" target="_blank">Crossref</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Stretchable+temperature-sensing+circuits+with+strain+suppression+based+on+carbon+nanotube+transistors&amp;author=C.+Zhu&amp;author=A.+Chortos&amp;author=Y.+Wang&amp;author=R.+Pfattner&amp;author=T.+Lei&amp;author=A.+C.+Hinckley&amp;author=I.+Pochorovski&amp;author=X.+Yan&amp;author=J.+W.-F.+To&amp;author=J.+Y.+Oh&amp;author=J.+B.-H.+Tok&amp;author=Z.+Bao&amp;publication_year=2018&amp;journal=Nat.+Electron.&amp;pages=183-190&amp;doi=10.1038%2Fs41928-018-0041-0" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">17</div><div id="R17" class="citations"><div class="citation"><div class="citation-content">S. Lanone, P. Andujar, A. Kermanizadeh, J. Boczkowski,Determinants of carbon nanotube toxicity. <em>Adv. Drug Deliv. Rev.</em><b>65</b>,2063–2069 (2013).</div><div class="external-links"><div><a href="https://doi.org/10.1016/j.addr.2013.07.019" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/23928473" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000329479000012" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Determinants+of+carbon+nanotube+toxicity&amp;author=S.+Lanone&amp;author=P.+Andujar&amp;author=A.+Kermanizadeh&amp;author=J.+Boczkowski&amp;publication_year=2013&amp;journal=Adv.+Drug+Deliv.+Rev.&amp;pages=2063-2069&amp;doi=10.1016%2Fj.addr.2013.07.019&amp;pmid=23928473" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">18</div><div id="R18" class="citations"><div class="citation"><div class="citation-content">C. P. Firme III, P. R. Bandaru,Toxicity issues in the application of carbon nanotubes to biological systems. <em>Nanomedicine</em><b>6</b>,245–256 (2010).</div><div class="external-links"><div><a href="https://doi.org/10.1016/j.nano.2009.07.003" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/19699321" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000276090600006" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Toxicity+issues+in+the+application+of+carbon+nanotubes+to+biological+systems&amp;author=C.+P.+Firme&amp;author=P.+R.+Bandaru&amp;publication_year=2010&amp;journal=Nanomedicine&amp;pages=245-256&amp;doi=10.1016%2Fj.nano.2009.07.003&amp;pmid=19699321" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">19</div><div id="R19" class="citations"><div class="citation"><div class="citation-content">Y. Liu, Y. Zhao, B. Sun, C. Chen,Understanding the toxicity of carbon nanotubes. <em>Acc. Chem. Res.</em><b>46</b>,702–713 (2013).</div><div class="external-links"><div><a href="https://doi.org/10.1021/ar300028m" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/22999420" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000317317200011" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Understanding+the+toxicity+of+carbon+nanotubes&amp;author=Y.+Liu&amp;author=Y.+Zhao&amp;author=B.+Sun&amp;author=C.+Chen&amp;publication_year=2013&amp;journal=Acc.+Chem.+Res.&amp;pages=702-713&amp;doi=10.1021%2Far300028m&amp;pmid=22999420" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">20</div><div id="R20" class="citations"><div class="citation"><div class="citation-content">S. K. Rastogi, A. Kalmykov, N. Johnson, T. Cohen-Karni,Bioelectronics with nanocarbons. <em>J. Mater. Chem. B</em><b>6</b>,7159–7178 (2018).</div><div class="external-links"><div><a href="https://doi.org/10.1039/C8TB01600C" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/32254631" target="_blank">PubMed</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Bioelectronics+with+nanocarbons&amp;author=S.+K.+Rastogi&amp;author=A.+Kalmykov&amp;author=N.+Johnson&amp;author=T.+Cohen-Karni&amp;publication_year=2018&amp;journal=J.+Mater.+Chem.+B&amp;pages=7159-7178&amp;doi=10.1039%2FC8TB01600C&amp;pmid=32254631" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">21</div><div id="R21" class="citations"><div class="citation"><div class="citation-content">J. Y. Oh, S. Kim, H.-K. Baik, U. Jeong,Conducting polymer dough for deformable electronics. <em>Adv. Mater.</em><b>28</b>,4455–4461 (2016).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adma.201502947" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/26460551" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000377123500016" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Conducting+polymer+dough+for+deformable+electronics&amp;author=J.+Y.+Oh&amp;author=S.+Kim&amp;author=H.-K.+Baik&amp;author=U.+Jeong&amp;publication_year=2016&amp;journal=Adv.+Mater.&amp;pages=4455-4461&amp;doi=10.1002%2Fadma.201502947&amp;pmid=26460551" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">22</div><div id="R22" class="citations"><div class="citation"><div class="citation-content">X. Fan, W. Nie, H. Tsai, N. Wang, H. Huang, Y. Cheng, R. Wen, L. Ma, F. Yan, Y. Xia,PEDOT:PSS for flexible and stretchable electronics: Modifications, strategies, and applications. <em>Adv. Sci.</em><b>6</b>,1900813 (2019).</div><div class="external-links"><div><a href="https://doi.org/10.1002/advs.201900813" target="_blank">Crossref</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=PEDOT%3APSS+for+flexible+and+stretchable+electronics%3A+Modifications%2C+strategies%2C+and+applications&amp;author=X.+Fan&amp;author=W.+Nie&amp;author=H.+Tsai&amp;author=N.+Wang&amp;author=H.+Huang&amp;author=Y.+Cheng&amp;author=R.+Wen&amp;author=L.+Ma&amp;author=F.+Yan&amp;author=Y.+Xia&amp;publication_year=2019&amp;journal=Adv.+Sci.&amp;pages=1900813&amp;doi=10.1002%2Fadvs.201900813" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">23</div><div id="R23" class="citations"><div class="citation"><div class="citation-content">Y.-Q. Zheng, Y. Liu, D. Zhong, S. Nikzad, S. Liu, Z. Yu, D. Liu, H.-C. Wu, C. Zhu, J. Li, H. Tran, J. B.-H. Tok, Z. Bao,Monolithic optical microlithography of high-density elastic circuits. <em>Science</em><b>373</b>,88–94 (2021).</div><div class="external-links"><div><a href="https://doi.org/10.1126/science.abh3551" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/34210882" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000677843100035" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Monolithic+optical+microlithography+of+high-density+elastic+circuits&amp;author=Y.-Q.+Zheng&amp;author=Y.+Liu&amp;author=D.+Zhong&amp;author=S.+Nikzad&amp;author=S.+Liu&amp;author=Z.+Yu&amp;author=D.+Liu&amp;author=H.-C.+Wu&amp;author=C.+Zhu&amp;author=J.+Li&amp;author=H.+Tran&amp;author=J.+B.-H.+Tok&amp;publication_year=2021&amp;journal=Science&amp;pages=88-94&amp;doi=10.1126%2Fscience.abh3551&amp;pmid=34210882" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">24</div><div id="R24" class="citations"><div class="citation"><div class="citation-content">Y. Wang, C. Zhu, R. Pfattner, H. Yan, L. Jin, S. Chen, F. Molina-Lopez, F. Lissel, J. Liu, N. I. Rabiah, Z. Chen, J. W. Chung, C. Linder, M. F. Toney, B. Murmann, Z. Bao,A highly stretchable, transparent, and conductive polymer. <em>Sci. Adv.</em><b>3</b>,e1602076 (2017).</div><div class="external-links"><div><a href="https://doi.org/10.1126/sciadv.1602076" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/28345040" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000397044000024" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=A+highly+stretchable%2C+transparent%2C+and+conductive+polymer&amp;author=Y.+Wang&amp;author=C.+Zhu&amp;author=R.+Pfattner&amp;author=H.+Yan&amp;author=L.+Jin&amp;author=S.+Chen&amp;author=F.+Molina-Lopez&amp;author=F.+Lissel&amp;author=J.+Liu&amp;author=N.+I.+Rabiah&amp;author=Z.+Chen&amp;author=J.+W.+Chung&amp;publication_year=2017&amp;journal=Sci.+Adv.&amp;pages=e1602076&amp;doi=10.1126%2Fsciadv.1602076&amp;pmid=28345040" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">25</div><div id="R25" class="citations"><div class="citation"><div class="citation-content">D.-J. Yun, J. Jung, Y. M. Sung, H. Ra, J.-M. Kim, J. Chung, S. Y. Kim, Y.-S. Kim, S. Heo, K.-H. Kim, Y. J. Jeong, J. Jang,In-situ photoelectron spectroscopy study on the air degradation of PEDOT:PSS in terms of electrical and thermoelectric properties. <em>Adv. Electron. Mater.</em><b>6</b>,2000620 (2020).</div><div class="external-links"><div><a href="https://doi.org/10.1002/aelm.202000620" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000569394200001" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=In-situ+photoelectron+spectroscopy+study+on+the+air+degradation+of+PEDOT%3APSS+in+terms+of+electrical+and+thermoelectric+properties&amp;author=D.-J.+Yun&amp;author=J.+Jung&amp;author=Y.+M.+Sung&amp;author=H.+Ra&amp;author=J.-M.+Kim&amp;author=J.+Chung&amp;author=S.+Y.+Kim&amp;author=Y.-S.+Kim&amp;author=S.+Heo&amp;author=K.-H.+Kim&amp;author=Y.+J.+Jeong&amp;author=J.+Jang&amp;publication_year=2020&amp;journal=Adv.+Electron.+Mater.&amp;pages=2000620&amp;doi=10.1002%2Faelm.202000620" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">26</div><div id="R26" class="citations"><div class="citation"><div class="citation-content">S. Nau, N. Schulte, S. Winkler, J. Frisch, A. Vollmer, N. Koch, S. Sax, E. J. W. List,Highly efficient color-stable deep-blue multilayer PLEDs: Preventing PEDOT:PSS-induced interface degradation. <em>Adv. Mater.</em><b>25</b>,4420–4424 (2013).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adma.201300832" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/23776150" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000327749600006" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Highly+efficient+color-stable+deep-blue+multilayer+PLEDs%3A+Preventing+PEDOT%3APSS-induced+interface+degradation&amp;author=S.+Nau&amp;author=N.+Schulte&amp;author=S.+Winkler&amp;author=J.+Frisch&amp;author=A.+Vollmer&amp;author=N.+Koch&amp;author=S.+Sax&amp;author=E.%C2%A0J.%C2%A0W.+List&amp;publication_year=2013&amp;journal=Adv.+Mater.&amp;pages=4420-4424&amp;doi=10.1002%2Fadma.201300832&amp;pmid=23776150" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">27</div><div id="R27" class="citations"><div class="citation"><div class="citation-content">N. Matsuhisa, Y. Jiang, Z. Liu, G. Chen, C. Wan, Y. Kim, J. Kang, H. Tran, H.-C. Wu, I. You, Z. Bao, X. Chen,High-transconductance stretchable transistors achieved by controlled gold microcrack morphology. <em>Adv. Electron. Mater.</em><b>5</b>,1900347 (2019).</div><div class="external-links"><div><a href="https://doi.org/10.1002/aelm.201900347" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000479319100023" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=High-transconductance+stretchable+transistors+achieved+by+controlled+gold+microcrack+morphology&amp;author=N.+Matsuhisa&amp;author=Y.+Jiang&amp;author=Z.+Liu&amp;author=G.+Chen&amp;author=C.+Wan&amp;author=Y.+Kim&amp;author=J.+Kang&amp;author=H.+Tran&amp;author=H.-C.+Wu&amp;author=I.+You&amp;author=Z.+Bao&amp;author=X.+Chen&amp;publication_year=2019&amp;journal=Adv.+Electron.+Mater.&amp;pages=1900347&amp;doi=10.1002%2Faelm.201900347" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">28</div><div id="R28" class="citations"><div class="citation"><div class="citation-content">S. Rosset, M. Niklaus, P. Dubois, H. R. Shea,Mechanical characterization of a dielectric elastomer microactuator with ion-implanted electrodes. <em>Sens. Actuators A Phys.</em><b>144</b>,185–193 (2008).</div><div class="external-links"><div><a href="https://doi.org/10.1016/j.sna.2007.12.030" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000255993200025" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Mechanical+characterization+of+a+dielectric+elastomer+microactuator+with+ion-implanted+electrodes&amp;author=S.+Rosset&amp;author=M.+Niklaus&amp;author=P.+Dubois&amp;author=H.+R.+Shea&amp;publication_year=2008&amp;journal=Sens.+Actuators+A+Phys.&amp;pages=185-193&amp;doi=10.1016%2Fj.sna.2007.12.030" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">29</div><div id="R29" class="citations"><div class="citation"><div class="citation-content">S. Rosset, M. Niklaus, P. Dubois, H. R. Shea,Large-stroke dielectric elastomer actuators with ion-implanted electrodes. <em>J. Microelectromech. Syst.</em><b>18</b>,1300–1308 (2009).</div><div class="external-links"><div><a href="https://doi.org/10.1109/JMEMS.2009.2031690" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000272318900015" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Large-stroke+dielectric+elastomer+actuators+with+ion-implanted+electrodes&amp;author=S.+Rosset&amp;author=M.+Niklaus&amp;author=P.+Dubois&amp;author=H.+R.+Shea&amp;publication_year=2009&amp;journal=J.+Microelectromech.+Syst.&amp;pages=1300-1308&amp;doi=10.1109%2FJMEMS.2009.2031690" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">30</div><div id="R30" class="citations"><div class="citation"><div class="citation-content">M. Park, J. Im, M. Shin, Y. Min, J. Park, H. Cho, S. Park, M.-B. Shim, S. Jeon, D.-Y. Chung, J. Bae, J. Park, U. Jeong, K. Kim,Highly stretchable electric circuits from a composite material of silver nanoparticles and elastomeric fibres. <em>Nat. Nanotechnol.</em><b>7</b>,803–809 (2012).</div><div class="external-links"><div><a href="https://doi.org/10.1038/nnano.2012.206" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/23178335" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000312003700015" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Highly+stretchable+electric+circuits+from+a+composite+material+of+silver+nanoparticles+and+elastomeric+fibres&amp;author=M.+Park&amp;author=J.+Im&amp;author=M.+Shin&amp;author=Y.+Min&amp;author=J.+Park&amp;author=H.+Cho&amp;author=S.+Park&amp;author=M.-B.+Shim&amp;author=S.+Jeon&amp;author=D.-Y.+Chung&amp;author=J.+Bae&amp;author=J.+Park&amp;publication_year=2012&amp;journal=Nat.+Nanotechnol.&amp;pages=803-809&amp;doi=10.1038%2Fnnano.2012.206&amp;pmid=23178335" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">31</div><div id="R31" class="citations"><div class="citation"><div class="citation-content">G. Corbelli, C. Ghisleri, M. Marelli, P. Milani, L. Ravagnan,Highly deformable nanostructured elastomeric electrodes with improving conductivity upon cyclical stretching. <em>Adv. Mater.</em><b>23</b>,4504–4508 (2011).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adma.201102463" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/21997303" target="_blank">PubMed</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000297008100004" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Highly+deformable+nanostructured+elastomeric+electrodes+with+improving+conductivity+upon+cyclical+stretching&amp;author=G.+Corbelli&amp;author=C.+Ghisleri&amp;author=M.+Marelli&amp;author=P.+Milani&amp;author=L.+Ravagnan&amp;publication_year=2011&amp;journal=Adv.+Mater.&amp;pages=4504-4508&amp;doi=10.1002%2Fadma.201102463&amp;pmid=21997303" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">32</div><div id="R32" class="citations"><div class="citation"><div class="citation-content">Z. Liu, H. Wang, P. Huang, J. Huang, Y. Zhang, Y. Wang, M. Yu, S. Chen, D. Qi, T. Wang, Y. Jiang, G. Chen, G. Hu, W. Li, J. Yu, Y. Luo, X. J. Loh, B. Liedberg, G. Li, X. Chen,Highly stable and stretchable conductive films through thermal-radiation-assisted metal encapsulation. <em>Adv. Mater.</em><b>31</b>,e19011360 (2019).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adma.201901360" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000474476700001" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Highly+stable+and+stretchable+conductive+films+through+thermal-radiation-assisted+metal+encapsulation&amp;author=Z.+Liu&amp;author=H.+Wang&amp;author=P.+Huang&amp;author=J.+Huang&amp;author=Y.+Zhang&amp;author=Y.+Wang&amp;author=M.+Yu&amp;author=S.+Chen&amp;author=D.+Qi&amp;author=T.+Wang&amp;author=Y.+Jiang&amp;author=G.+Chen&amp;publication_year=2019&amp;journal=Adv.+Mater.&amp;pages=e19011360&amp;doi=10.1002%2Fadma.201901360" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">33</div><div id="R33" class="citations"><div class="citation"><div class="citation-content">Y. Shi, Y. Zhou, Z. Che, J. Shang, Q. Wang, F. Liu, Y. Zhou,Degradation phenomena and degradation mechanisms for highly conductive PEDOT:PSS films. <em>Mater. Lett.</em><b>308</b>,131106 (2022).</div><div class="external-links"><div><a href="https://doi.org/10.1016/j.matlet.2021.131106" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000711385600002" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Degradation+phenomena+and+degradation+mechanisms+for+highly+conductive+PEDOT%3APSS+films&amp;author=Y.+Shi&amp;author=Y.+Zhou&amp;author=Z.+Che&amp;author=J.+Shang&amp;author=Q.+Wang&amp;author=F.+Liu&amp;author=Y.+Zhou&amp;publication_year=2022&amp;journal=Mater.+Lett.&amp;pages=131106&amp;doi=10.1016%2Fj.matlet.2021.131106" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">34</div><div id="R34" class="citations"><div class="citation"><div class="citation-content">C. Liu, Y. Xu, Y.-Y. Noh,Contact engineering in organic field-effect transistors. <em>Mater. Today</em><b>18</b>,79–96 (2015).</div><div class="external-links"><div><a href="https://doi.org/10.1016/j.mattod.2014.08.037" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000349625100016" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Contact+engineering+in+organic+field-effect+transistors&amp;author=C.+Liu&amp;author=Y.+Xu&amp;author=Y.-Y.+Noh&amp;publication_year=2015&amp;journal=Mater.+Today&amp;pages=79-96&amp;doi=10.1016%2Fj.mattod.2014.08.037" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">35</div><div id="R35" class="citations"><div class="citation"><div class="citation-content">H. Ma, H.-L. Yip, F. Huang, A. K.-Y. Jen,Interface engineering for organic electronics. <em>Adv. Funct. Mater.</em><b>20</b>,1371–1388 (2010).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adfm.200902236" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000277806000003" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Interface+engineering+for+organic+electronics&amp;author=H.+Ma&amp;author=H.-L.+Yip&amp;author=F.+Huang&amp;author=A.+K.-Y.+Jen&amp;publication_year=2010&amp;journal=Adv.+Funct.+Mater.&amp;pages=1371-1388&amp;doi=10.1002%2Fadfm.200902236" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">36</div><div id="R36" class="citations"><div class="citation"><div class="citation-content">G. Kitahara, M. Ikawa, S. Matsuoka, S. Arai, T. Hasegawa,Approaching trap-minimized polymer thin-film transistors. <em>Adv. Funct. Mater.</em><b>31</b>,2105933 (2021).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adfm.202105933" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000706082500001" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Approaching+trap-minimized+polymer+thin-film+transistors&amp;author=G.+Kitahara&amp;author=M.+Ikawa&amp;author=S.+Matsuoka&amp;author=S.+Arai&amp;author=T.+Hasegawa&amp;publication_year=2021&amp;journal=Adv.+Funct.+Mater.&amp;pages=2105933&amp;doi=10.1002%2Fadfm.202105933" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">37</div><div id="R37" class="citations"><div class="citation"><div class="citation-content">Q. Wang, S. Jiang, B. Zhang, E.-Y. Shin, Y.-Y. Noh, Y. Xu, Y. Shi, Y. Li,Role of schottky barrier and access resistance in organic field-effect transistors. <em>J. Phys. Chem. Lett.</em><b>11</b>,1466–1472 (2020).</div><div class="external-links"><div><a href="https://doi.org/10.1021/acs.jpclett.9b03339" target="_blank">Crossref</a></div><div><a href="https://www.ncbi.nlm.nih.gov/pubmed/32013442" target="_blank">PubMed</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Role+of+schottky+barrier+and+access+resistance+in+organic+field-effect+transistors&amp;author=Q.+Wang&amp;author=S.+Jiang&amp;author=B.+Zhang&amp;author=E.-Y.+Shin&amp;author=Y.-Y.+Noh&amp;author=Y.+Xu&amp;author=Y.+Shi&amp;author=Y.+Li&amp;publication_year=2020&amp;journal=J.+Phys.+Chem.+Lett.&amp;pages=1466-1472&amp;doi=10.1021%2Facs.jpclett.9b03339&amp;pmid=32013442" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">38</div><div id="R38" class="citations"><div class="citation"><div class="citation-content">M. Waldrip, O. D. Jurchescu, D. J. Gundlach, E. G. Bittle, Contact resistance in organic field-effect transistors: Conquering the barrier. <em>Adv. Funct. Mater.</em> <b>30</b>, 1904576 (2020).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adfm.201904576" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000486793400001" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Contact+resistance+in+organic+field-effect+transistors%3A+Conquering+the+barrier&amp;author=M.+Waldrip&amp;author=O.+D.+Jurchescu&amp;author=D.+J.+Gundlach&amp;author=E.+G.+Bittle&amp;publication_year=2020&amp;journal=Adv.+Funct.+Mater.&amp;pages=1904576&amp;doi=10.1002%2Fadfm.201904576" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">39</div><div id="R39" class="citations"><div class="citation"><div class="citation-content">F. F. A. Thran, V. Zaporojtchenko, M. Kiene, T. Strunskus, K. Behnke, Nucleation, growth, interdiffusion, and adhesion of metal films on polymers. <em>AIP Conf. Proc.</em> <b>491</b>, 201–216 (1999).</div><div class="external-links"><div><a href="https://scholar.google.com/scholar_lookup?title=Nucleation%2C+growth%2C+interdiffusion%2C+and+adhesion+of+metal+films+on+polymers&amp;author=F.%C2%A0F.%C2%A0A.+Thran&amp;author=V.+Zaporojtchenko&amp;author=M.+Kiene&amp;author=T.+Strunskus&amp;author=K.+Behnke&amp;publication_year=1999&amp;journal=AIP+Conf.+Proc.&amp;pages=201-216" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">40</div><div id="R40" class="citations"><div class="citation"><div class="citation-content">J. Friedrich, <i>Metal-Polymer Systems: Interface Design and Chemical Bonding</i> (Wiley-VCH, 2017).</div><div class="external-links"><div><a href="https://scholar.google.com/scholar?q=J.+Friedrich%2C+Metal-Polymer+Systems%3A+Interface+Design+and+Chemical+Bonding+%28Wiley-VCH%2C+2017%29." target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">41</div><div id="R41" class="citations"><div class="citation"><div class="citation-content">K. L.  Mittal, Adhesion aspects of metallization of organic polymer surfaces. <em>J. Vac. Sci.Technol.</em> <b>13</b>, 19–25 (1976).</div><div class="external-links"><div><a href="https://doi.org/10.1116/1.568850" target="_blank">Crossref</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Adhesion+aspects+of+metallization+of+organic+polymer+surfaces&amp;author=K.%C2%A0L.%C2%A0+Mittal&amp;publication_year=1976&amp;journal=J.+Vac.+Sci.Technol.&amp;pages=19-25&amp;doi=10.1116%2F1.568850" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">42</div><div id="R42" class="citations"><div class="citation"><div class="citation-content">H. H. Choi, K. Cho, C. D. Frisbie, H. Sirringhaus, V. Podzorov,Critical assessment of charge mobility extraction in FETs. <em>Nat. Mater.</em><b>17</b>,2–7 (2018).</div><div class="external-links"><div><a href="https://doi.org/10.1038/nmat5035" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000422790000002" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Critical+assessment+of+charge+mobility+extraction+in+FETs&amp;author=H.+H.+Choi&amp;author=K.+Cho&amp;author=C.+D.+Frisbie&amp;author=H.+Sirringhaus&amp;author=V.+Podzorov&amp;publication_year=2018&amp;journal=Nat.+Mater.&amp;pages=2-7&amp;doi=10.1038%2Fnmat5035" target="_blank">Google Scholar</a></div></div></div></div></div><div role="doc-biblioentry listitem" data-has="label"><div class="label">43</div><div id="R43" class="citations"><div class="citation"><div class="citation-content">A. F. Paterson, S. Singh, K. J. Fallon, T. Hodsden, Y. Han, B. C. Schroeder, H. Bronstein, M. Heeney, I. McCulloch, T. D. Anthopoulos,Recent progress in high-mobility organic transistors: A reality check. <em>Adv. Mater.</em><b>30</b>,1801079 (2018).</div><div class="external-links"><div><a href="https://doi.org/10.1002/adma.201801079" target="_blank">Crossref</a></div><div><a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;DestApp=WOS_CPL&amp;UsrCustomerID=5e3815c904498985e796fc91436abd9a&amp;SrcAuth=atyponcel&amp;SrcApp=literatum&amp;DestLinkType=FullRecord&amp;KeyUT=000443377100008" target="_blank">ISI</a></div><div><a href="https://scholar.google.com/scholar_lookup?title=Recent+progress+in+high-mobility+organic+transistors%3A+A+reality+check&amp;author=A.+F.+Paterson&amp;author=S.+Singh&amp;author=K.+J.+Fallon&amp;author=T.+Hodsden&amp;author=Y.+Han&amp;author=B.+C.+Schroeder&amp;author=H.+Bronstein&amp;author=M.+Heeney&amp;author=I.+McCulloch&amp;author=T.+D.+Anthopoulos&amp;publication_year=2018&amp;journal=Adv.+Mater.&amp;pages=1801079&amp;doi=10.1002%2Fadma.201801079" target="_blank">Google Scholar</a></div></div></div></div></div></div></section></div></section>
-     
-
+    </section>
+</div>
+</section>
 
 
 <div data-extent="backmatter" class="contentAfter">
@@ -992,11 +1108,11 @@ if(window.WebyGam) {
             <div class="after-credits">
                 <div class="core-container">
                     <!-- point to itself -->
-                    <a href="/doi/full/10.1126/sciadv.ade2988">
+                    <a href="#">
                         <span>View full text</span>
                     </a>
                     <!-- point to the pdf file -->
-                    <a href="/doi/pdf/10.1126/sciadv.ade2988">
+                    <a href="/">
                         <span>Download PDF</span>
                     </a>
                 </div>
@@ -1050,11 +1166,11 @@ if(window.WebyGam) {
                 <div class="st-header__nav st-header__item">
                     <nav title="Content Navigation" class="content-navigation">
                         <!-- the previous article -->
-                        <a href="/doi/10.1126/sciadv.ade2450" title="Touch IoT enabled by wireless self-sensing and haptic-reproducing electronic skin" class="content-navigation__prev">
+                        <a href="/doi/10.1126/sciadv.ade2450" title="previous article title" class="content-navigation__prev">
                             <div aria-hidden="true" class="content-navigation__hint">
                                 <div class="content-navigation__hint__content">
                                     <h6>PREVIOUS ARTICLE</h6>
-                                    <div>Touch IoT enabled by wireless self-sensing and haptic-reproducing electronic skin</div>
+                                    <div>previous article title</div>
                                 </div>
                             </div>
                             <i aria-hidden="true" class="icon-arrow-left"></i>
@@ -1062,11 +1178,11 @@ if(window.WebyGam) {
                         </a>
 
                         <!-- the next article -->
-                        <a href="/" title="Biodegradable, three-dimensional colorimetric fliers for environmental monitoring" class="content-navigation__next">
+                        <a href="/" title="next article title" class="content-navigation__next">
                             <div aria-hidden="true" class="content-navigation__hint">
                                 <div class="content-navigation__hint__content">
                                     <h6>NEXT ARTICLE</h6>
-                                    <div>Biodegradable, three-dimensional colorimetric fliers for environmental monitoring</div>
+                                    <div>next article title</div>
                                 </div>
                             </div>
                             <span>contentNavigation.next.default</span>
@@ -1112,11 +1228,19 @@ if(window.WebyGam) {
             </div>
         </template>
 
-        <template id="fv_directory_template" data-overlay="View figure"><div class="fv__directory"><div class="fv__header"><nav class="tab__nav"></nav><a href="#" title="Close figure viewer" class="fv__close"><i aria-hidden="true" class="icon-close"></i></a></div><div class="fv__content tab__content"></div></div></template><template id="fv_directory_tabItem_template" data-figures="Figures" data-others="Others" data-tables="Tables"><button role="tab" data-toggle="tab" class="tab__nav__item"></button></template>
+        <template id="fv_directory_template" data-overlay="View figure"><div class="fv__directory"><div class="fv__header"><nav class="tab__nav"></nav><a href="#" title="Close figure viewer" class="fv__close"><i aria-hidden="true" class="icon-close"></i></a></div><div class="fv__content tab__content"></div></div></template>
+        <template id="fv_directory_tabItem_template" data-figures="Figures" data-others="Others" data-tables="Tables"><button role="tab" data-toggle="tab" class="tab__nav__item"></button></template>
         <template id="fv_lightbox_template" data-sr-back="Go to figure location within the article" data-sr-closeAlt="Close" data-sr-download="Toggle download panel" data-sr-info="Toggle information panel" data-sr-panel="Close panel" data-sr-share="Toggle share panel" data-sr-zoom="Zoom" data-text-close="Back to article" data-text-nav-figures="All figures" data-text-nav-others="All others" data-text-nav-tables="All tables" data-text-viewAll="View all material" data-title-back="Back to article" data-title-closeAlt="Close" data-title-download="Download" data-title-info="Info" data-title-share="Share" data-title-zoom="Zoom"></template>
-        <template id="fv_toolbar_template"><div class="fv__toolbar__info"><p class="fv__toolbar__contentText"></p><strong class="fv__toolbar__contentTitle uppercase"></strong></div></template><template id="toCitationLink" data-citation="REFERENCE" data-footnote="FOOTNOTE"><div class="to-citation__wrapper"><a class="to-citation"><i aria-hidden="true" class="icon-return"></i><span>GO TO</span></a></div></template><template id="toCitationButton" data-citation="REFERENCE" data-footnote="FOOTNOTE"><div class="to-citation__wrapper"><button class="to-citation"><i aria-hidden="true" class="icon-return"></i><span>GO TO</span></button></div></template><template id="toCitationAccordion" data-collapse-citation="HIDE REFERENCES" data-expand-citation="SEE ALL REFERENCES" data-collapse-footnote="HIDE FOOTNOTES" data-expand-footnote="SEE ALL FOOTNOTES"><div class="to-citation__wrapper"><button aria-controls="aria-controls" aria-expanded="false" aria-haspopup="true" aria-label="Toggle citations menu" class="to-citation__toggle"><i aria-hidden="true" class="icon-plus"></i><span data-expand-title="data-expand-title" data-collapsed-title="data-collapsed-title" class="accordion__toggle__title"></span></button><div role="menu" aria-label="links" class="to-citation__accordion"><ul></ul></div></div></template><template id="toCitationAccordionItem"><li><a class="to-citation"><i aria-hidden="true" class="icon-return"></i><span></span></a></li></template><template id="citations_truncate_template"><div class="citations-truncation"><button data-label-expand="Show all references" data-label-collapse="Show fewer" class="btn btn--inverse"><span>Show all references</span></button></div></template><template id="collateral_texts_template" data-references="References" data-figure="GO TO FIGURE" data-media="GO TO MEDIA" data-more="More" data-original="GO TO ORIGINAL" data-table="GO TO TABLE" data-inViewer="OPEN IN VIEWER" data-allInViewer="Open all in viewer"><svg height="24px" viewBox="0 0 24 24"><ellipse cx="13.735" cy="7.5" rx="5.282" ry="5.25" fill="#F9A342"></ellipse> <ellipse cx="7.59" cy="12.536" rx="4.528" ry="4.5" fill="#3B86C6"></ellipse><ellipse cx="15.244" cy="18" rx="3.773" ry="3.75" fill="#456799"></ellipse></svg><span>Request permissions</span></template><template id="collapsible_authors_template"><button aria-expanded="false" data-expandable="all" data-label-expand="Expand All" data-label-collapse="Collapse All" class="collateral-contributors-control"><span>Expand All</span></button></template>
+        <template id="fv_toolbar_template"><div class="fv__toolbar__info"><p class="fv__toolbar__contentText"></p><strong class="fv__toolbar__contentTitle uppercase"></strong></div></template>
+        <template id="toCitationLink" data-citation="REFERENCE" data-footnote="FOOTNOTE"><div class="to-citation__wrapper"><a class="to-citation"><i aria-hidden="true" class="icon-return"></i><span>GO TO</span></a></div></template>
+        <template id="toCitationButton" data-citation="REFERENCE" data-footnote="FOOTNOTE"><div class="to-citation__wrapper"><button class="to-citation"><i aria-hidden="true" class="icon-return"></i><span>GO TO</span></button></div></template>
+        <template id="toCitationAccordion" data-collapse-citation="HIDE REFERENCES" data-expand-citation="SEE ALL REFERENCES" data-collapse-footnote="HIDE FOOTNOTES" data-expand-footnote="SEE ALL FOOTNOTES"><div class="to-citation__wrapper"><button aria-controls="aria-controls" aria-expanded="false" aria-haspopup="true" aria-label="Toggle citations menu" class="to-citation__toggle"><i aria-hidden="true" class="icon-plus"></i><span data-expand-title="data-expand-title" data-collapsed-title="data-collapsed-title" class="accordion__toggle__title"></span></button><div role="menu" aria-label="links" class="to-citation__accordion"><ul></ul></div></div></template>
+        <template id="toCitationAccordionItem"><li><a class="to-citation"><i aria-hidden="true" class="icon-return"></i><span></span></a></li></template>
+        <template id="citations_truncate_template"><div class="citations-truncation"><button data-label-expand="Show all references" data-label-collapse="Show fewer" class="btn btn--inverse"><span>Show all references</span></button></div></template>
+        <template id="collateral_texts_template" data-references="References" data-figure="GO TO FIGURE" data-media="GO TO MEDIA" data-more="More" data-original="GO TO ORIGINAL" data-table="GO TO TABLE" data-inViewer="OPEN IN VIEWER" data-allInViewer="Open all in viewer"><svg height="24px" viewBox="0 0 24 24"><ellipse cx="13.735" cy="7.5" rx="5.282" ry="5.25" fill="#F9A342"></ellipse> <ellipse cx="7.59" cy="12.536" rx="4.528" ry="4.5" fill="#3B86C6"></ellipse><ellipse cx="15.244" cy="18" rx="3.773" ry="3.75" fill="#456799"></ellipse></svg><span>Request permissions</span></template><template id="collapsible_authors_template"><button aria-expanded="false" data-expandable="all" data-label-expand="Expand All" data-label-collapse="Collapse All" class="collateral-contributors-control"><span>Expand All</span></button></template>
         <template id="collapsible_tables_collapse_template"><div class="collapsible-figure-btn__wrapper expanded"><button class="btn collapsible-figure-btn btn--inverse"><span>Collapse</span><i aria-hidden="true" class="icon-arrow-up"></i></button></div></template>
-        <template id="collapsible_tables_expand_template"><div class="collapsible-figure-btn__wrapper collapsed"><button aria-expanded="aria-expanded" class="btn collapsible-figure-btn btn--inverse"><span>Expand for more</span><i aria-hidden="true" class="icon-arrow-down"></i></button></div></template><template id="sections_navbar_button_template"><button title="Toggle sections navigation" class="sections-navbar__trigger"><i aria-hidden="true" class="icon-sections"></i></button></template><template id="authorsAffiliationsLink"><a href="#tab-contributors" class="to-authors-affiliations">Authors Info & Affiliations</a></template><template id="products_truncate_template"><div class="product-truncation"><button data-label-expand="SHOW ALL BOOKS" data-label-collapse="Show fewer" class="btn btn--inverse"><span>SHOW ALL BOOKS</span></button></div></template>
+        <template id="collapsible_tables_expand_template"><div class="collapsible-figure-btn__wrapper collapsed"><button aria-expanded="aria-expanded" class="btn collapsible-figure-btn btn--inverse"><span>Expand for more</span><i aria-hidden="true" class="icon-arrow-down"></i></button></div></template>
+        <template id="sections_navbar_button_template"><button title="Toggle sections navigation" class="sections-navbar__trigger"><i aria-hidden="true" class="icon-sections"></i></button></template>
     </div>
 </main>
 
@@ -1195,60 +1319,61 @@ if(window.WebyGam) {
                         <ul role="list" class="list-unstyled footer__sitemap__list d-flex flex-column mb-0">
                             <!-- create news webpage -->
                             <li role="listitem" class="footer__sitemap__list-item--heading mb-3">
-                                <a href="/news" class="font-weight-bold text-uppercase">NEWS</a>
+                                <a href="/index.html" class="font-weight-bold text-uppercase">NEWS</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="/">All</a>
+                                <a href="/index.html">All</a>
                             </li>                    
                         </ul>
     
                         <ul role="list" class="list-unstyled footer__sitemap__list d-flex flex-column mb-0">
                             <li role="listitem" class="footer__sitemap__list-item--heading mb-3">
                                 <!-- create an about webpage -->
-                                <a href="/content/page/aboutus" class="font-weight-bold text-uppercase">ABOUT</a>
+                                <a href="/ABOUT.html" class="font-weight-bold text-uppercase">ABOUT</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="/content/page/leadership-and-management">Why The Website</a>
+                                <a href="/ABOUT.html">Why The Website</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="//www.aaas.org/careers/workataaas" target="_blank">Contents</a>
+                                <a href="/index.html" target="_blank">Contents</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="/content/page/prizes-and-awards">About the Author</a>
+                                <a href="/resume.html">About the Author</a>
                             </li>
                         </ul>
 
                         <!-- create help webpages -->
                         <ul role="list" class="list-unstyled footer__sitemap__list d-flex flex-column mb-0">
                             <li role="listitem" class="footer__sitemap__list-item--heading mb-3">
-                                <a href="/content/page/help" class="font-weight-bold text-uppercase">HELP</a>
+                                <a href="/ABOUT.html" class="font-weight-bold text-uppercase">HELP</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="/content/page/faqs">FAQs</a>
+                                <a href="/ABOUT.html">FAQs</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="/content/page/access-and-subscriptions">Subscriptions</a>
+                                <a href="/message.html">Subscriptions</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="/content/page/contact-us">Contact</a>
+                                <a href="/message.html">Contact</a>
                             </li>
                         </ul>
+
                         <!-- find 4 related sites -->
                         <ul role="list" class="list-unstyled footer__sitemap__list d-flex flex-column mb-0">
                             <li role="listitem" class="footer__sitemap__list-item--heading mb-3">
-                                <a href="/content/page/related-sites" class="font-weight-bold text-uppercase">RELATED SITES</a>
+                                <a class="font-weight-bold text-uppercase">RELATED SITES</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="//www.aaas.org/" target="_blank">site1</a>
+                                <a href="https://english.gxu.edu.cn/" target="_blank">Guangxi University</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="//members.aaas.org/home" target="_blank">site2</a>
+                                <a href="https://www.wikipedia.org/" target="_blank">wikipedia</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="//www.eurekalert.org/" target="_blank">site3</a>
+                                <a href="https://github.com/" target="_blank">Github</a>
                             </li>
                             <li role="listitem" class="footer__sitemap__list-item mb-1">
-                                <a href="//www.scienceintheclassroom.org/" target="_blank">site4</a>
+                                <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
                             </li>
                         </ul>
                     </nav>
@@ -1276,8 +1401,10 @@ if(window.WebyGam) {
                                     <i aria-hidden="true" class="icon-youtube"></i></a></li>
                             <li role="listitem" class="list-inline-item footer__social-media__list-item">
                                 <!-- create a email respond html -->
-                                <a href="/" title="RSS feeds" class="text-md">
-                                    <i aria-hidden="true" class="icon-rss"></i></a></li>
+                                <a href="/message.html" title="Email" class="text-md">
+                                    <i aria-hidden="true" class="icon-rss"></i>
+                                </a>
+                            </li>
                             <li role="listitem" class="list-inline-item footer__social-media__list-item">
                                 <a href="https://mp.weixin.qq.com/s/1lIi0cRLwRmCaA9uSep1yw" title="WeChat" class="text-md" target="_blank">
                                     <i aria-hidden="true" class="icon-wechat"></i></a></li>
@@ -1288,13 +1415,13 @@ if(window.WebyGam) {
                 <!-- right bottom footer -->
                 <div class="footer__copyright text-center text-xl-left border-darker-gray border-top pt-4">
                     <div class="footer__logo-wrapper">
-                        <a href="yuruotao.com" target="_blank" title="Visit the homepage">
+                        <a href="/index.html" target="_blank" title="Visit the homepage">
 
                             <!-- add the svg file of logo -->
                             <img src="/" alt="the logo of yuruotao.com" class="footer__logo"/>
                         </a>
                     </div>
-                    <p class="mt-4 mb-0 text-light-gray">© yuruotao.com.</p> 
+                    <p class="mt-4 mb-0 text-light-gray">© yuruotao.com</p> 
                     <p class="mt-4 mb-0 text-light-gray">All rights reserved.</p>
                 </div>
             </div>
@@ -1321,16 +1448,13 @@ if(window.WebyGam) {
             <div class="col-12 text-center text-xl-left">
                 <ul role="list" class="list-inline footer__copyright__links border-darker-gray border-top">
                     <li role="listitem" class="list-inline-item mr-1">
-                        <!-- html file create -->
-                        <a href="/content/page/terms-service" title="Terms of Service">Terms of Service</a>
+                        <a href="/ABOUT.html" title="Terms of Service">Terms of Service</a>
                     </li>
                     <li role="listitem" class="list-inline-item mr-1">
-                        <!-- html file create -->
-                        <a href="/content/page/privacy-policy" title="Privacy Policy">Privacy Policy</a>
+                        <a href="/ABOUT.html" title="Privacy Policy">Privacy Policy</a>
                     </li>
                     <li role="listitem" class="list-inline-item">
-                        <!-- html file create -->
-                        <a href="/content/page/accessibility" title="Accessibility">Accessibility</a>
+                        <a href="/ABOUT.html" title="Accessibility">Accessibility</a>
                     </li>
                 </ul>
             </div>
@@ -1339,12 +1463,9 @@ if(window.WebyGam) {
 </section>
 </footer>
 </div>
-
-
         </div>
     </div>
-        
-        
+
         <!-- responsible for the header and button -->
         <!-- dependent on the path -->
         <script src="/products/aaas/releasedAssets/js/main.bundle-f6885e7acf8283b28672.js" ></script>
