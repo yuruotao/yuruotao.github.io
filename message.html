@@ -115,6 +115,14 @@ if(window.WebyGam) {
     }
 </script>
 
+<!-- <script type="text/javascript">
+    window.onbeforeunload = confirmExit; 
+    function confirmExit() 
+    { 
+      return "Good luck to you!"; 
+    } 
+  </script> -->
+
     <div id="pb-page-content" data-ng-non-bindable>
         <div data-pb-dropzone="main" data-pb-dropzone-name="Main">
         <div class="sciadv">
@@ -618,7 +626,20 @@ if(window.WebyGam) {
 
               <h1>Leave a message</h1>
               <p></p>
-              
+
+              <h2>Click To Send An E-mail</h2>
+              <form action="mailto: yuruotao@gmail.com">
+                Username:<br>
+                <input type="text" name="username" placeholder="Enter Username"><br><br>
+                Message:<br>
+                <input type="textarea" name="message" rows="100" cols="300" placeholder="Enter your message">
+                <br><br>
+                <input type="submit" value="Send Email">
+            </form>
+
+                <p></p>
+                <h1>Get email alert</h1>
+                <h3>sorry, not implemented yet</h3>
             
 
               
