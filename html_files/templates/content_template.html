@@ -25,6 +25,8 @@
     next_article_title:"n_title",
     
     pdf_link:"/",
+    paper_state:"no",
+    section_names:["sec1","sec2","sec3"],
 
 
     };
@@ -804,11 +806,9 @@ if(window.WebyGam) {
         }
 
         author_update_html += '<span property="author" typeof="Person" role="listitem"><a href="#con'+ String(i + 1) + '"><span property="familyName">'+ authors[i] +'</span></a></span>, ';
-        console.log(i)
         if (i >= 2) {
         author_update_html += '</span>';
         }
-        console.log(author_update_html)
     }
     if (author_num >2 && author_num < 5) {
         author_update_html += '<span data-displayed-on="sm" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+'+ String(author_num-2) +' authors</span></span></span>'
@@ -818,7 +818,6 @@ if(window.WebyGam) {
     }
 
     author_update_html += '<span data-displayed-on="none" data-on-display="sm md" aria-hidden="true"> <span data-action="hide">fewer</span></span></span></span>';
-    console.log(author_update_html)
     document.getElementById("author_update").innerHTML = author_update_html;
 </script>
 
@@ -892,7 +891,8 @@ if(window.WebyGam) {
         <!-- adjust to the content -->
         <div id="article_sections_menu" role="menu" aria-label="Contents">
             <nav data-core-nav="article">
-                <ul xmlns="http://www.w3.org/1999/xhtml">
+                <ul id="menu_update" xmlns="http://www.w3.org/1999/xhtml">
+
                     <li>
                         <a href="#abstract" >Abstract1</a>
                     </li>
@@ -912,7 +912,7 @@ if(window.WebyGam) {
                         <a href="#acknowledgments">ACKNOWLEDGEMENTS</a>
                     </li>
                     <li>
-                        <a href="#supplementary-materials">SUPPLIMENTARY MATERIALS</a>
+                        <a href="#supplementary-materials">SUPPLEMENTARY MATERIALS</a>
                     </li>
                     <li>
                         <a href="#bibliography">REFERENCES AND NOTES</a>
@@ -1116,7 +1116,7 @@ if(window.WebyGam) {
 </section>
 
 <section id="backmatter" data-extent="backmatter">
-    <div class="core-container">
+    <div id="bibliography_exist_update" class="core-container">
         <!-- supplementary materials -->
         <section id="supplementary-materials" class="core-supplementary-materials">
 
@@ -1200,6 +1200,7 @@ if(window.WebyGam) {
             </div>
         </div>
     </section>
+
 </div>
 </section>
 
@@ -1612,8 +1613,30 @@ if(window.WebyGam) {
 
         <!-- update the content table according to the content -->
         <script>
-        document.getElementById()
+        article_status = stored_data["paper_state"];
+        section_name_set = stored_data["section_names"];
+        insert_html_menu = "";
+        null_content = "";
 
+        if (article_status == "yes") {
+            insert_html_menu += '<li><a href="#abstract">Abstract</a></li>';
+        }
+        for (var i=0;i<section_name_set.length;i++) {
+            insert_html_menu += '<li><a href="#sec-' + String((i+1)) + '">' + section_name_set[i] + '</a></li>';
+        }
+
+        if (article_status == "yes") {
+            insert_html_menu += '<li><a href="#acknowledgments">Acknowledgements</a></li><li><a href="#supplementary-materials">Supplementary Materials</a></li><li><a href="#bibliography">References and Notes</a></li>'
+        }
+        document.getElementById("menu_update").innerHTML = insert_html_menu;
+        
+        // modify the content
+        if (article_status == "no") {
+            document.getElementById("abstracts").innerHTML = null_content;
+            document.getElementById("acknowledgments").innerHTML = null_content;
+            document.getElementById("supplementary-materials").innerHTML = null_content;
+            document.getElementById("bibliography_exist_update").innerHTML = null_content;
+        }
         </script>
 
 </body>
