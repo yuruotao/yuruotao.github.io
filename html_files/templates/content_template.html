@@ -3,7 +3,31 @@
     <head data-pb-dropzone="head">
 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link>
 
-<title>Page Title</title>
+<title id="page_title">Page Title</title>
+
+<!-- here is the updating script -->
+<script>
+  page_title_1 = document.getElementById("page_title").innerText;
+  author = ["shike", "yu ruotao", "wang yuwen"];
+
+  var name_datas = {
+    page_title:page_title_1,
+    current_directory:"shikemanping",
+    current_directory_path:"/shikemanping.html",
+    date:"2020 OCTOBER 10",
+    authors:author,
+    article_type:"commentary",
+    article_field: "social science",
+    previous_article_link:"p_link",
+    next_article_link: "n_link",
+    previous_article_title: "p_title",
+    next_article_title:"n_title",
+    pdf_link:"/",
+
+    };
+
+    window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
+</script>
 
 
 <!-- font, color and icons -->
@@ -574,13 +598,16 @@ if(window.WebyGam) {
                 <a href="/index.html" title="Home" class="crumb text-uppercase prev-crumb">Home</a>
                 <i class="icon-arrow-right mx-1"></i>
                 <!-- redirect to field -->
-                <a href="/" title="1st level" class="crumb text-uppercase prev-crumb">1st level</a>
+                <a id="directory_update" href="/shikemanping.html" title="1st level" class="crumb text-uppercase prev-crumb">Shikemanping</a>
                 <i class="icon-arrow-right mx-1"></i>
-                <!-- redirect to issue number, but same as the above -->
-                <a href="/" title="2nd level" class="crumb text-uppercase prev-crumb">2nd level</a>
-                <i class="icon-arrow-right mx-1"></i>
-                <!-- redirect to article itself -->
-                <span class="crumb text-uppercase current-crumb">Article title</span>
+                <span id="page_title_update" class="crumb text-uppercase current-crumb">Article title</span>
+                <script>
+                  var stored_data = JSON.parse(window.sessionStorage.getItem("name_datas"));
+                  document.getElementById("page_title_update").innerText = stored_data["page_title"];
+                  document.getElementById("directory_update").innerText = stored_data["current_directory"];
+                  document.getElementById("directory_update").href = stored_data["current_directory_path"];
+                </script>
+
             </div>
 
             <div class="d-flex d-sm-none align-items-center">
@@ -595,13 +622,18 @@ if(window.WebyGam) {
 </div>
 <div data-article-access="full" data-article-access-type="open" class="meta-panel">
     <div class="meta-panel__left-content">
-        <div class="meta-panel__type">
+        <div id="type_update" class="meta-panel__type">
             <span>Essay</span>
         </div>
-        <div class="meta-panel__overline">
+        <div id="field_update" class="meta-panel__overline">
             <span>essay domain</span>
         </div>
     </div>
+
+    <script>
+        document.getElementById("type_update").innerText = stored_data["article_type"];
+        document.getElementById("field_update").innerText = stored_data["article_field"];
+    </script>
     <div class="meta-panel__right-content">
         <div class="meta-panel__share">
         
@@ -634,29 +666,40 @@ if(window.WebyGam) {
     </div>
 </div>
 </div>
-<h1 property="name">article Title </h1>
+<h1 id="page_title_update_content" property="name">article Title</h1>
+
+<script>
+    document.getElementById("page_title_update_content").innerText = stored_data["page_title"];
+</script>
+
 <div class="contributors">
     <!-- authors -->
     <span class="authors">
-        <span role="list">
+        <span id="author_update" role="list">
+
             <span property="author" typeof="Person" role="listitem">
                 <a href="#con1">
                     <span property="givenName">1st</span>
                     <span property="familyName">author</span>
                 </a>
-            </span>, 
+            </span>
+            ,
+
             <span property="author" typeof="Person" role="listitem">
                 <a href="#con2">
                     <span property="givenName">2nd</span> 
                     <span property="familyName">author</span>
                 </a> 
             </span>
-            <span data-displayed-on="sm" aria-hidden="true">, 
-            <span>
-                <span data-action="reveal">[...]</span>
-            </span> 
-        </span>
-        <span data-hidden-on="sm">
+            ,
+
+            <span data-displayed-on="sm" aria-hidden="true">
+                <span>
+                    <span data-action="reveal">[...]</span>
+                </span> 
+            </span>
+
+            <span data-hidden-on="sm">
             <!-- 3rd author -->
             <!-- <span property="author" typeof="Person" role="listitem">
                 <a href="#con3">
@@ -664,7 +707,8 @@ if(window.WebyGam) {
                     <span property="familyName">Kim</span>
                 </a>
             </span> -->
-        </span>
+            </span>
+
         <span data-hidden-on="sm">
             <!-- 4th author -->
             <!-- <span property="author" typeof="Person" role="listitem">
@@ -674,14 +718,17 @@ if(window.WebyGam) {
                 </a>
             </span> -->
         </span>
+
         <span data-displayed-on="md" aria-hidden="true">, 
             <span>
                 <span data-action="reveal">[...]</span>
             </span> 
         </span>
+
         <span data-hidden-on="sm md">
             <!-- 5th author -->
         </span>
+
         <span data-hidden-on="sm md">
             <!-- 6th author -->
             <!-- <span property="author" typeof="Person" role="listitem">
@@ -692,6 +739,7 @@ if(window.WebyGam) {
                 <a class="orcid-id" href="https://orcid.org/0000-0001-7812-9056" property="identifier" target="_blank">https://orcid.org/0000-0001-7812-9056</a>
             </span> -->
         </span>
+
         <span data-hidden-on="sm md">
             <!-- up to 7 authors -->
             <!-- <span property="author" typeof="Person" role="listitem">
@@ -699,18 +747,27 @@ if(window.WebyGam) {
                     <span property="familyName">Lee</span>
                 </a>  -->
         </span>
+
     <span data-displayed-on="sm" aria-hidden="true">
         <span>
             <span data-action="reveal" data-style="btn">+5 authors</span>
         </span> 
     </span>
-    <span data-displayed-on="md" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+3 authors</span>
-</span> 
+
+    <span data-displayed-on="md" aria-hidden="true">
+        <span>
+            <span data-action="reveal" data-style="btn">+3 authors</span>
+        </span> 
+    </span>
+    
+    <span data-displayed-on="none" data-on-display="sm md" aria-hidden="true">
+        <span data-action="hide">fewer</span>
+    </span>
+
 </span>
-<span data-displayed-on="none" data-on-display="sm md" aria-hidden="true"> <span data-action="hide">fewer</span>
 </span>
-</span>
-</span>  
+
+
 </div>
 
 <div class="core-self-citation">
@@ -718,9 +775,49 @@ if(window.WebyGam) {
         <span property="name">yuruotao.com</span>
     </div>
     <div class="core-date-published">
-        <span property="datePublished">21 Dec 2022</span>
+        <span id="date_update" property="datePublished">21 Dec 2022</span>
     </div>
 </div>
+
+<script>
+    document.getElementById("date_update").innerText = stored_data["date"];
+    authors = stored_data["authors"];
+    var author_num = authors.length;
+    var author_update_html = "";
+    for (var i=0; i<author_num; i++) {
+        if (i == 2) {
+        author_update_html += '<span data-displayed-on="sm" aria-hidden="true"><span><span data-action="reveal">[...]</span></span></span>';
+    }
+        if (i >= 2 && i < 4) {
+        author_update_html += '<span data-hidden-on="sm">';
+        }
+
+        if (i == 4 ) {
+        author_update_html += '</span><span data-displayed-on="md" aria-hidden="true">, <span><span data-action="reveal">[...]</span></span>';
+        }
+
+        if (i >= 4) {
+        author_update_html += '<span data-hidden-on="sm md">';
+        }
+
+        author_update_html += '<span property="author" typeof="Person" role="listitem"><a href="#con'+ String(i + 1) + '"><span property="familyName">'+ authors[i] +'</span></a></span>, ';
+        console.log(i)
+        if (i >= 2) {
+        author_update_html += '</span>';
+        }
+        console.log(author_update_html)
+    }
+    if (author_num >2 && author_num < 5) {
+        author_update_html += '<span data-displayed-on="sm" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+'+ String(author_num-2) +' authors</span></span></span>'
+
+    } else if (author_num >= 5){
+        author_update_html += '<span data-displayed-on="md" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+'+ author_num-4 + ' authors</span></span></span>'
+    }
+
+    author_update_html += '<span data-displayed-on="none" data-on-display="sm md" aria-hidden="true"> <span data-action="hide">fewer</span></span></span></span>';
+    console.log(author_update_html)
+    document.getElementById("author_update").innerHTML = author_update_html;
+</script>
 
     <!-- info panel -->
     <div class="info-panel">
@@ -733,29 +830,32 @@ if(window.WebyGam) {
             <!-- previous article and next article -->
             <nav title="Content Navigation" class="content-navigation">
                 <!-- modify the href -->
-                <a href="/" title="previous article title" class="content-navigation__prev">
+                <a href="/" title="previous article title" class="content-navigation__prev previous_article_link_update">
                     <div aria-hidden="true" class="content-navigation__hint">
                         <div class="content-navigation__hint__content">
                             <h6>PREVIOUS ARTICLE</h6>
-                            <div>P article</div>
+                            <div class="previous_article_title_update">P article</div>
                         </div>
                     </div>
                     <i class="icon-arrow-left"></i>
-                    <span>Previous</span>
+                    <span class="previous_article_title_update">Previous</span>
                 </a>
 
                 <!-- modify the href -->
-                <a href="/" title="next article title" class="content-navigation__next">
+                <a href="/" title="next article title" class="content-navigation__next next_article_link_update">
                     <div aria-hidden="true" class="content-navigation__hint">
                         <div class="content-navigation__hint__content">
                             <h6>NEXT ARTICLE</h6>
-                            <div>next article</div>
+                            <div class="next_article_title_update">next article</div>
                         </div>
                     </div>
-                    <span>Next</span>
+                    <span class="next_article_title_update">Next</span>
                     <i class="icon-arrow-right"></i>
                 </a>
             </nav>
+            
+
+            
         </div>
     </div>
 </div>
@@ -765,10 +865,15 @@ if(window.WebyGam) {
 
 <div class="info-panel__formats info-panel__item">
     <!-- link to the pdf file of the article -->
-    <a href="/" title="PDF" data-toggle="tooltip" class="btn btn--slim btn-secondary">
+    <a href="/" title="PDF" data-toggle="tooltip" class="btn btn--slim btn-secondary pdf_link_update">
         <i aria-hidden="true" class="icon-pdf"></i>
     </a>
 </div>
+
+<!-- update previous, next article and pdf link -->
+
+
+
 </div>
 </div>
 </div>
@@ -1169,11 +1274,11 @@ if(window.WebyGam) {
                 <div class="st-header__nav st-header__item">
                     <nav title="Content Navigation" class="content-navigation">
                         <!-- the previous article -->
-                        <a href="/doi/10.1126/sciadv.ade2450" title="previous article title" class="content-navigation__prev">
+                        <a href="/" title="previous article title" class="content-navigation__prev previous_article_link_update">
                             <div aria-hidden="true" class="content-navigation__hint">
                                 <div class="content-navigation__hint__content">
                                     <h6>PREVIOUS ARTICLE</h6>
-                                    <div>previous article title</div>
+                                    <div class="previous_article_title_update">previous article title</div>
                                 </div>
                             </div>
                             <i aria-hidden="true" class="icon-arrow-left"></i>
@@ -1181,11 +1286,11 @@ if(window.WebyGam) {
                         </a>
 
                         <!-- the next article -->
-                        <a href="/" title="next article title" class="content-navigation__next">
+                        <a href="/" title="next article title" class="content-navigation__next next_article_link_update">
                             <div aria-hidden="true" class="content-navigation__hint">
                                 <div class="content-navigation__hint__content">
                                     <h6>NEXT ARTICLE</h6>
-                                    <div>next article title</div>
+                                    <div class="next_article_title_update">next article title</div>
                                 </div>
                             </div>
                             <span>contentNavigation.next.default</span>
@@ -1195,6 +1300,14 @@ if(window.WebyGam) {
                 </div>
             </div>
         </div>
+
+        <script>
+            document.getElementsByClassName("previous_article_link_update").href = stored_data["previous_article_link"];
+            document.getElementsByClassName("next_article_link_update").href = stored_data["next_article_link"];
+            document.getElementsByClassName("previous_article_title_update").innerText = stored_data["previous_article_title"];
+            document.getElementsByClassName("next_article_title_update").innerText = stored_data["next_article_title"];
+            document.getElementsByClassName("pdf_link_update").href = stored_data["pdf_link"];
+        </script>
 
 
         <!-- templates for the sticky navigator for different screen sizes -->
@@ -1471,9 +1584,11 @@ if(window.WebyGam) {
 
         <!-- responsible for the header and button -->
         <!-- dependent on the path -->
-        <script src="/products/aaas/releasedAssets/js/main.bundle-f6885e7acf8283b28672.js" ></script>
+        <script src="/products/aaas/releasedAssets/js/main.bundle-f6885e7acf8283b28672.js" ></>
         <script type="text/javascript" src="/wro/lwsmarticle-metrics-phase2.js"></script>
         <script type="text/javascript" src="/wro/lwsmproduct.js"></script>
 
 </body>
 </html>
+
+
