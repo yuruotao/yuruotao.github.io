@@ -18,11 +18,14 @@
     authors:author,
     article_type:"commentary",
     article_field: "social science",
+
     previous_article_link:"p_link",
     next_article_link: "n_link",
     previous_article_title: "p_title",
     next_article_title:"n_title",
+    
     pdf_link:"/",
+
 
     };
 
@@ -891,7 +894,7 @@ if(window.WebyGam) {
             <nav data-core-nav="article">
                 <ul xmlns="http://www.w3.org/1999/xhtml">
                     <li>
-                        <a href="#abstract">Abstract1</a>
+                        <a href="#abstract" >Abstract1</a>
                     </li>
                     <li>
                         <a href="#sec-1">INTRODUCTION2</a>
@@ -1220,7 +1223,7 @@ if(window.WebyGam) {
                         <span>View full text</span>
                     </a>
                     <!-- point to the pdf file -->
-                    <a href="/">
+                    <a href="/" class="pdf_link_update">
                         <span>Download PDF</span>
                     </a>
                 </div>
@@ -1301,13 +1304,7 @@ if(window.WebyGam) {
             </div>
         </div>
 
-        <script>
-            document.getElementsByClassName("previous_article_link_update").href = stored_data["previous_article_link"];
-            document.getElementsByClassName("next_article_link_update").href = stored_data["next_article_link"];
-            document.getElementsByClassName("previous_article_title_update").innerText = stored_data["previous_article_title"];
-            document.getElementsByClassName("next_article_title_update").innerText = stored_data["next_article_title"];
-            document.getElementsByClassName("pdf_link_update").href = stored_data["pdf_link"];
-        </script>
+        
 
 
         <!-- templates for the sticky navigator for different screen sizes -->
@@ -1584,9 +1581,40 @@ if(window.WebyGam) {
 
         <!-- responsible for the header and button -->
         <!-- dependent on the path -->
-        <script src="/products/aaas/releasedAssets/js/main.bundle-f6885e7acf8283b28672.js" ></>
+        <script src="/products/aaas/releasedAssets/js/main.bundle-f6885e7acf8283b28672.js" ></script>
         <script type="text/javascript" src="/wro/lwsmarticle-metrics-phase2.js"></script>
         <script type="text/javascript" src="/wro/lwsmproduct.js"></script>
+
+        <!-- update pre,next articles and pdf links -->
+        <script>
+            var elements = document.getElementsByClassName("previous_article_link_update");
+            for (var i = 0; i < elements.length; i++){
+                elements[i].href = stored_data["previous_article_link"];
+            }
+            var elements = document.getElementsByClassName("next_article_link_update");
+            for (var i = 0; i < elements.length; i++){
+                elements[i].href = stored_data["next_article_link"];
+            }
+            var elements = document.getElementsByClassName("previous_article_title_update");
+            for (var i = 0; i < elements.length; i++){
+                elements[i].innerText = stored_data["previous_article_title"];
+            }
+            var elements = document.getElementsByClassName("next_article_title_update");
+            for (var i = 0; i < elements.length; i++){
+                elements[i].innerText = stored_data["next_article_title"];
+            }
+            var elements = document.getElementsByClassName("pdf_link_update");
+            for (var i = 0; i < elements.length; i++){
+                elements[i].href = stored_data["pdf_link"];
+            }
+
+        </script>
+
+        <!-- update the content table according to the content -->
+        <script>
+        document.getElementById()
+
+        </script>
 
 </body>
 </html>
