@@ -28,12 +28,13 @@
     paper_state:"no",
     section_names:["sec1","sec2","sec3"],
 
-
     };
 
     window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
 </script>
 
+<script src="jquery-3.5.1.js">
+</script>  
 
 <!-- font, color and icons -->
 <link rel="stylesheet" href="/products/aaas/releasedAssets/css/build-5421643ead8b85d2264d.css" media="all" id="build-style-sheet">
@@ -977,7 +978,7 @@ if(window.WebyGam) {
 <div class="d-flex justify-content-end btn--more__wrapper">
     <!-- direct to the current folder -->
     <a href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span>More</span>
+        <span class="more_path_update">More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
 </div>
@@ -988,35 +989,46 @@ if(window.WebyGam) {
 <section>
 
 <h4 class="main-title-2--decorated h4 hawkeye-side-position-node">LATEST</h4>
-<div class="mt-4">
+<div id="nav_latest_update" class="mt-4">
 
-<div class="multi-search">
-    <div class="multi-search--news-article-aside">
-        <article class="card-do card-do--news-feature border-bottom border-light-gray card-do--news-article-aside pb-3 mb-3">
-	<div class="card-content">
-		<div class="card-meta text-uppercase">
-            <!-- direct to the latest column -->
-			<span class="card-meta__category"><a href="/" class="text-decoration-none"><span>latest column</span></a></span><time class="border-left">date and time</time>
-		</div>
-		<div class="card-header mb-2">
-            <!--  -->
-			<a href="/" title="latest article title" class="text-reset animation-underline">
-				latest passage title
-			</a>
-		</div>
-	</div>
-</article>
+    <div class="multi-search">
+        <div class="multi-search--news-article-aside">
+            <article class="card-do card-do--news-feature border-bottom border-light-gray card-do--news-article-aside pb-3 mb-3">
+        <div class="card-content">
+            <div class="card-meta text-uppercase">
+                <!-- direct to the latest column -->
+                <span class="card-meta__category"><a href="/" class="text-decoration-none"><span>latest column</span></a></span><time class="border-left">date and time</time>
+            </div>
+            <div class="card-header mb-2">
+                <!--  -->
+                <a href="/" title="latest article title" class="text-reset animation-underline">
+                    latest passage title 
+                </a>
+            </div>
+        </div>
+    </article>
 
-<div class="d-flex justify-content-end btn--more__wrapper">
-    <!-- direct to the latest corresponding column -->
-    <a href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span>More</span>
-        <span aria-hidden="true" class="icon-arrow-right"></span>
-    </a>
+    <script>
+        fetch("/update/latest_update_content_page.html")
+        .then(response=> response.text())
+        .then(text=> document.getElementById('nav_latest_update').innerHTML = text)
+    </script>
+    
+    <div class="d-flex justify-content-end btn--more__wrapper">
+        <!-- direct to the latest corresponding column -->
+        <a href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+            <span>More</span>
+            <span aria-hidden="true" class="icon-arrow-right"></span>
+        </a>
+    </div>
+    
+    
+    </div></div>
+
+
 </div>
 
-
-</div></div></div></section></aside>
+</section></aside>
 
 <!-- abstract -->
 <div id="abstracts" data-extent="frontmatter">
@@ -1608,7 +1620,8 @@ if(window.WebyGam) {
             for (var i = 0; i < elements.length; i++){
                 elements[i].href = stored_data["pdf_link"];
             }
-
+            
+            document.getElementById("more_path_update").innerHTML = stored_data["current_directory_path"];
         </script>
 
         <!-- update the content table according to the content -->
@@ -1637,6 +1650,8 @@ if(window.WebyGam) {
             document.getElementById("supplementary-materials").innerHTML = null_content;
             document.getElementById("bibliography_exist_update").innerHTML = null_content;
         }
+
+
         </script>
 
 </body>
