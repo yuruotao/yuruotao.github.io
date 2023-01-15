@@ -3,7 +3,7 @@
     <head data-pb-dropzone="head">
 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link>
 
-<title id="page_title">Page Title</title>
+<title id="page_title">预防青少年戏水溺亡的措施与不足</title>
 
 <!-- here is the updating script -->
 <script>
@@ -14,21 +14,20 @@
     page_title:page_title_1,
     current_directory:"shikemanping",
     current_directory_path:"/shikemanping.html",
-    date:"2020 OCTOBER 10",
+    date:"2020 AUGUST 23",
     authors:author,
     article_type:"commentary",
     article_field: "social science",
 
-    previous_article_link:"p_link",
-    next_article_link: "n_link",
-    previous_article_title: "p_title",
-    next_article_title:"n_title",
+    previous_article_link:"/html_files/shikemanping/shike5.html",
+    next_article_link: "/html_files/shikemanping/shike7.html",
+    previous_article_title: "漫谈偶像产业与饭圈的联系",
+    next_article_title:"漫评网游中的“消极游戏”现象",
     
     pdf_link:"/",
     paper_state:"no",
-    section_names:["sec1","sec2","sec3"],
-
-    };
+    section_names:["溺水死亡统计","我国青少年溺水现状","溺水的特殊表现","如何预防青少年溺水","防溺水设施的缺乏","安全教育的缺失","以宣传方法预防溺水","科技助力解决溺水问题"],
+};
 
     window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
 </script>
@@ -941,8 +940,8 @@ if(window.WebyGam) {
                             <!-- propganda image -->
                             <!-- link to the outstanding image of the field -->
                             <!--  -->
-                            <a href="/" title="current column cover image" class="d-block">
-                                <img src="/" alt="cover image"></a>
+                            <a title="current column cover image" class="d-block">
+                                <img src="/resources/images/beautiful_pic1.jpg" alt="cover image"></a>
                             </div>
                         </div>
                     </div>
@@ -950,35 +949,20 @@ if(window.WebyGam) {
                     <div class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
 <div class="multi-search">
-    <div>
-        <article class="card-do">
-            <div class="card-content">
-                <div class="card-header">
-                    <h3 class="card__title">
-                        <!--  -->
-                        <a href="/" title="Human generation times across the past 250,000 years" class="text-reset animation-underline">Bitch...........</a>
-                    </h3>
-                    <ul class="card-meta align-middle pl-0">
-                        <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2" data-visible-items-md="4" data-visible-items="9" data-truncate-less="less" data-truncate-more="authors" data-truncate-dots="true">
-                            <span>By</span>
-                            <ul class="list-inline comma-separated" title="list of authors">
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Yichen Wang</span></li>
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Sam</span></li>
-                                <li class="list-inline-item"><span>et al.</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-        
+    <div id="skmp_column_update">
+
+        <script>
+            fetch("/update/skmp_column_update.html")
+            .then(response=> response.text())
+            .then(text=> document.getElementById('skmp_column_update').innerHTML = text)
+        </script>
 
 
 </div>
 <div class="d-flex justify-content-end btn--more__wrapper">
     <!-- direct to the current folder -->
     <a id="more_path_update" href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span>More</span>
+        <span >More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
 </div>
@@ -1016,7 +1000,7 @@ if(window.WebyGam) {
     
     <div class="d-flex justify-content-end btn--more__wrapper">
         <!-- direct to the latest corresponding column -->
-        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold ">
             <span>More</span>
             <span aria-hidden="true" class="icon-arrow-right"></span>
         </a>
@@ -1046,70 +1030,135 @@ if(window.WebyGam) {
     <div class="core-container">
 
         <section id="sec-1" data-type="introduction">
-            <h2>INTRODUCTION</h2>
+            <h2>溺水死亡统计
+            </h2>
             <!-- (<a href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a>, <a href="#R2" role="doc-biblioref" data-xml-rid="R2"><i>2</i></a>) -->
-            <div role="paragraph">para1</div>
-            
-            <div role="paragraph">para2</div>
-            
-            <div role="paragraph">para3</div>
+            <div role="paragraph">
+                根据世界卫生组织的《全球溺水报告》，2016年，全世界估计有32万人死于溺水，溺水造成的死亡约占全球总死亡的9%。而在15岁以下的儿童中，溺水是第三大死亡原因，仅次于艾滋病与脑膜炎。我国每年约有5.7万人死于溺水，其中少年儿童溺水死亡人数占总溺水死亡人数的56.04%。
+            </div>
         </section>
         
         <section id="sec-2" data-type="results">
-            <h2>RESULTS</h2>
+            <h2>我国青少年溺水现状
+            </h2>
             <div role="paragraph">
-                <!--  -->
-                <a href="#F1">Figure 1A</a>
-                <figure id="F1" class="graphic">
-                    <!-- link to the image -->
-                    <img src="/" height="3608" width="3600" aria-labelledby="F1" loading="lazy" />
-                    <figcaption>
-                        <div class="caption">
-                            <span class="heading">Fig. 1</span>. Stretchable metallization and characterizations.
-                        </div>
-                        <div class="notes">
-                            <div role="doc-footnote">(<b>A</b>) Schematic of stretchable metallization.
-                                <sub>2</sub> 
-                            </div>
-                        </div>
-                    </figcaption>
-                </figure>
+                在我国，一到暑假期间，青少年溺水的现象便频频发生，给溺水者家庭带来了难以弥补的伤害，令人无比痛心。短短八月上旬，就有数起溺水现象发生。8月1日，河南镇平县2位未成年水边玩耍不慎落水，三位成年人施救无果，共四人溺亡，仅有一名成年人生还。8月2日，河南平顶山叶邑镇，5名初中生去河边戏水，结果2人溺亡。尤其是青少年溺水现象，需要我们更多的关注。
             </div>
-                
-            <div role="paragraph">
-                para2
-            </div>
-            </section>
+            
+        </section>
+        
+
             <section id="sec-3" data-type="discussion">
-                <h2>DISCUSSION</h2>
-                <div role="paragraph">In summary,</div>
+                <h2>
+                    溺水的特殊表现
+                </h2>
+                <div role="paragraph">溺水的表现本身具有特殊性，我们不应掉以轻心。许多没有经验的游泳者总认为：“在浅水区不会溺水”，实际上，在浅水，甚至浴缸，脸盆中，也有可能由大脑缺氧引起意识丧失，发生浅水晕厥（shallow water blackout）从而导致溺水事故；溺水者很可能不会发出呼救，无法引起他人注意。除此之外，在湖泊，海洋中“野泳”也存在着较大的安全隐患，如水草，淤泥，珊瑚等。溺水后获得救援的幸运者，也应在医院进行进一步检查与观察，防止发生继发性溺水。</div>
             </section>
             
             <section id="sec-4" data-type="materials methods">
-                <h2>MATERIALS AND METHODS</h2>
-                
-                <section id="sec-4-1">
-                    <h3>Materials</h3>
-                    
-                    <div role="paragraph">
-                        paapapap
-                    </div>
-                </section>
-                
-                <section id="sec-4-2">
-                    <h3>Stretchable metallization and characterization</h3>
-                    <div role="paragraph">
-                        pppppppppppp
-                    </div>
-                </section>
-                
-                <section id="sec-4-3">
-                    <h3>Device fabrication and measurement</h3>
-                    <div role="paragraph">
-
-                    </div>
-                </section>
+                <h2>
+                    如何预防青少年溺水
+                </h2>
+                <div role="paragraph">“意外伤害是威胁孩子健康成长的第一杀手。”复旦儿科海南分院呼吸科主任陈金妮感慨：“大部分儿童意外伤害是可以避免的，我们却往往忽略了伤害预防。” 预防青少年野外危险水域戏水现象，令青少年意识到盲目下水施救会致以救援双方受到生命威胁这两点是降低青少年溺水的重中之重。目前，我国在溺水预防问题上的关注力度较大，但仍有许多方面有待改进。
+                </div>
             </section>
+
+            <section id="sec-5" data-type="materials methods">
+                <h2>防溺水设施的缺乏</h2>
+                <div role="paragraph">
+                    首先，相关设施的缺乏与不完备是导致未成年溺水悲剧的一大隐患。根据国家统计局给出的数据，2019年，乡村人口约为55162万人，约占中国总人口的39.4%。许多乡村中不具备游泳馆，面向青少年的游乐设施也较为匮乏，这便引发了青少年野游，下河捕鱼的念头。溪龙乡后河村为解决此类问题，建立了新游泳馆，现已交付使用。更多的，一些游泳馆仍存在经营不规范、管理不到位等安全隐患。各省市文化体育和旅游局应联合卫生健康局对全省游泳馆开展专项行动，对问题游泳馆安全管理和卫生质量不符合国家标准的情形依法履行法定监管职责；进行查处后，也应跟进开展“回头看”行动，防止现象反弹，巩固整治效果。对于泳池，应根据各省《公共游泳场所管理办法》，增设护栏，救生器械，配备救生员，医护人员；对于湖泊，池塘等危险区域，也应搭建相应警示牌。
+                </div>
+            </section>
+
+            <section id="sec-6">
+                <h2>安全教育的缺失</h2>
+                <div role="paragraph">
+                    我国安全教育的缺失同样需要注意。一是青少年防溺水技能的缺失与应急处理知识的缺乏，二是部分家长对溺水问题的认识不足。现有的部分传单和视频并不能真实反映溺水者的状态，因而很多青少年不能清楚的认识到发生危险的场景，如部分溺水者不会极力扑腾出浪花，而是几乎没有征兆地口鼻没入水下安静沉浮；在青少年溺亡的新闻报道中，我们也不难发现大量溺亡悲剧的发生是因为盲目下水施救无效，很多施救者是因为被施救者在濒危状态下死死缠住、锁住身体，而无法施救甚至自救导致共同遇难。对于青少年，如习近平总书记在全国教育大会上指出：“要树立健康第一的教育理念，开齐开足体育课，帮助学生在体育锻炼中享受乐趣、增强体质、健全人格、锤炼意志”，更要开设新课程，如：游泳课，CPR等急救知识课等，使青少年掌握相关的知识与技能。严防溺水，不如“补上”游泳课。而对于成人群体，也可以通过学校告知、生活中的宣传达到对青少年戏水中危险的警惕性。                </div>
+            </section>
+
+            <section id="sec-7">
+                <h2>以宣传方法预防溺水</h2>
+                <div role="paragraph">
+                    更多的，现有宣传方法可以被优化以预防青少年溺水。宣传的目的，是提高家长与青少年对溺水问题的认识，传统的宣传媒介为：宣传知识小册子，折页海报，校园广播，黑板报，致家长的一封信等。青少年需要真正有用、有收获、贴近生活的安全教育知识，而不只是老师发通知、家长填回执，老生常谈、刻板单一的内容。我们可以通过更符合青少年爱好的媒介，以更灵活的方式进行宣传。因此，笔者设想：开发一款以戏水安全为题材的游戏，游戏中，玩家可以出发多个场景，每个场景以幽默，轻松风格的视频展示溺水者的各个真实现象、错误的应对方式与正确的应对方式，让玩家在放松状态下自发认识到溺水问题的严峻性，同时学到正确的解决方法。如非盈利机构One Love制作的“这不是爱”系列视频，便以其诙谐的方式指出了两性关系中的正确与错误之处。好的公益广告也可以投放到各电视频道中。除此之外，要注意到不同年龄段的人具有不同的思维深度与审美爱好，制作宣传片，宣传册时也应“因材施教”。
+                </div>
+            </section>
+
+            <section id="sec-8">
+                <h2>科技助力解决溺水问题</h2>
+                <div role="paragraph">
+                    在溺水问题上，科技的潜力也不可小觑。云南省首个儿童防溺水预警系统主要部署在学生前往易溺水区域的必经之路旁边，当有学生路过时，远焦摄像头自动识别，进行语音警告驱离。学生若继续前进，此时人脸识别摄像头将捕捉该学生人脸信息在后端人脸数据库进行比对，将该学生溺水风险信息同时分发到家长、学校、当地村委会、水务部门平台，同时系统自动优先拨打学生家长电话进行告知。上科大游泳馆引入的安全预警系统，用“人防+技防”，30秒内发现泳客溺水，破解公共安全痛点。
+                </div>
+                <div role="paragraph">
+                    水火无情，人间有爱。用心去做好的游戏、公益短片，落实安全教育，努力完善相关设施，当多方都负起责任，善良关怀，笔者坚信，青少年溺水频发的现象便一定会得到改善。请珍爱生命，为自己，更为家人。
+                </div>
+            </section>
+
+            <section id="sec-9">
+                <h2>相关阅读</h2>
+                <h3><a
+                    href="https://www.sohu.com/a/411392693_120066929"
+                    >村里建起游泳馆，别再冒着生命危险野游啦！</a
+                  ></h3>
+                <h3><a
+                    href="http://data.stats.gov.cn/search.htm?s=乡村人口"
+                    >国家统计局：乡村人口</a
+                  ></h3>
+                <h3>
+                    <a
+                    href="http://www.39yst.com/xinwen/298362.shtml"
+                    >呛水后6小时 险因继发性溺水丧命</a>
+                </h3>
+                <h3>
+                    <a href="http://scitech.people.com.cn/n1/2020/0810/c1007-31816514.html">
+                        溺水事件频发，自救与救人有科学步骤
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://health.people.com.cn/n1/2020/0807/c14739-31813841.html">
+                        重庆开展暑期儿童安全教育实践活动-守护童年，安全伴成长
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://cpc.people.com.cn/n1/2020/0730/c69113-31803908.html">
+                        广安市教育体育系统多措并举为学生安全保驾护航
+                    </a>
+                </h3>
+                <h3>
+                    <a href="https://www.xueanquan.com">
+                        全国中小学防溺水安全教育平台
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://www.yn.xinhuanet.com/newscenter/2020-08/08/c_139274374.htm">
+                        云南省首个儿童防溺水预警系统启用
+                    </a>
+                </h3>
+                <h3>
+                    <a href="https://www.sohu.com/a/406343681_99950583">
+                        30秒发出溺水警报！上科大游泳馆率先引入安全预警系统
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://edu.people.com.cn/n1/2020/0703/c1006-31770380.html">
+                        教育部：各地各校要排查整改水域安全隐患
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://health.people.com.cn/n1/2020/0628/c14739-31760848.html">
+                        严防溺水，不如免费“补上”游泳课
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://health.people.com.cn/n1/2020/0702/c14739-31767862.html">
+                        浙江台州多措并举预防溺水
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://yuqing.people.com.cn/n1/2020/0526/c209043-31723508.html">
+                        广西博白县“学生玩水线索悬赏”是积极尝试
+                    </a>
+                </h3>
+            </section> 
             
             <section id="acknowledgments" role="doc-acknowledgments">
                 <h2>Acknowledgments</h2>
@@ -1622,7 +1671,8 @@ if(window.WebyGam) {
             }
             
             document.getElementById("more_path_update").href = stored_data["current_directory_path"];
-            document.getElementById("more_path_update").href = "/index.html";
+            document.getElementById("more_path_update1").href = "/index.html";
+
         </script>
 
         <!-- update the content table according to the content -->

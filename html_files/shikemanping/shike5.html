@@ -3,7 +3,7 @@
     <head data-pb-dropzone="head">
 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link>
 
-<title id="page_title">Page Title</title>
+<title id="page_title">漫谈偶像产业与饭圈的联系</title>
 
 <!-- here is the updating script -->
 <script>
@@ -19,15 +19,14 @@
     article_type:"commentary",
     article_field: "social science",
 
-    previous_article_link:"p_link",
-    next_article_link: "n_link",
-    previous_article_title: "p_title",
-    next_article_title:"n_title",
+    previous_article_link:"/html_files/shikemanping/shike4.html",
+    next_article_link: "/html_files/shikemanping/shike6.html",
+    previous_article_title: "漫评“饭圈文化”带来的影响",
+    next_article_title:"预防青少年戏水溺亡的措施与不足",
     
     pdf_link:"/",
     paper_state:"no",
-    section_names:["sec1","sec2","sec3"],
-
+    section_names:["我国偶像产业模式","造星公司、饭圈、平台的关系","偶像产业发展中的弊端","规范各媒体平台","偶像培养方式","整治网络空间","饭圈恶现象的处理","传统娱乐活动"],
     };
 
     window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -941,8 +940,8 @@ if(window.WebyGam) {
                             <!-- propganda image -->
                             <!-- link to the outstanding image of the field -->
                             <!--  -->
-                            <a href="/" title="current column cover image" class="d-block">
-                                <img src="/" alt="cover image"></a>
+                            <a title="current column cover image" class="d-block">
+                                <img src="/resources/images/beautiful_pic1.jpg" alt="cover image"></a>
                             </div>
                         </div>
                     </div>
@@ -950,35 +949,20 @@ if(window.WebyGam) {
                     <div class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
 <div class="multi-search">
-    <div>
-        <article class="card-do">
-            <div class="card-content">
-                <div class="card-header">
-                    <h3 class="card__title">
-                        <!--  -->
-                        <a href="/" title="Human generation times across the past 250,000 years" class="text-reset animation-underline">Bitch...........</a>
-                    </h3>
-                    <ul class="card-meta align-middle pl-0">
-                        <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2" data-visible-items-md="4" data-visible-items="9" data-truncate-less="less" data-truncate-more="authors" data-truncate-dots="true">
-                            <span>By</span>
-                            <ul class="list-inline comma-separated" title="list of authors">
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Yichen Wang</span></li>
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Sam</span></li>
-                                <li class="list-inline-item"><span>et al.</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-        
+    <div id="skmp_column_update">
+
+        <script>
+            fetch("/update/skmp_column_update.html")
+            .then(response=> response.text())
+            .then(text=> document.getElementById('skmp_column_update').innerHTML = text)
+        </script>
 
 
 </div>
 <div class="d-flex justify-content-end btn--more__wrapper">
     <!-- direct to the current folder -->
     <a id="more_path_update" href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span>More</span>
+        <span >More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
 </div>
@@ -1016,7 +1000,7 @@ if(window.WebyGam) {
     
     <div class="d-flex justify-content-end btn--more__wrapper">
         <!-- direct to the latest corresponding column -->
-        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold ">
             <span>More</span>
             <span aria-hidden="true" class="icon-arrow-right"></span>
         </a>
@@ -1046,70 +1030,102 @@ if(window.WebyGam) {
     <div class="core-container">
 
         <section id="sec-1" data-type="introduction">
-            <h2>INTRODUCTION</h2>
+            <h2>我国偶像产业模式
+            </h2>
             <!-- (<a href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a>, <a href="#R2" role="doc-biblioref" data-xml-rid="R2"><i>2</i></a>) -->
-            <div role="paragraph">para1</div>
-            
-            <div role="paragraph">para2</div>
-            
-            <div role="paragraph">para3</div>
+            <div role="paragraph">
+                在文章《漫评“饭圈文化”带来的影响》中，笔者简略阐述了我国饭圈现阶段的发展与其带来的影响。如何规范饭圈未来的发展？要回答这个问题，就绕不过对我国偶像产业的分析。
+            </div>
+            <div role="paragraph">
+                我国现今的偶像产业模式与韩国、日本两国的娱乐产业模式较为类似：不同于以往的传统经纪人与艺人的协同发展，而是采用“先培养，后收益”的方式，通过高强度训练与低龄化培养，流水线一般地生产出优质偶像，再通过偶像的文化产品、周边产品、商业活动和演出收入等途径获取利润。日前，TFBOYS等多个偶像团体的走红和人们日益增长的对文化产品的需求，使得各娱乐公司、多种选秀节目如雨后春笋般出现，造就了一大批选秀明星与走“偶像派”路线的流量明星，使得过多的明星只能抢占有限的“粉丝资源”。
+            </div>
         </section>
         
         <section id="sec-2" data-type="results">
-            <h2>RESULTS</h2>
+            <h2>造星公司、饭圈、平台的关系
+            </h2>
             <div role="paragraph">
-                <!--  -->
-                <a href="#F1">Figure 1A</a>
-                <figure id="F1" class="graphic">
-                    <!-- link to the image -->
-                    <img src="/" height="3608" width="3600" aria-labelledby="F1" loading="lazy" />
-                    <figcaption>
-                        <div class="caption">
-                            <span class="heading">Fig. 1</span>. Stretchable metallization and characterizations.
-                        </div>
-                        <div class="notes">
-                            <div role="doc-footnote">(<b>A</b>) Schematic of stretchable metallization.
-                                <sub>2</sub> 
-                            </div>
-                        </div>
-                    </figcaption>
-                </figure>
+                从造星公司的盈利模式，我们可以看出：造星公司的作用仅仅为“下蛋”，而饭圈的作用则是“孵化”。僧多粥少的局面，使得各饭圈的“流量大战”成为一个必然出现的局面，而通过对如此局面的操控，各娱乐公司又能从中获得大量利润。如今各造星公司与多个媒体平台的紧密结合，使得明星的推广、宣传能够迅速传播；同时打榜、排名、周边产品的销售也更大面积地展开。借助各种选秀、综艺节目及视频推荐，各平台又将更多用户引入饭圈。整个娱乐产业浑然一体，而其自始至终都是对粉丝、观众的消费。
             </div>
-                
-            <div role="paragraph">
-                para2
-            </div>
-            </section>
+            
+        </section>
+        
+
             <section id="sec-3" data-type="discussion">
-                <h2>DISCUSSION</h2>
-                <div role="paragraph">In summary,</div>
+                <h2>
+                    偶像产业发展中的弊端
+                </h2>
+                <div role="paragraph">因“偶像”之风而迅速发展的偶像产业，其发展中存在的弊端也逐渐显现：一是娱乐圈中的审美观念逐渐单一化、刻板化，模仿韩式造星的“流水线”模式的偶像生产，带来的是千篇一律的面孔和几乎一般无二的经历。长此以往，观众也将出现“审美疲劳”。多样性是人类文化进步的基本动力，而按照相同标准培养不同的个体，则是对创新、多元的扼杀；二是与明星有关的各种活动，总会有失偏颇地向商业化的方向发展：如各大平台的明星人气榜、作品排行榜，其原意是反映明星的人气情况与作品的受欢迎程度，但总会因其和偶像发展挂钩，而引得诸饭圈进行重复投票、购买选票甚至购买大量平台账号进行投票。部分平台甚至向粉丝销售两元一朵，仅能用来投票的虚拟玫瑰，造成排名失去其权威性、许多优质作品无法获得推广的现象；类似的，许多粉丝的铺张浪费、浮夸造作的行为，目的就是吸引广告商的注意，帮助偶像彰显人气与受众潜力、商业价值，助推其成为社会热点、提升知名度与影响力。</div>
+                <div role="paragraph">如上所述，当我们对诸多饭圈中的非理性行为嗤之以鼻时，也应考虑到如今的现象很大程度上由娱乐产业主导而成，不仅仅是部分非理性粉丝的错。要规范饭圈中的非理性行为，应当从规范娱乐圈入手。</div>
             </section>
             
             <section id="sec-4" data-type="materials methods">
-                <h2>MATERIALS AND METHODS</h2>
-                
-                <section id="sec-4-1">
-                    <h3>Materials</h3>
-                    
-                    <div role="paragraph">
-                        paapapap
-                    </div>
-                </section>
-                
-                <section id="sec-4-2">
-                    <h3>Stretchable metallization and characterization</h3>
-                    <div role="paragraph">
-                        pppppppppppp
-                    </div>
-                </section>
-                
-                <section id="sec-4-3">
-                    <h3>Device fabrication and measurement</h3>
-                    <div role="paragraph">
-
-                    </div>
-                </section>
+                <h2>
+                    规范各媒体平台
+                </h2>
+                <div role="paragraph">首先，应对各媒体平台进行规范，删除排名活动中的不合理商品，对部分商品设置每位粉丝的购买限度；同时，为保证排名的权威性、公正性，减少部分过度狂热粉丝的不合理行为，各平台应提高新账号注册要求，保证能够发表评论的账号均进行过实名注册与认证。信息安全的重要性也不可忽视，拥有用户信息的各平台更应负起责任，不随意泄露用户信息、保护用户的匿名性；对各电商兜售账号的店铺或个人进行警告，视情节严重情况进行惩处。除此之外，各平台应完善本平台的青少年防沉迷系统，设计相应算法，多为青少年推荐优质内容，限制青少年的使用时长、浏览范围，为其身心健康成长保驾护航。
+                </div>
             </section>
+
+            <section id="sec-5" data-type="materials methods">
+                <h2>偶像培养方式</h2>
+                <div role="paragraph">
+                    对于偶像的培养，各娱乐公司也应摒弃死板的“明星培养蓝图”，以人为本，对不同的人才，制订不同的培养计划，帮助其成为一名既有硬实力，也有真性情、正确的价值观的完整的人。这样培养出的偶像，才能够合理地对粉丝“提要求”，引导粉丝群体理性，发挥饭圈的正向价值；才能够帮助娱乐圈向上、向好地发展。
+                </div>
+            </section>
+
+            <section id="sec-6">
+                <h2>整治网络空间</h2>
+                <div role="paragraph">
+                    其次，应多方合力打造一个和谐、健康的网络空间。国家网信办"清朗"未成年人网络环境暨网课平台专项整治行动便是一个很好的范例。但官方的管控是有限的，更为长足有效的方法是使用户参与到其中，建立一个自下而上的举报与审核体系，如：随机使多位用户审核同一举报内容，最终由平台给出官方意见，并给予审核者、举报人相应的积分形式的奖励等，让各种形式的网络暴力与黑幕无以遁形。饭圈文化和主流文化碰撞的时候，非粉丝的人可能轻信一些恶意营销而发表有失偏颇的言论。在平台上，对网络诈骗的多种方式及手段进行宣传，提高用户的防范意识。
+                </div>
+            </section>
+
+            <section id="sec-7">
+                <h2>饭圈恶现象的处理</h2>
+                <div role="paragraph">
+                    再次，对于饭圈文化滋生的一些不合理现象的处理，国家应对相应法律进行完善与修订，如对恶意营销号、职业黑粉及各种网络暴力领头粉丝的惩处依据的《治安管理处罚法》、对在网上发表不当言论、传播虚假信息粉丝的处理依照的《网络安全法》等。
+                </div>
+            </section>
+
+            <section id="sec-8">
+                <h2>传统娱乐活动</h2>
+                <div role="paragraph">
+                    传统娱乐活动在今日社会，与我们的生活似乎渐行渐远。取而代之的，则是追星、短视频、网络游戏等降低刺激阈值的娱乐活动。随着社会日新月异的变革，娱乐活动的更迭是不可避免的，但也不应过度沉迷于其中，同时也建议多进行传统的娱乐活动：去附近的公园夜跑、与老友下几局象棋、完整地阅读一本书、看一场电影等等。
+                </div>
+                <div role="paragraph">
+                    在自媒体高度发展的趋势下，传统的娱乐行业定会迎来更大的变革与挑战。因此，创建一个更加清朗的网络平台、营造更为和谐的舆论空间，对未来娱乐产业与新媒体的发展有着举足轻重的作用，这大抵就是规范饭圈发展所蕴含的时代意义。
+                </div>
+            </section>
+
+            <section id="sec-9">
+                <h2>相关阅读</h2>
+                <h3><a
+                    href="http://media.people.com.cn/n1/2020/0906/c14677-31850836.html"
+                    >防范网络沉迷，别让在线娱乐“绑架”孩子</a
+                  ></h3>
+                <h3><a
+                    href="http://edu.people.com.cn/n1/2020/0928/c1053-31877838.html"
+                    >粉丝应援打榜 “烧钱”套路多多</a
+                  ></h3>
+                <h3>
+                    <a
+                    href="http://media.people.com.cn/n1/2020/0914/c40606-31860457.html"
+                    >国家网信办清朗未成年人网络环境暨网课平台专项整治依法查处第二批存在问题的网站</a>
+                </h3>
+                <h3>
+                    <a href="http://yuqing.people.com.cn/n1/2020/0819/c209043-31827998.html">
+                        为何“饭圈”戾气这么重 莫让“饭圈”变怪圈 
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://opinion.people.com.cn/n1/2020/0716/c223228-31786312.html">
+                        人民网三评“饭圈”之一：频惹众怒，整治刻不容缓
+                    </a>
+                </h3>
+                <h3></h3>
+                <h3></h3>
+            </section> 
             
             <section id="acknowledgments" role="doc-acknowledgments">
                 <h2>Acknowledgments</h2>
@@ -1622,7 +1638,8 @@ if(window.WebyGam) {
             }
             
             document.getElementById("more_path_update").href = stored_data["current_directory_path"];
-            document.getElementById("more_path_update").href = "/index.html";
+            document.getElementById("more_path_update1").href = "/index.html";
+
         </script>
 
         <!-- update the content table according to the content -->

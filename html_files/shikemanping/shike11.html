@@ -3,7 +3,7 @@
     <head data-pb-dropzone="head">
 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link>
 
-<title id="page_title">Page Title</title>
+<title id="page_title"></title>
 
 <!-- here is the updating script -->
 <script>
@@ -14,21 +14,20 @@
     page_title:page_title_1,
     current_directory:"shikemanping",
     current_directory_path:"/shikemanping.html",
-    date:"2020 OCTOBER 10",
+    date:"2020 OCTOBER 6",
     authors:author,
     article_type:"commentary",
     article_field: "social science",
 
-    previous_article_link:"p_link",
-    next_article_link: "n_link",
-    previous_article_title: "p_title",
-    next_article_title:"n_title",
+    previous_article_link:"/html_files/shikemanping/shike10.html",
+    next_article_link: "/html_files/shikemanping/shike12.html",
+    previous_article_title: "漫谈中小学早恋现象及我国家长、校方的应对态度",
+    next_article_title:"",
     
     pdf_link:"/",
     paper_state:"no",
-    section_names:["sec1","sec2","sec3"],
-
-    };
+    section_names:["“早恋”的早","校方与家长对早恋的态度","为何如此对待早恋","如此对待早恋的后果","早恋的原因","如何缓解早恋带来的问题","家长应采取的态度"],
+};
 
     window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
 </script>
@@ -941,8 +940,8 @@ if(window.WebyGam) {
                             <!-- propganda image -->
                             <!-- link to the outstanding image of the field -->
                             <!--  -->
-                            <a href="/" title="current column cover image" class="d-block">
-                                <img src="/" alt="cover image"></a>
+                            <a title="current column cover image" class="d-block">
+                                <img src="/resources/images/beautiful_pic1.jpg" alt="cover image"></a>
                             </div>
                         </div>
                     </div>
@@ -950,35 +949,20 @@ if(window.WebyGam) {
                     <div class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
 <div class="multi-search">
-    <div>
-        <article class="card-do">
-            <div class="card-content">
-                <div class="card-header">
-                    <h3 class="card__title">
-                        <!--  -->
-                        <a href="/" title="Human generation times across the past 250,000 years" class="text-reset animation-underline">Bitch...........</a>
-                    </h3>
-                    <ul class="card-meta align-middle pl-0">
-                        <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2" data-visible-items-md="4" data-visible-items="9" data-truncate-less="less" data-truncate-more="authors" data-truncate-dots="true">
-                            <span>By</span>
-                            <ul class="list-inline comma-separated" title="list of authors">
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Yichen Wang</span></li>
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Sam</span></li>
-                                <li class="list-inline-item"><span>et al.</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-        
+    <div id="skmp_column_update">
+
+        <script>
+            fetch("/update/skmp_column_update.html")
+            .then(response=> response.text())
+            .then(text=> document.getElementById('skmp_column_update').innerHTML = text)
+        </script>
 
 
 </div>
 <div class="d-flex justify-content-end btn--more__wrapper">
     <!-- direct to the current folder -->
     <a id="more_path_update" href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span>More</span>
+        <span >More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
 </div>
@@ -1016,7 +1000,7 @@ if(window.WebyGam) {
     
     <div class="d-flex justify-content-end btn--more__wrapper">
         <!-- direct to the latest corresponding column -->
-        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold ">
             <span>More</span>
             <span aria-hidden="true" class="icon-arrow-right"></span>
         </a>
@@ -1046,70 +1030,86 @@ if(window.WebyGam) {
     <div class="core-container">
 
         <section id="sec-1" data-type="introduction">
-            <h2>INTRODUCTION</h2>
+            <h2>“早恋”的早
+            </h2>
             <!-- (<a href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a>, <a href="#R2" role="doc-biblioref" data-xml-rid="R2"><i>2</i></a>) -->
-            <div role="paragraph">para1</div>
+
+            <div role="paragraph">
+                早恋，即在生活与经济尚未完全独立的青少年群体里产生的“过早”的恋爱，是近现代及当代中国的一个本土化概念。在《青少年心理学》一书中，李学铭把早恋界定为14岁以前的青少年在心里和行动中上表现出的单恋、自恋、两性间互恋、互爱等现象。但实际在我国青年人群的普遍认知中，早恋的年龄限定范围大约在18岁以内，不仅限于两性间互恋。但是，真的有“过早地恋爱”这个说法吗？
+            </div>
             
-            <div role="paragraph">para2</div>
-            
-            <div role="paragraph">para3</div>
         </section>
         
         <section id="sec-2" data-type="results">
-            <h2>RESULTS</h2>
+            <h2>校方与家长对早恋的态度
+            </h2>
             <div role="paragraph">
-                <!--  -->
-                <a href="#F1">Figure 1A</a>
-                <figure id="F1" class="graphic">
-                    <!-- link to the image -->
-                    <img src="/" height="3608" width="3600" aria-labelledby="F1" loading="lazy" />
-                    <figcaption>
-                        <div class="caption">
-                            <span class="heading">Fig. 1</span>. Stretchable metallization and characterizations.
-                        </div>
-                        <div class="notes">
-                            <div role="doc-footnote">(<b>A</b>) Schematic of stretchable metallization.
-                                <sub>2</sub> 
-                            </div>
-                        </div>
-                    </figcaption>
-                </figure>
+                我国校方与家长对待早恋的态度普遍非常严肃。针对早恋现象，在我国部分中学中存在有一系列诸如男女学生分座就餐、检讨写检查、大屏公示通报批评等惩戒手段，更有甚者会采取“找家长进行谈话”、停课甚至开除等措施；与此类校方态度相近地，部分家长极其反对早恋的进行，和老师一起站在学生的对立面、对学生进行猜忌甚至污名化。然而，中小学生守则和中小学生日常行为规范里却并没有任何禁止早恋的内容。
             </div>
-                
-            <div role="paragraph">
-                para2
-            </div>
-            </section>
+            
+        </section>
+        
             <section id="sec-3" data-type="discussion">
-                <h2>DISCUSSION</h2>
-                <div role="paragraph">In summary,</div>
+                <h2>
+                    为何如此对待早恋
+                </h2>
+                <div role="paragraph">
+                    我国如此对待早恋有一定的原因：早恋对于学生来说是有精力需求的，而在沉重的学业压力下，早恋被认为是分散精力、妨碍业务的行为，而学校要为升学率酌处考虑，并且也有对校风“不正”的担忧。校方力求肃正学习风气，端正学习态度。在传统理念下，“谈情说爱”是学风不正的一种体现。此外，校方更要杜绝产生早孕等“丑闻”，即便这可能是源于学校性教育的缺失。同样地，在部分家长看来，早恋是不务正业、不争气的行为，丢下了作为学生的本职工作却贪图娱乐。其二，由于经济上的不独立，早恋中常常有学生花家长的钱给暧昧对象的行为，这令部分家长感到不快。此外，部分成人认为：青少年的心理不够成熟，此时的恋爱好等同于幼稚的过家家，可能是出于盲目从众心态，不懂恋爱也对两性间关系认识不足，这样的情侣关系没有未来，也就没有意义，不如去学习，提升自我价值。
+                </div>
             </section>
             
             <section id="sec-4" data-type="materials methods">
-                <h2>MATERIALS AND METHODS</h2>
-                
-                <section id="sec-4-1">
-                    <h3>Materials</h3>
-                    
-                    <div role="paragraph">
-                        paapapap
-                    </div>
-                </section>
-                
-                <section id="sec-4-2">
-                    <h3>Stretchable metallization and characterization</h3>
-                    <div role="paragraph">
-                        pppppppppppp
-                    </div>
-                </section>
-                
-                <section id="sec-4-3">
-                    <h3>Device fabrication and measurement</h3>
-                    <div role="paragraph">
-
-                    </div>
-                </section>
+                <h2>
+                    如此对待早恋的后果
+                </h2>
+                <div role="paragraph">
+                    诚然，目前学生群体中早恋现象存在有认识不足的问题和安全方面的隐患，对恋爱的认识存在较大空白，可能导致恋爱双方的交往心态或交往氛围不正，如交往目的不端、从众型恋爱或者对交往对象提出不合理要求。同样，因为认识不足，在交往过程中可能致使彼此受到伤害。同时，青少年在生活、法律、经济上的约束保护也使得他们不具有对后果承担责任的能力。
+                </div>
+                <div role="paragraph">
+                    但是，校方采取如此“一刀切”的方式，又何尝不是懒政的体现？早恋是一个中性词，给予正确的引导，恋爱并不一定会成为学业的绊脚石。而校方坚持杜绝异性间交往的政策，会加深男生、女生对性别认知的分歧，阻碍其未来与异性的正常交往。而且，许多成人缺乏社交能力，甚至爱别人的能力的原因，恰恰是在青少年时期未对两性关系形成正确的认知。
+                </div>
             </section>
+
+            <section id="sec-5" data-type="materials methods">
+                <h2>早恋的原因</h2>
+                <div role="paragraph">
+                    早恋的性质很简单。青少年时期，激素水平发生变化，于是自然而然在生理上产生对爱情的渴求。人类本来就美好，会被欣赏和爱慕也在情理之中。并没有早晚的分别，喜欢应当是自由的。所谓“早恋”的存在应是一个伪命题。爱另一个人并不是错误，不应为此进行检讨，恰恰相反，制订这些规定的人更需要自省与反思。
+                </div>
+                <div role="paragraph">
+                    部分问题与危险的发生归因于环境的糟糕现状。形同虚设的性教育并没有帮助孩子们建立对于健康的青春期的认知。每学期一次的“生理知识大讲座”还远远不够，性教育应当覆盖心理和社会层面的知识，基于课程，探讨性的认知、探讨情感、探讨身体和意义；同样缺席的还有对“爱”的教育和责任教育。青少年需要认识到什么是健康的爱，在情感上保护自己，免疫PUA，也需要知道自己需要承担什么、如何成为更好的人。缺失指导青少年恋爱的材料，以至于青少年会选择浏览不健康的大众媒体内容，造成对爱情或者性的认知偏差。另外，目前存在的部分非法小旅店、黑网吧，对处于恋爱关系中的青少年也有一定安全隐患。
+                </div>
+
+            </section>
+
+            <section id="sec-6" data-type="materials methods">
+                <h2>
+                    如何缓解早恋带来的问题
+                </h2>
+                <div role="paragraph">
+                    要缓解以上早恋现象中存在的问题，重中之重是将性教育课程落到实处。聘请专业人士进行教育课程设计或到校进行多次讲座，对于好的形式，如市计生协开展的青春健康俱乐部可以借鉴、改进和推广。其次，学校添加树立正确的爱情观甚至正确三观的教育，取消无理、非人性且过分保守的规章制度，提倡人际交往能力的培养。语文教材选材加入更多相应篇目也是很好的尝试，如上海某中语文活动课讨论张爱玲的《爱》。此外，也需对青少年接触的相应的影视作品、二次元动漫以及书籍杂志进行审核与规范。
+                </div>
+            </section>
+
+            <section id="sec-7" data-type="materials methods">
+                <h2>
+                    家长应采取的态度
+                </h2>
+                <div role="paragraph">
+                    家长也应采予大方和善的态度：不要对恋爱与性讳莫如深，可以对孩子大大方方进行性教育，也可以大胆与孩子讲述爱情与婚姻的关系，告诉孩子学习这些知识是正常健康的。过度监护是一种自私和物品化的行为。保护孩子的隐私权、给予孩子基本的尊重，相比于传统的父母定位，成为孩子的朋友和导师会使家庭氛围更加和谐，也有利于在青少年成长道路上给予更合适的引导和帮助。结果导向的教育对于青少年来说过于功利，在青春期，更应该进行过程与体悟为导向的教育，以帮助青少年形成良好的世界观、人生观与价值观，明事理，认识自我。与此同时，教师也不应安于沉默：建议教师对“早恋”情况持有同理心，进行人性化管理，不要视早恋为洪水猛兽或者过分干涉；可以向不同的情侣实施不同的引导。爱情不仅仅是爱，还含有责任、尊重、包容和理解 ，引导学生认识到界限，明白青春期恋爱的分寸，理解请求与允许的文化，从而做好安全保护。
+                </div>
+                <div role="paragraph">
+                    对于身处于青春期的当事人，这段宝贵的青春可以加深对自我的理解。就像高中语文课本里节选自弗洛姆的《爱的艺术》一样，爱一种体现是自我教育。认识自我，要求自我，调控自我，评价自我。在青春期锻炼与人相处、共情的能力。另外，要注意适度交往，保护自己心理和生理上的健康与安全。
+                </div>
+                <div role="paragraph">
+                    在Orygen的一项论文《青少年恋爱关系》中提到，“从某种意义上，青少年的恋爱关系是一个对于成人亲密关系的训练场所，为学习如何管理强烈情绪，协商冲突，沟通需求和回应伴侣提供了机会”。 相同地，心理学家埃里克 · 埃里克森也持有相似的观点，青春期的浪漫关系对于青少年的自我理解和身份认同有着重要贡献。爱是长大的必由之路，是正常、自然且美好的，不应被传统的眼光曲解，也不应该被功利性的目的处罚，更不应该因为教育者没有做到位而被粗鲁干涉。
+                </div>
+            </section>
+            
+
+            <section id="sec-8">
+                <h2>相关阅读</h2>
+
+            </section> 
             
             <section id="acknowledgments" role="doc-acknowledgments">
                 <h2>Acknowledgments</h2>
@@ -1622,7 +1622,8 @@ if(window.WebyGam) {
             }
             
             document.getElementById("more_path_update").href = stored_data["current_directory_path"];
-            document.getElementById("more_path_update").href = "/index.html";
+            document.getElementById("more_path_update1").href = "/index.html";
+
         </script>
 
         <!-- update the content table according to the content -->

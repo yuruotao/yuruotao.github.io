@@ -3,7 +3,7 @@
     <head data-pb-dropzone="head">
 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link>
 
-<title id="page_title">Page Title</title>
+<title id="page_title">漫评网游中的“消极游戏”现象</title>
 
 <!-- here is the updating script -->
 <script>
@@ -14,21 +14,20 @@
     page_title:page_title_1,
     current_directory:"shikemanping",
     current_directory_path:"/shikemanping.html",
-    date:"2020 OCTOBER 10",
+    date:"2020 AUGUST 17",
     authors:author,
     article_type:"commentary",
     article_field: "social science",
 
-    previous_article_link:"p_link",
-    next_article_link: "n_link",
-    previous_article_title: "p_title",
-    next_article_title:"n_title",
+    previous_article_link:"/html_files/shikemanping/shike6.html",
+    next_article_link: "/html_files/shikemanping/shike8.html",
+    previous_article_title: "预防青少年戏水溺亡的措施与不足",
+    next_article_title:"漫评占座现象",
     
     pdf_link:"/",
     paper_state:"no",
-    section_names:["sec1","sec2","sec3"],
-
-    };
+    section_names:["“消极比赛”的定义","网游中的“演员”","平台对消极游戏的态度","消极游戏中平台的主导作用","设立相关的法律法规"],
+};
 
     window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
 </script>
@@ -941,8 +940,8 @@ if(window.WebyGam) {
                             <!-- propganda image -->
                             <!-- link to the outstanding image of the field -->
                             <!--  -->
-                            <a href="/" title="current column cover image" class="d-block">
-                                <img src="/" alt="cover image"></a>
+                            <a title="current column cover image" class="d-block">
+                                <img src="/resources/images/beautiful_pic1.jpg" alt="cover image"></a>
                             </div>
                         </div>
                     </div>
@@ -950,35 +949,20 @@ if(window.WebyGam) {
                     <div class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
 <div class="multi-search">
-    <div>
-        <article class="card-do">
-            <div class="card-content">
-                <div class="card-header">
-                    <h3 class="card__title">
-                        <!--  -->
-                        <a href="/" title="Human generation times across the past 250,000 years" class="text-reset animation-underline">Bitch...........</a>
-                    </h3>
-                    <ul class="card-meta align-middle pl-0">
-                        <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2" data-visible-items-md="4" data-visible-items="9" data-truncate-less="less" data-truncate-more="authors" data-truncate-dots="true">
-                            <span>By</span>
-                            <ul class="list-inline comma-separated" title="list of authors">
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Yichen Wang</span></li>
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Sam</span></li>
-                                <li class="list-inline-item"><span>et al.</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-        
+    <div id="skmp_column_update">
+
+        <script>
+            fetch("/update/skmp_column_update.html")
+            .then(response=> response.text())
+            .then(text=> document.getElementById('skmp_column_update').innerHTML = text)
+        </script>
 
 
 </div>
 <div class="d-flex justify-content-end btn--more__wrapper">
     <!-- direct to the current folder -->
     <a id="more_path_update" href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span>More</span>
+        <span >More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
 </div>
@@ -1016,7 +1000,7 @@ if(window.WebyGam) {
     
     <div class="d-flex justify-content-end btn--more__wrapper">
         <!-- direct to the latest corresponding column -->
-        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold ">
             <span>More</span>
             <span aria-hidden="true" class="icon-arrow-right"></span>
         </a>
@@ -1046,70 +1030,98 @@ if(window.WebyGam) {
     <div class="core-container">
 
         <section id="sec-1" data-type="introduction">
-            <h2>INTRODUCTION</h2>
+            <h2>“消极比赛”的定义
+            </h2>
             <!-- (<a href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a>, <a href="#R2" role="doc-biblioref" data-xml-rid="R2"><i>2</i></a>) -->
-            <div role="paragraph">para1</div>
-            
-            <div role="paragraph">para2</div>
-            
-            <div role="paragraph">para3</div>
+            <div role="paragraph">
+                2012年伦敦奥运会中，韩国羽毛球代表队为了提高摘得金、银牌的概率，在小组赛对阵中国队时故意输球，被奥委会官方判定为“消极比赛”，带火了“消极比赛”一词；近日，在各网络游戏平台中，也出现了诸多“消极游戏”的现象，如“演员”、“代练”、“代打”等。            </div>
         </section>
         
         <section id="sec-2" data-type="results">
-            <h2>RESULTS</h2>
+            <h2>网游中的“演员”
+            </h2>
             <div role="paragraph">
-                <!--  -->
-                <a href="#F1">Figure 1A</a>
-                <figure id="F1" class="graphic">
-                    <!-- link to the image -->
-                    <img src="/" height="3608" width="3600" aria-labelledby="F1" loading="lazy" />
-                    <figcaption>
-                        <div class="caption">
-                            <span class="heading">Fig. 1</span>. Stretchable metallization and characterizations.
-                        </div>
-                        <div class="notes">
-                            <div role="doc-footnote">(<b>A</b>) Schematic of stretchable metallization.
-                                <sub>2</sub> 
-                            </div>
-                        </div>
-                    </figcaption>
-                </figure>
+                “演员”一词，本义指在表演艺术中扮演某个角色的表演者，或参加戏曲、戏剧、电影、电视剧、舞蹈、曲艺等表演的专业人员；在网络游戏中，特指在游戏中破坏游戏生态，干扰其他玩家游戏体验，以获得物质回报或满足自身精神需求的一类玩家；而“代练”、“代打”则是通过破坏游戏公平，扰乱游戏秩序，帮助其他玩家取得更高游戏等级或获得游戏装备，以获得物质利益的一类玩家。各平台上知名主播：张大仙、梦泪等也在直播时遭“演员”干扰；不仅仅是各知名主播，“消极游戏”现象也渗透到了我们的生活中：王者荣耀、英雄联盟等大型游戏中，也充斥着如此“乱象”，引发了许多人的不满，甚至激起了个别人的言语辱骂、人身攻击等过激行为。
             </div>
-                
-            <div role="paragraph">
-                para2
-            </div>
-            </section>
+            
+        </section>
+        
+
             <section id="sec-3" data-type="discussion">
-                <h2>DISCUSSION</h2>
-                <div role="paragraph">In summary,</div>
+                <h2>
+                    平台对消极游戏的态度
+                </h2>
+                <div role="paragraph">对于此种“消极游戏”现象，各游戏平台的态度是不赞同、不支持。长久来看，此类现象会破坏游戏的公平度，同样会干扰其他玩家的游戏体验，造成玩家流失。因此，为防止“代练”、“代打”者登录他人账号，游戏平台推出了实名认证与人脸识别相结合的异地登陆限制；为打击“消极游戏”的行为，平台通过技术手段来进行检测，同时为其他玩家开放举报通道。但上述方法“治标不治本”，花钱找人帮自己“上分”、“刷装备”，其背后暗含的，是不劳而获、虚荣的心理。游戏，仅仅是现代人生活中的多种娱乐方式之一，而当娱乐方式被扭曲成炫耀的资本时，游戏本身带来的竞技、合作、挑战之趣也不复存在。 water blackout）从而导致溺水事故；溺水者很可能不会发出呼救，无法引起他人注意。除此之外，在湖泊，海洋中“野泳”也存在着较大的安全隐患，如水草，淤泥，珊瑚等。溺水后获得救援的幸运者，也应在医院进行进一步检查与观察，防止发生继发性溺水。</div>
             </section>
             
             <section id="sec-4" data-type="materials methods">
-                <h2>MATERIALS AND METHODS</h2>
-                
-                <section id="sec-4-1">
-                    <h3>Materials</h3>
-                    
-                    <div role="paragraph">
-                        paapapap
-                    </div>
-                </section>
-                
-                <section id="sec-4-2">
-                    <h3>Stretchable metallization and characterization</h3>
-                    <div role="paragraph">
-                        pppppppppppp
-                    </div>
-                </section>
-                
-                <section id="sec-4-3">
-                    <h3>Device fabrication and measurement</h3>
-                    <div role="paragraph">
-
-                    </div>
-                </section>
+                <h2>
+                    消极游戏中平台的主导作用
+                </h2>
+                <div role="paragraph">如何有效减少此类现象的出现？平台的主导作用不可忽视。首先，扩大检举范围，除游戏外，对各社交媒体平台，如QQ群、微信群、百度贴吧中出现的有关信息，也应开设相关举报渠道；同时，各软件方应大力推行账号实名认证，进行信息共享，某平台上玩家违规的信息也应被其他平台所获取，建立“违规体系”；增大惩戒力度，一旦某玩家被有效认定违规，则计入各平台违规名单，视情节给予禁赛、封号等相应处理。 预防青少年野外危险水域戏水现象，令青少年意识到盲目下水施救会致以救援双方受到生命威胁这两点是降低青少年溺水的重中之重。目前，我国在溺水预防问题上的关注力度较大，但仍有许多方面有待改进。
+                </div>
             </section>
+
+            <section id="sec-5" data-type="materials methods">
+                <h2>设立相关的法律法规</h2>
+                <div role="paragraph">
+                    更多地，国家应出台相关法律法规，对其进行规范。电竞大国—韩国，在2019年通过了《游戏产业促进法修改案》。根据法案规定，在韩国进行网络游戏代练的交易，将被判处2年以下的监禁或最高17000美元的罚款。议员Lee Dong-seop曾表示：“这项法案如果获得通过，将有助于建立一个健康的游戏生态系统。”.4%。许多乡村中不具备游泳馆，面向青少年的游乐设施也较为匮乏，这便引发了青少年野游，下河捕鱼的念头。溪龙乡后河村为解决此类问题，建立了新游泳馆，现已交付使用。更多的，一些游泳馆仍存在经营不规范、管理不到位等安全隐患。各省市文化体育和旅游局应联合卫生健康局对全省游泳馆开展专项行动，对问题游泳馆安全管理和卫生质量不符合国家标准的情形依法履行法定监管职责；进行查处后，也应跟进开展“回头看”行动，防止现象反弹，巩固整治效果。对于泳池，应根据各省《公共游泳场所管理办法》，增设护栏，救生器械，配备救生员，医护人员；对于湖泊，池塘等危险区域，也应搭建相应警示牌。
+                </div>
+                <div role="paragraph">
+                    在游戏中，我们首先要做到不“消极”，怀着娱乐的目的，以认真的态度完成每局游戏；对于违规者，也要敢于举报，不采取过激方式应对。相信随着规范化的不断推进，我们也会获得更好的游戏体验。
+                </div>
+            </section>
+
+            <section id="sec-6">
+                <h2>相关阅读</h2>
+                <h3>
+                    <a
+                    href="http://it.people.com.cn/n1/2020/0326/c1009-31648602.html"
+                    >RW开除王湘 电竞选手顶风打假赛为哪般
+                    </a
+                  ></h3>
+                  <h3><a
+                    href="http://game.people.com.cn/n1/2018/0619/c40130-30065274.html"
+                    >《英雄联盟》将打击代练代打：屡次违规者将永久封号</a
+                  ></h3>
+                  <h3><a
+                    href="http://game.people.com.cn/n1/2017/0308/c218877-29130909.html"
+                    >守望先锋违规举报封号技巧 举报流程步骤</a
+                  ></h3>
+                  <h3><a
+                    href="http://finance.people.com.cn/n1/2020/0713/c1004-31780246.html"
+                    >政府、平台、消费者多方协力——“代经济”花样层出不穷 无序生长须警惕</a
+                  ></h3>
+                  <h3><a
+                    href="http://game.people.com.cn/n1/2018/1205/c40130-30443555.html"
+                    >韩国最新法案开始审议 游戏代练将被处2年监禁</a
+                  ></h3>
+                  <h3><a
+                    href="http://game.people.com.cn/n1/2018/0428/c40130-29956361.html"
+                    >电竞爱好者，内心戏也很丰富</a
+                  ></h3>
+                  <h3><a
+                    href="http://capital.people.com.cn/n1/2017/0711/c405954-29397044.html"
+                    >揭秘游戏代练真实状态：没有想象中那样赚钱</a
+                  ></h3>
+                  <h3><a
+                    href="http://game.people.com.cn/n1/2017/0628/c40130-29367425.html"
+                    >《王者荣耀》代练月入百万 掘金者还是破坏者？</a
+                  ></h3>
+                  <h3><a
+                    href="http://health.people.com.cn/n1/2017/0616/c14739-29343435.html"
+                    >如何给孩子设立网游“安全阀”？</a
+                  ></h3>
+                  <h3><a
+                    href="http://game.people.com.cn/n1/2017/0612/c218877-29332455.html"
+                    >《王者荣耀》拉动代练业务 月入5万都不算高薪</a
+                  ></h3>
+                  <h3><a
+                    href="http://game.people.com.cn/n1/2016/1020/c40130-28794390.html"
+                    >不服也得忍着 厂商封游戏账号几大原因</a
+                  ></h3>
+
+            </section> 
             
             <section id="acknowledgments" role="doc-acknowledgments">
                 <h2>Acknowledgments</h2>
@@ -1622,7 +1634,8 @@ if(window.WebyGam) {
             }
             
             document.getElementById("more_path_update").href = stored_data["current_directory_path"];
-            document.getElementById("more_path_update").href = "/index.html";
+            document.getElementById("more_path_update1").href = "/index.html";
+
         </script>
 
         <!-- update the content table according to the content -->

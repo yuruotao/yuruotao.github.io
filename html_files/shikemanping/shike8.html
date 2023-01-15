@@ -3,7 +3,7 @@
     <head data-pb-dropzone="head">
 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link>
 
-<title id="page_title">Page Title</title>
+<title id="page_title">漫评占座现象</title>
 
 <!-- here is the updating script -->
 <script>
@@ -14,21 +14,20 @@
     page_title:page_title_1,
     current_directory:"shikemanping",
     current_directory_path:"/shikemanping.html",
-    date:"2020 OCTOBER 10",
+    date:"2020 AUGUST 17",
     authors:author,
     article_type:"commentary",
     article_field: "social science",
 
-    previous_article_link:"p_link",
-    next_article_link: "n_link",
-    previous_article_title: "p_title",
-    next_article_title:"n_title",
+    previous_article_link:"/html_files/shikemanping/shike7.html",
+    next_article_link: "/html_files/shikemanping/shike9.html",
+    previous_article_title: "漫评网游中的“消极游戏”现象",
+    next_article_title:"高校图书馆占座现象解决方案的分析，创新与发展",
     
     pdf_link:"/",
     paper_state:"no",
-    section_names:["sec1","sec2","sec3"],
-
-    };
+    section_names:["占座现象","考研占座乱象","占座现象发生的原因","可能的解决方案","科技对解决占座问题的作用"],
+};
 
     window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
 </script>
@@ -941,8 +940,8 @@ if(window.WebyGam) {
                             <!-- propganda image -->
                             <!-- link to the outstanding image of the field -->
                             <!--  -->
-                            <a href="/" title="current column cover image" class="d-block">
-                                <img src="/" alt="cover image"></a>
+                            <a title="current column cover image" class="d-block">
+                                <img src="/resources/images/beautiful_pic1.jpg" alt="cover image"></a>
                             </div>
                         </div>
                     </div>
@@ -950,35 +949,20 @@ if(window.WebyGam) {
                     <div class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
 <div class="multi-search">
-    <div>
-        <article class="card-do">
-            <div class="card-content">
-                <div class="card-header">
-                    <h3 class="card__title">
-                        <!--  -->
-                        <a href="/" title="Human generation times across the past 250,000 years" class="text-reset animation-underline">Bitch...........</a>
-                    </h3>
-                    <ul class="card-meta align-middle pl-0">
-                        <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2" data-visible-items-md="4" data-visible-items="9" data-truncate-less="less" data-truncate-more="authors" data-truncate-dots="true">
-                            <span>By</span>
-                            <ul class="list-inline comma-separated" title="list of authors">
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Yichen Wang</span></li>
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Sam</span></li>
-                                <li class="list-inline-item"><span>et al.</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-        
+    <div id="skmp_column_update">
+
+        <script>
+            fetch("/update/skmp_column_update.html")
+            .then(response=> response.text())
+            .then(text=> document.getElementById('skmp_column_update').innerHTML = text)
+        </script>
 
 
 </div>
 <div class="d-flex justify-content-end btn--more__wrapper">
     <!-- direct to the current folder -->
     <a id="more_path_update" href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span>More</span>
+        <span >More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
 </div>
@@ -1016,7 +1000,7 @@ if(window.WebyGam) {
     
     <div class="d-flex justify-content-end btn--more__wrapper">
         <!-- direct to the latest corresponding column -->
-        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold ">
             <span>More</span>
             <span aria-hidden="true" class="icon-arrow-right"></span>
         </a>
@@ -1046,70 +1030,109 @@ if(window.WebyGam) {
     <div class="core-container">
 
         <section id="sec-1" data-type="introduction">
-            <h2>INTRODUCTION</h2>
+            <h2>占座现象
+            </h2>
             <!-- (<a href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a>, <a href="#R2" role="doc-biblioref" data-xml-rid="R2"><i>2</i></a>) -->
-            <div role="paragraph">para1</div>
-            
-            <div role="paragraph">para2</div>
-            
-            <div role="paragraph">para3</div>
+            <div role="paragraph">
+                根据相关法律界定，使用权是不改变财产的所有权而依法加以使用的权利。而占座，是对某一特定空间或某特定设施及物品等公共资源在一定时间内的使用权的取得，方法是将自己的所有物放置于特定空间，借以表明自己对使用权的取得。对于去食堂打饭的一类行为，人们的宽容度较高，因为这样的举动合乎情理，而且打饭的速度快，不会对空间资源造成浪费。而在校园内，社会上各种不合理的占座现象，如图书馆占座，高铁霸座等，由于小部分人的自私，空间被不合理地占用，从而导致空间资源被浪费，给许多人的生活带来了不便。            </div>
         </section>
         
         <section id="sec-2" data-type="results">
-            <h2>RESULTS</h2>
+            <h2>考研占座乱象
+            </h2>
             <div role="paragraph">
-                <!--  -->
-                <a href="#F1">Figure 1A</a>
-                <figure id="F1" class="graphic">
-                    <!-- link to the image -->
-                    <img src="/" height="3608" width="3600" aria-labelledby="F1" loading="lazy" />
-                    <figcaption>
-                        <div class="caption">
-                            <span class="heading">Fig. 1</span>. Stretchable metallization and characterizations.
-                        </div>
-                        <div class="notes">
-                            <div role="doc-footnote">(<b>A</b>) Schematic of stretchable metallization.
-                                <sub>2</sub> 
-                            </div>
-                        </div>
-                    </figcaption>
-                </figure>
+                当每年考研结束后，各个高校的考研占座大战就闪电般地拉开了帷幕———然后闪电般地闭幕：下届考研自习座立即被下届考生火速抢占完毕。速度之快，热闹之致，令人直呼不可思议。在座椅上写画、贴条、放砖头、写诅咒、用铁链锁上位置、甚至为座位大打出手——为了占座，学生们奇招频出。
             </div>
-                
-            <div role="paragraph">
-                para2
-            </div>
-            </section>
+            
+        </section>
+        
+
             <section id="sec-3" data-type="discussion">
-                <h2>DISCUSSION</h2>
-                <div role="paragraph">In summary,</div>
+                <h2>
+                    占座现象发生的原因
+                </h2>
+                <div role="paragraph">究其本源，占座现象发生的原因主要产生于供远小于求的矛盾：即是现存设施或资源的缺乏与使用人数过多的矛盾。同时，位置的优劣、使用的紧急程度等都是部分占座现象发生的侧面原因。的确，增加“供”，即增设设施是解决占座问题的根本方法，但增加设施并非如今能够即时实现的恰当方法；反而，如果增大对于该场所建设与维护方面的资金投入，甚至会引起诸多其他方面的问题。 water blackout）从而导致溺水事故；溺水者很可能不会发出呼救，无法引起他人注意。除此之外，在湖泊，海洋中“野泳”也存在着较大的安全隐患，如水草，淤泥，珊瑚等。溺水后获得救援的幸运者，也应在医院进行进一步检查与观察，防止发生继发性溺水。</div>
+                <div role="paragraph">
+                    对于考研占座的疯狂，参与考研占座的学生或多或少会感到迫不得已。占座大赛似乎已经成为往年沿袭下来的“文化传统”，如果不去占座的话就会落得无地自习的窘境；即便对于仅留有诸如“动了座位就考不上”的“诅咒”字样的字条却无人使用的空位，无座学生也不想轻易使用。无奈如此，假使学校不对考研分座加以干涉，占座大战的发生就是必然。
+                </div>
+                <div role="paragraph">
+                    当前约定俗成的“占座规矩”的不合理，管理方式与行为边界的不明晰，公民素质水平的有待提升等问题，也和资源的不充裕一并在占座现象中反映出。
+                </div>
+                <div role="paragraph">
+                    在图书馆中，将公共座位用车锁锁住，用铁丝圈住，直接用砖头压住的现象，不禁让众人喟叹：“什么素质！“。而占座后数小时只留一本书却不见人影的现象，则让无数学生气愤又无奈；在高铁，飞机等公共交通上，撒泼耍赖强占他人座位的“耍赖式”小恶，也在社会上引发热议；而在地摊上用锁锁住位置，花10元在商场坐一天等干扰商业秩序的不合理现象，也使新旧商家哭笑不得。
+                </div>
             </section>
             
             <section id="sec-4" data-type="materials methods">
-                <h2>MATERIALS AND METHODS</h2>
-                
-                <section id="sec-4-1">
-                    <h3>Materials</h3>
-                    
-                    <div role="paragraph">
-                        paapapap
-                    </div>
-                </section>
-                
-                <section id="sec-4-2">
-                    <h3>Stretchable metallization and characterization</h3>
-                    <div role="paragraph">
-                        pppppppppppp
-                    </div>
-                </section>
-                
-                <section id="sec-4-3">
-                    <h3>Device fabrication and measurement</h3>
-                    <div role="paragraph">
-
-                    </div>
-                </section>
+                <h2>
+                    可能的解决方案
+                </h2>
+                <div role="paragraph">如何有效减少此类现象的出现？平台的主导作用不可忽视。首先，扩大检举范围，除游戏外，对各社交媒体平台，如QQ群、微信群、百度贴吧中出现的有关信息，也应开设相关举报渠道；同时，各软件方应大力推行账号实名认证，进行信息共享，某平台上玩家违规的信息也应被其他平台所获取，建立“违规体系”；增大惩戒力度，一旦某玩家被有效认定违规，则计入各平台违规名单，视情节给予禁赛、封号等相应处理。 预防青少年野外危险水域戏水现象，令青少年意识到盲目下水施救会致以救援双方受到生命威胁这两点是降低青少年溺水的重中之重。目前，我国在溺水预防问题上的关注力度较大，但仍有许多方面有待改进。
+                </div>
             </section>
+
+            <section id="sec-5" data-type="materials methods">
+                <h2>科技对解决占座问题的作用</h2>
+                <div role="paragraph">
+                    而相应的解决方案，在时间限制上，；其次规定其使用权应仅限于本日，以解决“隔夜占座”的问题；再次，设定相关秩序及规章制度，对部分不合理现象设置惩戒机制，以解决“书在座空”的问题。在一个个体具有的权利上，则要对个体所能够获得的使用权进行限制，以解决替人占座的问题；某些设施甚至可以在书桌上贴写拒绝占桌占座的标示，若书桌上的物品在十五分钟内无人收取则可以将它们放到旁边的杂物架中等。有些时候，拒绝占座比设计占座更直接且有效率；而对于严重侵犯他人对公共场所使用权的现象，则应通过颁布相关法律法规，类似于针对“老赖”的《关于支持人民法院基本解决执行难问题的通知》等，建立失信相应体系，借以禁止公共交通出行180天，在图书馆义务劳动等惩戒措施，避免该种现象的再度出现。 Dong-seop曾表示：“这项法案如果获得通过，将有助于建立一个健康的游戏生态系统。”.4%。许多乡村中不具备游泳馆，面向青少年的游乐设施也较为匮乏，这便引发了青少年野游，下河捕鱼的念头。溪龙乡后河村为解决此类问题，建立了新游泳馆，现已交付使用。更多的，一些游泳馆仍存在经营不规范、管理不到位等安全隐患。各省市文化体育和旅游局应联合卫生健康局对全省游泳馆开展专项行动，对问题游泳馆安全管理和卫生质量不符合国家标准的情形依法履行法定监管职责；进行查处后，也应跟进开展“回头看”行动，防止现象反弹，巩固整治效果。对于泳池，应根据各省《公共游泳场所管理办法》，增设护栏，救生器械，配备救生员，医护人员；对于湖泊，池塘等危险区域，也应搭建相应警示牌。
+                </div>
+                <div role="paragraph">
+                    更多地，我们可从科技与教育上借力,明确占座的不合理性，不止为解决占座问题，更为增加科技在生活中的实践与对规则意识，秩序的强调。可以将不合理占座行为与个人在网上的信誉记录或积分关联，将行为与信誉挂钩。对于校园内发生的大规模不合理占座如“考研占座大赛”，学校出面，出台座位安排政策使用来避免占座大赛的混乱与学生之间冲突的发生，维护公德，是最为妥帖的举动。
+                </div>
+                <div role="paragraph">
+                    什么时候，才可以使大面积的占座问题得到解决呢？对此，笔者也没有明确的答案。当耍赖式小恶被失信体系管控，当全民具有“拒绝不合理占座文化”的意识，维护公德的心，彼时，不合理占座现象必将大大减少。当我们再次停放自行车，坐上高铁，或是坐进图书馆，会更感到轻松平和些吧。
+                </div>
+            </section>
+
+            <section id="sec-6">
+                <h2>相关阅读</h2>
+                <h3>
+                    <a href="http://gs.people.com.cn/n/2014/0828/c188868-22140830.html">
+                        从济南大学考研疯狂占座反观公德的丧失
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://v.people.cn/n1/2019/0917/c39805-31357920.html">
+                        武汉：男子地铁躺着占座  与海报“咸鱼”神同步
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://travel.people.com.cn/n1/2020/0205/c41570-31571538.html">
+                        “霸座男”“霸座女”屡见不鲜 惩治“霸座”不能留情
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://pic.people.com.cn/n1/2019/0731/c1016-31266982.html">
+                        图书馆暑期“朝九晚五” 市民呼吁延时
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://travel.people.com.cn/n1/2018/0921/c41570-30306613.html">
+                        铁路霸座屡现 专家：可将铁路旅客信用信息共享到其他行业
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://opinion.people.com.cn/n1/2018/0823/c1003-30245329.html">
+                        北青报：对“耍赖式”小恶 也不能放纵
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://jiaju.people.com.cn/n1/2016/1011/c151264-28769474.html">
+                        花10元坐一天中老年相亲族占座让宜家“Hold不住了”
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://opinion.people.com.cn/n/2015/0822/c159301-27499707.html">
+                        严责不文明就该有200斤的气魄
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://edu.people.com.cn/kaoyan/n/2015/0303/c112975-26628131.html">
+                        考研占座“大战”再上演 胶带铁链齐上阵
+                    </a>
+                </h3>
+
+            </section> 
             
             <section id="acknowledgments" role="doc-acknowledgments">
                 <h2>Acknowledgments</h2>
@@ -1622,7 +1645,8 @@ if(window.WebyGam) {
             }
             
             document.getElementById("more_path_update").href = stored_data["current_directory_path"];
-            document.getElementById("more_path_update").href = "/index.html";
+            document.getElementById("more_path_update1").href = "/index.html";
+
         </script>
 
         <!-- update the content table according to the content -->

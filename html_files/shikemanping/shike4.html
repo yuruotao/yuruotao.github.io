@@ -3,7 +3,7 @@
     <head data-pb-dropzone="head">
 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link>
 
-<title id="page_title">Page Title</title>
+<title id="page_title">漫评“饭圈文化”带来的影响</title>
 
 <!-- here is the updating script -->
 <script>
@@ -19,15 +19,14 @@
     article_type:"commentary",
     article_field: "social science",
 
-    previous_article_link:"p_link",
-    next_article_link: "n_link",
-    previous_article_title: "p_title",
-    next_article_title:"n_title",
+    previous_article_link:"/html_files/shikemanping/shike3.html",
+    next_article_link: "/html_files/shikemanping/shike5.html",
+    previous_article_title: "使残疾人融入社会的意义",
+    next_article_title:"漫谈偶像产业与饭圈的联系",
     
     pdf_link:"/",
     paper_state:"no",
-    section_names:["sec1","sec2","sec3"],
-
+    section_names:["“饭圈”的定义", "互联网语境下的饭圈文化", "饭圈文化的信息传播","饭圈文化对青年群体的影响","线下饭圈活动乱象","饭圈催生的职业","饭圈的正向作用"],
     };
 
     window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -941,8 +940,8 @@ if(window.WebyGam) {
                             <!-- propganda image -->
                             <!-- link to the outstanding image of the field -->
                             <!--  -->
-                            <a href="/" title="current column cover image" class="d-block">
-                                <img src="/" alt="cover image"></a>
+                            <a title="current column cover image" class="d-block">
+                                <img src="/resources/images/beautiful_pic1.jpg" alt="cover image"></a>
                             </div>
                         </div>
                     </div>
@@ -950,35 +949,20 @@ if(window.WebyGam) {
                     <div class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
 <div class="multi-search">
-    <div>
-        <article class="card-do">
-            <div class="card-content">
-                <div class="card-header">
-                    <h3 class="card__title">
-                        <!--  -->
-                        <a href="/" title="Human generation times across the past 250,000 years" class="text-reset animation-underline">Bitch...........</a>
-                    </h3>
-                    <ul class="card-meta align-middle pl-0">
-                        <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2" data-visible-items-md="4" data-visible-items="9" data-truncate-less="less" data-truncate-more="authors" data-truncate-dots="true">
-                            <span>By</span>
-                            <ul class="list-inline comma-separated" title="list of authors">
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Yichen Wang</span></li>
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Sam</span></li>
-                                <li class="list-inline-item"><span>et al.</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-        
+    <div id="skmp_column_update">
+
+        <script>
+            fetch("/update/skmp_column_update.html")
+            .then(response=> response.text())
+            .then(text=> document.getElementById('skmp_column_update').innerHTML = text)
+        </script>
 
 
 </div>
 <div class="d-flex justify-content-end btn--more__wrapper">
     <!-- direct to the current folder -->
     <a id="more_path_update" href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span>More</span>
+        <span >More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
 </div>
@@ -1016,7 +1000,7 @@ if(window.WebyGam) {
     
     <div class="d-flex justify-content-end btn--more__wrapper">
         <!-- direct to the latest corresponding column -->
-        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold ">
             <span>More</span>
             <span aria-hidden="true" class="icon-arrow-right"></span>
         </a>
@@ -1046,70 +1030,79 @@ if(window.WebyGam) {
     <div class="core-container">
 
         <section id="sec-1" data-type="introduction">
-            <h2>INTRODUCTION</h2>
+            <h2>“饭圈”的定义
+            </h2>
             <!-- (<a href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a>, <a href="#R2" role="doc-biblioref" data-xml-rid="R2"><i>2</i></a>) -->
-            <div role="paragraph">para1</div>
-            
-            <div role="paragraph">para2</div>
-            
-            <div role="paragraph">para3</div>
+            <div role="paragraph">
+                “饭圈”一词，是指由某明星或某组合的大部分仰慕者、追随者构成的群体、圈子；而“饭圈文化”，则是此类群体在围绕明星、组合的宣传等事宜过程中，主导形成的一种“约定俗成”的文化。此种亚文化，完全由粉丝主导形成，与明星、组合本身并无直接联系。而这一文化的不断演变，却滋生了社会上许多令人不齿的现象。
+            </div>
         </section>
         
         <section id="sec-2" data-type="results">
-            <h2>RESULTS</h2>
+            <h2>互联网语境下的饭圈文化
+            </h2>
             <div role="paragraph">
-                <!--  -->
-                <a href="#F1">Figure 1A</a>
-                <figure id="F1" class="graphic">
-                    <!-- link to the image -->
-                    <img src="/" height="3608" width="3600" aria-labelledby="F1" loading="lazy" />
-                    <figcaption>
-                        <div class="caption">
-                            <span class="heading">Fig. 1</span>. Stretchable metallization and characterizations.
-                        </div>
-                        <div class="notes">
-                            <div role="doc-footnote">(<b>A</b>) Schematic of stretchable metallization.
-                                <sub>2</sub> 
-                            </div>
-                        </div>
-                    </figcaption>
-                </figure>
+                不同于70、80年代线下互动的单一方式，处于信息时代的今天，大部分的饭圈活动都借助网络平台完成，逐渐变得组织化、规模化、效率化。互联网为人们提供了一个发表自己观点的平台，但因其身份曝光度小，也有部分素质低下者在网上肆意妄为，引发网络暴力现象。网络用语“祖安文化”指的就是脏话、粗口在网络上的再创作。网络暴力问题在不同饭圈之间显得尤为尖锐：普遍体现在粉丝们“骂街式”对其他明星、其他粉丝的抨击与污蔑；极端的则有人肉搜索、电话骚扰甚至对人身安全的威胁，起因仅仅是对方发表的所谓“不恰当言论”。当这种行为愈演愈烈时，甚至会让明星、组合受到无端指责，甚至因此被更多不明真相者厌恶，损害其公众形象。颇令人玩味的是：当明星发言呼吁粉丝冷静时，有的粉丝甚至会曲解其原意，认为明星是被迫无奈才发言，反而会更加狂热地为其“鸣不平”。
             </div>
-                
-            <div role="paragraph">
-                para2
-            </div>
-            </section>
+            
+        </section>
+        
+
             <section id="sec-3" data-type="discussion">
-                <h2>DISCUSSION</h2>
-                <div role="paragraph">In summary,</div>
+                <h2>饭圈文化的信息传播</h2>
+                <div role="paragraph">在信息传播方面，“饭圈文化”造成的问题远不止于网络暴力。更为严重的，是其滋生的网络舆论空间的戾气：正常的讨论会激化为“圈内人”与“圈外人”的对骂、在评论区中不分青红皂白就疾呼自己偶像的正确、固执于自己的偶像在任一方面都优于其他人等等。甚至到了各评论区内只有赞扬，批评、意见全无容身之处的地步，部分过度狂热的粉丝，其自以为是的程度可见一斑。在饭圈内部，同样有如此现象：对偶像的支持完全被物质化，对偶像的支持度、在饭圈内的话语权与粉丝自身的购买力直接划了等号、仅仅欣赏其作品的行为则被贬作所谓不劳而获的“白嫖”。</div>
             </section>
             
             <section id="sec-4" data-type="materials methods">
-                <h2>MATERIALS AND METHODS</h2>
-                
-                <section id="sec-4-1">
-                    <h3>Materials</h3>
-                    
-                    <div role="paragraph">
-                        paapapap
-                    </div>
-                </section>
-                
-                <section id="sec-4-2">
-                    <h3>Stretchable metallization and characterization</h3>
-                    <div role="paragraph">
-                        pppppppppppp
-                    </div>
-                </section>
-                
-                <section id="sec-4-3">
-                    <h3>Device fabrication and measurement</h3>
-                    <div role="paragraph">
-
-                    </div>
-                </section>
+                <h2>饭圈文化对青年群体的影响</h2>
+                <div role="paragraph">现今，随着网络普及率的提高与各家庭生活质量的提升，网络用户逐渐呈现低龄化的趋势。比起许多青年人，这些低龄用户不具有较高的认知水平，对负面的意见更加敏感，容易受网络上错误观念的蛊惑，也更容易轻率地发表过激言论，但相应的青少年防沉迷系统的建设与青少年内容的分级仍无作为，这就使得许多饭圈中出言不逊者、互撕者多为十余岁的少年。除此之外，与明星有关的产品，如海报、手办、专辑甚至由明星代言的产品，其主消费群体便是同样的人群。网络用语“氪金”在饭圈中的解释，便是粉丝斥巨资购买上述产品的现象。处在低龄段的男女，并未达到经济独立，而饭圈中错误的观念，却有可能成为这些人“氪金”的心理来源，如果无法清晰辨别，甚至有可能使自己、家庭陷入经济困境。
+                </div>
             </section>
+
+            <section id="sec-5" data-type="materials methods">
+                <h2>线下饭圈活动乱象</h2>
+                <div role="paragraph">
+                    线下的饭圈活动，同样令人触目兴叹。许多组织者打着“某某饭圈团建”的旗号，实际目的却是引诱未成年人集资、付费；而一些线下活动的铺张浪费，则令人瞠目结舌：粉丝为偶像庆祝生日而包下一座楼、租赁私人飞机、游艇；更加普遍的，则是许多粉丝只顾追星，却置公共秩序于不顾的现象：明星出行时，粉丝堵塞机场、车站，某些狂热粉丝甚至买飞机票登机后再退票，只为见偶像一眼，致使航班延误。最近肖战粉丝团在四川美术学院的庆生活动，不止打破了校园原有的平静，更对校内涂鸦墙上的许多作品造成了难以逆转的毁损。这是对墙画原画师的一种不尊重，更是对他人劳动成果的漠视。
+                </div>
+            </section>
+
+            <section id="sec-6">
+                <h2>饭圈催生的职业</h2>
+                <div role="paragraph">
+                    随着娱乐圈的迅速发展和公众人物的不断增多，饭圈的规模不断壮大，在众多粉丝技术、资金等多方面的支持下，一些新型职业也应运而生：专门进行饭圈运营的粉丝“公关团队”、为满足部分粉丝愿望，赴拍摄场地、通勤途中甚至跟踪偷拍明星的“代拍”、应娱乐公司的商业需求或少数粉丝的心理要求，有偿地在网上挑起不同饭圈之间的争端、制造虚假消息、故意抹黑某明星的职业“黑粉”。各粉丝本身因出于对明星的喜爱，自发地为其进行打榜、控评、转发、点赞、宣传……，成为了免费的“数据劳动力”。
+                </div>
+            </section>
+
+            <section id="sec-7">
+                <h2>饭圈的正向作用</h2>
+                <div role="paragraph">
+                    但不可置否的一点是：尽管饭圈文化滋生了多种社会乱象，其仍然具有正向价值与引领作用：饭圈内的粉丝们以偶像的名义，投身于希望工程、植树造林等多种公益事业中；新冠疫情时，各饭圈粉丝们也以偶像的名义，对武汉等城市进行物资、金钱捐助，帮助国家渡过疫情大劫。不同的粉丝用自己的方式，表达了对偶像事业乃至对公益事业的支持。
+                </div>
+                <div role="paragraph">
+                    饭圈文化带来的现象大抵如此。如何减少饭圈带来的乱象，更多地发挥其积极作用？这是我们目前最应思考的问题。
+                </div>
+            </section>
+
+            <section id="sec-8">
+                <h2>相关阅读</h2>
+                <h3><a
+                    href="http://edu.people.com.cn/n1/2020/0928/c1053-31877838.html"
+                    >粉丝应援打榜 “烧钱”套路多多</a
+                  ></h3>
+                <h3><a
+                    href="https://new.qq.com/omn/20200516/20200516A0P2CR00.html"
+                    >人民日报发声，要保持饭圈文化的正向价值，职业底线不能破</a
+                  ></h3>
+                <h3>
+                    <a
+                    href="http://opinion.people.com.cn/n1/2020/0717/c223228-31787715.html"
+                    >人民网三评“饭圈”之二：尊重个性，不可简单否定</a>
+                </h3>
+                <h3></h3>
+                <h3></h3>
+                <h3></h3>
+                <h3></h3>
+            </section> 
             
             <section id="acknowledgments" role="doc-acknowledgments">
                 <h2>Acknowledgments</h2>
@@ -1622,7 +1615,8 @@ if(window.WebyGam) {
             }
             
             document.getElementById("more_path_update").href = stored_data["current_directory_path"];
-            document.getElementById("more_path_update").href = "/index.html";
+            document.getElementById("more_path_update1").href = "/index.html";
+
         </script>
 
         <!-- update the content table according to the content -->

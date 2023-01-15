@@ -3,7 +3,7 @@
     <head data-pb-dropzone="head">
 <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link>
 
-<title id="page_title">Page Title</title>
+<title id="page_title">高校图书馆占座现象解决方案的分析，创新与发展</title>
 
 <!-- here is the updating script -->
 <script>
@@ -14,21 +14,20 @@
     page_title:page_title_1,
     current_directory:"shikemanping",
     current_directory_path:"/shikemanping.html",
-    date:"2020 OCTOBER 10",
+    date:"2020 AUGUST 16",
     authors:author,
     article_type:"commentary",
     article_field: "social science",
 
-    previous_article_link:"p_link",
-    next_article_link: "n_link",
-    previous_article_title: "p_title",
-    next_article_title:"n_title",
+    previous_article_link:"/html_files/shikemanping/shike8.html",
+    next_article_link: "/html_files/shikemanping/shike10.html",
+    previous_article_title: "漫评占座现象",
+    next_article_title:"漫谈中小学早恋现象及我国家长、校方的应对态度",
     
     pdf_link:"/",
     paper_state:"no",
-    section_names:["sec1","sec2","sec3"],
-
-    };
+    section_names:["高校图书馆占座现象的演变","规章制度方面","执行措施方面","运营机制方面","经济学手段","技术手段","宣传教育方面","设施建设方面"],
+};
 
     window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
 </script>
@@ -941,8 +940,8 @@ if(window.WebyGam) {
                             <!-- propganda image -->
                             <!-- link to the outstanding image of the field -->
                             <!--  -->
-                            <a href="/" title="current column cover image" class="d-block">
-                                <img src="/" alt="cover image"></a>
+                            <a title="current column cover image" class="d-block">
+                                <img src="/resources/images/beautiful_pic1.jpg" alt="cover image"></a>
                             </div>
                         </div>
                     </div>
@@ -950,35 +949,20 @@ if(window.WebyGam) {
                     <div class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
 <div class="multi-search">
-    <div>
-        <article class="card-do">
-            <div class="card-content">
-                <div class="card-header">
-                    <h3 class="card__title">
-                        <!--  -->
-                        <a href="/" title="Human generation times across the past 250,000 years" class="text-reset animation-underline">Bitch...........</a>
-                    </h3>
-                    <ul class="card-meta align-middle pl-0">
-                        <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2" data-visible-items-md="4" data-visible-items="9" data-truncate-less="less" data-truncate-more="authors" data-truncate-dots="true">
-                            <span>By</span>
-                            <ul class="list-inline comma-separated" title="list of authors">
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Yichen Wang</span></li>
-                                <li class="list-inline-item"><span class="hlFld-ContribAuthor">Sam</span></li>
-                                <li class="list-inline-item"><span>et al.</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-        
+    <div id="skmp_column_update">
+
+        <script>
+            fetch("/update/skmp_column_update.html")
+            .then(response=> response.text())
+            .then(text=> document.getElementById('skmp_column_update').innerHTML = text)
+        </script>
 
 
 </div>
 <div class="d-flex justify-content-end btn--more__wrapper">
     <!-- direct to the current folder -->
     <a id="more_path_update" href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span>More</span>
+        <span >More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
 </div>
@@ -1016,7 +1000,7 @@ if(window.WebyGam) {
     
     <div class="d-flex justify-content-end btn--more__wrapper">
         <!-- direct to the latest corresponding column -->
-        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold ">
             <span>More</span>
             <span aria-hidden="true" class="icon-arrow-right"></span>
         </a>
@@ -1046,70 +1030,146 @@ if(window.WebyGam) {
     <div class="core-container">
 
         <section id="sec-1" data-type="introduction">
-            <h2>INTRODUCTION</h2>
+            <h2>高校图书馆占座现象的演变
+            </h2>
             <!-- (<a href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a>, <a href="#R2" role="doc-biblioref" data-xml-rid="R2"><i>2</i></a>) -->
-            <div role="paragraph">para1</div>
+            <div role="paragraph">
+                正如上一篇文章《漫评占座现象》中所提到的，高校中不合理的占座现象是普遍存在，且是亟需得到解决的，譬如考研疯狂占座和图书馆自习室占座问题；但解决方案要合理，应在现有的人力，财力资源所能负担范围内，并非简单地投入更多资金，进行设施建设。            </div>
+            <div role="paragraph">
+                从北京大学中国经济研究中心博士生阎伟的《占座现象的实证观察和理论分析》中，我们可以观察到中国大学图书馆占座现象的出现原因与师生，学校管理部门对占座现象态度的转变过程：占座现象因设施与使用之间的矛盾而产生，又由占座带来的收益激发该行为的重复，最后因其自我加强的特性，占座人数的逐渐增多，而相沿成习；师生从刚开始的排斥，到逐渐开始尝试，再到最后的积极参与；而学校管理部门则从最初的严加管理，逐渐默许，再到最后的放任自流。
+            </div>
+            <div role="paragraph">
+                在浩浩荡荡的占座大军中，尝到甜头的学生总会鼓吹该制度自有其合理性，笔者则认为不然。图书馆中的座位属于公共设施，每一名在校学生都有使用的权利，而占座就恰恰亵渎了其公共性；部分学生占座后不及时使用，给他人带来了不便，这样的理念也与图书馆“便民，进步”等初衷全然相悖。但我们更要认识到，并非所有占座者都怀着这样的理念，更多学生参与占座的原因，是因占座行为本身自我加强的特质：少数人利用不正当方式开始恶性竞争，将现有的座位资源占据并浪费，使后来者干看着空空的座位却无座可坐，这也逐渐促进后来者加入到恶性竞争内。度过了占座者占少数的红利期，内卷化现象便开始显现。
+            </div>
+            <div role="paragraph">
+                长此以往，放任恶性竞争，对于学生抑或学校的学习风气，已经有了难以纠正的不良影响。借用鲁迅的一句话：“从来如此，便对吗”？占座现象的盛行，学生自己，学校相关管理部门等都难逃其咎；若不处理，养成了战战兢兢，死守教条的惯性，对个人，社会的发展都将造成阻碍。
+            </div>
+            <div role="paragraph">
+                通过对前人工作进行总结，对该类问题的解决方案，笔者将在规章制度，执行措施，运营机制，技术手段，宣传教育，设施建设等多个方面展开相应论述。
+            </div>
             
-            <div role="paragraph">para2</div>
-            
-            <div role="paragraph">para3</div>
         </section>
         
         <section id="sec-2" data-type="results">
-            <h2>RESULTS</h2>
+            <h2>规章制度方面
+            </h2>
             <div role="paragraph">
-                <!--  -->
-                <a href="#F1">Figure 1A</a>
-                <figure id="F1" class="graphic">
-                    <!-- link to the image -->
-                    <img src="/" height="3608" width="3600" aria-labelledby="F1" loading="lazy" />
-                    <figcaption>
-                        <div class="caption">
-                            <span class="heading">Fig. 1</span>. Stretchable metallization and characterizations.
-                        </div>
-                        <div class="notes">
-                            <div role="doc-footnote">(<b>A</b>) Schematic of stretchable metallization.
-                                <sub>2</sub> 
-                            </div>
-                        </div>
-                    </figcaption>
-                </figure>
+                规章制度方面，首先，要对现有的规定进行补充与细化，使其能够落到实处：在《大学生日常行为规范》，《大学图书馆读者行为规范》及各学校校规，学生手册中明确表明校方对占座行为的态度，划分好不合理占座行为的界限，明确指出禁止事宜，使学生面对不合理的占座现象时有法可依，有据理力争的底气，图书馆管理人员在管理时也会规避许多不必要的争端，如：“一人占有多个座位，或占有而不使用座位的时长超过30分钟即可看作不合理占座”等。更多地，要对违反规矩次数过多或情节严重者设置相应惩戒机制，如：设置诚信记录，对被列入“黑名单”的学生，给予图书馆一定时间内不对其开放或在图书馆义务劳动一定时长的惩罚，具体各高校可参考近年对惩戒“老赖”而设立的相关法律法规。
             </div>
-                
-            <div role="paragraph">
-                para2
-            </div>
-            </section>
+            
+        </section>
+        
+
             <section id="sec-3" data-type="discussion">
-                <h2>DISCUSSION</h2>
-                <div role="paragraph">In summary,</div>
+                <h2>
+                    执行措施方面
+                </h2>
+                <div role="paragraph">
+                    执行措施方面，考虑到图书馆内人力资源无法满足全方面监管的现状，学校应把权力下放，赋予学生群体内部进行互相监管的权力：首先，可以在图书馆每排桌子旁放置一个箱子，使用座位的学生可以把占座学生用来占座的书本，文具等物品放入箱内。考虑到桌上的物品有可能是遗失物，这样也方便失主的寻找。西安财经学院将学生个人物品杂乱堆放在图书馆大厅的做法就显得过于粗暴。如今，大部分高校的图书馆都配备监控摄像头，轻拿轻放，也不易产生纠纷；其次，应建立意见反馈机制，给予学生们反映政策不足之处与检举不文明现象的一条渠道，学生可选择是否匿名与是否公开发布，保护反映者的隐私权，防止报复行为与过激行为的出现。相关人员则应对得到的反馈进行核查，而不是“听听就算”。
+                </div>
             </section>
             
             <section id="sec-4" data-type="materials methods">
-                <h2>MATERIALS AND METHODS</h2>
-                
-                <section id="sec-4-1">
-                    <h3>Materials</h3>
-                    
-                    <div role="paragraph">
-                        paapapap
-                    </div>
-                </section>
-                
-                <section id="sec-4-2">
-                    <h3>Stretchable metallization and characterization</h3>
-                    <div role="paragraph">
-                        pppppppppppp
-                    </div>
-                </section>
-                
-                <section id="sec-4-3">
-                    <h3>Device fabrication and measurement</h3>
-                    <div role="paragraph">
-
-                    </div>
-                </section>
+                <h2>
+                    运营机制方面
+                </h2>
+                <div role="paragraph">
+                    运营机制方面，第一，应对图书馆的开闭馆时间和学校考试时间进行相应调整，图书馆座位供不应求的时期往往是各种考试，竞赛前的一到二星期，大学可通过分散考试时间，以便错开各专业学生图书馆使用高峰，在这段时期图书馆方也可酌情改变开闭馆时间；第二，考虑到高校图书馆服务对象应为本校师生，应在入馆处设置门禁，通过时需刷学生证，刷脸来进行身份核实，防止其他人员占用设施，也防止盗窃行为的发生；第三，对占用座位而不使用座位的最长时长进行规定，为防止有人钻漏洞，应对相应的最短使用时长做出规定，如每学习一小时，有15分钟离开时间。
+                </div>
             </section>
+
+            <section id="sec-5" data-type="materials methods">
+                <h2>经济学手段</h2>
+                <div role="paragraph">
+                    除此之外，还有学者提出用经济学手段，引入价格机制的方案。笔者认为，公共设施本应保证其相对公平性，引入了收费制，则无法保障此种学习资源的公平分配。而且，收费多少的制订会带来更多问题。收费过少，则无法“触动人们的利己心”，收费过多，则会有许多人无法负担。此类方法，基于经济学对人的假设之上，但实际上许多假设的条件本身在现实中并不存在，无法真正解决占座问题。
+                </div>
+            </section>
+
+            <section id="sec-6" data-type="materials methods">
+                <h2>
+                    技术手段
+                </h2>
+                <div role="paragraph">
+                    技术手段方面，已有的如厦门大学刷校园卡选号，在屏幕显示的空座分布图上选择座位，然后打印座位号条，即可凭号入座的座位管理系统，还有“一键查询空教室”，“陪你上自习”等利用无课教室空间资源的APP。笔者设想，结合预订座位系统，同时在图书馆各座位上安装刷校园卡的计时装置，以满足运营机制中第二，三条，再辅以图书馆管理员的随机巡场与反馈机制，便可使占座问题得到有效解决。
+                </div>
+            </section>
+
+            <section id="sec-7" data-type="materials methods">
+                <h2>
+                    宣传教育方面
+                </h2>
+                <div role="paragraph">
+                    宣传教育方面，应注重在学生入学开始就培养规则意识与批判性思维的培养，在入学时组织学生对相关规则制定进行学习，呼吁签署《使用图书馆保证书》等公益保证书。拍摄类似飞机起飞前播放的行为规范宣传片，参考日本地铁的宣传画，设计相关海报，在图书馆内公示规范等。在推行新政策前，也要在学校官网，公众号，学生群中进行充足宣传。
+                </div>
+            </section>
+
+            <section id="sec-8" data-type="materials methods">
+                <h2>
+                    设施建设方面
+                </h2>
+                <div role="paragraph">
+                    最后，在设施建设方面，笔者认为，尽管图书馆的主要功能应是查阅资料，提供自习环境也是大学图书馆不可或缺的职能之一。在疫情期间，许多大学的图书馆应政策号召纷纷闭馆，而在学期内，为保证学生的学习生活环境，仍然会选择开启图书馆的部分自习室共学子前来自习使用。在图书自习区潜心学习似乎已经成为了“校园图书馆文化”中的一部分。于是，在此倡议，应注重专门自习室的管理与维护。同时，随着网上图书馆功能的日臻完善，也应注重宿舍问题，尽量使宿舍分配更加合理，提高宿舍的硬件设施，使学生在宿舍便可享受到图书馆中的氛围。
+                </div>
+                <div role="paragraph">
+                    如果校方或者校学生能够合理安排规章制度，明确图书馆读者行为规范，引导同学合理利用在图书馆时间，拒绝不良占座，同学们也会积极响应倡议，自觉学习，甚至可以在技术手段方面运用自己的专业特长尽一份力，戮力同心，还高校图书馆一片学习净土。
+                </div>
+            </section>
+            
+
+            <section id="sec-9">
+                <h2>相关阅读</h2>
+                <h3>
+                    <a href="http://edu.people.com.cn/n1/2017/0103/c1053-28995433.html">
+                        图书馆占座盛行 高校屡禁不止后出狠招
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://edu.people.com.cn/n1/2016/1028/c1053-28815398.html">
+                        多所大学自习室不设防 有人为占座一周丢仨充电宝
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://edu.people.com.cn/n1/2016/0413/c1053-28272129.html">
+                        高校为解决占座问题 规定在图书馆自习上厕所“限时”
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://edu.people.com.cn/n1/2016/0622/c1053-28468676.html">
+                        高校学生为避暑在图书馆“恶意抢座” 多人否认
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://edu.people.com.cn/n/2015/0408/c1053-26812972.html">
+                        2016考研：高效复习你不必为占座“拼命”
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://news.sciencenet.cn/htmlnews/2011/3/245052.shtm?id=245052">
+                        北京邮电大学摇号分配图书馆座位引争议
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://zqb.cyol.com/html/2012-01/12/nw.D110000zgqnb_20120112_6-12.htm">
+                        厦大图书馆试行电脑选座
+                    </a>
+                </h3>
+                <h3>
+                    <a href="https://v.youku.com/v_show/id_XMTE4NTQ0NzIw.html">
+                        兰州大学图书馆占座
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://opinion.people.com.cn/n1/2016/0114/c159301-28052916.html">
+                        高校餐厅善意的腾座“通告”可以有
+                    </a>
+                </h3>
+                <h3>
+                    <a href="http://japan.people.com.cn/n1/2016/0218/c35467-28133523.html">
+                        怎样制止地铁内的不文明行为 看日本地铁的宣传画
+                    </a>
+                </h3>
+
+            </section> 
             
             <section id="acknowledgments" role="doc-acknowledgments">
                 <h2>Acknowledgments</h2>
@@ -1622,7 +1682,8 @@ if(window.WebyGam) {
             }
             
             document.getElementById("more_path_update").href = stored_data["current_directory_path"];
-            document.getElementById("more_path_update").href = "/index.html";
+            document.getElementById("more_path_update1").href = "/index.html";
+
         </script>
 
         <!-- update the content table according to the content -->

@@ -962,8 +962,8 @@ if(window.WebyGam) {
 </div>
 <div class="d-flex justify-content-end btn--more__wrapper">
     <!-- direct to the current folder -->
-    <a href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
-        <span class="more_path_update">More</span>
+    <a id="more_path_update" href="/toc/science/current" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+        <span>More</span>
         <span aria-hidden="true" class="icon-arrow-right"></span>
     </a>
 </div>
@@ -1001,7 +1001,7 @@ if(window.WebyGam) {
     
     <div class="d-flex justify-content-end btn--more__wrapper">
         <!-- direct to the latest corresponding column -->
-        <a href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+        <a id="more_path_update1" href="/" class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
             <span>More</span>
             <span aria-hidden="true" class="icon-arrow-right"></span>
         </a>
@@ -1623,7 +1623,8 @@ if(window.WebyGam) {
                 elements[i].href = stored_data["pdf_link"];
             }
             
-            document.getElementById("more_path_update").innerHTML = stored_data["current_directory_path"];
+            document.getElementById("more_path_update").href = stored_data["current_directory_path"];
+            document.getElementById("more_path_update_1").href = "/index.html";
         </script>
 
         <!-- update the content table according to the content -->
