@@ -26,10 +26,9 @@
             previous_article_title: "no previous article",
             next_article_title: "n_title",
 
-            pdf_link: "/",
+            pdf_link: "/content_files/projects/competition/undergraduate/COMAP_2021/competition1print.pdf",
             paper_state: "yes",
             section_names: ["introduction", "General Assumptions", "Notation Table", "Data Obtaining, Pre-processing and Factor Categorization", "Model Establishment", "Tendency Sphere Model", "Policies in Accordance", "Analysis on The Impact of Policy Implementation", "Strengths and Weaknesses"],
-
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1145,8 +1144,9 @@
                                                         <!-- propganda image -->
                                                         <!-- link to the outstanding image of the field -->
                                                         <!--  -->
-                                                        <a href="/" title="current column cover image" class="d-block">
-                                                            <img src="/" alt="cover image"></a>
+                                                        <a href="#" title="current column cover image" class="d-block">
+                                                            <img src="/resources/images/beautiful_pic6.jpg"
+                                                                alt="cover image"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1155,48 +1155,19 @@
                                                 class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
                                                 <div class="multi-search">
-                                                    <div>
-                                                        <article class="card-do">
-                                                            <div class="card-content">
-                                                                <div class="card-header">
-                                                                    <h3 class="card__title">
-                                                                        <!--  -->
-                                                                        <a href="/"
-                                                                            title="Human generation times across the past 250,000 years"
-                                                                            class="text-reset animation-underline">Bitch...........</a>
-                                                                    </h3>
-                                                                    <ul class="card-meta align-middle pl-0">
-                                                                        <li class="card-contribs text-uppercase comma-separated mb-0"
-                                                                            data-visible-items-sm="2"
-                                                                            data-visible-items-md="4"
-                                                                            data-visible-items="9"
-                                                                            data-truncate-less="less"
-                                                                            data-truncate-more="authors"
-                                                                            data-truncate-dots="true">
-                                                                            <span>By</span>
-                                                                            <ul class="list-inline comma-separated"
-                                                                                title="list of authors">
-                                                                                <li class="list-inline-item"><span
-                                                                                        class="hlFld-ContribAuthor">Yichen
-                                                                                        Wang</span></li>
-                                                                                <li class="list-inline-item"><span
-                                                                                        class="hlFld-ContribAuthor">Sam</span>
-                                                                                </li>
-                                                                                <li class="list-inline-item"><span>et
-                                                                                        al.</span></li>
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </article>
+                                                    <div id="competition_column_update">
 
+                                                        <script>
+                                                            fetch("/update/competition_column_update.html")
+                                                                .then(response => response.text())
+                                                                .then(text => document.getElementById('competition_column_update').innerHTML = text)
+                                                        </script>
 
 
                                                     </div>
                                                     <div class="d-flex justify-content-end btn--more__wrapper">
                                                         <!-- direct to the current folder -->
-                                                        <a id="more_path_update" href="/toc/science/current"
+                                                        <a id="more_path_update" href="/projects.html"
                                                             class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
                                                             <span>More</span>
                                                             <span aria-hidden="true" class="icon-arrow-right"></span>
@@ -4264,8 +4235,11 @@
 
                                     <section id="bibliography" role="doc-bibliography">
                                         <h2>REFERENCES AND NOTES</h2>
-
                                         <div role="list">
+
+
+
+
                                             <div role="doc-biblioentry listitem" data-has="label">
                                                 <div class="label">1</div>
                                                 <div id="R1" class="citations">
@@ -4316,8 +4290,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                    </section>
 
+
+
+                                    </section>
                                 </div>
                             </section>
 
@@ -4341,7 +4317,8 @@
                             <span>View full text</span>
                         </a>
                         <!-- point to the pdf file -->
-                        <a href="/" class="pdf_link_update">
+                        <a href="/content_files/projects/competition/undergraduate/COMAP_2021/competition1print.pdf"
+                            class="pdf_link_update">
                             <span>Download PDF</span>
                         </a>
                     </div>
