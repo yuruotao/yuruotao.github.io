@@ -2463,15 +2463,427 @@
                                         </div>
 
                                         <div role="paragraph">
+                                            Recalling <em>Assumption 1</em> we made, since all of the phi coefficients
+                                            are below
+                                            0.5, we can regard the binary variables as linearly irrelevant. Although
+                                            some of the random variables show weak correlation. Interestingly, the habit
+                                            of staying up and having an unhealthy diet produces the largest positive phi
+                                            coefficient, which indicates that those who possess the habit of staying up
+                                            tend to have an unhealthier diet. The second-largest phi coefficient
+                                            corresponds to smoking and drinking, which means that those who possess the
+                                            habit of drinking alcohol are also likely to smoke cigarettes. Moreover, the
+                                            random variables <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>X</mi>
+                                                            <mn>1</mn>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math> and <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>X</mi>
+                                                            <mn>5</mn>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math> show a negative correlation with a phi coefficient equal to -0.281,
+                                            which indicates that men are more likely to have the habit of smoking
+                                            cigarettes than women. The phi coefficients of the other random variable
+                                            pairs are less than 0.2 in absolute value.
 
                                         </div>
+                                        <h6>Association Analysis Involving Non-Binary R.V.s</h6>
                                         <div role="paragraph">
+                                            To elucidate the association between binary random variables and non-binary
+                                            random variables, we first notice that some random variables are already
+                                            correlated biologically, for instance, gender (<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>X</mi>
+                                                            <mn>2</mn>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            ) and reproductive
+                                            factors. We seek to identify those correlated random variable pairs in the
+                                            first place and label them as BC (biologically correlated). The BC pairs are
+                                            shown in <a href="#T4">Table 4</a>.
+                                        </div>
+                                        <div class="figure-wrap">
+                                            <figure id="T1" class="table">
+                                                <div class="table-wrap">
+                                                    <div class="collapsible-wrapper" aria-expanded="true">
+                                                        <table>
+                                                            <thead>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>BC Pairs</b>
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Justification</b>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
 
+                                                            <tbody>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <mo stretchy='false'>(</mo>
+                                                                                    <msub>
+                                                                                        <mi>X</mi>
+                                                                                        <mn>1</mn>
+                                                                                    </msub>
+                                                                                    <mo>,</mo>
+                                                                                    <msub>
+                                                                                        <mi>U</mi>
+                                                                                        <mn>2</mn>
+                                                                                    </msub>
+                                                                                    <mo stretchy='false'>)</mo>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        Only female has the possibility to bear children
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <mo stretchy='false'>(</mo>
+                                                                                    <msub>
+                                                                                        <mi>X</mi>
+                                                                                        <mn>1</mn>
+                                                                                    </msub>
+                                                                                    <mo>,</mo>
+                                                                                    <msub>
+                                                                                        <mi>U</mi>
+                                                                                        <mn>3</mn>
+                                                                                    </msub>
+                                                                                    <mo stretchy='false'>)</mo>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        Only female has the possibility to feed by
+                                                                        breast
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <mo stretchy='false'>(</mo>
+                                                                                    <msub>
+                                                                                        <mi>X</mi>
+                                                                                        <mn>1</mn>
+                                                                                    </msub>
+                                                                                    <mo>,</mo>
+                                                                                    <msub>
+                                                                                        <mi>U</mi>
+                                                                                        <mn>4</mn>
+                                                                                    </msub>
+                                                                                    <mo stretchy='false'>)</mo>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        Only female has the possibility to terminate a
+                                                                        pregnancy
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <mo stretchy='false'>(</mo>
+                                                                                    <msub>
+                                                                                        <mi>X</mi>
+                                                                                        <mn>1</mn>
+                                                                                    </msub>
+                                                                                    <mo>,</mo>
+                                                                                    <msub>
+                                                                                        <mi>U</mi>
+                                                                                        <mn>5</mn>
+                                                                                    </msub>
+                                                                                    <mo stretchy='false'>)</mo>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        Only female has the possibility to have
+                                                                        menstrual </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <mo stretchy='false'>(</mo>
+                                                                                    <msub>
+                                                                                        <mi>U</mi>
+                                                                                        <mn>2</mn>
+                                                                                    </msub>
+                                                                                    <mo>,</mo>
+                                                                                    <msub>
+                                                                                        <mi>U</mi>
+                                                                                        <mn>3</mn>
+                                                                                    </msub>
+                                                                                    <mo stretchy='false'>)</mo>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        Only a female given birth can she has the
+                                                                        possibility to feed by breast </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Table 4</span>. The
+                                                        biologically correlated pairs.</div>
+                                                </figcaption>
+                                            </figure>
+
+                                            <a href="#T4" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
                                         </div>
                                         <div role="paragraph">
-
+                                            The mathematical tool we are going to adopt here is the <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>&#x03D5;</mi>
+                                                            <mi>K</mi>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math> coefficient introduced by M. Baak, R. Koopman, H. Snoek, and S.
+                                            Klous, which serves as an extended and amended measure of Pearson’s
+                                            correlation coefficient. As constructed, Pearson’s correlation coefficient
+                                            is only applicable when studying interval variables.(<a href="#R59"
+                                                role="doc-biblioref" data-xml-rid="R59"><i>59</i></a>) Moreover, along
+                                            with Pearson’s correlation coefficient, many statistical measures can only
+                                            capture linear correlation, which would produce enormous errors and false
+                                            interpretations when the association is not linear.(<a href="#R54"
+                                                role="doc-biblioref" data-xml-rid="R54"><i>54</i></a>, <a href="#R60"
+                                                role="doc-biblioref" data-xml-rid="R60"><i>60</i></a>) The variables we
+                                            are studying here are categorical. Some coefficients, for instance, Crame
+                                            ́r’s V, are specifically designed to measure the correlation between
+                                            categorical variables.(<a href="#R59" role="doc-biblioref"
+                                                data-xml-rid="R59"><i>59</i></a>) However, their values are dependent on
+                                            the number of rows and columns of the contingency table.(<a href="#R60"
+                                                role="doc-biblioref" data-xml-rid="R60"><i>60</i></a>)
                                         </div>
                                         <div role="paragraph">
+                                            We assume that there are <math>
+                                                <semantics>
+                                                    <mi>r</mi>
+                                                </semantics>
+                                            </math> rows and <math>
+                                                <semantics>
+                                                    <mi>k</mi>
+                                                </semantics>
+                                            </math> columns in the contingency table and <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>i</mi>
+                                                        <mo>,</mo>
+                                                        <mi>j</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math> indicates a cell in the contingency table, we refer to the cell as
+                                            <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>C</mi>
+                                                            <mrow>
+                                                                <mi>i</mi>
+                                                                <mi>j</mi>
+                                                            </mrow>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>. The total case number <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>N</mi>
+                                                        <mo>=</mo>
+                                                        <mi>r</mi>
+                                                        <mo>&#x22C5;</mo>
+                                                        <mi>k</mi>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>. For each random variable pair, here denoted by <math>
+                                                <semantics>
+                                                    <mi>x</mi>
+                                                </semantics>
+                                            </math> and <math>
+                                                <semantics>
+                                                    <mi>t</mi>
+                                                </semantics>
+                                            </math>, their probability distribution function characterized by <math>
+                                                <semantics>
+                                                    <mi>&#x03C1;</mi>
+                                                </semantics>
+                                            </math> is
+                                            <div id="E4" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                                          
+                                                                 <mrow>
+                                                                  <mi>f</mi><mo stretchy='false'>(</mo><mi>x</mi><mo>,</mo><mfenced close="|" open="">
+                                                                   <mi>y</mi>
+                                                                  </mfenced><mover accent='true'>
+                                                                   <mi>x</mi>
+                                                                   <mo stretchy='true'>&#x00AF;</mo>
+                                                                  </mover>
+                                                                  <mo>,</mo><mover accent='true'>
+                                                                   <mi>y</mi>
+                                                                   <mo stretchy='true'>&#x00AF;</mo>
+                                                                  </mover>
+                                                                  <mo>,</mo><msub>
+                                                                   <mi>&#x03C3;</mi>
+                                                                   <mi>x</mi>
+                                                                  </msub>
+                                                                  <mo>,</mo><msub>
+                                                                   <mi>&#x03C3;</mi>
+                                                                   <mi>y</mi>
+                                                                  </msub>
+                                                                  <mo>,</mo><mi>&#x03C1;</mi><mo stretchy='false'>)</mo><mo>=</mo><mfrac>
+                                                                   <mn>1</mn>
+                                                                   <mrow>
+                                                                    <mn>2</mn><mi>&#x03C0;</mi><msub>
+                                                                     <mi>&#x03C3;</mi>
+                                                                     <mi>x</mi>
+                                                                    </msub>
+                                                                    <msub>
+                                                                     <mi>&#x03C3;</mi>
+                                                                     <mi>y</mi>
+                                                                    </msub>
+                                                                    <msqrt>
+                                                                     <mrow>
+                                                                      <mn>1</mn><mo>&#x2212;</mo><msup>
+                                                                       <mi>&#x03C1;</mi>
+                                                                       <mn>2</mn>
+                                                                      </msup>
+                                                                      </mrow>
+                                                                    </msqrt>
+                                                                    </mrow>
+                                                                  </mfrac>
+                                                                  <mi>exp</mi><mo>&#x007B;</mo><mo>&#x2212;</mo><mfrac>
+                                                                   <mn>1</mn>
+                                                                   <mrow>
+                                                                    <mn>2</mn><mo stretchy='false'>(</mo><mn>1</mn><mo>&#x2212;</mo><msup>
+                                                                     <mi>&#x03C1;</mi>
+                                                                     <mn>2</mn>
+                                                                    </msup>
+                                                                    <mo stretchy='false'>)</mo></mrow>
+                                                                  </mfrac>
+                                                                  <mo stretchy='false'>[</mo><mfrac>
+                                                                   <mrow>
+                                                                    <msup>
+                                                                     <mrow>
+                                                                      <mo stretchy='false'>(</mo><mi>x</mi><mo>&#x2212;</mo><mover accent='true'>
+                                                                       <mi>x</mi>
+                                                                       <mo stretchy='true'>&#x00AF;</mo>
+                                                                      </mover>
+                                                                      <mo stretchy='false'>)</mo></mrow>
+                                                                     <mn>2</mn>
+                                                                    </msup>
+                                                                    </mrow>
+                                                                   <mrow>
+                                                                    <msubsup>
+                                                                     <mi>&#x03C3;</mi>
+                                                                     <mi>x</mi>
+                                                                     <mn>2</mn>
+                                                                    </msubsup>
+                                                                    </mrow>
+                                                                  </mfrac>
+                                                                  <mo>+</mo><mfrac>
+                                                                   <mrow>
+                                                                    <msup>
+                                                                     <mrow>
+                                                                      <mo stretchy='false'>(</mo><mi>y</mi><mo>&#x2212;</mo><mover accent='true'>
+                                                                       <mi>y</mi>
+                                                                       <mo stretchy='true'>&#x00AF;</mo>
+                                                                      </mover>
+                                                                      <mo stretchy='false'>)</mo></mrow>
+                                                                     <mn>2</mn>
+                                                                    </msup>
+                                                                    </mrow>
+                                                                   <mrow>
+                                                                    <msubsup>
+                                                                     <mi>&#x03C3;</mi>
+                                                                     <mi>y</mi>
+                                                                     <mn>2</mn>
+                                                                    </msubsup>
+                                                                    </mrow>
+                                                                  </mfrac>
+                                                                  <mo>&#x2212;</mo><mfrac>
+                                                                   <mrow>
+                                                                    <mn>2</mn><mi>&#x03C1;</mi><mo stretchy='false'>(</mo><mi>x</mi><mo>&#x2212;</mo><mover accent='true'>
+                                                                     <mi>x</mi>
+                                                                     <mo stretchy='true'>&#x00AF;</mo>
+                                                                    </mover>
+                                                                    <mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><mi>y</mi><mo>&#x2212;</mo><mover accent='true'>
+                                                                     <mi>y</mi>
+                                                                     <mo stretchy='true'>&#x00AF;</mo>
+                                                                    </mover>
+                                                                    <mo stretchy='false'>)</mo></mrow>
+                                                                   <mrow>
+                                                                    <msub>
+                                                                     <mi>&#x03C3;</mi>
+                                                                     <mi>x</mi>
+                                                                    </msub>
+                                                                    <msub>
+                                                                     <mi>&#x03C3;</mi>
+                                                                     <mi>y</mi>
+                                                                    </msub>
+                                                                    </mrow>
+                                                                  </mfrac>
+                                                                  <mo stretchy='false'>]</mo><mo>&#x007D;</mo></mrow>
+                                                                 
+                                                               
+                                                        </math></script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(4)</div>
+                                            </div>
+
+
+
 
                                         </div>
                                         <div role="paragraph">
