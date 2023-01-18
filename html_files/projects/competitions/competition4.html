@@ -2881,21 +2881,327 @@
                                                 </div>
                                                 <div class="label">(4)</div>
                                             </div>
+                                            <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mover accent='true'>
+                                                            <mi>x</mi>
+                                                            <mo stretchy='true'>&#x00AF;</mo>
+                                                        </mover>
+                                                        <mo>,</mo>
+                                                        <mover accent='true'>
+                                                            <mi>y</mi>
+                                                            <mo stretchy='true'>&#x00AF;</mo>
+                                                        </mover>
+                                                    </mrow>
+                                                </semantics>
+                                            </math> denote the average value separately, and <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>&#x03C3;</mi>
+                                                            <mi>x</mi>
+                                                        </msub>
+                                                        <mo>,</mo>
+                                                        <msub>
+                                                            <mi>&#x03C3;</mi>
+                                                            <mi>y</mi>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math> stand for the standard deviation. <math>
+                                                <semantics>
+                                                    <mi>&#x03C1;</mi>
+                                                </semantics>
+                                            </math> is the Pearson correlation coefficient. We denote the observed value
+                                            and the expected value of cell <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>i</mi>
+                                                        <mo>,</mo>
+                                                        <mi>j</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                    </mrow>
 
+                                                </semantics>
+                                            </math> by <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>O</mi>
+                                                            <mrow>
+                                                                <mi>i</mi>
+                                                                <mi>j</mi>
+                                                            </mrow>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>, <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>E</mi>
+                                                            <mrow>
+                                                                <mi>i</mi>
+                                                                <mi>j</mi>
+                                                            </mrow>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>respectively. The formula of Pearson’s <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msup>
+                                                            <mi>&#x03C7;</mi>
+                                                            <mn>2</mn>
+                                                        </msup>
+                                                    </mrow>
+                                                </semantics>
+                                            </math> test is
 
+                                            <div id="E5" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                             
+                                                                 <mrow>
+                                                                  <msup>
+                                                                   <mi>&#x03C7;</mi>
+                                                                   <mn>2</mn>
+                                                                  </msup>
+                                                                  <mo>=</mo><mstyle displaystyle='true'>
+                                                                   <munder>
+                                                                    <mo>&#x2211;</mo>
+                                                                    <mrow>
+                                                                     <mi>i</mi><mo>,</mo><mi>j</mi></mrow>
+                                                                   </munder>
+                                                                   <mrow>
+                                                                    <mfrac>
+                                                                     <mrow>
+                                                                      <msup>
+                                                                       <mrow>
+                                                                        <mo stretchy='false'>(</mo><msub>
+                                                                         <mi>O</mi>
+                                                                         <mrow>
+                                                                          <mi>i</mi><mi>j</mi></mrow>
+                                                                        </msub>
+                                                                        <mo>&#x2212;</mo><msub>
+                                                                         <mi>E</mi>
+                                                                         <mrow>
+                                                                          <mi>i</mi><mi>j</mi></mrow>
+                                                                        </msub>
+                                                                        <mo stretchy='false'>)</mo></mrow>
+                                                                       <mn>2</mn>
+                                                                      </msup>
+                                                                      </mrow>
+                                                                     <mrow>
+                                                                      <msub>
+                                                                       <mi>E</mi>
+                                                                       <mrow>
+                                                                        <mi>i</mi><mi>j</mi></mrow>
+                                                                      </msub>
+                                                                      </mrow>
+                                                                    </mfrac>
+                                                                    </mrow>
+                                                                  </mstyle></mrow>
+                                                               
+                                                        </math></script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(5)</div>
+                                            </div>
+                                        </div>
+                                        <div role="paragraph">
+                                            Using the definition of the probability density function, the probability of
+                                            cell <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>i</mi>
+                                                        <mo>,</mo>
+                                                        <mi>j</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math> is
+                                            <div id="E6" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                                            
+                                                                 <mrow>
+                                                                  <msub>
+                                                                   <mi>F</mi>
+                                                                   <mrow>
+                                                                    <mi>i</mi><mi>j</mi></mrow>
+                                                                  </msub>
+                                                                  <mo stretchy='false'>(</mo><mi>&#x03C1;</mi><mo stretchy='false'>)</mo><mo>=</mo><mstyle displaystyle='true'>
+                                                                   <mrow>
+                                                                    <munder>
+                                                                     <mo>&#x222B;</mo>
+                                                                     <mrow>
+                                                                      <msub>
+                                                                       <mi>C</mi>
+                                                                       <mrow>
+                                                                        <mi>i</mi><mi>j</mi></mrow>
+                                                                      </msub>
+                                                                      </mrow>
+                                                                    </munder>
+                                                                    <mrow>
+                                                                     <mi>f</mi><mo stretchy='false'>(</mo><mi>x</mi><mo>,</mo><mfenced close="|" open="">
+                                                                      <mi>y</mi>
+                                                                     </mfenced><mi>&#x03C1;</mi><mo stretchy='false'>)</mo><mi>d</mi><mi>x</mi><mi>d</mi><mi>y</mi></mrow>
+                                                                   </mrow>
+                                                                   
+                                                                  </mstyle></mrow>
+                                                               
+                                                        </math></script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(6)</div>
+                                            </div>
 
 
                                         </div>
                                         <div role="paragraph">
-
+                                            By assigning the value
+                                            <div id="E7" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-7"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                                            
+                                                                 <mrow>
+                                                                  <mfenced close="" open="{">
+                                                                   <mrow>
+                                                                    <mtable equalrows='true' equalcolumns='true'>
+                                                                     <mtr>
+                                                                      <mtd>
+                                                                       <mrow>
+                                                                        <msub>
+                                                                         <mi>O</mi>
+                                                                         <mrow>
+                                                                          <mi>i</mi><mi>j</mi></mrow>
+                                                                        </msub>
+                                                                        <mo>=</mo><mi>N</mi><mo>*</mo><msub>
+                                                                         <mi>F</mi>
+                                                                         <mrow>
+                                                                          <mi>i</mi><mi>j</mi></mrow>
+                                                                        </msub>
+                                                                        <mo stretchy='false'>(</mo><mi>&#x03C1;</mi><mo stretchy='false'>)</mo></mrow>
+                                                                      </mtd>
+                                                                     </mtr>
+                                                                     <mtr>
+                                                                      <mtd>
+                                                                       <mrow>
+                                                                        <msub>
+                                                                         <mi>E</mi>
+                                                                         <mrow>
+                                                                          <mi>i</mi><mi>j</mi></mrow>
+                                                                        </msub>
+                                                                        <mo>=</mo><mi>N</mi><mo>*</mo><msub>
+                                                                         <mi>F</mi>
+                                                                         <mrow>
+                                                                          <mi>i</mi><mi>j</mi></mrow>
+                                                                        </msub>
+                                                                        <mo stretchy='false'>(</mo><mn>0</mn><mo stretchy='false'>)</mo></mrow>
+                                                                      </mtd>
+                                                                     </mtr>
+                                                                     
+                                                                    </mtable></mrow>
+                                                                  </mfenced></mrow>
+                                                               
+                                                        </math></script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(7)</div>
+                                            </div>
                                         </div>
                                         <div role="paragraph">
-
+                                            Substitute to <a href="#F5">Formula 5</a>, we obtain
+                                            <div id="E8" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                                           
+                                                                 <mrow>
+                                                                  <msup>
+                                                                   <mi>&#x03C7;</mi>
+                                                                   <mn>2</mn>
+                                                                  </msup>
+                                                                  <mo stretchy='false'>(</mo><mi>&#x03C1;</mi><mo>,</mo><mi>N</mi><mo>,</mo><mi>r</mi><mo>,</mo><mi>k</mi><mo stretchy='false'>)</mo><mo>=</mo><mi>N</mi><mo>*</mo><mstyle displaystyle='true'>
+                                                                   <munderover>
+                                                                    <mo>&#x2211;</mo>
+                                                                    <mrow>
+                                                                     <mi>i</mi><mo>,</mo><mi>j</mi></mrow>
+                                                                    <mrow>
+                                                                     <mi>r</mi><mo>,</mo><mi>k</mi></mrow>
+                                                                   </munderover>
+                                                                   <mrow>
+                                                                    <mfrac>
+                                                                     <mrow>
+                                                                      <msup>
+                                                                       <mrow>
+                                                                        <mo stretchy='false'>(</mo><msub>
+                                                                         <mi>F</mi>
+                                                                         <mrow>
+                                                                          <mi>i</mi><mi>j</mi></mrow>
+                                                                        </msub>
+                                                                        <mo stretchy='false'>(</mo><mi>&#x03C1;</mi><mo stretchy='false'>)</mo><mo>&#x2212;</mo><msub>
+                                                                         <mi>F</mi>
+                                                                         <mrow>
+                                                                          <mi>i</mi><mi>j</mi></mrow>
+                                                                        </msub>
+                                                                        <mo stretchy='false'>(</mo><mn>0</mn><mo stretchy='false'>)</mo><mo stretchy='false'>)</mo></mrow>
+                                                                       <mn>2</mn>
+                                                                      </msup>
+                                                                      </mrow>
+                                                                     <mrow>
+                                                                      <msub>
+                                                                       <mi>F</mi>
+                                                                       <mrow>
+                                                                        <mi>i</mi><mi>j</mi></mrow>
+                                                                      </msub>
+                                                                      <mo stretchy='false'>(</mo><mn>0</mn><mo stretchy='false'>)</mo></mrow>
+                                                                    </mfrac>
+                                                                    </mrow>
+                                                                  </mstyle></mrow>
+                                                               
+                                                        </math></script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(8)</div>
+                                            </div>
                                         </div>
                                         <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
+                                            Notice the observed value <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>O</mi>
+                                                            <mrow>
+                                                                <mi>i</mi>
+                                                                <mi>j</mi>
+                                                            </mrow>
+                                                        </msub>
+                                                    </mrow>
+                                                    <annotation encoding='MathType-MTEF'>MathType@MTEF@5@5@+=
+                                                        feaahqart1ev3aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+                                                        hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
+                                                        4rNCHbWexLMBbXgBd9gzLbvyNv2CaeHbl7mZLdGeaGqiVu0Je9sqqr
+                                                        pepC0xbbL8F4rqqrFfpeea0xe9Lq=Jc9vqaqpepm0xbba9pwe9Q8fs
+                                                        0=yqaqpepae9pg0FirpepeKkFr0xfr=xfr=xb9adbaqabeWacmGadi
+                                                        qabmqaamWabmabduWakeaacaWGpbWaaSbaaSqaaiaadMgacaWGQbaa
+                                                        beaaaaa@4210@
+                                                    </annotation>
+                                                </semantics>
+                                            </math> is constructed independent of the true observed value, we then
+                                            introduce the effective number of freedom
 
                                         </div>
                                         <div role="paragraph">
@@ -7028,6 +7334,7 @@
 
 
 
+
                                         </div>
                                     </section>
                             </section>
@@ -7516,6 +7823,7 @@
     </div>
     </div>
 
+
     <!-- responsible for the header and button -->
     <!-- dependent on the path -->
     <script src="/products/aaas/releasedAssets/js/main.bundle-f6885e7acf8283b28672.js"></script>
@@ -7543,6 +7851,10 @@
         var elements = document.getElementsByClassName("pdf_link_update");
         for (var i = 0; i < elements.length; i++) {
             elements[i].href = stored_data["pdf_link"];
+        }
+        var elements = document.getElementsByTagName("annotation");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].innerText = "";
         }
 
         document.getElementById("more_path_update").href = stored_data["current_directory_path"];
