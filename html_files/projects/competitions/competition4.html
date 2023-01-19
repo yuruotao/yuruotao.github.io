@@ -984,32 +984,34 @@
                                         authors = stored_data["authors"];
                                         var author_num = authors.length;
                                         var author_update_html = "";
-                                        for (var i = 0; i < author_num; i++) {
-                                            if (i == 2) {
-                                                author_update_html += '<span data-displayed-on="sm" aria-hidden="true"><span><span data-action="reveal">[...]</span></span></span>';
-                                            }
-                                            if (i >= 2 && i < 4) {
-                                                author_update_html += '<span data-hidden-on="sm">';
-                                            }
-
-                                            if (i == 4) {
-                                                author_update_html += '</span><span data-displayed-on="md" aria-hidden="true">, <span><span data-action="reveal">[...]</span></span>';
-                                            }
-
-                                            if (i >= 4) {
-                                                author_update_html += '<span data-hidden-on="sm md">';
-                                            }
-
+                                        for (var i = 0; i < 2; i++) {
                                             author_update_html += '<span property="author" typeof="Person" role="listitem"><a href="#con' + String(i + 1) + '"><span property="familyName">' + authors[i] + '</span></a></span>, ';
-                                            if (i >= 2) {
-                                                author_update_html += '</span>';
-                                            }
+
                                         }
+
+                                        if (author_num > 2) {
+                                            author_update_html += '<span data-displayed-on="sm" aria-hidden="true"><span><span data-action="reveal">[...]</span></span></span>';
+                                            author_update_html += '<span data-hidden-on="sm">';
+                                            for (var i = 2; i < (Math.min(author_num, 4)); i++) {
+                                                author_update_html += '<span property="author" typeof="Person" role="listitem"><a href="#con' + String(i + 1) + '"><span property="familyName">' + authors[i] + '</span></a></span>, ';
+                                            }
+                                            author_update_html += '</span>';
+                                        }
+
+                                        if (author_num > 4) {
+                                            author_update_html += '<span data-hidden-on="sm md">';
+                                            for (var i = 4; i < author_num; i++) {
+                                                author_update_html += '<span property="author" typeof="Person" role="listitem"><a href="#con' + String(i + 1) + '"><span property="familyName">' + authors[i] + '</span></a></span>, ';
+                                            }
+                                            author_update_html += '</span>';
+                                        }
+
+
                                         if (author_num > 2 && author_num < 5) {
                                             author_update_html += '<span data-displayed-on="sm" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+' + String(author_num - 2) + ' authors</span></span></span>'
 
                                         } else if (author_num >= 5) {
-                                            author_update_html += '<span data-displayed-on="md" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+' + author_num - 4 + ' authors</span></span></span>'
+                                            author_update_html += '<span data-displayed-on="md" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+' + String(author_num - 4) + ' authors</span></span></span>'
                                         }
 
                                         author_update_html += '<span data-displayed-on="none" data-on-display="sm md" aria-hidden="true"> <span data-action="hide">fewer</span></span></span></span>';
