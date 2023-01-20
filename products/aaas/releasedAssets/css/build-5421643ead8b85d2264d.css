@@ -28876,7 +28876,8 @@ body:not(.loaded) .main-navbar .navbar-brand__dark {
 @media (max-width: 767.98px) {
   .journal-slide-item__multi-search .card--inverse:nth-of-type(1n + 3),
   .journal-slide-item__multi-search .card:nth-of-type(1n + 3) {
-    display: none;
+    /* hide the contents of project */
+    /* display: none; */
   }
 }
 .journal-slide-item .cover-image {

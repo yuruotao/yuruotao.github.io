@@ -830,6 +830,11 @@
                                                 </div>
                                             </article>
                                         </div>
+                                        <script>
+                                            fetch("/update/intelligence_update.html")
+                                                .then(response => response.text())
+                                                .then(text => document.getElementById('expandableGrid').innerHTML = text)
+                                        </script>
 
                                         <div class="d-flex justify-content-center">
                                             <button data-toggle="collapse" aria-expanded="false"
@@ -853,7 +858,7 @@
 
 
 
-
+                    <!-- video section -->
                     <section class="mt-2x mt-lg-1_5x py-2x py-md-2_5x py-lg-3x position-relative bg-dark text-white">
                         <div class="container-fluid">
                             <h2 class="h4 title--decorated mb-4">
