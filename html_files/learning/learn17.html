@@ -27,7 +27,7 @@
 
             pdf_link: "#",
             paper_state: "yes",
-            section_names: ["",],
+            section_names: ["HTML", "CSS", "Web Design", "Web Introduction", "Javascript",],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1245,13 +1245,14 @@
                                         <div role="paragraph">
 
                                             <p>
-                                                111
+                                                Here contains the notes of Frontend, including HTML, CSS, and
+                                                JavaScript. The courses I took can be found in <a
+                                                    href="#acknowledgements">Acknowledgements</a>.
                                             </p>
 
                                             <p>
                                                 <b>
-                                                    Keywords: Triple-Negative Breast Cancer, Metabolic Pathway, Network
-                                                    Theory, Warburg Effect
+                                                    Keywords: HTML, CSS, JavaScript
                                                 </b>
                                             </p>
                                         </div>
@@ -1265,10 +1266,147 @@
                                 <div class="core-container">
 
                                     <section id="sec-1" data-type="introduction">
+                                        <h2>
+                                            HTML
+                                        </h2>
+                                        <div role="paragraph">
+                                            HTML: the code used to structure a web page and its content, consists of a
+                                            series of elements.
 
+                                            <br>&emsp;Opening tag: consists of the name of the element wrapped in
+                                            opening and
+                                            closing angle brackets.
+                                            <br>&emsp;Closing tag: include a forward slash before the element name.
+                                        </div>
+
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F1" class="graphic"><img
+                                                    src="/content_files/learning/learn17/learn17fig1.png" height="3071"
+                                                    width="4333" aria-labelledby="F1" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 1</span>. A
+                                                        demonstration of a HTML element.
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+
+
+                                        <div role="paragraph">Attribute: contain extra information implicitly, "class"
+                                            is the attribute name and "editor-note" is the attribute value. The class
+                                            attribute gives a non-unique identifier to the element. The syntax for
+                                            attribute setting includes:
+                                            <ul>
+                                                <li>
+                                                    a space between the attribute and the element name or between
+                                                    attributes.
+                                                </li>
+                                                <li>
+                                                    the attribute name is followed by an equal sign.
+                                                </li>
+                                                <li>
+                                                    the attribute value is wrapped by a pair of quotation marks.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div role="paragraph">
+                                            Nesting: having an effect on whatever the identifiers enclose.
+                                            <br>&emsp;&#60strong&#62 content &#60/strong&#62 for bold,
+                                            <br>&emsp;&#60em&#62 content &#60/em&#62 for italic.
+                                            <br>Void elements: elements containing no content.
+
+                                        </div>
+                                        <div role="paragraph">
+                                            &#60!DOCTYPE html&#62 : HTML documents must start with a type declaration
+                                            <br>HTML document is contained between &#60html&#62 and &#60/html&#62.
+                                            <br>The visible part of the HTML document is between &#60body&#62 and
+                                            &#60/body&#62.
+                                            <br>&emsp;&#60head&#62 acts as a container for whatever appears after
+                                            certain
+                                            operations.
+                                            <br>&emsp;&#60meta charset=”utf-8”&#62: set the character set of the
+                                            document.
+                                            <br>&emsp;&#60meta name=”viewport” content=”width=device-width”&#62: ensures
+                                            the page
+                                            renders at the width of viewport.
+                                            <br>&emsp;&#60title&#62: sets the title of the page.
+
+
+                                        </div>
+                                        <div role="paragraph">
+                                            &#60img src=”arg1” alt=”arg2” /&#62: arg1 is the path to image file and arg2
+                                            specifies the descriptive text (blind people, screen
+                                            reader)
+                                            <br>&emsp;width=””, height=”” specifies the width and the height of the
+                                            inserted picture.
+                                            <br>Headings: HTML headings are defined with the &#60h1&#62 to
+                                            &#60h6&#62 tags.
+                                            <br>Comment: enclosed by &#60!-- comment --&#62.
+                                            <br>HTML paragraphs are defined with the &#60p&#62 tag.
+                                            <br>&#60a href=”arg1” target=”arg2”&#62 arg3 &#60/a&#62: arg1 specifies the
+                                            link, arg2 defines the way to open up a new tab, _blank for a new tab, and
+                                            arg3 is the link pseudo name, a for anchor. For local links, set href to the
+                                            name of the local file.
+                                            <br>&emsp;If href=”#”, by clicking the hyperlink, it goes back to the top of
+                                            the website.
+                                            <br>HTML tables are defined with&#60Table&#62, row as &#60tr&#62 and rows
+                                            are divided into data as &#60td&#62.
+                                            <br>HTML list starts with &#60ul&#62 (unordered) and &#60ol&#62 (ordered).
+                                            Each item on the list starts with &#60li&#62.
+
+
+                                        </div>
+
+                                        <div role="paragraph">
+                                            Element grouping: place the structure inside a pre-defined structure
+                                            &#60nav&#62, &#60header&#62, &#60article&#62, &#60footer&#62,
+                                            &#60aside&#62, &#60button&#62.
+                                            <br>HTML entity: predefined characters.
+                                            <br>Sematic HTML: HTML elements have certain meaning.
+
+                                        </div>
+                                        <div role="paragraph"></div>
+                                        <div role="paragraph"></div>
+
+                                        <div role="paragraph"></div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph"></div>
                                     </section>
 
                                     <section id="sec-2" data-type="introduction">
+                                        <h2>
+                                            CSS
+                                        </h2>
+                                        <div role="paragraph">
+                                            CSS: a language applying styles to HTML documents
+                                            Inline CSS: writing the CSS inside the element, style=””
+                                            Internal CSS: declare a style element <style>
+                                                …
+                                            </style>
+                                            External CSS: create a .css file, use
+                                            <link href=”_.css” rel=”stylesheet” />
+
+                                        </div>
+                                    </section>
+
+                                    <section id="sec-3" data-type="introduction">
+                                        <h2>
+                                            Web Design
+                                        </h2>
+                                    </section>
+
+                                    <section id="sec-4" data-type="introduction">
+                                        <h2>
+                                            Web Introduction
+                                        </h2>
+                                    </section>
+
+                                    <section id="sec-5" data-type="introduction">
+                                        <h2>
+                                            JavaScript
+                                        </h2>
 
                                     </section>
 
@@ -1280,10 +1418,7 @@
                                     <section id="acknowledgments" role="doc-acknowledgments">
                                         <h2>Acknowledgments</h2>
                                         <div role="paragraph">
-                                            <b>Submit: </b>The manuscript is prepared for iGEM2022, in which our team is
-                                            disqualified. Due to the lack of funding, we couldn't make a pilot device.
-                                            However, we made a software that can be used for image reconstruction, which
-                                            can be found in the Appendix.
+                                            <b>Submit: </b>
                                         </div>
 
                                         <div role="paragraph"><b>Competing interests:</b> no competing
