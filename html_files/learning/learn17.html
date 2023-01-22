@@ -1435,9 +1435,9 @@
                                             <br>&emsp;select the element being hovered by the mouse
                                             <br>&emsp;<b>selector: active { }</b>
                                             <br>&emsp;select the element that being interacted with the mouse
-                                            <br>
+
                                             <br>Conflicting selectors:
-                                            <br>&emsp;declarations marked with <b>!important</b> > inline style > ID
+                                            &emsp;declarations marked with <b>!important</b> > inline style > ID
                                             selector
                                             (<b>#</b>) > class (<b>.</b>)/pseudo-class selector (<b>:</b>) >
                                             element selector (<b>p, div, li</b>) > universal selector (<b>*</b>)
@@ -1446,8 +1446,9 @@
                                             <br>&emsp;the child elements inherit the properties from the parent element
 
                                             <br>&emsp;not all properties get inherited
-                                            <br>Box model:
-                                            <br>&emsp;Content: text, images
+
+                                            <h3>Box model</h3>
+                                            &emsp;Content: text, images
                                             <br>&emsp;Border: a line around the element, still inside the element
                                             <br>&emsp;Padding: invisible space around the content, inside the element
                                             <br>&emsp;Margin: the space outside of the element
@@ -1455,11 +1456,11 @@
                                             <br>&emsp;element width = border*2 + padding*2 + width
                                         </div>
                                         <div class="figure-wrap" data-specific-use="distribute">
-                                            <figure id="F1" class="graphic"><img
+                                            <figure id="F2" class="graphic"><img
                                                     src="/content_files/learning/learn17/learn17fig2.png" height="3071"
-                                                    width="4333" aria-labelledby="F1" loading="lazy" />
+                                                    width="4333" aria-labelledby="F2" loading="lazy" />
                                                 <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 1</span>. A
+                                                    <div class="caption"><span class="heading">Figure 2</span>. A
                                                         demostration of CSS box model.
                                                     </div>
                                                 </figcaption>
@@ -1518,8 +1519,9 @@
                                             content to the end of the parent element
                                             <br>&emsp;<b>before</b>: use <b>content</b> to specify the content, add the
                                             content to the beginning of the parent element
-                                            <br>Layout:
-                                            <br>&emsp;Float: make the text and inline elements wrap around the floated
+
+                                            <h3>Layout</h3>
+                                            &emsp;Float: make the text and inline elements wrap around the floated
                                             element (replaced by flexbox)
                                             <br>&emsp;<b>float: left/right;</b> let the surrounding elements float
                                             around this element
@@ -1536,86 +1538,569 @@
                                             <br>&emsp;&emsp;&emsp;<b>display: block;}</b>
                                             <br>&emsp;<b>box-sizing: border-box;</b> merges the verge of the content box
                                             with the border
+                                            <br>
                                             <br>&emsp;Flexbox: applicable for any element with multiple child elements,
                                             a set of related CSS properties for 1D layouts
                                             <br>&emsp;&emsp;empty space inside a container element can be automatically
                                             divided by its child elements (flex items)
                                             <br>&emsp;Flex Container: the parent element, denoted by setting <b>display:
                                                 flex;</b>
-                                            <br>&emsp;&
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-
-                                            </b>
+                                            <br>&emsp;<b>gap: length;</b> create space between items, without using
+                                            margin
+                                            <br>&emsp;<b>justify-content:</b> align the elements vertically
+                                            (<b>flex-start/end, center, …</b>)
+                                            <br>&emsp;<b>align-items:</b> align the elements horizontally
+                                            (<b>flex-start/end, center, baseline</b>)
+                                            <br>&emsp;Main Axis: the horizontal direction, from left to right
+                                            <br>&emsp;Cross Axis: the vertical direction, from up to down
+                                            <br>&emsp;Flex Items: <b>align-self</b> overwrite <b>align-items</b>
+                                            <br>&emsp;&emsp;<b>order: num</b>; smaller <b>num</b> corresponding more to
+                                            the left in order
+                                            <br>&emsp;&emsp;<b>flex-grow: 0/1/…;</b> automatically occupy the space
+                                            within the container (the number represents multiplier)
+                                            <br>&emsp;&emsp;<b>flex-shrink: 1/0;</b> automatically change the width of
+                                            flex items so that they fit in the container (1 for yes)
+                                            <br>&emsp;&emsp;<b>flex-basis: num;</b> set the width of flex items to num
+                                            <br>&emsp;&emsp;<b>flex (grow) (shrink) (basis)</b> combines the upper 3
+                                            commands
+                                            <br>
+                                            <br>&emsp;CSS Grid: denoted by <b>display: grid;</b> the elements are
+                                            displayed in columns and rows
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F3" class="graphic"><img
+                                                    src="/content_files/learning/learn17/learn17fig3.png" height="3071"
+                                                    width="4333" aria-labelledby="F3" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 3</span>. A
+                                                        demonstration of CSS Grid model.
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <br>&emsp;Grid Container:
+                                        <br>&emsp;&emsp;<b>grid-template-rows: size;</b> establish the grid row tracks
+                                        <br>&emsp;&emsp;<b>grid-template-columns: size;</b> establish the grid column
+                                        tracks
+                                        <br>&emsp;&emsp;<b>row-gap: length;</b> create empty space between row tracks
+                                        <br>&emsp;&emsp;<b>column-gap: length;</b> create empty space between column
+                                        tracks
+                                        <br>&emsp;&emsp;<b>justify-items: stretch/…;</b> align items inside rows
+                                        <br>&emsp;&emsp;<b>align-items: stretch/…; </b> align items inside columns
+                                        <br>&emsp;&emsp;<b>justify-content: start/…;</b> align the grid inside the grid
+                                        container horizontally (container > grid)
+                                        <br>&emsp;&emsp;<b>align-content: start/…; </b> align the grid inside the grid
+                                        container vertically (container > grid)
+                                        <br>&emsp;Grid Items:
+                                        <br>&emsp;&emsp;<b>grid-column: start_line/end_line;</b> place a grid item into
+                                        a specific cell
+                                        <br>&emsp;&emsp;<b>/span _</b> specify the length that a cell span
+                                        <br>&emsp;&emsp;<b>/-1</b> all the way to the end (double labelling)
+                                        <br>&emsp;&emsp;<b>grid-row: start_line/end_line;</b>
+                                        <br>&emsp;&emsp;<b>justify-self</b> overwrite <b>justify-items</b>
+                                        <br>&emsp;&emsp;<b>align-self </b> overwrite <b>align-items</b>
+                                        <br>&emsp;For flexible size, use <b>_fr</b> , which stands for fraction,
+                                        representing the relative size
+                                        <br>&emsp;<b>repeat(_times, content);</b> repeat <b>content</b> for designated
+                                        times
                                     </section>
 
                                     <section id="sec-3" data-type="introduction">
                                         <h2>
                                             Web Design
                                         </h2>
+                                        <h3>Typography</h3>
+                                        Typeface: limit to utmost 2 in one webpage
+                                        <br>&emsp;Serif: typefaces that contain decorative lines, in comparison with
+                                        sans-serif
+                                        <br>&emsp;Typeface resources:
+                                        <br>&emsp;&emsp;<a href="https://fonts.google.com">google fonts</a>
+                                        <br>&emsp;&emsp;<a href="www.1001fonts.com">1001 fonts</a>
+                                        <br>Font Size: limit between 16px and 32px
+                                        <br>&emsp;for long text, try a size of 20px or bigger
+                                        <br>&emsp;headlines can be set to 50+ px and 600+ bold
+                                        <br>&emsp;for any text, try to avoid a font weight under 400
+                                        <br>&emsp;Resource:
+                                        <br>&emsp;&emsp;<a href="https://type-scale.com/">type to scale</a>
+                                        <br>Reading Friendly:
+                                        <br>&emsp;less than 75 characters per line (65-72)
+                                        <br>&emsp;for normal-sized text, use a line height between 1.5 and 2, for big
+                                        text, below 1.5
+                                        <br>&emsp;The smaller/longer the text, the larger the line height
+                                        <br>&emsp;if the headlines look unnatural, try to decrease letter spacing
+                                        <br>&emsp;use all caps for short titles, make them small and bold, and increase
+                                        letter-spacing
+                                        <br>&emsp;usually, the text shouldn’t be justified
+                                        <br>&emsp;don’t center long text blocks
+                                        <br>&emsp;use the <b>&#60link></b> element to import the style from the source
+                                        first
+                                        <br>&emsp;parameters: <b>font-size, line-height, letter-spacing</b>
+
+                                        <h3>Color</h3>
+                                        Color System:
+                                        <br>&emsp;a main color and a grey color is recommended
+                                        <br>&emsp;accent color should be determined by the main color and the grey color
+                                        <br>&emsp;for diversity, create lighter and darker versions (tints and shades)
+                                        for each color
+                                        <br>&emsp;main color should be used to draw attention to the most important
+                                        elements on the page
+                                        <br>&emsp;on dark-colored backgrounds, try using a tint of the background for
+                                        text
+                                        <br>&emsp;text should usually not be completely black (larger ones)
+                                        <br>&emsp;never make the text too light, check the contrast between the text and
+                                        background colors
+                                        <br>&emsp;contrast ratio: 4.5 : 1 for normal text and 3 : 1 for large text
+                                        (18px+) at least
+                                        <br>&emsp;Resources:
+                                        <br>&emsp;&emsp;<a href="https://yeun.github.io/open-color/">open-source color
+                                            scheme</a>
+                                        <br>&emsp;&emsp;<a href="https://coolors.co/">color palettes generator</a>
+                                        <br>&emsp;&emsp;<a href="https://tailwindcss.com/">Tailwind CSS</a>
+                                        <br>&emsp;&emsp;<a href="https://paletton.com/">paletton</a>
+                                        <br>&emsp;&emsp;<a href="https://flatuicolors.com/">flat ui color palatte</a>
+                                        <h3>Images and illustrations</h3>
+                                        Types: product photos, storytelling photos, illustrations, patterns
+                                        <br>Text on images:
+                                        <br>&emsp;darker/brighten the image
+                                        <br>&emsp;position text into a neutral image area
+                                        <br>&emsp;put text in a box
+                                        <br>to account for high-res screens, make image dimensions 2x as big as
+                                        their displayed size (physical pixel)
+                                        <br>compress images for lower file size and better performance
+                                        <br>when using multiple images side-by-side, make sure they have exactly the
+                                        same dimensions
+                                        <br>Resources
+                                        <br>&emsp;<a href=""></a>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Icons</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Typography</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Typography</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Typography</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Typography</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Typography</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Typography</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Typography</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Typography</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <h3>Typography</h3>
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+                                        <br>&emsp;
+
+
+
+                                        <h3>
+
+                                        </h3>
+
                                     </section>
 
                                     <section id="sec-4" data-type="introduction">
