@@ -1,0 +1,2659 @@
+<!DOCTYPE html>
+<html lang="en" class="pb-page">
+
+<head data-pb-dropzone="head">
+    <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
+    </link>
+    <title id="page_title">Molecular Docking</title>
+
+    <!-- here is the updating script -->
+    <script>
+        page_title_1 = document.getElementById("page_title").innerText;
+        author = ["yu ruotao"];
+
+        var name_datas = {
+            page_title: page_title_1,
+            current_directory: "science project",
+            current_directory_path: "/projects.html",
+            date: "2022 SEPTEMBER 1",
+            authors: author,
+            article_type: "science project",
+            article_field: "Computational Biology",
+
+            previous_article_link: "#",
+            next_article_link: "/html_files/projects/science_projects/docking/docking1.html",
+            previous_article_title: "no previous article",
+            next_article_title: "",
+
+            pdf_link: "/content_files/projects/science_prg/sci_prg1/",
+            paper_state: "yes",
+            section_names: ["",],
+        };
+
+        window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
+    </script>
+
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    <script src="jquery-3.5.1.js">
+    </script>
+
+    <!-- font, color and icons -->
+    <link rel="stylesheet" href="/products/aaas/releasedAssets/css/build-5421643ead8b85d2264d.css" media="all"
+        id="build-style-sheet">
+
+    <!-- maybe being printed -->
+    <link rel="stylesheet" href="/products/aaas/releasedAssets/css/print-5421643ead8b85d2264d.css" media="print">
+
+    <script>
+        try {
+            document.documentElement.classList.add('js');
+        } catch (e) {
+        }
+    </script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/wro/lwsmarticle-metrics-phase2.css">
+
+
+    <!-- AAAS-1243 -->
+    <style id=temp-always>
+        .grouped.download-toggle-hidden {
+            display: none;
+        }
+
+        .element-view.flex-container .grouped {
+            border: none;
+        }
+    </style>
+
+    <style id=temp-this-week-in-science>
+        a.fv__download {
+            display: none;
+        }
+
+        .figure__actions {
+            display: none;
+        }
+    </style>
+
+    <!-- link to the favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/resources/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="/resources/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="shortcut icon" href="/resources/favicon/favicon.ico">
+    <!-- favicon link over -->
+
+    <meta name="facebook-domain-verification" content="d7d83rddklmy6vh0uy6rrm9j4hptwp" />
+    <meta name="baidu-site-verification" content="code-asrYXzJgzI" />
+    <script src="https://scholar.google.com/scholar_js/casa.js" async></script>
+
+</head>
+
+<body class="pb-ui">
+
+    <script>
+        if (window.WebyGam) {
+            window.WebyGam.setHandlers({
+                onload: function () {
+                    window.WebyGam.loadComponent('Hawkeye', function callback() {
+                        window.WebyGam.loadComponent('GAM');
+                    });
+                },
+                onupdate: function () {
+                }
+            });
+        }
+    </script>
+
+    <!-- responsible for the sticky header and stuff -->
+    <!-- and folding the references -->
+    <!-- nothing happened after changing directory -->
+    <script charset="utf-8" src="/products/aaas/releasedAssets/js/vendors_article.js"></script>
+
+    <script type="text/javascript">
+
+        if (false) {
+            document.getElementById("skipNavigationLink").onclick = function skipElement() {
+                var element = document.getElementById('');
+                if (element == null || element == undefined) {
+                    element = document.getElementsByClassName('').item(0);
+                }
+                element.setAttribute('tabindex', '0');
+                element.focus();
+            }
+        }
+    </script>
+
+    <div id="pb-page-content" data-ng-non-bindable>
+        <div data-pb-dropzone="main" data-pb-dropzone-name="Main">
+            <div class="sciadv">
+
+                <header class="main-header header--compact  main-header--compact no-sticky ">
+                    <nav id="mainNavbar" class="main-navbar navbar navbar-dark">
+                        <div class="header-row d-flex justify-content-center w-100">
+                            <div class="navbar-in d-flex justify-content-between w-100 resizeable-menu__wrapper">
+                                <div class="col d-flex justify-content-start p-0 header-row__item">
+
+                                    <!-- stuff on the navigation bar -->
+                                    <ul
+                                        class="nav header-menu align-items-center main-menu resizeable-menu flex-nowrap">
+                                        <!-- upper left fold icon -->
+                                        <li class="nav-item d-flex align-items-center h-100">
+                                            <button type="button" data-toggle="collapse" data-target="#header-side-menu"
+                                                data-fixed-height="true" aria-controls="#header-side-menu"
+                                                aria-expanded="false" aria-label="Toggle navigation"
+                                                class="navbar-toggler btn-animate-bg d-inline-block collapsed">
+                                                <i class="icon-burger"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item text-uppercase fade align-items-center d-none d-lg-flex">
+                                            <!-- point to learning -->
+                                            <a href="/learning.html" class="nav-link">learning</a>
+                                        </li>
+                                        <li
+                                            class="nav-item text-uppercase fade align-items-center d-none d-header-md-flex">
+                                            <!-- point to shikemanping -->
+                                            <a href="/shikemanping.html" class="nav-link">shike</a>
+                                        </li>
+                                        <li
+                                            class="nav-item text-uppercase fade align-items-center d-none d-header-lg-flex">
+                                            <!-- point to projects -->
+                                            <a aria-controls="journal-menu" aria-expanded="false" href="/projects.html"
+                                                role="button" data-toggle="collapse"
+                                                class="d-flex align-items-center accordion__toggle collapsed nav-link"
+                                                data-target="#journal-menu">
+                                                <span>projects</span>
+                                                <i class="icon-arrow-down ml-1"></i>
+                                        </li>
+                                        <li class="nav-item text-uppercase fade align-items-center d-none d-lg-flex">
+                                            <!-- point to papers -->
+                                            <!-- controlled by main-bundle -->
+                                            <!-- corresponding to the 2nd menu -->
+                                            <a aria-controls="papers-menu" aria-expanded="false" href="/papers"
+                                                role="button" data-toggle="collapse"
+                                                class="d-flex align-items-center accordion__toggle collapsed nav-link"
+                                                data-target="#papers-menu">
+                                                <span>papers</span>
+                                                <i class="icon-arrow-down ml-1"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item btn__wrapper fade d-none d-header-xl-flex">
+                                            <!-- point to intelligence -->
+                                            <a href="/html_files/projects/intelligence.html"
+                                                class="btn btn-outline-primary py-1 px-3 mini-title">intelligence</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- brand -->
+                                <!-- change into skmp svg files -->
+                                <div
+                                    class="col justify-content-center d-flex p-0 navbar-brand__wrapper header-row__item align-items-center">
+                                    <a href="/index.html" class="navbar-brand text-center">
+                                        <img src="/resources/icon_svg/skmp_svg_white.svg" alt="shike image"
+                                            class="visible-on-dark" />
+                                        <img src="/resources/icon_svg/skmp_svg_black.svg" alt="shike image"
+                                            class="hidden-on-dark" />
+                                    </a>
+                                </div>
+
+                                <div class="col justify-content-end d-flex p-0 header-row__item">
+                                    <ul class="main-menu nav align-items-center">
+                                        <li class="nav-item"></li>
+
+                                        <!-- search function -->
+                                        <li class="nav-item p-0 mr-lg-4">
+                                            <a href="#header-quick-search-wrapper" title="Search"
+                                                aria-controls="header-quick-search-wrapper" aria-expanded="false"
+                                                data-toggle="collapse"
+                                                class="btn btn-animate-bg quick-search__toggle p-0 d-flex align-items-center justify-content-center collapsed"><i
+                                                    class="icon-search"></i></a>
+                                        </li>
+
+                                        <!-- point to CV -->
+                                        <li class="nav-item d-none d-lg-flex pr-0">
+                                            <div class="pb-ad">
+                                                <a href="/resume.html" data-toggle="tooltip" title=""
+                                                    class="text-uppercase btn btn-primary mini-title text-white become-member-btn"
+                                                    data-original-title="<div class='become-member'>
+                           <h5 class='become-member__title mb-2'>Unfold the mistery of <em>yuruotao.</em></h5>
+                           <h6 class='become-member__subtitle text-primary font-italic font-weight-normal mb-3 pt-1 mini-title'>Click now and learn my:</h6>
+                           <ul class='become-member__list m-0 p-0 pl-3'>
+                               <li class=&quot;mb-2&quot;>Educational background</li>
+                               <li class=&quot;mb-2&quot;>Personal statement</li>
+                               <li class=&quot;mb-2&quot;>Ability and experience</li>
+                               <li class=&quot;mb-2&quot;>Awards and recommendations</li>
+                               <li class=&quot;mb-2&quot;>Contact info</li>
+                               <li class=&quot;mb-2&quot;>And much more!</li>
+                           </ul>
+                       </div>">Curriculum Vitae</a>
+                                            </div>
+
+
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- contents in the lower button, projects -->
+                    <div id="journal-menu" data-slider-vport="screen-xl"
+                        class="collapse journal-menu bg-black-gray viewport-slider border-top border-dark-divider">
+                        <div class="journal-menu__container text-uppercase">
+                            <div class="slideshow">
+                                <div data-loop="false" class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="journal-menu__item">
+                                                <!-- point to project -->
+                                                <a href="/html_files/projects/" title="Science"
+                                                    class="text-center text-light d-flex flex-column h-100">
+                                                    <!-- point to project cover -->
+                                                    <img src="/" loading="lazy" width="226" height="287"
+                                                        class="journal-menu__img mb-3"
+                                                        alt="the cover image for project1">
+                                                    <div class="journal-menu__text">project1</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a data-toggle="collapse" href="#journal-menu" role="button" aria-expanded="false"
+                            aria-controls="journal-menu" class="journal-menu__overlay header-overlay"></a>
+                    </div>
+
+                    <!-- contents in the lower button no.2, papers-->
+                    <div id="papers-menu" data-slider-vport="screen-xl"
+                        class="collapse journal-menu bg-black-gray viewport-slider border-top border-dark-divider">
+                        <div class="journal-menu__container text-uppercase">
+                            <div class="slideshow">
+                                <div data-loop="false" class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="journal-menu__item">
+                                                <!-- point to papers -->
+                                                <a href="/" title="Science"
+                                                    class="text-center text-light d-flex flex-column h-100">
+                                                    <!-- point to the cover of the paper -->
+                                                    <img src="/" loading="lazy" width="226" height="287"
+                                                        class="journal-menu__img mb-3">
+                                                    <div class="journal-menu__text">paper1</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a data-toggle="collapse" href="#journal-menu" role="button" aria-expanded="false"
+                            aria-controls="journal-menu" class="journal-menu__overlay header-overlay"></a>
+                    </div>
+
+
+                    <!-- search need to be modified -->
+                    <!-- searcher expand content -->
+                    <div id="header-quick-search-wrapper"
+                        class="bg-black-gray header-quick-search collapse border-dark-divider border-top">
+                        <div class="container-fluid text-white">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-11 col-xl-9">
+                                    <div
+                                        class="quick-search row no-gutters flex-column quick-search--header flex-column">
+                                        <div class="quick-search__items col">
+                                            <!-- search place here need to be modified -->
+                                            <!-- search anywhere -->
+                                            <div aria-labelledby="#trigger-quick-search-form-0" id="quick-search-form-0"
+                                                data-parent=".quick-search__items" role="tabpanel"
+                                                class="collapse show ">
+                                                <form action="/action/doSearch" name="defaultQuickSearch" method="get">
+                                                    <fieldset>
+                                                        <legend class="sr-only">Quick Search Everywhere</legend>
+                                                        <div class="input-group option-0   animation-underline">
+                                                            <label for="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac010"
+                                                                class="sr-only">Enter Search Keywords</label>
+                                                            <input type="search"
+                                                                id="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac010"
+                                                                name="AllField" autocomplete="off"
+                                                                placeholder="Enter Search Term"
+                                                                data-auto-complete-max-words="7"
+                                                                data-auto-complete-max-chars="32"
+                                                                data-contributors-conf="3" data-topics-conf="3"
+                                                                data-publication-titles-conf="3"
+                                                                data-history-items-conf="3" value=""
+                                                                class="quick-search__input form-control autocomplete" />
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <!-- search in form1 -->
+                                            <div aria-labelledby="#trigger-quick-search-form-1" id="quick-search-form-1"
+                                                data-parent=".quick-search__items" role="tabpanel" class="collapse ">
+                                                <form action="/action/doSearch" name="publicationQuickSearch"
+                                                    method="get">
+                                                    <fieldset>
+                                                        <legend class="sr-only">Quick Search in Journals</legend>
+                                                        <div
+                                                            class="input-group option-1 option-journal  animation-underline">
+                                                            <label for="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac011"
+                                                                class="sr-only">Enter Search Term</label>
+                                                            <input type="search"
+                                                                id="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac011"
+                                                                name="AllField" autocomplete="off"
+                                                                placeholder="Enter Search Term"
+                                                                data-auto-complete-max-words="7"
+                                                                data-auto-complete-max-chars="32"
+                                                                data-contributors-conf="3" data-topics-conf="3"
+                                                                data-publication-titles-conf="3"
+                                                                data-history-items-conf="3" value=""
+                                                                class="quick-search__input form-control autocomplete" />
+                                                            <input type="hidden" name="SeriesKey" value="science" />
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <div aria-labelledby="#trigger-quick-search-form-2" id="quick-search-form-2"
+                                                data-parent=".quick-search__items" role="tabpanel" class="collapse ">
+                                                <form action="/action/doSearch" name="publicationQuickSearch"
+                                                    method="get">
+                                                    <fieldset>
+                                                        <legend class="sr-only">Quick Search in Journals</legend>
+                                                        <div
+                                                            class="input-group option-2 option-journal  animation-underline">
+                                                            <label for="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac012"
+                                                                class="sr-only">Enter Search Term</label>
+                                                            <input type="search"
+                                                                id="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac012"
+                                                                name="AllField" autocomplete="off"
+                                                                placeholder="Enter Search Term"
+                                                                data-auto-complete-max-words="7"
+                                                                data-auto-complete-max-chars="32"
+                                                                data-contributors-conf="3" data-topics-conf="3"
+                                                                data-publication-titles-conf="3"
+                                                                data-history-items-conf="3" value=""
+                                                                class="quick-search__input form-control autocomplete" />
+                                                            <input type="hidden" name="SeriesKey" value="sciadv" />
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <div aria-labelledby="#trigger-quick-search-form-3" id="quick-search-form-3"
+                                                data-parent=".quick-search__items" role="tabpanel" class="collapse ">
+                                                <form action="/action/doSearch" name="publicationQuickSearch"
+                                                    method="get">
+                                                    <fieldset>
+                                                        <legend class="sr-only">Quick Search in Journals</legend>
+                                                        <div
+                                                            class="input-group option-3 option-journal  animation-underline">
+                                                            <label for="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac013"
+                                                                class="sr-only">Enter Search Term</label>
+                                                            <input type="search"
+                                                                id="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac013"
+                                                                name="AllField" autocomplete="off"
+                                                                placeholder="Enter Search Term"
+                                                                data-auto-complete-max-words="7"
+                                                                data-auto-complete-max-chars="32"
+                                                                data-contributors-conf="3" data-topics-conf="3"
+                                                                data-publication-titles-conf="3"
+                                                                data-history-items-conf="3" value=""
+                                                                class="quick-search__input form-control autocomplete" />
+                                                            <input type="hidden" name="SeriesKey" value="sciimmunol" />
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <div aria-labelledby="#trigger-quick-search-form-4" id="quick-search-form-4"
+                                                data-parent=".quick-search__items" role="tabpanel" class="collapse ">
+                                                <form action="/action/doSearch" name="publicationQuickSearch"
+                                                    method="get">
+                                                    <fieldset>
+                                                        <legend class="sr-only">Quick Search in Journals</legend>
+                                                        <div
+                                                            class="input-group option-4 option-journal  animation-underline">
+                                                            <label for="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac014"
+                                                                class="sr-only">Enter Search Term</label>
+                                                            <input type="search"
+                                                                id="AllField9ea9b667-c3ce-40d1-870b-f7e001bbac014"
+                                                                name="AllField" autocomplete="off"
+                                                                placeholder="Enter Search Term"
+                                                                data-auto-complete-max-words="7"
+                                                                data-auto-complete-max-chars="32"
+                                                                data-contributors-conf="3" data-topics-conf="3"
+                                                                data-publication-titles-conf="3"
+                                                                data-history-items-conf="3" value=""
+                                                                class="quick-search__input form-control autocomplete" />
+                                                            <input type="hidden" name="SeriesKey" value="scirobotics" />
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <div
+                                                class="row no-gutters justify-content-end align-items-center quick-search__actions flex-column flex-sm-row">
+                                                <div class="col d-flex align-items-center flex-grow-1">
+                                                    <label
+                                                        class="mb-0 text-uppercase dropdown-selectable__label mr-2">Searching:</label>
+                                                    <div class="d-flex align-items-center flex-fill ">
+                                                        <div
+                                                            class="quick-search__dropdown dropdown dropdown-selectable">
+                                                            <button id="dropdownMenuButton" type="button"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false"
+                                                                class="btn dropdown-toggle">Anywhere</button>
+                                                            <div aria-labelledby="dropdownMenuButton" role="tablist"
+                                                                class="dropdown-menu">
+                                                                <a href="#quick-search-form-0"
+                                                                    id="trigger-quick-search-form-0"
+                                                                    data-toggle="collapse"
+                                                                    class="dropdown-item">Anywhere</a>
+                                                                <a href="#quick-search-form-1"
+                                                                    id="trigger-quick-search-form-1"
+                                                                    data-toggle="collapse"
+                                                                    class="dropdown-item">Learning</a>
+                                                                <a href="#quick-search-form-2"
+                                                                    id="trigger-quick-search-form-2"
+                                                                    data-toggle="collapse"
+                                                                    class="dropdown-item">Projects</a>
+                                                                <a href="#quick-search-form-3"
+                                                                    id="trigger-quick-search-form-3"
+                                                                    data-toggle="collapse"
+                                                                    class="dropdown-item">shikemanping</a>
+                                                                <a href="#quick-search-form-4"
+                                                                    id="trigger-quick-search-form-4"
+                                                                    data-toggle="collapse"
+                                                                    class="dropdown-item">Papers</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col justify-content-end d-flex align-items-center quick-search__buttons">
+                                                    <button type="submit" title="Search"
+                                                        class="quick-search__btn btn d-flex btn-primary align-items-center justify-content-center justify-content-sm-between mb-3 mb-sm-0">
+                                                        <span
+                                                            class="font-weight-bold text-uppercase mini-title">Search</span>
+                                                        <i class="icon-arrow-right align-middle ml-2"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- trending terms -->
+                            <!-- need to be redirected -->
+                            <div class="container-fluid header-trending__wrapper">
+                                <div class="row justify-content-center no-gutters">
+                                    <div class="col-lg-11 col-xl-9 header-trending">
+                                        <h6
+                                            class="header-trending__title mini-title text-uppercase text-white font-weight-bold mb-2">
+                                            Trending Terms:</h6>
+                                        <ul
+                                            class="text-uppercase list-unstyled pt-1 header-trending__list font-weight-bold list-inline">
+                                            <li class="pb-3 pr-3 list-inline-item">
+                                                <a href="/html_files/projects/intelligence.html"
+                                                    class="btn btn-outline-primary--on-dark">intelligence</a>
+                                            </li>
+                                            <li class="pb-3 pr-3 list-inline-item">
+                                                <a href="/action/doSearch?AllField=climate"
+                                                    class="btn btn-outline-primary--on-dark">brain-computer
+                                                    interface</a>
+                                            </li>
+                                            <li class="pb-3 pr-3 list-inline-item">
+                                                <a href="/action/doSearch?AllField=monkeypox"
+                                                    class="btn btn-outline-primary--on-dark">photoacoustic imaging</a>
+                                            </li>
+                                            <li class="pb-3 pr-3 list-inline-item">
+                                                <a href="/action/doSearch?AllField=abortion"
+                                                    class="btn btn-outline-primary--on-dark">wireless power transfer</a>
+                                            </li>
+                                            <li class="pb-3 list-inline-item">
+                                                <a href="/action/doSearch?AllField=perovskite"
+                                                    class="btn btn-outline-primary--on-dark">correlation analysis</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <a data-toggle="collapse" href="#" data-target=".header-quick-search" role="button"
+                                aria-expanded="false" class="header-quick-search__overlay header-overlay"
+                                tabindex='-1'></a>
+                        </div>
+                </header>
+
+
+                <!-- controlled by main bundle -->
+                <div class="header-sidebar">
+                    <aside id="header-side-menu" class="collapse sidebar--from-left">
+                        <div class="sidebar__content">
+                            <div class="header-sidebar__top">
+                                <div class="header-sidebar__top__links pb-4">
+                                    <div class="d-flex justify-content-center">
+                                        <!-- need to be redirected to email send -->
+                                        <a href="/message.html"
+                                            class="text-uppercase btn btn-outline-dark mini-title mr-3 font-weight-bold">send
+                                            message</a>
+                                        <div class="pb-ad">
+                                            <!-- redirect to CV -->
+                                            <a href="/resume.html"
+                                                class="text-uppercase btn btn-primary mini-title text-white">Curriculum
+                                                Vitae</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- search -->
+                                <div data-widget-def="UX3QuickSearchWidget"
+                                    data-widget-id="e7029926-2304-4dc3-a2d3-f6c677f7bbc7"
+                                    class="header-sidebar__top__search pb-4">
+                                    <div class="quick-search row no-gutters">
+                                        <div class="col quick-search__sidebar">
+                                            <form action="/action/doSearch" name="defaultQuickSearch" method="get"
+                                                id="quick-search-from-e7029926-2304-4dc3-a2d3-f6c677f7bbc70"
+                                                role="search">
+                                                <fieldset>
+                                                    <legend class="sr-only">Quick Search anywhere</legend>
+                                                    <div
+                                                        class="input-group option-0  align-items-center  animation-underline animation-underline--primary">
+                                                        <label for="AllFielde7029926-2304-4dc3-a2d3-f6c677f7bbc70"
+                                                            class="sr-only">Enter Search Term</label>
+                                                        <input type="search"
+                                                            id="AllFielde7029926-2304-4dc3-a2d3-f6c677f7bbc70"
+                                                            name="AllField" autocomplete="off"
+                                                            placeholder="Enter Search Term"
+                                                            data-auto-complete-max-words="7"
+                                                            data-auto-complete-max-chars="32" data-contributors-conf="3"
+                                                            data-topics-conf="3" data-publication-titles-conf="3"
+                                                            data-history-items-conf="3" value=""
+                                                            class="quick-search__input form-control autocomplete" />
+                                                        <div class="input-group-append"><button type="submit"
+                                                                title="Search" class="btn quick-search__btn p-0"><i
+                                                                    class="icon-search align-middle"></i></button></div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="quick-search__links">
+                                            <div class="pb-dropzone" data-pb-dropzone="advancedSearch"
+                                                title="advancedSearch"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- links -->
+                                <div class="nav-item font-weight-bolder">
+                                    <a href="/index.html" class="nav-link text-uppercase mini-title">yuruotao.com</a>
+                                </div>
+                            </div>
+
+
+                            <!-- redirect like footer -->
+                            <div class="header-sidebar__bottom">
+                                <ul class="header-sidebar__nav border-top text-uppercase list-unstyled pt-3 mt-1 mb-0">
+                                    <li class="nav-item nav-item--secondary font-weight-bold">
+                                        <a href="/learning.html" class="nav-link">learning</a>
+                                    </li>
+                                    <li class="nav-item nav-item--secondary font-weight-bold">
+                                        <a href="/projects.html" class="nav-link">projects</a>
+                                    </li>
+                                    <li class="nav-item nav-item--secondary font-weight-bold">
+                                        <a href="/papers.html" class="nav-link">papers</a>
+                                    </li>
+                                    <li class="nav-item nav-item--secondary font-weight-bold">
+                                        <a href="/shikemanping.html" class="nav-link">shikemanping</a>
+                                    </li>
+                                    <li class="nav-item nav-item--secondary font-weight-bold">
+                                        <a href="/ABOUT.html" class="nav-link">about</a>
+                                    </li>
+                                </ul>
+
+                                <ul
+                                    class="header-sidebar__nav header-social-media border-top text-uppercase list-unstyled pt-3 mt-1 mb-0">
+                                    <li class="nav-item header-social-media__item">
+                                        <a href="https://www.facebook.com/yuruotao" title="Facebook"
+                                            class="nav-link btn" target="_blank">
+                                            <i aria-hidden="true" class="icon-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item header-social-media__item">
+                                        <a href="https://twitter.com/yuruotao" title="Twitter" class="nav-link btn"
+                                            target="_blank">
+                                            <i aria-hidden="true" class="icon-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item header-social-media__item">
+                                        <a href="https://www.instagram.com/yu_ruotao" title="Instagram"
+                                            class="nav-link btn btn-sm" target="_blank">
+                                            <i aria-hidden="true" class="icon-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item header-social-media__item">
+                                        <a href="https://www.youtube.com/user/@yuruotao" title="YouTube"
+                                            class="nav-link btn" target="_blank">
+                                            <i aria-hidden="true" class="icon-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item header-social-media__item">
+                                        <!-- email respond html -->
+                                        <a href="/message.html" title="RSS feeds" class="nav-link btn">
+                                            <i aria-hidden="true" class="icon-rss"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item header-social-media__item">
+                                        <a href="https://mp.weixin.qq.com/s/1lIi0cRLwRmCaA9uSep1yw" title="WeChat"
+                                            class="nav-link btn btn-sm" target="_blank">
+                                            <i aria-hidden="true" class="icon-wechat"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="header-sidebar-footer border-top">
+
+                                    <!-- change the logo here -->
+                                    <div class="header-sidebar-footer__logo">
+                                        <img src="/resources/icon_svg/skmp_svg_black.svg" alt="Logo for yuruotao.com" />
+                                    </div>
+
+                                    <!-- redirect to the 3 pages -->
+                                    <ul class="header-sidebar-footer__links list-inline">
+                                        <li class="list-inline-item header-sidebar-footer__links__item">
+                                            <a href="/ABOUT.html">Terms of Service</a>
+                                        </li>
+                                        <li class="list-inline-item header-sidebar-footer__links__item">
+                                            <a href="/ABOUT.html">Privacy Policy</a>
+                                        </li>
+                                        <li class="list-inline-item header-sidebar-footer__links__item">
+                                            <a href="/ABOUT.html">Accessibility</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <a data-toggle="collapse" href="#header-side-menu" role="button" aria-expanded="false"
+                        aria-controls="header-side-menu" class="sidebar__overlay"></a>
+                </div>
+
+
+                <div
+                    class="main-header__secondary d-flex main-header__secondary--publication  main-header__secondary--sticky position-sticky justify-content-center p-0 ">
+                    <div class="navbar  navbar-expand-sm w-100 py-0">
+
+                        <button type="button" data-toggle="collapse" data-target="#header-side-menu"
+                            data-fixed-height="true" aria-controls="#header-side-menu" aria-expanded="false"
+                            aria-label="Toggle navigation" class="navbar-toggler btn-animate-bg collapsed">
+                            <i class="icon-burger"></i>
+                        </button>
+
+                        <div
+                            class="navbar-in d-flex justify-content-start justify-content-sm-between container-fluid m-xl-auto w-100 px-0 px-lg-3 position-relative">
+
+                            <!-- change the logo and redirect here -->
+                            <a class="main-header__secondary__logo" href="/index.html">
+                                <img src="/resources/icon_svg/skmp_svg_black.svg" />
+                            </a>
+
+                            <div id="main-menu" data-parent="Science Advances" class="main-menu align-items-center">
+                                <div class="main-menu__nav d-flex justify-content-center">
+                                    <ul class="navbar-nav flex-row">
+                                        <li class="nav-item">
+                                            <a id="menu-item-0" tabindex="" class="nav-link" href="/index.html">News</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <!-- about dropdown -->
+                                            <!-- redirect -->
+                                            <div class="dropdown">
+                                                <a id="menu-item-3" href="#" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="nav-link dropdown-toggle">About</a>
+                                                <div aria-labelledby="menu-item-3" class="dropdown-menu">
+                                                    <a href="/ABOUT.html" class="dropdown-item">Why the website</a>
+                                                    <a href="/index.html" class="dropdown-item">Contents</a>
+                                                    <a href="/ABOUT.html" class="dropdown-item">About the author</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="main-menu__extra justify-content-center">
+                                    <ul class="nav d-flex align-items-center h-100">
+                                        <li class="nav-item align-items-center pr-0">
+                                            <!-- redirect -->
+                                            <a href="/message.html"
+                                                class="btn py-1 px-3 mini-title btn-outline-secondary">Send Message</a>
+                                        </li>
+                                        <li class="nav-item menu-more pr-0">
+                                            <div class="dropdown">
+                                                <a id="menu-more" href="About" role="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"
+                                                    class="nav-link dropdown-toggle">More</a>
+                                                <ul class="dropdown-menu"></ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- redirect to sign up for email -->
+                            <a href="/message.html"
+                                class="d-none d-xl-flex btn text-primary mini-title header-link p-0 mr-2x">GET UPDATE
+                                EMAIL</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="pb-dropzone" data-pb-dropzone="col-0" title="col-0"></div>
+                </div>
+
+                <!-- content change -->
+                <main data-widget-def="ux3-layout-widget" data-widget-id="c5dd1bd0-ae50-4645-96bb-545e45bef33a"
+                    id="main" data-doi="10.1126/sciadv.ade2988">
+                    <div class="article-container">
+
+                        <!-- import css -->
+                        <link id="build-style-article" rel="stylesheet" type="text/css"
+                            href="/products/aaas/releasedAssets/css/build-article-5421643ead8b85d2264d.css" />
+                        <article xmlns="http://www.w3.org/1999/xhtml" data-design="pill" data-has="right-rail"
+                            data-type="research-article" vocab="http://schema.org/" typeof="ScholarlyArticle" lang="en">
+                            <header data-extent="frontmatter">
+                                <div class="core-container">
+                                    <div class="mb-1_5x mt-3">
+
+                                        <nav class="breadcrumbs">
+                                            <div class="d-none d-sm-flex align-items-center">
+                                                <!-- redirect to home -->
+                                                <a href="/index.html" title="Home"
+                                                    class="crumb text-uppercase prev-crumb">Home</a>
+                                                <i class="icon-arrow-right mx-1"></i>
+                                                <!-- redirect to field -->
+                                                <a id="directory_update" href="/shikemanping.html" title="1st level"
+                                                    class="crumb text-uppercase prev-crumb">Shikemanping</a>
+                                                <i class="icon-arrow-right mx-1"></i>
+                                                <span id="page_title_update"
+                                                    class="crumb text-uppercase current-crumb">Article title</span>
+                                                <script>
+                                                    var stored_data = JSON.parse(window.sessionStorage.getItem("name_datas"));
+                                                    document.getElementById("page_title_update").innerText = stored_data["page_title"];
+                                                    document.getElementById("directory_update").innerText = stored_data["current_directory"];
+                                                    document.getElementById("directory_update").href = stored_data["current_directory_path"];
+                                                </script>
+
+                                            </div>
+
+                                            <div class="d-flex d-sm-none align-items-center">
+                                                <i class="icon-arrow-left mr-1"></i>
+                                                <!-- whatever, redirect -->
+                                                <!-- 2nd level back -->
+                                                <a href="/" title="Back"
+                                                    class="crumb text-uppercase current-crumb">Back</a>
+                                            </div>
+                                        </nav>
+
+
+                                    </div>
+                                    <div data-article-access="full" data-article-access-type="open" class="meta-panel">
+                                        <div class="meta-panel__left-content">
+                                            <div id="type_update" class="meta-panel__type">
+                                                <span>Essay</span>
+                                            </div>
+                                            <div id="field_update" class="meta-panel__overline">
+                                                <span>essay domain</span>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            document.getElementById("type_update").innerText = stored_data["article_type"];
+                                            document.getElementById("field_update").innerText = stored_data["article_field"];
+                                        </script>
+                                        <div class="meta-panel__right-content">
+                                            <div class="meta-panel__share">
+
+                                                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+                                                <script type="text/javascript" defer="defer"
+                                                    src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63bd523bed5f94e0"></script>
+                                                <div class="share__block share__inline-links">
+                                                    <span class="sr-only">Share on</span>
+                                                    <ul
+                                                        class="d-flex list-unstyled addthis addthis_toolbox addthis_default_style mb-0">
+                                                        <li>
+                                                            <a role="link" class="addthis_button_facebook">
+                                                                <i aria-hidden="true"
+                                                                    class="at-icon-wrapper  icon-share-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li><a role="link" class="addthis_button_twitter">
+                                                                <i aria-hidden="true"
+                                                                    class="at-icon-wrapper icon-share-twitter"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li><a role="link" class="addthis_button_wechat">
+                                                                <i aria-hidden="true"
+                                                                    class="at-icon-wrapper icon-wechat"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a role="link" class="addthis_button_mailto">
+                                                                <i aria-hidden="true"
+                                                                    class="at-icon-wrapper  icon-share-mail"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h1 id="page_title_update_content" property="name">article Title</h1>
+
+                                    <script>
+                                        document.getElementById("page_title_update_content").innerText = stored_data["page_title"];
+                                    </script>
+
+                                    <div class="contributors">
+                                        <!-- authors -->
+                                        <span class="authors">
+                                            <span id="author_update" role="list">
+
+                                                <span property="author" typeof="Person" role="listitem">
+                                                    <a href="#con1">
+                                                        <span property="givenName">1st</span>
+                                                        <span property="familyName">author</span>
+                                                    </a>
+                                                </span>
+                                                ,
+
+                                                <span property="author" typeof="Person" role="listitem">
+                                                    <a href="#con2">
+                                                        <span property="givenName">2nd</span> 
+                                                        <span property="familyName">author</span>
+                                                    </a>
+                                                </span>
+                                                ,
+
+                                                <span data-displayed-on="sm" aria-hidden="true">
+                                                    <span>
+                                                        <span data-action="reveal">[...]</span>
+                                                    </span>
+                                                </span>
+
+                                                <span data-hidden-on="sm">
+                                                    <!-- 3rd author -->
+                                                    <!-- <span property="author" typeof="Person" role="listitem">
+                <a href="#con3">
+                    <span property="givenName">Jun Su</span> 
+                    <span property="familyName">Kim</span>
+                </a>
+            </span> -->
+                                                </span>
+
+                                                <span data-hidden-on="sm">
+                                                    <!-- 4th author -->
+                                                    <!-- <span property="author" typeof="Person" role="listitem">
+                <a href="#con4">
+                    <span property="givenName">Tae Uk</span> 
+                    <span property="familyName">Nam</span>
+                </a>
+            </span> -->
+                                                </span>
+
+                                                <span data-displayed-on="md" aria-hidden="true">,
+                                                    <span>
+                                                        <span data-action="reveal">[...]</span>
+                                                    </span>
+                                                </span>
+
+                                                <span data-hidden-on="sm md">
+                                                    <!-- 5th author -->
+                                                </span>
+
+                                                <span data-hidden-on="sm md">
+                                                    <!-- 6th author -->
+                                                    <!-- <span property="author" typeof="Person" role="listitem">
+                <a href="#con6">
+                    <span property="givenName">Lihua</span> 
+                    <span property="familyName">Jin</span>
+                </a> 
+                <a class="orcid-id" href="https://orcid.org/0000-0001-7812-9056" property="identifier" target="_blank">https://orcid.org/0000-0001-7812-9056</a>
+            </span> -->
+                                                </span>
+
+                                                <span data-hidden-on="sm md">
+                                                    <!-- up to 7 authors -->
+                                                    <!-- <span property="author" typeof="Person" role="listitem">
+                <a href="#con7"><span property="givenName">Tae Il</span> 
+                    <span property="familyName">Lee</span>
+                </a>  -->
+                                                </span>
+
+                                                <span data-displayed-on="sm" aria-hidden="true">
+                                                    <span>
+                                                        <span data-action="reveal" data-style="btn">+5 authors</span>
+                                                    </span>
+                                                </span>
+
+                                                <span data-displayed-on="md" aria-hidden="true">
+                                                    <span>
+                                                        <span data-action="reveal" data-style="btn">+3 authors</span>
+                                                    </span>
+                                                </span>
+
+                                                <span data-displayed-on="none" data-on-display="sm md"
+                                                    aria-hidden="true">
+                                                    <span data-action="hide">fewer</span>
+                                                </span>
+
+                                            </span>
+                                        </span>
+
+
+                                    </div>
+
+                                    <div class="core-self-citation">
+                                        <div property="isPartOf" typeof="Periodical">
+                                            <span property="name">yuruotao.com</span>
+                                        </div>
+                                        <div class="core-date-published">
+                                            <span id="date_update" property="datePublished">21 Dec 2022</span>
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        document.getElementById("date_update").innerText = stored_data["date"];
+                                        authors = stored_data["authors"];
+                                        var author_num = authors.length;
+                                        var author_update_html = "";
+                                        if (author_num == 1) {
+                                            author_update_html = '<span property="author" typeof="Person" role="listitem"><a href="#con' + String(1) + '"><span property="familyName">' + authors[0] + '</span></a></span>, ';
+                                        } else {
+                                            for (var i = 0; i < 2; i++) {
+                                                author_update_html += '<span property="author" typeof="Person" role="listitem"><a href="#con' + String(i + 1) + '"><span property="familyName">' + authors[i] + '</span></a></span>, ';
+                                            }
+                                        }
+
+
+                                        if (author_num > 2) {
+                                            author_update_html += '<span data-displayed-on="sm" aria-hidden="true"><span><span data-action="reveal">[...]</span></span></span>';
+                                            author_update_html += '<span data-hidden-on="sm">';
+                                            for (var i = 2; i < (Math.min(author_num, 4)); i++) {
+                                                author_update_html += '<span property="author" typeof="Person" role="listitem"><a href="#con' + String(i + 1) + '"><span property="familyName">' + authors[i] + '</span></a></span>, ';
+                                            }
+                                            author_update_html += '</span>';
+                                        }
+
+                                        if (author_num > 4) {
+                                            author_update_html += '<span data-hidden-on="sm md">';
+                                            for (var i = 4; i < author_num; i++) {
+                                                author_update_html += '<span property="author" typeof="Person" role="listitem"><a href="#con' + String(i + 1) + '"><span property="familyName">' + authors[i] + '</span></a></span>, ';
+                                            }
+                                            author_update_html += '</span>';
+                                        }
+
+
+                                        if (author_num > 2 && author_num < 5) {
+                                            author_update_html += '<span data-displayed-on="sm" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+' + String(author_num - 2) + ' authors</span></span></span>'
+
+                                        } else if (author_num >= 5) {
+                                            author_update_html += '<span data-displayed-on="md" aria-hidden="true"><span><span data-action="reveal" data-style="btn">+' + String(author_num - 4) + ' authors</span></span></span>'
+                                        }
+
+                                        author_update_html += '<span data-displayed-on="none" data-on-display="sm md" aria-hidden="true"> <span data-action="hide">fewer</span></span></span></span>';
+                                        document.getElementById("author_update").innerHTML = author_update_html;
+                                    </script>
+
+                                    <!-- info panel -->
+                                    <div class="info-panel">
+                                        <div class="info-panel__left-content">
+                                            <div class="info-panel__metrics info-panel__item">
+
+                                                <!-- data widget -->
+                                                <div data-widget-def="UX3ContentNavigation"
+                                                    data-widget-id="62303764-eb6d-4f73-bc22-0f15715aa37c"
+                                                    class="d-none">
+
+                                                    <!-- previous article and next article -->
+                                                    <nav title="Content Navigation" class="content-navigation">
+                                                        <!-- modify the href -->
+                                                        <a href="/" title="previous article title"
+                                                            class="content-navigation__prev previous_article_link_update">
+                                                            <div aria-hidden="true" class="content-navigation__hint">
+                                                                <div class="content-navigation__hint__content">
+                                                                    <h6>PREVIOUS ARTICLE</h6>
+                                                                    <div class="previous_article_title_update">P article
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <i class="icon-arrow-left"></i>
+                                                            <span class="previous_article_title_update">Previous</span>
+                                                        </a>
+
+                                                        <!-- modify the href -->
+                                                        <a href="/" title="next article title"
+                                                            class="content-navigation__next next_article_link_update">
+                                                            <div aria-hidden="true" class="content-navigation__hint">
+                                                                <div class="content-navigation__hint__content">
+                                                                    <h6>NEXT ARTICLE</h6>
+                                                                    <div class="next_article_title_update">next article
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <span class="next_article_title_update">Next</span>
+                                                            <i class="icon-arrow-right"></i>
+                                                        </a>
+                                                    </nav>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- small functions above the abstract -->
+                                        <div class="info-panel__right-content">
+
+                                            <div class="info-panel__formats info-panel__item">
+                                                <!-- link to the pdf file of the article -->
+                                                <a href="/" title="PDF" data-toggle="tooltip"
+                                                    class="btn btn--slim btn-secondary pdf_link_update">
+                                                    <i aria-hidden="true" class="icon-pdf"></i>
+                                                </a>
+                                            </div>
+
+                                            <!-- update previous, next article and pdf link -->
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+
+
+                            <nav data-core-nav="header" data-extent="frontmatter" role="navigation"
+                                aria-label="Article navigation">
+                                <ul class="core-nav-wrapper core-container">
+                                    <li role="none">
+                                        <button data-id="article-toolbar-showhide" aria-controls="article_sections_menu"
+                                            aria-expanded="false" aria-haspopup="true" role="menuitem">
+                                            <i class="icon-contents" aria-hidden="true"></i>Contents
+                                        </button>
+
+                                        <!-- adjust to the content -->
+                                        <div id="article_sections_menu" role="menu" aria-label="Contents">
+                                            <nav data-core-nav="article">
+                                                <ul id="menu_update" xmlns="http://www.w3.org/1999/xhtml">
+
+                                                    <li>
+                                                        <a href="#abstract">Abstract1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#sec-1">INTRODUCTION2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#sec-2">RESULTS3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#sec-3">DISCUSSION</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#sec-4">MATERIALS AND METHODS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#acknowledgments">ACKNOWLEDGEMENTS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#supplementary-materials">SUPPLEMENTARY MATERIALS</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#bibliography">REFERENCES AND NOTES</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </li>
+
+                                    <li role="none">
+                                        <div id="article_collateral_menu" role="menu" aria-label="More"></div>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <aside data-core-aside="right-rail">
+                                <section>
+                                    <div class="current-issue-aside">
+                                        <h4 class="h4 main-title-2--decorated">Current Column</h4>
+                                        <div class="current-issue-aside__content">
+                                            <div class="current-issue-aside__cover">
+                                                <div class="cover-image flat d-flex justify-content-center flex-column">
+                                                    <div data-is-viewable="true" class="cover-image__image">
+
+                                                        <!-- propganda image -->
+                                                        <!-- link to the outstanding image of the field -->
+                                                        <!--  -->
+                                                        <a href="#" title="current column cover image" class="d-block">
+                                                            <img src="/resources/images/beautiful_pic7.jpg"
+                                                                alt="cover image"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
+
+                                                <div class="multi-search">
+                                                    <div id="sci_prj_update">
+
+                                                        <script>
+                                                            fetch("/update/sci_prj_update.html")
+                                                                .then(response => response.text())
+                                                                .then(text => document.getElementById('sci_prj_update').innerHTML = text)
+                                                        </script>
+
+
+                                                    </div>
+                                                    <div class="d-flex justify-content-end btn--more__wrapper">
+                                                        <!-- direct to the current folder -->
+                                                        <a id="more_path_update" href="/projects.html"
+                                                            class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+                                                            <span>More</span>
+                                                            <span aria-hidden="true" class="icon-arrow-right"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section>
+
+                                    <h4 class="main-title-2--decorated h4 hawkeye-side-position-node">LATEST</h4>
+                                    <div id="nav_latest_update" class="mt-4">
+
+                                        <div class="multi-search">
+                                            <div class="multi-search--news-article-aside">
+                                                <article
+                                                    class="card-do card-do--news-feature border-bottom border-light-gray card-do--news-article-aside pb-3 mb-3">
+                                                    <div class="card-content">
+                                                        <div class="card-meta text-uppercase">
+                                                            <!-- direct to the latest column -->
+                                                            <span class="card-meta__category"><a href="/"
+                                                                    class="text-decoration-none"><span>latest
+                                                                        column</span></a></span><time
+                                                                class="border-left">date and time</time>
+                                                        </div>
+                                                        <div class="card-header mb-2">
+                                                            <!--  -->
+                                                            <a href="/" title="latest article title"
+                                                                class="text-reset animation-underline">
+                                                                latest passage title
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+
+                                                <script>
+                                                    fetch("/update/latest_update_content_page.html")
+                                                        .then(response => response.text())
+                                                        .then(text => document.getElementById('nav_latest_update').innerHTML = text)
+                                                </script>
+
+                                                <div class="d-flex justify-content-end btn--more__wrapper">
+                                                    <!-- direct to the latest corresponding column -->
+                                                    <a id="more_path_update1" href="/"
+                                                        class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
+                                                        <span>More</span>
+                                                        <span aria-hidden="true" class="icon-arrow-right"></span>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </section>
+                            </aside>
+
+                            <!-- abstract -->
+                            <div id="abstracts" data-extent="frontmatter">
+                                <div class="core-container">
+                                    <section id="abstract" property="abstract" typeof="Text" role="doc-abstract">
+                                        <h2 property="name">Abstract</h2>
+                                        <div role="paragraph">
+
+                                            <p>
+                                                Due to the lack of expression of ER, PR, and overexpression of HER2,
+                                                triple-negative breast cancer is lack of valid treatment method and has
+                                                an overall worse prognosis. However, the interactions among molecules as
+                                                well as cells are yet to be elucidated. In this article, we aim to
+                                                elucidate the effect of lactate and glucose on the tumor
+                                                microenvironment and the underlying molecular interaction mechanism. We
+                                                provide an overview of the TNBC microenvironment and the metabolic
+                                                pathways altered to illustrate the central importance of two key
+                                                metabolites, glucose, and lactate, plus glutamine for generality in the
+                                                first place, in which an interaction network is established. Moreover,
+                                                we provided another interaction network among cells on the basis of
+                                                molecular interactions. We look forward to using mathematical tools from
+                                                network theory to conduct more detailed analyses in the future.
+                                            </p>
+
+                                            <p>
+                                                <b>
+                                                    Wireless Power Transfer,
+                                                </b>
+                                            </p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+
+
+                            <!-- article content -->
+                            <section id="bodymatter" data-extent="bodymatter" property="articleBody" typeof="Text">
+                                <div class="core-container">
+
+                                    <section id="sec-1" data-type="introduction">
+                                        <h2>
+                                            Introduction
+                                        </h2>
+                                        <h3>
+                                            Overview
+                                        </h3>
+                                        <div role="paragraph">
+                                            Estrogen receptor (ER), progesterone receptor (PR), human epidermal growth
+                                            factor receptor 2 (HER2) are three vital biomarkers for breast cancer
+                                            staging and classification, owing to their predictability for prognosis.(<a
+                                                href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a><a
+                                                href="#R2" role="doc-biblioref" data-xml-rid="R2"><i></i></a>-<a
+                                                href="#R3" role="doc-biblioref" data-xml-rid="R3"><i>3</i></a>)
+                                            According to epidemiology research, young women as well as black women have
+                                            a higher risk of having TNBC.(<a href="#R4" role="doc-biblioref"
+                                                data-xml-rid="R4"><i>4</i></a><a href="#R5" role="doc-biblioref"
+                                                data-xml-rid="R5"><i></i></a>-<a href="#R6" role="doc-biblioref"
+                                                data-xml-rid="R6"><i>6</i></a>) Due to the lack of expression of ER, PR,
+                                            and overexpression of HER2, triple-negative breast cancer is lack of valid
+                                            treatment method and has an overall worse prognosis.(<a href="#R7"
+                                                role="doc-biblioref" data-xml-rid="R7"><i>7</i></a>) As hormone therapy
+                                            is
+                                            unsuitable for treatment, currently only chemotherapy is a systematic
+                                            approach for TNBC treatment.(<a href="#R8" role="doc-biblioref"
+                                                data-xml-rid="R8"><i>8</i></a>, <a href="#R9" role="doc-biblioref"
+                                                data-xml-rid="R9"><i>9</i></a>) Of note, TNBC has a higher probability
+                                            of
+                                            metastasis and is usually observed higher incidence to the brain, liver, and
+                                            lungs.(<a href="#R10" role="doc-biblioref"
+                                                data-xml-rid="R10"><i>10</i></a><a href="#R11" role="doc-biblioref"
+                                                data-xml-rid="R11"><i></i></a>-<a href="#R12" role="doc-biblioref"
+                                                data-xml-rid="R12"><i>12</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            Due to the heterogeneity of breast cancer, therapeutic targets may not be
+                                            universal to all TNBC patients. Thus, there have been multiple approaches
+                                            applied in TNBC stratification, namely, the subtyping of TNBC for more
+                                            targeted therapy. Lehmann et al. stratified TNBC into 6 subtypes based on
+                                            gene profiling: basal-like 1 (BL1), basal-like 2 (BL2), mesenchymal (M),
+                                            mesenchymal stem-like (MSL), immunomodulatory (IM), and luminal androgen
+                                            receptor (LAR).(<a href="#R13" role="doc-biblioref"
+                                                data-xml-rid="R13"><i>13</i></a>) In a follow-up study, Masuda et al.
+                                            proved the validity of such a subtyping method using prognosis analysis,
+                                            factors including distant metastasis-free survival rate, overall survival
+                                            rate (OS), and 3-year recurrence rate are considered.(<a href="#R14"
+                                                role="doc-biblioref" data-xml-rid="R14"><i>14</i></a>) Liu et al.
+                                            proposed a
+                                            TNBC subtyping based on the mRNA and lncRNA transcriptome profiles,
+                                            separating tumors into 4 main subtypes.(<a href="#R15" role="doc-biblioref"
+                                                data-xml-rid="R15"><i>15</i></a>) However, such a stratification method
+                                            rose from the information of 165 TNBC tumor samples.
+                                        </div>
+                                        <div role="paragraph">
+                                            Based on the established TNBC subtypes, endeavors have been made in seeking
+                                            new therapeutic targets. Poly ADP-ribose polymerase (PARP) inhibition is one
+                                            of the extensively studied molecular targets, as clinical trial outcomes
+                                            indicate, monotherapy with these agents is not sufficient and requires more
+                                            combination regimens.(<a href="#R16" role="doc-biblioref"
+                                                data-xml-rid="R16"><i>16</i></a><a href="#R17" role="doc-biblioref"
+                                                data-xml-rid="R17"><i></i></a>-<a href="#R18" role="doc-biblioref"
+                                                data-xml-rid="R18"><i>18</i></a>) Another target is the PI3K/mTOR/S6
+                                            pathway
+                                            since it has been recognized as a driver in TNBC.(<a href="#R13"
+                                                role="doc-biblioref" data-xml-rid="R13"><i>13</i></a>, <a href="#R19"
+                                                role="doc-biblioref" data-xml-rid="R19"><i>19</i></a>) Some pieces of
+                                            evidence suggest that the cytoskeleton, cell migration, and vascular system
+                                            are also potential targets for therapeutics.(<a href="#R20"
+                                                role="doc-biblioref" data-xml-rid="R20"><i>20</i></a><a href="#R21"
+                                                role="doc-biblioref" data-xml-rid="R21"><i></i></a>-<a href="#R22"
+                                                role="doc-biblioref" data-xml-rid="R22"><i>22</i></a>)
+                                        </div>
+                                        <h3>Glucose and Lactate in Tumor Microenvironment</h3>
+                                        <div role="paragraph">
+                                            In the later part of this passage, we aim to elucidate the effect of lactate
+                                            and glucose on the tumor microenvironment and the underlying molecular
+                                            interaction mechanism. Here, we provide an overview of the TNBC
+                                            microenvironment and the metabolic pathways altered to illustrate the
+                                            central importance of two key metabolites, glucose, and lactate, plus
+                                            glutamine for generality.
+                                        </div>
+                                        <div role="paragraph">
+                                            Glucose uptake is vital for biological processes since it is the main energy
+                                            source and carbon source. Metabolic pathways in both somatic cells and
+                                            cancer cells involve glucose. In somatic cells, oxidative phosphorylation
+                                            (OXPHOS) functions as the main energy source.(<a href="#R23"
+                                                role="doc-biblioref" data-xml-rid="R23"><i>23</i></a>) In cancer cells,
+                                            as observed by Warburg, OXPHOS is usually replaced by glycolysis for
+                                            accelerated production of metabolic fuels as well as energy despite oxygen
+                                            level, which is named the Warburg effect.(<a href="#R24"
+                                                role="doc-biblioref" data-xml-rid="R24"><i>24</i></a>) The rate of ATP
+                                            production is about 100 times that of oxidative phosphorylation. For somatic
+                                            cells under oxygen deprivation conditions, they switch to anaerobic OXPHOS
+                                            to reduce the stress from hypoxia, in which lactate is one of the final
+                                            products.(<a href="#R25" role="doc-biblioref"
+                                                data-xml-rid="R25"><i>25</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            In recent years, more models describing the phenomenon that arise in cancer
+                                            cells have been established. The reverse Warburg effect proposed by
+                                            Stephanos et al. establishes the contact between glycolytic stromal cells
+                                            and oxidative tumor cells.(<a href="#R26" role="doc-biblioref"
+                                                data-xml-rid="R26"><i>26</i></a>) The inverse Warburg effect proposed by
+                                            Carla et al. focused on the obesity-triggered abnormal metabolism
+                                            pattern.(<a href="#R27" role="doc-biblioref"
+                                                data-xml-rid="R27"><i>27</i></a>)
+                                            Additionally, comprehensive models have been proposed. For instance, the
+                                            hybrid model models the metabolic state of the coexistence of glycolytic
+                                            activity and OXPHOS activity.(<a href="#R28" role="doc-biblioref"
+                                                data-xml-rid="R28"><i>28</i></a>) Among all the mentioned models,
+                                            lactate is the key that connecting various cells. Hence the significance of
+                                            lactate.
+                                        </div>
+                                        <div role="paragraph">
+                                            Since we are discussing breast cancer, we cannot ignore the characteristics
+                                            of the breast. During lactation, the glucose uptake level rises, and some of
+                                            the consumed glucose is transported to the Golgi apparatus to produce
+                                            lactose, which is a rich component of breast milk.(<a href="#R29"
+                                                role="doc-biblioref" data-xml-rid="R29"><i>29</i></a>, <a href="#R30"
+                                                role="doc-biblioref" data-xml-rid="R30"><i>30</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            We organize the text as follows. Firstly, we establish a mathematical model
+                                            of tumor microenvironment focusing on three key metabolites, glucose,
+                                            glutamine, and lactate in <a href="#sec-2">Section 2</a>, discuss the effect
+                                            of acidic
+                                            microenvironment on various types of cells in <a href="#sec-3">Section
+                                                3</a>,
+                                            and draw conclusions in <a href="#sec-4">Section 4</a>.
+                                        </div>
+
+
+                                    </section>
+
+                                    <section id="sec-2" data-type="introduction">
+                                        <h2>
+                                            Glucose-lactate Model
+                                        </h2>
+                                        <div role="paragraph">
+                                            Given the central importance of glucose and lactate, we organize the text
+                                            centered around them. As mentioned earlier, we also take glutamine into
+                                            account. The first two subsections aim to model the intake of energy, and
+                                            the following two focus on the production and shuttling of lactate. Finally,
+                                            we give a comprehensive network for summarization in Section 2.5 and discuss
+                                            the effect of acidified tumor microenvironment on various types of cells in
+                                            Section 2.6, in which a cell interaction network is established.
+                                        </div>
+                                        <h3>
+                                            Intake of Glucose
+                                        </h3>
+                                        <div role="paragraph">
+                                            GLUT transporters are a group of transporters encoded by SLC2 genes
+                                            controlling the inflow of glucose, the process of glucose transporting
+                                            through GLUTs is categorized as facilitated diffusion.(<a href="#R31"
+                                                role="doc-biblioref" data-xml-rid="R31"><i>31</i></a>) Glucose
+                                            transportation based on sodium-dependent glucose transporters (SGLT) is
+                                            based on the <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>N</mi>
+                                                        <msup>
+                                                            <mi>a</mi>
+                                                            <mo>+</mo>
+                                                        </msup>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            electrochemical gradient provided by the <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>N</mi>
+                                                        <msup>
+                                                            <mi>a</mi>
+                                                            <mo>+</mo>
+                                                        </msup>
+                                                        <mo>&#x2212;</mo>
+                                                        <msup>
+                                                            <mi>K</mi>
+                                                            <mo>+</mo>
+                                                        </msup>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            ATPase
+                                            pump despite the concentration difference.(<a href="#R32"
+                                                role="doc-biblioref" data-xml-rid="R32"><i>32</i></a>) Among them, GLUT1
+                                            is expressed as the most common. The silencing of GLUT1 in TNBC by Sunhwa et
+                                            al. exhibits that GLUT1 promotes cell proliferation, migration, and invasion
+                                            by regulating HER and integrin signaling in TNBC cells.
+                                        </div>
+                                        <div role="paragraph">
+                                            Now we introduce a set of transcription factors named hypoxia-inducible
+                                            factors (HIFs). Since they emerge under the condition of hypoxia, we first
+                                            give the definition of the hypoxia state. Oxygen concentrations below 21% is
+                                            called hypoxia and is graded as: physiological hypoxia: 2–9%; mild hypoxia:
+                                            1–5%; hypoxia: 0.1%-1%, and anoxia: &#60 0.1%.(<a href="#R33"
+                                                role="doc-biblioref" data-xml-rid="R33"><i>33</i></a>)
+                                            Hypoxia-inducible factor 1(HIF-1) is composed of two subunits, i.e.,
+                                            HIF-1<math>
+                                                <semantics>
+                                                    <mi>&#x03B1;</mi>
+                                                </semantics>
+                                            </math>
+
+                                            and HIF-1<math>
+                                                <semantics>
+                                                    <mi>&#x03B2;</mi>
+                                                </semantics>
+                                            </math>
+                                            .(<a href="#R34" role="doc-biblioref" data-xml-rid="R34"><i>34</i></a>)
+                                            c-Myc is a transcription factor regulating multiple pathways involving
+                                            cancer metabolism and has a direct effect on GLUT1 expression, we combine
+                                            the discussion of c-Myc with HIF-1<math>
+                                                <semantics>
+                                                    <mi>&#x03B1;</mi>
+                                                </semantics>
+                                            </math> since the similar mechanisms.(<a href="#R35" role="doc-biblioref"
+                                                data-xml-rid="R35"><i>35</i></a>)
+                                            Firstly, the rate-limiting steps in glycolysis is accelerated by HIF-1<math>
+                                                <semantics>
+                                                    <mi>&#x03B1;</mi>
+                                                </semantics>
+                                            </math> or
+                                            c-Myc-induced hexokinase 2 and fructose-2,6-bisphosphate.(<a href="#R36"
+                                                role="doc-biblioref" data-xml-rid="R36"><i>36</i></a>) Secondly,
+                                            pyruvate dehydrogenase-mediated pyruvate mitochondrial metabolism is
+                                            suppressed with the induced pyruvate dehydrogenase kinase-1.(<a href="#R37"
+                                                role="doc-biblioref" data-xml-rid="R37"><i>37</i></a>) Thirdly, the
+                                            activity of LDHA is promoted and the activity of LDHB is suppressed, whose
+                                            functions will be discussed in later sections.(<a href="#R38"
+                                                role="doc-biblioref" data-xml-rid="R38"><i>38</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            Thioredoxin-inducing protein (TXNIP) is a protein that downregulates the
+                                            expression of GLUT1 and its induction is MondoA-dependent.(<a href="#R39"
+                                                role="doc-biblioref" data-xml-rid="R39"><i>39</i></a>) MondoA is a
+                                            transcription factor functions as a sensor that adapt cells to changes in
+                                            microenvironmental glycolytic changes, the work by Carrie et al. suggests
+                                            that MondoA likely accounts for the induction of TXNIP by glucose and the
+                                            TXNIP-dependent down-regulation of glucose uptake.(<a href="#R40"
+                                                role="doc-biblioref" data-xml-rid="R40"><i>40</i></a>, <a href="#R41"
+                                                role="doc-biblioref" data-xml-rid="R41"><i>41</i></a>) C-Myc
+                                            competitively
+                                            binds to the promotor region of TXNIP, upregulating the uptake of
+                                            glucose.(<a href="#R42" role="doc-biblioref"
+                                                data-xml-rid="R42"><i>42</i></a>, <a href="#R43" role="doc-biblioref"
+                                                data-xml-rid="R43"><i>43</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            Now we introduce two important molecules, mTOR and PKM2, whose corresponding
+                                            metabolic pathway enhances the uptake of glucose.(<a href="#R44"
+                                                role="doc-biblioref" data-xml-rid="R44"><i>44</i></a>) The mammalian
+                                            target of rapamycin (mTOR) is a kinase encoded by the MTOR gene, which
+                                            serves as a
+                                            component for the synthesis of two major protein complexes, mTORC1, and
+                                            mTORC2.(<a href="#R45" role="doc-biblioref"
+                                                data-xml-rid="R45"><i>45</i></a>) mTOR is able to control the
+                                            proliferation and growth of cells by responding to diverse environmental
+                                            signals.(<a href="#R46" role="doc-biblioref"
+                                                data-xml-rid="R46"><i>46</i></a>)
+                                            Similarly, USP6NL is a GTPase-activating protein that contributes to the
+                                            stabilization of the expression level of GLUT1 by suppressing GLUT1
+                                            endocytosis and the Akt-mediated degradation.(<a href="#R47"
+                                                role="doc-biblioref" data-xml-rid="R47"><i>47</i></a>) An illustration
+                                            of
+                                            the associations discussed above is depicted in <a href="#F1">Figure 1</a>
+                                            below.
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F1" class="graphic"><img
+                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/2.1 figure.jpg"
+                                                    height="3071" width="4333" aria-labelledby="F1" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 1</span>. The
+                                                        intake of glucose.
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <h3>
+                                            Intake of Glutamine
+                                        </h3>
+                                        <div role="paragraph">
+                                            Glutamine (Gln) is an <math>
+                                                <semantics>
+                                                    <mi>&#x03B1;</mi>
+                                                </semantics>
+                                            </math>
+                                            -amino acid used in multiple biochemistry processes,
+                                            especially the synthesis of proteins. In cancer, glutamine metabolism acts
+                                            as a carbon and nitrogen source.(<a href="#R48" role="doc-biblioref"
+                                                data-xml-rid="R48"><i>48</i></a>) Increased glutamine metabolism is
+                                            recognized as a hallmark of cancer. In cancer cells, glutamine is converted
+                                            to glutamate under the mitochondrial enzyme glutaminase, which is under the
+                                            regulation of the c-Myc factor.(<a href="#R49" role="doc-biblioref"
+                                                data-xml-rid="R49"><i>49</i></a><a href="#R50" role="doc-biblioref"
+                                                data-xml-rid="R50"><i></i></a> - <a href="#R51" role="doc-biblioref"
+                                                data-xml-rid="R51"><i>51</i></a>) The product glutamate then enters the
+                                            tricarboxylate acid (TCA) cycle in the form of <math>
+                                                <semantics>
+                                                    <mi>&#x03B1;</mi>
+                                                </semantics>
+                                            </math>-ketoglutarate as an
+                                            alternative source of carbon other than glucose and is finally converted to
+                                            malate.(<a href="#R52" role="doc-biblioref"
+                                                data-xml-rid="R52"><i>52</i></a>) The malate is then transported into
+                                            the cytoplasm to convert to pyruvate, which will be mentioned later, is a
+                                            precursor of lactate. Thus, the upregulated glutaminolysis contributes to
+                                            the production of lactate.
+                                        </div>
+                                        <div role="paragraph">
+                                            Of note, the glutaminolysis level is dependent on the tumor type. In our
+                                            case, the TNBC cells are glutamine dependent and the expression of
+                                            glutaminase was significantly associated with a low level of TILs and poor
+                                            disease-free survival in TNBCs presenting with lymph node metastasis and
+                                            high levels of TILs.(<a href="#R53" role="doc-biblioref"
+                                                data-xml-rid="R53"><i>53</i></a>) An illustration of the relationships
+                                            in glutaminolysis is shown in <a href="#F2">Figure 2</a>.
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F2" class="graphic"><img
+                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/Figure 2.jpg"
+                                                    height="3071" width="4333" aria-labelledby="F2" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 2</span>. The
+                                                        intake of glucose.
+                                                    </div>
+
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <h3>
+                                            Lactate Production
+                                        </h3>
+                                        <div role="paragraph">
+                                            From the analysis earlier, we conclude that there are 3 main sources for the
+                                            production of lactate: anaerobic OXPHOS, glycolysis, and glutaminolysis. The
+                                            common product of the three processes is pyruvate. Here we discuss the
+                                            involved elements in the conversion of pyruvate to lactate.
+                                        </div>
+                                        <div role="paragraph">
+                                            The conversion between pyruvate and lactate is controlled by a family of
+                                            enzymes called lactate dehydrogenases (LDHs).(<a href="#R54"
+                                                role="doc-biblioref" data-xml-rid="R54"><i>54</i></a>) There are 5 major
+                                            isoforms
+                                            of LDHs, and each of them is composed of subunits, namely LDH-M and
+                                            LDH-H.(<a href="#R55" role="doc-biblioref" data-xml-rid="R55"><i>55</i></a>)
+                                            The specified combination of each isoform is listed in <a href="#T1">Table
+                                                1</a>. LDH-M and
+                                            LDH-H are encoded by the LDHA gene and LDHB gene, respectively. Different
+                                            isoforms express in different locations, the LDHA isoform mainly expresses
+                                            in muscles and preferentially converts pyruvate to lactate, while the LDHB
+                                            isoform mainly expresses in the heart and brain and preferentially converts
+                                            lactate to pyruvate.(<a href="#R56" role="doc-biblioref"
+                                                data-xml-rid="R56"><i>56</i></a>) The overexpression of LDHA is a
+                                            necessity for
+                                            transformations mediated by transcriptional factor c-Myc.(<a href="#R57"
+                                                role="doc-biblioref" data-xml-rid="R57"><i>57</i></a>)
+                                        </div>
+                                        <div class="figure-wrap">
+                                            <figure id="T1" class="table">
+                                                <div class="table-wrap">
+                                                    <div class="collapsible-wrapper" aria-expanded="true">
+                                                        <table>
+                                                            <thead>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Isoform</b>
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        LDH1
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        LDH2
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        LDH3
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        LDH4
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        LDH5
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <b>Subunits</b>
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        H4
+                                                                    </td>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        H3M1
+                                                                    </td>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        H2M2
+                                                                    </td>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        H1M3
+                                                                    </td>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        M4
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <b>Alternative Name</b>
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        LDHB
+                                                                    </td>
+                                                                    <td data-xml-align="center" scope="col">
+
+                                                                    </td>
+                                                                    <td data-xml-align="center" scope="col">
+
+                                                                    </td>
+                                                                    <td data-xml-align="center" scope="col">
+
+                                                                    </td>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        LDHA
+                                                                    </td>
+
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Table 1</span>. The
+                                                        isoforms of LDHs.</div>
+
+
+                                                </figcaption>
+                                            </figure>
+
+                                            <a href="#T1" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
+                                        </div>
+                                        <div role="paragraph">
+                                            The forkhead box protein M1 (FoxM1) is a transcriptional factor ensuring the
+                                            fidelity of the cell division process and it supports the proliferation of
+                                            tumor cells by stimulating the expression of the antioxidant genes and
+                                            reducing oxidative stress.(<a href="#R58" role="doc-biblioref"
+                                                data-xml-rid="R58"><i>58</i></a>, <a href="#R59" role="doc-biblioref"
+                                                data-xml-rid="R59"><i>59</i></a>) Moreover, the increased expression
+                                            level
+                                            of FOXM1 binds to the promotor region of LDHA and thus upregulates the
+                                            activity of LDHA at mRNA level as well as protein level.(<a href="#R60"
+                                                role="doc-biblioref" data-xml-rid="R60"><i>60</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            The krüppel-like factor 4 (KLF4) is a transcription factor that inhibits
+                                            cancer EMT and metastasis via transcriptionally downregulating CAV-1
+                                            expression.(<a href="#R61" role="doc-biblioref"
+                                                data-xml-rid="R61"><i>61</i></a>)
+                                            KLF4 binds to the promoter regions of the LDHA gene, thus negatively
+                                            regulating the expression of LDHA.(<a href="#R62" role="doc-biblioref"
+                                                data-xml-rid="R62"><i>62</i></a>) An illustration of the associations
+                                            discussed above is depicted in <a href="#F3">Figure 3</a> below.
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F3" class="graphic"><img
+                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/Figure 3.jpg"
+                                                    height="3071" width="4333" aria-labelledby="F3" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 3</span>. The
+                                                        Production of Lactate.
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <h3>
+                                            Lactate Shuttling
+                                        </h3>
+                                        <div role="paragraph">
+                                            The monocarboxylate transporter family (MCT) is a family of transporters
+                                            expressed mainly on cell membranes that are encoded by solute carrier 16
+                                            (SLC16) genes and are vital for the intake and efflux of lactate.(<a
+                                                href="#R63" role="doc-biblioref" data-xml-rid="R63"><i>63</i></a>) MCTs
+                                            have various expression patterns depending on tissue type and
+                                            microenvironment, MCT1 and MCT4 are of vital importance where MCT1 is
+                                            bidirectional while MCT4 only controls the efflux of lactate.(<a href="#R64"
+                                                role="doc-biblioref" data-xml-rid="R64"><i>64</i></a>, <a href="#R65"
+                                                role="doc-biblioref" data-xml-rid="R65"><i>65</i></a>) The upregulation
+                                            of
+                                            MCT1 is directly linked to the oxidative metabolism of oxygenated tumor
+                                            cells as observed by Pierre et al.(<a href="#R66" role="doc-biblioref"
+                                                data-xml-rid="R66"><i>66</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            CD147 is a hypoxia-inducible small molecule transporter ancillary protein
+                                            that chaperones to the MCTs, which has the function of stabilizing their
+                                            expression levels.(<a href="#R67" role="doc-biblioref"
+                                                data-xml-rid="R67"><i>67</i></a>, <a href="#R68" role="doc-biblioref"
+                                                data-xml-rid="R68"><i>68</i></a>) According to Renaud et al., CD147
+                                            controls
+                                            the stability and functional plasma membrane insertion of the MCTs in many
+                                            tissues.(<a href="#R69" role="doc-biblioref"
+                                                data-xml-rid="R69"><i>69</i></a>)
+                                            Moreover, CD147 was shown to ensure the polarization of MCT1.(<a href="#R70"
+                                                role="doc-biblioref" data-xml-rid="R70"><i>70</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            The G-protein-coupled receptor 81 (GPR81), also named the hydrocarboxylic
+                                            acid receptor 1 (HCAR1), is reported to function as a receptor for lactate
+                                            and is able to mediate the anti-lipolytic effect of the lactate, the
+                                            activation of GPR81 by lactate directly leads to increased expression of
+                                            MCTs, CD147 and PGC-1.(<a href="#R71" role="doc-biblioref"
+                                                data-xml-rid="R71"><i>71</i></a>, <a href="#R72" role="doc-biblioref"
+                                                data-xml-rid="R72"><i>72</i></a>) An examination of tumors resected from
+                                            patients
+                                            with pancreatic cancer by Craig et al. indicated that 94% (148 of 158)
+                                            expressed high levels of GPR81.(<a href="#R73" role="doc-biblioref"
+                                                data-xml-rid="R73"><i>73</i></a>) A main regulator of GPR81 is the
+                                            signal
+                                            transducer and activator of transcription 3 (STAT3), which determines the
+                                            immune responses in the tumor microenvironment.(<a href="#R74"
+                                                role="doc-biblioref" data-xml-rid="R74"><i>74</i></a>) STAT3 is able to
+                                            bind to
+                                            the promotor region of GPR81, thus downregulating the expression of
+                                            GPR81.(<a href="#R75" role="doc-biblioref" data-xml-rid="R75"><i>75</i></a>)
+                                            An illustration of the associations discussed above is depicted in <a
+                                                href="#F4">Figure 4</a>
+                                            below.
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F4" class="graphic"><img
+                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/Figure 4.jpg"
+                                                    height="3071" width="4333" aria-labelledby="F4" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 4</span>. The
+                                                        Shuttling of Lactate.
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <h3>
+                                            Tumor Microenvironment Interaction Network
+                                        </h3>
+
+                                        <div role="paragraph">
+                                            Here we summarize the interlinked 4 networks. <a href="#F5">Figure 5</a>
+                                            depicts the overall
+                                            network.
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F5" class="graphic"><img
+                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/Figure 5.jpg"
+                                                    height="3071" width="4333" aria-labelledby="F5" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 5</span>. The
+                                                        glucose-lactate network.
+                                                    </div>
+
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+
+
+                                    </section>
+
+                                    <section id="sec-3" data-type="introduction">
+                                        <h3>
+                                            Cells in Tumor Microenvironment
+                                        </h3>
+                                        <div role="paragraph">
+                                            Tumor microenvironment consists of various types of cells, including tumor
+                                            cells, myeloid-derived suppressor cells, dendritic cells, fibroblast cells,
+                                            T lymphocyte cells, et cetera. Here we simplify our discussion to the
+                                            relationship among the cells along with the interaction between cells and
+                                            the tumor microenvironment, forming an interaction network. The tumor
+                                            microenvironment interaction network established above is integrated into
+                                            this cell-environment network model.
+                                        </div>
+                                        <h3>
+                                            Normal Cells
+                                        </h3>
+                                        <div role="paragraph">
+                                            Adipocytes are cells that store the energy as fat.(<a href="#R76"
+                                                role="doc-biblioref" data-xml-rid="R76"><i>76</i></a>) The need to
+                                            maintain a
+                                            constant supply of lipids and lipid precursors to fuel membrane production
+                                            in the highly proliferating cancer cell population is widely acknowledged,
+                                            adipocytes contribute to tumor progression as a fuel reservoir. Moreover,
+                                            adipocytes are able to secrete growth factors and hormones that facilitate
+                                            tumor growth.(<a href="#R77" role="doc-biblioref"
+                                                data-xml-rid="R77"><i>77</i></a>, <a href="#R78" role="doc-biblioref"
+                                                data-xml-rid="R78"><i>78</i></a>) According to cancer epidemiology
+                                            surveys, obesity is
+                                            estimated to contribute to up to 20% of cancer-related deaths.(<a
+                                                href="#R79" role="doc-biblioref" data-xml-rid="R79"><i>79</i></a>, <a
+                                                href="#R80" role="doc-biblioref" data-xml-rid="R80"><i>80</i></a>) Thus,
+                                            elucidating the relationship between adipocytes and cancer cells is of
+                                            significance.
+                                        </div>
+                                        <div role="paragraph">
+                                            Stomal cells are usually found in bone marrows and the interaction between
+                                            stromal cells and tumor cells play a critical role in cancer growth and
+                                            progression.(<a href="#R81" role="doc-biblioref"
+                                                data-xml-rid="R81"><i>81</i></a>) As the tumor progresses, stromal cells
+                                            transform into
+                                            tumor-associated fibroblasts (CAFs) or tumor-associated adipocytes and
+                                            further enhance the tumor invasiveness.(<a href="#R82" role="doc-biblioref"
+                                                data-xml-rid="R82"><i>82</i></a>) CAFs make up the bulk of cancer
+                                            stroma and affect the tumor microenvironment by promoting cancer initiation,
+                                            angiogenesis, invasion, and metastasis.(<a href="#R83" role="doc-biblioref"
+                                                data-xml-rid="R83"><i>83</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            According to the definition provided by NIH, a fibroblast is a type of cell
+                                            that contributes to the formation of connective tissue, a fibrous cellular
+                                            material that supports and connects other tissues or organs in the body.
+                                            Fibroblasts secrete collagen proteins that help maintain the structural
+                                            framework of tissues.(<a href="#R84" role="doc-biblioref"
+                                                data-xml-rid="R84"><i>84</i></a>) The transformation from normal
+                                            fibroblasts to CAFs
+                                            is a basic link in tumor invasion.(<a href="#R85" role="doc-biblioref"
+                                                data-xml-rid="R85"><i>85</i></a>) The aged fibroblasts express IL6 and
+                                            multiple suppressing signals to promote tumor invasion. IL6 limits the
+                                            maturation of dendritic cells and stimulates angiogenesis.(<a href="#R86"
+                                                role="doc-biblioref" data-xml-rid="R86"><i>86</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            Since the blood vessel functions as the transportation station for tumor
+                                            cells by delivering nutrition and providing the environment for metastasis,
+                                            we involve the blood vessel in our discussion. The cells in the tumor
+                                            microenvironment stimulate angiogenesis by secreting vascular endothelial
+                                            growth factor (VEGF) and fibroblast growth factor.(<a href="#R87"
+                                                role="doc-biblioref" data-xml-rid="R87"><i>87</i></a>)
+                                        </div>
+                                        <h3>
+                                            Tumor-related Cells
+                                        </h3>
+                                        <div role="paragraph">
+                                            Myeloid-derived suppressor cell (MDSC) is cancer-promoting by limiting the
+                                            function and proliferation of T cells and promoting the differentiation of T
+                                            regulatory cells, thus inducing angiogenesis.(<a href="#R88"
+                                                role="doc-biblioref" data-xml-rid="R88"><i>88</i></a>) However, the
+                                            underlying
+                                            mechanism of how MDSC thrives by metabolism competition in the glycolysis
+                                            tumor microenvironment is yet to be understood.
+                                        </div>
+                                        <div role="paragraph">
+                                            T lymphocyte is one of the important white blood cells of the immune system
+                                            and plays a central role in the adaptive immune response.(<a href="#R89"
+                                                role="doc-biblioref" data-xml-rid="R89"><i>89</i></a>, <a href="#R90"
+                                                role="doc-biblioref" data-xml-rid="R90"><i>90</i></a>) As the tumor
+                                            progresses, metabolic competition is introduced, which damages the
+                                            activities of immune cells.(<a href="#R91" role="doc-biblioref"
+                                                data-xml-rid="R91"><i>91</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            Dendritic cells (DCs) are bone marrow-derived cells that seed all tissues,
+                                            in which they sample their environment and transmit information to adaptive
+                                            immune cells.(<a href="#R92" role="doc-biblioref"
+                                                data-xml-rid="R92"><i>92</i></a>) Tumor-derived factors can alter DC
+                                            maturation to yield cells
+                                            that indirectly help tumor growth.(<a href="#R93" role="doc-biblioref"
+                                                data-xml-rid="R93"><i>93</i></a>) The experiment by Isabelle et al.
+                                            concluded that the infiltration by pDC of primary localized breast tumor
+                                            correlates with an adverse outcome, suggesting their contribution to breast
+                                            cancer progression.(<a href="#R94" role="doc-biblioref"
+                                                data-xml-rid="R94"><i>94</i></a>) The resistance to DC proliferation and
+                                            antigen
+                                            presentation may induce resistance to T cells’ activation in the tumor
+                                            microenvironment.(<a href="#R95" role="doc-biblioref"
+                                                data-xml-rid="R95"><i>95</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            A macrophage is categorized as a white blood cell, which consumes and
+                                            digests pathogens. The two most intensively studied macrophages are M1
+                                            macrophage and M2 macrophage, they are inflammation-promoting and
+                                            inflammation-suppressing respectively.(<a href="#R96" role="doc-biblioref"
+                                                data-xml-rid="R96"><i>96</i></a>) M2 macrophages secrete immune
+                                            suppressing cell factors and suppress the toxicity of TIL cells, promoting
+                                            the differentiation of T regulatory cells.(<a href="#R97"
+                                                role="doc-biblioref" data-xml-rid="R97"><i>97</i></a>)
+                                        </div>
+                                        <div role="paragraph">
+                                            In summary, the effect of tumor cells on immune cells is: creating a lactate
+                                            overexpressed environment, in which the dysfunction of mitochondria and
+                                            accumulated ROS lead to the apoptosis of immune cells.(<a href="#R98"
+                                                role="doc-biblioref" data-xml-rid="R98"><i>98</i></a>) <a
+                                                href="#F6">Figure 6</a> depicts
+                                            the relationship among cells.
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F6" class="graphic"><img
+                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/2.6 figure.jpg"
+                                                    height="3071" width="4333" aria-labelledby="F6" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 6</span>. The
+                                                        Cells in Tumor Microenvironment.
+                                                    </div>
+
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+
+                                    </section>
+
+                                    <section id="sec-4" data-type="introduction">
+                                        <h2>
+                                            Conclusions
+                                        </h2>
+                                        <div role="paragraph">
+                                            In this article, we constructed a network among gene-regulated molecules and
+                                            a cell interaction network concomitantly. We will use mathematical tools
+                                            from network theory to conduct a more detailed analysis in the future. We
+                                            hope our work can elucidate the current interaction relationships for future
+                                            researchers.
+                                        </div>
+
+                                    </section>
+
+
+
+
+
+
+                                    <section id="acknowledgments" role="doc-acknowledgments">
+                                        <h2>Acknowledgments</h2>
+                                        <div role="paragraph">
+                                            <b>Submit: </b>The manuscript is prepared for iGEM2022, in which our team is
+                                            disqualified. Due to the lack of funding, we couldn't make a pilot device.
+                                            However, we made a software that can be used for image reconstruction, which
+                                            can be found in the Appendix.
+                                        </div>
+                                        <div role="paragraph">
+                                            <b>Author contributions:</b> Conceptualization, Ruotao Yu,
+                                            Shengqi Liu, Yichen Wang; draft preparation, Ruotao Yu, Shengqi Liu, Yichen
+                                            Wang, Jiarui Chen, Qianhui Li; writing, review, and editing, Ruotao Yu,
+                                            Shengqi Liu, Yichen Wang, Jiarui Chen, Qianhui Li; figure: Ruotao Yu,
+                                            Shengqi Liu, Yichen Wang.
+
+
+                                        </div>
+                                        <div role="paragraph"><b>Competing interests:</b> no competing
+                                            interests.
+                                        </div>
+                                        <div role="paragraph"><b>Data and materials availability:</b> All data
+                                            needed to evaluate the conclusions in the paper are present in the
+                                            paper
+                                            and/or the Supplementary Materials.
+                                        </div>
+                                    </section>
+                                </div>
+                            </section>
+
+                            <section id="backmatter" data-extent="backmatter">
+                                <div id="bibliography_exist_update" class="core-container">
+                                    <!-- supplementary materials -->
+                                    <section id="supplementary-materials" class="core-supplementary-materials">
+
+                                        <h2>Supplementary Materials</h2>
+                                        <section id="sec-5-1">
+                                            <h3>Appendix:</h3>
+                                            <div class="core-supplementary-material">
+                                                <div class="core-description">
+                                                    <div>Figures: </div>Figure 1 - Figure 6
+
+                                                </div>
+                                                <div class="core-link">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure.rar"
+                                                                download="Appendix">Download</a>
+                                                        </li>
+                                                        <li>1.27 MB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </section>
+
+
+                                    </section>
+
+
+                                    <section id="bibliography" role="doc-bibliography">
+                                        <div id="citation_insert" role="list">
+
+
+
+
+
+
+
+
+
+                                            <script type="application/javascript">
+                                                citations = [
+
+                                                ];
+                                                iterate_num = citations.length;
+                                                html_model_num1 = '<div role="doc-biblioentry listitem" data-has="label"><div class="label">';
+                                                html_model_num2 = '</div><div id="R';
+                                                html_model_content_front = '" class="citations"><div class="citation"><div class="citation-content">';
+                                                html_model_content_end = '</div><div class="external-links"><div><a href="" target="_blank"></a></div></div></div></div></div>';
+                                                final_insert = '';
+                                                for (i = 0; i < iterate_num; i++) {
+                                                    final_insert += html_model_num1 + String((i + 1)) + html_model_num2 + String((i + 1)) + html_model_content_front + citations[i] + html_model_content_end;
+                                                }
+                                                document.getElementById("citation_insert").innerHTML = '<h2>REFERENCES AND NOTES</h2>' + final_insert;
+
+
+
+                                            </script>
+
+
+
+
+
+                                        </div>
+                                    </section>
+                            </section>
+
+
+
+                    </div>
+            </div>
+            </article>
+
+
+            <!-- add pdf file -->
+            <div data-extent="article-wrapper">
+                <div class="core-container"></div>
+                <div class="after-credits">
+                    <div class="core-container">
+                        <!-- point to itself -->
+                        <a href="#">
+                            <span>View full text</span>
+                        </a>
+                        <!-- point to the pdf file -->
+                        <a href="/content_files/projects/competition/undergraduate/COMAP_2021/competition1print.pdf"
+                            class="pdf_link_update">
+                            <span>Download PDF</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div role="navigation" title="Sticky Navigation" class="st-header">
+                <div class="st-header__content">
+                    <div class="st-header__item st-header__menu"></div>
+                    <div class="st-header__current st-header__item">
+                        <div class="st-header__title"></div>
+                    </div>
+                    <div class="st-header__share st-header__item">
+                        <div title="SHARE" data-toggle="tooltip" class="share-dropblock dropdown">
+                            <a id="sticky-header-dropBlock" href="#" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                                <span class="sr-only">SHARE</span>
+                                <i aria-hidden="true" class="icon-share"></i>
+                            </a>
+
+                            <!-- share icons -->
+                            <div aria-labelledby="sticky-header-dropBlock" class="dropdown-menu">
+                                <ul class="rlist--inline addthis addthis_toolbox">
+                                    <li>
+                                        <a href="#" aria-label="Share on Facebook" data-id="article-share-facebook"
+                                            role="link" target="_blank" title="Share on Facebook"
+                                            class="btn btn--facebook addthis_button_facebook">
+                                            <i aria-hidden="true" class="icon-share-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Share on Twitter" data-id="article-share-twitter"
+                                            role="link" target="_blank" title="Share on Twitter"
+                                            class="btn btn--twitter addthis_button_twitter"><i aria-hidden="true"
+                                                class="icon-share-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Share on WeChat" data-id="article-share-wechat"
+                                            role="link" target="_blank" title="Share on WeChat"
+                                            class="btn btn--wechat addthis_button_wechat"><i aria-hidden="true"
+                                                class="icon-wechat"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Share on email" data-id="article-share-email"
+                                            role="link" target="_blank" title="Share on email"
+                                            class="btn btn--email addthis_button_mailto">
+                                            <i aria-hidden="true" class="icon-share-mail"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="st-header__alerts st-header__item"></div>
+                    <div class="st-header__favorite st-header__item"></div>
+                    <div class="st-header__formats st-header__item"></div>
+
+                    <!-- need to be specified -->
+                    <div class="st-header__nav st-header__item">
+                        <nav title="Content Navigation" class="content-navigation">
+                            <!-- the previous article -->
+                            <a href="/" title="previous article title"
+                                class="content-navigation__prev previous_article_link_update">
+                                <div aria-hidden="true" class="content-navigation__hint">
+                                    <div class="content-navigation__hint__content">
+                                        <h6>PREVIOUS ARTICLE</h6>
+                                        <div class="previous_article_title_update">previous article title</div>
+                                    </div>
+                                </div>
+                                <i aria-hidden="true" class="icon-arrow-left"></i>
+                                <span>contentNavigation.previous.default</span>
+                            </a>
+
+                            <!-- the next article -->
+                            <a href="/" title="next article title"
+                                class="content-navigation__next next_article_link_update">
+                                <div aria-hidden="true" class="content-navigation__hint">
+                                    <div class="content-navigation__hint__content">
+                                        <h6>NEXT ARTICLE</h6>
+                                        <div class="next_article_title_update">next article title</div>
+                                    </div>
+                                </div>
+                                <span>contentNavigation.next.default</span>
+                                <i aria-hidden="true" class="icon-arrow-right"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- templates for the sticky navigator for different screen sizes -->
+            <template id="mobile_sticky_template">
+                <div class="sticky-menu">
+                    <nav title="Sticky Menu Navigation">
+                        <a href="#" title="Article Contents" class="sticky-menu__sections">
+                            <i aria-hidden="true" class="icon-sections"></i>
+                        </a>
+                        <span id="navigationReplacer"></span>
+                    </nav>
+                </div>
+            </template>
+
+            <template id="figure_nav_template">
+                <a href="#" class="open-in-viewer btn btn-dark figure-pop-btn">
+                    <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                    <span>Open in viewer</span>
+                </a>
+            </template>
+
+            <template id="fv_panel_template" data-shareSocial="Share on social media" data-download="Download figure">
+                <div class="fv__panel js--hidden">
+                    <div class="fv__panel__header">
+                        <a href="#" title="Close panel" class="fv__panel__close">
+                            <i aria-hidden="true" class="icon-close"></i>
+                        </a>
+                    </div>
+                    <div class="fv__panel__title"></div>
+                    <div class="fv__panel__text">
+                        <div class="fv__panel__contentTitle"></div>
+                        <div class="fv__panel__contentText"></div>
+                    </div>
+                </div>
+            </template>
+
+            <template id="fv_directory_template" data-overlay="View figure">
+                <div class="fv__directory">
+                    <div class="fv__header">
+                        <nav class="tab__nav"></nav><a href="#" title="Close figure viewer" class="fv__close"><i
+                                aria-hidden="true" class="icon-close"></i></a>
+                    </div>
+                    <div class="fv__content tab__content"></div>
+                </div>
+            </template>
+            <template id="fv_directory_tabItem_template" data-figures="Figures" data-others="Others"
+                data-tables="Tables"><button role="tab" data-toggle="tab" class="tab__nav__item"></button></template>
+            <template id="fv_lightbox_template" data-sr-back="Go to figure location within the article"
+                data-sr-closeAlt="Close" data-sr-download="Toggle download panel"
+                data-sr-info="Toggle information panel" data-sr-panel="Close panel" data-sr-share="Toggle share panel"
+                data-sr-zoom="Zoom" data-text-close="Back to article" data-text-nav-figures="All figures"
+                data-text-nav-others="All others" data-text-nav-tables="All tables"
+                data-text-viewAll="View all material" data-title-back="Back to article" data-title-closeAlt="Close"
+                data-title-download="Download" data-title-info="Info" data-title-share="Share"
+                data-title-zoom="Zoom"></template>
+            <template id="fv_toolbar_template">
+                <div class="fv__toolbar__info">
+                    <p class="fv__toolbar__contentText"></p><strong
+                        class="fv__toolbar__contentTitle uppercase"></strong>
+                </div>
+            </template>
+            <template id="toCitationLink" data-citation="REFERENCE" data-footnote="FOOTNOTE">
+                <div class="to-citation__wrapper"><a class="to-citation"><i aria-hidden="true"
+                            class="icon-return"></i><span>GO TO</span></a></div>
+            </template>
+            <template id="toCitationButton" data-citation="REFERENCE" data-footnote="FOOTNOTE">
+                <div class="to-citation__wrapper"><button class="to-citation"><i aria-hidden="true"
+                            class="icon-return"></i><span>GO TO</span></button></div>
+            </template>
+            <template id="toCitationAccordion" data-collapse-citation="HIDE REFERENCES"
+                data-expand-citation="SEE ALL REFERENCES" data-collapse-footnote="HIDE FOOTNOTES"
+                data-expand-footnote="SEE ALL FOOTNOTES">
+                <div class="to-citation__wrapper"><button aria-controls="aria-controls" aria-expanded="false"
+                        aria-haspopup="true" aria-label="Toggle citations menu" class="to-citation__toggle"><i
+                            aria-hidden="true" class="icon-plus"></i><span data-expand-title="data-expand-title"
+                            data-collapsed-title="data-collapsed-title"
+                            class="accordion__toggle__title"></span></button>
+                    <div role="menu" aria-label="links" class="to-citation__accordion">
+                        <ul></ul>
+                    </div>
+                </div>
+            </template>
+            <template id="toCitationAccordionItem">
+                <li><a class="to-citation"><i aria-hidden="true" class="icon-return"></i><span></span></a></li>
+            </template>
+            <template id="citations_truncate_template">
+                <div class="citations-truncation"><button data-label-expand="Show all references"
+                        data-label-collapse="Show fewer" class="btn btn--inverse"><span>Show all
+                            references</span></button></div>
+            </template>
+            <template id="collateral_texts_template" data-references="References" data-figure="GO TO FIGURE"
+                data-media="GO TO MEDIA" data-more="More" data-original="GO TO ORIGINAL" data-table="GO TO TABLE"
+                data-inViewer="OPEN IN VIEWER" data-allInViewer="Open all in viewer"><svg height="24px"
+                    viewBox="0 0 24 24">
+                    <ellipse cx="13.735" cy="7.5" rx="5.282" ry="5.25" fill="#F9A342"></ellipse>
+                    <ellipse cx="7.59" cy="12.536" rx="4.528" ry="4.5" fill="#3B86C6"></ellipse>
+                    <ellipse cx="15.244" cy="18" rx="3.773" ry="3.75" fill="#456799"></ellipse>
+                </svg><span>Request permissions</span></template><template id="collapsible_authors_template"><button
+                    aria-expanded="false" data-expandable="all" data-label-expand="Expand All"
+                    data-label-collapse="Collapse All" class="collateral-contributors-control"><span>Expand
+                        All</span></button></template>
+            <template id="collapsible_tables_collapse_template">
+                <div class="collapsible-figure-btn__wrapper expanded"><button
+                        class="btn collapsible-figure-btn btn--inverse"><span>Collapse</span><i aria-hidden="true"
+                            class="icon-arrow-up"></i></button></div>
+            </template>
+            <template id="collapsible_tables_expand_template">
+                <div class="collapsible-figure-btn__wrapper collapsed"><button aria-expanded="aria-expanded"
+                        class="btn collapsible-figure-btn btn--inverse"><span>Expand for more</span><i
+                            aria-hidden="true" class="icon-arrow-down"></i></button></div>
+            </template>
+            <template id="sections_navbar_button_template"><button title="Toggle sections navigation"
+                    class="sections-navbar__trigger"><i aria-hidden="true"
+                        class="icon-sections"></i></button></template>
+        </div>
+        </main>
+
+        <footer class="footer">
+            <section class="footer__middle">
+                <div class="footer__slider">
+                    <div data-slider-vport="screen-xl"
+                        class="slideshow--multiple-items-inview px-0 freemode-slider viewport-slider container-fluid justify-content-lg-start text-xl px-xl-0 center-slider">
+                        <div class="slideshow">
+                            <a href="#afterSlideshow-j3n" class="sr-only sr-only-focusable">Skip slideshow</a>
+                            <div data-loop="true" data-items="auto" data-slideby="1" data-autoheight="false"
+                                data-responsive="" data-speed="2000" data-autoplay="false" data-animation="slide"
+                                data-indicators="false" data-arrow="false" data-controls="false" data-stagepadding="0"
+                                data-label="Slideshow" class="swiper-container" data-pause-slide="Pause slideshow"
+                                data-play-slide="Play slideshow" data-go-to-slide="Go to slide:"
+                                data-next-slide="Go to next slide" data-prev-slide="Go to previous slide">
+                                <div class="swiper-wrapper">
+                                    <!-- potential logos -->
+                                    <div class="swiper-slide">
+                                        <!-- <a href="/journal/science" title="Science Journal Logo" class="footer__slider__link">
+                                <svg width="117" height="33" viewBox="0 0 117 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                        <path d="M3.04529 30.2166L1.70536 32.3009H0.243623L0 21.8181H0.974492C2.67985 26.5384 5.2988 31.0748 10.4149 31.0748C14.0692 31.0748 15.8964 28.8066 15.8964 25.435C15.8964 22.7377 14.5565 20.6534 11.8766 19.4886C9.62311 18.5078 7.97866 17.8948 5.66424 16.7913C2.61895 15.3813 0.791775 12.8679 0.791775 8.94456C0.791775 4.22426 4.44612 0.668701 9.31858 0.668701C11.4503 0.668701 14.0692 1.58824 15.531 2.8143L16.81 0.791307H18.2717L18.5154 10.9062H17.5409C15.8355 6.00203 13.8256 2.07866 8.4659 2.07866C7.30869 2.07866 4.32431 3.12081 4.32431 6.61506C4.32431 9.31238 5.48152 10.9062 7.97866 12.3775C9.98855 13.6036 12.0593 14.094 13.8256 15.0135C17.1754 16.73 19.6117 18.5078 19.6117 23.1055C19.6117 28.5614 15.5919 32.4235 10.1104 32.4235C6.76054 32.4235 4.32431 31.32 3.04529 30.2166Z" fill="#959595"></path>
+                                        <path d="M20.7686 21.6342C20.7686 16.1169 24.2402 11.0288 29.7826 11.0288C33.9242 11.0288 35.995 13.4809 35.995 16.2395C35.995 17.7108 35.1423 18.7529 33.7415 18.7529C32.9497 18.7529 31.3662 18.2625 31.3662 16.5461C31.3662 14.6457 31.9143 14.6457 31.9143 13.7874C31.6707 12.5001 31.0616 12.1936 29.7217 12.1936C27.3464 12.1936 25.0929 14.5844 25.0929 21.3277C25.0929 26.7223 27.0419 30.4618 30.4526 30.4618C33.1933 30.4618 34.8378 29.0518 36.1168 26.4771L36.9695 27.0901C35.5078 30.0326 32.6452 32.4234 29.4781 32.4234C23.692 32.3621 20.7686 27.8257 20.7686 21.6342Z" fill="#959595"></path>
+                                        <path d="M37.5182 30.9523C38.2491 30.891 38.7973 30.8297 39.3454 30.6458C40.0763 30.4006 40.4417 29.5424 40.4417 28.6228V15.8106C40.3808 14.891 40.0154 14.0941 39.3454 13.6037C38.8582 13.2358 37.64 12.8067 36.9092 12.7454V11.8872L44.0961 11.3968L44.3397 11.7033V28.3776C44.3397 29.2971 44.7051 30.0941 45.436 30.4619C46.045 30.7684 46.7759 30.9523 47.2632 31.0136V31.9332H37.5182V30.9523ZM39.4063 3.24351C39.4063 1.71094 40.5635 0.423584 42.0253 0.423584C43.6697 0.423584 44.766 1.64964 44.766 3.0596C44.7051 4.59217 43.6088 5.94082 42.0253 5.94082C40.5635 5.94082 39.4063 4.71477 39.4063 3.24351Z" fill="#959595"></path>
+                                        <path d="M47.0195 21.5731C47.0195 16.2398 50.1866 11.0903 55.5463 11.0903C61.0888 11.0903 63.1596 15.1363 63.1596 19.6727V20.0405H51.3438V20.5309C51.3438 26.2934 52.9883 30.4007 57.1299 30.4007C60.1143 30.4007 61.2106 29.1746 62.6723 26.416L63.4641 26.9677C62.0633 30.1555 59.3225 32.3624 55.9727 32.3624C49.8821 32.3624 47.0195 27.4581 47.0195 21.5731ZM58.9571 18.9984C58.9571 15.8106 58.348 12.1325 55.5463 12.1325C53.171 12.1325 51.4048 14.8911 51.3438 19.121L58.9571 18.9984Z" fill="#959595"></path>
+                                        <path d="M63.464 30.9522C64.1948 30.8909 64.743 30.8296 65.2911 30.6457C66.022 30.4005 66.3874 29.6035 66.3874 28.6227V15.8104C66.3265 14.8909 65.9611 13.91 65.2911 13.4196C64.8648 13.0518 63.9512 12.7453 63.2812 12.684V11.8257L70.0418 11.3353L70.3463 11.6418V14.707H70.4072C71.9299 13.0518 73.4525 11.0288 76.8023 11.0288C80.4567 11.0288 82.223 13.8487 82.223 18.0786V28.3775C82.223 29.3583 82.5275 30.0326 83.2584 30.4005C83.8065 30.6457 84.3547 30.8296 85.0855 30.8909V31.8104H75.3406V30.8909C76.0106 30.8296 76.6805 30.7683 77.1678 30.5844C77.8986 30.3392 78.2032 29.5422 78.2032 28.5614V18.0173C78.2032 14.9522 76.7414 13.297 75.0361 13.297C72.2953 13.297 70.7118 15.1974 70.3463 16.1782V28.3775C70.3463 29.3583 70.7118 30.0326 71.3817 30.4005C71.9299 30.707 72.5998 30.8909 73.2089 30.9522V31.8717H63.5249V30.9522H63.464Z" fill="#959595"></path>
+                                        <path d="M84.2939 21.6342C84.2939 16.1169 87.7656 11.0288 93.308 11.0288C97.4496 11.0288 99.5204 13.4809 99.5204 16.2395C99.5204 17.7108 98.6677 18.7529 97.2669 18.7529C96.4751 18.7529 94.8916 18.2625 94.8916 16.5461C94.8916 14.6457 95.4397 14.6457 95.4397 13.7874C95.1961 12.5001 94.587 12.1936 93.2471 12.1936C90.8718 12.1936 88.6183 14.5844 88.6183 21.3277C88.6183 26.7223 90.5672 30.4618 93.978 30.4618C96.7187 30.4618 98.3632 29.0518 99.6422 26.4771L100.495 27.0901C99.0331 30.0326 96.1706 32.4234 93.0035 32.4234C87.1565 32.3621 84.2939 27.8257 84.2939 21.6342Z" fill="#959595"></path>
+                                        <path d="M100.556 21.5731C100.556 16.2398 103.723 11.0903 109.082 11.0903C114.625 11.0903 116.696 15.1363 116.696 19.6727V20.0405H104.88V20.5309C104.88 26.2934 106.524 30.4007 110.666 30.4007C113.65 30.4007 114.747 29.1746 116.208 26.416L117 26.9677C115.599 30.1555 112.859 32.3624 109.509 32.3624C103.418 32.3624 100.556 27.4581 100.556 21.5731ZM112.493 18.9984C112.493 15.8106 111.884 12.1325 109.082 12.1325C106.707 12.1325 104.941 14.8911 104.88 19.121L112.493 18.9984Z" fill="#959595"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="117" height="32" fill="white" transform="translate(0 0.423584)"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <span id="afterSlideshow-j3n" tabindex="-1"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- note there are 2 icon clusters -->
+            <section class="footer__top my-2x mt-md-2_5x mt-xl-3x">
+                <div class="container-fluid">
+                    <div class="row align-items-start">
+                        <div class="first-col col-12 col-xl-10">
+                            <div
+                                class="footer__social-media__wrapper d-flex d-xl-none justify-content-center justify-content-xl-start text-center d-block d-xl-none text-xl-left border-darker-gray border-bottom pb-3">
+                                <!-- appears in smaller screen -->
+                                <div class="footer__social-media">
+                                    <h6 class="footer__social-media__title text-uppercase mb-3">Follow Update</h6>
+                                    <ul role="list" class="list-inline footer__social-media__list">
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://www.facebook.com/yuruotao" title="Facebook"
+                                                target="_blank">
+                                                <i aria-hidden="true" class="icon-facebook"></i></a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://twitter.com/yuruotao" title="Twitter" class="text-md"
+                                                target="_blank">
+                                                <i aria-hidden="true" class="icon-twitter"></i></a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://www.instagram.com/yu_ruotao" title="Instagram"
+                                                class="text-xl" target="_blank">
+                                                <i aria-hidden="true" class="icon-instagram"></i></a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://www.youtube.com/@yuruotao" title="YouTube" target="_blank">
+                                                <i aria-hidden="true" class="icon-youtube"></i></a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <!-- create a email respond html -->
+                                            <a href="/" title="RSS feeds" class="text-md">
+                                                <i aria-hidden="true" class="icon-rss"></i></a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://mp.weixin.qq.com/s/1lIi0cRLwRmCaA9uSep1yw" title="WeChat"
+                                                class="text-md" target="_blank">
+                                                <i aria-hidden="true" class="icon-wechat"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="footer__sitemap">
+                                <nav class="footer__sitemap__nav d-flex flex-wrap">
+                                    <ul role="list" class="list-unstyled footer__sitemap__list d-flex flex-column mb-0">
+                                        <!-- create news webpage -->
+                                        <li role="listitem" class="footer__sitemap__list-item--heading mb-3">
+                                            <a href="/index.html" class="font-weight-bold text-uppercase">NEWS</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="/index.html">All</a>
+                                        </li>
+                                    </ul>
+
+                                    <ul role="list" class="list-unstyled footer__sitemap__list d-flex flex-column mb-0">
+                                        <li role="listitem" class="footer__sitemap__list-item--heading mb-3">
+                                            <!-- create an about webpage -->
+                                            <a href="/ABOUT.html" class="font-weight-bold text-uppercase">ABOUT</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="/ABOUT.html">Why The Website</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="/index.html" target="_blank">Contents</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="/resume.html">About the Author</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- create help webpages -->
+                                    <ul role="list" class="list-unstyled footer__sitemap__list d-flex flex-column mb-0">
+                                        <li role="listitem" class="footer__sitemap__list-item--heading mb-3">
+                                            <a href="/ABOUT.html" class="font-weight-bold text-uppercase">HELP</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="/ABOUT.html">FAQs</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="/message.html">Subscriptions</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="/message.html">Contact</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- find 4 related sites -->
+                                    <ul role="list" class="list-unstyled footer__sitemap__list d-flex flex-column mb-0">
+                                        <li role="listitem" class="footer__sitemap__list-item--heading mb-3">
+                                            <a class="font-weight-bold text-uppercase">RELATED SITES</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="https://english.gxu.edu.cn/" target="_blank">Guangxi
+                                                University</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="https://www.wikipedia.org/" target="_blank">wikipedia</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="https://github.com/" target="_blank">Github</a>
+                                        </li>
+                                        <li role="listitem" class="footer__sitemap__list-item mb-1">
+                                            <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!-- Bottom right icons with link -->
+                        <!-- check the logos and change some -->
+                        <div class="second-col col-12 col-xl-2 text-center text-xl-left">
+                            <div
+                                class="footer__social-media__wrapper d-none d-xl-flex justify-content-center justify-content-xl-start text-center text-xl-left border-darker-gray border-bottom pb-2">
+                                <div class="footer__social-media">
+                                    <h6 class="footer__social-media__title text-uppercase mb-3">Follow Update</h6>
+                                    <ul role="list" class="list-inline footer__social-media__list">
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://www.facebook.com/yuruotao" title="Facebook"
+                                                target="_blank">
+                                                <i aria-hidden="true" class="icon-facebook"></i></a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://twitter.com/yuruotao" title="Twitter" class="text-md"
+                                                target="_blank">
+                                                <i aria-hidden="true" class="icon-twitter"></i></a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://www.instagram.com/yu_ruotao" title="Instagram"
+                                                class="text-xl" target="_blank">
+                                                <i aria-hidden="true" class="icon-instagram"></i></a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://www.youtube.com/@yuruotao" title="YouTube" target="_blank">
+                                                <i aria-hidden="true" class="icon-youtube"></i></a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <!-- create a email respond html -->
+                                            <a href="/message.html" title="Email" class="text-md">
+                                                <i aria-hidden="true" class="icon-rss"></i>
+                                            </a>
+                                        </li>
+                                        <li role="listitem" class="list-inline-item footer__social-media__list-item">
+                                            <a href="https://mp.weixin.qq.com/s/1lIi0cRLwRmCaA9uSep1yw" title="WeChat"
+                                                class="text-md" target="_blank">
+                                                <i aria-hidden="true" class="icon-wechat"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- right bottom footer -->
+                            <div class="footer__copyright text-center text-xl-left border-darker-gray border-top pt-4">
+                                <div class="footer__logo-wrapper">
+                                    <a href="/index.html" target="_blank" title="Visit the homepage">
+
+                                        <!-- add the svg file of logo -->
+                                        <img src="/resources/icon_svg/skmp_svg_black.svg" alt="the logo of yuruotao.com"
+                                            class="footer__logo" />
+                                    </a>
+                                </div>
+                                <p class="mt-4 mb-0 text-light-gray">© yuruotao.com</p>
+                                <p class="mt-4 mb-0 text-light-gray">All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- the button that is responsible for going back to the top -->
+                <div data-show-after="400" class="back-to-top back-to-top--align-right">
+                    <button title="Back to top" data-snap=""
+                        class="back-to-top__action position-relative p-0 m-0 border-0 d-flex flex-column align-items-center justify-content-center">
+                        <svg viewBox="0 0 36 36" class="position-relative">
+                            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                class="back-to-top__action__ring-bg"></path>
+                            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                stroke-dasharray="95.90106007067138, 100" class="back-to-top__action__ring"></path>
+                        </svg>
+                        <span class="back-to-top__action-icon position-absolute d-flex">
+                            <i alt="Back to top" aria-hidden="true" class="icon-arrow-up"></i>
+                        </span>
+                        <span class="sr-only">back to top</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="footer__bottom">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-12 text-center text-xl-left">
+                            <ul role="list" class="list-inline footer__copyright__links border-darker-gray border-top">
+                                <li role="listitem" class="list-inline-item mr-1">
+                                    <a href="/ABOUT.html" title="Terms of Service">Terms of Service</a>
+                                </li>
+                                <li role="listitem" class="list-inline-item mr-1">
+                                    <a href="/ABOUT.html" title="Privacy Policy">Privacy Policy</a>
+                                </li>
+                                <li role="listitem" class="list-inline-item">
+                                    <a href="/ABOUT.html" title="Accessibility">Accessibility</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+    </div>
+    </div>
+
+
+    <!-- responsible for the header and button -->
+    <!-- dependent on the path -->
+    <script src="/products/aaas/releasedAssets/js/main.bundle-f6885e7acf8283b28672.js"></script>
+    <script type="text/javascript" src="/wro/lwsmarticle-metrics-phase2.js"></script>
+    <script type="text/javascript" src="/wro/lwsmproduct.js"></script>
+
+    <!-- update pre,next articles and pdf links -->
+    <script>
+        var elements = document.getElementsByClassName("previous_article_link_update");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].href = stored_data["previous_article_link"];
+        }
+        var elements = document.getElementsByClassName("next_article_link_update");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].href = stored_data["next_article_link"];
+        }
+        var elements = document.getElementsByClassName("previous_article_title_update");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].innerText = stored_data["previous_article_title"];
+        }
+        var elements = document.getElementsByClassName("next_article_title_update");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].innerText = stored_data["next_article_title"];
+        }
+        var elements = document.getElementsByClassName("pdf_link_update");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].href = stored_data["pdf_link"];
+        }
+
+
+        document.getElementById("more_path_update").href = stored_data["current_directory_path"];
+        document.getElementById("more_path_update").href = "/index.html";
+    </script>
+
+    <!-- update the content table according to the content -->
+    <script>
+        article_status = stored_data["paper_state"];
+        section_name_set = stored_data["section_names"];
+        insert_html_menu = "";
+        null_content = "";
+
+        if (article_status == "yes") {
+            insert_html_menu += '<li><a href="#abstract">Abstract</a></li>';
+        }
+        for (var i = 0; i < section_name_set.length; i++) {
+            insert_html_menu += '<li><a href="#sec-' + String((i + 1)) + '">' + section_name_set[i] + '</a></li>';
+        }
+
+        if (article_status == "yes") {
+            insert_html_menu += '<li><a href="#acknowledgments">Acknowledgements</a></li><li><a href="#supplementary-materials">Supplementary Materials</a></li><li><a href="#bibliography">References and Notes</a></li>'
+        }
+        document.getElementById("menu_update").innerHTML = insert_html_menu;
+
+        // modify the content
+        if (article_status == "no") {
+            document.getElementById("abstracts").innerHTML = null_content;
+            document.getElementById("acknowledgments").innerHTML = null_content;
+            document.getElementById("supplementary-materials").innerHTML = null_content;
+            document.getElementById("bibliography_exist_update").innerHTML = null_content;
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
