@@ -731,7 +731,7 @@
                                                     <div data-rel="animation-underline" class="card-image">
                                                         <!-- link to the article -->
                                                         <a href="/" title="title" class="d-block overflow-hidden">
-                                                            <img data-src="/"
+                                                            <img data-src="/resources/images/van_gogh1.jpg"
                                                                 class="w-100 animation-image-scale-down lazyload"
                                                                 alt="title" />
                                                         </a>
@@ -739,10 +739,9 @@
                                                     <div class="card-content">
                                                         <div class="card-meta text-uppercase">
                                                             <div class="card-meta__badge shifted">
-                                                                <span
-                                                                    class="badge badge-primary-inverted">publisher</span>
+                                                                <span class="badge badge-primary-inverted">paper</span>
                                                             </div>
-                                                            <div class="card-meta__category">column</div>
+                                                            <div class="card-meta__category">field</div>
                                                         </div>
                                                         <div class="card-header mb-2">
                                                             <!-- link to the article -->
@@ -763,7 +762,7 @@
                                             </div>
 
                                             <!-- the rest are of the same class -->
-                                            <div
+                                            <div id="papers_update"
                                                 class="col-12 col-md-6 col-xl-2 order-2 order-md-3 order-xl-1 card-type-1">
                                                 <article class="card-do card-do--custom-publishing">
                                                     <!-- link to the article -->
@@ -789,6 +788,14 @@
                                                         <div class="card-meta text-uppercase"></div>
                                                     </div>
                                                 </article>
+                                                <script>
+
+                                                    fetch("/update/papers_update.html")
+                                                        .then(response => response.text())
+                                                        .then(text => document.getElementById('papers_update').innerHTML = text)
+
+
+                                                </script>
                                             </div>
 
                                         </div>
@@ -848,6 +855,8 @@
                                                     </div>
                                                 </article>
 
+
+
                                                 <!-- same pattern -->
                                             </div>
 
@@ -862,7 +871,7 @@
                                     </h2>
 
                                     <div class="multi-search">
-                                        <div>
+                                        <div id="contributed_update">
                                             <article
                                                 class="card-do card-do--news-feature border-bottom border-light-gray pb-2 pb-sm-4 mb-3 mb-sm-4">
                                                 <div data-rel="animation-underline" class="card-image">
@@ -891,6 +900,15 @@
                                                     </div>
                                                 </div>
                                             </article>
+
+                                            <script>
+
+                                                fetch("/update/contributed_paper_update.html")
+                                                    .then(response => response.text())
+                                                    .then(text => document.getElementById('contributed_update').innerHTML = text)
+
+
+                                            </script>
                                         </div>
                                     </div>
 

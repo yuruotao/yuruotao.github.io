@@ -147,7 +147,7 @@
                                             <!-- point to papers -->
                                             <!-- controlled by main-bundle -->
                                             <!-- corresponding to the 2nd menu -->
-                                            <a aria-controls="papers-menu" aria-expanded="false" href="/papers"
+                                            <a aria-controls="papers-menu" aria-expanded="false" href="/papers.html"
                                                 role="button" data-toggle="collapse"
                                                 class="d-flex align-items-center accordion__toggle collapsed nav-link"
                                                 data-target="#papers-menu">
@@ -1697,7 +1697,7 @@
                         </div>
                     </section>
 
-
+                    <!-- published -->
                     <section class="my-2x my-lg-2_5x py-2x py-md-2_5x py-lg-3x bg-dark text-white">
                         <div class="container-fluid">
                             <div class="row">
@@ -1714,7 +1714,7 @@
                                                     <div data-rel="animation-underline" class="card-image">
                                                         <!-- link to the article -->
                                                         <a href="/" title="title" class="d-block overflow-hidden">
-                                                            <img data-src="/"
+                                                            <img data-src="/resources/images/van_gogh1.jpg"
                                                                 class="w-100 animation-image-scale-down lazyload"
                                                                 alt="title" />
                                                         </a>
@@ -1722,10 +1722,9 @@
                                                     <div class="card-content">
                                                         <div class="card-meta text-uppercase">
                                                             <div class="card-meta__badge shifted">
-                                                                <span
-                                                                    class="badge badge-primary-inverted">publisher</span>
+                                                                <span class="badge badge-primary-inverted">paper</span>
                                                             </div>
-                                                            <div class="card-meta__category">column</div>
+                                                            <div class="card-meta__category">field</div>
                                                         </div>
                                                         <div class="card-header mb-2">
                                                             <!-- link to the article -->
@@ -1746,7 +1745,7 @@
                                             </div>
 
                                             <!-- the rest are of the same class -->
-                                            <div
+                                            <div id="papers_update"
                                                 class="col-12 col-md-6 col-xl-2 order-2 order-md-3 order-xl-1 card-type-1">
                                                 <article class="card-do card-do--custom-publishing">
                                                     <!-- link to the article -->
@@ -1772,6 +1771,14 @@
                                                         <div class="card-meta text-uppercase"></div>
                                                     </div>
                                                 </article>
+                                                <script>
+
+                                                    fetch("/update/papers_update.html")
+                                                        .then(response => response.text())
+                                                        .then(text => document.getElementById('papers_update').innerHTML = text)
+
+
+                                                </script>
                                             </div>
 
                                         </div>
@@ -1788,6 +1795,7 @@
                             </div>
                         </div>
                     </section>
+
                     <!-- education and contributed -->
                     <section class="my-lg-2_5x my-2x">
                         <div class="container-fluid">
@@ -1830,34 +1838,8 @@
                                                         </div>
                                                     </div>
                                                 </article>
-                                                <!-- graduate -->
-                                                <article
-                                                    class="card-do card-do--career border-bottom border-darker-gray pb-3 mb-3 mb-md-4">
-                                                    <div data-rel="animation-underline" class="card-image mr-3">
-                                                        <a href="" title="graduate school image"
-                                                            class="d-block overflow-hidden">
-                                                            <img src="/" class="w-100 animation-image-scale-down"
-                                                                alt="picture of graduate school">
-                                                        </a>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <div class="card-meta text-uppercase">
-                                                            <span>Graduate</span>
-                                                            <br>
-                                                            <time>2024</time>
-                                                            <span class="card-contribs text-reset border-left">
-                                                                <ul title="list of authors" class="list-inline">
-                                                                    <li class="list-inline-item">Major
-                                                                    </li>
-                                                                </ul>
-                                                            </span>
-                                                        </div>
-                                                        <div class="card-header mb-2">
-                                                            <a href="https://www.gxu.edu.cn/" title="GUangxi University"
-                                                                class="text-reset animation-underline">School</a>
-                                                        </div>
-                                                    </div>
-                                                </article>
+
+
 
                                                 <!-- same pattern -->
                                             </div>
@@ -1873,7 +1855,7 @@
                                     </h2>
 
                                     <div class="multi-search">
-                                        <div>
+                                        <div id="contributed_update">
                                             <article
                                                 class="card-do card-do--news-feature border-bottom border-light-gray pb-2 pb-sm-4 mb-3 mb-sm-4">
                                                 <div data-rel="animation-underline" class="card-image">
@@ -1902,6 +1884,15 @@
                                                     </div>
                                                 </div>
                                             </article>
+
+                                            <script>
+
+                                                fetch("/update/contributed_paper_update.html")
+                                                    .then(response => response.text())
+                                                    .then(text => document.getElementById('contributed_update').innerHTML = text)
+
+
+                                            </script>
                                         </div>
                                     </div>
 
@@ -1976,6 +1967,7 @@
                             </div>
                         </div>
                     </section>
+
                     <!-- cite -->
                     <section class="mb-2x mb-lg-2_5x">
                         <div class="container-fluid">
@@ -2013,7 +2005,7 @@
                                         <span class="text-uppercase mr-2">Passages</span>
                                     </h2>
 
-                                    <!-- first releases -->
+                                    <!-- shike manping  -->
                                     <div class="multi-search multi-search--collapsable multi-search--first-release">
                                         <div id="expandableGrid" aria-expanded="false"
                                             class="grid-target  collapse js-partialCollapse grid">
@@ -2301,7 +2293,7 @@
                             </div>
                         </div>
                     </section>
-                    <!-- shikemanping -->
+                    <!-- video -->
                     <section class="mt-2x mt-lg-1_5x py-2x py-md-2_5x py-lg-3x position-relative bg-dark text-white">
                         <div class="container-fluid">
                             <h2 class="h4 title--decorated mb-4">
@@ -2311,8 +2303,10 @@
                                 <div class="row">
                                     <div class="col-12 col-md-8 video-featured">
                                         <figure class="video-thumb">
-                                            <a href="/" title="Ligs" class="video-thumb__link text-reset">
-                                                <img src="/" class="video-thumb__image w-100" alt="" />
+                                            <a target="_blank" href="/resources/videos/beautiful_video.mp4" title="Ligs"
+                                                class="video-thumb__link text-reset">
+                                                <img src="/resources/images/beautiful_pic9.jpg"
+                                                    class="video-thumb__image w-100" alt="" />
                                                 <figcaption class="video-thumb__caption">
                                                     <span class="btn-circle">
                                                         <i aria-hidden="aria-hidden" class="icon-play"></i>
@@ -2329,9 +2323,11 @@
 
                                     <div class="col-12 col-md-4">
                                         <figure class="video-thumb">
-                                            <a href="/" title="Suparth" class="video-thumb__link text-reset">
+                                            <a target="_blank" href="/resources/videos/beautiful_video2.mp4"
+                                                title="Suparth" class="video-thumb__link text-reset">
 
-                                                <img src="/" class="video-thumb__image w-100" alt="" />
+                                                <img src="/resources/images/beautiful_pic9.jpg"
+                                                    class="video-thumb__image w-100" alt="" />
 
                                                 <figcaption class="video-thumb__caption">
                                                     <span class="btn-circle">
