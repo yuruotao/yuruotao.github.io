@@ -223,7 +223,7 @@
                                 <div data-loop="false" class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="journal-menu__item">
+                                            <div id="upper_prj_update" class="journal-menu__item">
                                                 <!-- point to project -->
                                                 <a href="/html_files/projects/" title="Science"
                                                     class="text-center text-light d-flex flex-column h-100">
@@ -233,6 +233,15 @@
                                                         alt="the cover image for project1">
                                                     <div class="journal-menu__text">project1</div>
                                                 </a>
+
+                                                <script>
+
+                                                    fetch("/update/upper_prj_update.html")
+                                                        .then(response => response.text())
+                                                        .then(text => document.getElementById('upper_prj_update').innerHTML = text)
+
+
+                                                </script>
                                             </div>
                                         </div>
                                     </div>
@@ -251,7 +260,7 @@
                                 <div data-loop="false" class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="journal-menu__item">
+                                            <div id="upper_paper_update" class="journal-menu__item">
                                                 <!-- point to papers -->
                                                 <a href="/" title="Science"
                                                     class="text-center text-light d-flex flex-column h-100">
@@ -260,6 +269,15 @@
                                                         class="journal-menu__img mb-3">
                                                     <div class="journal-menu__text">paper1</div>
                                                 </a>
+
+                                                <script>
+
+                                                    fetch("/update/upper_paper_update.html")
+                                                        .then(response => response.text())
+                                                        .then(text => document.getElementById('upper_paper_update').innerHTML = text)
+
+
+                                                </script>
                                             </div>
                                         </div>
                                     </div>
@@ -269,7 +287,6 @@
                         <a data-toggle="collapse" href="#journal-menu" role="button" aria-expanded="false"
                             aria-controls="journal-menu" class="journal-menu__overlay header-overlay"></a>
                     </div>
-
 
                     <!-- search need to be modified -->
                     <!-- searcher expand content -->
