@@ -1372,6 +1372,51 @@
                                         </div>
 
                                     </section>
+                                    <section id="backmatter" data-extent="backmatter">
+                                        <div id="bibliography_exist_update" class="core-container">
+                                            <!-- supplementary materials -->
+                                            <section id="supplementary-materials" class="core-supplementary-materials">
+
+                                                <h2>Supplementary Materials</h2>
+                                                <section id="sec-5-1">
+                                                    <h3>No supplementary material.</h3>
+
+                                                </section>
+
+
+                                            </section>
+
+                                            <section id="bibliography" role="doc-bibliography">
+                                                <div id="citation_insert" role="list">
+
+                                                    <script type="application/javascript">
+                                                        citations = [
+                                                            '<div class="csl-entry">杨可桢, 程光蕴, 李仲生, &#38; 钱瑞明. (2020). <i>《机械设计基础》</i> (11th ed.). 高等教育出版社.</div>',
+                                                            '<div class="csl-entry">徐钢涛, &#38; 金莹. (2012). <i>《机械设计基础课程设计》</i>. 航空工业出版社.</div>',
+
+                                                        ];
+                                                        iterate_num = citations.length;
+                                                        html_model_num1 = '<div role="doc-biblioentry listitem" data-has="label"><div class="label">';
+                                                        html_model_num2 = '</div><div id="R';
+                                                        html_model_content_front = '" class="citations"><div class="citation"><div class="citation-content">';
+                                                        html_model_content_end = '</div><div class="external-links"><div><a href="" target="_blank"></a></div></div></div></div></div>';
+                                                        final_insert = '';
+                                                        for (i = 0; i < iterate_num; i++) {
+                                                            final_insert += html_model_num1 + String((i + 1)) + html_model_num2 + String((i + 1)) + html_model_content_front + citations[i] + html_model_content_end;
+                                                        }
+                                                        document.getElementById("citation_insert").innerHTML = '<h2>REFERENCES AND NOTES</h2>' + final_insert;
+
+
+
+                                                    </script>
+
+
+
+
+
+                                                </div>
+                                            </section>
+                                    </section>
                                 </div>
                             </section>
 
