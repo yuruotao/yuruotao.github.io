@@ -13,15 +13,15 @@
 
         var name_datas = {
             page_title: page_title_1,
-            current_directory: "science project",
-            current_directory_path: "/projects.html",
+            current_directory: "small project",
+            current_directory_path: "/html_files/projects/small_ones.html",
             date: "2022 July 10",
             authors: author,
             article_type: "small project",
             article_field: "mechanical engineering",
 
             previous_article_link: "#",
-            next_article_link: "/html_files/projects/science_projects/small_prj/small1.html",
+            next_article_link: "/html_files/projects/science_projects/small_prj/small2.html",
             previous_article_title: "no previous article",
             next_article_title: "",
 
@@ -1160,19 +1160,20 @@
                                                 class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
                                                 <div class="multi-search">
-                                                    <div id="sci_prj_update">
+                                                    <div id="project_small_update">
 
                                                         <script>
-                                                            fetch("/update/sci_prj_update.html")
+                                                            fetch("/update/project_small_update.html")
                                                                 .then(response => response.text())
-                                                                .then(text => document.getElementById('sci_prj_update').innerHTML = text)
+                                                                .then(text => document.getElementById("project_small_update").innerHTML = text)
                                                         </script>
 
 
                                                     </div>
                                                     <div class="d-flex justify-content-end btn--more__wrapper">
                                                         <!-- direct to the current folder -->
-                                                        <a id="more_path_update" href="/projects.html"
+                                                        <a id="more_path_update"
+                                                            href="/html_files/projects/small_ones.html"
                                                             class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
                                                             <span>More</span>
                                                             <span aria-hidden="true" class="icon-arrow-right"></span>
@@ -1267,17 +1268,7 @@
                                         <h2>
                                             设计书
                                         </h2>
-                                        <div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
-                                        <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
-                                        <script type="text/javascript">
-                                            document.addEventListener("adobe_dc_view_sdk.ready", function () {
-                                                var adobeDCView = new AdobeDC.View({ clientId: "<YOUR_CLIENT_ID>", divId: "adobe-dc-view" });
-                                                adobeDCView.previewFile({
-                                                    content: { location: { url: "/content_files/projects/small/small1/装配图.pdf" } },
-                                                    metaData: { fileName: "Bodea Brochure.pdf" }
-                                                }, { embedMode: "SIZED_CONTAINER" });
-                                            });
-                                        </script>
+
 
                                     </section>
 
