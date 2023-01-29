@@ -9455,15 +9455,18 @@
                                             MATLAB相关程序
                                         </h2>
                                         <div role="paragraph">
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
+                                            <code style="background-color:gainsboro;color: black;">
+                                                ss(A,B,C,D); create a state-space model
+                                                <br>tf('s'); allow transfer function to be entered in symbolic form with variable s
+                                                <br>tf(num,dem); allow transfer function to be created with coefficients
+                                                <br>eig(A); returns a column vector containing the eigenvalues of A
+                                                <br>lsim(sys,u,t,x0); plots the simulated time response of sys to time t and input u
+                                                <br>ctrb(A,B)/(sys); returns the controllability matrix of the system
+                                                <br>obsv(A,C)/(sys); returns the observability matrix of the system
+                                                <br>place(A,B,P); place the polar as desire
+                                                <br>
+                                            </code>
+
                                         </div>
 
                                     </section>
@@ -9475,8 +9478,16 @@
                                     <section id="acknowledgments" role="doc-acknowledgments">
                                         <h2>Acknowledgments</h2>
                                         <div role="paragraph">
-                                            <b>Resources: </b>The recommended textbook for Modern Control Theory are .
-                                            And the recommended course for this class is.
+                                            <b>Resources: </b>The recommended textbook for Modern Control Theory can be
+                                            found in the references.
+                                            And the recommended course taught by ZJU for this class can be found <a
+                                                href="https://www.icourse163.org/course/ZJU-1206497805">here</a>.
+                                            <br>The website <a
+                                                href="https://ctms.engin.umich.edu/CTMS/index.php?aux=Home">CTMS</a>
+                                            teaches basics of control theory using multiple cases and excellent open
+                                            code. The website <a
+                                                href="https://www.mathworks.com/help/control/index.html?s_tid=CRUX_lftnav">Control
+                                                System Toolbox</a> is provided by MATLAB.
                                         </div>
 
                                         <div role="paragraph"><b>Competing interests:</b> no competing
@@ -9498,19 +9509,36 @@
                                             <h3>Appendix:</h3>
                                             <div class="core-supplementary-material">
                                                 <div class="core-description">
-                                                    <div>Figures: </div>Figure 1 - Figure 6
+                                                    <div>现代控制理论（实验）</div>
 
                                                 </div>
                                                 <div class="core-link">
                                                     <ul>
                                                         <li>
-                                                            <a href="/" download="Appendix">Download</a>
+                                                            <a href="/content_files/learning/learn1/现代控制理论实验.rar"
+                                                                download="Appendix">Download</a>
                                                         </li>
-                                                        <li>1.27 MB</li>
+                                                        <li>1.15 MB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="core-supplementary-material">
+                                                <div class="core-description">
+                                                    <div>现代控制理论课程论文</div>
+
+                                                </div>
+                                                <div class="core-link">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/" download="Appendix">现代控制理论课程论文</a>
+                                                        </li>
+
                                                     </ul>
                                                 </div>
                                             </div>
                                         </section>
+
+
 
 
                                     </section>
@@ -9529,7 +9557,7 @@
 
                                             <script type="application/javascript">
                                                 citations = [
-
+                                                    '<div class="csl-entry">刘豹. (n.d.). <i>现代控制理论（第3版）</i> (3rd ed.).</div>',
                                                 ];
                                                 iterate_num = citations.length;
                                                 html_model_num1 = '<div role="doc-biblioentry listitem" data-has="label"><div class="label">';
