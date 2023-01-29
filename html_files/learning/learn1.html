@@ -7751,6 +7751,221 @@
                                             线性定常系统的综合
                                         </h2>
                                         <div role="paragraph">
+                                            <b>状态反馈</b>：<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>u</mi>
+                                                        <mo>=</mo>
+                                                        <mi>K</mi>
+                                                        <mi>x</mi>
+                                                        <mo>+</mo>
+                                                        <mi>v</mi>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+
+                                            <br>&emsp;<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>&#x03A3;</mi>
+                                                            <mi>K</mi>
+                                                        </msub>
+                                                        <mo stretchy='false'>[</mo>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>A</mi>
+                                                        <mo>+</mo>
+                                                        <mi>B</mi>
+                                                        <mi>K</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                        <mo>,</mo>
+                                                        <mi>B</mi>
+                                                        <mo>,</mo>
+                                                        <mi>C</mi>
+                                                        <mo stretchy='false'>]</mo>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>
+
+                                            <br>&emsp;不改变系统能控性，不一定不改变能观性；
+                                            <br><b>输出反馈</b>：<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>u</mi>
+                                                        <mo>=</mo>
+                                                        <mi>H</mi>
+                                                        <mi>y</mi>
+                                                        <mo>+</mo>
+                                                        <mi>v</mi>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+
+                                            <br>&emsp;<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>&#x03A3;</mi>
+                                                            <mi>H</mi>
+                                                        </msub>
+                                                        <mo stretchy='false'>[</mo>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>A</mi>
+                                                        <mo>+</mo>
+                                                        <mi>B</mi>
+                                                        <mi>H</mi>
+                                                        <mi>C</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                        <mo>,</mo>
+                                                        <mi>B</mi>
+                                                        <mo>,</mo>
+                                                        <mi>C</mi>
+                                                        <mo stretchy='false'>]</mo>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>
+
+
+                                            <br>&emsp;不改变系统能控能观性；
+                                            <br><b>输出到<math>
+                                                    <semantics>
+                                                        <mi>x</mi>
+                                                    </semantics>
+                                                </math>反馈
+                                            </b>：<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mover>
+                                                            <mi>x</mi>
+                                                            <mo>&#x00B7;</mo>
+                                                        </mover>
+                                                        <mo>=</mo>
+                                                        <mi>A</mi>
+                                                        <mi>x</mi>
+                                                        <mo>+</mo>
+                                                        <mi>B</mi>
+                                                        <mi>u</mi>
+                                                        <mo>+</mo>
+                                                        <mi>G</mi>
+                                                        <mi>y</mi>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>
+
+
+                                            <br>&emsp;<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>&#x03A3;</mi>
+                                                            <mi>G</mi>
+                                                        </msub>
+                                                        <mo stretchy='false'>[</mo>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>A</mi>
+                                                        <mo>+</mo>
+                                                        <mi>G</mi>
+                                                        <mi>C</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                        <mo>,</mo>
+                                                        <mi>B</mi>
+                                                        <mo>,</mo>
+                                                        <mi>C</mi>
+                                                        <mo stretchy='false'>]</mo>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>
+                                            <br>
+                                            <br><b>极点配置</b>：
+                                            <br><b>状态反馈任意配置极点的充要条件</b>：系统完全能控；
+                                            <br><b>完全能控系统通过带动态补偿器的输出反馈实现任意配置极点的充要条件</b>：
+                                            <br>&emsp;1.系统完全能观；
+                                            <br>&emsp;2.动态补偿器阶数为（n-1）；
+                                            <br><b>输出到<math>
+                                                    <semantics>
+                                                        <mrow>
+                                                            <mover>
+                                                                <mi>x</mi>
+                                                                <mo>&#x00B7;</mo>
+                                                            </mover>
+                                                        </mrow>
+                                                    </semantics>
+                                                </math>任意配置极点的充要条件</b>：系统完全能观；
+                                            <br>
+                                            <br><b>系统镇定</b>：
+                                            <br><b>状态反馈能使系统镇定的充要条件</b>：不能控子系统渐近稳定；
+                                            <br><b>输出反馈能使系统镇定的充要条件</b>：系统能控能观子系统极点可任意配置，且其余子系统渐近稳定；
+                                            <br><b>输出至<math>
+                                                    <semantics>
+                                                        <mrow>
+                                                            <mover>
+                                                                <mi>x</mi>
+                                                                <mo>&#x00B7;</mo>
+                                                            </mover>
+                                                        </mrow>
+                                                    </semantics>
+                                                </math>反馈能使系统镇定的充要条件</b>：系统不能观子系统渐近稳定；
+                                            <br>
+                                            <br><b>系统解耦</b>：
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
                                             <br><b></b>
                                             <br><b></b>
                                             <br><b></b>
