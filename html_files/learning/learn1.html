@@ -27,7 +27,7 @@
 
             pdf_link: "#",
             paper_state: "yes",
-            section_names: ["控制系统的状态空间表达式", "控制系统状态空间表达式的解", "线性控制系统的能控性和能观性", "稳定性与李雅普诺夫方法", "线性定常系统的综合", "最优控制"],
+            section_names: ["控制系统的状态空间表达式", "控制系统状态空间表达式的解", "线性系统的能控性和能观性", "稳定性与李雅普诺夫方法", "线性定常系统的综合", "最优控制"],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -9055,65 +9055,397 @@
                                                 </div>
                                                 <div class="label">(44)</div>
                                             </div>
-                                            <br>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
-                                            <br><b></b>
+
+                                            <b>离散时间系统最优控制</b>：
+                                            <br>对系统
+                                            <div id="E45" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-45"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                           
+                                                                <semantics>
+                                                                 <mrow>
+                                                                  <mtable equalrows='true' equalcolumns='true'>
+                                                                   <mtr>
+                                                                    <mtd>
+                                                                     <mrow>
+                                                                      <mi>x</mi><mo stretchy='false'>(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy='false'>)</mo><mo>=</mo><mi>f</mi><mo stretchy='false'>[</mo><mi>x</mi><mo stretchy='false'>(</mo><mi>k</mi><mo stretchy='false'>)</mo><mo>,</mo><mi>u</mi><mo stretchy='false'>(</mo><mi>k</mi><mo stretchy='false'>)</mo><mo>,</mo><mi>k</mi><mo stretchy='false'>]</mo></mrow>
+                                                                    </mtd>
+                                                                   </mtr>
+                                                                   <mtr>
+                                                                    <mtd>
+                                                                     <mrow>
+                                                                      <mi>x</mi><mo stretchy='false'>(</mo><mn>0</mn><mo stretchy='false'>)</mo><mo>=</mo><msub>
+                                                                       <mi>x</mi>
+                                                                       <mn>0</mn>
+                                                                      </msub>
+                                                                      </mrow>
+                                                                    </mtd>
+                                                                   </mtr>
+                                                                   
+                                                                  </mtable></mrow>
+                                                                </semantics>
+                                                               </math>
+                                                               
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(45)</div>
+                                            </div>
+                                            利用Laglange乘子法，确定控制序列<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mo>&#x007B;</mo>
+                                                        <mi>u</mi>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mn>0</mn>
+                                                        <mo stretchy='false'>)</mo>
+                                                        <mo>,</mo>
+                                                        <mi>u</mi>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mn>1</mn>
+                                                        <mo stretchy='false'>)</mo>
+                                                        <mo>,</mo>
+                                                        <mo>&#x2026;</mo>
+                                                        <mi>u</mi>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>N</mi>
+                                                        <mo>&#x2212;</mo>
+                                                        <mn>1</mn>
+                                                        <mo stretchy='false'>)</mo>
+                                                        <mo>&#x007D;</mo>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>，使目标函数<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>J</mi>
+                                                        <mo>=</mo>
+                                                        <mi>&#x03A6;</mi>
+                                                        <mo stretchy='false'>[</mo>
+                                                        <mi>x</mi>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>N</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                        <mo stretchy='false'>]</mo>
+                                                        <mo>+</mo>
+                                                        <mstyle displaystyle='true'>
+                                                            <munderover>
+                                                                <mo>&#x2211;</mo>
+                                                                <mrow>
+                                                                    <mi>i</mi>
+                                                                    <mo>=</mo>
+                                                                    <mn>0</mn>
+                                                                </mrow>
+                                                                <mrow>
+                                                                    <mi>N</mi>
+                                                                    <mo>&#x2212;</mo>
+                                                                    <mn>1</mn>
+                                                                </mrow>
+                                                            </munderover>
+                                                            <mrow>
+                                                                <mi>L</mi>
+                                                                <mo stretchy='false'>[</mo>
+                                                                <mi>x</mi>
+                                                                <mo stretchy='false'>(</mo>
+                                                                <mi>k</mi>
+                                                                <mo stretchy='false'>)</mo>
+                                                                <mo>,</mo>
+                                                                <mi>u</mi>
+                                                                <mo stretchy='false'>(</mo>
+                                                                <mi>k</mi>
+                                                                <mo stretchy='false'>)</mo>
+                                                                <mo>,</mo>
+                                                                <mi>k</mi>
+                                                                <mo stretchy='false'>]</mo>
+                                                            </mrow>
+                                                        </mstyle>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>取得最小值；
+
+
+                                            <br><b>泛函</b>：宗量为函数，建立函数到实数的映射的函数；
+                                            <br>&emsp;<b>变分</b>：求泛函的极值问题；
+                                            <br>&emsp;<b>泛函极小值</b>：泛函<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>J</mi>
+                                                        <mo stretchy='false'>[</mo>
+                                                        <mi>y</mi>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>x</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                        <mo stretchy='false'>]</mo>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>满足
+                                            <div id="E46" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-46"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                                           
+                                                                <semantics>
+                                                                 <mrow>
+                                                                  <mi>&#x0394;</mi><mi>J</mi><mo>=</mo><mi>J</mi><mo stretchy='false'>[</mo><mi>y</mi><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mo stretchy='false'>]</mo><mo>&#x2212;</mo><mi>J</mi><mo stretchy='false'>[</mo><msub>
+                                                                   <mi>y</mi>
+                                                                   <mn>0</mn>
+                                                                  </msub>
+                                                                  <mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mo stretchy='false'>]</mo><mo>&#x2265;</mo><mn>0</mn></mrow>
+                                                                
+                                                                </semantics>
+                                                               </math>
+                                                               
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(46)</div>
+                                            </div>
+
+                                            &emsp;<b>泛函的变分</b>：泛函增量的线性主部；
+                                            <div id="E47" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-47"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                                       
+ <semantics>
+  <mrow>
+   <mi>&#x03B4;</mi><mi>J</mi><mo>=</mo><msub>
+    <mrow>
+     <mfenced close="|" open="">
+      <mrow>
+       <mfrac>
+        <mo>&#x2202;</mo>
+        <mrow>
+         <mo>&#x2202;</mo><mi>a</mi></mrow>
+       </mfrac>
+       <mi>J</mi><mo stretchy='false'>[</mo><mi>y</mi><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mo>+</mo><mi>a</mi><mo>*</mo><mi>&#x03B4;</mi><mi>y</mi><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mo stretchy='false'>]</mo></mrow>
+     </mfenced></mrow>
+    <mrow>
+     <mi>a</mi><mo>=</mo><mn>0</mn></mrow>
+   </msub>
+   </mrow>
+ </semantics>
+</math>
+
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(47)</div>
+                                            </div>
+                                            <b>泛函极值定理</b>：若可微泛函在<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>y</mi>
+                                                            <mn>0</mn>
+                                                        </msub>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>x</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>上达到极值，则在其上的变分为0；
+
+                                            <br><math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>J</mi>
+                                                        <mo>=</mo>
+                                                        <mstyle displaystyle='true'>
+                                                            <mrow>
+                                                                <munderover>
+                                                                    <mo>&#x222B;</mo>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>t</mi>
+                                                                            <mn>0</mn>
+                                                                        </msub>
+                                                                    </mrow>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>t</mi>
+                                                                            <mi>f</mi>
+                                                                        </msub>
+                                                                    </mrow>
+                                                                </munderover>
+                                                                <mrow>
+                                                                    <mi>L</mi>
+                                                                    <mo stretchy='false'>(</mo>
+                                                                    <mi>x</mi>
+                                                                    <mo>,</mo>
+                                                                    <mover>
+                                                                        <mi>x</mi>
+                                                                        <mo>&#x00B7;</mo>
+                                                                    </mover>
+                                                                    <mo>,</mo>
+                                                                    <mi>t</mi>
+                                                                    <mo stretchy='false'>)</mo>
+                                                                    <mi>d</mi>
+                                                                    <mi>t</mi>
+                                                                </mrow>
+                                                            </mrow>
+
+                                                        </mstyle>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+
+                                            <br>&emsp;&emsp;<b>欧拉方程</b>：
+                                            <div id="E48" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-48"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                                
+                                                                <semantics>
+                                                                 <mrow>
+                                                                  <mfrac>
+                                                                   <mrow>
+                                                                    <mo>&#x2202;</mo><mi>L</mi></mrow>
+                                                                   <mrow>
+                                                                    <mo>&#x2202;</mo><mi>x</mi></mrow>
+                                                                  </mfrac>
+                                                                  <mo>&#x2212;</mo><mfrac>
+                                                                   <mi>d</mi>
+                                                                   <mrow>
+                                                                    <mi>d</mi><mi>t</mi></mrow>
+                                                                  </mfrac>
+                                                                  <mfrac>
+                                                                   <mrow>
+                                                                    <mo>&#x2202;</mo><mi>L</mi></mrow>
+                                                                   <mrow>
+                                                                    <mo>&#x2202;</mo><mover>
+                                                                     <mi>x</mi>
+                                                                     <mo>&#x00B7;</mo>
+                                                                    </mover>
+                                                                    </mrow>
+                                                                  </mfrac>
+                                                                  <mo>=</mo><mn>0</mn></mrow>
+                                                                </semantics>
+                                                               </math>
+                                                               
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(48)</div>
+                                            </div>
+                                            &emsp;&emsp;<b>横截条件</b>（自由始端）：
+                                            <div id="E49" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-49"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                                         
+                                                                <semantics>
+                                                                 <mrow>
+                                                                  <mtable equalrows='true' equalcolumns='true'>
+                                                                   <mtr>
+                                                                    <mtd>
+                                                                     <mrow>
+                                                                      <msub>
+                                                                       <mrow>
+                                                                        <mfenced close="|" open="">
+                                                                         <mrow>
+                                                                          <mfrac>
+                                                                           <mrow>
+                                                                            <mo>&#x2202;</mo><mi>L</mi></mrow>
+                                                                           <mrow>
+                                                                            <mo>&#x2202;</mo><mover>
+                                                                             <mi>x</mi>
+                                                                             <mo>&#x00B7;</mo>
+                                                                            </mover>
+                                                                            </mrow>
+                                                                          </mfrac>
+                                                                          </mrow>
+                                                                        </mfenced></mrow>
+                                                                       <mrow>
+                                                                        <msub>
+                                                                         <mi>t</mi>
+                                                                         <mn>0</mn>
+                                                                        </msub>
+                                                                        </mrow>
+                                                                      </msub>
+                                                                      <mo>=</mo><mn>0</mn></mrow>
+                                                                    </mtd>
+                                                                   </mtr>
+                                                                   <mtr>
+                                                                    <mtd>
+                                                                     <mrow>
+                                                                      <mi>x</mi><mo stretchy='false'>(</mo><msub>
+                                                                       <mi>t</mi>
+                                                                       <mi>f</mi>
+                                                                      </msub>
+                                                                      <mo stretchy='false'>)</mo><mo>=</mo><msub>
+                                                                       <mi>x</mi>
+                                                                       <mi>f</mi>
+                                                                      </msub>
+                                                                      </mrow>
+                                                                    </mtd>
+                                                                   </mtr>
+                                                                   
+                                                                  </mtable></mrow>
+                                                                </semantics>
+                                                               </math>
+                                                               
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(49)</div>
+                                            </div>
+                                            &emsp;&emsp;<b>端点可变</b>（固定始端）：
+                                            <div id="E50" class="display-formula">
+                                                <div class="equation" role="math">
+                                                    <div class="inner"><span class="MathJax_Preview"
+                                                            style="color: inherit;"></span>
+                                                        <script type="math/mml" id="MathJax-Element-50"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll" alttext="No alternative text available">
+                                                            
+ <semantics>
+  <mrow>
+   <msub>
+    <mrow>
+     <mo>&#x007B;</mo><mi>L</mi><mo>+</mo><mo stretchy='false'>[</mo><mover>
+      <mi>C</mi>
+      <mo>&#x00B7;</mo>
+     </mover>
+     <mo stretchy='false'>(</mo><mi>t</mi><mo stretchy='false'>)</mo><mo>&#x2212;</mo><mover>
+      <mi>x</mi>
+      <mo>&#x00B7;</mo>
+     </mover>
+     <mo stretchy='false'>(</mo><mi>t</mi><mo stretchy='false'>)</mo><mo stretchy='false'>]</mo><mfrac>
+      <mrow>
+       <mo>&#x2202;</mo><mi>L</mi></mrow>
+      <mrow>
+       <mo>&#x2202;</mo><mover>
+        <mi>x</mi>
+        <mo>&#x00B7;</mo>
+       </mover>
+       </mrow>
+     </mfrac>
+     <mo>&#x007D;</mo></mrow>
+    <mrow>
+     <mi>t</mi><mo>=</mo><msub>
+      <mi>t</mi>
+      <mi>f</mi>
+     </msub>
+     </mrow>
+   </msub>
+   <mo>=</mo><mn>0</mn></mrow>
+ </semantics>
+</math>
+
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="label">(50)</div>
+                                            </div>
+
                                         </div>
 
                                     </section>
@@ -9123,7 +9455,15 @@
                                             MATLAB相关程序
                                         </h2>
                                         <div role="paragraph">
-
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
                                         </div>
 
                                     </section>
