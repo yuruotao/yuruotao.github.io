@@ -1263,7 +1263,7 @@
                                         <div role="paragraph">
 
                                             <p>
-                                                111
+                                                Power electronics studies the conversion of electricity
                                             </p>
 
                                             <p>
@@ -1284,6 +1284,66 @@
                                         <h2>
                                             电力电子器件
                                         </h2>
+                                        <div role="paragraph">
+                                            <b>功率损耗</b>:
+                                            <br>&emsp;1.通态损耗；
+                                            <br>&emsp;2.断态损耗；
+                                            <br>&emsp;3.开关损耗；
+                                            <br>
+                                            <br><b>电力电子器件分类</b>：
+                                            <br>&emsp;半控型：可控导通，不可控关断；（晶闸管）
+                                            <br>&emsp;全控型：可控导通、关断；（电力MOS，IGBT）
+                                            <br>&emsp;不可控：不能用控制信号控制（电力二极管）
+                                            <br>
+                                            <br><b>电导调制效应</b>：PN结正向电流较大时，为维持半导体电中性，半导体电阻率明显下降的现象；
+                                            <br>&emsp;
+                                            <br><b>电力二极管能够承受高电压、大电流的原因</b>：
+                                            <br>&emsp;1.电力二极管采用垂直导电结构，硅片通过电流的有效面积增大，提高通流能力；
+                                            <br>&emsp;2.低掺杂N区掺杂浓度低，可承受较高反向电压；
+                                            <br>&emsp;3.电导调制效应使电力二极管在正向电流较大时压降较低；
+                                            <br>&emsp;
+                                            <br><b>GTO与普通晶闸管的不同</b>：
+                                            <br>&emsp;1.<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>&#x03B1;</mi>
+                                                            <mn>2</mn>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>较大，晶体管<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>V</mi>
+                                                            <mn>2</mn>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>控制灵敏，GTO易于关断；
+
+
+                                            <br>&emsp;2.导通时<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>&#x03B1;</mi>
+                                                            <mn>1</mn>
+                                                        </msub>
+                                                        <mo>+</mo>
+                                                        <msub>
+                                                            <mi>&#x03B1;</mi>
+                                                            <mn>2</mn>
+                                                        </msub>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>更接近于1，GTO导通时饱和程度不深，接近于临界饱和；
+
+                                            <br>&emsp;3.多元集成结构使每个GTO元阴极面积很小，门极和阴极间距离缩短，横向电阻减小；
+
+                                        </div>
+
 
                                     </section>
 
@@ -1291,48 +1351,992 @@
                                         <h2>
                                             整流电路
                                         </h2>
+                                        <div role="paragraph">
+                                            <br><b>触发延迟角<math>
+                                                    <semantics>
+                                                        <mi>&#x03B1;</mi>
+                                                    </semantics>
+                                                </math>
+                                            </b>：晶闸管开始承受正向阳极电压起，到施加触发脉冲止的电角度；
+                                            <br><b>导通角<math>
+                                                    <semantics>
+                                                        <mi>&#x03B8;</mi>
+                                                    </semantics>
+                                                </math>
+                                            </b>：晶闸管在一个电源周期中处于通态的电角度；
+                                            <br><b>停止导电角<math>
+                                                    <semantics>
+                                                        <mi>&#x03B4;</mi>
+                                                    </semantics>
+                                                </math>
+                                            </b>：带反电动势负载中，晶闸管提前停止导电的电角度；
+                                            <br>&emsp;
+                                            <br><b>单相可控整流电路</b>：
+                                            <div class="figure-wrap">
+                                                <figure id="T1" class="table">
+                                                    <div class="table-wrap">
+                                                        <div class="collapsible-wrapper" aria-expanded="true">
+                                                            <table>
+                                                                <thead>
+                                                                    <tr data-xml-align="center"
+                                                                        data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="col">
+                                                                            <b>电路</b>
+                                                                        </th>
+                                                                        <th data-xml-align="center" scope="col">
+                                                                            <b>图例</b>
+                                                                        </th>
+                                                                        <th data-xml-align="center" scope="col">
+                                                                            <b>最大电压</b>
+                                                                        </th>
+                                                                        <th data-xml-align="center" scope="col">
+                                                                            <b>平均输出电压</b>
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                    <tr data-xml-align="center"
+                                                                        data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="row">
+                                                                            单相半波可控
+                                                                        </th>
+                                                                        <td data-xml-align="center" scope="col">
+
+                                                                        </td>
+                                                                        <td data-xml-align="center" scope="col">
+                                                                            <math display='block'>
+                                                                                <semantics>
+                                                                                    <mrow>
+                                                                                        <mtable equalrows='true'
+                                                                                            equalcolumns='true'>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mrow>
+                                                                                                                <mi>p
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>max
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <msqrt>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msqrt>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mrow>
+                                                                                                                <mi>n
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>max
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <msqrt>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msqrt>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+
+                                                                                        </mtable>
+                                                                                    </mrow>
+                                                                                </semantics>
+                                                                            </math>
+
+                                                                        </td>
+                                                                        <td data-xml-align="center" scope="col">
+                                                                            <math display='block'>
+                                                                                <semantics>
+                                                                                    <mrow>
+                                                                                        <msub>
+                                                                                            <mrow>
+                                                                                                <mover accent='true'>
+                                                                                                    <mi>U</mi>
+                                                                                                    <mo stretchy='true'>
+                                                                                                        &#x00AF;</mo>
+                                                                                                </mover>
+                                                                                            </mrow>
+                                                                                            <mrow>
+                                                                                                <mi>d</mi>
+                                                                                                <mo>&#x2212;</mo>
+                                                                                                <mi>R</mi>
+                                                                                            </mrow>
+                                                                                        </msub>
+                                                                                        <mo>=</mo>
+                                                                                        <mn>0.45</mn>
+                                                                                        <msub>
+                                                                                            <mi>U</mi>
+                                                                                            <mn>2</mn>
+                                                                                        </msub>
+                                                                                        <mfrac>
+                                                                                            <mrow>
+                                                                                                <mn>1</mn>
+                                                                                                <mo>+</mo>
+                                                                                                <mi>cos</mi>
+                                                                                                <mi>&#x03B1;</mi>
+                                                                                            </mrow>
+                                                                                            <mn>2</mn>
+                                                                                        </mfrac>
+                                                                                    </mrow>
+                                                                                </semantics>
+                                                                            </math>
+
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr data-xml-align="center"
+                                                                        data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="row">
+                                                                            单相桥式全控
+                                                                        </th>
+                                                                        <td data-xml-align="center" scope="col">
+
+                                                                        </td>
+                                                                        <td data-xml-align="center" scope="col">
+                                                                            <math display='block'>
+                                                                                <semantics>
+                                                                                    <mrow>
+                                                                                        <mtable equalrows='true'
+                                                                                            equalcolumns='true'>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mrow>
+                                                                                                                <mi>p
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>max
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mfrac>
+                                                                                                            <mrow>
+                                                                                                                <msqrt>
+                                                                                                                    <mn>2
+                                                                                                                    </mn>
+                                                                                                                </msqrt>
+                                                                                                            </mrow>
+                                                                                                            <mn>2</mn>
+                                                                                                        </mfrac>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mrow>
+                                                                                                                <mi>n
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>max
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <msqrt>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msqrt>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+
+                                                                                        </mtable>
+                                                                                    </mrow>
+                                                                                </semantics>
+                                                                            </math>
+
+                                                                        </td>
+                                                                        <td data-xml-align="center" scope="col">
+                                                                            <math display='block'>
+                                                                                <semantics>
+                                                                                    <mrow>
+                                                                                        <mtable equalrows='true'
+                                                                                            equalcolumns='true'>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mrow>
+                                                                                                                <mover
+                                                                                                                    accent='true'>
+                                                                                                                    <mi>U
+                                                                                                                    </mi>
+                                                                                                                    <mo
+                                                                                                                        stretchy='true'>
+                                                                                                                        &#x00AF;
+                                                                                                                    </mo>
+                                                                                                                </mover>
+                                                                                                            </mrow>
+                                                                                                            <mrow>
+                                                                                                                <mi>d
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>R
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mn>0.9</mn>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                        <mfrac>
+                                                                                                            <mrow>
+                                                                                                                <mn>1
+                                                                                                                </mn>
+                                                                                                                <mo>+
+                                                                                                                </mo>
+                                                                                                                <mi>cos
+                                                                                                                </mi>
+                                                                                                                <mi>&#x03B1;
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                            <mn>2</mn>
+                                                                                                        </mfrac>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mrow>
+                                                                                                                <mover
+                                                                                                                    accent='true'>
+                                                                                                                    <mi>U
+                                                                                                                    </mi>
+                                                                                                                    <mo
+                                                                                                                        stretchy='true'>
+                                                                                                                        &#x00AF;
+                                                                                                                    </mo>
+                                                                                                                </mover>
+                                                                                                            </mrow>
+                                                                                                            <mrow>
+                                                                                                                <mi>d
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>R
+                                                                                                                </mi>
+                                                                                                                <mi>L
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mn>0.9</mn>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                        <mi>cos</mi>
+                                                                                                        <mi>&#x03B1;
+                                                                                                        </mi>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+
+                                                                                        </mtable>
+                                                                                    </mrow>
+                                                                                </semantics>
+                                                                            </math>
+
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr data-xml-align="center"
+                                                                        data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="row">
+                                                                            单相全波可控
+                                                                        </th>
+                                                                        <td data-xml-align="center" scope="col">
+
+                                                                        </td>
+                                                                        <td data-xml-align="center" scope="col">
+                                                                            <math display='block'>
+                                                                                <semantics>
+                                                                                    <mrow>
+                                                                                        <mtable equalrows='true'
+                                                                                            equalcolumns='true'>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mrow>
+                                                                                                                <mi>p
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>max
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mn>2</mn>
+                                                                                                        <msqrt>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msqrt>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mrow>
+                                                                                                                <mi>n
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>max
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mn>2</mn>
+                                                                                                        <msqrt>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msqrt>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+
+                                                                                        </mtable>
+                                                                                    </mrow>
+                                                                                </semantics>
+                                                                            </math>
+
+                                                                        </td>
+                                                                        <td data-xml-align="center" scope="col">
+                                                                            <math display='block'>
+                                                                                <semantics>
+                                                                                    <mrow>
+                                                                                        <mtable equalrows='true'
+                                                                                            equalcolumns='true'>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mrow>
+                                                                                                                <mover
+                                                                                                                    accent='true'>
+                                                                                                                    <mi>U
+                                                                                                                    </mi>
+                                                                                                                    <mo
+                                                                                                                        stretchy='true'>
+                                                                                                                        &#x00AF;
+                                                                                                                    </mo>
+                                                                                                                </mover>
+                                                                                                            </mrow>
+                                                                                                            <mrow>
+                                                                                                                <mi>d
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>R
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mn>0.9</mn>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                        <mfrac>
+                                                                                                            <mrow>
+                                                                                                                <mn>1
+                                                                                                                </mn>
+                                                                                                                <mo>+
+                                                                                                                </mo>
+                                                                                                                <mi>cos
+                                                                                                                </mi>
+                                                                                                                <mi>&#x03B1;
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                            <mn>2</mn>
+                                                                                                        </mfrac>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mrow>
+                                                                                                                <mover
+                                                                                                                    accent='true'>
+                                                                                                                    <mi>U
+                                                                                                                    </mi>
+                                                                                                                    <mo
+                                                                                                                        stretchy='true'>
+                                                                                                                        &#x00AF;
+                                                                                                                    </mo>
+                                                                                                                </mover>
+                                                                                                            </mrow>
+                                                                                                            <mrow>
+                                                                                                                <mi>d
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>R
+                                                                                                                </mi>
+                                                                                                                <mi>L
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mn>0.9</mn>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                        <mi>cos</mi>
+                                                                                                        <mi>&#x03B1;
+                                                                                                        </mi>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+
+                                                                                        </mtable>
+                                                                                    </mrow>
+                                                                                </semantics>
+                                                                            </math>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr data-xml-align="center"
+                                                                        data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="row">
+                                                                            单相桥式半控
+                                                                        </th>
+                                                                        <td data-xml-align="center" scope="col">
+
+                                                                        </td>
+                                                                        <td data-xml-align="center" scope="col">
+                                                                            <math display='block'>
+                                                                                <semantics>
+                                                                                    <mrow>
+                                                                                        <mtable equalrows='true'
+                                                                                            equalcolumns='true'>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mrow>
+                                                                                                                <mi>p
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>max
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mfrac>
+                                                                                                            <mrow>
+                                                                                                                <msqrt>
+                                                                                                                    <mn>2
+                                                                                                                    </mn>
+                                                                                                                </msqrt>
+                                                                                                            </mrow>
+                                                                                                            <mn>2</mn>
+                                                                                                        </mfrac>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mrow>
+                                                                                                                <mi>n
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>max
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <msqrt>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msqrt>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+
+                                                                                        </mtable>
+                                                                                    </mrow>
+                                                                                </semantics>
+                                                                            </math>
+
+                                                                        </td>
+                                                                        <td data-xml-align="center" scope="col">
+                                                                            <math display='block'>
+                                                                                <semantics>
+                                                                                    <mrow>
+                                                                                        <mtable equalrows='true'
+                                                                                            equalcolumns='true'>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mrow>
+                                                                                                                <mover
+                                                                                                                    accent='true'>
+                                                                                                                    <mi>U
+                                                                                                                    </mi>
+                                                                                                                    <mo
+                                                                                                                        stretchy='true'>
+                                                                                                                        &#x00AF;
+                                                                                                                    </mo>
+                                                                                                                </mover>
+                                                                                                            </mrow>
+                                                                                                            <mrow>
+                                                                                                                <mi>d
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>R
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mn>0.9</mn>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                        <mfrac>
+                                                                                                            <mrow>
+                                                                                                                <mn>1
+                                                                                                                </mn>
+                                                                                                                <mo>+
+                                                                                                                </mo>
+                                                                                                                <mi>cos
+                                                                                                                </mi>
+                                                                                                                <mi>&#x03B1;
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                            <mn>2</mn>
+                                                                                                        </mfrac>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+                                                                                            <mtr>
+                                                                                                <mtd>
+                                                                                                    <mrow>
+                                                                                                        <msub>
+                                                                                                            <mrow>
+                                                                                                                <mover
+                                                                                                                    accent='true'>
+                                                                                                                    <mi>U
+                                                                                                                    </mi>
+                                                                                                                    <mo
+                                                                                                                        stretchy='true'>
+                                                                                                                        &#x00AF;
+                                                                                                                    </mo>
+                                                                                                                </mover>
+                                                                                                            </mrow>
+                                                                                                            <mrow>
+                                                                                                                <mi>d
+                                                                                                                </mi>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>R
+                                                                                                                </mi>
+                                                                                                                <mi>L
+                                                                                                                </mi>
+                                                                                                            </mrow>
+                                                                                                        </msub>
+                                                                                                        <mo>=</mo>
+                                                                                                        <mn>0.9</mn>
+                                                                                                        <msub>
+                                                                                                            <mi>U</mi>
+                                                                                                            <mn>2</mn>
+                                                                                                        </msub>
+                                                                                                        <mi>cos</mi>
+                                                                                                        <mi>&#x03B1;
+                                                                                                        </mi>
+                                                                                                    </mrow>
+                                                                                                </mtd>
+                                                                                            </mtr>
+
+                                                                                        </mtable>
+                                                                                    </mrow>
+                                                                                </semantics>
+                                                                            </math>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                    <figcaption>
+                                                        <div class="caption"><span class="heading">Table 1</span>. The
+                                                            caption of table1.</div>
+
+                                                        <div class="notes">
+                                                            <div role="doc-footnote">
+                                                                description of the table
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Architecto cum odio consequatur libero
+                                                                iusto explicabo id sequi, nemo, dolorem ex similique?
+                                                                Nam enim sunt ipsa officiis quaerat animi
+                                                                rem modi?
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+
+                                                <a href="#T1" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                    data-index="0">
+                                                    <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                    <span>Open in viewer</span>
+                                                </a>
+                                            </div>
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
                                     </section>
 
                                     <section id="sec-3" data-type="introduction">
                                         <h2>
                                             逆变电路
                                         </h2>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
                                     </section>
 
                                     <section id="sec-4" data-type="introduction">
                                         <h2>
                                             直流-直流变流电路
                                         </h2>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
                                     </section>
 
                                     <section id="sec-5" data-type="introduction">
                                         <h2>
                                             交流-交流变流电路
                                         </h2>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
                                     </section>
 
                                     <section id="sec-6" data-type="introduction">
                                         <h2>
                                             PWM控制技术
                                         </h2>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
                                     </section>
 
                                     <section id="sec-7" data-type="introduction">
                                         <h2>
                                             软开关技术
                                         </h2>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
                                     </section>
 
                                     <section id="sec-8" data-type="introduction">
                                         <h2>
                                             电力电子器件应用的共性问题
                                         </h2>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
                                     </section>
 
                                     <section id="sec-9" data-type="introduction">
                                         <h2>
                                             电力电子技术应用
                                         </h2>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <div role="paragraph">
+
+                                        </div>
                                     </section>
 
 
@@ -1343,10 +2347,7 @@
                                     <section id="acknowledgments" role="doc-acknowledgments">
                                         <h2>Acknowledgments</h2>
                                         <div role="paragraph">
-                                            <b>Submit: </b>The manuscript is prepared for iGEM2022, in which our team is
-                                            disqualified. Due to the lack of funding, we couldn't make a pilot device.
-                                            However, we made a software that can be used for image reconstruction, which
-                                            can be found in the Appendix.
+                                            <b>Resources: </b>Th.
                                         </div>
 
                                         <div role="paragraph"><b>Competing interests:</b> no competing
