@@ -27,7 +27,7 @@
 
             pdf_link: "/content_files/learning/learn2/MPU1.pdf",
             paper_state: "yes",
-            section_names: ["微机原理与接口技术", "计算机硬件计数基础简明教程"],
+            section_names: ["微机原理与接口技术", "计算机硬件技术基础简明教程"],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1300,7 +1300,7 @@
 
                                     <section id="sec-2" data-type="introduction">
                                         <h2>
-                                            计算机硬件计数基础简明教程
+                                            计算机硬件技术基础简明教程
                                         </h2>
                                         <div id="adobe-dc-view_2" style="width: auto;"></div>
                                         <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
@@ -1308,7 +1308,7 @@
                                             document.addEventListener("adobe_dc_view_sdk.ready", function () {
                                                 var adobeDCView = new AdobeDC.View({ clientId: "1deff10f0f7143a6af32cc9c356b2b99", divId: "adobe-dc-view_2" });
                                                 adobeDCView.previewFile({
-                                                    content: { location: { url: "https://github.com/yuruotao/yuruotao.github.io/blob/main/content_files/learning/learn2/MPU2.pdf" } },
+                                                    content: { location: { url: "https://yuruotao.com/content_files/learning/learn2/MPU2.pdf" } },
                                                     metaData: { fileName: "MPU2.pdf" }
                                                 }, { embedMode: "IN_LINE" });
                                             });
@@ -1325,7 +1325,10 @@
                                     <section id="acknowledgments" role="doc-acknowledgments">
                                         <h2>Acknowledgments</h2>
                                         <div role="paragraph">
-                                            <b>Resources: </b>
+                                            <b>Resources: </b>The online course recommended for this subject is provided
+                                            by Xidian University, which can be found <a
+                                                href="http://mooc1-api.learning.xidian.edu.cn/course/1088.html">here</a>.
+                                            The recommended textbook comes along with the course.
                                         </div>
 
                                         <div role="paragraph"><b>Competing interests:</b> no competing
@@ -1347,15 +1350,16 @@
                                             <h3>Appendix:</h3>
                                             <div class="core-supplementary-material">
                                                 <div class="core-description">
-                                                    <div>Figures: </div>Figure 1 - Figure 6
+                                                    <div>Code: </div>ASM code used in the content
 
                                                 </div>
                                                 <div class="core-link">
                                                     <ul>
                                                         <li>
-                                                            <a href="/" download="Appendix">Download</a>
+                                                            <a href="/content_files/learning/learn2/"
+                                                                download="Appendix">Download</a>
                                                         </li>
-                                                        <li>1.27 MB</li>
+                                                        <li> MB</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1378,7 +1382,7 @@
 
                                             <script type="application/javascript">
                                                 citations = [
-
+                                                    '<div class="csl-entry">张伟涛, 楼顺天, &#38; 周佳社. (2020). <i>微机原理与接口技术</i> (3rd ed.). 科学出版社.</div>',
                                                 ];
                                                 iterate_num = citations.length;
                                                 html_model_num1 = '<div role="doc-biblioentry listitem" data-has="label"><div class="label">';
