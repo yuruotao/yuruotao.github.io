@@ -3337,47 +3337,82 @@
                                             </math>
 
                                             <br>&emsp;
-                                            <br><b>单相桥式全控阻感负载</b>：
-                                            <br><b>三相桥式全控阻感负载</b>：
+                                            <br><b>单相桥式全控阻感负载</b>：<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>&#x03BD;</mi>
+                                                        <mo>=</mo>
+                                                        <mn>0.9</mn>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>
+
+                                            <br><b>三相桥式全控阻感负载</b>：<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>&#x03BD;</mi>
+                                                        <mo>=</mo>
+                                                        <mn>0.955</mn>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>
                                             <br>&emsp;
-                                            <br><b>双反星形电路</b>：
-                                            <br>&emsp;<b>平衡电抗器</b>：
+                                            <br><b>双反星形电路</b>：变压器二次侧两绕组极性相反，消除铁芯直流磁化；
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>U</mi>
+                                                            <mi>d</mi>
+                                                        </msub>
+                                                        <mo>=</mo>
+                                                        <mn>1.17</mn>
+                                                        <msub>
+                                                            <mi>U</mi>
+                                                            <mn>2</mn>
+                                                        </msub>
+                                                        <mi>cos</mi>
+                                                        <mi>&#x03B1;</mi>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>
+
+                                            &emsp;<b>平衡电抗器</b>：两直流电源并联运行时，当两电源电压平均值、瞬时值相等时，负载电流平均分配；
                                             <br>&emsp;<b>双反星形电路与三相桥式电路</b>：
-                                            <br>&emsp;&emsp;&emsp;1.
-                                            <br>&emsp;&emsp;&emsp;2.
-                                            <br>&emsp;&emsp;&emsp;3.
+                                            <br>&emsp;&emsp;&emsp;1.三相桥式为两组三相半波串联，双反星形为两组三相半波并联，且需平衡电抗器；
+                                            <br>&emsp;&emsp;&emsp;2.变压器二次电压有效值相等时，双反星形电路电压平均值为三相桥式0.5倍，整流电流平均值为2倍；
+                                            <br>&emsp;&emsp;&emsp;3.二者晶闸管导通与触发脉冲分配关系相同，负载电压、电流波形相同；
                                             <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                            <br>&emsp;
-                                        </div>
-                                        <div role="paragraph">
+                                            <br><b>多重化整流电路</b>：减少交流测输入电流谐波；
+                                            <br>&emsp;<b>12脉波</b>：谐波次数<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mn>12</mn>
+                                                        <mi>k</mi>
+                                                        <mo>&#x00B1;</mo>
+                                                        <mn>1</mn>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>；
+
+                                            <br>&emsp;<b>24脉波</b>：谐波次数<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mn>24</mn>
+                                                        <mi>k</mi>
+                                                        <mo>&#x00B1;</mo>
+                                                        <mn>1</mn>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>；
 
                                         </div>
-                                        <div role="paragraph">
 
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
                                     </section>
 
                                     <section id="sec-3" data-type="introduction">
@@ -3385,29 +3420,272 @@
                                             逆变电路
                                         </h2>
                                         <div role="paragraph">
+                                            <b>逆变</b>：把直流电转变为交流电的过程；
+                                            <br><b>换流方式</b>：
+                                            <br>&emsp;1.器件换流：利用全控型器件；
+                                            <br>&emsp;2.电网换流：电网提供换流电压；
+                                            <br>&emsp;3.负载换流：负载电流相位超前于负载电压；
+                                            <br>&emsp;4.强迫换流：给欲关断的晶闸管强制施加反向电压/电流；
+                                            <br>&emsp;
+                                            <br><b>电网换流条件</b>：
+                                            <br>&emsp;1.有直流电动势，极性与晶闸管导通方向一致，值大于变流器直流侧平均电压；
+                                            <br>&emsp;2.晶闸管控制角<math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>&#x03B1;</mi>
+                                                        <mo>&#x003E;</mo>
+                                                        <mfrac>
+                                                            <mi>&#x03C0;</mi>
+                                                            <mn>2</mn>
+                                                        </mfrac>
+                                                        <mo>,</mo>
+                                                        <msub>
+                                                            <mi>U</mi>
+                                                            <mi>d</mi>
+                                                        </msub>
+                                                        <mo>&#x003E;</mo>
+                                                        <mn>0</mn>
+                                                    </mrow>
 
-                                        </div>
-                                        <div role="paragraph">
+                                                </semantics>
+                                            </math>；
 
-                                        </div>
-                                        <div role="paragraph">
+                                            <br><b>三相桥逆变</b>：
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mtable equalrows='true' equalcolumns='true'>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>U</mi>
+                                                                            <mi>d</mi>
+                                                                        </msub>
+                                                                        <mo>=</mo>
+                                                                        <mo>&#x2212;</mo>
+                                                                        <mn>2.34</mn>
+                                                                        <msub>
+                                                                            <mi>U</mi>
+                                                                            <mn>2</mn>
+                                                                        </msub>
+                                                                        <mi>cos</mi>
+                                                                        <mi>&#x03B2;</mi>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>I</mi>
+                                                                            <mi>d</mi>
+                                                                        </msub>
+                                                                        <mo>=</mo>
+                                                                        <mfrac>
+                                                                            <mrow>
+                                                                                <msub>
+                                                                                    <mi>U</mi>
+                                                                                    <mi>d</mi>
+                                                                                </msub>
+                                                                                <mo>&#x2212;</mo>
+                                                                                <msub>
+                                                                                    <mi>E</mi>
+                                                                                    <mi>M</mi>
+                                                                                </msub>
+                                                                            </mrow>
+                                                                            <mi>R</mi>
+                                                                        </mfrac>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>I</mi>
+                                                                            <mn>2</mn>
+                                                                        </msub>
+                                                                        <mo>=</mo>
+                                                                        <msqrt>
+                                                                            <mn>2</mn>
+                                                                        </msqrt>
+                                                                        <msub>
+                                                                            <mi>I</mi>
+                                                                            <mrow>
+                                                                                <mi>V</mi>
+                                                                                <mi>T</mi>
+                                                                            </mrow>
+                                                                        </msub>
+                                                                        <mo>=</mo>
+                                                                        <msqrt>
+                                                                            <mrow>
+                                                                                <mfrac>
+                                                                                    <mn>2</mn>
+                                                                                    <mn>3</mn>
+                                                                                </mfrac>
+                                                                            </mrow>
+                                                                        </msqrt>
+                                                                        <msub>
+                                                                            <mi>I</mi>
+                                                                            <mi>d</mi>
+                                                                        </msub>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>P</mi>
+                                                                            <mi>d</mi>
+                                                                        </msub>
+                                                                        <mo>=</mo>
+                                                                        <mi>R</mi>
+                                                                        <msubsup>
+                                                                            <mi>I</mi>
+                                                                            <mi>d</mi>
+                                                                            <mn>2</mn>
+                                                                        </msubsup>
+                                                                        <mo>+</mo>
+                                                                        <msub>
+                                                                            <mi>E</mi>
+                                                                            <mi>M</mi>
+                                                                        </msub>
+                                                                        <msub>
+                                                                            <mi>I</mi>
+                                                                            <mi>d</mi>
+                                                                        </msub>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
 
+                                                        </mtable>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            <b>逆变失败</b>：外接直流电源通过晶闸管电路形成短路；
+                                            <br>&emsp;
+                                            <br><b>电压型逆变电路特点</b>：
+                                            <br>&emsp;1.直流侧为电压源或并联大电容，电压基本无脉动，回路呈现低阻抗；
+                                            <br>&emsp;2.直流电流源钳位，交流侧输出电压波形为矩形波，与负载阻抗角无关；
+                                            <br>&emsp;3.交流测为阻感负载时需提供无功功率，直流侧电容缓冲无功能量；
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
                                         </div>
-                                        <div role="paragraph">
 
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
                                     </section>
 
                                     <section id="sec-4" data-type="introduction">
@@ -3415,28 +3693,126 @@
                                             直流-直流变流电路
                                         </h2>
                                         <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
                                         </div>
                                     </section>
 
@@ -3445,28 +3821,126 @@
                                             交流-交流变流电路
                                         </h2>
                                         <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
                                         </div>
                                     </section>
 
@@ -3475,27 +3949,133 @@
                                             PWM控制技术
                                         </h2>
                                         <div role="paragraph">
+                                            <b>面积等效原理</b>：冲量相等，形状不同的窄脉冲加在具有惯性的环节上时，效果基本相同；
+                                            <br><b>单极性PWM控制方式</b>：在输入电压半个周期内，三角波载波只在一种极性范围内变化；
+                                            <br>&emsp;
+                                            <br><b>特定谐波消去法</b>：
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mtable equalrows='true' equalcolumns='true'>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <mi>u</mi>
+                                                                        <mo stretchy='false'>(</mo>
+                                                                        <mi>&#x03C9;</mi>
+                                                                        <mi>t</mi>
+                                                                        <mo stretchy='false'>)</mo>
+                                                                        <mo>=</mo>
+                                                                        <mo>&#x2212;</mo>
+                                                                        <mi>u</mi>
+                                                                        <mo stretchy='false'>(</mo>
+                                                                        <mi>&#x03C9;</mi>
+                                                                        <mi>t</mi>
+                                                                        <mo>+</mo>
+                                                                        <mi>&#x03C0;</mi>
+                                                                        <mo stretchy='false'>)</mo>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <mi>u</mi>
+                                                                        <mo stretchy='false'>(</mo>
+                                                                        <mi>&#x03C9;</mi>
+                                                                        <mi>t</mi>
+                                                                        <mo stretchy='false'>)</mo>
+                                                                        <mo>=</mo>
+                                                                        <mi>u</mi>
+                                                                        <mo stretchy='false'>(</mo>
+                                                                        <mi>&#x03C0;</mi>
+                                                                        <mo>&#x2212;</mo>
+                                                                        <mi>&#x03C9;</mi>
+                                                                        <mi>t</mi>
+                                                                        <mo stretchy='false'>)</mo>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>a</mi>
+                                                                            <mi>n</mi>
+                                                                        </msub>
+                                                                        <mo>=</mo>
+                                                                        <mfrac>
+                                                                            <mn>4</mn>
+                                                                            <mi>&#x03C0;</mi>
+                                                                        </mfrac>
+                                                                        <mstyle displaystyle='true'>
+                                                                            <mrow>
+                                                                                <munderover>
+                                                                                    <mo>&#x222B;</mo>
+                                                                                    <mn>0</mn>
+                                                                                    <mrow>
+                                                                                        <mn>0.5</mn>
+                                                                                        <mi>&#x03C0;</mi>
+                                                                                    </mrow>
+                                                                                </munderover>
+                                                                                <mrow>
+                                                                                    <mi>u</mi>
+                                                                                    <mo stretchy='false'>(</mo>
+                                                                                    <mi>&#x03C9;</mi>
+                                                                                    <mi>t</mi>
+                                                                                    <mo stretchy='false'>)</mo>
+                                                                                    <mi>sin</mi>
+                                                                                    <mo stretchy='false'>(</mo>
+                                                                                    <mi>n</mi>
+                                                                                    <mi>&#x03C9;</mi>
+                                                                                    <mi>t</mi>
+                                                                                    <mo stretchy='false'>)</mo>
+                                                                                    <mi>d</mi>
+                                                                                    <mi>&#x03C9;</mi>
+                                                                                    <mi>t</mi>
+                                                                                </mrow>
+                                                                            </mrow>
 
-                                        </div>
-                                        <div role="paragraph">
+                                                                        </mstyle>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
 
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
+                                                        </mtable>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            <b>载波比</b>：载波频率与调制信号频率之比
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>N</mi>
+                                                        <mo>=</mo>
+                                                        <mfrac>
+                                                            <mrow>
+                                                                <msub>
+                                                                    <mi>f</mi>
+                                                                    <mi>c</mi>
+                                                                </msub>
+                                                            </mrow>
+                                                            <mrow>
+                                                                <msub>
+                                                                    <mi>f</mi>
+                                                                    <mi>r</mi>
+                                                                </msub>
+                                                            </mrow>
+                                                        </mfrac>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            <b>异步调制</b>：载波信号与调制信号不保持同步的调制方式；
+                                            <br><b>同步调制</b>：载波比为常数，且变频时载波、信号波保持同步；
+                                            <br>&emsp;
+                                            <br><b>PWM整流电路</b>：
+                                            <br>&emsp;<b>分类</b>：电压型、电流型；
+                                            <br>&emsp;<b>控制</b>：要求输入电流为正弦波且和电压同相位；
+                                            <br>&emsp;&emsp;间接电流控制：未引入交流电流反馈；
+                                            <br>&emsp;&emsp;直接电流控制：引入交流电流反馈；
 
                                         </div>
                                     </section>
@@ -3505,27 +4085,21 @@
                                             软开关技术
                                         </h2>
                                         <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
+                                            <b>零电压开关</b>：开关开通前两端电压为0；
+                                            <br><b>零电流开关</b>：开关关断前流过电流为0；
+                                            <br>&emsp;
+                                            <br><b>软开关电路</b>：
+                                            <br>&emsp;<b>准谐振电路</b>：
+                                            <br>&emsp;&emsp;1.零电压开关准谐振电路；
+                                            <br>&emsp;&emsp;2.零电流开关准谐振电路；
+                                            <br>&emsp;&emsp;3.零电压开关多谐振电路；
+                                            <br>&emsp;&emsp;4.用于逆变器的谐振直流环；
+                                            <br>&emsp;<b>零开关PWM电路</b>：
+                                            <br>&emsp;&emsp;1.零电压开关PWM电路；
+                                            <br>&emsp;&emsp;2.零电流开关PWM电路；
+                                            <br>&emsp;<b>零转换PWM电路</b>：
+                                            <br>&emsp;&emsp;1.零电压转换PWM电路；
+                                            <br>&emsp;&emsp;2.零电流转换PWM电路；
 
                                         </div>
                                     </section>
@@ -3535,27 +4109,15 @@
                                             电力电子器件应用的共性问题
                                         </h2>
                                         <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
+                                            <b>过电压</b>：
+                                            <br>&emsp;<b>外因</b>：1.操作过电压；
+                                            <br>&emsp;&emsp;&emsp;&emsp;2.雷击过电压；
+                                            <br>&emsp;<b>内因</b>：1.换相过电压：晶闸管/换流二极管换相结束后不能立刻恢复阻断能力；
+                                            <br>&emsp;&emsp;&emsp;&emsp;2.关断过电压：线路电感在器件关断时产生；
+                                            <br>&emsp;
+                                            <br><b>缓冲电路</b>：
+                                            <br>&emsp;<b>关断缓冲电路</b>：吸收器件关断过电压与换相过电压；
+                                            <br>&emsp;<b>开通缓冲电路</b>：抑制器件开通电流过冲与电流变化率；
 
                                         </div>
                                     </section>
@@ -3565,28 +4127,126 @@
                                             电力电子技术应用
                                         </h2>
                                         <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
-                                        </div>
-                                        <div role="paragraph">
-
+                                            <b>直流电动机系统</b>：
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
+                                            <br>&emsp;
                                         </div>
                                     </section>
 
