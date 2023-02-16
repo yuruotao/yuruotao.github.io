@@ -4,7 +4,7 @@
 <head data-pb-dropzone="head">
     <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
     </link>
-    <title id="page_title">Molecular Docking</title>
+    <title id="page_title">Gut Microbiome-Metabolites-Host Interaction Mechanism Study</title>
 
     <!-- here is the updating script -->
     <script>
@@ -15,19 +15,19 @@
             page_title: page_title_1,
             current_directory: "science project",
             current_directory_path: "/projects.html",
-            date: "2022 SEPTEMBER 1",
+            date: "2022 October 25",
             authors: author,
-            article_type: "science project",
-            article_field: "Computational Biology",
+            article_type: "Note",
+            article_field: "Gut Microbiome",
 
             previous_article_link: "#",
-            next_article_link: "/html_files/projects/science_projects/docking/docking1.html",
+            next_article_link: "/html_files/projects/science_projects/docking/docking2.html",
             previous_article_title: "no previous article",
             next_article_title: "",
 
-            pdf_link: "/content_files/projects/science_prg/sci_prg1/",
+            pdf_link: "/content_files/projects/science_prg/docking/docking1/microbiome-note-print.pdf",
             paper_state: "yes",
-            section_names: ["",],
+            section_names: ["Gut Microbiome-Metabolites-Host Interaction Mechanism Study",],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1263,24 +1263,12 @@
                                         <div role="paragraph">
 
                                             <p>
-                                                Due to the lack of expression of ER, PR, and overexpression of HER2,
-                                                triple-negative breast cancer is lack of valid treatment method and has
-                                                an overall worse prognosis. However, the interactions among molecules as
-                                                well as cells are yet to be elucidated. In this article, we aim to
-                                                elucidate the effect of lactate and glucose on the tumor
-                                                microenvironment and the underlying molecular interaction mechanism. We
-                                                provide an overview of the TNBC microenvironment and the metabolic
-                                                pathways altered to illustrate the central importance of two key
-                                                metabolites, glucose, and lactate, plus glutamine for generality in the
-                                                first place, in which an interaction network is established. Moreover,
-                                                we provided another interaction network among cells on the basis of
-                                                molecular interactions. We look forward to using mathematical tools from
-                                                network theory to conduct more detailed analyses in the future.
+
                                             </p>
 
                                             <p>
                                                 <b>
-                                                    Wireless Power Transfer,
+                                                    Gut Microbiome, Correlation Analysis
                                                 </b>
                                             </p>
                                         </div>
@@ -1295,728 +1283,31 @@
 
                                     <section id="sec-1" data-type="introduction">
                                         <h2>
-                                            Introduction
+                                            Gut Microbiome-Metabolites-Host Interaction Mechanism Study
                                         </h2>
-                                        <h3>
-                                            Overview
-                                        </h3>
-                                        <div role="paragraph">
-                                            Estrogen receptor (ER), progesterone receptor (PR), human epidermal growth
-                                            factor receptor 2 (HER2) are three vital biomarkers for breast cancer
-                                            staging and classification, owing to their predictability for prognosis.(<a
-                                                href="#R1" role="doc-biblioref" data-xml-rid="R1"><i>1</i></a><a
-                                                href="#R2" role="doc-biblioref" data-xml-rid="R2"><i></i></a>-<a
-                                                href="#R3" role="doc-biblioref" data-xml-rid="R3"><i>3</i></a>)
-                                            According to epidemiology research, young women as well as black women have
-                                            a higher risk of having TNBC.(<a href="#R4" role="doc-biblioref"
-                                                data-xml-rid="R4"><i>4</i></a><a href="#R5" role="doc-biblioref"
-                                                data-xml-rid="R5"><i></i></a>-<a href="#R6" role="doc-biblioref"
-                                                data-xml-rid="R6"><i>6</i></a>) Due to the lack of expression of ER, PR,
-                                            and overexpression of HER2, triple-negative breast cancer is lack of valid
-                                            treatment method and has an overall worse prognosis.(<a href="#R7"
-                                                role="doc-biblioref" data-xml-rid="R7"><i>7</i></a>) As hormone therapy
-                                            is
-                                            unsuitable for treatment, currently only chemotherapy is a systematic
-                                            approach for TNBC treatment.(<a href="#R8" role="doc-biblioref"
-                                                data-xml-rid="R8"><i>8</i></a>, <a href="#R9" role="doc-biblioref"
-                                                data-xml-rid="R9"><i>9</i></a>) Of note, TNBC has a higher probability
-                                            of
-                                            metastasis and is usually observed higher incidence to the brain, liver, and
-                                            lungs.(<a href="#R10" role="doc-biblioref"
-                                                data-xml-rid="R10"><i>10</i></a><a href="#R11" role="doc-biblioref"
-                                                data-xml-rid="R11"><i></i></a>-<a href="#R12" role="doc-biblioref"
-                                                data-xml-rid="R12"><i>12</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            Due to the heterogeneity of breast cancer, therapeutic targets may not be
-                                            universal to all TNBC patients. Thus, there have been multiple approaches
-                                            applied in TNBC stratification, namely, the subtyping of TNBC for more
-                                            targeted therapy. Lehmann et al. stratified TNBC into 6 subtypes based on
-                                            gene profiling: basal-like 1 (BL1), basal-like 2 (BL2), mesenchymal (M),
-                                            mesenchymal stem-like (MSL), immunomodulatory (IM), and luminal androgen
-                                            receptor (LAR).(<a href="#R13" role="doc-biblioref"
-                                                data-xml-rid="R13"><i>13</i></a>) In a follow-up study, Masuda et al.
-                                            proved the validity of such a subtyping method using prognosis analysis,
-                                            factors including distant metastasis-free survival rate, overall survival
-                                            rate (OS), and 3-year recurrence rate are considered.(<a href="#R14"
-                                                role="doc-biblioref" data-xml-rid="R14"><i>14</i></a>) Liu et al.
-                                            proposed a
-                                            TNBC subtyping based on the mRNA and lncRNA transcriptome profiles,
-                                            separating tumors into 4 main subtypes.(<a href="#R15" role="doc-biblioref"
-                                                data-xml-rid="R15"><i>15</i></a>) However, such a stratification method
-                                            rose from the information of 165 TNBC tumor samples.
-                                        </div>
-                                        <div role="paragraph">
-                                            Based on the established TNBC subtypes, endeavors have been made in seeking
-                                            new therapeutic targets. Poly ADP-ribose polymerase (PARP) inhibition is one
-                                            of the extensively studied molecular targets, as clinical trial outcomes
-                                            indicate, monotherapy with these agents is not sufficient and requires more
-                                            combination regimens.(<a href="#R16" role="doc-biblioref"
-                                                data-xml-rid="R16"><i>16</i></a><a href="#R17" role="doc-biblioref"
-                                                data-xml-rid="R17"><i></i></a>-<a href="#R18" role="doc-biblioref"
-                                                data-xml-rid="R18"><i>18</i></a>) Another target is the PI3K/mTOR/S6
-                                            pathway
-                                            since it has been recognized as a driver in TNBC.(<a href="#R13"
-                                                role="doc-biblioref" data-xml-rid="R13"><i>13</i></a>, <a href="#R19"
-                                                role="doc-biblioref" data-xml-rid="R19"><i>19</i></a>) Some pieces of
-                                            evidence suggest that the cytoskeleton, cell migration, and vascular system
-                                            are also potential targets for therapeutics.(<a href="#R20"
-                                                role="doc-biblioref" data-xml-rid="R20"><i>20</i></a><a href="#R21"
-                                                role="doc-biblioref" data-xml-rid="R21"><i></i></a>-<a href="#R22"
-                                                role="doc-biblioref" data-xml-rid="R22"><i>22</i></a>)
-                                        </div>
-                                        <h3>Glucose and Lactate in Tumor Microenvironment</h3>
-                                        <div role="paragraph">
-                                            In the later part of this passage, we aim to elucidate the effect of lactate
-                                            and glucose on the tumor microenvironment and the underlying molecular
-                                            interaction mechanism. Here, we provide an overview of the TNBC
-                                            microenvironment and the metabolic pathways altered to illustrate the
-                                            central importance of two key metabolites, glucose, and lactate, plus
-                                            glutamine for generality.
-                                        </div>
-                                        <div role="paragraph">
-                                            Glucose uptake is vital for biological processes since it is the main energy
-                                            source and carbon source. Metabolic pathways in both somatic cells and
-                                            cancer cells involve glucose. In somatic cells, oxidative phosphorylation
-                                            (OXPHOS) functions as the main energy source.(<a href="#R23"
-                                                role="doc-biblioref" data-xml-rid="R23"><i>23</i></a>) In cancer cells,
-                                            as observed by Warburg, OXPHOS is usually replaced by glycolysis for
-                                            accelerated production of metabolic fuels as well as energy despite oxygen
-                                            level, which is named the Warburg effect.(<a href="#R24"
-                                                role="doc-biblioref" data-xml-rid="R24"><i>24</i></a>) The rate of ATP
-                                            production is about 100 times that of oxidative phosphorylation. For somatic
-                                            cells under oxygen deprivation conditions, they switch to anaerobic OXPHOS
-                                            to reduce the stress from hypoxia, in which lactate is one of the final
-                                            products.(<a href="#R25" role="doc-biblioref"
-                                                data-xml-rid="R25"><i>25</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            In recent years, more models describing the phenomenon that arise in cancer
-                                            cells have been established. The reverse Warburg effect proposed by
-                                            Stephanos et al. establishes the contact between glycolytic stromal cells
-                                            and oxidative tumor cells.(<a href="#R26" role="doc-biblioref"
-                                                data-xml-rid="R26"><i>26</i></a>) The inverse Warburg effect proposed by
-                                            Carla et al. focused on the obesity-triggered abnormal metabolism
-                                            pattern.(<a href="#R27" role="doc-biblioref"
-                                                data-xml-rid="R27"><i>27</i></a>)
-                                            Additionally, comprehensive models have been proposed. For instance, the
-                                            hybrid model models the metabolic state of the coexistence of glycolytic
-                                            activity and OXPHOS activity.(<a href="#R28" role="doc-biblioref"
-                                                data-xml-rid="R28"><i>28</i></a>) Among all the mentioned models,
-                                            lactate is the key that connecting various cells. Hence the significance of
-                                            lactate.
-                                        </div>
-                                        <div role="paragraph">
-                                            Since we are discussing breast cancer, we cannot ignore the characteristics
-                                            of the breast. During lactation, the glucose uptake level rises, and some of
-                                            the consumed glucose is transported to the Golgi apparatus to produce
-                                            lactose, which is a rich component of breast milk.(<a href="#R29"
-                                                role="doc-biblioref" data-xml-rid="R29"><i>29</i></a>, <a href="#R30"
-                                                role="doc-biblioref" data-xml-rid="R30"><i>30</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            We organize the text as follows. Firstly, we establish a mathematical model
-                                            of tumor microenvironment focusing on three key metabolites, glucose,
-                                            glutamine, and lactate in <a href="#sec-2">Section 2</a>, discuss the effect
-                                            of acidic
-                                            microenvironment on various types of cells in <a href="#sec-3">Section
-                                                3</a>,
-                                            and draw conclusions in <a href="#sec-4">Section 4</a>.
-                                        </div>
+                                        <div id="adobe-dc-view_1" style="width: auto"></div>
+                                        <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
+                                        <script type="text/javascript">
+                                            document.addEventListener("adobe_dc_view_sdk.ready", function () {
+                                                var adobeDCView = new AdobeDC.View({
+                                                    clientId: "1deff10f0f7143a6af32cc9c356b2b99",
+                                                    divId: "adobe-dc-view_1",
+                                                });
+                                                adobeDCView.previewFile(
+                                                    {
+                                                        content: {
+                                                            location: {
+                                                                url: "https://yuruotao.com/content_files/projects/science_prg/docking/docking1/microbiome-note-html.pdf",
+                                                            },
+                                                        },
+                                                        metaData: { fileName: "microbiome.pdf" },
+                                                    },
+                                                    { embedMode: "IN_LINE" }
+                                                );
+                                            });
+                                        </script>
 
 
-                                    </section>
-
-                                    <section id="sec-2" data-type="introduction">
-                                        <h2>
-                                            Glucose-lactate Model
-                                        </h2>
-                                        <div role="paragraph">
-                                            Given the central importance of glucose and lactate, we organize the text
-                                            centered around them. As mentioned earlier, we also take glutamine into
-                                            account. The first two subsections aim to model the intake of energy, and
-                                            the following two focus on the production and shuttling of lactate. Finally,
-                                            we give a comprehensive network for summarization in Section 2.5 and discuss
-                                            the effect of acidified tumor microenvironment on various types of cells in
-                                            Section 2.6, in which a cell interaction network is established.
-                                        </div>
-                                        <h3>
-                                            Intake of Glucose
-                                        </h3>
-                                        <div role="paragraph">
-                                            GLUT transporters are a group of transporters encoded by SLC2 genes
-                                            controlling the inflow of glucose, the process of glucose transporting
-                                            through GLUTs is categorized as facilitated diffusion.(<a href="#R31"
-                                                role="doc-biblioref" data-xml-rid="R31"><i>31</i></a>) Glucose
-                                            transportation based on sodium-dependent glucose transporters (SGLT) is
-                                            based on the <math>
-                                                <semantics>
-                                                    <mrow>
-                                                        <mi>N</mi>
-                                                        <msup>
-                                                            <mi>a</mi>
-                                                            <mo>+</mo>
-                                                        </msup>
-                                                    </mrow>
-                                                </semantics>
-                                            </math>
-                                            electrochemical gradient provided by the <math>
-                                                <semantics>
-                                                    <mrow>
-                                                        <mi>N</mi>
-                                                        <msup>
-                                                            <mi>a</mi>
-                                                            <mo>+</mo>
-                                                        </msup>
-                                                        <mo>&#x2212;</mo>
-                                                        <msup>
-                                                            <mi>K</mi>
-                                                            <mo>+</mo>
-                                                        </msup>
-                                                    </mrow>
-                                                </semantics>
-                                            </math>
-                                            ATPase
-                                            pump despite the concentration difference.(<a href="#R32"
-                                                role="doc-biblioref" data-xml-rid="R32"><i>32</i></a>) Among them, GLUT1
-                                            is expressed as the most common. The silencing of GLUT1 in TNBC by Sunhwa et
-                                            al. exhibits that GLUT1 promotes cell proliferation, migration, and invasion
-                                            by regulating HER and integrin signaling in TNBC cells.
-                                        </div>
-                                        <div role="paragraph">
-                                            Now we introduce a set of transcription factors named hypoxia-inducible
-                                            factors (HIFs). Since they emerge under the condition of hypoxia, we first
-                                            give the definition of the hypoxia state. Oxygen concentrations below 21% is
-                                            called hypoxia and is graded as: physiological hypoxia: 2–9%; mild hypoxia:
-                                            1–5%; hypoxia: 0.1%-1%, and anoxia: &#60 0.1%.(<a href="#R33"
-                                                role="doc-biblioref" data-xml-rid="R33"><i>33</i></a>)
-                                            Hypoxia-inducible factor 1(HIF-1) is composed of two subunits, i.e.,
-                                            HIF-1<math>
-                                                <semantics>
-                                                    <mi>&#x03B1;</mi>
-                                                </semantics>
-                                            </math>
-
-                                            and HIF-1<math>
-                                                <semantics>
-                                                    <mi>&#x03B2;</mi>
-                                                </semantics>
-                                            </math>
-                                            .(<a href="#R34" role="doc-biblioref" data-xml-rid="R34"><i>34</i></a>)
-                                            c-Myc is a transcription factor regulating multiple pathways involving
-                                            cancer metabolism and has a direct effect on GLUT1 expression, we combine
-                                            the discussion of c-Myc with HIF-1<math>
-                                                <semantics>
-                                                    <mi>&#x03B1;</mi>
-                                                </semantics>
-                                            </math> since the similar mechanisms.(<a href="#R35" role="doc-biblioref"
-                                                data-xml-rid="R35"><i>35</i></a>)
-                                            Firstly, the rate-limiting steps in glycolysis is accelerated by HIF-1<math>
-                                                <semantics>
-                                                    <mi>&#x03B1;</mi>
-                                                </semantics>
-                                            </math> or
-                                            c-Myc-induced hexokinase 2 and fructose-2,6-bisphosphate.(<a href="#R36"
-                                                role="doc-biblioref" data-xml-rid="R36"><i>36</i></a>) Secondly,
-                                            pyruvate dehydrogenase-mediated pyruvate mitochondrial metabolism is
-                                            suppressed with the induced pyruvate dehydrogenase kinase-1.(<a href="#R37"
-                                                role="doc-biblioref" data-xml-rid="R37"><i>37</i></a>) Thirdly, the
-                                            activity of LDHA is promoted and the activity of LDHB is suppressed, whose
-                                            functions will be discussed in later sections.(<a href="#R38"
-                                                role="doc-biblioref" data-xml-rid="R38"><i>38</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            Thioredoxin-inducing protein (TXNIP) is a protein that downregulates the
-                                            expression of GLUT1 and its induction is MondoA-dependent.(<a href="#R39"
-                                                role="doc-biblioref" data-xml-rid="R39"><i>39</i></a>) MondoA is a
-                                            transcription factor functions as a sensor that adapt cells to changes in
-                                            microenvironmental glycolytic changes, the work by Carrie et al. suggests
-                                            that MondoA likely accounts for the induction of TXNIP by glucose and the
-                                            TXNIP-dependent down-regulation of glucose uptake.(<a href="#R40"
-                                                role="doc-biblioref" data-xml-rid="R40"><i>40</i></a>, <a href="#R41"
-                                                role="doc-biblioref" data-xml-rid="R41"><i>41</i></a>) C-Myc
-                                            competitively
-                                            binds to the promotor region of TXNIP, upregulating the uptake of
-                                            glucose.(<a href="#R42" role="doc-biblioref"
-                                                data-xml-rid="R42"><i>42</i></a>, <a href="#R43" role="doc-biblioref"
-                                                data-xml-rid="R43"><i>43</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            Now we introduce two important molecules, mTOR and PKM2, whose corresponding
-                                            metabolic pathway enhances the uptake of glucose.(<a href="#R44"
-                                                role="doc-biblioref" data-xml-rid="R44"><i>44</i></a>) The mammalian
-                                            target of rapamycin (mTOR) is a kinase encoded by the MTOR gene, which
-                                            serves as a
-                                            component for the synthesis of two major protein complexes, mTORC1, and
-                                            mTORC2.(<a href="#R45" role="doc-biblioref"
-                                                data-xml-rid="R45"><i>45</i></a>) mTOR is able to control the
-                                            proliferation and growth of cells by responding to diverse environmental
-                                            signals.(<a href="#R46" role="doc-biblioref"
-                                                data-xml-rid="R46"><i>46</i></a>)
-                                            Similarly, USP6NL is a GTPase-activating protein that contributes to the
-                                            stabilization of the expression level of GLUT1 by suppressing GLUT1
-                                            endocytosis and the Akt-mediated degradation.(<a href="#R47"
-                                                role="doc-biblioref" data-xml-rid="R47"><i>47</i></a>) An illustration
-                                            of
-                                            the associations discussed above is depicted in <a href="#F1">Figure 1</a>
-                                            below.
-                                        </div>
-                                        <div class="figure-wrap" data-specific-use="distribute">
-                                            <figure id="F1" class="graphic"><img
-                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/2.1 figure.jpg"
-                                                    height="3071" width="4333" aria-labelledby="F1" loading="lazy" />
-                                                <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 1</span>. The
-                                                        intake of glucose.
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <h3>
-                                            Intake of Glutamine
-                                        </h3>
-                                        <div role="paragraph">
-                                            Glutamine (Gln) is an <math>
-                                                <semantics>
-                                                    <mi>&#x03B1;</mi>
-                                                </semantics>
-                                            </math>
-                                            -amino acid used in multiple biochemistry processes,
-                                            especially the synthesis of proteins. In cancer, glutamine metabolism acts
-                                            as a carbon and nitrogen source.(<a href="#R48" role="doc-biblioref"
-                                                data-xml-rid="R48"><i>48</i></a>) Increased glutamine metabolism is
-                                            recognized as a hallmark of cancer. In cancer cells, glutamine is converted
-                                            to glutamate under the mitochondrial enzyme glutaminase, which is under the
-                                            regulation of the c-Myc factor.(<a href="#R49" role="doc-biblioref"
-                                                data-xml-rid="R49"><i>49</i></a><a href="#R50" role="doc-biblioref"
-                                                data-xml-rid="R50"><i></i></a> - <a href="#R51" role="doc-biblioref"
-                                                data-xml-rid="R51"><i>51</i></a>) The product glutamate then enters the
-                                            tricarboxylate acid (TCA) cycle in the form of <math>
-                                                <semantics>
-                                                    <mi>&#x03B1;</mi>
-                                                </semantics>
-                                            </math>-ketoglutarate as an
-                                            alternative source of carbon other than glucose and is finally converted to
-                                            malate.(<a href="#R52" role="doc-biblioref"
-                                                data-xml-rid="R52"><i>52</i></a>) The malate is then transported into
-                                            the cytoplasm to convert to pyruvate, which will be mentioned later, is a
-                                            precursor of lactate. Thus, the upregulated glutaminolysis contributes to
-                                            the production of lactate.
-                                        </div>
-                                        <div role="paragraph">
-                                            Of note, the glutaminolysis level is dependent on the tumor type. In our
-                                            case, the TNBC cells are glutamine dependent and the expression of
-                                            glutaminase was significantly associated with a low level of TILs and poor
-                                            disease-free survival in TNBCs presenting with lymph node metastasis and
-                                            high levels of TILs.(<a href="#R53" role="doc-biblioref"
-                                                data-xml-rid="R53"><i>53</i></a>) An illustration of the relationships
-                                            in glutaminolysis is shown in <a href="#F2">Figure 2</a>.
-                                        </div>
-                                        <div class="figure-wrap" data-specific-use="distribute">
-                                            <figure id="F2" class="graphic"><img
-                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/Figure 2.jpg"
-                                                    height="3071" width="4333" aria-labelledby="F2" loading="lazy" />
-                                                <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 2</span>. The
-                                                        intake of glucose.
-                                                    </div>
-
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <h3>
-                                            Lactate Production
-                                        </h3>
-                                        <div role="paragraph">
-                                            From the analysis earlier, we conclude that there are 3 main sources for the
-                                            production of lactate: anaerobic OXPHOS, glycolysis, and glutaminolysis. The
-                                            common product of the three processes is pyruvate. Here we discuss the
-                                            involved elements in the conversion of pyruvate to lactate.
-                                        </div>
-                                        <div role="paragraph">
-                                            The conversion between pyruvate and lactate is controlled by a family of
-                                            enzymes called lactate dehydrogenases (LDHs).(<a href="#R54"
-                                                role="doc-biblioref" data-xml-rid="R54"><i>54</i></a>) There are 5 major
-                                            isoforms
-                                            of LDHs, and each of them is composed of subunits, namely LDH-M and
-                                            LDH-H.(<a href="#R55" role="doc-biblioref" data-xml-rid="R55"><i>55</i></a>)
-                                            The specified combination of each isoform is listed in <a href="#T1">Table
-                                                1</a>. LDH-M and
-                                            LDH-H are encoded by the LDHA gene and LDHB gene, respectively. Different
-                                            isoforms express in different locations, the LDHA isoform mainly expresses
-                                            in muscles and preferentially converts pyruvate to lactate, while the LDHB
-                                            isoform mainly expresses in the heart and brain and preferentially converts
-                                            lactate to pyruvate.(<a href="#R56" role="doc-biblioref"
-                                                data-xml-rid="R56"><i>56</i></a>) The overexpression of LDHA is a
-                                            necessity for
-                                            transformations mediated by transcriptional factor c-Myc.(<a href="#R57"
-                                                role="doc-biblioref" data-xml-rid="R57"><i>57</i></a>)
-                                        </div>
-                                        <div class="figure-wrap">
-                                            <figure id="T1" class="table">
-                                                <div class="table-wrap">
-                                                    <div class="collapsible-wrapper" aria-expanded="true">
-                                                        <table>
-                                                            <thead>
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="col">
-                                                                        <b>Isoform</b>
-                                                                    </th>
-                                                                    <th data-xml-align="center" scope="col">
-                                                                        LDH1
-                                                                    </th>
-                                                                    <th data-xml-align="center" scope="col">
-                                                                        LDH2
-                                                                    </th>
-                                                                    <th data-xml-align="center" scope="col">
-                                                                        LDH3
-                                                                    </th>
-                                                                    <th data-xml-align="center" scope="col">
-                                                                        LDH4
-                                                                    </th>
-                                                                    <th data-xml-align="center" scope="col">
-                                                                        LDH5
-                                                                    </th>
-                                                                </tr>
-                                                            </thead>
-
-                                                            <tbody>
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <b>Subunits</b>
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        H4
-                                                                    </td>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        H3M1
-                                                                    </td>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        H2M2
-                                                                    </td>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        H1M3
-                                                                    </td>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        M4
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <b>Alternative Name</b>
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        LDHB
-                                                                    </td>
-                                                                    <td data-xml-align="center" scope="col">
-
-                                                                    </td>
-                                                                    <td data-xml-align="center" scope="col">
-
-                                                                    </td>
-                                                                    <td data-xml-align="center" scope="col">
-
-                                                                    </td>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        LDHA
-                                                                    </td>
-
-                                                                </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-
-                                                </div>
-                                                <figcaption>
-                                                    <div class="caption"><span class="heading">Table 1</span>. The
-                                                        isoforms of LDHs.</div>
-
-
-                                                </figcaption>
-                                            </figure>
-
-                                            <a href="#T1" class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                data-index="0">
-                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                <span>Open in viewer</span>
-                                            </a>
-                                        </div>
-                                        <div role="paragraph">
-                                            The forkhead box protein M1 (FoxM1) is a transcriptional factor ensuring the
-                                            fidelity of the cell division process and it supports the proliferation of
-                                            tumor cells by stimulating the expression of the antioxidant genes and
-                                            reducing oxidative stress.(<a href="#R58" role="doc-biblioref"
-                                                data-xml-rid="R58"><i>58</i></a>, <a href="#R59" role="doc-biblioref"
-                                                data-xml-rid="R59"><i>59</i></a>) Moreover, the increased expression
-                                            level
-                                            of FOXM1 binds to the promotor region of LDHA and thus upregulates the
-                                            activity of LDHA at mRNA level as well as protein level.(<a href="#R60"
-                                                role="doc-biblioref" data-xml-rid="R60"><i>60</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            The krüppel-like factor 4 (KLF4) is a transcription factor that inhibits
-                                            cancer EMT and metastasis via transcriptionally downregulating CAV-1
-                                            expression.(<a href="#R61" role="doc-biblioref"
-                                                data-xml-rid="R61"><i>61</i></a>)
-                                            KLF4 binds to the promoter regions of the LDHA gene, thus negatively
-                                            regulating the expression of LDHA.(<a href="#R62" role="doc-biblioref"
-                                                data-xml-rid="R62"><i>62</i></a>) An illustration of the associations
-                                            discussed above is depicted in <a href="#F3">Figure 3</a> below.
-                                        </div>
-                                        <div class="figure-wrap" data-specific-use="distribute">
-                                            <figure id="F3" class="graphic"><img
-                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/Figure 3.jpg"
-                                                    height="3071" width="4333" aria-labelledby="F3" loading="lazy" />
-                                                <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 3</span>. The
-                                                        Production of Lactate.
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <h3>
-                                            Lactate Shuttling
-                                        </h3>
-                                        <div role="paragraph">
-                                            The monocarboxylate transporter family (MCT) is a family of transporters
-                                            expressed mainly on cell membranes that are encoded by solute carrier 16
-                                            (SLC16) genes and are vital for the intake and efflux of lactate.(<a
-                                                href="#R63" role="doc-biblioref" data-xml-rid="R63"><i>63</i></a>) MCTs
-                                            have various expression patterns depending on tissue type and
-                                            microenvironment, MCT1 and MCT4 are of vital importance where MCT1 is
-                                            bidirectional while MCT4 only controls the efflux of lactate.(<a href="#R64"
-                                                role="doc-biblioref" data-xml-rid="R64"><i>64</i></a>, <a href="#R65"
-                                                role="doc-biblioref" data-xml-rid="R65"><i>65</i></a>) The upregulation
-                                            of
-                                            MCT1 is directly linked to the oxidative metabolism of oxygenated tumor
-                                            cells as observed by Pierre et al.(<a href="#R66" role="doc-biblioref"
-                                                data-xml-rid="R66"><i>66</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            CD147 is a hypoxia-inducible small molecule transporter ancillary protein
-                                            that chaperones to the MCTs, which has the function of stabilizing their
-                                            expression levels.(<a href="#R67" role="doc-biblioref"
-                                                data-xml-rid="R67"><i>67</i></a>, <a href="#R68" role="doc-biblioref"
-                                                data-xml-rid="R68"><i>68</i></a>) According to Renaud et al., CD147
-                                            controls
-                                            the stability and functional plasma membrane insertion of the MCTs in many
-                                            tissues.(<a href="#R69" role="doc-biblioref"
-                                                data-xml-rid="R69"><i>69</i></a>)
-                                            Moreover, CD147 was shown to ensure the polarization of MCT1.(<a href="#R70"
-                                                role="doc-biblioref" data-xml-rid="R70"><i>70</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            The G-protein-coupled receptor 81 (GPR81), also named the hydrocarboxylic
-                                            acid receptor 1 (HCAR1), is reported to function as a receptor for lactate
-                                            and is able to mediate the anti-lipolytic effect of the lactate, the
-                                            activation of GPR81 by lactate directly leads to increased expression of
-                                            MCTs, CD147 and PGC-1.(<a href="#R71" role="doc-biblioref"
-                                                data-xml-rid="R71"><i>71</i></a>, <a href="#R72" role="doc-biblioref"
-                                                data-xml-rid="R72"><i>72</i></a>) An examination of tumors resected from
-                                            patients
-                                            with pancreatic cancer by Craig et al. indicated that 94% (148 of 158)
-                                            expressed high levels of GPR81.(<a href="#R73" role="doc-biblioref"
-                                                data-xml-rid="R73"><i>73</i></a>) A main regulator of GPR81 is the
-                                            signal
-                                            transducer and activator of transcription 3 (STAT3), which determines the
-                                            immune responses in the tumor microenvironment.(<a href="#R74"
-                                                role="doc-biblioref" data-xml-rid="R74"><i>74</i></a>) STAT3 is able to
-                                            bind to
-                                            the promotor region of GPR81, thus downregulating the expression of
-                                            GPR81.(<a href="#R75" role="doc-biblioref" data-xml-rid="R75"><i>75</i></a>)
-                                            An illustration of the associations discussed above is depicted in <a
-                                                href="#F4">Figure 4</a>
-                                            below.
-                                        </div>
-                                        <div class="figure-wrap" data-specific-use="distribute">
-                                            <figure id="F4" class="graphic"><img
-                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/Figure 4.jpg"
-                                                    height="3071" width="4333" aria-labelledby="F4" loading="lazy" />
-                                                <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 4</span>. The
-                                                        Shuttling of Lactate.
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <h3>
-                                            Tumor Microenvironment Interaction Network
-                                        </h3>
-
-                                        <div role="paragraph">
-                                            Here we summarize the interlinked 4 networks. <a href="#F5">Figure 5</a>
-                                            depicts the overall
-                                            network.
-                                        </div>
-                                        <div class="figure-wrap" data-specific-use="distribute">
-                                            <figure id="F5" class="graphic"><img
-                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/Figure 5.jpg"
-                                                    height="3071" width="4333" aria-labelledby="F5" loading="lazy" />
-                                                <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 5</span>. The
-                                                        glucose-lactate network.
-                                                    </div>
-
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-
-
-                                    </section>
-
-                                    <section id="sec-3" data-type="introduction">
-                                        <h3>
-                                            Cells in Tumor Microenvironment
-                                        </h3>
-                                        <div role="paragraph">
-                                            Tumor microenvironment consists of various types of cells, including tumor
-                                            cells, myeloid-derived suppressor cells, dendritic cells, fibroblast cells,
-                                            T lymphocyte cells, et cetera. Here we simplify our discussion to the
-                                            relationship among the cells along with the interaction between cells and
-                                            the tumor microenvironment, forming an interaction network. The tumor
-                                            microenvironment interaction network established above is integrated into
-                                            this cell-environment network model.
-                                        </div>
-                                        <h3>
-                                            Normal Cells
-                                        </h3>
-                                        <div role="paragraph">
-                                            Adipocytes are cells that store the energy as fat.(<a href="#R76"
-                                                role="doc-biblioref" data-xml-rid="R76"><i>76</i></a>) The need to
-                                            maintain a
-                                            constant supply of lipids and lipid precursors to fuel membrane production
-                                            in the highly proliferating cancer cell population is widely acknowledged,
-                                            adipocytes contribute to tumor progression as a fuel reservoir. Moreover,
-                                            adipocytes are able to secrete growth factors and hormones that facilitate
-                                            tumor growth.(<a href="#R77" role="doc-biblioref"
-                                                data-xml-rid="R77"><i>77</i></a>, <a href="#R78" role="doc-biblioref"
-                                                data-xml-rid="R78"><i>78</i></a>) According to cancer epidemiology
-                                            surveys, obesity is
-                                            estimated to contribute to up to 20% of cancer-related deaths.(<a
-                                                href="#R79" role="doc-biblioref" data-xml-rid="R79"><i>79</i></a>, <a
-                                                href="#R80" role="doc-biblioref" data-xml-rid="R80"><i>80</i></a>) Thus,
-                                            elucidating the relationship between adipocytes and cancer cells is of
-                                            significance.
-                                        </div>
-                                        <div role="paragraph">
-                                            Stomal cells are usually found in bone marrows and the interaction between
-                                            stromal cells and tumor cells play a critical role in cancer growth and
-                                            progression.(<a href="#R81" role="doc-biblioref"
-                                                data-xml-rid="R81"><i>81</i></a>) As the tumor progresses, stromal cells
-                                            transform into
-                                            tumor-associated fibroblasts (CAFs) or tumor-associated adipocytes and
-                                            further enhance the tumor invasiveness.(<a href="#R82" role="doc-biblioref"
-                                                data-xml-rid="R82"><i>82</i></a>) CAFs make up the bulk of cancer
-                                            stroma and affect the tumor microenvironment by promoting cancer initiation,
-                                            angiogenesis, invasion, and metastasis.(<a href="#R83" role="doc-biblioref"
-                                                data-xml-rid="R83"><i>83</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            According to the definition provided by NIH, a fibroblast is a type of cell
-                                            that contributes to the formation of connective tissue, a fibrous cellular
-                                            material that supports and connects other tissues or organs in the body.
-                                            Fibroblasts secrete collagen proteins that help maintain the structural
-                                            framework of tissues.(<a href="#R84" role="doc-biblioref"
-                                                data-xml-rid="R84"><i>84</i></a>) The transformation from normal
-                                            fibroblasts to CAFs
-                                            is a basic link in tumor invasion.(<a href="#R85" role="doc-biblioref"
-                                                data-xml-rid="R85"><i>85</i></a>) The aged fibroblasts express IL6 and
-                                            multiple suppressing signals to promote tumor invasion. IL6 limits the
-                                            maturation of dendritic cells and stimulates angiogenesis.(<a href="#R86"
-                                                role="doc-biblioref" data-xml-rid="R86"><i>86</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            Since the blood vessel functions as the transportation station for tumor
-                                            cells by delivering nutrition and providing the environment for metastasis,
-                                            we involve the blood vessel in our discussion. The cells in the tumor
-                                            microenvironment stimulate angiogenesis by secreting vascular endothelial
-                                            growth factor (VEGF) and fibroblast growth factor.(<a href="#R87"
-                                                role="doc-biblioref" data-xml-rid="R87"><i>87</i></a>)
-                                        </div>
-                                        <h3>
-                                            Tumor-related Cells
-                                        </h3>
-                                        <div role="paragraph">
-                                            Myeloid-derived suppressor cell (MDSC) is cancer-promoting by limiting the
-                                            function and proliferation of T cells and promoting the differentiation of T
-                                            regulatory cells, thus inducing angiogenesis.(<a href="#R88"
-                                                role="doc-biblioref" data-xml-rid="R88"><i>88</i></a>) However, the
-                                            underlying
-                                            mechanism of how MDSC thrives by metabolism competition in the glycolysis
-                                            tumor microenvironment is yet to be understood.
-                                        </div>
-                                        <div role="paragraph">
-                                            T lymphocyte is one of the important white blood cells of the immune system
-                                            and plays a central role in the adaptive immune response.(<a href="#R89"
-                                                role="doc-biblioref" data-xml-rid="R89"><i>89</i></a>, <a href="#R90"
-                                                role="doc-biblioref" data-xml-rid="R90"><i>90</i></a>) As the tumor
-                                            progresses, metabolic competition is introduced, which damages the
-                                            activities of immune cells.(<a href="#R91" role="doc-biblioref"
-                                                data-xml-rid="R91"><i>91</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            Dendritic cells (DCs) are bone marrow-derived cells that seed all tissues,
-                                            in which they sample their environment and transmit information to adaptive
-                                            immune cells.(<a href="#R92" role="doc-biblioref"
-                                                data-xml-rid="R92"><i>92</i></a>) Tumor-derived factors can alter DC
-                                            maturation to yield cells
-                                            that indirectly help tumor growth.(<a href="#R93" role="doc-biblioref"
-                                                data-xml-rid="R93"><i>93</i></a>) The experiment by Isabelle et al.
-                                            concluded that the infiltration by pDC of primary localized breast tumor
-                                            correlates with an adverse outcome, suggesting their contribution to breast
-                                            cancer progression.(<a href="#R94" role="doc-biblioref"
-                                                data-xml-rid="R94"><i>94</i></a>) The resistance to DC proliferation and
-                                            antigen
-                                            presentation may induce resistance to T cells’ activation in the tumor
-                                            microenvironment.(<a href="#R95" role="doc-biblioref"
-                                                data-xml-rid="R95"><i>95</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            A macrophage is categorized as a white blood cell, which consumes and
-                                            digests pathogens. The two most intensively studied macrophages are M1
-                                            macrophage and M2 macrophage, they are inflammation-promoting and
-                                            inflammation-suppressing respectively.(<a href="#R96" role="doc-biblioref"
-                                                data-xml-rid="R96"><i>96</i></a>) M2 macrophages secrete immune
-                                            suppressing cell factors and suppress the toxicity of TIL cells, promoting
-                                            the differentiation of T regulatory cells.(<a href="#R97"
-                                                role="doc-biblioref" data-xml-rid="R97"><i>97</i></a>)
-                                        </div>
-                                        <div role="paragraph">
-                                            In summary, the effect of tumor cells on immune cells is: creating a lactate
-                                            overexpressed environment, in which the dysfunction of mitochondria and
-                                            accumulated ROS lead to the apoptosis of immune cells.(<a href="#R98"
-                                                role="doc-biblioref" data-xml-rid="R98"><i>98</i></a>) <a
-                                                href="#F6">Figure 6</a> depicts
-                                            the relationship among cells.
-                                        </div>
-                                        <div class="figure-wrap" data-specific-use="distribute">
-                                            <figure id="F6" class="graphic"><img
-                                                    src="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure/2.6 figure.jpg"
-                                                    height="3071" width="4333" aria-labelledby="F6" loading="lazy" />
-                                                <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 6</span>. The
-                                                        Cells in Tumor Microenvironment.
-                                                    </div>
-
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-
-                                    </section>
-
-                                    <section id="sec-4" data-type="introduction">
-                                        <h2>
-                                            Conclusions
-                                        </h2>
-                                        <div role="paragraph">
-                                            In this article, we constructed a network among gene-regulated molecules and
-                                            a cell interaction network concomitantly. We will use mathematical tools
-                                            from network theory to conduct a more detailed analysis in the future. We
-                                            hope our work can elucidate the current interaction relationships for future
-                                            researchers.
-                                        </div>
 
                                     </section>
 
@@ -2028,28 +1319,19 @@
                                     <section id="acknowledgments" role="doc-acknowledgments">
                                         <h2>Acknowledgments</h2>
                                         <div role="paragraph">
-                                            <b>Submit: </b>The manuscript is prepared for iGEM2022, in which our team is
-                                            disqualified. Due to the lack of funding, we couldn't make a pilot device.
-                                            However, we made a software that can be used for image reconstruction, which
-                                            can be found in the Appendix.
+                                            <b>Resources: </b>This note is for the lecture given by Chinese Academy of
+                                            Sciences on the topic of gut microbiome. A recorded version can be found <a
+                                                href="https://www.bilibili.com/video/BV1254y1L782/?vd_source=7155e26a285557181a8f9bac01b98739">here</a>.
+                                            The articles mentioned in the lecture can be found in
+                                            the references, and <a href="http://www.aptbiotech.com/">here</a> is the
+                                            official website of the
+                                            company.
                                         </div>
-                                        <div role="paragraph">
-                                            <b>Author contributions:</b> Conceptualization, Ruotao Yu,
-                                            Shengqi Liu, Yichen Wang; draft preparation, Ruotao Yu, Shengqi Liu, Yichen
-                                            Wang, Jiarui Chen, Qianhui Li; writing, review, and editing, Ruotao Yu,
-                                            Shengqi Liu, Yichen Wang, Jiarui Chen, Qianhui Li; figure: Ruotao Yu,
-                                            Shengqi Liu, Yichen Wang.
 
-
-                                        </div>
                                         <div role="paragraph"><b>Competing interests:</b> no competing
                                             interests.
                                         </div>
-                                        <div role="paragraph"><b>Data and materials availability:</b> All data
-                                            needed to evaluate the conclusions in the paper are present in the
-                                            paper
-                                            and/or the Supplementary Materials.
-                                        </div>
+
                                     </section>
                                 </div>
                             </section>
@@ -2064,16 +1346,15 @@
                                             <h3>Appendix:</h3>
                                             <div class="core-supplementary-material">
                                                 <div class="core-description">
-                                                    <div>Figures: </div>Figure 1 - Figure 6
-
+                                                    <div>PDF Version of Content: </div>
                                                 </div>
                                                 <div class="core-link">
                                                     <ul>
                                                         <li>
-                                                            <a href="/content_files/projects/competition/undergraduate/iGEM2022/lactate/Figure.rar"
+                                                            <a href="/content_files/projects/science_prg/docking/docking1/microbiome-note-print.pdf"
                                                                 download="Appendix">Download</a>
                                                         </li>
-                                                        <li>1.27 MB</li>
+                                                        <li>371 KB</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2096,6 +1377,10 @@
 
                                             <script type="application/javascript">
                                                 citations = [
+                                                    '<div class="csl-entry">Yan, X., Jin, J., Su, X., Yin, X., Gao, J., Wang, X., Zhang, S., Bu, P., Wang, M., Zhang, Y., Wang, Z., &#38; Zhang, Q. (2020). Intestinal Flora Modulates Blood Pressure by Regulating the Synthesis of       Intestinal-Derived Corticosterone in High Salt-Induced Hypertension. <i>Circ Res</i>, <i>126</i>(7), 839–853. https://doi.org/10.1161/CIRCRESAHA.119.316394</div>',
+                                                    '<div class="csl-entry">Sharon, G., Cruz, N. J., Kang, D.-W., Gandal, M. J., Wang, B., Kim, Y.-M., Zink, E. M., Casey, C. P., Taylor, B. C., Lane, C. J., Bramer, L. M., Isern, N. G., Hoyt, D. W., Noecker, C., Sweredoski, M. J., Moradian, A., Borenstein, E., Jansson, J. K., Knight, R., … Mazmanian, S. K. (2019). Human Gut Microbiota from Autism Spectrum Disorder Promote Behavioral       Symptoms in Mice. <i>Cell</i>, <i>177</i>(6), 1600-1618.e17. https://doi.org/10.1016/j.cell.2019.05.004</div>',
+                                                    '<div class="csl-entry">Liu, Z., Dai, X., Zhang, H., Shi, R., Hui, Y., Jin, X., Zhang, W., Wang, L., Wang, Q., Wang, D., Wang, J., Tan, X., Ren, B., Liu, X., Zhao, T., Wang, J., Pan, J., Yuan, T., Chu, C., … Liu, X. (2020). Gut microbiota mediates intermittent-fasting alleviation of diabetes-induced cognitive impairment. <i>Nature Communications</i>, <i>11</i>(1), 855. https://doi.org/10.1038/s41467-020-14676-4</div>',
+                                                    '<div class="csl-entry">Li, H., Xu, H., Li, Y., Jiang, Y., Hu, Y., Liu, T., Tian, X., Zhao, X., Zhu, Y., Wang, S., Zhang, C., Ge, J., Wang, X., Wen, H., Bai, C., Sun, Y., Song, L., Zhang, Y., Hui, R., … Chen, J. (2020). Alterations of gut microbiota contribute to the progression of unruptured intracranial aneurysms. <i>Nature Communications</i>, <i>11</i>(1), 3218. https://doi.org/10.1038/s41467-020-16990-3</div>',
 
                                                 ];
                                                 iterate_num = citations.length;
