@@ -1295,530 +1295,516 @@
                                             Geometry Setup of Simulation
                                         </h2>
                                         <div role="paragraph">
-                                            <p>
-                                                There are diversed principles behind wireless power transfer, mainly
-                                                divided
-                                                into 2 categories: near-field and far-field. The focus today is a
-                                                near-field-based method called inductive coupling, a commonly-used
-                                                technique
-                                                in small scale wireless chargers, such as phone charging pads,
-                                                toothbrush
-                                                chargers. In principle, inductive
-                                                coupling utilizes Faraday's Law of induction, which can be understood as
-                                                the
-                                                change of current frequency in one coil induces the change of magnetic
-                                                flux,
-                                                which induces electromagnetic force in another coil nearby. The power is
-                                                transformed initially from the coil into magnetic field, then from the
-                                                magnetic field into the second coil. Besides the circuits on the power
-                                                supply side and load side, the common setup includes coil, shield, and
-                                                core.
-                                                The shield reduces the flux of magnetic to the environment and decrease
-                                                the
-                                                effect of the outside environment, and the core concentrates the
-                                                generated
-                                                magnetic field and increase the power transfer efficiency. A common
-                                                setup of the system is shown in <a href="#F1">Figure 1</a>. Please note
-                                                that this is only the physical setup in principle, and a lot of
-                                                details are emitted. More structures are proven to be efficient.</p>
-
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F1" class="graphic"><img
-                                                        src="/content_files/projects/science_prg/wireless_power/wireless2/figure1.png"
-                                                        height="3071" width="4333" aria-labelledby="F1"
-                                                        loading="lazy" />
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Figure 1</span>. The
-                                                            illustration of a common inductive coupling system.
-                                                        </div>
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">The shield is on the bottom
-                                                                (white-colored rectangle frame), and
-                                                                the core is on top of the shield (concentric circle in
-                                                                light orange). The coil is
-                                                                placed on
-                                                                the core (purple concentric circle). The upper
-                                                                symmetric structure is the coil on the load side.</div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <h3>
-                                                Coil Model Establishment
-                                            </h3>
-                                            <div role="paragraph">
-                                                There are 2 major ways to model the coil in Maxwell, one is set up the
-                                                actual geometric shape of coil, and the other is assign coil parameters
-                                                to a
-                                                hollow cylinder so that it exhibits the property of coil. The first
-                                                option is
-                                                more optimal since it better catches the geometric features of the coil,
-                                                thus more authenticity. However, it is more exhausive computationally
-                                                and require more time on geometry modeling since the excitation source
-                                                is required to be on the boundary of the model. Here we adopt the second
-                                                approach.
-                                            </div>
-                                            <div role="paragraph">
-                                                The first step is to create a rectangle in Y-Z plane. Rotate the
-                                                rectangle with respect to the Z axis, we get the hollow cylinder. The
-                                                parameter <code
-                                                    style="background-color:gainsboro;color: black;">Position</code> in
-                                                command <code
-                                                    style="background-color:gainsboro;color: black;">CreateRectangle</code>
-                                                is set to <code
-                                                    style="background-color:gainsboro;color: black;">(0mm ,input_radius_small ,0mm)</code>.
-                                                To
-                                                model the
-                                                circuit connecting to the coil, we have to make a "half-intersection" on
-                                                the hollow cylinder, as depicted in <a href="#F2">Figure 2</a>. We cut
-                                                the hollow cylinder into half with Y-Z plane, and get two half hollow
-                                                cylinders and two sections. By deleting one section and unite the two
-                                                donut-shaped
-                                                half hollow cylinders, we obtain the coil model. Since most coils are
-                                                made by
-                                                copper for low resistance, we set the material to copper.
-                                            </div>
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F2" class="graphic"><img
-                                                        src="/content_files/projects/science_prg/wireless_power/wireless2/figure2.png"
-                                                        height="3071" width="4333" aria-labelledby="F2"
-                                                        loading="lazy" />
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Figure 2</span>. The
-                                                            geometric model of the coil.
-                                                        </div>
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">The purple line models the port
-                                                                that
-                                                                connects the coil to the source.</div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <div role="paragraph">
-                                                The variables to be specified for the coil are indicated in <a
-                                                    href="#T1">Table 1</a>.
-                                            </div>
-                                            <div class="figure-wrap">
-                                                <figure id="T1" class="table">
-                                                    <div class="table-wrap">
-                                                        <div class="collapsible-wrapper" aria-expanded="true">
-                                                            <table>
-                                                                <thead>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>Variable</b>
-                                                                        </th>
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>Description</b>
-                                                                        </th>
-                                                                    </tr>
-                                                                </thead>
-
-                                                                <tbody>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            input_radius_small
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The inner radius of the source side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            output_radius_small
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The inner radius of the load side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            input_radius_big
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The outer radius of the source side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            output_radius_big
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The outer radius of the load side coil
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            input_height
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The height of the hollow cylinder that
-                                                                            models the source side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            output_height
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The height of the hollow cylinder that
-                                                                            models the load side coil
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            in_disp_z
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The displacement of the source side coil in
-                                                                            Z direction from the X-Y plane
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            out_disp_z
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The displacement of the load side coil in Z
-                                                                            direction from the X-Y plane
-                                                                        </td>
-                                                                    </tr>
-
-
-
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-                                                    </div>
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Table 1</span>. The
-                                                            variables related to the coil.</div>
-
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">
-
-                                                            </div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-
-                                                <a href="#T1" class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                    data-index="0">
-                                                    <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                    <span>Open in viewer</span>
-                                                </a>
-                                            </div>
-                                            <h3>
-                                                Core Model Establishment
-                                            </h3>
-                                            <div role="paragraph">
-                                                The geometry of the core is similar to the coil, and not requiring the
-                                                port for excitation. By following the procedure of creating a coil, we
-                                                obtain the core as shown in <a href="#F3">Figure 3</a>. As is proven in
-                                                numerous studies, FDK's 6H series allows low core loss and high
-                                                saturation flux density. Thus, we select FDK6H41 for core material.
-                                            </div>
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F3" class="graphic"><img
-                                                        src="/content_files/projects/science_prg/wireless_power/wireless2/figure3.png"
-                                                        height="3071" width="4333" aria-labelledby="F3"
-                                                        loading="lazy" />
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Figure 3</span>. The
-                                                            depiction of a core model.
-                                                        </div>
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">The core structure is similar to
-                                                                the example structure provided by ANSYS Maxwell.</div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <div role="paragraph">
-                                                The variables to be specified for the core are indicated in <a
-                                                    href="#T2">Table 2</a>.
-                                            </div>
-                                            <div class="figure-wrap">
-                                                <figure id="T2" class="table">
-                                                    <div class="table-wrap">
-                                                        <div class="collapsible-wrapper" aria-expanded="true">
-                                                            <table>
-                                                                <thead>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>Variable</b>
-                                                                        </th>
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>Description</b>
-                                                                        </th>
-                                                                    </tr>
-                                                                </thead>
-
-                                                                <tbody>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            core_input_r_small
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The inner radius of the source side core
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            core_output_r_small
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The inner radius of the load side core
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            core_input_r_big
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The outer radius of the source side core
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            core_output_r_big
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The outer radius of the load side core
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            core_input_height
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The height of the hollow cylinder that
-                                                                            models the source side core
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            core_output_height
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The height of the hollow cylinder that
-                                                                            models the load side core
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-                                                    </div>
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Table 2</span>. The
-                                                            variables related to the core.</div>
-
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">
-                                                                The parameters of the core are adjusted that it is a
-                                                                part of the source/load side.
-                                                            </div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-
-                                                <a href="#T2" class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                    data-index="0">
-                                                    <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                    <span>Open in viewer</span>
-                                                </a>
-                                            </div>
-
-                                            <h3>
-                                                Shield Model Establishment
-                                            </h3>
-                                            <div role="paragraph">
-                                                For simplicity, the shield is modelled as a cube with relatively larger
-                                                width and length, shorter height, as shown in <a href="#F4">Figure
-                                                    4(a)</a>. There are other topologies for shield, for instance, the
-                                                simulation model provided by ANSYS has its four corners cut, as shown in
-                                                <a href="#F4">Figure 4(b)</a>.
-
-                                            </div>
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F4" class="graphic"><img
-                                                        src="/content_files/projects/science_prg/wireless_power/wireless2/figure4.png"
-                                                        height="3071" width="4333" aria-labelledby="F4"
-                                                        loading="lazy" />
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Figure 4</span>. An
-                                                            illustration of the shield structure.
-                                                        </div>
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">
-
-                                                            </div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <div role="paragraph">
-                                                The variables to be specified for the shield are indicated in <a
-                                                    href="#T3">Table 3</a>.
-                                            </div>
-                                            <div class="figure-wrap">
-                                                <figure id="T3" class="table">
-                                                    <div class="table-wrap">
-                                                        <div class="collapsible-wrapper" aria-expanded="true">
-                                                            <table>
-                                                                <thead>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>Variable</b>
-                                                                        </th>
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>Description</b>
-                                                                        </th>
-                                                                    </tr>
-                                                                </thead>
-
-                                                                <tbody>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            box_i_in
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The length of the source side shield on the
-                                                                            I-th axis (X, Y, Z)
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            box_i_out
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The length of the load side shield on the
-                                                                            I-th axis (X, Y, Z)
-                                                                        </td>
-                                                                    </tr>
-
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-                                                    </div>
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Table 1</span>. The
-                                                            variables related to the shield.</div>
-
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">
-
-                                                            </div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-
-                                                <a href="#T3" class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                    data-index="0">
-                                                    <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                    <span>Open in viewer</span>
-                                                </a>
-                                            </div>
-                                            <h3>
-                                                Region Model Establishment
-                                            </h3>
-                                            <div role="paragraph">
-                                                The region defines the simulation content, anything in the region is
-                                                considered to be a part of the model. For size-fixed contents, the
-                                                larger the region is, the more accurate result the simulation would
-                                                produce. For simplicity and guarantee the accuracy at the same time, we
-                                                make the region a cubic and its length 7.5 times of the maximum length
-                                                of the model, which is the length of the shield. To reduce simulation
-                                                time, the material of the region can be void. However, for real-world
-                                                cases, the material is usually selected as air.
-
-                                            </div>
-                                            <div role="paragraph">
-                                                The variables to be specified for the region are indicated in <a
-                                                    href="#T4">Table 4</a>.
-                                            </div>
-                                            <div class="figure-wrap">
-                                                <figure id="T4" class="table">
-                                                    <div class="table-wrap">
-                                                        <div class="collapsible-wrapper" aria-expanded="true">
-                                                            <table>
-                                                                <thead>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>Variable</b>
-                                                                        </th>
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>Description</b>
-                                                                        </th>
-                                                                    </tr>
-                                                                </thead>
-
-                                                                <tbody>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            region_I_len
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The length of the simulation region on the
-                                                                            I-th axis. (X, Y, Z)
-                                                                        </td>
-                                                                    </tr>
-
-
-
-
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-                                                    </div>
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Table 4</span>. The
-                                                            variables related to the region.</div>
-
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">
-
-                                                            </div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-
-                                                <a href="#T4" class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                    data-index="0">
-                                                    <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                    <span>Open in viewer</span>
-                                                </a>
-                                            </div>
+                                            There are diversed principles behind wireless power transfer, mainly
+                                            divided
+                                            into 2 categories: near-field and far-field. The focus today is a
+                                            near-field-based method called inductive coupling, a commonly-used
+                                            technique
+                                            in small scale wireless chargers, such as phone charging pads,
+                                            toothbrush
+                                            chargers. In principle, inductive
+                                            coupling utilizes Faraday's Law of induction, which can be understood as
+                                            the
+                                            change of current frequency in one coil induces the change of magnetic
+                                            flux,
+                                            which induces electromagnetic force in another coil nearby. The power is
+                                            transformed initially from the coil into magnetic field, then from the
+                                            magnetic field into the second coil. Besides the circuits on the power
+                                            supply side and load side, the common setup includes coil, shield, and
+                                            core.
+                                            The shield reduces the flux of magnetic to the environment and decrease
+                                            the
+                                            effect of the outside environment, and the core concentrates the
+                                            generated
+                                            magnetic field and increase the power transfer efficiency. A common
+                                            setup of the system is shown in <a href="#F1">Figure 1</a>. Please note
+                                            that this is only the physical setup in principle, and a lot of
+                                            details are emitted. More structures are proven to be efficient.
                                         </div>
+
+
+
+
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F1" class="graphic"><img
+                                                    src="/content_files/projects/science_prg/wireless_power/wireless2/figure1.png"
+                                                    height="3071" width="4333" aria-labelledby="F1" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 1</span>. The
+                                                        illustration of a common inductive coupling system.
+                                                    </div>
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">The shield is on the bottom
+                                                            (white-colored rectangle frame), and
+                                                            the core is on top of the shield (concentric circle in
+                                                            light orange). The coil is
+                                                            placed on
+                                                            the core (purple concentric circle). The upper
+                                                            symmetric structure is the coil on the load side.</div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <h3>
+                                            Coil Model Establishment
+                                        </h3>
+                                        <div role="paragraph">
+                                            After opening the software ANSYS Electronics, we create a <code
+                                                style="background-color:gainsboro;color: black;">Maxwell3DDesign</code>
+                                            for our model. Different toolkits in ANSYS Electronics serves different
+                                            purposes, in our case, Maxwell is more than adequate for the electromagnetic
+                                            field simulation in wireless power transfer. Using the 3D model gives us
+                                            more freedom to study the field.
+                                        </div>
+                                        <div role="paragraph">
+                                            There are 2 major ways to model the coil in Maxwell, one is set up the
+                                            actual geometric shape of coil, and the other is assign coil parameters
+                                            to a
+                                            hollow cylinder so that it exhibits the property of coil. The first
+                                            option is
+                                            more optimal since it better catches the geometric features of the coil,
+                                            thus more authenticity. However, it is more exhausive computationally
+                                            and require more time on geometry modeling since the excitation source
+                                            is required to be on the boundary of the model. Here we adopt the second
+                                            approach.
+                                        </div>
+                                        <div role="paragraph">
+                                            The first step is to create a rectangle in Y-Z plane. Rotate the
+                                            rectangle with respect to the Z axis, we get the hollow cylinder. The
+                                            parameter <code
+                                                style="background-color:gainsboro;color: black;">Position</code> in
+                                            command <code
+                                                style="background-color:gainsboro;color: black;">CreateRectangle</code>
+                                            is set to <code
+                                                style="background-color:gainsboro;color: black;">(0mm ,input_radius_small ,0mm)</code>.
+                                            To
+                                            model the
+                                            circuit connecting to the coil, we have to make a "half-intersection" on
+                                            the hollow cylinder, as depicted in <a href="#F2">Figure 2</a>. We cut
+                                            the hollow cylinder into half with Y-Z plane, and get two half hollow
+                                            cylinders and two sections. By deleting one section and unite the two
+                                            donut-shaped
+                                            half hollow cylinders, we obtain the coil model. Since most coils are
+                                            made by
+                                            copper for low resistance, we set the material to copper.
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F2" class="graphic"><img
+                                                    src="/content_files/projects/science_prg/wireless_power/wireless2/figure2.png"
+                                                    height="3071" width="4333" aria-labelledby="F2" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 2</span>. The
+                                                        geometric model of the coil.
+                                                    </div>
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">The purple line models the port
+                                                            that
+                                                            connects the coil to the source.</div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div role="paragraph">
+                                            The variables to be specified for the coil are indicated in <a
+                                                href="#T1">Table 1</a>.
+                                        </div>
+                                        <div class="figure-wrap">
+                                            <figure id="T1" class="table">
+                                                <div class="table-wrap">
+                                                    <div class="collapsible-wrapper" aria-expanded="true">
+                                                        <table>
+                                                            <thead>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Variable</b>
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Description</b>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        input_radius_small
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The inner radius of the source side coil
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        output_radius_small
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The inner radius of the load side coil
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        input_radius_big
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The outer radius of the source side coil
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        output_radius_big
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The outer radius of the load side coil
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        input_height
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The height of the hollow cylinder that
+                                                                        models the source side coil
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        output_height
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The height of the hollow cylinder that
+                                                                        models the load side coil
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        in_disp_z
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The displacement of the source side coil in
+                                                                        Z direction from the X-Y plane
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        out_disp_z
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The displacement of the load side coil in Z
+                                                                        direction from the X-Y plane
+                                                                    </td>
+                                                                </tr>
+
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Table 1</span>. The
+                                                        variables related to the coil.</div>
+
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">
+
+                                                        </div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+
+                                            <a href="#T1" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
+                                        </div>
+                                        <h3>
+                                            Core Model Establishment
+                                        </h3>
+                                        <div role="paragraph">
+                                            The geometry of the core is similar to the coil, and not requiring the
+                                            port for excitation. By following the procedure of creating a coil, we
+                                            obtain the core as shown in <a href="#F3">Figure 3</a>. As is proven in
+                                            numerous studies, FDK's 6H series allows low core loss and high
+                                            saturation flux density. Thus, we select FDK6H41 for core material.
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F3" class="graphic"><img
+                                                    src="/content_files/projects/science_prg/wireless_power/wireless2/figure3.png"
+                                                    height="3071" width="4333" aria-labelledby="F3" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 3</span>. The
+                                                        depiction of a core model.
+                                                    </div>
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">The core structure is similar to
+                                                            the example structure provided by ANSYS Maxwell.</div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div role="paragraph">
+                                            The variables to be specified for the core are indicated in <a
+                                                href="#T2">Table 2</a>.
+                                        </div>
+                                        <div class="figure-wrap">
+                                            <figure id="T2" class="table">
+                                                <div class="table-wrap">
+                                                    <div class="collapsible-wrapper" aria-expanded="true">
+                                                        <table>
+                                                            <thead>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Variable</b>
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Description</b>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        core_input_r_small
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The inner radius of the source side core
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        core_output_r_small
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The inner radius of the load side core
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        core_input_r_big
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The outer radius of the source side core
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        core_output_r_big
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The outer radius of the load side core
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        core_input_height
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The height of the hollow cylinder that
+                                                                        models the source side core
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        core_output_height
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The height of the hollow cylinder that
+                                                                        models the load side core
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Table 2</span>. The
+                                                        variables related to the core.</div>
+
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">
+                                                            The parameters of the core are adjusted that it is a
+                                                            part of the source/load side.
+                                                        </div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+
+                                            <a href="#T2" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
+                                        </div>
+
+                                        <h3>
+                                            Shield Model Establishment
+                                        </h3>
+                                        <div role="paragraph">
+                                            For simplicity, the shield is modelled as a cube with relatively larger
+                                            width and length, shorter height, as shown in <a href="#F4">Figure
+                                                4(a)</a>. There are other topologies for shield, for instance, the
+                                            simulation model provided by ANSYS has its four corners cut, as shown in
+                                            <a href="#F4">Figure 4(b)</a>.
+
+                                        </div>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F4" class="graphic"><img
+                                                    src="/content_files/projects/science_prg/wireless_power/wireless2/figure4.png"
+                                                    height="3071" width="4333" aria-labelledby="F4" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 4</span>. An
+                                                        illustration of the shield structure.
+                                                    </div>
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">
+
+                                                        </div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div role="paragraph">
+                                            The variables to be specified for the shield are indicated in <a
+                                                href="#T3">Table 3</a>.
+                                        </div>
+                                        <div class="figure-wrap">
+                                            <figure id="T3" class="table">
+                                                <div class="table-wrap">
+                                                    <div class="collapsible-wrapper" aria-expanded="true">
+                                                        <table>
+                                                            <thead>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Variable</b>
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Description</b>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        box_i_in
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The length of the source side shield on the
+                                                                        I-th axis (X, Y, Z)
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        box_i_out
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The length of the load side shield on the
+                                                                        I-th axis (X, Y, Z)
+                                                                    </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Table 1</span>. The
+                                                        variables related to the shield.</div>
+
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">
+
+                                                        </div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+
+                                            <a href="#T3" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
+                                        </div>
+                                        <h3>
+                                            Region Model Establishment
+                                        </h3>
+                                        <div role="paragraph">
+                                            The region defines the simulation content, anything in the region is
+                                            considered to be a part of the model. For size-fixed contents, the
+                                            larger the region is, the more accurate result the simulation would
+                                            produce. For simplicity and guarantee the accuracy at the same time, we
+                                            make the region a cubic and its length 7.5 times of the maximum length
+                                            of the model, which is the length of the shield. To reduce simulation
+                                            time, the material of the region can be void. However, for real-world
+                                            cases, the material is usually selected as air.
+
+                                        </div>
+                                        <div role="paragraph">
+                                            The variables to be specified for the region are indicated in <a
+                                                href="#T4">Table 4</a>.
+                                        </div>
+                                        <div class="figure-wrap">
+                                            <figure id="T4" class="table">
+                                                <div class="table-wrap">
+                                                    <div class="collapsible-wrapper" aria-expanded="true">
+                                                        <table>
+                                                            <thead>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Variable</b>
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Description</b>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        region_I_len
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The length of the simulation region on the
+                                                                        I-th axis. (X, Y, Z)
+                                                                    </td>
+                                                                </tr>
+
+
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Table 4</span>. The
+                                                        variables related to the region.</div>
+
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">
+
+                                                        </div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+
+                                            <a href="#T4" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
+                                        </div>
+
                                         <h3>Common Variables</h3>
                                         <div role="paragraph">
                                             To study the effect of each component to the transfer efficiency, we have
@@ -1888,7 +1874,7 @@
                                                 </figcaption>
                                             </figure>
 
-                                            <a href="#T" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                            <a href="#T5" class="open-in-viewer btn btn-dark figure-pop-btn"
                                                 data-index="0">
                                                 <i aria-hidden="true" class="icon-extlink-smooth"></i>
                                                 <span>Open in viewer</span>
@@ -1899,10 +1885,11 @@
 
                                     <section id="sec-2" data-type="introduction">
                                         <h2>
-                                            Parameter Selection
+                                            Analysis Setup
                                         </h2>
                                         <div role="paragraph">
-
+                                            After establishing the geometric model in <a href="#sec-1">Section 1</a>, we
+                                            set up the analysis and assign the parameters.
                                         </div>
 
                                     </section>
