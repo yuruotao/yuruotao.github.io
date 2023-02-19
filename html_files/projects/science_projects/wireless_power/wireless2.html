@@ -1704,83 +1704,23 @@
                                                                     <tr data-xml-align="center"
                                                                         data-xml-valign="middle">
                                                                         <th data-xml-align="center" scope="row">
-                                                                            input_radius_small
+                                                                            box_i_in
                                                                         </th>
                                                                         <td data-xml-align="center" scope="col">
-                                                                            The inner radius of the source side coil
+                                                                            The length of the source side shield on the
+                                                                            I-th axis (X, Y, Z)
                                                                         </td>
                                                                     </tr>
                                                                     <tr data-xml-align="center"
                                                                         data-xml-valign="middle">
                                                                         <th data-xml-align="center" scope="row">
-                                                                            output_radius_small
+                                                                            box_i_out
                                                                         </th>
                                                                         <td data-xml-align="center" scope="col">
-                                                                            The inner radius of the load side coil
+                                                                            The length of the load side shield on the
+                                                                            I-th axis (X, Y, Z)
                                                                         </td>
                                                                     </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            input_radius_big
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The outer radius of the source side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            output_radius_big
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The outer radius of the load side coil
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            input_height
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The height of the hollow cylinder that
-                                                                            models the source side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            output_height
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The height of the hollow cylinder that
-                                                                            models the load side coil
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            in_disp_z
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The displacement of the source side coil in
-                                                                            Z direction from the X-Y plane
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            out_disp_z
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The displacement of the load side coil in Z
-                                                                            direction from the X-Y plane
-                                                                        </td>
-                                                                    </tr>
-
-
 
                                                                 </tbody>
                                                             </table>
@@ -1789,7 +1729,7 @@
                                                     </div>
                                                     <figcaption>
                                                         <div class="caption"><span class="heading">Table 1</span>. The
-                                                            variables related to the coil.</div>
+                                                            variables related to the shield.</div>
 
                                                         <div class="notes">
                                                             <div role="doc-footnote">
@@ -1809,7 +1749,14 @@
                                                 Region Model Establishment
                                             </h3>
                                             <div role="paragraph">
-
+                                                The region defines the simulation content, anything in the region is
+                                                considered to be a part of the model. For size-fixed contents, the
+                                                larger the region is, the more accurate result the simulation would
+                                                produce. For simplicity and guarantee the accuracy at the same time, we
+                                                make the region a cubic and its length 7.5 times of the maximum length
+                                                of the model, which is the length of the shield. To reduce simulation
+                                                time, the material of the region can be void. However, for real-world
+                                                cases, the material is usually selected as air.
 
                                             </div>
                                             <div role="paragraph">
@@ -1837,81 +1784,14 @@
                                                                     <tr data-xml-align="center"
                                                                         data-xml-valign="middle">
                                                                         <th data-xml-align="center" scope="row">
-                                                                            input_radius_small
+                                                                            region_I_len
                                                                         </th>
                                                                         <td data-xml-align="center" scope="col">
-                                                                            The inner radius of the source side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            output_radius_small
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The inner radius of the load side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            input_radius_big
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The outer radius of the source side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            output_radius_big
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The outer radius of the load side coil
+                                                                            The length of the simulation region on the
+                                                                            I-th axis. (X, Y, Z)
                                                                         </td>
                                                                     </tr>
 
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            input_height
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The height of the hollow cylinder that
-                                                                            models the source side coil
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            output_height
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The height of the hollow cylinder that
-                                                                            models the load side coil
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            in_disp_z
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The displacement of the source side coil in
-                                                                            Z direction from the X-Y plane
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center"
-                                                                        data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            out_disp_z
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            The displacement of the load side coil in Z
-                                                                            direction from the X-Y plane
-                                                                        </td>
-                                                                    </tr>
 
 
 
@@ -1921,8 +1801,8 @@
 
                                                     </div>
                                                     <figcaption>
-                                                        <div class="caption"><span class="heading">Table 1</span>. The
-                                                            variables related to the coil.</div>
+                                                        <div class="caption"><span class="heading">Table 4</span>. The
+                                                            variables related to the region.</div>
 
                                                         <div class="notes">
                                                             <div role="doc-footnote">
@@ -1938,6 +1818,81 @@
                                                     <span>Open in viewer</span>
                                                 </a>
                                             </div>
+                                        </div>
+                                        <h3>Common Variables</h3>
+                                        <div role="paragraph">
+                                            To study the effect of each component to the transfer efficiency, we have
+                                            defined a few global parameters. The coil, core, and shield on each side are
+                                            programmed to be a single entity for the sake of movement. The variables are
+                                            listed in <a href="#T5">Table 5</a>.
+                                        </div>
+                                        <div class="figure-wrap">
+                                            <figure id="T5" class="table">
+                                                <div class="table-wrap">
+                                                    <div class="collapsible-wrapper" aria-expanded="true">
+                                                        <table>
+                                                            <thead>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Variable</b>
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Description</b>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        slide
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The distance of parallel movement of the load
+                                                                        side coil
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        rotate_angle_x
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The angle of rotation of the load side coil to
+                                                                        the X axis
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        rotate_angle_y
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The angle of rotation of the load side coil to
+                                                                        the Y axis
+                                                                    </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Table 5</span>. The
+                                                        table of global variables.</div>
+
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">
+
+                                                        </div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+
+                                            <a href="#T" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
                                         </div>
 
                                     </section>
