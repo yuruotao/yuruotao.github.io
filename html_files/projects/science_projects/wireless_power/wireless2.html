@@ -1895,6 +1895,44 @@
                                             Excitation Assignment
                                         </h3>
                                         <div role="paragraph">
+                                            The excitation provides the current required for the simulation, in this
+                                            hollow cylinder model, the excitation is input through the section plane. To
+                                            model the winding number of the coil, we select <code
+                                                style="background-color:gainsboro;color: black;">
+                                                Add winding</code> in the Excitation column. After assigning the winding
+                                            parameters to the coils, we add the current excitation by selecting the
+                                            geometry design first, then select <code
+                                                style="background-color:gainsboro;color: black;">
+                                                Assign coil terminal</code> in the winding column. If there is no such
+                                            option as <code style="background-color:gainsboro;color: black;">
+                                                Add winding</code>, it is due to the solution type, which will be addressed
+                                            later. The excitation is selected as <code
+                                                style="background-color:gainsboro;color: black;">
+                                                Stranded current</code>. This allows for the analysis of multiple turns, but
+                                            eliminate the analysis for eddy current. To maintain the analysis for eddy
+                                            current, one has to select the other geometric model of coil. The parameter
+                                            named <code style="background-color:gainsboro;color: black;">
+                                                Number of conductors</code> models the turns of the coil. By executing the
+                                            procedure above, we complete the excitation assignment for our model.
+                                        </div>
+                                        <h3>
+                                            Solver Selection
+                                        </h3>
+                                        <div role="paragraph">
+                                            Solver can be selected by right clicking the model and select <code
+                                                style="background-color:gainsboro;color: black;">Solution Type</code>,
+                                            including magnetostatic, eddy current, and transient for magnetic
+                                            simulation. Magnetostatic solvers assume steady-state currents and permanent
+                                            magnets as excitations, eddy current solvers and transient solvers analyze
+                                            the alternating
+                                            currents and, but different in the selection of the source of the current.
+                                            In our case, the source of current is from the outer circuit, eddy current
+                                            solver is sufficient for our simulation.
+                                        </div>
+                                        <h3>
+                                            Matrix Setup
+                                        </h3>
+                                        <div role="paragraph">
 
                                         </div>
 
