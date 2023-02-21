@@ -27,7 +27,7 @@
 
             pdf_link: "/content_files/projects/science_prg/wireless_power/wireless2/",
             paper_state: "yes",
-            section_names: ["Geometry Setup of Simulation", "Analysis Setup", "Miscellaneous", "Simulation Result", "Summary"],
+            section_names: ["Geometry Setup of Simulation", "Simulation Setup", "Miscellaneous", "Simulation Result", "Summary"],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1908,11 +1908,11 @@
 
                                     <section id="sec-2" data-type="introduction">
                                         <h2>
-                                            Analysis Setup
+                                            Simulation Setup
                                         </h2>
                                         <div role="paragraph">
                                             After establishing the geometric model in <a href="#sec-1">Section 1</a>, we
-                                            set up the analysis and assign the parameters.
+                                            set up the simulation and assign the parameters.
                                         </div>
                                         <h3>
                                             Excitation Assignment
@@ -1961,9 +1961,42 @@
                                                 Assign Matrix</code>, and check the checkboxes that specify the objects for
                                             calculation.
                                         </div>
+                                        <h3>
+                                            Mesh Setup
+                                        </h3>
+                                        <div role="paragraph">
+                                            Since the interest of simulation mostly center in the coil and core, we
+                                            refine the geometry model of them by creating mesh on the interested object.
+                                            We select the mesh tab, select <code
+                                                style="background-color:gainsboro;color: black;">
+                                                Assign Mesh Operation</code>. For refining the faces, select <code
+                                                style="background-color:gainsboro;color: black;">
+                                                    On Selection</code>, and for refining the whole body, select <code
+                                                style="background-color:gainsboro;color: black;">
+                                                        Inside Selection</code>. Here we select <code
+                                                style="background-color:gainsboro;color: black;"> Inside Selection</code>
+                                            for our purpose. The type should be
+                                            length based, which refines the length of tetrahedral elements until they
+                                            are below a specified value. By doing this for two coils and cores, we are
+                                            able to define their maximum element length.
+                                        </div>
+                                        <h3>
+                                            Analysis Setup
+                                        </h3>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <h3>
+                                            Optimetrics Setup
+                                        </h3>
+                                        <div role="paragraph">
+
+                                        </div>
+
 
                                         <div role="paragraph">
-                                            The variables related to the commands above are listed in <a href="#T6"></a>
+                                            The variables related to the commands above are listed in <a
+                                                href="#T6">Table 6</a>.
                                         </div>
                                         <div class="figure-wrap">
                                             <figure id="T6" class="table">
@@ -1984,13 +2017,53 @@
                                                             <tbody>
                                                                 <tr data-xml-align="center" data-xml-valign="middle">
                                                                     <th data-xml-align="center" scope="row">
-                                                                        slide
+                                                                        input_current
                                                                     </th>
                                                                     <td data-xml-align="center" scope="col">
-                                                                        The distance of parallel movement of the load
-                                                                        side coil
+                                                                        The current in the source side coil
                                                                     </td>
                                                                 </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        output_current
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The current in the load side coil
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        input_current_freq
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The current frequency in the source side coil
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        output_current_freq
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The current frequency in the load side coil
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        input_wind_num
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The winding number in the source side coil
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        output_wind_num
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The winding number in the load side coil
+                                                                    </td>
+                                                                </tr>
+
                                                             </tbody>
                                                         </table>
                                                     </div>

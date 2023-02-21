@@ -173,6 +173,7 @@
                             i.attr("id", n.id, !0, !0) +
                             i.attr("data-key", o, !0, !0) +
                             ">" +
+                            // "undefined" is created inside here
                             (null == (t = n.content) ? "" : t) +
                             "</figure>";
                         }
@@ -312,17 +313,9 @@
               (a += "</div>");
           }.call(
             this,
-            "Object" in r
-              ? r.Object
-              : "undefined" != typeof Object
-              ? Object
-              : void 0,
-            "slides" in r
-              ? r.slides
-              : "undefined" != typeof slides
-              ? slides
-              : void 0,
-            "type" in r ? r.type : "undefined" != typeof type ? type : void 0
+            "Object" in r ? r.Object : " " != typeof Object ? Object : void 0,
+            "slides" in r ? r.slides : " " != typeof slides ? slides : void 0,
+            "type" in r ? r.type : " " != typeof type ? type : void 0
           ),
           a
         );
