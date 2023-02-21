@@ -2114,37 +2114,29 @@
                                             accurate but requires more computation resources, thus takes up more time.
                                             There are several approaches to speed up the simulation that maintain the
                                             integrity of the result.
+                                            <br>
                                             <br><b>1. Enable GPU by selecting <code
                                                     style="background-color:gainsboro;color: black;">
                                                 Enable GPU</code> in the HPC and Analysis Options column</b>:
-                                            <br>This approach may not work due to the compatibility of your GPU with
+                                            <br>This approach may not work due to the incompatibility of your GPU with
                                             ANSYS Electronics.
                                             <br><b>2. Allow for more RAMs and cores of CPU</b>:
                                             <br>This can be realised by going to the <code
                                                 style="background-color:gainsboro;color: black;">
-                                                Configuration</code> column of the HPC and Analysis Options column, alter
+                                                Configuration</code> column of the HPC and Analysis Options, alter
                                             the parameter <code style="background-color:gainsboro;color: black;">
                                                     cores</code> and <code style="background-color:gainsboro;color: black;">
                                                         RAM Limit</code> then enable the setup.
                                             <br><b>3. ANSYS Cloud</b>
                                             <br>
-                                            <br><b>4. Increase the percent of error</b>:
-                                            <br>This can be achieved by selecting the
-                                            <br><b></b>
-                                            <br>
-                                            <br><b></b>
-                                            <br>
-                                            <br><b></b>
-                                            <br>
-                                            <br><b></b>
-                                            <br>
-                                            <br><b></b>
-                                            <br>
-                                            <br><b></b>
-                                            <br>
-                                            <br><b></b>
-                                            <br>
+                                            <br><b>4. Increase the percent of error</b>;
+
+                                            <br><b>5. Decrease the refinement after per pass</b>;
+
+                                            <br><b>6. Decrease the geometric size of the model</b>;
+
                                         </div>
+
 
                                     </section>
 
@@ -2160,7 +2152,9 @@
                                     <section id="sec-5" data-type="introduction">
                                         <h2>Summary</h2>
                                         <div role="paragraph">
-
+                                            In this article, we conduct a proof-of-concept simulation of wireless
+                                            inductive coupling-based wireless power transfer using Maxwell. The next
+                                            article <a href=""></a> is built on the basis of our simulation.
                                         </div>
                                     </section>
 
