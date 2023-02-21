@@ -1391,6 +1391,8 @@
                                         attracted to a partial negative charge;
                                         <br><b>Genome annotation</b>: the process of identifying functional elements
                                         along the sequence of a genome;
+                                        <br><b>Water of Crystallization</b>: the water molecules that are present inside
+                                        crystals;
                                         <br>
                                     </section>
                                 </div>
@@ -1438,11 +1440,13 @@
                                 </h3>
                                 <div role="paragraph">
                                     To perform docking, we need to have the files that contain the structural
-                                    information of the ligand and protein. AutoDock takes PDB-formatted documents for
-                                    input, thus, we need to obtain the PDB-formatted file of both ligand and protein.
+                                    information of the ligand and protein. AutoDock takes PDB-formatted, CIF-formatted,
+                                    and such documents for
+                                    input, thus, we need to obtain files with such format for both ligand and protein.
                                 </div>
                                 <div role="paragraph">
-                                    To download the PDB-formatted files directly, there are several databases to select:
+                                    To download the PDB-formatted/...-formatted files directly, there are several
+                                    databases to select:
                                     <ol>
                                         <li>
                                             <b><a href="https://www.rcsb.org/">Protein Data Bank</a></b>: contains
@@ -1481,13 +1485,13 @@
 
                                 </div>
                                 <h3>
-                                    Computer Environment Preperation
+                                    Computer Environment Preparation
                                 </h3>
                                 <div role="paragraph">
                                     After downloading AutoDock and AutoDockTools, we also need to download python from
                                     the <a href="https://www.python.org/">offical website</a> since AutoDock require the
                                     environment of Python 2.5.0. Add the path of Python to the environment variable of
-                                    the system, the preperation is done. To carry out the simulation, we also need to
+                                    the system, the Preparation is done. To carry out the simulation, we also need to
                                     create a working folder, in which three files are necessary:
                                     <ul>
                                         <li>
@@ -1504,10 +1508,111 @@
                                     is set.
                                 </div>
                                 <h3>
-                                    File Preperation
+                                    Protein Preparation
                                 </h3>
                                 <div role="paragraph">
-
+                                    We select one <a
+                                        href="https://alphafold.ebi.ac.uk/entry/A0A479JW04">Beta-D-glucoside
+                                        glucohydrolase</a> predicted by Alphafold
+                                    to be the protein for docking. After downloading its PDB file, we import the protein
+                                    file into AutoDock, as shown in <a href="#F1">Figure 1</a>. Then the first step is
+                                    to delete the crystallographic water within the molecule by selecting <code
+                                        style="background-color:gainsboro;color: black;">
+                                        Edit: Delete Water</code> since they may cause problems like missing atoms, chain
+                                    breaks, alternate locations. Then select <code
+                                        style="background-color:gainsboro;color: black;">
+                                    Edit: Hydrogens: Add</code> . Then select <code
+                                        style="background-color:gainsboro;color: black;">
+                                    Edit: Hydrogens: Merge Non-polar</code> . Finally, select <code
+                                        style="background-color:gainsboro;color: black;">
+                                    Edit: Charges: Add Kollman Charges</code> . Then select <code
+                                        style="background-color:gainsboro;color: black;">
+                                    Grid: Macromolecule: Choose: Select Molecule</code>, the protein is exported to PDBQT
+                                    format.
+                                </div>
+                                <div class="figure-wrap" data-specific-use="distribute">
+                                    <figure id="F1" class="graphic">
+                                        <img src="/content_files/projects/science_prg/docking/docking1/figure1.png"
+                                            height="3071" width="4333" aria-labelledby="F1" loading="lazy" />
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Figure 1</span>. The structure of
+                                                Beta-D-glucoside
+                                                glucohydrolase.</div>
+                                            <div class="notes">
+                                                <div role="doc-footnote"></div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <a href="#F1" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
+                                </div>
+                                <h3>
+                                    Ligand Preparation
+                                </h3>
+                                <div role="paragraph">
+                                    We select <a href="https://pubchem.ncbi.nlm.nih.gov/compound/9918693">Ginsenoside
+                                        Rg3</a> as our ligand, convert to PDB file using OpenBabel, then import to
+                                    AutoDock as shown in <a href="#F2">Figure 2</a>. The procedure of processing is same
+                                    as the proteins. When it comes to export, select <code
+                                        style="background-color:gainsboro;color: black;">
+                                Ligand: Input: Choose: Select</code> to set the ligand molecule, then select <code
+                                        style="background-color:gainsboro;color: black;">
+                                        Ligand: Output</code> to save the PDBQT file of the ligand.
+                                </div>
+                                <div class="figure-wrap" data-specific-use="distribute">
+                                    <figure id="F2" class="graphic">
+                                        <img src="/content_files/projects/science_prg/docking/docking1/figure2.png"
+                                            height="3071" width="4333" aria-labelledby="F2" loading="lazy" />
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Figure 2</span>. The structure of
+                                                Ginsenoside
+                                                Rg3</div>
+                                            <div class="notes">
+                                                <div role="doc-footnote"></div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <a href="#F2" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
+                                </div>
+                                <h3>
+                                    Grid Preparation
+                                </h3>
+                                <div role="paragraph">
+                                    After the protein and ligand are processed, we prepare the grid to. First, select
+                                    <code style="background-color:gainsboro;color: black;">
+                                        Grid: Macromolecule: Open</code> to import the protein, then select <code
+                                        style="background-color:gainsboro;color: black;">
+                                            Grid: Set Map Types: Open Ligand</code> to import the ligand. Then set the
+                                    Gridbox with <code style="background-color:gainsboro;color: black;">
+                                                Grid: Grid Box</code> so that the Grid box include the whole protein, as
+                                    shown in <a href="#F3">Figure 3</a>, save
+                                    by <code style="background-color:gainsboro;color: black;">
+                                        File: Close saving current</code>. Finally, save the grid by selecting <code
+                                        style="background-color:gainsboro;color: black;">
+                                        Grid: Output: Save GPF</code>. At this point, the preprocessing work is done.
+                                </div>
+                                <div class="figure-wrap" data-specific-use="distribute">
+                                    <figure id="F3" class="graphic">
+                                        <img src="/content_files/projects/science_prg/docking/docking1/figure3.png"
+                                            height="3071" width="4333" aria-labelledby="F3" loading="lazy" />
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Figure 3</span>. The Grid Box
+                                                model.</div>
+                                            <div class="notes">
+                                                <div role="doc-footnote">The box should contain the molecule within its
+                                                    volume.</div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <a href="#F3" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
                                 </div>
                                 <h3>
                                     Docking Program Execution
@@ -1548,7 +1653,7 @@
 
                                 </div>
                                 <h3>
-                                    File Preperation
+                                    File Preparation
                                 </h3>
                                 <div role="paragraph">
 
@@ -1572,15 +1677,6 @@
 
                                 </div>
 
-
-                                <h3>
-                                    Other Resources
-                                </h3>
-                                <div role="paragraph">
-                                    A list of molecular docking softwares are summarized in <a
-                                        href="https://en.wikipedia.org/wiki/List_of_protein-ligand_docking_software">Wikipedia</a>.
-                                </div>
-
                             </section>
 
 
@@ -1589,7 +1685,12 @@
                                 <div role="paragraph">
                                     <b>Resources: </b>The official user guide document for AutoDock can be found <a
                                         href="https://autodocksuite.scripps.edu/wp-content/uploads/sites/31/2019/03/AutoDock4.2.6_UserGuide.pdf">here</a>,
-
+                                    along with a tutorial <a
+                                        href="https://dasher.wustl.edu/chem430/software/autodock/tutorial-hiv-protease.pdf">Using
+                                        AutoDock 4 and AutoDock Vina with
+                                        AutoDockTools: A Tutorial</a>. Instructions for vina and AD-GPU can be found in
+                                    the installation site. A list of molecular docking softwares are summarized in <a
+                                        href="https://en.wikipedia.org/wiki/List_of_protein-ligand_docking_software">Wikipedia</a>.
                                 </div>
 
                                 <div role="paragraph"><b>Competing interests:</b> no competing
