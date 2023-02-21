@@ -4,7 +4,7 @@
 <head data-pb-dropzone="head">
     <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
     </link>
-    <title id="page_title">Gut Microbiome-Metabolites-Host Interaction Mechanism Study</title>
+    <title id="page_title">y</title>
 
     <!-- here is the updating script -->
     <script>
@@ -18,16 +18,16 @@
             date: "2022 October 25",
             authors: author,
             article_type: "Note",
-            article_field: "Gut Microbiome",
+            article_field: "Machine Learning",
 
             previous_article_link: "#",
-            next_article_link: "/html_files/projects/science_projects/gut_microbiome/gut2.html",
+            next_article_link: "/html_files/projects/science_projects/ml_projects/ml2.html",
             previous_article_title: "no previous article",
             next_article_title: "Correlation Analysis",
 
-            pdf_link: "/content_files/projects/science_prg/gut_microbiome/gut1/microbiome-note-print.pdf",
+            pdf_link: "/content_files/projects/science_prg/machine_learning/",
             paper_state: "yes",
-            section_names: ["Gut Microbiome-Metabolites-Host Interaction Mechanism Study",],
+            section_names: ["",],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
