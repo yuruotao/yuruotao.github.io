@@ -1984,16 +1984,29 @@
                                             Analysis Setup
                                         </h3>
                                         <div role="paragraph">
-
+                                            Analysis designates the parameters of the simulation and iteration program,
+                                            which determines the simulation time and accuracy. In <code
+                                                style="background-color:gainsboro;color: black;">
+                                                Adaptive Setup</code>, the percent error establish the threashold for
+                                            simulation termination. Each iteration is called a pass, and the parameter
+                                            <code style="background-color:gainsboro;color: black;">
+                                                maximum number of passes</code> sets up a boundary for the program. In
+                                            Convergence column, the parameters control the iteration.
                                         </div>
                                         <h3>
                                             Optimetrics Setup
                                         </h3>
                                         <div role="paragraph">
-
+                                            Based on the parameters we defined, we are able to sweep the parameters
+                                            using the optimetrics setup. In the <code
+                                                style="background-color:gainsboro;color: black;">
+                                                Options</code> column of the Setup Sweep Analysis, select <code
+                                                style="background-color:gainsboro;color: black;">
+                                                    Save Field and Mesh</code>, so that the results would be stored.
                                         </div>
-
-
+                                        <h3>
+                                            Parameters
+                                        </h3>
                                         <div role="paragraph">
                                             The variables related to the commands above are listed in <a
                                                 href="#T6">Table 6</a>.
@@ -2097,9 +2110,42 @@
                                         </h2>
                                         <h3>Speed Up The Simulation</h3>
                                         <div role="paragraph">
-                                            ANSYS Electronics Maxwell is based on finite element analysis, which is
-
+                                            ANSYS Electronics Maxwell is based on finite element analysis, which is more
+                                            accurate but requires more computation resources, thus takes up more time.
+                                            There are several approaches to speed up the simulation that maintain the
+                                            integrity of the result.
+                                            <br><b>1. Enable GPU by selecting <code
+                                                    style="background-color:gainsboro;color: black;">
+                                                Enable GPU</code> in the HPC and Analysis Options column</b>:
+                                            <br>This approach may not work due to the compatibility of your GPU with
+                                            ANSYS Electronics.
+                                            <br><b>2. Allow for more RAMs and cores of CPU</b>:
+                                            <br>This can be realised by going to the <code
+                                                style="background-color:gainsboro;color: black;">
+                                                Configuration</code> column of the HPC and Analysis Options column, alter
+                                            the parameter <code style="background-color:gainsboro;color: black;">
+                                                    cores</code> and <code style="background-color:gainsboro;color: black;">
+                                                        RAM Limit</code> then enable the setup.
+                                            <br><b>3. ANSYS Cloud</b>
+                                            <br>
+                                            <br><b>4. Increase the percent of error</b>:
+                                            <br>This can be achieved by selecting the
+                                            <br><b></b>
+                                            <br>
+                                            <br><b></b>
+                                            <br>
+                                            <br><b></b>
+                                            <br>
+                                            <br><b></b>
+                                            <br>
+                                            <br><b></b>
+                                            <br>
+                                            <br><b></b>
+                                            <br>
+                                            <br><b></b>
+                                            <br>
                                         </div>
+
                                     </section>
 
                                     <section id="sec-4" data-type="introduction">
