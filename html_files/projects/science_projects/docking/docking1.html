@@ -1525,11 +1525,17 @@
                                         Edit: Delete Water</code> since they may cause problems like missing atoms, chain
                                     breaks, alternate locations. Then select <code
                                         style="background-color:gainsboro;color: black;">
-                                    Edit: Hydrogens: Add</code> . Then select <code
-                                        style="background-color:gainsboro;color: black;">
-                                    Edit: Hydrogens: Merge Non-polar</code> . Finally, select <code
-                                        style="background-color:gainsboro;color: black;">
-                                    Edit: Charges: Add Kollman Charges</code> . Then select <code
+                                    Edit: Hydrogens: Add</code>, since the interactions between protein and ligand might be
+                                    of different types like hydrogen
+                                    bond interaction, hydrophobic interaction, pi-pi stacking. To predict some of
+                                    these interactions especially hydrogen bond network which ultimately helps to
+                                    stabilize the ligand. as well as the protein itself, we need to add hydrogens. Then
+                                    select <code style="background-color:gainsboro;color: black;">
+                                    Edit: Hydrogens: Merge Non-polar</code> because they will no contribute in interactions
+                                    so they are merged in order to reduce the number of calculations. Finally, select
+                                    <code style="background-color:gainsboro;color: black;">
+                                    Edit: Charges: Add Kollman Charges</code> since macromolecules present in charged form
+                                    with no atom missing in human/animal body. Then select <code
                                         style="background-color:gainsboro;color: black;">
                                     Grid: Macromolecule: Choose: Select Molecule</code>, the protein is exported to PDBQT
                                     format.
