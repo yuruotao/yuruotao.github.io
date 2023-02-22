@@ -1397,6 +1397,8 @@
                                         a system of particles or to disperse all the particles of the system;
                                         <br><b>Estimated Inhibition Constant(kI)</b>: the concentration required to
                                         produce half maximum inhibition;
+                                        <br><b>Macrocycle</b>: molecules and ions containing a ring of twelve or more
+                                        atoms;
                                         <br><b></b>
                                     </section>
                                 </div>
@@ -1837,8 +1839,30 @@
                                     </a>
                                 </div>
                                 <div role="paragraph">
-
+                                    Moreover, based on the simulation data, a clustering figure is generated, as shown
+                                    in <a href="#F5">Figure 5</a>. The more converge the cluster is, the bigger chance
+                                    that a binding site exists.
                                 </div>
+                                <div class="figure-wrap" data-specific-use="distribute">
+                                    <figure id="F5" class="graphic">
+                                        <img src="/content_files/projects/science_prg/docking/docking1/figure5.png"
+                                            height="3071" width="4333" aria-labelledby="F5" loading="lazy" />
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Figure 5</span>. The clustering
+                                                figure of simulation result.</div>
+                                            <div class="notes">
+                                                <div role="doc-footnote">From the figure, we can see that our result is
+                                                    distributed within the region of [-15.0, -12.0], we can make an
+                                                    educated guess that here may contain a vaild binding site.</div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <a href="#F5" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
+                                </div>
+
 
                             </section>
 
@@ -1850,7 +1874,11 @@
                                     Computer Environment Preparation
                                 </h3>
                                 <div role="paragraph">
-
+                                    AutoDock Vina is better in combination with ADFR software suite, which provides
+                                    software tools for automated docking and peripheral tasks, and a Python package
+                                    Raccoon-lite, for preparing macrocycle for example. Another Python package named
+                                    Meeko provides tools covering other docking aspects not handled by the ADFR software
+                                    suite, including docking protocols like hydrated docking, and macrocycles.
                                 </div>
                                 <h3>
                                     Data Source
@@ -1922,7 +1950,7 @@
                                                 <div class="core-link">
                                                     <ul>
                                                         <li>
-                                                            <a href="/content_files\projects\science_prg\docking\docking1\docking_result_figures_autodock.rar"
+                                                            <a href="/content_files/projects/science_prg/docking/docking1/docking_result_figures_autodock.rar"
                                                                 download="Appendix">Download</a>
                                                         </li>
                                                         <li>7.82 MB</li>
@@ -1937,7 +1965,7 @@
                                                 <div class="core-link">
                                                     <ul>
                                                         <li>
-                                                            <a href="/content_files\projects\science_prg\docking\docking1\source_and_result_sutodock.rar"
+                                                            <a href="/content_files/projects/science_prg/docking/docking1/source_and_result_sutodock.rar"
                                                                 download="Appendix">Download</a>
                                                         </li>
                                                         <li>236 KB</li>
