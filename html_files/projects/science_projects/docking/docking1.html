@@ -1972,6 +1972,39 @@
                                 </div>
 
                             </section>
+                            <section id="sec-4" data-type="introduction">
+                                <h2>
+                                    Miscellaneous
+                                </h2>
+                                <div role="paragraph">
+                                    <b>Nice Level</b>: this parameter determines the priority of the current script,
+                                    ranging within [-20, 19], bigger value indicates lower priority, changing this can
+                                    alter the rate of simulation.
+                                    <br><b>Result Inconsistancy</b>: multiple factors contribute to the inconsistancy of
+                                    simulation result, including
+                                    <ol>
+                                        <li>
+                                            Failure to find the optimal docking status;
+                                        </li>
+                                        <li>
+                                            The randomized starting site, parameters and orientation;
+                                        </li>
+
+                                    </ol>
+                                    <b>Solution</b>:
+                                    <ol>
+                                        <li>
+                                            In the <code
+                                                style="background-color: gainsboro; color: black">Docking: SearchParam: Genetic</code>,
+                                            change the algorithm paramters, including <code
+                                                style="background-color: gainsboro; color: black">GA runs</code>, <code
+                                                style="background-color: gainsboro; color: black">Maximum Num of evals</code>,
+                                            and <code
+                                                style="background-color: gainsboro; color: black">Maximum Num of Generations</code>.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </section>
 
 
                             <section id="acknowledgments" role="doc-acknowledgments">
