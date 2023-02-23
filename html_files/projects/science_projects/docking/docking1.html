@@ -27,7 +27,7 @@
 
             pdf_link: "#",
             paper_state: "yes",
-            section_names: ["Molecular Docking Problem Overview", "AutoDock Simulation Notebook", "AutoDock Vina Notebook",],
+            section_names: ["Molecular Docking Problem Overview", "AutoDock Simulation Notebook", "AutoDock Vina Notebook", "Miscellaneous",],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1980,6 +1980,7 @@
                                     <b>Nice Level</b>: this parameter determines the priority of the current script,
                                     ranging within [-20, 19], bigger value indicates lower priority, changing this can
                                     alter the rate of simulation.
+                                    <br>
                                     <br><b>Result Inconsistancy</b>: multiple factors contribute to the inconsistancy of
                                     simulation result, including
                                     <ol>
@@ -2003,6 +2004,14 @@
                                                 style="background-color: gainsboro; color: black">Maximum Num of Generations</code>.
                                         </li>
                                     </ol>
+                                    <b>Result Interpretation</b>: For binding energy, (1 kcal = 4.184 kJ), when the unit
+                                    is selected to kJ/mol, the threashold for docking under normal circumstances is
+                                    docking energy less than 0. For nice docking result, the docking energy should be
+                                    less than -5.
+                                    <br>
+                                    <br><b>Active Center</b>: when the active center of the receptor is known, the
+                                    center of grid box should approach the active center as close as possible. Note that
+                                    there may contain coordinate transform. (With the help of a reference point)
                                 </div>
                             </section>
 
