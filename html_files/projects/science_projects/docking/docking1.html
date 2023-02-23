@@ -15,7 +15,7 @@
             page_title: page_title_1,
             current_directory: "science project",
             current_directory_path: "/projects.html",
-            date: "2022 October 25",
+            date: "2023 February 23",
             authors: author,
             article_type: "Note",
             article_field: "Simulation",
@@ -27,7 +27,7 @@
 
             pdf_link: "/content_files/projects/science_prg/docking/docking1",
             paper_state: "yes",
-            section_names: ["Molecular Docking Problem Overview", "AutoDock Simulation Notebook", "",],
+            section_names: ["Molecular Docking Problem Overview", "AutoDock Simulation Notebook", "AutoDock Vina Notebook",],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1263,7 +1263,24 @@
                                         <div role="paragraph">
 
                                             <p>
-
+                                                Docking simulation and virtual screening technologies have become
+                                                increasingly important in modern drug discovery. By simulating and
+                                                predicting the interactions between proteins and small molecules, these
+                                                technologies help to identify active compounds with the potential for
+                                                further development into drugs. As such, docking simulation and virtual
+                                                screening are essential tools for drug discovery and development.
+                                            </p>
+                                            <p>The primary purpose of docking simulation and virtual screening is to
+                                                accurately predict interactions and determine which small molecules are
+                                                likely to bind with a protein target. This information can be used to
+                                                rapidly narrow down potential drug candidates, greatly reducing time and
+                                                cost associated with the drug discovery process. In addition to helping
+                                                streamline the drug discovery process, these technologies can also
+                                                provide crucial insight into an individual compound's mechanism of
+                                                action and side effects.</p>
+                                            <p>
+                                                In this article, we provide an overview on molecular docking and
+                                                document simulation notebooks for AutoDock and AutoDock Vina.
                                             </p>
                                             <p>
                                                 <b>
@@ -1469,6 +1486,10 @@
                                             AI-based protein structure database, different accuracy on different
                                             proteins comparing to Alphafold;
                                         </li>
+                                        <li>
+                                            <b><a href="https://www.ccdc.cam.ac.uk/">CCDC</a></b>: download CIF files of
+                                            the molecule;
+                                        </li>
 
                                     </ol>
                                     Some ligands do not have a 3D structure file in PDB file since their small molecular
@@ -1487,7 +1508,8 @@
                                     </ol>
                                     To convert those that are not in PDB format, use <a
                                         href="https://openbabel.org/wiki/Main_Page">OpenBabel</a>, a toolkit that is
-                                    able to transform the type of file.
+                                    able to transform the type of file or use the <a
+                                        href="https://cactus.nci.nih.gov/translate/">CACTUS server</a> here.
 
                                 </div>
                                 <h3>
@@ -1878,37 +1900,75 @@
                                     software tools for automated docking and peripheral tasks, and a Python package
                                     Raccoon-lite, for preparing macrocycle for example. Another Python package named
                                     Meeko provides tools covering other docking aspects not handled by the ADFR software
-                                    suite, including docking protocols like hydrated docking, and macrocycles.
+                                    suite, including docking protocols like hydrated docking, and macrocycles. Besides
+                                    these, the working folder should contain the executable file of Vina.
                                 </div>
+
                                 <h3>
-                                    Data Source
+                                    Preprocessing
                                 </h3>
                                 <div role="paragraph">
-
-                                </div>
-                                <h3>
-                                    File Preparation
-                                </h3>
-                                <div role="paragraph">
-
+                                    The preprocessing including protein preparation, ligand preparation, and grid
+                                    preparation is the same as is with AutoDock.
                                 </div>
                                 <h3>
                                     Docking Program Execution
                                 </h3>
                                 <div role="paragraph">
+                                    After defining the grid box of the model, select <code
+                                        style="background-color: gainsboro; color: black">Docking: Output: Vina Config</code>
+                                    to generate the configuration file for docking, specifying the ligand, receptor and
+                                    providing the grid information. Go to cmd in the working directory and type <code
+                                        style="background-color: gainsboro; color: black">./vina --config config.txt --exhaustiveness=24</code>
+                                    to specify the exhaustiveness and start the program. The cmd window is shown in <a
+                                        href="#F6">Figure 6</a>.
+
 
                                 </div>
-                                <h3>
-                                    Parameter Selection
-                                </h3>
-                                <div role="paragraph">
-
+                                <div class="figure-wrap" data-specific-use="distribute">
+                                    <figure id="F6" class="graphic">
+                                        <img src="/content_files/projects/science_prg/docking/docking1/figure6.png"
+                                            height="3071" width="4333" aria-labelledby="F6" loading="lazy" />
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Figure 6</span>. The command
+                                                window of AutoDock Vina execution result.</div>
+                                            <div class="notes">
+                                                <div role="doc-footnote">Exhaustiveness is positively correlated with
+                                                    the accuracy of the result.</div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <a href="#F6" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
                                 </div>
                                 <h3>
                                     Result
                                 </h3>
                                 <div role="paragraph">
-
+                                    To load the simulation result of Vina, select <code
+                                        style="background-color: gainsboro; color: black">Analyze: Dockings: OpenAutoDockVinaResult</code>,
+                                    and select the Vina output file. Then use direction keys to see each of the result,
+                                    as shown in <a href="#F7">Figure 7</a>.
+                                </div>
+                                <div class="figure-wrap" data-specific-use="distribute">
+                                    <figure id="F7" class="graphic">
+                                        <img src="/content_files/projects/science_prg/docking/docking1/figure7.png"
+                                            height="3071" width="4333" aria-labelledby="F7" loading="lazy" />
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Figure 7</span>. The simulation
+                                                result using AutoDock Vina.</div>
+                                            <div class="notes">
+                                                <div role="doc-footnote">The figures with higher resolution can be found
+                                                    in the <a href="#sec5-1">Appendix</a>.</div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <a href="#F7" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
                                 </div>
 
                             </section>
@@ -1972,6 +2032,35 @@
                                                     </ul>
                                                 </div>
                                             </div>
+                                            <h3>Appendix for Vina: </h3>
+                                            <div class="core-supplementary-material">
+                                                <div class="core-description">
+                                                    <div>High Resolution Figure of AutoDock Result: </div>
+                                                </div>
+                                                <div class="core-link">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/content_files/projects/science_prg/docking/docking1/result_fig_vina.rar"
+                                                                download="Appendix">Download</a>
+                                                        </li>
+                                                        <li>5.26 MB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="core-supplementary-material">
+                                                <div class="core-description">
+                                                    <div>Vina Config and Result Files: </div>
+                                                </div>
+                                                <div class="core-link">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/content_files/projects/science_prg/docking/docking1/vina.rar"
+                                                                download="Appendix">Download</a>
+                                                        </li>
+                                                        <li>8.16 KB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </section>
 
 
@@ -1991,7 +2080,8 @@
 
                                             <script type="application/javascript">
                                                 citations = [
-
+                                                    '<div class="csl-entry">Forli, S., Huey, R., Pique, M. E., Sanner, M. F., Goodsell, D. S., &#38; Olson, A. J. (2016). Computational protein–ligand docking and virtual drug screening with the AutoDock suite. <i>Nature Protocols</i>, <i>11</i>(5), 905–919.</div>',
+                                                    '<div class="csl-entry">Cosconati, S., Forli, S., Perryman, A. L., Harris, R., Goodsell, D. S., &#38; Olson, A. J. (2010). Virtual screening with AutoDock: theory and practice. <i>Expert Opinion on Drug Discovery</i>, <i>5</i>(6), 597–607.</div>',
                                                 ];
                                                 iterate_num = citations.length;
                                                 html_model_num1 = '<div role="doc-biblioentry listitem" data-has="label"><div class="label">';
