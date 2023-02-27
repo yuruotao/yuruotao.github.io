@@ -27,7 +27,7 @@
 
             pdf_link: "/content_files/projects/science_prg/gut_microbiome/gut2",
             paper_state: "yes",
-            section_names: ["Statistics Terminologies", "Outline of Mathematical Model Establishment", "Data Preprocessing", "Correlation Analysis", "Clustering Analysis", "Weight Determination", "Tendency Estimation", "Causality Determination", "Error and Correction",],
+            section_names: ["Statistics Terminologies", "Outline of Mathematical Model Establishment", "Data Preprocessing", "Correlation Analysis", "Network Analysis", "Clustering Analysis", "Weight Determination", "Tendency Estimation", "Causality Determination", "Error and Correction",],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1384,12 +1384,67 @@
                                         <h3>
 
                                         </h3>
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F1" class="graphic">
+                                                <img src="/content_files/projects/science_prg/gut_microbiome/gut2/figure1."
+                                                    height="3071" width="4333" aria-labelledby="F1" loading="lazy" />
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Figure 1</span>. The
+                                                        flowchart of data-based mathematical model establishment
+                                                        procedure.</div>
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">The .</div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <a href="#F1" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
+                                        </div>
                                         <div role="paragraph">
                                             For a data-based mathematical model establishment, generally the purpose is
                                             to reconstruct the model as accurate as possible. The first step is to
                                             collect and preprocess the raw data since the statistical noise and other
                                             types of errors may invalidate the analysis afterwards. Then the correlation
-                                            analysis is applied to the
+                                            analysis is applied to the data. The reason to conduct correlation analysis
+                                            on given data, assume we have an
+                                            interested quantity refer as output, is to see the relationship among
+                                            variables and the
+                                            relationship between the output and variables. We refer the variables that
+                                            are related to the output as indicators. When the correlation analysis is
+                                            complete, we reduce the variables that are statistically irrelevant with the
+                                            output. If the correlations among indicators are high, this indicates the
+                                            indicators are interacting with each other. To see how much an indicator
+                                            influences the output, we need to carry out weight calculation for the
+                                            indicators. To see how indicators interact with each other, we need to carry
+                                            out network analysis, as discussed in <a href="#sec-6">Network Analysis</a>.
+                                            For simplicity, we can also group the correlated
+                                            indicators so that the new indicators can be viewed as irrelevant
+                                            statistically. Grouping the indicators requires clustering analysis, and
+                                            within each cluster, the weight should be calculated to synthesize an
+                                            output. We will discuss the clustering methods in <a
+                                                href="#sec-5">Clustering Analysis</a>, weight calculation in <a
+                                                href="#sec-7">Weight Determination</a>.
+                                        </div>
+                                        <div role="paragraph">
+                                            After applying the analysis approaches above, we are now able to analyze the
+                                            status of a data-based system. For different systems, the way forward
+                                            parted. For time-sensitive systems, the way forward is to estimate the
+                                            developing tendency forward through time. For relationship-sensitive
+                                            systems, the way forward is to determine causal relationships through
+                                            correlation. <a href="#sec-8">Tendency Estimation</a> discusses the
+                                            approaches to make estimations on the trend of the model, and <a
+                                                href="#sec-9">Causality Determination</a> discusses the relationship
+                                            between correlation analysis and causal analysis.
+                                        </div>
+                                        <div role="paragraph">
+                                            And finally, we make assessments on the accuracy of the model and make
+                                            corrections accordingly in <a href="#sec-10">Error and Correction</a>. The
+                                            notations to be used are
+                                            summarized in <a href="#T1">Table 1</a>, and a flowchart of the procedure is
+                                            shown in <a href="#F1">Figure 1</a> above.
                                         </div>
                                         <!-- notation table -->
                                         <div class="figure-wrap">
@@ -1756,22 +1811,7 @@
                                         </h2>
 
                                         <div role="paragraph">
-                                            The reason to conduct correlation analysis on given data, assume we have an
-                                            interested quantity refer as output, is to see the relationship among
-                                            variables and the
-                                            relationship between the output and variables. We refer the variables that
-                                            are related to the output as indicators. When the correlation analysis is
-                                            complete, we reduce the variables that are statistically irrelevant with the
-                                            output. If the correlations among indicators are high, this indicates the
-                                            indicators are interacting with each other. To see how much an indicator
-                                            influences the output, we need to carry out weight calculation for the
-                                            indicators. To see how indicators interact with each other, we need to carry
-                                            out network analysis. For simplicity, we can also group the correlated
-                                            indicators so that the new indicators can be viewed as irrelevant
-                                            statistically. Grouping the indicators requires clustering analysis, and
-                                            within each cluster, the weight should be calculated to synthesize an
-                                            output. We will discuss the clustering methods in <a href="#sec-5">Section
-                                                5</a>, weight calculation in <a href="#sec-6">Section 6</a>.
+
                                         </div>
                                         <h3>
                                             Pearson Correlation Coefficient
@@ -2571,6 +2611,21 @@
 
                                     <section id="sec-6" data-type="introduction">
                                         <h2>
+                                            Network Analysis
+                                        </h2>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        <h3>
+
+                                        </h3>
+                                        <div role="paragraph">
+
+                                        </div>
+                                    </section>
+
+                                    <section id="sec-7" data-type="introduction">
+                                        <h2>
                                             Weight Determination
                                         </h2>
                                         <div role="paragraph">
@@ -2584,17 +2639,12 @@
                                         </div>
                                     </section>
 
-                                    <section id="sec-7" data-type="introduction">
+                                    <section id="sec-8" data-type="introduction">
                                         <h2>
                                             Tendency Estimation
                                         </h2>
                                         <div role="paragraph">
-                                            After applying the analysis approaches above, we are now able to analyze the
-                                            status of a data-based system. For different systems, the way forward
-                                            parted. For time-sensitive systems, the way forward is to estimate the
-                                            developing tendency forward through time. For relationship-sensitive
-                                            systems, the way forward is to determine causal relationships through
-                                            correlation. In this section, we discuss the estimation tendency.
+                                            In this section, we discuss the estimation tendency.
                                         </div>
                                         <h3>
 
@@ -2604,7 +2654,7 @@
                                         </div>
                                     </section>
 
-                                    <section id="sec-8" data-type="introduction">
+                                    <section id="sec-9" data-type="introduction">
                                         <h2>
                                             Causality Determination
                                         </h2>
@@ -2619,7 +2669,7 @@
                                         </div>
                                     </section>
 
-                                    <section id="sec-9" data-type="introduction">
+                                    <section id="sec-10" data-type="introduction">
                                         <h2>
                                             Error and Correction
                                         </h2>
