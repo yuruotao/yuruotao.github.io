@@ -1362,6 +1362,10 @@
                                                     </mrow>
                                                 </semantics>
                                             </math>
+                                            <br><b>Weighted Correlation Network Analysis</b>: a widely used data mining
+                                            method especially for studying biological networks based on pairwise
+                                            correlations between variables;
+                                            <br><b></b>
 
 
 
@@ -1631,7 +1635,7 @@
                                                                             <semantics>
                                                                                 <mrow>
                                                                                     <mi>m</mi>
-                                                                                    <mi>a</mi>
+                                                                                    <mi>e</mi>
                                                                                     <mi>d</mi>
                                                                                     <mo stretchy='false'>(</mo>
                                                                                     <mi>x</mi>
@@ -2066,8 +2070,318 @@
                                             Biweight Midcorrelation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>: a median-based measure of similarity between samples;
+                                            <b>Usage</b>: a median-based measure of similarity between samples, useful
+                                            in gene expression profile;
                                             <br><b>Range</b>:
+                                            <br><b>Prerequisites</b>:
+                                            <ol>
+                                                <li>
+
+                                                </li>
+                                                <li>
+
+                                                </li>
+                                            </ol>
+                                            <b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>b</mi>
+                                                        <mi>i</mi>
+                                                        <mi>c</mi>
+                                                        <mi>o</mi>
+                                                        <mi>r</mi>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mi>x</mi>
+                                                        <mo>,</mo>
+                                                        <mi>y</mi>
+                                                        <mo stretchy='false'>)</mo>
+                                                        <mo>=</mo>
+                                                        <mstyle displaystyle='true'>
+                                                            <munderover>
+                                                                <mo>&#x2211;</mo>
+                                                                <mrow>
+                                                                    <mi>i</mi>
+                                                                    <mo>=</mo>
+                                                                    <mn>1</mn>
+                                                                </mrow>
+                                                                <mi>n</mi>
+                                                            </munderover>
+                                                            <mrow>
+                                                                <mover accent='true'>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>x</mi>
+                                                                            <mi>i</mi>
+                                                                        </msub>
+                                                                    </mrow>
+                                                                    <mo stretchy='true'>&#x02DC;</mo>
+                                                                </mover>
+                                                                <mover accent='true'>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>y</mi>
+                                                                            <mi>i</mi>
+                                                                        </msub>
+                                                                    </mrow>
+                                                                    <mo stretchy='true'>&#x02DC;</mo>
+                                                                </mover>
+                                                            </mrow>
+                                                        </mstyle>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            where
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mtable equalrows='true' equalcolumns='true'>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <mover accent='true'>
+                                                                            <mrow>
+                                                                                <msub>
+                                                                                    <mi>a</mi>
+                                                                                    <mi>i</mi>
+                                                                                </msub>
+                                                                            </mrow>
+                                                                            <mo stretchy='true'>&#x02DC;</mo>
+                                                                        </mover>
+                                                                        <mo>=</mo>
+                                                                        <mfrac>
+                                                                            <mrow>
+                                                                                <mo stretchy='false'>(</mo>
+                                                                                <msub>
+                                                                                    <mi>a</mi>
+                                                                                    <mi>i</mi>
+                                                                                </msub>
+                                                                                <mo>&#x2212;</mo>
+                                                                                <mi>m</mi>
+                                                                                <mi>e</mi>
+                                                                                <mi>d</mi>
+                                                                                <mo stretchy='false'>(</mo>
+                                                                                <mi>a</mi>
+                                                                                <mo stretchy='false'>)</mo>
+                                                                                <mo stretchy='false'>)</mo>
+                                                                                <msubsup>
+                                                                                    <mi>w</mi>
+                                                                                    <mi>i</mi>
+                                                                                    <mrow>
+                                                                                        <mo stretchy='false'>(</mo>
+                                                                                        <mi>a</mi>
+                                                                                        <mo stretchy='false'>)</mo>
+                                                                                    </mrow>
+                                                                                </msubsup>
+                                                                            </mrow>
+                                                                            <mrow>
+                                                                                <msqrt>
+                                                                                    <mrow>
+                                                                                        <msup>
+                                                                                            <mrow>
+                                                                                                <mstyle
+                                                                                                    displaystyle='true'>
+                                                                                                    <munderover>
+                                                                                                        <mo>&#x2211;
+                                                                                                        </mo>
+                                                                                                        <mrow>
+                                                                                                            <mi>i</mi>
+                                                                                                            <mo>=</mo>
+                                                                                                            <mn>1</mn>
+                                                                                                        </mrow>
+                                                                                                        <mi>n</mi>
+                                                                                                    </munderover>
+                                                                                                    <mrow>
+                                                                                                        <mfenced
+                                                                                                            close="]"
+                                                                                                            open="[">
+                                                                                                            <mrow>
+                                                                                                                <mo
+                                                                                                                    stretchy='false'>
+                                                                                                                    (
+                                                                                                                </mo>
+                                                                                                                <msub>
+                                                                                                                    <mi>a
+                                                                                                                    </mi>
+                                                                                                                    <mi>i
+                                                                                                                    </mi>
+                                                                                                                </msub>
+                                                                                                                <mo>&#x2212;
+                                                                                                                </mo>
+                                                                                                                <mi>m
+                                                                                                                </mi>
+                                                                                                                <mi>e
+                                                                                                                </mi>
+                                                                                                                <mi>d
+                                                                                                                </mi>
+                                                                                                                <mo
+                                                                                                                    stretchy='false'>
+                                                                                                                    (
+                                                                                                                </mo>
+                                                                                                                <mi>a
+                                                                                                                </mi>
+                                                                                                                <mo
+                                                                                                                    stretchy='false'>
+                                                                                                                    )
+                                                                                                                </mo>
+                                                                                                                <mo
+                                                                                                                    stretchy='false'>
+                                                                                                                    )
+                                                                                                                </mo>
+                                                                                                                <msubsup>
+                                                                                                                    <mi>w
+                                                                                                                    </mi>
+                                                                                                                    <mi>i
+                                                                                                                    </mi>
+                                                                                                                    <mrow>
+                                                                                                                        <mo
+                                                                                                                            stretchy='false'>
+                                                                                                                            (
+                                                                                                                        </mo>
+                                                                                                                        <mi>a
+                                                                                                                        </mi>
+                                                                                                                        <mo
+                                                                                                                            stretchy='false'>
+                                                                                                                            )
+                                                                                                                        </mo>
+                                                                                                                    </mrow>
+                                                                                                                </msubsup>
+                                                                                                            </mrow>
+                                                                                                        </mfenced>
+                                                                                                    </mrow>
+                                                                                                </mstyle>
+                                                                                            </mrow>
+                                                                                            <mn>2</mn>
+                                                                                        </msup>
+                                                                                    </mrow>
+                                                                                </msqrt>
+                                                                            </mrow>
+                                                                        </mfrac>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <msubsup>
+                                                                            <mi>w</mi>
+                                                                            <mi>i</mi>
+                                                                            <mrow>
+                                                                                <mo stretchy='false'>(</mo>
+                                                                                <mi>a</mi>
+                                                                                <mo stretchy='false'>)</mo>
+                                                                            </mrow>
+                                                                        </msubsup>
+                                                                        <mo>=</mo>
+                                                                        <msup>
+                                                                            <mrow>
+                                                                                <mo stretchy='false'>(</mo>
+                                                                                <mn>1</mn>
+                                                                                <mo>&#x2212;</mo>
+                                                                                <msubsup>
+                                                                                    <mi>u</mi>
+                                                                                    <mi>i</mi>
+                                                                                    <mn>2</mn>
+                                                                                </msubsup>
+                                                                                <mo stretchy='false'>)</mo>
+                                                                            </mrow>
+                                                                            <mn>2</mn>
+                                                                        </msup>
+                                                                        <mi>I</mi>
+                                                                        <mo stretchy='false'>(</mo>
+                                                                        <mn>1</mn>
+                                                                        <mo>&#x2212;</mo>
+                                                                        <mfenced close="|" open="|">
+                                                                            <mrow>
+                                                                                <msub>
+                                                                                    <mi>u</mi>
+                                                                                    <mi>i</mi>
+                                                                                </msub>
+                                                                            </mrow>
+                                                                        </mfenced>
+                                                                        <mo stretchy='false'>)</mo>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
+                                                            <mtr>
+                                                                <mtd>
+                                                                    <mrow>
+                                                                        <msub>
+                                                                            <mi>u</mi>
+                                                                            <mi>i</mi>
+                                                                        </msub>
+                                                                        <mo>=</mo>
+                                                                        <mfrac>
+                                                                            <mrow>
+                                                                                <msub>
+                                                                                    <mi>a</mi>
+                                                                                    <mi>i</mi>
+                                                                                </msub>
+                                                                                <mo>&#x2212;</mo>
+                                                                                <mi>m</mi>
+                                                                                <mi>e</mi>
+                                                                                <mi>d</mi>
+                                                                                <mo stretchy='false'>(</mo>
+                                                                                <mi>a</mi>
+                                                                                <mo stretchy='false'>)</mo>
+                                                                            </mrow>
+                                                                            <mrow>
+                                                                                <mn>9</mn>
+                                                                                <mi>m</mi>
+                                                                                <mi>a</mi>
+                                                                                <mi>d</mi>
+                                                                                <mo stretchy='false'>(</mo>
+                                                                                <mi>a</mi>
+                                                                                <mo stretchy='false'>)</mo>
+                                                                            </mrow>
+                                                                        </mfrac>
+                                                                    </mrow>
+                                                                </mtd>
+                                                            </mtr>
+
+                                                        </mtable>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+
+
+                                            <div
+                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                <span
+                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                <h2 class="my-0"><span class="mr-2">Biweight Midcorrelation</span>
+                                                </h2>
+                                                <span class="text-gray text-xxs">
+                                                    hello
+                                                </span>
+                                                <div class="mt-2">
+                                                    <p></p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 5 -->
+                                        <h3>
+                                            Distance Correlation
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: measure the dependence between two paired random vectors of
+                                            arbitrary, not necessarily equal, dimension, both linear and nonlinear
+                                            association are measured;
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mo stretchy='false'>[</mo>
+                                                        <mn>0</mn>
+                                                        <mo>,</mo>
+                                                        <mn>1</mn>
+                                                        <mo stretchy='false'>]</mo>
+                                                    </mrow>
+
+                                                </semantics>
+                                            </math>
+
                                             <br><b>Prerequisites</b>:
                                             <ol>
                                                 <li>
@@ -2084,8 +2398,7 @@
                                                 class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
                                                 <span
                                                     class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                        Coefficient</span>
+                                                <h2 class="my-0"><span class="mr-2">Distance Correlation</span>
                                                 </h2>
                                                 <span class="text-gray text-xxs">
                                                     hello
