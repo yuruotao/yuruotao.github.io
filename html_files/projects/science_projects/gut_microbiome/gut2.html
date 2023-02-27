@@ -1292,17 +1292,7 @@
                                             Statistics Terminologies
                                         </h2>
                                         <div role="paragraph">
-                                            <b>Null Hypothesis</b>: the claim that no relationship exists between two
-                                            sets of data or variables being analyzed;
-                                            <br><b>Type 1 Error</b>: the mistaken rejection of a null hypothesis as the
-                                            result of a test procedure (False Positive);
-                                            <br><b>Type 2 Error</b>: the mistaken failure to reject the null hypothesis
-                                            as the result of a test procedure (False Negative);
-                                            <br><b>Covariance</b>: a measure of the joint variability of two random
-                                            variables, display the tendency in the linear relationship between the
-                                            variables;
-                                            <br><b></b>
-                                            <br><b>Data Type</b>:
+                                            <b>Data Type</b>:
                                             <ol>
                                                 <li>
                                                     Quantitative:
@@ -1328,6 +1318,53 @@
                                                 </li>
 
                                             </ol>
+                                            <b>Null Hypothesis</b>: the claim that no relationship exists between two
+                                            sets of data or variables being analyzed;
+                                            <br><b>Type 1 Error</b>: the mistaken rejection of a null hypothesis as the
+                                            result of a test procedure (False Positive);
+                                            <br><b>Type 2 Error</b>: the mistaken failure to reject the null hypothesis
+                                            as the result of a test procedure (False Negative);
+                                            <br><b>Covariance</b>: a measure of the joint variability of two random
+                                            variables, display the tendency in the linear relationship between the
+                                            variables;
+                                            <br><b>Rank Correlation</b>: any of several statistics that measure an
+                                            ordinal association;
+                                            <br><b>Median Absolute Deviation</b>: a measure of the variability of a
+                                            univariate sample of quantitative data;
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>M</mi>
+                                                        <mi>A</mi>
+                                                        <mi>D</mi>
+                                                        <mo>=</mo>
+                                                        <mi>m</mi>
+                                                        <mi>e</mi>
+                                                        <mi>d</mi>
+                                                        <mi>i</mi>
+                                                        <mi>a</mi>
+                                                        <mi>n</mi>
+                                                        <mo stretchy='false'>(</mo>
+                                                        <mfenced close="|" open="|">
+                                                            <mrow>
+                                                                <msub>
+                                                                    <mi>x</mi>
+                                                                    <mi>i</mi>
+                                                                </msub>
+                                                                <mo>&#x2212;</mo>
+                                                                <mover accent='true'>
+                                                                    <mi>x</mi>
+                                                                    <mo stretchy='true'>&#x02DC;</mo>
+                                                                </mover>
+                                                            </mrow>
+                                                        </mfenced>
+                                                        <mo stretchy='false'>)</mo>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+
+
+
                                         </div>
 
 
@@ -1542,8 +1579,80 @@
                                                                         The mean of sample A
                                                                     </td>
                                                                 </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <mi>R</mi>
+                                                                                    <mo stretchy='false'>(</mo>
+                                                                                    <mo stretchy='false'>)</mo>
+                                                                                </mrow>
+
+                                                                            </semantics>
+                                                                        </math>
+
+
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The rank function that converts a value to its
+                                                                        corresponding ranking
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <mover accent='true'>
+                                                                                        <mi>x</mi>
+                                                                                        <mo stretchy='true'>&#x02DC;
+                                                                                        </mo>
+                                                                                    </mover>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+
+
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The median absolute deviation of dataset x
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <mi>m</mi>
+                                                                                    <mi>a</mi>
+                                                                                    <mi>d</mi>
+                                                                                    <mo stretchy='false'>(</mo>
+                                                                                    <mi>x</mi>
+                                                                                    <mo stretchy='false'>)</mo>
+                                                                                </mrow>
+
+                                                                            </semantics>
+                                                                        </math>
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The median of dataset x
+                                                                    </td>
+                                                                </tr>
+
+
 
                                                             </tbody>
+
+
                                                         </table>
                                                     </div>
 
@@ -1729,7 +1838,7 @@
                                                 </semantics>
                                             </math>
 
-                                            <br>
+
                                             <div
                                                 class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
                                                 <span
@@ -1747,6 +1856,247 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- 2 -->
+                                        <h3>
+                                            Spearman's Rank Correlation Coefficient
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: assess how well the relationship between two ordinal variables
+                                            can be described using a monotonic function;
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mfenced close="]" open="[">
+                                                            <mrow>
+                                                                <mo>&#x2212;</mo>
+                                                                <mn>1</mn>
+                                                                <mo>,</mo>
+                                                                <mn>1</mn>
+                                                            </mrow>
+                                                        </mfenced>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            <br><b>Prerequisites</b>:
+                                            <ol>
+                                                <li>
+                                                    The data must be at least ordinal;
+                                                </li>
+                                                <li>
+                                                    The scores on one variable should be monotonically related to the
+                                                    other variable;
+                                                </li>
+                                            </ol>
+                                            <b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>r</mi>
+                                                            <mi>s</mi>
+                                                        </msub>
+                                                        <mo>=</mo>
+                                                        <mfrac>
+                                                            <mrow>
+                                                                <mi>cov</mi>
+                                                                <mo stretchy='false'>(</mo>
+                                                                <mi>R</mi>
+                                                                <mo stretchy='false'>(</mo>
+                                                                <mi>X</mi>
+                                                                <mo stretchy='false'>)</mo>
+                                                                <mo>,</mo>
+                                                                <mi>R</mi>
+                                                                <mo stretchy='false'>(</mo>
+                                                                <mi>Y</mi>
+                                                                <mo stretchy='false'>)</mo>
+                                                                <mo stretchy='false'>)</mo>
+                                                            </mrow>
+                                                            <mrow>
+                                                                <msub>
+                                                                    <mi>&#x03C3;</mi>
+                                                                    <mrow>
+                                                                        <mi>R</mi>
+                                                                        <mo stretchy='false'>(</mo>
+                                                                        <mi>X</mi>
+                                                                        <mo stretchy='false'>)</mo>
+                                                                    </mrow>
+                                                                </msub>
+                                                                <msub>
+                                                                    <mi>&#x03C3;</mi>
+                                                                    <mrow>
+                                                                        <mi>R</mi>
+                                                                        <mo stretchy='false'>(</mo>
+                                                                        <mi>Y</mi>
+                                                                        <mo stretchy='false'>)</mo>
+                                                                    </mrow>
+                                                                </msub>
+                                                            </mrow>
+                                                        </mfrac>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+
+
+                                            <div
+                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                <span
+                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                <h2 class="my-0"><span class="mr-2">Spearman's Rank Correlation
+                                                        Coefficient</span>
+                                                </h2>
+                                                <span class="text-gray text-xxs">
+                                                    hello
+                                                </span>
+                                                <div class="mt-2">
+                                                    <p></p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 3 -->
+                                        <h3>
+                                            Kendall Rank Correlation Coefficient
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: measure the ordinal association between two measured
+                                            quantities, often used to establish whether two variables may be regarded as
+                                            statistically dependent;
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mfenced close="]" open="[">
+                                                            <mrow>
+                                                                <mo>&#x2212;</mo>
+                                                                <mn>1</mn>
+                                                                <mo>,</mo>
+                                                                <mn>1</mn>
+                                                            </mrow>
+                                                        </mfenced>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            <br><b>Prerequisites</b>:
+                                            <ol>
+                                                <li>
+                                                    The data must be ordinal or continuous;
+                                                </li>
+                                                <li>
+                                                    The scores on one variable should be monotonically related to the
+                                                    other variable;
+                                                </li>
+                                            </ol>
+                                            <b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mi>&#x03C4;</mi>
+                                                        <mo>=</mo>
+                                                        <mfrac>
+                                                            <mn>2</mn>
+                                                            <mrow>
+                                                                <mi>n</mi>
+                                                                <mo stretchy='false'>(</mo>
+                                                                <mi>n</mi>
+                                                                <mo>&#x2212;</mo>
+                                                                <mn>1</mn>
+                                                                <mo stretchy='false'>)</mo>
+                                                            </mrow>
+                                                        </mfrac>
+                                                        <mstyle displaystyle='true'>
+                                                            <munder>
+                                                                <mo>&#x2211;</mo>
+                                                                <mrow>
+                                                                    <mi>i</mi>
+                                                                    <mo>&#x003C;</mo>
+                                                                    <mi>j</mi>
+                                                                </mrow>
+                                                            </munder>
+                                                            <mrow>
+                                                                <mi>sgn</mi>
+                                                                <mo stretchy='false'>(</mo>
+                                                                <msub>
+                                                                    <mi>x</mi>
+                                                                    <mi>i</mi>
+                                                                </msub>
+                                                                <mo>&#x2212;</mo>
+                                                                <msub>
+                                                                    <mi>x</mi>
+                                                                    <mi>j</mi>
+                                                                </msub>
+                                                                <mo stretchy='false'>)</mo>
+                                                                <mi>sgn</mi>
+                                                                <mo stretchy='false'>(</mo>
+                                                                <msub>
+                                                                    <mi>y</mi>
+                                                                    <mi>i</mi>
+                                                                </msub>
+                                                                <mo>&#x2212;</mo>
+                                                                <msub>
+                                                                    <mi>y</mi>
+                                                                    <mi>j</mi>
+                                                                </msub>
+                                                                <mo stretchy='false'>)</mo>
+                                                            </mrow>
+                                                        </mstyle>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+
+
+                                            <div
+                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                <span
+                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                <h2 class="my-0"><span class="mr-2">Kendall Rank Correlation
+                                                        Coefficient</span>
+                                                </h2>
+                                                <span class="text-gray text-xxs">
+                                                    hello
+                                                </span>
+                                                <div class="mt-2">
+                                                    <p></p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 4 -->
+                                        <h3>
+                                            Biweight Midcorrelation
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: a median-based measure of similarity between samples;
+                                            <br><b>Range</b>:
+                                            <br><b>Prerequisites</b>:
+                                            <ol>
+                                                <li>
+
+                                                </li>
+                                                <li>
+
+                                                </li>
+                                            </ol>
+                                            <b>Definition</b>:
+
+
+                                            <div
+                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                <span
+                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                <h2 class="my-0"><span class="mr-2">Pearson Correlation
+                                                        Coefficient</span>
+                                                </h2>
+                                                <span class="text-gray text-xxs">
+                                                    hello
+                                                </span>
+                                                <div class="mt-2">
+                                                    <p></p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <!--  -->
                                         <h3>
                                             Pearson Correlation Coefficient
@@ -1765,7 +2115,7 @@
                                             </ol>
                                             <b>Definition</b>:
 
-                                            <br>
+
                                             <div
                                                 class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
                                                 <span
