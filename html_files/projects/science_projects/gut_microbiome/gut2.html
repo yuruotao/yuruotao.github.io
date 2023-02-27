@@ -27,7 +27,7 @@
 
             pdf_link: "/content_files/projects/science_prg/gut_microbiome/gut2",
             paper_state: "yes",
-            section_names: ["Statistics Terminologies", "Outline of Mathematical Model Establishment", "Data Preprocessing", "Correlation Analysis", "Clustering Analysis", "Weight Determination", "Tendency Estimation", "Causality Determination",],
+            section_names: ["Statistics Terminologies", "Outline of Mathematical Model Establishment", "Data Preprocessing", "Correlation Analysis", "Clustering Analysis", "Weight Determination", "Tendency Estimation", "Causality Determination", "Error and Correction",],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1682,6 +1682,7 @@
                                             Missing Values
                                         </h3>
                                         <div role="paragraph">
+
                                             <ol>
                                                 <li>
                                                     Delete the column containing missing value
@@ -1701,8 +1702,18 @@
                                                     same attribute
                                                 </li>
                                             </ol>
-                                            The
+                                            The common methods handling missing values are shown above, applicable for
+                                            general cases. However, to obtain higher quality data by preprocessing,
+                                            other approaches are of higher preference. We discuss them separately below.
+
                                         </div>
+
+                                        <div role="paragraph">
+                                            <b></b>
+                                            <br>
+                                        </div>
+
+
                                         <h3>
                                             Statistical Noise
                                         </h3>
@@ -1719,14 +1730,18 @@
                                                 </li>
                                             </ol>
                                         </div>
+
+
                                         <h3>
                                             Outlier Handling
                                         </h3>
                                         <div role="paragraph">
 
                                         </div>
+
+
                                         <h3>
-                                            Outlier Handling
+
                                         </h3>
                                         <div role="paragraph">
 
@@ -2578,6 +2593,25 @@
 
                                         </div>
                                     </section>
+
+                                    <section id="sec-9" data-type="introduction">
+                                        <h2>
+                                            Error and Correction
+                                        </h2>
+                                        <div role="paragraph">
+                                            For each method we apply, there would be error, such as confidence intervals
+                                            and round up. Analysing the sources of error and make corrections
+                                            accordingly is of huge significance.
+                                        </div>
+                                        <h3>
+
+                                        </h3>
+                                        <div role="paragraph">
+
+                                        </div>
+                                    </section>
+
+
 
 
 
