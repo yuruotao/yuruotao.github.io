@@ -1286,31 +1286,50 @@
                             <section id="bodymatter" data-extent="bodymatter" property="articleBody" typeof="Text">
                                 <div class="core-container">
 
+
                                     <section id="sec-1" data-type="introduction">
                                         <h2>
-                                            Correlation Analysis
+                                            Statistics Terminologies
                                         </h2>
-                                        <h3>
-
-                                        </h3>
                                         <div role="paragraph">
-                                            The purpose of conducting correlation analysis is usually for something
-                                            further, usually causal analysis. Due to the vast amount of variables in the
-                                            real
-                                            world, correlation analysis is utilized everywhere as the previous step of
-                                            establishing more detailed, causal relationships. This can be hugely
-                                            beneficial since it eliminates the variable amount of interest drastically.
-                                            For instance, by conducting the correlation between the factors and the
-                                            disease, one can determine the risk factors of the disease and take measures
-                                            accordingly.
-                                            The magic lies in the statistics. The problem to answer is how do we define
-                                            the tightness of
-                                            relationship between variables. Based on diversed definitions and
-                                            assumptions, many correlation coefficients are defined and utilized in
-                                            multiple disciplines. It is of great importance to summarize each
-                                            statistic's assumption, definition, and utilization. Moreover, we also
-                                            provide the code for realization.
+                                            <b>Null Hypothesis</b>: the claim that no relationship exists between two
+                                            sets of data or variables being analyzed;
+                                            <br><b>Type 1 Error</b>: the mistaken rejection of a null hypothesis as the
+                                            result of a test procedure (False Positive);
+                                            <br><b>Type 2 Error</b>: the mistaken failure to reject the null hypothesis
+                                            as the result of a test procedure (False Negative);
+                                            <br><b>Covariance</b>: a measure of the joint variability of two random
+                                            variables, display the tendency in the linear relationship between the
+                                            variables;
+                                            <br><b></b>
+                                            <br><b>Data Type</b>:
+                                            <ol>
+                                                <li>
+                                                    Quantitative:
+                                                    <ul>
+                                                        <li>
+                                                            Discrete
+                                                        </li>
+                                                        <li>
+                                                            Continuous
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    Qualitative:
+                                                    <ul>
+                                                        <li>
+                                                            Ordinal
+                                                        </li>
+                                                        <li>
+                                                            Nominal
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ol>
                                         </div>
+
 
 
 
@@ -1318,7 +1337,7 @@
 
                                     <section id="sec-2" data-type="introduction">
                                         <h2>
-                                            Distance Definition
+                                            Outline of Mathematical Model Establishment
                                         </h2>
                                         <h3>
 
@@ -1330,7 +1349,7 @@
 
                                     <section id="sec-3" data-type="introduction">
                                         <h2>
-                                            Clustering Analysis
+                                            Data Preprocessing
                                         </h2>
                                         <h3>
 
@@ -1342,13 +1361,426 @@
 
                                     <section id="sec-4" data-type="introduction">
                                         <h2>
-
+                                            Correlation Analysis
                                         </h2>
-                                        <h3>
+                                        <!-- notation table -->
+                                        <div class="figure-wrap">
+                                            <figure id="T1" class="table">
+                                                <div class="table-wrap">
+                                                    <div class="collapsible-wrapper" aria-expanded="true">
+                                                        <table>
+                                                            <thead>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Symbol</b>
+                                                                    </th>
+                                                                    <th data-xml-align="center" scope="col">
+                                                                        <b>Description</b>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
 
-                                        </h3>
+                                                            <tbody>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mi>n</mi>
+
+                                                                            </semantics>
+                                                                        </math>
+
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The total number within a sample
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+
+
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <msubsup>
+                                                                                        <mi>x</mi>
+                                                                                        <mi>i</mi>
+                                                                                        <mo>&#x0027;</mo>
+                                                                                    </msubsup>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+
+
+                                                                        </math>
+
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The i-th individual's raw data from group X
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <msubsup>
+                                                                                        <mi>y</mi>
+                                                                                        <mi>i</mi>
+                                                                                        <mo>&#x0027;</mo>
+                                                                                    </msubsup>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The i-th individual's raw data from group Y
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <msub>
+                                                                                        <mi>x</mi>
+                                                                                        <mi>i</mi>
+                                                                                    </msub>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The preprocessed i-th individual's data from
+                                                                        group X
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <msub>
+                                                                                        <mi>y</mi>
+                                                                                        <mi>i</mi>
+                                                                                    </msub>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+
+                                                                    </th>
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The preprocessed i-th individual's data from
+                                                                        group Y
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <msub>
+                                                                                        <mi>&#x03C3;</mi>
+                                                                                        <mi>I</mi>
+                                                                                    </msub>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The standard deviation of population I
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <msub>
+                                                                                        <mi>&#x03BC;</mi>
+                                                                                        <mi>I</mi>
+                                                                                    </msub>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The mean of population I
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                                <mrow>
+                                                                                    <mover accent='true'>
+                                                                                        <mi>a</mi>
+                                                                                        <mo stretchy='true'>&#x00AF;
+                                                                                        </mo>
+                                                                                    </mover>
+                                                                                </mrow>
+                                                                            </semantics>
+                                                                        </math>
+
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The mean of sample A
+                                                                    </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                                <figcaption>
+
+
+                                                    <div class="caption"><span class="heading">Table 1</span>. The
+                                                        notation table.</div>
+
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">
+
+                                                        </div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+
+                                            <a href="#T1" class="open-in-viewer btn btn-dark figure-pop-btn"
+                                                data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
+                                        </div>
                                         <div role="paragraph">
 
+                                        </div>
+                                        <h3>
+                                            Pearson Correlation Coefficient
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: measure of linear correlation between two sets of data;
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mfenced close="]" open="[">
+                                                            <mrow>
+                                                                <mo>&#x2212;</mo>
+                                                                <mn>1</mn>
+                                                                <mo>,</mo>
+                                                                <mn>1</mn>
+                                                            </mrow>
+                                                        </mfenced>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+
+                                            <br><b>Prerequisites</b>:
+                                            <ol>
+                                                <li>
+                                                    Variables are on an interval or ratio level of measurement;
+                                                </li>
+                                                <li>
+                                                    Data from both variables follow normal distributions;
+                                                </li>
+                                                <li>
+                                                    Linear relationship is expected between the two variables;
+                                                </li>
+                                            </ol>
+                                            <b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                    <mrow>
+                                                        <msub>
+                                                            <mi>r</mi>
+                                                            <mrow>
+                                                                <mi>X</mi>
+                                                                <mo>,</mo>
+                                                                <mi>Y</mi>
+                                                            </mrow>
+                                                        </msub>
+                                                        <mo>=</mo>
+                                                        <mfrac>
+                                                            <mrow>
+                                                                <mstyle displaystyle='true'>
+                                                                    <munderover>
+                                                                        <mo>&#x2211;</mo>
+                                                                        <mrow>
+                                                                            <mi>i</mi>
+                                                                            <mo>=</mo>
+                                                                            <mn>1</mn>
+                                                                        </mrow>
+                                                                        <mi>n</mi>
+                                                                    </munderover>
+                                                                    <mrow>
+                                                                        <mo stretchy='false'>(</mo>
+                                                                        <msub>
+                                                                            <mi>x</mi>
+                                                                            <mi>i</mi>
+                                                                        </msub>
+                                                                        <mo>&#x2212;</mo>
+                                                                        <mover accent='true'>
+                                                                            <mi>x</mi>
+                                                                            <mo stretchy='true'>&#x00AF;</mo>
+                                                                        </mover>
+                                                                        <mo stretchy='false'>)</mo>
+                                                                        <mo stretchy='false'>(</mo>
+                                                                        <msub>
+                                                                            <mi>y</mi>
+                                                                            <mi>i</mi>
+                                                                        </msub>
+                                                                        <mo>&#x2212;</mo>
+                                                                        <mover accent='true'>
+                                                                            <mi>y</mi>
+                                                                            <mo stretchy='true'>&#x00AF;</mo>
+                                                                        </mover>
+                                                                        <mo stretchy='false'>)</mo>
+                                                                    </mrow>
+                                                                </mstyle>
+                                                            </mrow>
+                                                            <mrow>
+                                                                <msqrt>
+                                                                    <mrow>
+                                                                        <mstyle displaystyle='true'>
+                                                                            <munderover>
+                                                                                <mo>&#x2211;</mo>
+                                                                                <mrow>
+                                                                                    <mi>i</mi>
+                                                                                    <mo>=</mo>
+                                                                                    <mn>1</mn>
+                                                                                </mrow>
+                                                                                <mi>n</mi>
+                                                                            </munderover>
+                                                                            <mrow>
+                                                                                <msup>
+                                                                                    <mrow>
+                                                                                        <mo stretchy='false'>(</mo>
+                                                                                        <msub>
+                                                                                            <mi>x</mi>
+                                                                                            <mi>i</mi>
+                                                                                        </msub>
+                                                                                        <mo>&#x2212;</mo>
+                                                                                        <mover accent='true'>
+                                                                                            <mi>x</mi>
+                                                                                            <mo stretchy='true'>&#x00AF;
+                                                                                            </mo>
+                                                                                        </mover>
+                                                                                        <mo stretchy='false'>)</mo>
+                                                                                    </mrow>
+                                                                                    <mn>2</mn>
+                                                                                </msup>
+                                                                            </mrow>
+                                                                        </mstyle>
+                                                                    </mrow>
+                                                                </msqrt>
+                                                                <msqrt>
+                                                                    <mrow>
+                                                                        <mstyle displaystyle='true'>
+                                                                            <munderover>
+                                                                                <mo>&#x2211;</mo>
+                                                                                <mrow>
+                                                                                    <mi>i</mi>
+                                                                                    <mo>=</mo>
+                                                                                    <mn>1</mn>
+                                                                                </mrow>
+                                                                                <mi>n</mi>
+                                                                            </munderover>
+                                                                            <mrow>
+                                                                                <msup>
+                                                                                    <mrow>
+                                                                                        <mo stretchy='false'>(</mo>
+                                                                                        <msub>
+                                                                                            <mi>y</mi>
+                                                                                            <mi>i</mi>
+                                                                                        </msub>
+                                                                                        <mo>&#x2212;</mo>
+                                                                                        <mover accent='true'>
+                                                                                            <mi>y</mi>
+                                                                                            <mo stretchy='true'>&#x00AF;
+                                                                                            </mo>
+                                                                                        </mover>
+                                                                                        <mo stretchy='false'>)</mo>
+                                                                                    </mrow>
+                                                                                    <mn>2</mn>
+                                                                                </msup>
+                                                                            </mrow>
+                                                                        </mstyle>
+                                                                    </mrow>
+                                                                </msqrt>
+                                                            </mrow>
+                                                        </mfrac>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+
+                                            <br>
+                                            <div
+                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                <span
+                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                <h2 class="my-0"><span class="mr-2">Pearson Correlation
+                                                        Coefficient</span>
+                                                </h2>
+                                                <span class="text-gray text-xxs text-uppercase">
+                                                    R
+                                                </span>
+                                                <div class="mt-2">
+
+                                                    <p></p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <h3>
+                                            Pearson Correlation Coefficient
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>:
+                                            <br><b>Range</b>:
+                                            <br><b>Prerequisites</b>:
+                                            <ol>
+                                                <li>
+
+                                                </li>
+                                                <li>
+
+                                                </li>
+                                            </ol>
+                                            <b>Definition</b>:
+
+                                            <br>
+                                            <div
+                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                <span
+                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                <h2 class="my-0"><span class="mr-2">Pearson Correlation
+                                                        Coefficient</span>
+                                                </h2>
+                                                <span class="text-gray text-xxs">
+                                                    hello
+                                                </span>
+                                                <div class="mt-2">
+                                                    <p></p>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </section>
 
