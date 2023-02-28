@@ -1366,8 +1366,14 @@
                                             <br><b>Weighted Correlation Network Analysis</b>: a widely used data mining
                                             method especially for studying biological networks based on pairwise
                                             correlations between variables;
+                                            <br><b>Imputation</b>: the process of replacing missing data with
+                                            substituted values;
+                                            <br><b>Identifiability</b>: a property which a model must satisfy for
+                                            precise inference to be possible;
                                             <br><b></b>
-
+                                            <br><b></b>
+                                            <br><b></b>
+                                            <br><b></b>
 
 
                                         </div>
@@ -1732,41 +1738,175 @@
                                         <div role="paragraph">
                                             Preprocessing the data is similar to estimating data with given knowledge.
                                             The common cases that require data preprocessing are missing values,
-                                            statistical noise,
+                                            statistical noise, and outliers handling. The procedures to be executed may
+                                            be able to tolerate these problems mentioned. However, in most cases, we
+                                            still need to process the data for higher quality of analysis and a more
+                                            consistent outcome.
                                         </div>
                                         <h3>
                                             Missing Values
                                         </h3>
                                         <div role="paragraph">
-
+                                            The methods for missing values can be categorized into 3 types:
                                             <ol>
                                                 <li>
-                                                    Delete the column containing missing value
+                                                    Imputation
+                                                    <ul>
+                                                        <li>Interpolation
+                                                            <ul>
+                                                                <li>
+                                                                    Fill in a global constant for all missing values
+                                                                </li>
+                                                                <li>
+                                                                    Fill the missing value manually with knowledge
+                                                                </li>
+                                                                <li>
+                                                                    Fill the missing value with the average of all other
+                                                                    values
+                                                                    within
+                                                                    the group
+                                                                </li>
+                                                                <li>
+                                                                    Fill the missing value with the average of all other
+                                                                    values
+                                                                    of the same attribute
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            Multivariate Imputation
+                                                        </li>
+                                                    </ul>
+
                                                 </li>
                                                 <li>
-                                                    Fill the missing value manually with knowledge
+                                                    Partial Deletion
+                                                    <ul>
+                                                        <li>
+                                                            Listwise Deletion
+                                                        </li>
+                                                        <li>
+                                                            Pairwise Deletion
+                                                        </li>
+                                                    </ul>
+
+
                                                 </li>
                                                 <li>
-                                                    Fill in a global constant for all missing values
-                                                </li>
-                                                <li>
-                                                    Fill the missing value with the average of all other values within
-                                                    the group
-                                                </li>
-                                                <li>
-                                                    Fill the missing value with the average of all other values of the
-                                                    same attribute
+                                                    Full Analysis
+                                                    <ul>
+                                                        <li>
+                                                            Generative approaches
+                                                            <ul>
+                                                                <li>
+                                                                    Expectation-maximization Algorithm
+                                                                </li>
+                                                                <li>
+                                                                    Full Information Maximum Likelihood Estimation
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            Discriminative approaches
+                                                            <ul>
+                                                                <li>
+                                                                    Max-margin classification of data with absent
+                                                                    features
+                                                                </li>
+                                                        </li>
+                                                    </ul>
+
                                                 </li>
                                             </ol>
-                                            The common methods handling missing values are shown above, applicable for
-                                            general cases. However, to obtain higher quality data by preprocessing,
-                                            other approaches are of higher preference. We discuss them separately below.
-
+                                            The common methods handling missing values are shown above. However, the
+                                            selection of the above methods is content-based. In general cases, for both
+                                            convenience for future analysis and maximum usage of information, the
+                                            interpolation is applied. Along with the above methods, we elaborate on
+                                            interpolation.
                                         </div>
 
                                         <div role="paragraph">
-                                            <b></b>
-                                            <br>
+                                            <!-- 1 -->
+                                            <h3>
+                                                Interpolation -
+                                            </h3>
+                                            <div role="paragraph">
+                                                <b>Usage</b>:
+
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+                                                <b>Effect</b>:
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+                                                <div
+                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                    <span
+                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
+                                                            Coefficient</span>
+                                                    </h2>
+                                                    <span class="text-gray text-xxs">
+                                                        hello
+                                                    </span>
+                                                    <div class="mt-2">
+                                                        <p></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--  -->
+                                            <h3>
+                                                Interpolation -
+                                            </h3>
+                                            <div role="paragraph">
+                                                <b>Usage</b>:
+
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+                                                <b>Effect</b>:
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+                                                <div
+                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                    <span
+                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
+                                                            Coefficient</span>
+                                                    </h2>
+                                                    <span class="text-gray text-xxs">
+                                                        hello
+                                                    </span>
+                                                    <div class="mt-2">
+                                                        <p></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
 
@@ -1774,6 +1914,10 @@
                                             Statistical Noise
                                         </h3>
                                         <div role="paragraph">
+                                            Statistical noise origins from the imbalance within the dataset, which would
+                                            lead to biased result, such as high accuracy along with high false-positive
+                                            rate. To cancel the effect of statistical noise, is to diminish the
+                                            imbalance within the dataset. The commonly used methods are listed below.
                                             <ol>
                                                 <li>
                                                     Data binning
@@ -1784,15 +1928,121 @@
                                                 <li>
                                                     Data smoothing with regression
                                                 </li>
+                                                <li>
+                                                    Up-sample Minority Class
+                                                </li>
+                                                <li>
+                                                    Down-sample Majority Class
+                                                </li>
+                                                <li>
+                                                    Cost-Sensitive Training
+                                                </li>
+                                                <li>
+                                                    Tree-based Algorithms
+                                                </li>
                                             </ol>
+
                                         </div>
+                                        <div role="paragraph">
+                                            <!-- 1 -->
+                                            <h3>
+                                                Interpolation -
+                                            </h3>
+                                            <div role="paragraph">
+                                                <b>Usage</b>:
+
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+                                                <b>Effect</b>:
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+                                                <div
+                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                    <span
+                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
+                                                            Coefficient</span>
+                                                    </h2>
+                                                    <span class="text-gray text-xxs">
+                                                        hello
+                                                    </span>
+                                                    <div class="mt-2">
+                                                        <p></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--  -->
+                                            <h3>
+                                                Interpolation -
+                                            </h3>
+                                            <div role="paragraph">
+                                                <b>Usage</b>:
+
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+                                                <b>Effect</b>:
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+                                                <div
+                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                    <span
+                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
+                                                            Coefficient</span>
+                                                    </h2>
+                                                    <span class="text-gray text-xxs">
+                                                        hello
+                                                    </span>
+                                                    <div class="mt-2">
+                                                        <p></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
 
 
                                         <h3>
                                             Outlier Handling
                                         </h3>
                                         <div role="paragraph">
+                                            There are various reasons that can lead to the occurence of outliers, such
+                                            as biased-sampling. The existence of outliers would affect the analysis
+                                            result dramatically in small-quantity datasets with average-based
+                                            approaches. We list the methods to suppress the effect of outliers while
+                                            preserving the information they provide below.
+                                            <ol>
+                                                <li>
 
+                                                </li>
+                                            </ol>
                                         </div>
 
 
@@ -1811,7 +2061,12 @@
                                         </h2>
 
                                         <div role="paragraph">
-
+                                            The core concept of correlation analysis is to measure the relationship
+                                            between data sets, especially how one variable changes affects the other
+                                            one. If the change in one variable cause little or no fluctuation in the
+                                            other one, it is likely that the two variables are not correlated. We will
+                                            introduce the coefficients used for measuring the correlation between
+                                            variables below.
                                         </div>
                                         <h3>
                                             Pearson Correlation Coefficient
