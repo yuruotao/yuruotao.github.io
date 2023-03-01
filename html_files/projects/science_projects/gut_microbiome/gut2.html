@@ -1731,6 +1731,35 @@
                                                 <span>Open in viewer</span>
                                             </a>
                                         </div>
+                                        <div role="paragraph">
+                                            Here we introduce some initialization code in R and Python.
+                                            <div
+                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
+                                                <span
+                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
+                                                <h2 class="my-0"><span class="mr-2">Initialization</span>
+                                                </h2>
+                                                <span class="text-gray text-xxs">
+                                                    Python
+                                                </span>
+                                                <div class="mt-2">
+                                                    <p>
+                                                        import numpy as np
+                                                        <br>import
+
+                                                    </p>
+                                                </div>
+                                                <span class="text-gray text-xxs">
+                                                    R
+                                                </span>
+                                                <div class="mt-2">
+                                                    <p></p>
+
+                                                </div>
+                                            </div>
+                                            raw_data = read_csv('data_file.csv')
+
+                                        </div>
                                     </section>
 
                                     <section id="sec-3" data-type="introduction">
@@ -1763,13 +1792,15 @@
                                                                     Fill the missing value manually with knowledge
                                                                 </li>
                                                                 <li>
-                                                                    Fill the missing value with the average of all other
+                                                                    Fill the missing value with the mean/median of all
+                                                                    other
                                                                     values
                                                                     within
                                                                     the group
                                                                 </li>
                                                                 <li>
-                                                                    Fill the missing value with the average of all other
+                                                                    Fill the missing value with the mean/median of all
+                                                                    other
                                                                     values
                                                                     of the same attribute
                                                                 </li>
@@ -1830,7 +1861,7 @@
                                         <div role="paragraph">
                                             <!-- 1 -->
                                             <h3>
-                                                Interpolation -
+                                                Interpolation - Fill in a constant
                                             </h3>
                                             <div role="paragraph">
                                                 <b>Usage</b>:
