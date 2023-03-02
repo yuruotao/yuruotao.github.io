@@ -1363,10 +1363,10 @@
                                                             微处理器：PowerPC，MC68000，MIPS，AMD，x86
                                                         </li>
                                                         <li>
-                                                            数字信号处理器（DSP）
+                                                            数字信号处理器（DSP）：处理数据信号的微处理器芯片
                                                         </li>
                                                         <li>
-                                                            微控制器（MCU）：集成在单个芯片的小型计算机
+                                                            微控制器（MCU）：集成在单个芯片的小型计算机，包含CPU与内存
                                                         </li>
                                                         <li>
                                                             片上系统（SoC）：集成电路加工工艺产物，高端嵌入式系统，可集成数字、模拟电路
@@ -1440,6 +1440,9 @@
                                             </ul>
                                             <b>IP核</b>：
                                             <ul>
+                                                <li>
+                                                    知识产权属于某相关团体的可复用设计单元（library）
+                                                </li>
                                                 <li>
                                                     核：完成并经过验证的集成电路
                                                 </li>
@@ -1672,21 +1675,21 @@
                                             <ul>
                                                 <li>
                                                     分类：
+
                                                     <ul>
-                                                        <ul>
-                                                            <li>
-                                                                局域网（LAN）：为一个单位所有，地理范围有限
-                                                                <br>使用专门铺设的传输介质进行联网和数据通信（主要用双绞线）
-                                                                <br>数据传输速率高，延迟时间短，误码率低
-                                                            </li>
-                                                            <li>
-                                                                城域网（MAN）
-                                                            </li>
-                                                            <li>
-                                                                广域网（WAN）
-                                                            </li>
-                                                        </ul>
+                                                        <li>
+                                                            局域网（LAN）：为一个单位所有，地理范围有限
+                                                            <br>使用专门铺设的传输介质进行联网和数据通信（主要用双绞线）
+                                                            <br>数据传输速率高，延迟时间短，误码率低
+                                                        </li>
+                                                        <li>
+                                                            城域网（MAN）
+                                                        </li>
+                                                        <li>
+                                                            广域网（WAN）
+                                                        </li>
                                                     </ul>
+
                                                 </li>
                                                 <li>
                                                     以太局域网：计算机网络的一种形式，以集线器或交换机为中心
@@ -2224,6 +2227,7 @@
                                                 <li>
                                                     CPSR为当前程序状态寄存器
                                                 </li>
+
                                                 <li>
                                                     R7-R0为公用的通用寄存器
                                                 </li>
@@ -2238,10 +2242,13 @@
                                         <li>
                                             R13，R14在User与SYS下为堆栈指针，程序链接寄存器，其他模式下有独特的标记方式
                                         </li>
+                                        <li>
+                                            SPSR为保存处理状态寄存器，在当前工作模式下保存处理状态
+                                        </li>
                                     </ul>
                                 </div>
                                 <h3>
-                                    状态寄存器
+                                    程序状态寄存器（CPSR）
                                 </h3>
                                 <div role="paragraph">
                                     <ul>
@@ -2453,12 +2460,1012 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <h3>
+                                    存储器
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+                                            32位ARM处理器支持字节、半字、字三种数据类型，字、半字需对齐（地址低2位为0）
+                                        </li>
+                                        <li>
+                                            存储字格式：
+                                            <ul>
+                                                <li>
+                                                    大端模式：32位数据字高字节存储在低地址，低字节存放在高地址
+                                                </li>
+                                                <li>
+                                                    小端模式：高字节存储在高地址
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            虚拟存储器：借助MMU，将系统中不同类型的存储器进行统一管理，通过地址映射，使需要运行在连续地
+                                            址空间的软件可运行在不连续的物理存储器中的技术
+
+                                        </li>
+                                        <li>
+                                            MMU：存储器管理单元
+                                            <ul>
+                                                <li>
+                                                    功能：虚拟地址到物理地址映射（页表，虚拟地址与物理地址的对应表）
+                                                    <br>存储器访问权限控制
+                                                </li>
+                                                <li>
+                                                    TLB：页表的高速缓存
+                                                </li>
+                                                <li>
+                                                    存储器访问顺序：
+                                                    <br>MMU先查找TLB中的转换表，若无，查找主存储器内的页表，若无，产生中断，OS进行处理
+                                                </li>
+                                                <li>
+                                                    MPU：存储器保护单元，可替代MMU管理存储器（段式）
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+                                    ARM指令：（每条指令均为32位）
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+                                            格式：OPCODE{CONDITION}{S} Rd, Rn {,OPR2}
+                                            <ul>
+                                                <li>
+                                                    {}中内容可省去，opcode、cond，S间无分隔符，{S}与Rd间用空格隔开
+                                                </li>
+                                                <li>
+                                                    <b>OPCODE</b>：指令的操作码/注记符（条件码）
+                                                </li>
+                                                <li>
+                                                    <b>{CONDITION}</b>：条件域
+                                                </li>
+                                                <li>
+                                                    <b>{S}</b>：指令执行时是否更新CPSR，有S时更新
+                                                </li>
+                                                <li>
+                                                    <b>Rd</b>：目的寄存器（任意通用寄存器）
+                                                </li>
+                                                <li>
+                                                    <b>Rn</b>：第一个源操作数（限制为任意通用寄存器）
+                                                </li>
+                                                <li>
+                                                    <b>OPR2</b>：第二个源操作数（寄存器、任意移位寄存器）
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            程序的启动从ARM指令集开始，进入异常转化为ARM状态
+                                        </li>
+                                        <li>
+                                            条件域：每条ARM指令包含4位条件码，位于指令的最高4位，共16种
+                                        </li>
+                                        <li>
+                                            操作数符号：
+                                            <ul>
+                                                <li>
+                                                    #：立即数符号
+                                                </li>
+                                                <li>
+                                                    0x：十六进制符号
+                                                </li>
+                                                <li>
+                                                    ！：更新基址寄存器符号
+                                                </li>
+                                                <li>
+                                                    ^：复制SPSR到CPSR符号
+                                                </li>
+                                                <li>
+                                                    -：寄存器列表范围符号，从…到…
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            寻址方式：
+                                            <ol>
+                                                <li>
+                                                    立即寻址：操作数本身在指令中给出（立即数以#为前缀）
+                                                </li>
+                                                <li>
+                                                    寄存器寻址：寄存器中的数值为操作数
+                                                </li>
+                                                <li>
+                                                    寄存器间接寻址：操作数存放
+                                                    <br>在存储器中，寄存器用[ ]作间接寻址
+                                                </li>
+                                                <li>
+                                                    基址加变址寻址：将基址寄存器中的内容与指令中给出的地址偏移量相加得到有效地址
+                                                </li>
+                                                <li>
+                                                    相对寻址：以PC当前值为基址，指令中地址标号为偏移量，相加得到有效地址
+                                                </li>
+                                                <li>
+                                                    堆栈寻址：递增堆栈：堆栈由低地址向高地址生成
+                                                </li>
+                                                <li>
+                                                    块拷贝寻址：多寄存器寻址，一条指令传送最多16个通用寄存器的值
+                                                </li>
+                                            </ol>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <h3>
+                                    ARM指令集
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+                                            数据处理类：
+                                            <ul>
+                                                <li>
+                                                    MOV{cond}{S} Rd, OPR2 ;数据传送，将OPR2值赋给Rd
+                                                </li>
+                                                <li>
+                                                    MVN{cond}{S} Rd, OPR2 ;取反传送，将OPR2取反后的值赋给Rd
+                                                </li>
+                                                <li>
+                                                    CMP{cond}{S} Rd, OPR2 ;数据比较，Rd-OPR2，改变CPSR中标志位
+                                                </li>
+                                                <li>
+                                                    CMN{cond}{S} Rd, OPR2 ;反值比较，Rd+OPR2，改变CPSR中标志位
+                                                </li>
+                                                <li>
+                                                    TST{cond}{S} Rd, OPR2 ;位测试，Rd AND OPR2，改变CPSR中标志位
+                                                </li>
+                                                <li>
+                                                    TEQ{cond}{S} Rd, OPR2 ;相等测试，Rd EOR OPR2，改变CPSR中标志位（同或）
+                                                </li>
+                                                <li>
+                                                    ADD{cond}{S} Rd, Rn, OPR2 ;加法，将Rn+OPR2的值赋给Rd
+                                                </li>
+                                                <li>
+                                                    ADC{cond}{S} Rd, Rn, OPR2 ;带进位加法，将Rn+OPR2+!C的值赋给Rd
+                                                </li>
+                                                <li>
+                                                    SUB{cond}{S} Rd, Rn, OPR2 ;减法，将Rn-OPR2的值赋给Rd
+                                                </li>
+                                                <li>
+                                                    SBC{cond}{S} Rd, Rn, OPR2 ;带借位减法，将Rn-OPR2-!C的值赋给Rd
+                                                </li>
+                                                <li>
+                                                    RSB{cond}{S} Rd, Rn, OPR2 ;反向减法，将-Rn-OPR2的值赋给Rd
+                                                </li>
+                                                <li>
+                                                    RSC{cond}{S} Rd, Rn, OPR2 ;带借位反向减法，将-Rn-OPR2-!C的值赋给Rd
+                                                </li>
+                                                <li>
+                                                    AND{cond}{S} Rd, Rn, OPR2 ;逻辑与
+                                                </li>
+                                                <li>
+                                                    ORR{cond}{S} Rd, Rn, OPR2 ;逻辑或
+                                                </li>
+                                                <li>
+                                                    EOR{cond}{S} Rd, Rn, OPR2 ;逻辑异或
+                                                </li>
+                                                <li>
+                                                    BIC{cond}{S} Rd, Rn, OPR2 ;位清除，将Rn AND NOT(OPR2)的值赋给Rd
+                                                </li>
+                                                <li>
+                                                    MUL{cond}{S} Rd, Rn, OPR2 ;32位乘法，将Rn*OPR2的结果赋给Rd
+                                                </li>
+                                                <li>
+                                                    MLA{cond}{S} Rd, Rn, OPR2, OPR3 ;32位乘加，将Rn*OPR2+OPR3的结果赋给Rd
+                                                </li>
+                                                <li>
+                                                    SMMUL{cond}{S} RdL, RdH, Rm, Rs
+                                                    ;64位有符号数乘法，将Rm*Rs的低32位赋给RdL，高32位赋给RdH
+                                                </li>
+                                                <li>
+                                                    SMLAL{cond}{S} RdL, RdH, Rm, Rs
+                                                    ;64位有符号数乘加，将Rm*Rs+RdL的低32位赋给RdL，高32位赋给RdH
+                                                </li>
+                                                <li>
+                                                    UMMUL{cond}{S} RdL, RdH, Rm, Rs
+                                                    ;64位无符号数乘法，将Rm*Rs的低32位赋给RdL，高32位赋给RdH
+                                                </li>
+                                                <li>
+                                                    UMLAL{cond}{S} RdL, RdH, Rm, Rs
+                                                    ;64位无符号数乘加，将Rm*Rs+RdL的低32位赋给RdL，高32位赋给RdH
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            程序状态寄存器访问指令：
+                                            <ul>
+                                                <li>
+                                                    MRS{cond}Rd, PSR ;PSR可为CPSR/SPSR，将程序状态寄存器中内容传送至Rd
+                                                </li>
+                                                <li>
+                                                    MRS{cond}PSR_FIELD, Rm ;将操作数内容传送至状态寄存器特定域，操作数可为通用寄存器/立即数
+                                                    <br>PSR[31:24]；条件标志位域，f
+                                                    <br>PSR[23:16]；状态位域，s
+                                                    <br>PSR[15:8]；扩展位域，x
+                                                    <br>PSR[7:0]；制位域，c
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            指令条件码：见<a href="#T4">表4</a>
+                                        </li>
+                                        <li>
+                                            分支指令：
+                                            <ul>
+                                                <li>
+                                                    B{cond}LABEL ;转移指令，跳转至LABEL处
+                                                </li>
+                                                <li>
+                                                    BX{cond}Rn ;带状态切换的转移指令，跳转到指令中所指定的由Rn与0xFFFFFFFE相与后的目标地址
+                                                    <br>目标地址处指令可为ARM/Thumb指令
+                                                </li>
+                                                <li>
+                                                    BL{cond}LABEL ;带返回的转移指令，跳转前，在R14中保存PC当前值
+                                                </li>
+                                                <li>
+                                                    BLX LABEL ;带返回与状态切换的转移指令，从ARM指令集跳转到指令中所指定的目标地址，并将处理器
+                                                    的工作状态由ARM切换到Thumb，并在R14中保存PC当前值
+
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            移位指令：Rm, OPSH#SHIFT
+                                            <ul>
+                                                <li>
+                                                    Rm：通用寄存器
+                                                </li>
+                                                <li>
+                                                    OPSH：移位操作符，LSL，ASL，LSR，ASR，ROR，RRX
+                                                </li>
+                                                <li>
+                                                    SHIFT：位移次数
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            加载/存储指令：
+                                            <ul>
+                                                <li>
+                                                    LDR/LDRB/LDRH ;从存储器中将32/8/16位的数据传送至目的寄存器（非32位，则高位清零）
+                                                </li>
+                                                <li>
+                                                    STR/STRB/STRH ;从源寄存器中将32/8/16位的数据传送至存储器
+                                                </li>
+                                                <li>
+                                                    LDM{cond}{TYPE}{!}, {^} ;将基址寄存器指示的一片连续存储器读到寄存器列表指示的多个存储器中
+                                                </li>
+                                                <li>
+                                                    STM ;将寄存器列表指示的多个寄存器的数据存储到由基址寄存器指示的一片连续存储器中
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="figure-wrap">
+                                    <figure id="T4" class="table">
+                                        <div class="table-wrap">
+                                            <div class="collapsible-wrapper" aria-expanded="true">
+                                                <table>
+                                                    <thead>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>指令条件码</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>判断条件</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>意义</b>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                EQ
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                Z=1
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                相等
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                NE
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                Z=0
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                不相等
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                CS
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                C=1
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                无符号大于等于
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                CC
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                C=0
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                无符号小于
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                MI
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                N=1
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                负值
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                PL
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                N=0
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                正值或0
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                VS
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                V=1
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                发生溢出
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                VC
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                V=0
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                无溢出
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                HI
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                C=1, Z=0
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                无符号大于
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                LS
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                C=0 / Z=1
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                无符号小于等于
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                GE
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                N=V
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                无符号大于等于
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                LT
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                N!=V
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                有符号小于
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                GT
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                N=V, Z=0
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                有符号大于
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                LE
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                N!=V / Z=0
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                有符号小于等于
+                                                            </td>
+                                                        </tr>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                AL
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                无
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                无条件
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Table 4</span>. ARM汇编语言指令条件码.
+                                            </div>
+
+                                            <div class="notes">
+                                                <div role="doc-footnote">
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+
+                                    <a href="#T4" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
+                                </div>
+                                <h3>
+                                    ARM伪指令
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+                                            伪指令：无相对应的操作码，一般与编译程序有关
+                                        </li>
+                                        <li>
+                                            ADR{cond}Rd, expr ;将相对偏移地址加载到通用寄存器
+                                        </li>
+                                        <li>
+                                            LDR{cond}Rd ;用于32位常数/地址的加载
+                                        </li>
+                                        <li>
+                                            NOP ;空操作
+                                        </li>
+                                        <li>
+                                            伪指令：无相对应的操作码，一般与编译程序有关
+                                            <ul>
+                                                <li>
+                                                    GBLA NAME；定义一个全局数值变量NAME，并初始化为0
+                                                </li>
+                                                <li>
+                                                    GBLL NAME；定义一个全局逻辑变量NAME，并初始化为F
+                                                </li>
+                                                <li>
+                                                    GBLS NAME；定义一个全局字符变量NAME，并初始化为空
+                                                </li>
+                                                <li>
+                                                    LCLA NAME；定义一个局部数值变量NAME，并初始化为0
+                                                </li>
+                                                <li>
+                                                    LCLL NAME；定义一个局部逻辑变量NAME，并初始化为F
+                                                </li>
+                                                <li>
+                                                    LCLS NAME；定义一个局部字符变量NAME，并初始化为空
+                                                </li>
+                                                <li>
+                                                    NAME SETA expr ;给一个数值变量赋值
+                                                </li>
+                                                <li>
+                                                    NAME SETL expr ;给一个逻辑变量赋值
+                                                </li>
+                                                <li>
+                                                    NAME SETS expr ;给一个字符变量赋值
+                                                </li>
+                                                <li>
+                                                    NAME RLIST expr ;给一个通用寄存器列表定义名称
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            数值定义伪指令：
+                                            <ul>
+                                                <li>
+                                                    LABEL DCB expr ;分配一片连续的字节存储单元并对数据初始化
+                                                </li>
+                                                <li>
+                                                    LABEL DCW expr ;分配一片连续的半字存储单元并对数据初始化
+                                                </li>
+                                                <li>
+                                                    LABEL DCD expr ;分配一片连续的字存储单元并对数据初始化
+                                                </li>
+                                                <li>
+                                                    LABEL DCQ expr ;分配一片连续的双字存储单元并对数据初始化
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            汇编控制伪指令：
+                                            <ul>
+                                                <li>
+                                                    IF expr
+                                                    <br>seg1
+                                                    <br>ELSE
+                                                    <br>seg2
+                                                    <br>ENDIF
+                                                </li>
+                                                <li>
+                                                    WHILE expr
+                                                    <br>seg1
+                                                    <br>WEND
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            其他伪指令：
+                                            <ul>
+                                                <li>
+                                                    CODE16/32 ;指示以下指令为Thumb/ARM指令代码
+                                                </li>
+                                                <li>
+                                                    ENTRY ;汇编语言程序入口
+                                                </li>
+                                                <li>
+                                                    END ;汇编语言程序结束
+                                                </li>
+                                                <li>
+                                                    AREA NAME, property1, property2, … ;定义一个段
+                                                </li>
+                                                <li>
+                                                    CODE prop1 ;定义一个代码段，默认只读READONLY
+                                                </li>
+                                                <li>
+                                                    DATA prop1 ;定义一个数据段，可读写READWRITE
+                                                </li>
+                                                <li>
+                                                    EXPORT LABEL ;全局标号声明
+                                                </li>
+                                                <li>
+                                                    IMPORT LABEL ;引入标号伪指令
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+                                    ARM语句格式
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+                                            {label}{command/pseudo command}{;comment}
+                                        </li>
+                                        <li>
+                                            表达式与运算符：
+                                            <ul>
+                                                <li>
+                                                    优先级相同的双目运算符从左向右
+                                                </li>
+                                                <li>
+                                                    相邻单目运算符运算顺序从右向左，单目运算符优先级高于其他
+                                                </li>
+                                                <li>
+                                                    括号运算符优先级最高
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            字符串表达式与运算符：
+                                            <ul>
+                                                <li>
+                                                    LEN：返回字符串长度
+                                                </li>
+                                                <li>
+                                                    CHR：字节整数转换为字符运算符
+                                                </li>
+                                                <li>
+                                                    STR：字符串转换
+                                                </li>
+                                                <li>
+                                                    LEFT：返回左端字符串运算符
+                                                </li>
+                                                <li>
+                                                    RIGHT：返回右端字符串运算符
+                                                </li>
+                                                <li>
+                                                    CC：合并字符串
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                    <b>汇编语言程序设计</b>：
+                                    <ul>
+                                        <li>
+                                            顺序设计：无分支、无循环，指令依次执行的程序结构
+                                        </li>
+                                        <li>
+                                            分支设计
+                                        </li>
+                                        <li>
+                                            循环设计：初始部分、循环体、控制部分
+                                        </li>
+                                        <li>
+                                            子程序：BL LABEL 进行调用
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </section>
 
                             <section id="sec-3" data-type="introduction">
                                 <h2>
                                     嵌入式最小硬件系统
                                 </h2>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+                                            定义：提供嵌入式处理器运行必备条件的硬件电路与嵌入式处理器
+                                        </li>
+                                        <li>
+                                            构成：时钟电路、电源电路、复位电路、存储器、（调试测试接口）
+                                            <ul>
+                                                <li>
+                                                    电源电路：为整个系统提供额能量
+                                                    <br>考虑因素：输出IU，输入IU，安全因素，电磁兼容，体积限制，功耗限制，成本限制
+                                                    <br>电源模块：AC-DC，DC-DC，低压差稳压器LDO
+                                                </li>
+                                                <li>
+                                                    时钟电路：嵌入式处理器需时钟信号才能按照节拍正常工作
+                                                    <br>晶振分为有源（4引脚）、无源（2引脚）两种
+                                                </li>
+                                                <li>
+                                                    复位电路：nRESET表示低电平复位（保持若干时钟周期低电平），RESET表示高电平复位
+                                                </li>
+                                                <li>
+                                                    调试测试接口：JTAG为国际标准测试协议，对芯片内部将进行测试、对系统进行仿真调试
+                                                    <br>大多数基于ARM处理器核的芯片都有调试接口
+                                                    <br>JTAG在芯片内部封装专门测试电路与访问口，允许多个器件串联形成JTAG链
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+                                    基于ARM内核的典型嵌入式应用系统硬件组成
+                                </h3>
+                                <div role="paragraph">
+                                    内容：嵌入式最小硬件系统，前向通道，后向通道，人机交互通道，相互互联通信通道
+                                    <ul>
+                                        <li>
+                                            前向通道：模拟量输入接口（传感器、信号调理电路、A/D转换器）、数字量输入接口
+                                        </li>
+                                        <li>
+                                            后向通道：模拟输出接口（D/A转换器、功率放大器、执行器）、数字输出接口
+                                        </li>
+                                        <li>
+                                            人机交互通道：键盘、屏幕等
+                                        </li>
+                                        <li>
+                                            相互互联通道：RS-232/RS-485串行通信接口、CAN、以太网、USB
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+                                    嵌入式处理芯片
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+                                            AMBA：先进微控制器总线体系结构，ARM公司公布的总线协议，用于连接、管理SoC中功能模块的标准
+                                        </li>
+                                        <li>
+                                            系统总线：ARM内核与RAM、DMA等快速组件的接口标准
+                                        </li>
+                                        <li>
+                                            外围总线：内核与ARM内部外围端口及慢速设备接口组件的接口标准
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="figure-wrap">
+                                    <figure id="T5" class="table">
+                                        <div class="table-wrap">
+                                            <div class="collapsible-wrapper" aria-expanded="true">
+                                                <table>
+                                                    <thead>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>总线版本</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>典型ARM</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>特点</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>总线</b>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                AMBA1
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                ARM7
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                规定ASB、APB，二者用桥接器连接
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                ASP+APB
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                AMBA2
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                ARM9/10, Cortex-M
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                系统总线改为AHB
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                AHB+APB
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                AMBA3
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                ARM11, Cortex-R/A
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                4个总线标准
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                AHB+ATB+AXI+APB
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                AMBA4
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                Cortex-A15
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                5个接口协议
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                .ACE+ATB+AXI+APB
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Table 5</span>. ARM处理器总线的发展.
+                                            </div>
+
+                                            <div class="notes">
+                                                <div role="doc-footnote">
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+
+                                    <a href="#T5" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
+                                </div>
+                                <h3>
+                                    基于ARM内核嵌入式芯片硬件组成
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+                                            存储器：
+                                            <ul>
+                                                <li>
+                                                    片内程序存储器常用Flash ROM，片内数据存储器常用SRAM
+                                                </li>
+                                                <li>
+                                                    程序存储器大都采用Flash存储器，数据可采用SRAM，DDR，DDR2，DRAM
+                                                </li>
+                                                <li>
+                                                    高带宽外部存储器控制接口可扩展程序、数据存储器，与系统总线部分相连
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            中断控制器：
+                                            <br>处理中断方式：
+                                            <ul>
+                                                <li>
+                                                    标准中断控制器：发送中断请求信号给处理器核
+                                                </li>
+                                                <li>
+                                                    向量中断控制器：读取中断控制器与各设备对应表示中断请求的寄存器
+                                                </li>
+                                            </ul>
+                                            中断管理方式：
+                                            <ul>
+                                                <li>
+                                                    向量中断（VIC）：新中断的优先级高于当前中断，才向内核提出中断请求
+                                                </li>
+                                                <li>
+                                                    嵌套向量中断（NVIC）：可进行中断嵌套
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            DMA控制器：
+                                            <ul>
+                                                <li>
+                                                    一种硬件组件，可将数据块从外设——内存/内存——外设/内存——内存
+                                                </li>
+                                                <li>
+                                                    数据传输过程不需CPU参与
+                                                </li>
+                                                <li>
+                                                    ARM与通道进行交流时，可由ARM内核/DMA控制数据传输
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            电源管理与时钟管理器：
+                                            <ul>
+                                                <li>
+                                                    时钟控制器：负责对时钟的分配，产生不同频率定时时钟作同步时钟
+                                                </li>
+                                                <li>
+                                                    GPIO：通用I/O端口，作为输入时有缓冲功能，作为输出时有锁存功能
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            定时计数组件：
+                                            <ul>
+                                                <li>
+                                                    看门狗（WDT）：处理器进入错误状态后一定时间内复位
+                                                </li>
+                                                <li>
+                                                    通用定时器（Timer）：用于一般的定时
+                                                </li>
+                                                <li>
+                                                    RTC：提供年月时分秒，使系统具有独立的日期和时间
+                                                </li>
+                                                <li>
+                                                    PWM
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    ADC：完成模拟信号到数字信号的变换
+                                                </li>
+                                                <li>
+                                                    DAC：完成数字信号到模拟信号的变换
+                                                </li>
+                                                <li>
+                                                    比较器：对模拟电压信号等与基准信号比较
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            互联通信组件：
+                                            <ul>
+                                                <li>
+                                                    通用异步收发器（UART）：标准的串行通信接口，低位在前高位在后
+                                                </li>
+                                                <li>
+                                                    I2C：集成电路互联的一种总线标准，2根信号线：时钟线SCL，数据线SDA，可完成同步半双工串行通信
+                                                </li>
+                                                <li>
+                                                    I2S：针对数字音频设备间的数据传输的音频串行总线
+                                                </li>
+                                                <li>
+                                                    SPI：使MCU与外围设备以串行方式进行通信，四线制：MISO，MOSI，SSL，SCK（板级芯片通信）
+                                                </li>
+                                                <li>
+                                                    CAN：控制器局域网，差分传输，CANH/L数据线，要求抗干扰能力强的工业控制领域
+                                                </li>
+                                                <li>
+
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+
+                                        </li>
+                                        <li>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+
+                                        </li>
+                                        <li>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+
+                                </h3>
+                                <div role="paragraph">
+                                    <ul>
+                                        <li>
+
+                                        </li>
+                                        <li>
+
+                                        </li>
+                                    </ul>
+                                </div>
                             </section>
 
                             <section id="sec-4" data-type="introduction">
@@ -2487,10 +3494,7 @@
                             <section id="acknowledgments" role="doc-acknowledgments">
                                 <h2>Acknowledgments</h2>
                                 <div role="paragraph">
-                                    <b>Submit: </b>The manuscript is prepared for iGEM2022, in which our team is
-                                    disqualified. Due to the lack of funding, we couldn't make a pilot device.
-                                    However, we made a software that can be used for image reconstruction, which
-                                    can be found in the Appendix.
+                                    <b>Resources: </b>T
                                 </div>
 
                                 <div role="paragraph"><b>Competing interests:</b> no competing
