@@ -3199,7 +3199,7 @@
                                             系统总线：ARM内核与RAM、DMA等快速组件的接口标准
                                         </li>
                                         <li>
-                                            外围总线：内核与ARM内部外围端口及慢速设备接口组件的接口标准
+                                            外围总线（APB）：内核与ARM内部外围端口及慢速设备接口组件的接口标准，连接通用外设组件
                                         </li>
                                     </ul>
                                 </div>
@@ -3316,7 +3316,7 @@
                                             存储器：
                                             <ul>
                                                 <li>
-                                                    片内程序存储器常用Flash ROM，片内数据存储器常用SRAM
+                                                    片内程序存储器常用Flash ROM，片内数据存储器常用SRAM（Cache）
                                                 </li>
                                                 <li>
                                                     程序存储器大都采用Flash存储器，数据可采用SRAM，DDR，DDR2，DRAM
@@ -3344,17 +3344,18 @@
                                                 </li>
                                                 <li>
                                                     嵌套向量中断（NVIC）：可进行中断嵌套
+                                                    <br>仅Cortex-M支持嵌套的向量中断
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            DMA控制器：
+                                            DMA控制器（直接存储器访问控制器）：
                                             <ul>
                                                 <li>
                                                     一种硬件组件，可将数据块从外设——内存/内存——外设/内存——内存
                                                 </li>
                                                 <li>
-                                                    数据传输过程不需CPU参与
+                                                    数据传输过程不需CPU参与，降低功耗
                                                 </li>
                                                 <li>
                                                     ARM与通道进行交流时，可由ARM内核/DMA控制数据传输
@@ -3368,7 +3369,7 @@
                                                     时钟控制器：负责对时钟的分配，产生不同频率定时时钟作同步时钟
                                                 </li>
                                                 <li>
-                                                    GPIO：通用I/O端口，作为输入时有缓冲功能，作为输出时有锁存功能
+                                                    GPIO：通用I/O端口，作为输入时有缓冲功能，作为输出时有锁存功能（引脚复用）
                                                 </li>
                                             </ul>
                                         </li>
@@ -3398,7 +3399,7 @@
                                                     DAC：完成数字信号到模拟信号的变换
                                                 </li>
                                                 <li>
-                                                    比较器：对模拟电压信号等与基准信号比较
+                                                    比较器：对模拟电压信号等与基准信号比较（监测电压、温度等）
                                                 </li>
                                             </ul>
                                         </li>
@@ -3421,30 +3422,92 @@
                                                     CAN：控制器局域网，差分传输，CANH/L数据线，要求抗干扰能力强的工业控制领域
                                                 </li>
                                                 <li>
-
+                                                    USB
+                                                </li>
+                                                <li>
+                                                    以太网（RJ-45连接器）
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                                 <h3>
-
+                                    常用ARM芯片
                                 </h3>
                                 <div role="paragraph">
                                     <ul>
                                         <li>
-
+                                            荷兰NXP半导体公司：基于ARM7TDM-S核的LPC2000系列
                                         </li>
                                         <li>
-
+                                            TI：全部内置10位ADC
+                                        </li>
+                                        <li>
+                                            Samsung：基于ARM7TDMI内核的S3C44B0
+                                        </li>
+                                        <li>
+                                            Atmel, ST, Freescale, 新唐科技, Intel
                                         </li>
                                     </ul>
                                 </div>
                                 <h3>
-
+                                    嵌入式系统存储器
                                 </h3>
                                 <div role="paragraph">
+                                    <b>层次结构</b>
                                     <ul>
+                                        <li>
+                                            处理器内部通用寄存器速度最快（Flash ROM）
+                                        </li>
+                                        <li>
+                                            CPU使用最频繁的代码、数据用SRAM作Cache存放
+                                        </li>
+                                        <li>
+                                            运行中的程序、数据放在主存储器
+                                        </li>
+                                        <li>
+                                            其他存放于外存
+                                        </li>
+                                    </ul>
+                                    <b>分类</b>：
+                                    <ul>
+                                        <li>
+                                            随机存取存储器
+                                            <ul>
+                                                <li>
+                                                    SRAM：静态，处理器内嵌的数据存储器
+                                                </li>
+                                                <li>
+                                                    DRAM：动态，外部扩展的存储器
+                                                </li>
+                                                <li>
+                                                    DDRi SDRAM：2^i倍数据速率技术，预读2^i位数据
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            只读存储器
+                                            <ul>
+                                                <li>
+                                                    PROM：单次可编程存储器，无法修改
+                                                </li>
+                                                <li>
+                                                    EPROM：紫外线可擦除可编程存储器
+                                                </li>
+                                                <li>
+                                                    NOR/NAND Flash：主要闪存技术
+                                                    <br>NAND：以页/行位单位随机存取，容量、使用寿命、成本占优
+                                                    <br>NOR：以字节为单位随机存取，速度占优，写入擦除速度慢
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <b>性能指标</b>：
+                                    <ul>
+                                        <li>
+                                            存储器容量：能够存储的二进制位数
+                                            <br>内存容量 = 单元数 * 数据位数 / 单元
+                                        </li>
                                         <li>
 
                                         </li>
@@ -3468,6 +3531,95 @@
                                 </div>
                             </section>
 
+                            <h3>
+
+                            </h3>
+                            <div role="paragraph">
+                                <ul>
+                                    <li>
+
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            </section>
+
+                            <h3>
+
+                            </h3>
+                            <div role="paragraph">
+                                <ul>
+                                    <li>
+
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            </section>
+
+                            <h3>
+
+                            </h3>
+                            <div role="paragraph">
+                                <ul>
+                                    <li>
+
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            </section>
+
+                            <h3>
+
+                            </h3>
+                            <div role="paragraph">
+                                <ul>
+                                    <li>
+
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            </section>
+
+                            <h3>
+
+                            </h3>
+                            <div role="paragraph">
+                                <ul>
+                                    <li>
+
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            </section>
+
+                            <h3>
+
+                            </h3>
+                            <div role="paragraph">
+                                <ul>
+                                    <li>
+
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            </section>
                             <section id="sec-4" data-type="introduction">
                                 <h2>
 
