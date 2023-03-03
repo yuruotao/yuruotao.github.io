@@ -3542,35 +3542,598 @@
                                         </li>
                                     </ul>
                                     <b>片外数据存储器</b>：SDRAM, DDR
-
-                                </div>
-                                <h3>
-
-                                </h3>
-                                <div role="paragraph">
+                                    <br>韩国DDR存储器命名：
+                                    <br>HYXZmnjk
                                     <ul>
                                         <li>
-
+                                            HY：现代标识
                                         </li>
                                         <li>
+                                            X：存储器类型，5，57为SDRAM，5D为DDR
+                                        </li>
+                                        <li>
+                                            Z：电压等级，U为2.5V，V为3.3V，缺省为5V
+                                        </li>
+                                        <li>
+                                            m：
+                                            <ul>
+                                                <li>
+                                                    SDRAM：总容量，56，52为256Mb，64，65为64Mb，26，28为128Mb
+                                                </li>
+                                                <li>
+                                                    DDR：28为128Mb，56为256Mb
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            n：数据宽度（16/32）
+                                        </li>
+                                        <li>
+                                            j：逻辑BANK数，2^n个BANK
+                                        </li>
+                                        <li>
+                                            k：电气接口（0：LVTLL，1：SSTL，2：SSTL_2）
+                                        </li>
+                                    </ul>
+                                    <b>外部辅助存储设备</b>：
+                                    <ul>
+                                        <li>
+                                            USB闪存盘：无需物理驱动器，即插即用
+                                        </li>
+                                        <li>
+                                            微硬盘：有缓存，无需外置电源，高防振性、高速传输，高达百GB
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+                                    I/O接口与常用I/O设备
+                                </h3>
+                                <div role="paragraph">
+                                    <b>GPIO</b>：通用输入输出接口
+                                    <ul>
+                                        <li>
+                                            所有嵌入式处理器内部集成
+                                        </li>
+                                        <li>
+                                            输入缓冲、输出锁存，一般具有三态
+                                        </li>
+                                        <li>
+                                            复用引脚
+                                        </li>
+                                    </ul>
 
+                                    <b>I2C</b>：集成电路互联总线
+                                    <ul>
+                                        <li>
+                                            用于连接嵌入式处理器与外围器件，采用串行半双工标准（任意时刻信号单向传递）
+                                        </li>
+                                        <li>
+                                            ARM芯片内部集成I2C总线接口
+                                        </li>
+                                        <li>
+                                            主动发起数据传输操作的器件为主控器件
+                                        </li>
+                                        <li>
+                                            仅有两条信号线
+                                            <ul>
+                                                <li>
+                                                    数据线SDA：高低电平状态仅在SCL为低时可改变
+                                                </li>
+                                                <li>
+                                                    时钟线SCL
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            数据传送：
+                                            <ul>
+                                                <li>
+                                                    总线无请求时，两信号线处于高电平
+                                                </li>
+                                                <li>
+                                                    数据传送时高位在前，低位在后，传送字节数无限制，第一字节为地址
+                                                </li>
+                                                <li>
+                                                    接收方应发送确认信号ACK
+                                                </li>
+                                                <li>
+                                                    属于多主总线，允许多个主控器件同时操作
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <b>SPI</b>：串行外设接口
+                                    <ul>
+                                        <li>
+                                            同步串行外设接口，使处理器与外围设备以串行方式进行通信（数据交换）
+                                        </li>
+                                        <li>
+                                            全双工串行外设接口
+                                        </li>
+                                        <li>
+                                            一般使用4条线
+                                            <ul>
+                                                <li>
+                                                    SCK：串行时钟线
+                                                </li>
+                                                <li>
+                                                    MISO：主机输入/从机输出数据线
+                                                </li>
+                                                <li>
+                                                    MOSI：主机输出/从机输入数据线（可能没有）
+                                                </li>
+                                                <li>
+                                                    SSEL：低电平有效的从机选择线
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            连接方式：
+                                            <ul>
+                                                <li>
+                                                    一主一从式
+                                                </li>
+                                                <li>
+                                                    互为主从系统（主机设置SSEL为低电平）
+                                                </li>
+                                                <li>
+                                                    一主多从式（SPI所有信号为单向）
+                                                </li>
+                                                <li>
+                                                    多主多从式
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <b>UART</b>：串行异步通信接口通用异步收发器
+                                    <ul>
+                                        <li>
+                                            常用于全双工串行异步通信
+                                        </li>
+                                        <li>
+                                            所有嵌入式芯片均继承兼容标准UART功能的组件
+                                        </li>
+                                        <li>
+                                            组成：
+                                            <ul>
+                                                <li>
+                                                    发送器：先到缓冲寄存器，再通过移位寄存器按位发送
+                                                </li>
+                                                <li>
+                                                    接收器：FIFO或普通模式接收，FIFO缓冲器满引发接收中断，普通模式一个字符引发接收中断
+                                                    <br>一般接收缓冲器、发送缓冲器FIFO字节数相同，可编程选择长度，不同ARM芯片最大字节数不同（ARM9的S3C2440为64B）
+                                                </li>
+                                                <li>
+                                                    波特率发生器：最高为115200b/s
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            通常接收采用中断，发送采用查询，直接UART通信限于版/芯片间通信，其他情况需用逻辑电平转换接口（RS-232）
+                                        </li>
+                                        <li>
+                                            最高数据传输速率一般低于SPI
+                                        </li>
+                                        <li>
+                                            传送信息格式以起始位开始，停止位结束，长度为5-8位
+                                        </li>
+                                    </ul>
+                                    <b>USB</b>：通用串行总线
+                                    <ul>
+                                        <li>
+                                            支持设备的即插即用、热插拔
+                                        </li>
+                                        <li>
+                                            通信采用主从方式
+                                        </li>
+                                        <li>
+                                            USB OTG：直接在具有OTG的USB总线上完成通信，没有主机的情况下完成设备间数据传送
+                                        </li>
+                                        <li>
+                                            提供内置电源，向低压设备提供5V电源
+                                        </li>
+                                        <li>
+                                            组成：
+                                            <ul>
+                                                <li>
+                                                    硬件：根集线器，提供USB下行端口
+                                                </li>
+                                                <li>
+                                                    软件：USB设备驱动程序、USB驱动程序、USB主控制器驱动程序
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            采用翻转不归零编码方式（NRZI），电平保持为1，电平翻转为0
+                                        </li>
+                                        <li>
+                                            总线采用半双工差分方式，有4根信号线：2根差分、电源线、地线
+                                        </li>
+                                    </ul>
+                                    <b>HDMI</b>：高清晰度多媒体接口
+                                    <ul>
+                                        <li>
+                                            最高数据传输速率为10.2Gb/s
+                                        </li>
+                                        <li>
+                                            可同时传送音频、视频信号，无需进行A/D、D/A转换
+                                        </li>
+                                    </ul>
+                                    <b>键盘</b>：
+                                    <ul>
+                                        <li>
+                                            分类：
+                                            <ul>
+                                                <li>
+                                                    线性键盘：一个按键占用一个引脚
+                                                </li>
+                                                <li>
+                                                    矩阵键盘：行列矩阵形式构成键盘，读取按键特征值决定按键结果
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            简单键盘可由UART制作
+                                        </li>
+                                    </ul>
+                                    <b>触摸屏</b>：
+                                    <ul>
+                                        <li>
+                                            分类：
+                                            <ul>
+                                                <li>
+                                                    电阻式：价格低
+                                                </li>
+                                                <li>
+                                                    电容式：价格高，形成耦合电容
+                                                    <br>一般与ARM芯片采用USB/I2C总线方式连接
+                                                    <br>支持多点触摸或滑动操作
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <b>发光二极管</b>：与ARM芯片连接只需一根GPIO引脚，但需加驱动电路（电流有限）
+                                    <br><b>LED数码管</b>：共阳极连接与共阴极连接（共阳极1为灭）
+                                    <br><b>LCD显示设备</b>：
+                                    <ul>
+                                        <li>
+                                            LCD显示屏、LCM、LCD显示器
+                                        </li>
+                                        <li>
+                                            LCD显示屏不具有控制器与控制电路
+                                        </li>
+                                        <li>
+                                            接口标准主要为VGA与DVI
                                         </li>
                                     </ul>
                                 </div>
                             </section>
 
                             <h3>
-
+                                ARM内核典型嵌入式处理芯片S3C2410，S3C2440
                             </h3>
                             <div role="paragraph">
+                                <b>内部结构</b>：
                                 <ul>
                                     <li>
-
+                                        32位嵌入式处理器，内部集成存储器控制器
                                     </li>
                                     <li>
-
+                                        Harvard体系结构（指令Cache与数据Cache分离）
+                                    </li>
+                                    <li>
+                                        5级指令流水线，使用AMBA总线，高速组件采用AHB，低速外设采用APB
+                                    </li>
+                                    <li>
+                                        S3C2440较2410增加视频与音频接口
                                     </li>
                                 </ul>
+                                <b>存储器控制组件</b>：
+                                <ul>
+                                    <li>
+                                        地址空间1GB，分为8个BANK
+                                    </li>
+                                    <li>
+                                        I/O与存储器统一编址
+                                    </li>
+                                    <li>
+                                        BANK0只支持16位和32位总线宽度的访问，其他为8/16/32位
+                                    </li>
+                                </ul>
+                                <b>时钟与电源管理组件</b>：
+                                <ul>
+                                    <li>
+                                        时钟振荡电路可产生不同需求的时钟信号：
+                                        <ul>
+                                            <li>
+                                                PCLK：连接到APB总线上外围组件使用的时钟
+                                            </li>
+                                            <li>
+                                                HCLK：连接到AHB总线上外围告诉组件使用的时钟
+                                            </li>
+                                            <li>
+                                                MPLL、UPLL、FCLK
+                                            </li>
+                                            <li>
+                                                MPLL可由OM[3:2]引脚选择采用外部时钟、外界晶体利用内部振荡电路输出的时钟
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        电源管理模块工作模式：
+                                        <ul>
+                                            <li>
+                                                正常模式：可通过软件控制硬件组件的开启/关闭
+                                            </li>
+                                            <li>
+                                                慢速模式：不使用PLL时钟
+                                            </li>
+                                            <li>
+                                                休眠模式：只断开FCLK，CPU休眠，仍为外围硬件组件提供时钟
+                                            </li>
+                                            <li>
+                                                掉电模式：断开内部电源，唤醒逻辑有效才产生功耗
+                                            </li>
+                                        </ul>
+                                        任何情况下复位操作进入正常工作模式
+                                        <br>掉电模式与休眠模式下，有外部中断或RTC时钟中断，返回正常模式
+                                    </li>
+                                </ul>
+                                <b>中断控制器与中断控制</b>：
+                                <ul>
+                                    <li>
+                                        ARM处理器异常见<a href="#T3">表3</a>，每个异常向量占4个字节
+                                    </li>
+                                    <li>
+                                        内置硬件组件中断对应IRQ与FIQ，可通过设置模式寄存器确定
+                                    </li>
+                                    <li>
+                                        中断相关寄存器：见<a href="#T6">表6</a>
+                                        <br>中断源可以是有子寄存器的中断源、无子寄存器的中断源
+                                        <br>多个中断请求时，SRCPND相应位写1，优先级仲裁后，优先级最高的中断源对应INTPND位写1
+                                        <br>除屏蔽寄存器复位后的值为全1，其他复位后均为全0
+                                    </li>
+                                </ul>
+                                <div class="figure-wrap">
+                                    <figure id="T6" class="table">
+                                        <div class="table-wrap">
+                                            <div class="collapsible-wrapper" aria-expanded="true">
+                                                <table>
+                                                    <thead>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>寄存器</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>名称</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>功能</b>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                SRCPND
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                源中断挂起寄存器
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                记录中断源中断请求的挂起状态（1为有）
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                INTMOD
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                中断模式寄存器
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                决定中断源的中断类型（FIQ=1，IRQ=0）
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                INTMASK
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                中断屏蔽寄存器
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                屏蔽中断源的中断请求（0允许中断）
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                INTPND
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                中断挂起寄存器
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                记录中断源中断请求的挂起状态（1为有）
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                SUBSRCPND
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                子源中断挂起寄存器
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                记录子中断源中断请求的挂起状态（1为有）
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                INTSUBMASK
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                子源中断屏蔽寄存器
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                屏蔽子中断源的中断请求（0允许中断）
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Table 6</span>. S3C2410中断相关寄存器.
+                                            </div>
+
+                                            <div class="notes">
+                                                <div role="doc-footnote">
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+
+                                    <a href="#T6" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
+                                </div>
+                                <b>实时时钟RTC</b>：
+                                <ul>
+                                    <li>
+                                        采用单独的供电引脚与时钟源
+                                    </li>
+                                    <li>
+                                        时间数据用BCD码表示
+                                    </li>
+                                    <li>
+                                        实时时钟控制寄存器RTCCON共4位，其功能见<a href="#T7">表7</a>
+                                    </li>
+                                    <li>
+                                        RTC组件寄存器只能以8位方式访问
+                                    </li>
+                                    <li>
+                                        RTC组件寄存器I/O有一个使能位，保护系统实时时钟不被误写
+                                    </li>
+                                </ul>
+                                <div class="figure-wrap">
+                                    <figure id="T7" class="table">
+                                        <div class="table-wrap">
+                                            <div class="collapsible-wrapper" aria-expanded="true">
+                                                <table>
+                                                    <thead>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>名称</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>位</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>功能</b>
+                                                            </th>
+                                                            <th data-xml-align="center" scope="col">
+                                                                <b>初值</b>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                CLKRST
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                3
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                0为不复位
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                0
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                CNTSEL
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                2
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                0为组合BCD码
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                0
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                CLKSEL
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                1
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                BCD码计数时钟选择，0为晶体频率分频，1保留
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                0
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr data-xml-align="center" data-xml-valign="middle">
+                                                            <th data-xml-align="center" scope="row">
+                                                                RTCEN
+                                                            </th>
+                                                            <td data-xml-align="center" scope="col">
+                                                                0
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                RTC读/写使能，0为禁止
+                                                            </td>
+                                                            <td data-xml-align="center" scope="col">
+                                                                0
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <figcaption>
+                                            <div class="caption"><span class="heading">Table 7</span>.
+                                                S3C2410实时时钟RTC寄存器RTCCON各位.</div>
+
+                                            <div class="notes">
+                                                <div role="doc-footnote">
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+
+                                    <a href="#T7" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                        <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                        <span>Open in viewer</span>
+                                    </a>
+                                </div>
+
+
+
+
                             </div>
                             </section>
 
