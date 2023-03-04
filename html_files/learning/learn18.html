@@ -4526,7 +4526,9 @@
                                         <li>
                                             时限：相对时限与绝对时限
                                         </li>
-
+                                        <li>
+                                            属性：可靠性、可预测性、时间约束性、交互性
+                                        </li>
                                         <li>
                                             任务类型：
                                             <ol>
@@ -4541,14 +4543,517 @@
                                                 </li>
                                             </ol>
                                         </li>
+                                        <li>
+                                            实时操作系统（RTOS）：
+                                            <ul>
+                                                <li>
+                                                    事件驱动
+                                                </li>
+                                                <li>
+                                                    多级中断嵌套处理
+                                                </li>
+                                                <li>
+                                                    细粒度的任务优先级控制
+                                                </li>
+                                                <li>
+                                                    实时抢占式调度
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            RTOS实时性指标：
+                                            <ul>
+                                                <li>
+                                                    中断延迟时间（Interrupt Latency）
+                                                </li>
+                                                <li>
+                                                    任务切换时间（Task Switching Latency）
+                                                </li>
+                                                <li>
+                                                    任务切换时间（Process Switching Latency）
+                                                </li>
+                                                <li>
+                                                    响应时间：从事件请求到任务完成的时间间隔
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <b>嵌入式操作系统</b>：
+                                    <ul>
+                                        <li>
+                                            特点：代码固化存储、可裁剪性、实时性、强稳定性、弱交互性、硬件适应性
+                                        </li>
+                                        <li>
+                                            分类：
+                                            <ul>
+                                                <li>
+                                                    硬实时、软实时/非实时
+                                                </li>
+                                                <li>
+                                                    专门为嵌入式环境开发/从通用计算机操作系统移植
+                                                </li>
+                                                <li>
+                                                    免费/商业
+                                                    <br>VxWorks按开发版本授权数量收取授权费，按产品售出数量收取版权费
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            内核结构：
+                                            <ul>
+                                                <li>
+                                                    单内核：把内核各功能模块整合，执行效率高
+                                                    <br>Linux、Android、Mac OS
+                                                    <ul>
+                                                        <li>
+                                                            整体结构
+                                                        </li>
+                                                        <li>
+                                                            分层结构
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    微内核：将必须的基本功能放入内核，其他功能在用户态运行的服务完成
+                                                    <br>VxWorks
+                                                    <ul>
+                                                        <li>
+                                                            运行在核心态的内核
+                                                        </li>
+                                                        <li>
+                                                            运行在用户态的若干进程
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            常用嵌入式操作系统：
+                                            <ul>
+                                                <li>
+                                                    VxWorks：可靠性高，微内核结构，实时性强开发环境友好（通信、军事、航空）
+                                                </li>
+                                                <li>
+                                                    QNX：实时微内核操作系统，内核仅提供4种服务（进程调度、进程间通信、底层网络通信、中断处理）
+                                                </li>
+                                                <li>
+                                                    Nucleus PLUS：抢占式多任务商业操作系统内核
+                                                </li>
+                                                <li>
+                                                    Windows：Windows Phone 8
+                                                </li>
+                                                <li>
+                                                    RTEMS：微内核抢占式实时系统，GPL开源无版税
+                                                </li>
+                                                <li>
+                                                    TinyOS：伯克利开发，开源，为硬件资源有限的无线传感器网络应用定制
+                                                </li>
+                                                <li>
+                                                    eCOS：低成本便携式设备（银行卡）
+                                                </li>
+                                                <li>
+                                                    FreeRTOS：开源免费，轻量级
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>
+                                    操作系统内核
+                                </h3>
+                                <div role="paragraph">
+                                    <b>Linux内核</b>：
+                                    <ul>
+                                        <li>
+                                            Linux重新编写，具有Unix的全部功能
+                                        </li>
+                                        <li>
+                                            开源自由软件（赫尔辛基学生）
+                                        </li>
+                                        <li>
+                                            自由软件一旦被GPL授权发布，将永远具有GPL授权
+                                        </li>
+                                        <li>
+                                            参照Minix开发，采用单内核结构，支持动态装载内核模块、内核线程
+                                        </li>
+                                        <li>
+                                            内核空间：
+                                            <ul>
+                                                <li>
+                                                    系统调用接口：内核与应用程序进行交互的唯一接口
+                                                </li>
+                                                <li>
+                                                    中间层：内核核心部分，管理系统资源、确保系统安全、隔离保护各个用户
+                                                </li>
+                                                <li>
+                                                    BSP：支持特定体系结构的处理器和特定硬件平台
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Linux实时化：
+                                            <ul>
+                                                <li>
+                                                    内核补丁方式：保留全部Linux应用编程模式
+                                                </li>
+                                                <li>
+                                                    双内核：增加微内核形态的第二个内核，作为硬件与通用Linux内核间的抽象接口
+                                                </li>
+                                                <li>
+                                                    超微内核：硬件抽象层将实时内核与非实时内核之间变为松耦合关系，如ADEOS
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            嵌入式Linux操作系统构建：
+                                            <ul>
+                                                <li>
+                                                    基于通用Linux内核构建
+                                                    <ul>
+                                                        <li>
+                                                            成本低，内核版本更新及时
+                                                        </li>
+                                                        <li>
+                                                            定制、裁剪工作量大，实时性差
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    基于嵌入式Linux发行版构建
+                                                    <ul>
+                                                        <li>
+                                                            版本更新不一定及时、成本较高
+                                                        </li>
+                                                        <li>
+                                                            内核实时性高，针对性强
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
 
+                                    <b>Android系统</b>：
+                                    <ul>
+                                        <li>
+                                            核心是以Linux内核为基础的半开放源码操作系统
+                                        </li>
+                                        <li>
+                                            对第三方软件完全开放
+                                        </li>
+                                        <li>
+                                            架构（堆层式软件架构）：
+                                            <ul>
+                                                <li>
+                                                    应用程序
+                                                </li>
+                                                <li>
+                                                    应用程序框架
+                                                </li>
+                                                <li>
+                                                    系统运行库：
+                                                    <br>&emsp;Android运行环境（Dalvik虚拟机、核心库）
+                                                    <br>&emsp;组件库
+                                                </li>
+                                                <li>
+                                                    Linux内核
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+
+                                    <b>IOS操作系统</b>：
+                                    <ul>
+                                        <li>
+                                            类Unix商业操作系统
+                                        </li>
+                                        <li>
+                                            系统架构：
+                                            <ul>
+                                                <li>
+                                                    触控界面层（Cocoa Touch Layer）
+                                                </li>
+                                                <li>
+                                                    媒体层（Media Layer）
+                                                </li>
+                                                <li>
+                                                    核心服务层（Core Service Layer）
+                                                </li>
+                                                <li>
+                                                    核心操作系统层（Core OS Layer）
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            应用开发：
+                                            <ul>
+                                                <li>
+                                                    程序由用户代码与苹果公司提供的框架组成
+                                                </li>
+                                                <li>
+                                                    应用通过框架的应用编程接口调用功能
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <b>uC/OS-||操作系统</b>：
+                                    <ul>
+                                        <li>
+                                            特点：
+                                            <ul>
+                                                <li>
+                                                    公开源码的高质量实时内核
+                                                </li>
+                                                <li>
+                                                    大部分代码用ANSI，C编写
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            基本功能：
+                                            <ul>
+                                                <li>
+                                                    任务调度
+                                                </li>
+                                                <li>
+                                                    任务间通信
+                                                </li>
+                                                <li>
+                                                    同步
+                                                </li>
+                                                <li>
+                                                    任务管理
+                                                </li>
+                                                <li>
+                                                    时间管理
+                                                </li>
+                                                <li>
+                                                    内存管理
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            任务构成：
+                                            <br>任务是操作系统的基本调度单位
+                                            <ul>
+                                                <li>
+                                                    程序代码：无返回值的C函数
+                                                </li>
+                                                <li>
+                                                    任务堆栈：每个任务有自己独立的栈空间，各栈空间大小不一定相同
+                                                </li>
+                                                <li>
+                                                    任务控制块（TCB）：用于保存任务状态与属性的数据结构，任务创建时被初始化
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            任务状态：
+                                            <ul>
+                                                <li>
+                                                    休眠态：任务代码驻留在内存中，但未交给内核调度的状态
+                                                </li>
+                                                <li>
+                                                    就绪态：任务准备好，可运行，但被挂起的状态
+                                                </li>
+                                                <li>
+                                                    运行态：任务已经获得处理器使用权而正在运行的状态
+                                                </li>
+                                                <li>
+                                                    等待态：正在运行的任务因等待某事件发生而将处理器使用权让出的状态
+                                                </li>
+                                                <li>
+                                                    被中断态：处理器执行中断服务而被暂停的程序状态
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            任务调度：
+                                            <br>系统可管理64个任务，用户任务最多56个
+                                            <ul>
+                                                <li>
+                                                    空闲任务：没有其他任务处于就绪态时运行
+                                                </li>
+                                                <li>
+                                                    统计任务：每秒运行一次
+                                                </li>
+                                            </ul>
+                                            程序进入临界区时，不希望系统进行任务调度、处理器转入中断的解决方法：
+                                            <ul>
+                                                <li>
+                                                    利用宏<code
+                                                        style="background-color: gainsboro; color: black">OS_ENTER_CRITICAL()</code>与<code
+                                                        style="background-color: gainsboro; color: black">OS_EXIT_CRITICAL()</code>实现开关中断
+                                                </li>
+                                                <li>
+                                                    利用函数<code
+                                                        style="background-color: gainsboro; color: black">OSSchedLock()</code>与<code
+                                                        style="background-color: gainsboro; color: black">OSSchedUnock()</code>给调度器上锁/解锁
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            中断处理：
+                                            <br><code
+                                                style="background-color: gainsboro; color: black">OSIntNesting</code>标识当前是否处于中断状态与中断嵌套层数（最高255）
+                                            <ol>
+                                                <li>
+                                                    保存CPU寄存器
+                                                </li>
+                                                <li>
+                                                    调用<code
+                                                        style="background-color: gainsboro; color: black">OSIntEnter()</code>或<code
+                                                        style="background-color: gainsboro; color: black">OSIntNesting</code>直接加1
+                                                </li>
+                                                <li>
+                                                    执行中断服务代码
+                                                </li>
+                                                <li>
+                                                    调用<code
+                                                        style="background-color: gainsboro; color: black">OSIntExit()</code>
+                                                </li>
+                                                <li>
+                                                    恢复CPU寄存器
+                                                </li>
+                                                <li>
+                                                    执行中断返回指令
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            任务管理服务：
+                                            <ul>
+                                                <li>
+                                                    任务创建：
+                                                    <ul>
+                                                        <li>
+                                                            可在调用<code
+                                                                style="background-color: gainsboro; color: black">OSStart()</code>前创建，不能由中断服务程序创建
+                                                        </li>
+                                                        <li>
+                                                            <code
+                                                                style="background-color: gainsboro; color: black">OSTaskCreate()</code>，<code
+                                                                style="background-color: gainsboro; color: black">OSTaskCreateExit()</code>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    任务删除：
+                                                    <ul>
+                                                        <li>
+                                                            使任务转入休眠状态，不被内核调度
+                                                        </li>
+                                                        <li>
+                                                            <code
+                                                                style="background-color: gainsboro; color: black">OSTaskDel()</code>：可删除任务自身与其他任务
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    任务挂起与恢复：
+                                                    <ul>
+                                                        <li>
+                                                            <code
+                                                                style="background-color: gainsboro; color: black">OSTaskSuspend()</code>：挂起任务
+                                                        </li>
+                                                        <li>
+                                                            <code
+                                                                style="background-color: gainsboro; color: black">OSTaskResume()</code>：恢复任务
+                                                        </li>
+                                                        <li>
+                                                            任务在被挂起时在等待延时，则挂起操作将被取消
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            时钟节拍与时间管理服务：
+                                            <ul>
+                                                <li>
+                                                    在调用<code
+                                                        style="background-color: gainsboro; color: black">OSStart()</code>启动多任务调度后开启时钟节拍器，初始化定时器中断
+                                                </li>
+                                                <li>
+                                                    处于运行态的任务可用<code
+                                                        style="background-color: gainsboro; color: black">OSTimeDly()</code>，<code
+                                                        style="background-color: gainsboro; color: black">OSTimeDlyHMSM</code>延迟进入等待状态，可用<code
+                                                        style="background-color: gainsboro; color: black">OSTimeDlyResume(INT8U prio)</code>唤醒，<code
+                                                        style="background-color: gainsboro; color: black">prio</code>为优先级
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            任务间通信与同步服务：
+                                            <ul>
+                                                <li>
+                                                    实现方法：信号量、消息邮箱与消息队列、互斥信号量、事件标志组
+                                                </li>
+                                                <li>
+                                                    任务/中断服务程序可通过事件控制块ECB向其他任务发出信号（中断服务程序不能等待信号）
+                                                </li>
+                                                <li>
+                                                    多个任务可同时等待同一事件的发生
+                                                </li>
+                                                <li>
+                                                    互斥信号量可解决优先级反转问题
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <h3>
+                                    uC/OS-||程序设计
+                                </h3>
+                                <div role="paragraph">
+                                    <b>初始化</b>
+                                    <ul>
+                                        <li>
+                                            使用内核提供任何功能前，调用<code
+                                                style="background-color: gainsboro; color: black">OSInit()</code>进行内核初始化
+                                        </li>
+                                        <li>
+                                            <code
+                                                style="background-color: gainsboro; color: black">OSInit()</code>对内核使用的变量与数据结构进行初始化，创建<code
+                                                style="background-color: gainsboro; color: black">OS_TaskIdle()</code>并使其就绪
+                                        </li>
+                                        <li>
+                                            函数<code
+                                                style="background-color: gainsboro; color: black">OSStart()</code>启动多任务调度，并从就绪态任务选择优先级最高的任务转入运行态（调用前需有任务）
+                                        </li>
+                                        <li>
+                                            uC/OS-||可提供节拍率为10-100Hz
+                                        </li>
+                                        <li>
+                                            uC/OS-|||增加特性：
+                                            <ul>
+                                                <li>
+                                                    时间片轮转调度
+                                                </li>
+                                                <li>
+                                                    内核对象的数量无限制
+                                                </li>
+                                                <li>
+                                                    任务级的时钟节拍处理
+                                                </li>
+                                                <li>
+                                                    时间戳
+                                                </li>
+                                                <li>
+                                                    ...
+                                                </li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </section>
 
                             <section id="sec-5" data-type="introduction">
                                 <h2>
-
+                                    嵌入式系统的开发
                                 </h2>
                                 <h3>
 
