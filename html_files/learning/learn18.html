@@ -5104,23 +5104,285 @@
                                         </li>
                                     </ul>
 
-                                    <b></b>
+                                    <b>嵌入式系统的调试</b>：
                                     <ul>
                                         <li>
-
+                                            低端（8/16位）系统的调试可通过在线仿真器（ICE）实现
+                                            <br>被调试系统与ICE共用一个处理器
                                         </li>
                                         <li>
-                                            
+                                            片上调试技术JTAG
+                                            <ul>
+                                                <li>
+                                                    在靠近芯片的I/O引脚处增加一个移位寄存器（边界扫描寄存器BSR）
+                                                </li>
+                                                <li>
+                                                    被调试的芯片还需有一个测试访问接口TAP，使宿主机上的调试程序可对扫描寄存器中内容进行I/O操作
+                                                </li>
+                                                <li>
+                                                    JTAG标准为片上测试技术的一种国际标准，允许多个芯片的BSR通过JTAG串联
+                                                </li>
+                                                <li>
+                                                    JTAG标准规定TAP控制器中有两种寄存器：数据寄存器（DR）、命令寄存器（IR）
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            JTAG适配器：
+                                            <ul>
+                                                <li>
+                                                    大多数CPU，DSP，FPGA支持JTAG标准（51不支持）
+                                                </li>
+                                                <li>
+                                                    通过JTAG进行调试，无需目标存储器，不占用目标机任何I/O端口（串行）
+                                                </li>
+                                                <li>
+                                                    JTAG支持多种芯片的烧写功能
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            驻留监控软件调试：
+                                            <ul>
+                                                <li>
+                                                    固化在目标机ROM中的程序，成本较低，不需要其他硬件调试和仿真设备（如ARM的Angel）
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            指令集模拟器（ISS）：在宿主机上模拟应用程序在目标机上运行行为的软件工具（ARM的ARMulator，SkyEye）
+                                            <br>应用场合：
+                                            <ul>
+                                                <li>
+                                                    无目标机开发板硬件或成本高
+                                                </li>
+                                                <li>
+                                                    程序模块不需要在实际开发板上执行
+                                                </li>
+                                            </ul>
                                         </li>
                                     </ul>
 
-                                    <b></b>
+                                    <b>ARM ADS</b>：
                                     <ul>
                                         <li>
-
+                                            一个工程项目中至少应包含一个生成目标
+                                            <br>ARM提供的可执行输出文件模板包括
+                                            <ul>
+                                                <li>
+                                                    Debug生成的输出文件包含所有调试信息
+                                                </li>
+                                                <li>
+                                                    Release生成的输出文件不包含调试信息，用于生成实际发行的软件
+                                                </li>
+                                                <li>
+                                                    DebugRel生成的输出文件包含基本调试信息
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li>
-                                            
+                                            连接顺序：
+                                            <ul>
+                                                <li>
+                                                    地址映射关系简单：使用编译、连接选项确定输入文件的连接顺序
+                                                </li>
+                                                <li>
+                                                    地址映射关系复杂：使用Scatter格式的文件（文本文件）确定连接顺序
+                                                    <br>一个Scatter配置文件通常要描述1个下载时域、若干运行时域
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            工程项目建立：
+                                            <br>添加已存在文件时：
+                                            <ul>
+                                                <li>
+                                                    文件扩展名必须在文件映射表中有定义
+                                                </li>
+                                                <li>
+                                                    生成目标的输入文件在工程项目中不能重名
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            连接中的地址映射：对代码或数据进行存储空间的地址分配
+                                            <br>编译后目标文件中的段（信息存储方式）
+                                            <ul>
+                                                <li>
+                                                    RO段：代码存储区和常数存储区，只读
+                                                </li>
+                                                <li>
+                                                    RW段：初始值非0的全局变量数据区，可读可写
+                                                </li>
+                                                <li>
+                                                    ZI段：初始值为0的全局变量数据区，包括未初始化的全局变量，可读可写
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            下载时域：下载时的存储空间
+                                            <br>运行时域：运行时的存储空间
+                                        </li>
+                                        <li>
+                                            编译与调试：
+                                            <ul>
+                                                <li>
+                                                    编译新添加进入/修改的源文件，生成相应目标文件
+                                                </li>
+                                                <li>
+                                                    连接各目标文件与库文件，生成ELF格式的输出文件
+                                                </li>
+                                                <li>
+                                                    用fromELF转换输出文件的格式
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <b>RVDS工具套件</b>：基于ARM系列CPU开发的工具套件
+                                    <ul>
+                                        <li>
+                                            生成代码紧凑，执行效率高，支持51
+                                        </li>
+                                        <li>
+                                            套件内容：
+                                            <ul>
+                                                <li>
+                                                    工程管理器（IDE）
+                                                </li>
+                                                <li>
+                                                    编译连接器（RVCT）
+                                                </li>
+                                                <li>
+                                                    调试器（RVD）
+                                                </li>
+                                                <li>
+                                                    指令集仿真器（RVISS）
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            功能：
+                                            <ul>
+                                                <li>
+                                                    Trace：记录ARM CPU从开始执行程序到停止所执行的所有动作，包括指令和主存储器访问
+                                                </li>
+                                                <li>
+                                                    Profile：对Trace功能记录的内容进行性能分析
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <b>GNU</b>：
+                                    <ul>
+                                        <li>
+                                            常用于开发基于Linux操作系统的嵌入式软件的工具套件
+                                        </li>
+                                        <li>
+                                            编译时在命令中加入_g参数，生成调试信息
+                                        </li>
+                                        <li>
+                                            GCC：GNU中的工具软件，针对Linux操作系统环境下应用程序的编译工具
+                                            <br>将源程序通过预处理、编译、汇编、连接，转化为可执行文件
+                                            <br>要生成可执行文件，所有被编译和连接的源文件中必须有且仅有一个main函数
+                                        </li>
+                                        <li>
+                                            GCC命令：
+                                            <br>基本格式：gcc [options] [filenames]
+                                            <br>针对不同硬件平台的目标机，基本命令格式不同（arm_linux_gcc）
+                                            <br>GCC命令中的参数：
+                                            <ul>
+                                                <li>
+                                                    -c 仅完成编译，不进行连接，生成.o目标文件
+                                                </li>
+                                                <li>
+                                                    -E 仅完成预处理，不进行后续操作，生成.i文件
+                                                </li>
+                                                <li>
+                                                    -S 仅完成预处理、编译，不进行后续操作，生成.S文件
+                                                </li>
+                                                <li>
+                                                    -o filename_out 确定编译后输出文件名
+                                                </li>
+                                                <li>
+                                                    -g 使编译器在编译时产生用于调试的符号表
+                                                </li>
+                                                <li>
+                                                    -O 确定对程序进行优化编译
+                                                </li>
+                                                <li>
+                                                    -I dirname 将目录名为dirname的目录加入程序头文件的目录列表
+                                                </li>
+                                                <li>
+                                                    -fpic 产生位置无关的目标代码，用于构建共享函数库
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            GDB：程序调试工具，提供单步执行、断点执行功能
+                                            <br>GDB基本命令：
+                                            <ul>
+                                                <li>
+                                                    file 装入需要调试的可执行文件
+                                                </li>
+                                                <li>
+                                                    run 执行当前被调试的文件
+                                                </li>
+                                                <li>
+                                                    kill 终止当前被调试的程序运行
+                                                </li>
+                                                <li>
+                                                    next 执行一行源代码，遇函数调用不进入函数内部
+                                                </li>
+                                                <li>
+                                                    step 执行一行源代码，遇函数调用进入函数内部
+                                                </li>
+                                                <li>
+                                                    break 在代码中设置断点，执行到断点时挂起
+                                                </li>
+                                                <li>
+                                                    watch 观察变量的值
+                                                </li>
+                                                <li>
+                                                    list 列出部分源代码
+                                                </li>
+                                                <li>
+                                                    quit 终止GDB运行
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <b>Web服务器</b>：
+                                    <ul>
+                                        <li>
+                                            嵌入式Web服务器与通用Web服务器的区别：
+                                            <ul>
+                                                <li>
+                                                    嵌入式服务器运行环境中资源较匮乏
+                                                </li>
+                                                <li>
+                                                    嵌入式服务器主要作用是控制、管理设备
+                                                </li>
+                                                <li>
+                                                    嵌入式服务器在系统中优先级较低，不能干扰主要任务的运行
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            基于嵌入式Web服务的应用架构：
+                                            <ul>
+                                                <li>
+                                                    提供一个基于远程控制端的操控方式
+                                                </li>
+                                                <li>
+                                                    B/S操控方式：用户在远程的客户机上，通过浏览器与嵌入式Web服务器交互，操控被嵌入的设备
+                                                </li>
+                                                <li>
+                                                    Web服务器通常与设备的控制系统合为一体
+                                                </li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div>
@@ -5130,7 +5392,7 @@
                             <section id="acknowledgments" role="doc-acknowledgments">
                                 <h2>Acknowledgments</h2>
                                 <div role="paragraph">
-                                    <b>Resources: </b>T
+                                    <b>Resources: </b><a href="https://developer.arm.com/">ARM Developer</a> provides the archives on ARM chips, instruction sets, and softwares for system development.
                                 </div>
 
                                 <div role="paragraph"><b>Competing interests:</b> no competing
