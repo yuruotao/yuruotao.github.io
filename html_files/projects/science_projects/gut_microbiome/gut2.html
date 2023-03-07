@@ -1747,32 +1747,64 @@
                                         <div role="paragraph">
                                             Here we introduce some initialization code in R and Python. We structure the file structure as follow:
                                             <pre class="syntaxhighlight">
-                                                <code class="language-plaintext"># File Structure for R
+                                                <code class="language-plaintext"># File Structure for analysis
 WORKING DIRECTORY
-├───main.R
+├───main.R/main.py
 ├───
 ├───data
 │   ├───input_data.xlsx
 │   └───
 ├───output
 │   ├───figure
-│   └───data</code>
-                                            </pre>
-                                            We perform the majority of our analysis in file <code>main.R</code>, the folder <code>data</code> contains the data we perform our analysis on, the folder <code>output</code> contains the output documents. Now we introduce the initialization steps including import modules, read data files and such.
+│   └───data
+│       ├───output_data.xlsx</code></pre>We perform the majority of our analysis in file <code>main.R</code>, the folder <code>data</code> contains the data we perform our analysis on, the folder <code>output</code> contains the output documents. Now we introduce the initialization steps including import modules, read data files and such. For convenience, the data structure in input data should be arranged as individuals as rows and indicators as columns.
                                             
                                             <pre class="syntaxhighlight">
                                                 <code class="language-r"># Initialization with R
-# get the current working directory named working_directory, if null, set the current directory to working directory
+
+# get the current working directory named working_directory, if not, then set the current directory as the working directory
 working_directory <- getwd()
 if (!is.null(working_directory)) setwd(working_directory)
+
+# Create the file structure
+data_dir = "/data"
+output_dir = "/output"
+output_data_dir = "/output/data"
+output_figure_dir = "/output/figure"
+
+dir.create(file.path(working_directory, data_dir), showWarnings = FALSE)
+dir.create(file.path(working_directory, output_dir), showWarnings = FALSE)
+dir.create(file.path(working_directory, output_data_dir), showWarnings = FALSE)
+dir.create(file.path(working_directory, output_figure_dir), showWarnings = FALSE)
 
 # Load readxl package for later import of excel files
 library("readxl")
 # The parameter 'sheet_name' specifies the sheet to read
-data_file = read_excel(".xlsx", sheet='sheet_name')
-                                                </code>
-                                            </pre>
+data_file = read_excel(paste(working_directory, "/data/input_data.xlsx", sep=""), sheet="Sheet1")
 
+# Save the data frame file to excel
+library("writexl")
+write_xlsx(data_file, paste(working_directory, "/output/data/output_data.xlsx", sep=""))</code></pre>
+
+<pre class="syntaxhighlight">
+    <code class="language-python"># Initialization with Python
+
+# Create the basic file structure
+import os
+if not os.path.exists('./data'):
+    os.mkdir('./data')
+if not os.path.exists('./output'):
+    os.mkdir('./output')
+    os.mkdir('./output/figure')
+    os.mkdir('./output/data')
+
+# The import of csv or xlsx file is usually done with the module named pandas, the parameter 'sheet_name' specifies the sheet to read
+# To read csv, use command pd.read_csv()
+import pandas as pd
+data_file = pd.read_excel("./data/input_data.xlsx", sheet_name="Sheet1")
+
+# Save the data frame file to excel
+data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code></pre>
                                         </div>
                                     </section>
 
