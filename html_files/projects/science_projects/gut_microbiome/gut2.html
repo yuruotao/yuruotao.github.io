@@ -2232,7 +2232,50 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                             other one, it is likely that the two variables are not correlated. We will
                                             introduce the coefficients used for measuring the correlation between
                                             variables below. In this section, we use the <em>correlation</em> library for R.
+
+                                            <pre class="syntaxhighlight">
+                                                <code class="language-r"># Correlation analysis with R
+library("correlation")
+correlation(
+    data_file,
+    data2 = NULL,
+    select = NULL,
+    select2 = NULL,
+    rename = NULL,
+    method = "pearson",
+    p_adjust = "holm",
+    ci = 0.95,
+    bayesian = FALSE,
+    bayesian_prior = "medium",
+    bayesian_ci_method = "hdi",
+    bayesian_test = c("pd", "rope", "bf"),
+    redundant = FALSE,
+    include_factors = FALSE,
+    partial = FALSE,
+    partial_bayesian = FALSE,
+    multilevel = FALSE,
+    ranktransform = FALSE,
+    winsorize = FALSE,
+    verbose = TRUE,
+    standardize_names = getOption("easystats.standardize_names", FALSE)
+)</code></pre>
+                                            <code>data2</code>: if specified, the calculation is between the variables in <code>data_file</code> and <code>data2</code>, inner correlation wouldn't be calculated.
+                                            <br><code>select, select2</code>: similar function with <code>data2</code>, conduct pairwise correlation calculation. Take columns for input, such as <code>select = c("col1", "col2")</code>
+                                            <br><code>rename</code>: only work when the above command is executed, same input requirement as above.
+                                            <br><code>method</code>: specify the correlation coefficient to calculate. We give the parameters in later discussions.
+                                            <br><code>p_adjust</code>: specify the correction method for frequentist correlations. The parameters will be given in later discussions.
+                                            <br><code>ci</code>: short for confidence interval, specify the estimated range of parameter.
+                                            <br><code>bayesian</code>: if selected to be <code>True</code>, the correlation coefficients would be calculated under the Bayesian framework.
+                                            <br><code></code>
+
+
+
+
+                                            Below are the details on correlation coefficients and correction methods.
                                         </div>
+
+
+                                        
                                         <h3>
                                             Pearson Correlation Coefficient
                                         </h3>
@@ -2390,15 +2433,6 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                                     </mrow>
                                                 </semantics>
                                             </math>
-
-
-                                            
-                                            <pre class="syntaxhighlight">
-                                                <code class="language-r"># Spearman Correlation with R
-
-
-                                                </code>
-                                            </pre>
 
                                         </div>
                                         <!-- 2 -->
@@ -3337,6 +3371,13 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                             </div>
                                         </div>
 
+                                        <h3>
+                                            Correction Methods
+                                        </h3>
+                                        <div role="paragraph">
+
+                                        </div>
+                                        
                                         <!--  -->
                                         <h3>
                                             Pearson Correlation Coefficient
