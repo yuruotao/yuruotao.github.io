@@ -1745,32 +1745,33 @@
                                             </a>
                                         </div>
                                         <div role="paragraph">
-                                            Here we introduce some initialization code in R and Python.
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Initialization</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    Python
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p>
-                                                        import numpy as np
-                                                        <br>import
+                                            Here we introduce some initialization code in R and Python. We structure the file structure as follow:
+                                            <pre class="syntaxhighlight">
+                                                <code class="language-plaintext"># File Structure for R
+WORKING DIRECTORY
+├───main.R
+├───
+├───data
+│   ├───input_data.xlsx
+│   └───
+├───output
+│   ├───figure
+│   └───data</code>
+                                            </pre>
+                                            We perform the majority of our analysis in file <code>main.R</code>, the folder <code>data</code> contains the data we perform our analysis on, the folder <code>output</code> contains the output documents. Now we introduce the initialization steps including import modules, read data files and such.
+                                            
+                                            <pre class="syntaxhighlight">
+                                                <code class="language-r"># Initialization with R
+# get the current working directory named working_directory, if null, set the current directory to working directory
+working_directory <- getwd()
+if (!is.null(working_directory)) setwd(working_directory)
 
-                                                    </p>
-                                                </div>
-                                                <span class="text-gray text-xxs">
-                                                    R
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
-                                            raw_data = read_csv('data_file.csv')
+# Load readxl package for later import of excel files
+library("readxl")
+# The parameter 'sheet_name' specifies the sheet to read
+data_file = read_excel(".xlsx", sheet='sheet_name')
+                                                </code>
+                                            </pre>
 
                                         </div>
                                     </section>
@@ -2198,7 +2199,7 @@
                                             one. If the change in one variable cause little or no fluctuation in the
                                             other one, it is likely that the two variables are not correlated. We will
                                             introduce the coefficients used for measuring the correlation between
-                                            variables below.
+                                            variables below. In this section, we use the <em>correlation</em> library for R.
                                         </div>
                                         <h3>
                                             Pearson Correlation Coefficient
@@ -2359,27 +2360,11 @@
                                             </math>
 
 
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                        Coefficient</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs text-uppercase">
-                                                    R
-                                                </span>
-                                                <div class="mt-2">
-
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
                                             
                                             <pre class="syntaxhighlight">
-                                                <code class="language-python">import numpy as np 
-ok, you won
-???
+                                                <code class="language-r"># Spearman Correlation with R
+
+
                                                 </code>
                                             </pre>
 
