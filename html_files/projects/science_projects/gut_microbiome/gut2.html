@@ -1388,7 +1388,7 @@
                                             <br><b>Bootstrapping</b>: any test or metric that uses random sampling with
                                             replacement;
                                             <br><b>Partial Correlation</b>: measure the degree of association between 2 random variables with the effect of a set of controlling random variables removed;
-                                            <br><b></b>
+                                            <br><b>k-th Order Statistic</b>: its kth-smallest value;
                                             <br><b></b>
                                             <br><b></b>
 
@@ -1409,14 +1409,14 @@
                                         </h3>
                                         <div class="figure-wrap" data-specific-use="distribute">
                                             <figure id="F1" class="graphic">
-                                                <img src="/content_files/projects/science_prg/gut_microbiome/gut2/figure1."
+                                                <img src="/content_files/projects/science_prg/gut_microbiome/gut2/figure1.svg"
                                                     height="3071" width="4333" aria-labelledby="F1" loading="lazy" />
                                                 <figcaption>
                                                     <div class="caption"><span class="heading">Figure 1</span>. The
                                                         flowchart of data-based mathematical model establishment
                                                         procedure.</div>
                                                     <div class="notes">
-                                                        <div role="doc-footnote">The .</div>
+                                                        <div role="doc-footnote"></div>
                                                     </div>
                                                 </figcaption>
                                             </figure>
@@ -3173,18 +3173,342 @@ correlation(
                                             Percentage Bend Correlation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
+                                            <b>Usage</b>: more robust to outliers and efficient, less type 1 error rates
                                             <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
+                           
+                                            <b>Definition</b>:
                                             <ol>
                                                 <li>
-
+                                                    Select <math>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <mi>&#x03B2;</mi><mo>&#x2208;</mo><mfenced close="]" open="[">
+                                                           <mrow>
+                                                            <mn>0</mn><mo>,</mo><mn>0.5</mn></mrow>
+                                                          </mfenced></mrow>
+                                                        </semantics>
+                                                       </math>, where higher <math>
+                                                        <semantics>
+                                                         <mi>&#x03B2;</mi>
+                                                        </semantics>
+                                                       </math> results in higher breaking point, then calculate the variable <math>
+                                                        <semantics>
+                                                         <mi>m</mi>
+                                                        </semantics>
+                                                       </math>
+                                                        as below, and round to the nearest integer.
                                                 </li>
+                                                <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <mi>m</mi><mo>=</mo><mn>0.5</mn><mo>+</mo><mo stretchy='false'>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>&#x03B2;</mi><mo stretchy='false'>)</mo><mi>n</mi></mrow>
+                                                  
+                                                    </semantics>
+                                                   </math>
+                                                   
                                                 <li>
-
+                                                    Calculate the distances between the observed values and the median, arrange in an ascending order, and calculate the <math>
+                                                        <semantics>
+                                                         <mi>m</mi>
+                                                        </semantics>
+                                                       </math>
+                                                       -th order Statistic of <math>
+                                                        <semantics>
+                                                         <mi>W</mi>
+                                                        </semantics>
+                                                       </math>
+                                                       
                                                 </li>
+                                                <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <mtable equalrows='true' equalcolumns='true'>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>W</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo>=</mo><mfenced close="&#x2016;" open="&#x2016;">
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>x</mi>
+                                                             <mi>i</mi>
+                                                            </msub>
+                                                            <mo>&#x2212;</mo><mi>m</mi><mi>e</mi><mi>d</mi><mo stretchy='false'>(</mo><mi>X</mi><mo stretchy='false'>)</mo></mrow>
+                                                          </mfenced></mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <mover accent='true'>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>W</mi>
+                                                             <mi>x</mi>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mo stretchy='true'>&#x005E;</mo>
+                                                          </mover>
+                                                          <mo>=</mo><mi>W</mi><mo stretchy='false'>(</mo><mi>m</mi><mo stretchy='false'>)</mo></mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       
+                                                      </mtable></mrow>
+                                                    </semantics>
+                                                   </math>
+                                                   
+                                                <li>
+                                                    Sort the values of X, and compute the number of values of <math>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <mfrac>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>X</mi>
+                                                             <mi>i</mi>
+                                                            </msub>
+                                                            <mo>&#x2212;</mo><msub>
+                                                             <mi>M</mi>
+                                                             <mi>x</mi>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mrow>
+                                                            <mover accent='true'>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>W</mi>
+                                                               <mi>x</mi>
+                                                              </msub>
+                                                              </mrow>
+                                                             <mo stretchy='true'>&#x005E;</mo>
+                                                            </mover>
+                                                            </mrow>
+                                                          </mfrac>
+                                                          </mrow>
+                                                        </semantics>
+                                                       </math>, count the numbers of value greater/lesser than 1/-1, store in <math>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>i</mi>
+                                                           <mn>1</mn>
+                                                          </msub>
+                                                          </mrow>
+                                                         
+                                                        </semantics>
+                                                       </math>, <math>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>i</mi>
+                                                           <mn>2</mn>
+                                                          </msub>
+                                                          </mrow>
+                                                         
+                                                        </semantics>
+                                                       </math> respectively, then calculate follow the procedure below. Similar procedure for Y, the variables are labeled with y as subscript.
+                                                       
+                                                       
+                                                </li>
+                                                <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <mtable equalrows='true' equalcolumns='true'>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>S</mi>
+                                                           <mi>x</mi>
+                                                          </msub>
+                                                          <mo>=</mo><mstyle displaystyle='true'>
+                                                           <munderover>
+                                                            <mo>&#x2211;</mo>
+                                                            <mrow>
+                                                             <mi>i</mi><mo>=</mo><msub>
+                                                              <mi>i</mi>
+                                                              <mn>1</mn>
+                                                             </msub>
+                                                             <mo>+</mo><mn>1</mn></mrow>
+                                                            <mrow>
+                                                             <mi>n</mi><mo>&#x2212;</mo><msub>
+                                                              <mi>i</mi>
+                                                              <mn>2</mn>
+                                                             </msub>
+                                                             </mrow>
+                                                           </munderover>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>X</mi>
+                                                             <mi>i</mi>
+                                                            </msub>
+                                                            </mrow>
+                                                          </mstyle></mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <mover accent='true'>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>&#x03A6;</mi>
+                                                             <mi>x</mi>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mo stretchy='true'>&#x005E;</mo>
+                                                          </mover>
+                                                          <mo>=</mo><mfrac>
+                                                           <mrow>
+                                                            <mover accent='true'>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>W</mi>
+                                                               <mi>x</mi>
+                                                              </msub>
+                                                              </mrow>
+                                                             <mo stretchy='true'>&#x005E;</mo>
+                                                            </mover>
+                                                            <mo stretchy='false'>(</mo><msub>
+                                                             <mi>i</mi>
+                                                             <mn>2</mn>
+                                                            </msub>
+                                                            <mo>&#x2212;</mo><mi>i</mi><mmultiscripts>
+                                                             <mo stretchy='false'>)</mo>
+                                                             <mprescripts></mprescripts>
+                                                             <mn>1</mn>
+                                                             <none></none>
+                                                            </mmultiscripts>
+                                                            <mo>+</mo><msub>
+                                                             <mi>S</mi>
+                                                             <mi>x</mi>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mrow>
+                                                            <mi>n</mi><mo>&#x2212;</mo><msub>
+                                                             <mi>i</mi>
+                                                             <mn>1</mn>
+                                                            </msub>
+                                                            <mo>&#x2212;</mo><mi>i</mi><mmultiscripts>
+                                                             <mrow></mrow>
+                                                             <mprescripts></mprescripts>
+                                                             <mn>2</mn>
+                                                             <none></none>
+                                                            </mmultiscripts>
+                                                            </mrow>
+                                                          </mfrac>
+                                                          </mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>U</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo>=</mo><mfrac>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>X</mi>
+                                                             <mi>i</mi>
+                                                            </msub>
+                                                            <mo>&#x2212;</mo><mover accent='true'>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>&#x03A6;</mi>
+                                                               <mi>x</mi>
+                                                              </msub>
+                                                              </mrow>
+                                                             <mo stretchy='true'>&#x005E;</mo>
+                                                            </mover>
+                                                            </mrow>
+                                                           <mrow>
+                                                            <mover accent='true'>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>W</mi>
+                                                               <mi>x</mi>
+                                                              </msub>
+                                                              </mrow>
+                                                             <mo stretchy='true'>&#x005E;</mo>
+                                                            </mover>
+                                                            </mrow>
+                                                          </mfrac>
+                                                          </mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       
+                                                      </mtable></mrow>
+                                              
+                                                    </semantics>
+                                                   </math>
+                                                   
+                                                <li>
+                                                    Define the function and calculate the terms below.
+                                                </li>
+                                                <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <mtable equalrows='true' equalcolumns='true'>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <mi>&#x03B3;</mi><mo stretchy='false'>(</mo><mi>X</mi><mo stretchy='false'>)</mo><mo>=</mo><mi>max</mi><mfenced close="]" open="[">
+                                                           <mrow>
+                                                            <mo>&#x2212;</mo><mn>1</mn><mo>,</mo><mi>min</mi><mo stretchy='false'>(</mo><mn>1</mn><mo>,</mo><mi>x</mi><mo stretchy='false'>)</mo></mrow>
+                                                          </mfenced></mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>A</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo>=</mo><msub>
+                                                           <mi>&#x03B3;</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo stretchy='false'>(</mo><msub>
+                                                           <mi>U</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo stretchy='false'>)</mo></mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>B</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo>=</mo><msub>
+                                                           <mi>&#x03B3;</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo stretchy='false'>(</mo><msub>
+                                                           <mi>V</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo stretchy='false'>)</mo></mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       
+                                                      </mtable></mrow>
+                                                    </semantics>
+                                                   </math>
+                                                   
+                                                <li>
+                                                    The percentage bend correlation is defined as below.
+                                                </li>
+                                  
                                             </ol>
-                                            <b>Definition</b>:
 
                                         </div>
 
