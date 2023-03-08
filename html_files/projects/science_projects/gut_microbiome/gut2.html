@@ -2286,7 +2286,7 @@ correlation(
 
 
                                         
-                                        <h3>
+                                        <h3 id="pearson_cor">
                                             Pearson Correlation Coefficient
                                         </h3>
                                         <div role="paragraph">
@@ -2446,7 +2446,7 @@ correlation(
 
                                         </div>
                                         <!-- 2 -->
-                                        <h3>
+                                        <h3 id="spearman_cor">
                                             Spearman's Rank Correlation Coefficient
                                         </h3>
                                         <div role="paragraph">
@@ -2528,7 +2528,7 @@ correlation(
                                         </div>
 
                                         <!-- 3 -->
-                                        <h3>
+                                        <h3 id="kendall_cor">
                                             Kendall Rank Correlation Coefficient
                                         </h3>
                                         <div role="paragraph">
@@ -2618,7 +2618,7 @@ correlation(
                                         </div>
 
                                         <!-- 4 -->
-                                        <h3>
+                                        <h3 id="biweight_cor">
                                             Biweight Midcorrelation
                                         </h3>
                                         <div role="paragraph">
@@ -2904,7 +2904,7 @@ correlation(
                                         </div>
 
                                         <!-- 5 -->
-                                        <h3>
+                                        <h3 id="distance_cor">
                                             Distance Correlation
                                         </h3>
                                         <div role="paragraph">
@@ -3169,7 +3169,7 @@ correlation(
                                         </div>
 
                                         <!-- 6 -->
-                                        <h3>
+                                        <h3 id="percentage_cor">
                                             Percentage Bend Correlation
                                         </h3>
                                         <div role="paragraph">
@@ -3507,31 +3507,98 @@ correlation(
                                                 <li>
                                                     The percentage bend correlation is defined as below.
                                                 </li>
-                                  
+                                                <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>r</mi>
+                                                       <mrow>
+                                                        <mi>p</mi><mi>b</mi><mi>n</mi></mrow>
+                                                      </msub>
+                                                      <mo>=</mo><mfrac>
+                                                       <mrow>
+                                                        <mstyle displaystyle='true'>
+                                                         <munderover>
+                                                          <mo>&#x2211;</mo>
+                                                          <mrow>
+                                                           <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                          <mi>n</mi>
+                                                         </munderover>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>A</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <msub>
+                                                           <mi>B</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          </mrow>
+                                                        </mstyle></mrow>
+                                                       <mrow>
+                                                        <msqrt>
+                                                         <mrow>
+                                                          <mstyle displaystyle='true'>
+                                                           <munderover>
+                                                            <mo>&#x2211;</mo>
+                                                            <mrow>
+                                                             <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                            <mi>n</mi>
+                                                           </munderover>
+                                                           <mrow>
+                                                            <msubsup>
+                                                             <mi>A</mi>
+                                                             <mi>i</mi>
+                                                             <mn>2</mn>
+                                                            </msubsup>
+                                                            </mrow>
+                                                          </mstyle><mstyle displaystyle='true'>
+                                                           <munderover>
+                                                            <mo>&#x2211;</mo>
+                                                            <mrow>
+                                                             <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                            <mi>n</mi>
+                                                           </munderover>
+                                                           <mrow>
+                                                            <msubsup>
+                                                             <mi>B</mi>
+                                                             <mi>i</mi>
+                                                             <mn>2</mn>
+                                                            </msubsup>
+                                                            </mrow>
+                                                          </mstyle></mrow>
+                                                        </msqrt>
+                                                        </mrow>
+                                                      </mfrac>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>
+                                                   
                                             </ol>
 
                                         </div>
 
                                         <!-- 7 -->
-                                        <h3>
+                                        <h3 id="shepherd_cor">
                                             Shepherd's Pi Correlation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-
+                                            <b>Usage</b>: The Shepherd's Pi correlation is equivalent to <a href="#spearman_cor">Spearman correlation</a> with outliers removed using bootstrapped Mahalanobis distance.
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mfenced close="]" open="[">
+                                                            <mrow>
+                                                                <mo>&#x2212;</mo>
+                                                                <mn>1</mn>
+                                                                <mo>,</mo>
+                                                                <mn>1</mn>
+                                                            </mrow>
+                                                        </mfenced>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                           
                                         </div>
 
                                         <!-- 8 -->
@@ -3539,8 +3606,8 @@ correlation(
                                             Blomqvist's Coefficient
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
+                                            <b>Usage</b>: based on median
+                                            <br><b>Range</b>: 
                                             <br><b>Prerequisites</b>:
                                             <ol>
                                                 <li>
@@ -3551,7 +3618,38 @@ correlation(
                                                 </li>
                                             </ol>
                                             <b>Definition</b>:
-
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>q</mi><mo>=</mo><mfrac>
+                                                   <mrow>
+                                                    <mn>2</mn><mi>n</mi><mmultiscripts>
+                                                     <mrow></mrow>
+                                                     <mprescripts></mprescripts>
+                                                     <mn>1</mn>
+                                                     <none></none>
+                                                    </mmultiscripts>
+                                                    </mrow>
+                                                   <mrow>
+                                                    <mi>n</mi><mmultiscripts>
+                                                     <mo>+</mo>
+                                                     <mprescripts></mprescripts>
+                                                     <mn>1</mn>
+                                                     <none></none>
+                                                    </mmultiscripts>
+                                                    <mi>n</mi><mmultiscripts>
+                                                     <mrow></mrow>
+                                                     <mprescripts></mprescripts>
+                                                     <mn>2</mn>
+                                                     <none></none>
+                                                    </mmultiscripts>
+                                                    </mrow>
+                                                  </mfrac>
+                                                  <mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                
+                                                </semantics>
+                                               </math>
+                                               
                                         </div>
 
                                         <!-- 9 -->
