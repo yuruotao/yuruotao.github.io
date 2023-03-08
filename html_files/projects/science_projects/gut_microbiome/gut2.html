@@ -1387,6 +1387,8 @@
                                             excluding some of the extreme values;
                                             <br><b>Bootstrapping</b>: any test or metric that uses random sampling with
                                             replacement;
+                                            <br><b>Partial Correlation</b>: measure the degree of association between 2 random variables with the effect of a set of controlling random variables removed;
+                                            <br><b></b>
                                             <br><b></b>
                                             <br><b></b>
 
@@ -2266,12 +2268,20 @@ correlation(
                                             <br><code>p_adjust</code>: specify the correction method for frequentist correlations. The parameters will be given in later discussions.
                                             <br><code>ci</code>: short for confidence interval, specify the estimated range of parameter.
                                             <br><code>bayesian</code>: if selected to be <code>True</code>, the correlation coefficients would be calculated under the Bayesian framework.
-                                            <br><code></code>
+                                            <br><code>bayesian_prior</code>: define the parameters of the beta prior distribution, used in the package <em>BayesFactor</em>.
+                                            <br><code>bayesian_ci_method, bayesian_test</code>: go to <em>BayesFactor</em> model_parameters() to see more.
+                                            <br><code>redundant</code>: specify if the correlation should be calculated for symmetric pairs.
+                                            <br><code>include_factors</code>: convert the categorical factors to numeric or use as random effects.
+                                            <br><code>partial</code>: select partial correlation or semi-partial correlation.
+                                            <br><code>partial_bayesian</code>: perform partial correlation analysis under Bayesian framework.
+                                            <br><code>multilevel</code>: if True, the factors are included as random factors, otherwise included as fixed effects in regression.
+                                            <br><code>ranktransform</code>: rank-transform the variables if True.
+                                            <br><code>winsorize</code>: perform winsorization before performing analysis.
+                                            <br><code>standardize_names</code>: get standardized column names.
+                                            
 
 
-
-
-                                            Below are the details on correlation coefficients and correction methods.
+                                            <br>Below are the details on correlation coefficients and correction methods.
                                         </div>
 
 
@@ -2612,18 +2622,22 @@ correlation(
                                             Biweight Midcorrelation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>: a median-based measure of similarity between samples, useful
+                                            <b>Usage</b>: a median-based measure of similarity between samples, less sensitive to outliers, useful
                                             in gene expression profile;
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mfenced close="]" open="[">
+                                                            <mrow>
+                                                                <mo>&#x2212;</mo>
+                                                                <mn>1</mn>
+                                                                <mo>,</mo>
+                                                                <mn>1</mn>
+                                                            </mrow>
+                                                        </mfenced>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
                                             <b>Definition</b>:
                                             <math display='block'>
                                                 <semantics>
@@ -2910,16 +2924,248 @@ correlation(
                                                 </semantics>
                                             </math>
 
-                                            <br><b>Prerequisites</b>:
+                                            <b>Definition</b>:
                                             <ol>
                                                 <li>
-
+                                                    Calculate the pairwise distances and calculate the squared sample distance covariance
                                                 </li>
+                                                <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <mtable equalrows='true' equalcolumns='true'>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>a</mi>
+                                                           <mrow>
+                                                            <mi>j</mi><mo>,</mo><mi>k</mi></mrow>
+                                                          </msub>
+                                                          <mo>=</mo><mfenced close="&#x2016;" open="&#x2016;">
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>X</mi>
+                                                             <mi>j</mi>
+                                                            </msub>
+                                                            <mo>&#x2212;</mo><msub>
+                                                             <mi>X</mi>
+                                                             <mi>k</mi>
+                                                            </msub>
+                                                            </mrow>
+                                                          </mfenced><mo>,</mo><msub>
+                                                           <mi>b</mi>
+                                                           <mrow>
+                                                            <mi>j</mi><mo>,</mo><mi>k</mi></mrow>
+                                                          </msub>
+                                                          <mo>=</mo><mfenced close="&#x2016;" open="&#x2016;">
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>Y</mi>
+                                                             <mi>j</mi>
+                                                            </msub>
+                                                            <mo>&#x2212;</mo><msub>
+                                                             <mi>X</mi>
+                                                             <mi>k</mi>
+                                                            </msub>
+                                                            </mrow>
+                                                          </mfenced></mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>A</mi>
+                                                           <mrow>
+                                                            <mi>j</mi><mo>,</mo><mi>k</mi></mrow>
+                                                          </msub>
+                                                          <mo>=</mo><msub>
+                                                           <mi>a</mi>
+                                                           <mrow>
+                                                            <mi>j</mi><mo>,</mo><mi>k</mi></mrow>
+                                                          </msub>
+                                                          <mo>&#x2212;</mo><mover accent='true'>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>a</mi>
+                                                             <mrow>
+                                                              <mi>j</mi><mo>&#x00B7;</mo></mrow>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mo stretchy='true'>&#x00AF;</mo>
+                                                          </mover>
+                                                          <mo>&#x2212;</mo><mover accent='true'>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>a</mi>
+                                                             <mrow>
+                                                              <mo>&#x00B7;</mo><mi>k</mi></mrow>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mo stretchy='true'>&#x00AF;</mo>
+                                                          </mover>
+                                                          <mo>+</mo><mover accent='true'>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>a</mi>
+                                                             <mrow>
+                                                              <mo>&#x00B7;</mo><mo>&#x00B7;</mo></mrow>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mo stretchy='true'>&#x00AF;</mo>
+                                                          </mover>
+                                                          </mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       <mtr>
+                                                        <mtd>
+                                                         <mrow>
+                                                          <mi>d</mi><mi>C</mi><mi>o</mi><msubsup>
+                                                           <mi>v</mi>
+                                                           <mi>n</mi>
+                                                           <mn>2</mn>
+                                                          </msubsup>
+                                                          <mo stretchy='false'>(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy='false'>)</mo><mo>=</mo><mfrac>
+                                                           <mn>1</mn>
+                                                           <mrow>
+                                                            <msup>
+                                                             <mi>n</mi>
+                                                             <mn>2</mn>
+                                                            </msup>
+                                                            </mrow>
+                                                          </mfrac>
+                                                          <mstyle displaystyle='true'>
+                                                           <munderover>
+                                                            <mo>&#x2211;</mo>
+                                                            <mrow>
+                                                             <mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+                                                            <mi>n</mi>
+                                                           </munderover>
+                                                           <mrow>
+                                                            <mstyle displaystyle='true'>
+                                                             <munderover>
+                                                              <mo>&#x2211;</mo>
+                                                              <mrow>
+                                                               <mi>k</mi><mo>=</mo><mn>1</mn></mrow>
+                                                              <mi>n</mi>
+                                                             </munderover>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>A</mi>
+                                                               <mrow>
+                                                                <mi>j</mi><mo>,</mo><mi>k</mi></mrow>
+                                                              </msub>
+                                                              <msub>
+                                                               <mi>B</mi>
+                                                               <mrow>
+                                                                <mi>j</mi><mo>,</mo><mi>k</mi></mrow>
+                                                              </msub>
+                                                              </mrow>
+                                                            </mstyle></mrow>
+                                                          </mstyle></mrow>
+                                                        </mtd>
+                                                       </mtr>
+                                                       
+                                                      </mtable></mrow>
+                                                    </semantics>
+                                                   </math>
+                                                   
                                                 <li>
+                                                    Calculate the distance variance
 
                                                 </li>
+                                                <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <mi>d</mi><mi>V</mi><mi>a</mi><msubsup>
+                                                       <mi>r</mi>
+                                                       <mi>n</mi>
+                                                       <mn>2</mn>
+                                                      </msubsup>
+                                                      <mo stretchy='false'>(</mo><mi>X</mi><mo stretchy='false'>)</mo><mo>=</mo><mi>d</mi><mi>C</mi><mi>o</mi><msubsup>
+                                                       <mi>v</mi>
+                                                       <mi>n</mi>
+                                                       <mn>2</mn>
+                                                      </msubsup>
+                                                      <mo stretchy='false'>(</mo><mi>X</mi><mo>,</mo><mi>X</mi><mo stretchy='false'>)</mo><mo>=</mo><mfrac>
+                                                       <mn>1</mn>
+                                                       <mrow>
+                                                        <msup>
+                                                         <mi>n</mi>
+                                                         <mn>2</mn>
+                                                        </msup>
+                                                        </mrow>
+                                                      </mfrac>
+                                                      <mstyle displaystyle='true'>
+                                                       <munderover>
+                                                        <mo>&#x2211;</mo>
+                                                        <mrow>
+                                                         <mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+                                                        <mi>n</mi>
+                                                       </munderover>
+                                                       <mrow>
+                                                        <mstyle displaystyle='true'>
+                                                         <munderover>
+                                                          <mo>&#x2211;</mo>
+                                                          <mrow>
+                                                           <mi>k</mi><mo>=</mo><mn>1</mn></mrow>
+                                                          <mi>n</mi>
+                                                         </munderover>
+                                                         <mrow>
+                                                          <msubsup>
+                                                           <mi>A</mi>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mrow></mrow>
+                                                             <mrow>
+                                                              <mi>j</mi><mo>,</mo><mi>k</mi></mrow>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mn>2</mn>
+                                                          </msubsup>
+                                                          </mrow>
+                                                        </mstyle></mrow>
+                                                      </mstyle></mrow>
+                                                    </semantics>
+                                                   </math>
+                                                   
+                                                <li>
+                                                    The distance correlation is defined as the squared root of:
+                                                </li>
+                                                <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <mi>d</mi><mi>C</mi><mi>o</mi><msup>
+                                                       <mi>r</mi>
+                                                       <mn>2</mn>
+                                                      </msup>
+                                                      <mo stretchy='false'>(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy='false'>)</mo><mo>=</mo><mfrac>
+                                                       <mrow>
+                                                        <mi>d</mi><mi>C</mi><mi>o</mi><msup>
+                                                         <mi>v</mi>
+                                                         <mn>2</mn>
+                                                        </msup>
+                                                        <mo stretchy='false'>(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy='false'>)</mo></mrow>
+                                                       <mrow>
+                                                        <msqrt>
+                                                         <mrow>
+                                                          <mi>d</mi><mi>V</mi><mi>a</mi><msup>
+                                                           <mi>r</mi>
+                                                           <mn>2</mn>
+                                                          </msup>
+                                                          <mo stretchy='false'>(</mo><mi>X</mi><mo stretchy='false'>)</mo><mi>d</mi><mi>V</mi><mi>a</mi><msup>
+                                                           <mi>r</mi>
+                                                           <mn>2</mn>
+                                                          </msup>
+                                                          <mo stretchy='false'>(</mo><mi>Y</mi><mo stretchy='false'>)</mo></mrow>
+                                                        </msqrt>
+                                                        </mrow>
+                                                      </mfrac>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>
+                                                   
                                             </ol>
-                                            <b>Definition</b>:
                                         </div>
 
                                         <!-- 6 -->
