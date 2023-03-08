@@ -1717,6 +1717,90 @@
                                                                     </td>
                                                                 </tr>
 
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                             <mrow>
+                                                                              <msub>
+                                                                               <mi>N</mi>
+                                                                               <mi>C</mi>
+                                                                              </msub>
+                                                                              </mrow>
+                                                                            </semantics>
+                                                                           </math>
+                                                                                            
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The number of concordant pairs
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                             <mrow>
+                                                                              <msub>
+                                                                               <mi>N</mi>
+                                                                               <mi>D</mi>
+                                                                              </msub>
+                                                                              </mrow>
+                                                                            </semantics>
+                                                                           </math>
+                                                                           
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The number of disconcordant pairs
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                             <mrow>
+                                                                              <msub>
+                                                                               <mi>N</mi>
+                                                                               <mi>T</mi>
+                                                                              </msub>
+                                                                              </mrow>
+                                                                            </semantics>
+                                                                           </math>
+                                                                                 
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The number of tied pairs
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="center" scope="row">
+                                                                        <math display='block'>
+                                                                            <semantics>
+                                                                             <mrow>
+                                                                              <msub>
+                                                                               <mi>N</mi>
+                                                                               <mi>R</mi>
+                                                                              </msub>
+                                                                              </mrow>
+                                                                            </semantics>
+                                                                           </math>
+                                                                                 
+
+                                                                    </th>
+
+                                                                    <td data-xml-align="center" scope="col">
+                                                                        The number of reverse concordant pairs
+                                                                    </td>
+                                                                </tr>
+
 
 
                                                             </tbody>
@@ -2290,7 +2374,9 @@ correlation(
                                             Pearson Correlation Coefficient
                                         </h3>
                                         <div role="paragraph">
+                                            
                                             <b>Usage</b>: measure of linear correlation between two sets of data;
+                                            <br><b>Parameter</b>: <code>"pearson"</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -2452,6 +2538,7 @@ correlation(
                                         <div role="paragraph">
                                             <b>Usage</b>: assess how well the relationship between two ordinal variables
                                             can be described using a monotonic function;
+                                            <br><b>Parameter</b>: <code>""</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -2535,6 +2622,7 @@ correlation(
                                             <b>Usage</b>: measure the ordinal association between two measured
                                             quantities, often used to establish whether two variables may be regarded as
                                             statistically dependent;
+                                            <br><b>Parameter</b>: <code>""</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -2624,6 +2712,7 @@ correlation(
                                         <div role="paragraph">
                                             <b>Usage</b>: a median-based measure of similarity between samples, less sensitive to outliers, useful
                                             in gene expression profile;
+                                            <br><b>Parameter</b>: <code>""</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -2638,7 +2727,7 @@ correlation(
                                                     </mrow>
                                                 </semantics>
                                             </math>
-                                            <b>Definition</b>:
+                                            <br><b>Definition</b>:
                                             <math display='block'>
                                                 <semantics>
                                                     <mrow>
@@ -2911,6 +3000,7 @@ correlation(
                                             <b>Usage</b>: measure the dependence between two paired random vectors of
                                             arbitrary, not necessarily equal, dimension, both linear and nonlinear
                                             association are measured;
+                                            <br><b>Parameter</b>: <code>""</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -2924,7 +3014,7 @@ correlation(
                                                 </semantics>
                                             </math>
 
-                                            <b>Definition</b>:
+                                            <br><b>Definition</b>:
                                             <ol>
                                                 <li>
                                                     Calculate the pairwise distances and calculate the squared sample distance covariance
@@ -3174,9 +3264,23 @@ correlation(
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>: more robust to outliers and efficient, less type 1 error rates
-                                            <br><b>Range</b>:
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mfenced close="]" open="[">
+                                                            <mrow>
+                                                                <mo>&#x2212;</mo>
+                                                                <mn>1</mn>
+                                                                <mo>,</mo>
+                                                                <mn>1</mn>
+                                                            </mrow>
+                                                        </mfenced>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
                            
-                                            <b>Definition</b>:
+                                            <br><b>Definition</b>:
                                             <ol>
                                                 <li>
                                                     Select <math>
@@ -3584,6 +3688,7 @@ correlation(
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>: The Shepherd's Pi correlation is equivalent to <a href="#spearman_cor">Spearman correlation</a> with outliers removed using bootstrapped Mahalanobis distance.
+                                            <br><b>Parameter</b>: <code>""</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -3602,22 +3707,60 @@ correlation(
                                         </div>
 
                                         <!-- 8 -->
-                                        <h3>
+                                        <h3 id="blomqvist_cor">
                                             Blomqvist's Coefficient
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>: based on median
-                                            <br><b>Range</b>: 
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
+                                            <b>Usage</b>: based on median, measure the monotonic associations.
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                    <mrow>
+                                                        <mfenced close="]" open="[">
+                                                            <mrow>
+                                                                <mo>&#x2212;</mo>
+                                                                <mn>1</mn>
+                                                                <mo>,</mo>
+                                                                <mn>1</mn>
+                                                            </mrow>
+                                                        </mfenced>
+                                                    </mrow>
+                                                </semantics>
+                                            </math>
+                                            <br><b>Definition</b>: divide the x-y plane using two lines, <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>x</mi><mo>=</mo><mi>m</mi><mi>e</mi><mi>d</mi><mo stretchy='false'>(</mo><mi>X</mi><mo stretchy='false'>)</mo></mrow>
+                                                
+                                                </semantics>
+                                               </math> and <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>y</mi><mo>=</mo><mi>m</mi><mi>e</mi><mi>d</mi><mo stretchy='false'>(</mo><mi>Y</mi><mo stretchy='false'>)</mo></mrow>
+                                                 
+                                                </semantics>
+                                               </math>. <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>n</mi>
+                                                   <mn>1</mn>
+                                                  </msub>
+                                                  </mrow>
+                                                </semantics>
+                                               </math> is the number of sample points on the 1st or the 3rd quadrant, <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>n</mi>
+                                                   <mn>2</mn>
+                                                  </msub>
+                                                  </mrow>
+                                                </semantics>
+                                               </math> for the other 2 quadrants.
+                                               
+                                               
+                                               
                                             <math display='block'>
                                                 <semantics>
                                                  <mrow>
@@ -3657,20 +3800,219 @@ correlation(
                                             Hoeffding's D
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
+                                            <b>Usage</b>: rank-based measure of association, including non-linear associations
+                                            <br><b>Parameter</b>: <code>"hoeffding"</code>
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mfenced close="]" open="[">
+                                                   <mrow>
+                                                    <mo>&#x2212;</mo><mn>0.5</mn><mo>,</mo><mn>1</mn></mrow>
+                                                  </mfenced></mrow>
+                                                </semantics>
+                                               </math>, larger values indicates stronger associations.
+                                               
+                        
+                                            <br><b>Definition</b>: Hoeffding's D is calculated using
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>D</mi><mo>=</mo><mn>30</mn><mfrac>
+                                                   <mrow>
+                                                    <mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>2</mn><mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>3</mn><mo stretchy='false'>)</mo><msub>
+                                                     <mi>D</mi>
+                                                     <mn>1</mn>
+                                                    </msub>
+                                                    <mo>+</mo><msub>
+                                                     <mi>D</mi>
+                                                     <mn>2</mn>
+                                                    </msub>
+                                                    <mo>&#x2212;</mo><mn>2</mn><mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>2</mn><mo stretchy='false'>)</mo><msub>
+                                                     <mi>D</mi>
+                                                     <mn>3</mn>
+                                                    </msub>
+                                                    </mrow>
+                                                   <mrow>
+                                                    <mi>n</mi><mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>2</mn><mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>3</mn><mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>4</mn><mo stretchy='false'>)</mo></mrow>
+                                                  </mfrac>
+                                                  </mrow>
+                                                </semantics>
+                                               </math>
+                                            in which 
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mtable equalrows='true' equalcolumns='true'>
+                                                   <mtr>
+                                                    <mtd>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>D</mi>
+                                                       <mn>1</mn>
+                                                      </msub>
+                                                      <mo>=</mo><mstyle displaystyle='true'>
+                                                       <munder>
+                                                        <mo>&#x2211;</mo>
+                                                        <mi>i</mi>
+                                                       </munder>
+                                                       <mrow>
+                                                        <mo stretchy='false'>(</mo><msub>
+                                                         <mi>Q</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><mn>1</mn><mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><msub>
+                                                         <mi>Q</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><mn>2</mn><mo stretchy='false'>)</mo></mrow>
+                                                      </mstyle></mrow>
+                                                    </mtd>
+                                                   </mtr>
+                                                   <mtr>
+                                                    <mtd>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>D</mi>
+                                                       <mn>2</mn>
+                                                      </msub>
+                                                      <mo>=</mo><mstyle displaystyle='true'>
+                                                       <munder>
+                                                        <mo>&#x2211;</mo>
+                                                        <mi>i</mi>
+                                                       </munder>
+                                                       <mrow>
+                                                        <mo stretchy='false'>(</mo><msub>
+                                                         <mi>R</mi>
+                                                         <mrow>
+                                                          <mi>i</mi><mi>x</mi></mrow>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><mn>1</mn><mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><msub>
+                                                         <mi>R</mi>
+                                                         <mrow>
+                                                          <mi>i</mi><mi>x</mi></mrow>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><mn>2</mn><mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><msub>
+                                                         <mi>R</mi>
+                                                         <mrow>
+                                                          <mi>i</mi><mi>y</mi></mrow>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><mn>1</mn><mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><msub>
+                                                         <mi>R</mi>
+                                                         <mrow>
+                                                          <mi>i</mi><mi>y</mi></mrow>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><mn>2</mn><mo stretchy='false'>)</mo></mrow>
+                                                      </mstyle></mrow>
+                                                    </mtd>
+                                                   </mtr>
+                                                   <mtr>
+                                                    <mtd>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>D</mi>
+                                                       <mn>3</mn>
+                                                      </msub>
+                                                      <mo>=</mo><mstyle displaystyle='true'>
+                                                       <munder>
+                                                        <mo>&#x2211;</mo>
+                                                        <mi>i</mi>
+                                                       </munder>
+                                                       <mrow>
+                                                        <mo stretchy='false'>(</mo><msub>
+                                                         <mi>R</mi>
+                                                         <mrow>
+                                                          <mi>i</mi><mi>x</mi></mrow>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><mn>1</mn><mo stretchy='false'>)</mo><mo stretchy='false'>(</mo><msub>
+                                                         <mi>R</mi>
+                                                         <mrow>
+                                                          <mi>i</mi><mi>y</mi></mrow>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><mn>2</mn><mo stretchy='false'>)</mo></mrow>
+                                                      </mstyle><mo stretchy='false'>(</mo><msub>
+                                                       <mi>Q</mi>
+                                                       <mi>i</mi>
+                                                      </msub>
+                                                      <mo>&#x2212;</mo><mn>1</mn><mo stretchy='false'>)</mo></mrow>
+                                                    </mtd>
+                                                   </mtr>
+                                                   
+                                                  </mtable></mrow>
+                                                </semantics>
+                                               </math>
+                                               
+                                               <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>R</mi>
+                                                   <mrow>
+                                                    <mi>i</mi><mi>x</mi></mrow>
+                                                  </msub>
+                                                  </mrow>
+                                                </semantics>
+                                               </math> is the rank of i-th value of X, <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>Q</mi>
+                                                   <mi>i</mi>
+                                                  </msub>
+                                                  </mrow>
+                                                </semantics>
+                                               </math> is the bivariant rank of the i-th pair.
+                           
+                                        </div>
 
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
+                                        <h3>
+                                            Somer's D
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: rank-based measure of association between a binary variable and a continuous variable. Asymmetric.
+                                            <br><b>Parameter</b>: <code>"somer"</code>
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mfenced close="]" open="[">
+                                                   <mrow>
+                                                  <mn>0</mn><mo>,</mo><mn>1</mn></mrow>
+                                                  </mfenced></mrow>
+                                                </semantics>
+                                               </math>
+                                            <br><b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>D</mi><mo>=</mo><mfrac>
+                                                   <mrow>
+                                                    <msub>
+                                                     <mi>N</mi>
+                                                     <mi>C</mi>
+                                                    </msub>
+                                                    <mo>&#x2212;</mo><msub>
+                                                     <mi>N</mi>
+                                                     <mi>D</mi>
+                                                    </msub>
+                                                    </mrow>
+                                                   <mrow>
+                                                    <msub>
+                                                     <mi>N</mi>
+                                                     <mi>C</mi>
+                                                    </msub>
+                                                    <mo>+</mo><msub>
+                                                     <mi>N</mi>
+                                                     <mi>D</mi>
+                                                    </msub>
+                                                    <mo>+</mo><msub>
+                                                     <mi>N</mi>
+                                                     <mi>T</mi>
+                                                    </msub>
+                                                    </mrow>
+                                                  </mfrac>
+                                                  </mrow>
+                                                </semantics>
+                                               </math>
+                                               
                                         </div>
 
                                         <!-- 10 -->
@@ -3678,18 +4020,47 @@ correlation(
                                             Gamma Correlation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
+                                            <b>Usage</b>: measure the rank correlation between 2 vectors of numbers
+                                            <br><b>Parameter</b>: <code>"gamma"</code>
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mfenced close="]" open="[">
+                                                   <mrow>
+                                                    <mo>&#x2212;</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow>
+                                                  </mfenced></mrow>
+                                                </semantics>
+                                               </math>
                                             <b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>G</mi><mo>=</mo><mfrac>
+                                                   <mrow>
+                                                    <msub>
+                                                     <mi>N</mi>
+                                                     <mi>C</mi>
+                                                    </msub>
+                                                    <mo>&#x2212;</mo><msub>
+                                                     <mi>N</mi>
+                                                     <mi>R</mi>
+                                                    </msub>
+                                                    </mrow>
+                                                   <mrow>
+                                                    <msub>
+                                                     <mi>N</mi>
+                                                     <mi>C</mi>
+                                                    </msub>
+                                                    <mo>+</mo><msub>
+                                                     <mi>N</mi>
+                                                     <mi>R</mi>
+                                                    </msub>
+                                                    </mrow>
+                                                  </mfrac>
+                                                  </mrow>
+                                                </semantics>
+                                               </math>
+                                               
 
 
                                         </div>
@@ -3699,40 +4070,243 @@ correlation(
                                             Gaussian Rank Correlation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-
+                                            <b>Usage</b>: convert the distribution of data to Gaussian distribution through transformation, only left the ordinal information. More robust.
+                                            <br><b>Parameter</b>: <code>"gaussian"</code>
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mfenced close="]" open="[">
+                                                   <mrow>
+                                                    <mo>&#x2212;</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow>
+                                                  </mfenced></mrow>
+                                                </semantics>
+                                               </math>
+                                               
+            
+                                            <br><b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>G</mi><mi>R</mi><mi>c</mi><mi>o</mi><mi>r</mi><mo>=</mo><mfrac>
+                                                   <mrow>
+                                                    <mstyle displaystyle='true'>
+                                                     <munderover>
+                                                      <mo>&#x2211;</mo>
+                                                      <mrow>
+                                                       <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                      <mi>n</mi>
+                                                     </munderover>
+                                                     <mrow>
+                                                      <msup>
+                                                       <mi>&#x03A6;</mi>
+                                                       <mrow>
+                                                        <mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                      </msup>
+                                                      <mo stretchy='false'>(</mo><mfrac>
+                                                       <mrow>
+                                                        <mi>R</mi><mo stretchy='false'>(</mo><msub>
+                                                         <mi>x</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        <mo stretchy='false'>)</mo></mrow>
+                                                       <mrow>
+                                                        <mi>n</mi><mo>+</mo><mn>1</mn></mrow>
+                                                      </mfrac>
+                                                      <mo stretchy='false'>)</mo><msup>
+                                                       <mi>&#x03A6;</mi>
+                                                       <mrow>
+                                                        <mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                      </msup>
+                                                      <mo stretchy='false'>(</mo><mfrac>
+                                                       <mrow>
+                                                        <mi>R</mi><mo stretchy='false'>(</mo><msub>
+                                                         <mi>y</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        <mo stretchy='false'>)</mo></mrow>
+                                                       <mrow>
+                                                        <mi>n</mi><mo>+</mo><mn>1</mn></mrow>
+                                                      </mfrac>
+                                                      <mo stretchy='false'>)</mo></mrow>
+                                                    </mstyle></mrow>
+                                                   <mrow>
+                                                    <msqrt>
+                                                     <mrow>
+                                                      <mstyle displaystyle='true'>
+                                                       <munderover>
+                                                        <mo>&#x2211;</mo>
+                                                        <mrow>
+                                                         <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                        <mi>n</mi>
+                                                       </munderover>
+                                                       <mrow>
+                                                        <msup>
+                                                         <mi>&#x03A6;</mi>
+                                                         <mrow>
+                                                          <mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                        </msup>
+                                                        <msup>
+                                                         <mrow>
+                                                          <mo stretchy='false'>(</mo><mfrac>
+                                                           <mrow>
+                                                            <mi>R</mi><mo stretchy='false'>(</mo><msub>
+                                                             <mi>x</mi>
+                                                             <mi>i</mi>
+                                                            </msub>
+                                                            <mo stretchy='false'>)</mo></mrow>
+                                                           <mrow>
+                                                            <mi>n</mi><mo>+</mo><mn>1</mn></mrow>
+                                                          </mfrac>
+                                                          <mo stretchy='false'>)</mo></mrow>
+                                                         <mn>2</mn>
+                                                        </msup>
+                                                        <msup>
+                                                         <mi>&#x03A6;</mi>
+                                                         <mrow>
+                                                          <mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                        </msup>
+                                                        <msup>
+                                                         <mrow>
+                                                          <mo stretchy='false'>(</mo><mfrac>
+                                                           <mrow>
+                                                            <mi>R</mi><mo stretchy='false'>(</mo><msub>
+                                                             <mi>y</mi>
+                                                             <mi>i</mi>
+                                                            </msub>
+                                                            <mo stretchy='false'>)</mo></mrow>
+                                                           <mrow>
+                                                            <mi>n</mi><mo>+</mo><mn>1</mn></mrow>
+                                                          </mfrac>
+                                                          <mo stretchy='false'>)</mo></mrow>
+                                                         <mn>2</mn>
+                                                        </msup>
+                                                        </mrow>
+                                                      </mstyle></mrow>
+                                                    </msqrt>
+                                                    </mrow>
+                                                  </mfrac>
+                                                  </mrow>
+                                                </semantics>
+                                               </math>
+                                               
                                         </div>
+                                        
 
                                         <!-- 12 -->
                                         <h3>
                                             Point-Biserial and Biserial Correlation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
+                                            <b>Usage</b>: one continuous variable and one binary variable.
+                                            <br><b>Parameter</b>: <code>"biserial"</code>
+                                            <br><b>Range</b>: <math >
+                                                <semantics>
+                                                 <mrow>
+                                                  <mfenced close="]" open="[">
+                                                   <mrow>
+                                                    <mn>0</mn><mo>,</mo><mn>1</mn></mrow>
+                                                  </mfenced></mrow>
+                                                </semantics>
+                                               </math>
+                                               
                                             <br><b>Prerequisites</b>:
                                             <ol>
                                                 <li>
-
+                                                    For Point-Biserial, the assumption are equal to the Pearson's.
                                                 </li>
                                                 <li>
-
+                                                    For Biserial, the binary variable should has an underlying continuity (cannot be measured, such as feeling good and bad)
                                                 </li>
                                             </ol>
                                             <b>Definition</b>:
+                                                <ul>
+                                                    <li>
+                                                        Point-Biserial: assume Y as the binary variable.
+                                                        <math display='block'>
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>r</mi>
+                                                               <mrow>
+                                                                <mi>p</mi><mi>b</mi></mrow>
+                                                              </msub>
+                                                              <mo>=</mo><mfrac>
+                                                               <mrow>
+                                                                <msub>
+                                                                 <mi>M</mi>
+                                                                 <mn>1</mn>
+                                                                </msub>
+                                                                <mo>&#x2212;</mo><msub>
+                                                                 <mi>M</mi>
+                                                                 <mn>0</mn>
+                                                                </msub>
+                                                                </mrow>
+                                                               <mrow>
+                                                                <msub>
+                                                                 <mi>&#x03C3;</mi>
+                                                                 <mi>X</mi>
+                                                                </msub>
+                                                                </mrow>
+                                                              </mfrac>
+                                                              <msqrt>
+                                                               <mrow>
+                                                                <mfrac>
+                                                                 <mrow>
+                                                                  <msub>
+                                                                   <mi>n</mi>
+                                                                   <mrow>
+                                                                    <mi>Y</mi><mo>=</mo><mn>1</mn></mrow>
+                                                                  </msub>
+                                                                  <msub>
+                                                                   <mi>n</mi>
+                                                                   <mrow>
+                                                                    <mi>Y</mi><mo>=</mo><mn>0</mn></mrow>
+                                                                  </msub>
+                                                                  </mrow>
+                                                                 <mrow>
+                                                                  <msup>
+                                                                   <mi>n</mi>
+                                                                   <mn>2</mn>
+                                                                  </msup>
+                                                                  </mrow>
+                                                                </mfrac>
+                                                                </mrow>
+                                                              </msqrt>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math>
+                                                           
+                                                    </li>
+                                                    <li>Biserial:
+                                                        <math display='block'>
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>r</mi>
+                                                               <mrow>
+                                                                <mi>p</mi><mi>b</mi></mrow>
+                                                              </msub>
+                                                              <mo>=</mo><mn>2</mn><mfrac>
+                                                               <mrow>
+                                                                <msub>
+                                                                 <mi>n</mi>
+                                                                 <mrow>
+                                                                  <mi>Y</mi><mo>=</mo><mn>1</mn></mrow>
+                                                                </msub>
+                                                                <msub>
+                                                                 <mi>n</mi>
+                                                                 <mrow>
+                                                                  <mi>Y</mi><mo>=</mo><mn>0</mn></mrow>
+                                                                </msub>
+                                                                </mrow>
+                                                               <mi>n</mi>
+                                                              </mfrac>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math>
+                                                           
+                                                    </li>
+                                                </ul>
 
 
                                         </div>
@@ -3742,18 +4316,19 @@ correlation(
                                             Winsorized Correlation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
+                                            <b>Usage</b>: calculate the correlation of variables that have been winsorized.
+                                            <br><b>Parameter</b>: <code>"winsorize"</code>
+                                            <br><b>Range</b>: <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mfenced close="]" open="[">
+                                                   <mrow>
+                                                    <mo>&#x2212;</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow>
+                                                  </mfenced></mrow>
+                                                </semantics>
+                                               </math>
+                                               
+                                            <b>Definition</b>: same as Pearson's correlation, but only winsorized.
 
                                         </div>
 
@@ -3762,15 +4337,25 @@ correlation(
                                             Polychoric Correlation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
+                                            <b>Usage</b>: theorized normally distributed continuous latent variables, from 2 observed ordinal variables.
+                                            <br><b>Parameter</b>: <code>"polychoric"</code>
+                                            <br><b>Range</b>: <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mfenced close="]" open="[">
+                                                   <mrow>
+                                                    <mo>&#x2212;</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow>
+                                                  </mfenced></mrow>
+                                                </semantics>
+                                               </math>
+                                               
                                             <br><b>Prerequisites</b>:
                                             <ol>
                                                 <li>
-
+                                                    The underlying distribution are all normal distribution
                                                 </li>
                                                 <li>
-
+                                                    The variables are ordinal
                                                 </li>
                                             </ol>
                                             <b>Definition</b>:
@@ -3782,18 +4367,20 @@ correlation(
                                             Tetrachoric Correlation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
+                                            <b>Usage</b>: a special case of the polychoric correlation, both observed variables are dichotomous.
+                                            <br><b>Parameter</b>: <code>"tetrachoric"</code>
+                                            <br><b>Range</b>: <math >
+                                                <semantics>
+                                                 <mrow>
+                                                  <mfenced close="]" open="[">
+                                                   <mrow>
+                                                    <mo>&#x2212;</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow>
+                                                  </mfenced></mrow>
+                                                </semantics>
+                                               </math>
+                                               
+                                
+                                            <br><b>Definition</b>:
 
                                         </div>
 
@@ -3803,6 +4390,7 @@ correlation(
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>:
+                                            <br><b>Parameter</b>: <code>""</code>
                                             <br><b>Range</b>:
                                             <br><b>Prerequisites</b>:
                                             <ol>
