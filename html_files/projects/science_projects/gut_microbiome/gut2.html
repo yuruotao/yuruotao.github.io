@@ -4711,11 +4711,10 @@ cor_test(data_file, ...)</code></pre>
                                         <div role="paragraph">
                                             Below is an analysis using the correlation package.
                                             <pre class="syntaxhighlight">
-                                                <code class="language-r"># Spearman Correlation with R
+                                                <code class="language-r"># Correlation analysis with R
     
                                             
-                                                </code>
-                                            </pre>
+                                                </code></pre>
                                         </div>
                                     </section>
 
@@ -4763,10 +4762,64 @@ cor_test(data_file, ...)</code></pre>
                                             Manhattan Distance
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Parameter</b>: <code>""</code>
+                                           
+                                            <b>Parameter</b>: <code>""</code>
                                             <br><b>Definition</b>:
-
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>d</mi><mo stretchy='false'>(</mo><mover accent='true'>
+                                                   <mi>x</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo>,</mo><mover accent='true'>
+                                                   <mi>y</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo stretchy='false'>)</mo><mo>=</mo><mfenced close="&#x2016;" open="&#x2016;">
+                                                   <mrow>
+                                                    <mover accent='true'>
+                                                     <mi>x</mi>
+                                                     <mo stretchy='true'>&#x2192;</mo>
+                                                    </mover>
+                                                    <mo>&#x2212;</mo><mover accent='true'>
+                                                     <mi>y</mi>
+                                                     <mo stretchy='true'>&#x2192;</mo>
+                                                    </mover>
+                                                    </mrow>
+                                                  </mfenced><mo>=</mo><mstyle displaystyle='true'>
+                                                   <munderover>
+                                                    <mo>&#x2211;</mo>
+                                                    <mrow>
+                                                     <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                    <mi>n</mi>
+                                                   </munderover>
+                                                   <mrow>
+                                                    <mfenced close="|" open="|">
+                                                     <mrow>
+                                                      <mover accent='true'>
+                                                       <mrow>
+                                                        <msub>
+                                                         <mi>x</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        </mrow>
+                                                       <mo stretchy='true'>&#x2192;</mo>
+                                                      </mover>
+                                                      <mo>&#x2212;</mo><mover accent='true'>
+                                                       <mrow>
+                                                        <msub>
+                                                         <mi>y</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        </mrow>
+                                                       <mo stretchy='true'>&#x2192;</mo>
+                                                      </mover>
+                                                      </mrow>
+                                                    </mfenced></mrow>
+                                                  </mstyle></mrow>
+                                                </semantics>
+                                               </math>
                                         </div>
 
                                         <!-- 2 -->
@@ -4774,9 +4827,49 @@ cor_test(data_file, ...)</code></pre>
                                             Euclidean Distance
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Parameter</b>: <code>""</code>
+                                           
+                                            <b>Parameter</b>: <code>""</code>
                                             <br><b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>d</mi><mo stretchy='false'>(</mo><mover accent='true'>
+                                                   <mi>x</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo>,</mo><mover accent='true'>
+                                                   <mi>y</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo stretchy='false'>)</mo><mo>=</mo><msqrt>
+                                                   <mrow>
+                                                    <mstyle displaystyle='true'>
+                                                     <munderover>
+                                                      <mo>&#x2211;</mo>
+                                                      <mrow>
+                                                       <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                      <mi>n</mi>
+                                                     </munderover>
+                                                     <mrow>
+                                                      <msup>
+                                                       <mrow>
+                                                        <mo stretchy='false'>(</mo><msub>
+                                                         <mi>x</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><msub>
+                                                         <mi>y</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        <mo stretchy='false'>)</mo></mrow>
+                                                       <mn>2</mn>
+                                                      </msup>
+                                                      </mrow>
+                                                    </mstyle></mrow>
+                                                  </msqrt>
+                                                  </mrow>
+                                                </semantics>
+                                               </math>          
                                         </div>
 
                                         <!-- Mahalanobis Distance -->
@@ -4784,9 +4877,53 @@ cor_test(data_file, ...)</code></pre>
                                             Mahalanobis Distance
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
+                                            <b>Usage</b>: a measure of the distance between a point P and a distribution D, how many standard deviations away P is from the mean of D
                                             <br><b>Parameter</b>: <code>""</code>
                                             <br><b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>d</mi>
+                                                   <mi>M</mi>
+                                                  </msub>
+                                                  <mo stretchy='false'>(</mo><mover accent='true'>
+                                                   <mi>x</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo>,</mo><mi>Q</mi><mo stretchy='false'>)</mo><mo>=</mo><msqrt>
+                                                   <mrow>
+                                                    <msup>
+                                                     <mrow>
+                                                      <mo stretchy='false'>(</mo><mover accent='true'>
+                                                       <mi>x</mi>
+                                                       <mo stretchy='true'>&#x2192;</mo>
+                                                      </mover>
+                                                      <mo>&#x2212;</mo><mover accent='true'>
+                                                       <mi>&#x03BC;</mi>
+                                                       <mo stretchy='true'>&#x2192;</mo>
+                                                      </mover>
+                                                      <mo stretchy='false'>)</mo></mrow>
+                                                     <mi>T</mi>
+                                                    </msup>
+                                                    <msup>
+                                                     <mi>S</mi>
+                                                     <mrow>
+                                                      <mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                    </msup>
+                                                    <mo stretchy='false'>(</mo><mover accent='true'>
+                                                     <mi>x</mi>
+                                                     <mo stretchy='true'>&#x2192;</mo>
+                                                    </mover>
+                                                    <mo>&#x2212;</mo><mover accent='true'>
+                                                     <mi>&#x03BC;</mi>
+                                                     <mo stretchy='true'>&#x2192;</mo>
+                                                    </mover>
+                                                    <mo stretchy='false'>)</mo></mrow>
+                                                  </msqrt>
+                                                  </mrow>
+                                                </semantics>
+                                               </math>
                                         </div>
 
                                         <!--  -->
@@ -4794,9 +4931,45 @@ cor_test(data_file, ...)</code></pre>
                                             Chebyshev Distance
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
+                                            <b>Usage</b>: the distance between two vectors is the greatest of their differences along any coordinate dimension
                                             <br><b>Parameter</b>: <code>""</code>
                                             <br><b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>D</mi>
+                                                   <mi>C</mi>
+                                                  </msub>
+                                                  <mo stretchy='false'>(</mo><mover accent='true'>
+                                                   <mi>x</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo>,</mo><mover accent='true'>
+                                                   <mi>y</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo stretchy='false'>)</mo><mo>=</mo><munder>
+                                                   <mrow>
+                                                    <mi>max</mi></mrow>
+                                                   <mi>i</mi>
+                                                  </munder>
+                                                  <mo stretchy='false'>(</mo><mfenced close="|" open="|">
+                                                   <mrow>
+                                                    <msub>
+                                                     <mi>x</mi>
+                                                     <mi>i</mi>
+                                                    </msub>
+                                                    <mo>&#x2212;</mo><msub>
+                                                     <mi>y</mi>
+                                                     <mi>i</mi>
+                                                    </msub>
+                                                    </mrow>
+                                                  </mfenced><mo stretchy='false'>)</mo></mrow>
+                                              
+                                                </semantics>
+                                               </math>
+                                               
                                         </div>
 
                                         <!-- Minkowski Distance -->
@@ -4804,9 +4977,62 @@ cor_test(data_file, ...)</code></pre>
                                             Minkowski Distance
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>:
+                                            <b>Usage</b>: a generalization of both the Euclidean distance and the Manhattan distance
                                             <br><b>Parameter</b>: <code>""</code>
                                             <br><b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>D</mi>
+                                                   <mi>M</mi>
+                                                  </msub>
+                                                  <mo stretchy='false'>(</mo><mover accent='true'>
+                                                   <mi>x</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo>,</mo><mover accent='true'>
+                                                   <mi>y</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo stretchy='false'>)</mo><mo>=</mo><msup>
+                                                   <mrow>
+                                                    <mo stretchy='false'>(</mo><mstyle displaystyle='true'>
+                                                     <munderover>
+                                                      <mo>&#x2211;</mo>
+                                                      <mrow>
+                                                       <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                      <mi>n</mi>
+                                                     </munderover>
+                                                     <mrow>
+                                                      <msup>
+                                                       <mrow>
+                                                        <mfenced close="|" open="|">
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>x</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo>&#x2212;</mo><msub>
+                                                           <mi>y</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          </mrow>
+                                                        </mfenced></mrow>
+                                                       <mi>p</mi>
+                                                      </msup>
+                                                      </mrow>
+                                                    </mstyle><mo stretchy='false'>)</mo></mrow>
+                                                   <mrow>
+                                                    <mfrac>
+                                                     <mn>1</mn>
+                                                     <mi>p</mi>
+                                                    </mfrac>
+                                                    </mrow>
+                                                  </msup>
+                                                  </mrow>
+                                                </semantics>
+                                               </math>
                                         </div>
 
                                         <h3>
@@ -4963,41 +5189,8 @@ cor_test(data_file, ...)</code></pre>
 
                                         </div>
 
-                                        <!--  -->
-                                        <h3>
-                                            Pearson Correlation Coefficient
-                                        </h3>
-                                        <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                        Coefficient</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    hello
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
+                                        
                                     </section>
 
                                     <section id="sec-8" data-type="introduction">
@@ -5005,7 +5198,7 @@ cor_test(data_file, ...)</code></pre>
                                             Tendency Estimation
                                         </h2>
                                         <div role="paragraph">
-                                            In this section, we discuss the estimation tendency.
+                                            In this section, we discuss the estimation of tendency, which is using the past data to make conjections on future data.
                                         </div>
                                         <h3>
 
@@ -5022,7 +5215,7 @@ cor_test(data_file, ...)</code></pre>
                                         <div role="paragraph">
                                             Causal relationships are harder to assess in a sense. They cannot be
                                             determined by data, only through deduction and elaborated verification of
-                                            experiments.
+                                            experiments. However, with a high standard statistical analysis, we can sometimes draw conclusions on causality.
                                         </div>
                                         <h3>
 
