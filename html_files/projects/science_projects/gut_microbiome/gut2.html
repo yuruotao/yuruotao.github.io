@@ -4,7 +4,7 @@
 <head data-pb-dropzone="head">
     <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
     </link>
-    <title id="page_title">Mathematical Models and Code Realizations</title>
+    <title id="page_title">Statistical Models and Code Realizations</title>
 
     <!-- here is the updating script -->
     <script>
@@ -15,10 +15,10 @@
             page_title: page_title_1,
             current_directory: "science project",
             current_directory_path: "/projects.html",
-            date: "2023 Feburary 27",
+            date: "2023 March 27",
             authors: author,
             article_type: "Article",
-            article_field: "Mathematical Model Framework",
+            article_field: "Statistical Model",
 
             previous_article_link: "/html_files/projects/science_projects/gut_microbiome/gut1.html",
             next_article_link: "/html_files/projects/science_projects/gut_microbiome/gut3.html",
@@ -27,7 +27,7 @@
 
             pdf_link: "/content_files/projects/science_prg/gut_microbiome/gut2",
             paper_state: "yes",
-            section_names: ["Statistics Terminologies", "Outline of Mathematical Model Establishment", "Data Preprocessing", "Correlation Analysis", "Clustering Analysis", "Weight Determination", "Network Analysis", "Tendency Estimation", "Causality Determination", "Error and Correction",],
+            section_names: ["Statistics Terminologies", "Outline of Statistical Model Establishment", "Data Preprocessing", "Correlation Analysis", "Clustering Analysis", "Weight Determination", "Network Analysis", "Tendency Estimation", "Causality Determination", "Error and Correction",],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1276,18 +1276,15 @@
                                         <div role="paragraph">
 
                                             <p>
-                                                Correlation analysis is of significance in a wide range of subjects,
-                                                including biomedicine
+                                                Statistical models are of vital importance in real-world applications. 
                                             </p>
                                             <p>
-                                                This article contains
+                                                This article contains the statistical model framework with mathematical description and code realization accordingly.
                                             </p>
-
-
                                             <p>
                                                 <b>
                                                     Data Preprocessing, Correlation Analysis, Clustering Analysis,
-                                                    Weight Determination, Tendency Estimation, Causality Determination,
+                                                    Weight Determination, Tendency Estimation, Causality Determination, Network Analysis
                                                 </b>
                                             </p>
                                         </div>
@@ -1404,9 +1401,6 @@
                                         <h2>
                                             Outline of Mathematical Model Establishment
                                         </h2>
-                                        <h3>
-
-                                        </h3>
                                         <div class="figure-wrap" data-specific-use="distribute">
                                             <figure id="F1" class="graphic">
                                                 <img src="/content_files/projects/science_prg/gut_microbiome/gut2/figure1.svg"
@@ -1904,7 +1898,13 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                             statistical noise, and outliers handling. The procedures to be executed may
                                             be able to tolerate these problems mentioned. However, in most cases, we
                                             still need to process the data for higher quality of analysis and a more
-                                            consistent outcome.
+                                            consistent outcome. In this section, we use the package <a href="https://easystats.github.io/datawizard/">datawizard</a> for R.
+                                        </div>
+                                        <h3>
+                                            Data Properties Analysis
+                                        </h3>
+                                        <div role="paragraph">
+                                            Before we dive into data analysis, we first should perform analysis on raw data to get a feeling of their distribution and properties.
                                         </div>
                                         <h3>
                                             Missing Values
@@ -1993,87 +1993,20 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                         <div role="paragraph">
                                             <!-- 1 -->
                                             <h3>
-                                                Interpolation - Fill in a constant
+                                                Missing Values - Interpolation
                                             </h3>
                                             <div role="paragraph">
-                                                <b>Usage</b>:
-
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <b>Effect</b>:
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <div
-                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                    <span
-                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                            Coefficient</span>
-                                                    </h2>
-                                                    <span class="text-gray text-xxs">
-                                                        hello
-                                                    </span>
-                                                    <div class="mt-2">
-                                                        <p></p>
-
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
 
                                             <!--  -->
                                             <h3>
-                                                Interpolation -
+                                                Missing Values - Partial Deletion
                                             </h3>
                                             <div role="paragraph">
-                                                <b>Usage</b>:
-
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <b>Effect</b>:
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <div
-                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                    <span
-                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                            Coefficient</span>
-                                                    </h2>
-                                                    <span class="text-gray text-xxs">
-                                                        hello
-                                                    </span>
-                                                    <div class="mt-2">
-                                                        <p></p>
-
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
                                         </div>
-
 
                                         <h3>
                                             Statistical Noise
@@ -2108,92 +2041,7 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                             </ol>
 
                                         </div>
-                                        <div role="paragraph">
-                                            <!-- 1 -->
-                                            <h3>
-                                                Interpolation -
-                                            </h3>
-                                            <div role="paragraph">
-                                                <b>Usage</b>:
-
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <b>Effect</b>:
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <div
-                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                    <span
-                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                            Coefficient</span>
-                                                    </h2>
-                                                    <span class="text-gray text-xxs">
-                                                        hello
-                                                    </span>
-                                                    <div class="mt-2">
-                                                        <p></p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!--  -->
-                                            <h3>
-                                                Interpolation -
-                                            </h3>
-                                            <div role="paragraph">
-                                                <b>Usage</b>:
-
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <b>Effect</b>:
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <div
-                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                    <span
-                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                            Coefficient</span>
-                                                    </h2>
-                                                    <span class="text-gray text-xxs">
-                                                        hello
-                                                    </span>
-                                                    <div class="mt-2">
-                                                        <p></p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
+                                
                                         <h3>
                                             Outlier Handling
                                         </h3>
@@ -2213,89 +2061,7 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
 
                                             </ol>
                                         </div>
-                                        <div role="paragraph">
-                                            <!-- 1 -->
-                                            <h3>
-                                                Interpolation -
-                                            </h3>
-                                            <div role="paragraph">
-                                                <b>Usage</b>:
 
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <b>Effect</b>:
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <div
-                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                    <span
-                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                            Coefficient</span>
-                                                    </h2>
-                                                    <span class="text-gray text-xxs">
-                                                        hello
-                                                    </span>
-                                                    <div class="mt-2">
-                                                        <p></p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!--  -->
-                                            <h3>
-                                                Interpolation -
-                                            </h3>
-                                            <div role="paragraph">
-                                                <b>Usage</b>:
-
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <b>Effect</b>:
-                                                <ol>
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ol>
-                                                <div
-                                                    class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                    <span
-                                                        class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                    <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                            Coefficient</span>
-                                                    </h2>
-                                                    <span class="text-gray text-xxs">
-                                                        hello
-                                                    </span>
-                                                    <div class="mt-2">
-                                                        <p></p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <h3>
                                             Data Normalization
                                         </h3>
@@ -2303,6 +2069,23 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                             In most cases, the data we obtain would not be in the same scale. By
                                             normalizing the data, we can establish a unified framework for all columns
                                             in our dataset. We introduce the method to normalize the data below.
+                                            <ol>
+                                                <li>
+                                                    Z-score
+                                                </li>
+                                                <li>
+                                                    Winsorization
+                                                </li>
+                                                <li>
+                                                    Center
+                                                </li>
+                                                <li>
+                                                    Rank-transform
+                                                </li>
+                                                <li>
+                                                    Rescale
+                                                </li>
+                                            </ol>
                                         </div>
                                     </section>
 
@@ -2347,7 +2130,7 @@ correlation_result = correlation(
 )
 
 # This computes pairwise correlation, the parameters are the same
-cor_test(datafile, ...)</code></pre>
+cor_test(data_file, ...)</code></pre>
                                             <code>data2</code>: if specified, the calculation is between the variables in <code>data_file</code> and <code>data2</code>, inner correlation wouldn't be calculated.
                                             <br><code>select, select2</code>: similar function with <code>data2</code>, conduct pairwise correlation calculation. Take columns for input, such as <code>select = c("col1", "col2")</code>
                                             <br><code>rename</code>: only work when the above command is executed, same input requirement as above.
@@ -4809,14 +4592,12 @@ cor_test(datafile, ...)</code></pre>
                                                     Mahalanobis Distance
                                                 </li>
                                                 <li>
-                                                    Pearson Correlation (Centered)
+                                                    Chebyshev Distance
                                                 </li>
                                                 <li>
-                                                    Uncentered Pearson Correlation
+                                                    Minkowski Distance
                                                 </li>
-                                                <li>
-                                                    Absolute Correlation
-                                                </li>
+                                          
                                             </ol>
                                         </div>
 
@@ -4826,33 +4607,9 @@ cor_test(datafile, ...)</code></pre>
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Definition</b>:
 
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Manhattan Distance</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    hello
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
                                         </div>
 
                                         <!-- 2 -->
@@ -4861,33 +4618,8 @@ cor_test(datafile, ...)</code></pre>
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Euclidean Distance</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    hello
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Definition</b>:
                                         </div>
 
                                         <!-- Mahalanobis Distance -->
@@ -4896,140 +4628,28 @@ cor_test(datafile, ...)</code></pre>
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Mahalanobis Distance</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    hello
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Definition</b>:
                                         </div>
 
-                                        <!-- Pearson Correlation -->
+                                        <!--  -->
                                         <h3>
-                                            Pearson Correlation
+                                            Chebyshev Distance
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                    </span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    hello
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Definition</b>:
                                         </div>
 
-                                        <!-- Uncentered Pearson Correlation -->
+                                        <!-- Minkowski Distance -->
                                         <h3>
-                                            Uncentered Pearson Correlation
+                                            Minkowski Distance
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Uncentered Pearson
-                                                        Correlation</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    hello
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Absolute Correlation -->
-                                        <h3>
-                                            Absolute Correlation
-                                        </h3>
-                                        <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Absolute Correlation</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    hello
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Definition</b>:
                                         </div>
 
                                         <h3>
