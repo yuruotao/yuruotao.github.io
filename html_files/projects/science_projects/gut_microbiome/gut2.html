@@ -1389,7 +1389,7 @@
                                             replacement;
                                             <br><b>Partial Correlation</b>: measure the degree of association between 2 random variables with the effect of a set of controlling random variables removed;
                                             <br><b>k-th Order Statistic</b>: its kth-smallest value;
-                                            <br><b></b>
+                                            <br><b>Simpson's Paradox</b>: a phenomenon that a trend appears in several groups of data but disappears or reverses when the groups are combined.
                                             <br><b></b>
 
 
@@ -2322,7 +2322,7 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                             <pre class="syntaxhighlight">
                                                 <code class="language-r"># Correlation analysis with R
 library("correlation")
-correlation(
+correlation_result = correlation(
     data_file,
     data2 = NULL,
     select = NULL,
@@ -2344,7 +2344,10 @@ correlation(
     winsorize = FALSE,
     verbose = TRUE,
     standardize_names = getOption("easystats.standardize_names", FALSE)
-)</code></pre>
+)
+
+# This computes pairwise correlation, the parameters are the same
+cor_test(datafile, ...)</code></pre>
                                             <code>data2</code>: if specified, the calculation is between the variables in <code>data_file</code> and <code>data2</code>, inner correlation wouldn't be calculated.
                                             <br><code>select, select2</code>: similar function with <code>data2</code>, conduct pairwise correlation calculation. Take columns for input, such as <code>select = c("col1", "col2")</code>
                                             <br><code>rename</code>: only work when the above command is executed, same input requirement as above.
@@ -2358,7 +2361,7 @@ correlation(
                                             <br><code>include_factors</code>: convert the categorical factors to numeric or use as random effects.
                                             <br><code>partial</code>: select partial correlation or semi-partial correlation.
                                             <br><code>partial_bayesian</code>: perform partial correlation analysis under Bayesian framework.
-                                            <br><code>multilevel</code>: if True, the factors are included as random factors, otherwise included as fixed effects in regression.
+                                            <br><code>multilevel</code>: if True, the factors are included as random factors, otherwise included as fixed effects in regression(Simpson's Paradox).
                                             <br><code>ranktransform</code>: rank-transform the variables if True.
                                             <br><code>winsorize</code>: perform winsorization before performing analysis.
                                             <br><code>standardize_names</code>: get standardized column names.
@@ -2538,7 +2541,7 @@ correlation(
                                         <div role="paragraph">
                                             <b>Usage</b>: assess how well the relationship between two ordinal variables
                                             can be described using a monotonic function;
-                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Parameter</b>: <code>"spearman"</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -2622,7 +2625,7 @@ correlation(
                                             <b>Usage</b>: measure the ordinal association between two measured
                                             quantities, often used to establish whether two variables may be regarded as
                                             statistically dependent;
-                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Parameter</b>: <code>"kendall"</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -2712,7 +2715,7 @@ correlation(
                                         <div role="paragraph">
                                             <b>Usage</b>: a median-based measure of similarity between samples, less sensitive to outliers, useful
                                             in gene expression profile;
-                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Parameter</b>: <code>"biweight"</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -3000,7 +3003,7 @@ correlation(
                                             <b>Usage</b>: measure the dependence between two paired random vectors of
                                             arbitrary, not necessarily equal, dimension, both linear and nonlinear
                                             association are measured;
-                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Parameter</b>: <code>"distance"</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -3264,7 +3267,7 @@ correlation(
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>: more robust to outliers and efficient, less type 1 error rates
-                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Parameter</b>: <code>"percentage</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -3688,7 +3691,7 @@ correlation(
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>: The Shepherd's Pi correlation is equivalent to <a href="#spearman_cor">Spearman correlation</a> with outliers removed using bootstrapped Mahalanobis distance.
-                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Parameter</b>: <code>"shepherd"</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -3712,7 +3715,7 @@ correlation(
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>: based on median, measure the monotonic associations.
-                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Parameter</b>: <code>"blomqvist"</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -4031,7 +4034,7 @@ correlation(
                                                   </mfenced></mrow>
                                                 </semantics>
                                                </math>
-                                            <b>Definition</b>:
+                                            <br><b>Definition</b>:
                                             <math display='block'>
                                                 <semantics>
                                                  <mrow>
@@ -4328,7 +4331,7 @@ correlation(
                                                 </semantics>
                                                </math>
                                                
-                                            <b>Definition</b>: same as Pearson's correlation, but only winsorized.
+                                        <br><b>Definition</b>: same as Pearson's correlation, but only winsorized.
 
                                         </div>
 
@@ -4337,7 +4340,7 @@ correlation(
                                             Polychoric Correlation
                                         </h3>
                                         <div role="paragraph">
-                                            <b>Usage</b>: theorized normally distributed continuous latent variables, from 2 observed ordinal variables.
+                                            <b>Usage</b>: theorized normally distributed continuous latent variables, from 2 observed ordinal variables. Frequently applied in personality tests and surveys using rating scales with a small number of response options.
                                             <br><b>Parameter</b>: <code>"polychoric"</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
@@ -4358,7 +4361,7 @@ correlation(
                                                     The variables are ordinal
                                                 </li>
                                             </ol>
-                                            <b>Definition</b>:
+                                  
 
                                         </div>
 
@@ -4378,59 +4381,401 @@ correlation(
                                                   </mfenced></mrow>
                                                 </semantics>
                                                </math>
+                                   
+                                        </div>
+
+                                        <h3>
+                                            P-value Adjustment
+                                        </h3>
+                                        <div role="paragraph">
+                                            Here are the methods that used for adjusting p-values, they are applied to guarantee the significance of the result.
+                                            <h3>
+                                                Bonferroni Correction
+                                            </h3>
+                                            <div role="paragraph">
+                                 
+                                                <b>Parameter</b>: <code>"bonferroni"</code>
+                                                <br><b>Definition</b>: compensate the increase of rare events by testing each individual hypothesis at a significance level of <math>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <mfrac>
+                                                       <mi>&#x03B1;</mi>
+                                                       <mi>m</mi>
+                                                      </mfrac>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>.
+                                                
+    
+    
+                                            </div>
+                                            <h3>
+                                                Holm Method
+                                            </h3>
+                                            <div role="paragraph">
                                                
-                                
-                                            <br><b>Definition</b>:
-
-                                        </div>
-
-                                        <!-- 16 -->
-                                        <h3>
-                                            Multilevel Correlation
-                                        </h3>
-                                        <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Parameter</b>: <code>""</code>
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-                                        </div>
-
-                                        <h3>
-                                            Correction Methods
-                                        </h3>
-                                        <div role="paragraph">
-
+                                                <b>Parameter</b>: <code>"holm"</code>
+                                                <br><b>Definition</b>: control the family-wise error rate. Assume having <math>
+                                                    <semantics>
+                                                     <mi>m</mi>
+                                                    </semantics>
+                                                   </math> p-values, <math>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>P</mi>
+                                                       <mn>1</mn>
+                                                      </msub>
+                                                      <mo>,</mo><mn>...</mn><mo>,</mo><msub>
+                                                       <mi>P</mi>
+                                                       <mi>m</mi>
+                                                      </msub>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>,(ranked in an increasing order) corresponding to hypothesis <math>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>H</mi>
+                                                       <mn>1</mn>
+                                                      </msub>
+                                                      <mo>,</mo><mn>...</mn><mo>,</mo><msub>
+                                                       <mi>H</mi>
+                                                       <mi>m</mi>
+                                                      </msub>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>, the FWER should be lower than <math>
+                                                    <semantics>
+                                                     <mi>&#x03B1;</mi>
+                                                    </semantics>
+                                                   </math>.
+                                                   <br>For each p-value, test whether <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>P</mi>
+                                                       <mi>i</mi>
+                                                      </msub>
+                                                      <mo>&#x003C;</mo><mfrac>
+                                                       <mi>&#x03B1;</mi>
+                                                       <mrow>
+                                                        <mi>m</mi><mo>+</mo><mn>1</mn><mo>&#x2212;</mo><mi>k</mi></mrow>
+                                                      </mfrac>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>
+                                                   If so, reject the corresponding hypothesis.
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+    
+    
+                                            </div>
+                                            <h3>
+                                                Hochberg's Step-up Procedure
+                                            </h3>
+                                            <div role="paragraph">
+                                               
+                                                <b>Parameter</b>: <code>"hochberg"</code>
+                                                <br><b>Definition</b>: more powerful than Holm's procedure, can be regarded as a step-down version of the Bonferroni test.
+                                                <br>Assume having <math>
+                                                    <semantics>
+                                                     <mi>m</mi>
+                                                    </semantics>
+                                                   </math> p-values, <math>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>P</mi>
+                                                       <mn>1</mn>
+                                                      </msub>
+                                                      <mo>,</mo><mn>...</mn><mo>,</mo><msub>
+                                                       <mi>P</mi>
+                                                       <mi>m</mi>
+                                                      </msub>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>,(ranked in an increasing order) corresponding to hypothesis <math>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>H</mi>
+                                                       <mn>1</mn>
+                                                      </msub>
+                                                      <mo>,</mo><mn>...</mn><mo>,</mo><msub>
+                                                       <mi>H</mi>
+                                                       <mi>m</mi>
+                                                      </msub>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>. Let <math>
+                                                    <semantics>
+                                                     <mi>R</mi>
+                                                    </semantics>
+                                                   </math> be the largest <math>
+                                                    <semantics>
+                                                     <mi>k</mi>
+                                                    </semantics>
+                                                   </math> such that <math display='block'>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>P</mi>
+                                                       <mrow>
+                                                        <mo stretchy='false'>(</mo><mi>k</mi><mo stretchy='false'>)</mo></mrow>
+                                                      </msub>
+                                                      <mo>&#x003C;</mo><mfrac>
+                                                       <mi>&#x03B1;</mi>
+                                                       <mrow>
+                                                        <mi>m</mi><mo>+</mo><mn>1</mn><mo>&#x2212;</mo><mi>k</mi></mrow>
+                                                      </mfrac>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>
+                                                   Reject the null hypotheses <math>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>H</mi>
+                                                       <mrow>
+                                                        <mo stretchy='false'>(</mo><mn>1</mn><mo stretchy='false'>)</mo></mrow>
+                                                      </msub>
+                                                      <mo>,</mo><mn>...</mn><mo>,</mo><msub>
+                                                       <mi>H</mi>
+                                                       <mrow>
+                                                        <mo stretchy='false'>(</mo><mi>R</mi><mo stretchy='false'>)</mo></mrow>
+                                                      </msub>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>
+                                                   
+                                                   
+                                                   
+    
+                                            </div>
+                                  
+                                            <h3>
+                                                Benjamini-Hochberg Procedure
+                                            </h3>
+                                            <div role="paragraph">
+                                               
+                                                <b>Parameter</b>: <code>"BH"</code>
+                                                <br><b>Definition</b>:
+                                                <ol>
+                                                    <li>
+                                                        For a given <math>
+                                                            <semantics>
+                                                             <mi>&#x03B1;</mi>
+                                                            </semantics>
+                                                           </math>, find the largest <math>
+                                                            <semantics>
+                                                             <mi>k</mi>
+                                                            </semantics>
+                                                           </math> such that 
+                                                           <math display='block'>
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>P</mi>
+                                                               <mrow>
+                                                                <mo stretchy='false'>(</mo><mi>k</mi><mo stretchy='false'>)</mo></mrow>
+                                                              </msub>
+                                                              <mo>&#x2264;</mo><mfrac>
+                                                               <mrow>
+                                                                <mi>&#x03B1;</mi><mi>k</mi></mrow>
+                                                               <mi>m</mi>
+                                                              </mfrac>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math>
+                                                           
+                                                           
+                                                           
+                                                    </li>
+                                                    <li>
+                                                        Reject the null hypotheses for all <math>
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>H</mi>
+                                                               <mrow>
+                                                                <mo stretchy='false'>(</mo><mn>1</mn><mo stretchy='false'>)</mo></mrow>
+                                                              </msub>
+                                                              <mo>,</mo><mn>...</mn><mo>,</mo><msub>
+                                                               <mi>H</mi>
+                                                               <mrow>
+                                                                <mo stretchy='false'>(</mo><mi>k</mi><mo stretchy='false'>)</mo></mrow>
+                                                              </msub>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math>
+                                                                                                               </li>
+                                                </ol>
+    
+    
+                                            </div>
+                                  
+                                            <h3>
+                                                Hommel's Method
+                                            </h3>
+                                            <div role="paragraph">
+                                               
+                                                <b>Parameter</b>: <code>"hommel"</code>
+                                                <br><b>Definition</b>: more powerful than Hochberg.
+                                                <ol>
+                                                    <li>
+                                                        Let <math>
+                                                            <semantics>
+                                                             <mi>k</mi>
+                                                            </semantics>
+                                                           </math>
+                                                            be the largest integer for which
+                                                        <math display='block'>
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>P</mi>
+                                                               <mrow>
+                                                                <mi>n</mi><mo>&#x2212;</mo><mi>k</mi><mo>+</mo><mi>i</mi></mrow>
+                                                              </msub>
+                                                              <mo>&#x2264;</mo><mfrac>
+                                                               <mrow>
+                                                                <mi>&#x03B1;</mi><mi>i</mi></mrow>
+                                                               <mi>k</mi>
+                                                              </mfrac>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math>
+                                                           
+                                                    </li>
+                                                    <li>
+                                                        For all <math>
+                                                            <semantics>
+                                                             <mi>i</mi>
+                                                            </semantics>
+                                                           </math>, if no such <math>
+                                                            <semantics>
+                                                             <mi>k</mi>
+                                                            </semantics>
+                                                           </math> exists, reject all hypotheses. Otherwise, reject all <math >
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>H</mi>
+                                                               <mi>i</mi>
+                                                              </msub>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math> with <math display='block'>
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>P</mi>
+                                                               <mi>i</mi>
+                                                              </msub>
+                                                              <mo>&#x2264;</mo><mfrac>
+                                                               <mi>&#x03B1;</mi>
+                                                               <mi>k</mi>
+                                                              </mfrac>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math>
+                                                           
+                                                           
+                                                           
+                                                    </li>
+                                                </ol>
+    
+    
+                                            </div>
+                                            <h3>
+                                                Benjamini-Yekutieli Procedure
+                                            </h3>
+                                            <div role="paragraph">
+                                               
+                                                <b>Parameter</b>: <code>"BY"</code>
+                                                <br><b>Definition</b>:
+                                                <ol>
+                                                    <li>
+                                                        Find the largest <math>
+                                                            <semantics>
+                                                             <mi>k</mi>
+                                                            </semantics>
+                                                           </math> such that
+                                                           <math display='block'>
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>P</mi>
+                                                               <mrow>
+                                                                <mo stretchy='false'>(</mo><mi>k</mi><mo stretchy='false'>)</mo></mrow>
+                                                              </msub>
+                                                              <mo>&#x2264;</mo><mfrac>
+                                                               <mrow>
+                                                                <mi>&#x03B1;</mi><mi>k</mi></mrow>
+                                                               <mrow>
+                                                                <mi>m</mi><mo>&#x00B7;</mo><mi>c</mi><mo stretchy='false'>(</mo><mi>m</mi><mo stretchy='false'>)</mo></mrow>
+                                                              </mfrac>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math>
+                                                           
+                                                           
+                                                    </li>
+                                                    <li>
+                                                        <ul>
+                                                            <li>
+                                                                If the tests are independent or positively correlated, <math >
+                                                                    <semantics>
+                                                                     <mrow>
+                                                                      <mi>c</mi><mo stretchy='false'>(</mo><mi>m</mi><mo stretchy='false'>)</mo><mo>=</mo><mn>1</mn></mrow>
+                                                                  
+                                                                    </semantics>
+                                                                   </math>
+                                                                   
+                                                            </li>
+                                                            <li>
+                                                                Under arbitrary dependence, 
+                                                                <math display='block'>
+                                                                    <semantics>
+                                                                     <mrow>
+                                                                      <mi>c</mi><mo stretchy='false'>(</mo><mi>m</mi><mo stretchy='false'>)</mo><mo>=</mo><mstyle displaystyle='true'>
+                                                                       <munderover>
+                                                                        <mo>&#x2211;</mo>
+                                                                        <mrow>
+                                                                         <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                                        <mi>m</mi>
+                                                                       </munderover>
+                                                                       <mrow>
+                                                                        <mfrac>
+                                                                         <mn>1</mn>
+                                                                         <mi>i</mi>
+                                                                        </mfrac>
+                                                                        </mrow>
+                                                                      </mstyle></mrow>
+                                                                    </semantics>
+                                                                   </math>
+                                                                   
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+    
+                                            </div>
                                         </div>
                                         
-                                        <!--  -->
-                                        <h3>
-                                            Pearson Correlation Coefficient
-                                        </h3>
+
                                         <div role="paragraph">
-                                            <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
+                                            Below is an analysis using the correlation package.
+                                            <pre class="syntaxhighlight">
+                                                <code class="language-r"># Spearman Correlation with R
+    
+                                            
+                                                </code>
+                                            </pre>
                                         </div>
                                     </section>
 
