@@ -1904,7 +1904,137 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                             Data Properties Analysis
                                         </h3>
                                         <div role="paragraph">
-                                            Before we dive into data analysis, we first should perform analysis on raw data to get a feeling of their distribution and properties.
+                                            Before we dive into data analysis, we first should perform analysis on raw data to get a feeling of their distribution and properties. The common assessed quantities are:
+                                            <ul>
+                                                <li>
+                                                    mean
+                                                </li>
+                                                <li>
+                                                    standard deviation (SD)
+                                                </li>
+                                                <li>
+                                                    interquartile range (IQR)
+                                                    <math display='block'>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <mi>I</mi><mi>Q</mi><mi>R</mi><mo>=</mo><msub>
+                                                           <mi>Q</mi>
+                                                           <mn>3</mn>
+                                                          </msub>
+                                                          <mo>&#x2212;</mo><msub>
+                                                           <mi>Q</mi>
+                                                           <mn>1</mn>
+                                                          </msub>
+                                                          </mrow>
+                                                        </semantics>
+                                                       </math>
+                                                       
+                                                </li>
+                                                <li>
+                                                    minimum value (Min)
+                                                </li>
+                                                <li>
+                                                    maximum value (Max)
+                                                </li>
+                                                <li>
+                                                    skewness: a measure of the asymmetry of a distribution
+                                                    <math display='block'>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <mover accent='true'>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>&#x03BC;</mi>
+                                                             <mn>3</mn>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mo stretchy='true'>&#x02DC;</mo>
+                                                          </mover>
+                                                          <mo>=</mo><mfrac>
+                                                           <mrow>
+                                                            <mstyle displaystyle='true'>
+                                                             <munderover>
+                                                              <mo>&#x2211;</mo>
+                                                              <mi>i</mi>
+                                                              <mi>n</mi>
+                                                             </munderover>
+                                                             <mrow>
+                                                              <msup>
+                                                               <mrow>
+                                                                <mo stretchy='false'>(</mo><msub>
+                                                                 <mi>x</mi>
+                                                                 <mi>i</mi>
+                                                                </msub>
+                                                                <mo>&#x2212;</mo><mover accent='true'>
+                                                                 <mi>x</mi>
+                                                                 <mo stretchy='true'>&#x00AF;</mo>
+                                                                </mover>
+                                                                <mo stretchy='false'>)</mo></mrow>
+                                                               <mn>3</mn>
+                                                              </msup>
+                                                              </mrow>
+                                                            </mstyle></mrow>
+                                                           <mrow>
+                                                            <mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo stretchy='false'>)</mo><msup>
+                                                             <mi>&#x03C3;</mi>
+                                                             <mn>3</mn>
+                                                            </msup>
+                                                            </mrow>
+                                                          </mfrac>
+                                                          </mrow>
+                                                        </semantics>
+                                                       </math>
+                                                       
+                                                </li>
+                                                <li>
+                                                    Kurtosis: a measure of the tailedness of a distribution (<math>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>&#x03BC;</mi>
+                                                           <mn>4</mn>
+                                                          </msub>
+                                                          </mrow>
+                                                        </semantics>
+                                                       </math> is the 4th central moment)
+                                                    <math display='block'>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <mi>K</mi><mi>u</mi><mi>r</mi><mi>t</mi><mo>=</mo><mfrac>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>&#x03BC;</mi>
+                                                             <mn>4</mn>
+                                                            </msub>
+                                                            </mrow>
+                                                           <mrow>
+                                                            <msup>
+                                                             <mi>&#x03C3;</mi>
+                                                             <mn>4</mn>
+                                                            </msup>
+                                                            </mrow>
+                                                          </mfrac>
+                                                          </mrow>
+                                                        </semantics>
+                                                       </math>
+                                                       
+                                                </li>
+                                                <li>
+                                                    total number (n)
+                                                </li>
+                                                <li>
+                                                    missing number (n_Missing)
+                                                </li>
+                                            </ul>
+                                            <pre class="syntaxhighlight">
+                                                <code class="language-r"># Data properties analysis
+# Raw data analysis
+library("datawizard")
+raw_data_summary = describe_distribution(data_file)
+
+# Save to excel(raw data analysis)
+library("writexl")
+write_xlsx(raw_data_summary, paste(working_directory, "/output/data/raw_data_analysis.xlsx", sep=""))</code></pre>
                                         </div>
                                         <h3>
                                             Missing Values
@@ -2003,11 +2133,14 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                             <h3>
                                                 Missing Values - Partial Deletion
                                             </h3>
+                                            The following code is able to identify and delete the columns and rows containing NA values and delete them.
                                             <div role="paragraph">
-                                                
-                                            </div>
-                                        </div>
-
+                                                <pre class="syntaxhighlight">
+                                                    <code class="language-r"># Preprocessing, partial deletion with R
+# Data preprocessing deletion, column
+data_file_col <- data_file[, colSums(is.na(data_file)) == 0]
+# Data preprocessing deletion, row
+data_file_row <- na.omit(data_file)</code></pre></div></div>
                                         <h3>
                                             Statistical Noise
                                         </h3>
@@ -2071,21 +2204,45 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                             in our dataset. We introduce the method to normalize the data below.
                                             <ol>
                                                 <li>
-                                                    Z-score
+                                                    Z-score: center the data around mean with unit range of standard deviation
+                                                    <math display='block'>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mi>z</mi>
+                                                           <mi>i</mi>
+                                                          </msub>
+                                                          <mo>=</mo><mfrac>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>x</mi>
+                                                             <mi>i</mi>
+                                                            </msub>
+                                                            <mo>&#x2212;</mo><mi>&#x03BC;</mi></mrow>
+                                                           <mi>&#x03C3;</mi>
+                                                          </mfrac>
+                                                          </mrow>
+                                                        </semantics>
+                                                       </math>
+                                                       
                                                 </li>
                                                 <li>
-                                                    Winsorization
+                                                    Winsorization: set the extreme values larger than the selected bound to be the boundary value
                                                 </li>
                                                 <li>
-                                                    Center
+                                                    Center: shift by the length of mean
                                                 </li>
                                                 <li>
-                                                    Rank-transform
-                                                </li>
-                                                <li>
-                                                    Rescale
+                                                    Rank-transform: rank all the data and return the relative ranking
                                                 </li>
                                             </ol>
+                                            <pre class="syntaxhighlight">
+                                                <code class="language-r"># Data normalization with R
+library("datawizard")
+normalized_data_file = standardize(data_file)
+normalized_data_file1 = winsorize(data_file)
+normalized_data_file2 = center(data_file)
+normalized_data_file3 = ranktransform(data_file[, c(2)])</code></pre>
                                         </div>
                                     </section>
 
