@@ -2027,7 +2027,7 @@ data_file.to_excel("./output/data/output_data.xlsx", sheet_name="Sheet1")</code>
                                                 </li>
                                             </ul>
                                             <pre class="syntaxhighlight">
-                                                <code class="language-r"># Data properties analysis
+                                                <code class="language-r"># Data properties analysis with R
 # Raw data analysis
 library("datawizard")
 raw_data_summary = describe_distribution(data_file)
@@ -2036,6 +2036,15 @@ raw_data_summary = describe_distribution(data_file)
 library("writexl")
 write_xlsx(raw_data_summary, paste(working_directory, "/output/data/raw_data_analysis.xlsx", sep=""))</code></pre>
                                         </div>
+                                        <pre class="syntaxhighlight">
+                                            <code class="language-python"># Raw data property analysis with Python
+raw_data_summary = data_file.describe()
+                                        
+# Calculate the kurtosis and skewness
+raw_data_summary.loc['kurtosis'] = data_file.kurt()
+raw_data_summary.loc['skewness'] = data_file.skew()
+raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="Sheet1")</code></pre>
+                                        
                                         <h3>
                                             Missing Values
                                         </h3>
@@ -2140,7 +2149,16 @@ write_xlsx(raw_data_summary, paste(working_directory, "/output/data/raw_data_ana
 # Data preprocessing deletion, column
 data_file_col <- data_file[, colSums(is.na(data_file)) == 0]
 # Data preprocessing deletion, row
-data_file_row <- na.omit(data_file)</code></pre></div></div>
+data_file_row <- na.omit(data_file)</code></pre>
+
+<pre class="syntaxhighlight">
+    <code class="language-python"># Preprocessing, partial deletion with Python
+# Delete columns containing NA value
+data_file_col = data_file.copy().dropna(axis='columns', inplace=True)
+# Delete rows containing NA value
+data_file_row = data_file.copy().dropna()</code></pre>
+
+</div></div>
                                         <h3>
                                             Statistical Noise
                                         </h3>
@@ -2243,6 +2261,40 @@ normalized_data_file = standardize(data_file)
 normalized_data_file1 = winsorize(data_file)
 normalized_data_file2 = center(data_file)
 normalized_data_file3 = ranktransform(data_file[, c(2)])</code></pre>
+
+<pre class="syntaxhighlight">
+    <code class="language-python"># Data normalization with Python
+def normalize(df):
+    result = df.copy()
+    for feature_name in df.columns:
+        mean_value = df[feature_name].mean()
+        sigma_value = df[feature_name].std()
+        result[feature_name] = (df[feature_name] - mean_value)/sigma_value
+    return result
+
+def winsorize(df):
+    from scipy.stats.mstats import winsorize
+    result = df.copy()
+    
+    def using_mstats(s):
+        return winsorize(s, limits=[0.01, 0.01])
+    
+    result = df.apply(using_mstats, axis=0)
+    return result
+
+def center(df):
+    result = df.copy()
+    for feature_name in df.columns:
+        mean_value = df[feature_name].mean()
+        result[feature_name] = (df[feature_name] - mean_value)
+    return result
+
+normalized_data_file = normalize(data_file)
+normalized_data_file1 = winsorize(data_file)
+normalized_data_file2 = center(data_file)
+normalized_data_file3 = data_file.copy().rank()</code></pre>
+
+
                                         </div>
                                     </section>
 
