@@ -27,7 +27,7 @@
 
             pdf_link: "/content_files/projects/science_prg/gut_microbiome/gut2",
             paper_state: "yes",
-            section_names: ["Statistics Terminologies", "Outline of Statistical Model Establishment", "Data Preprocessing", "Correlation Analysis", "Clustering Analysis", "Weight Determination", "Network Analysis", "Tendency Estimation", "Causality Determination", "Error and Correction",],
+            section_names: ["Statistics Terminologies", "Outline of Statistical Model Establishment", "Data Preprocessing", "Correlation Analysis", "Clustering Analysis", "Weight Determination", "Network Analysis", "Tendency Estimation", "Causality Determination", "Error and Correction","Visualization"],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1836,8 +1836,13 @@ WORKING DIRECTORY
 │   └───
 ├───output
 │   ├───figure
+│   │   ├───
+│   │   ├───
+│   │   └───
 │   └───data
-│       ├───output_data.xlsx</code></pre>We perform the majority of our analysis in file <code>main.R</code>, the folder <code>data</code> contains the data we perform our analysis on, the folder <code>output</code> contains the output documents. Now we introduce the initialization steps including import modules, read data files and such. For convenience, the data structure in input data should be arranged as individuals as rows and indicators as columns.
+│       ├───raw_data_summary.xlsx
+│       ├───output_data.xlsx
+│       └───</code></pre>We perform the majority of our analysis in file <code>main.R</code>, the folder <code>data</code> contains the data we perform our analysis on, the folder <code>output</code> contains the output documents. Now we introduce the initialization steps including import modules, read data files and such. For convenience, the data structure in input data should be arranged as individuals as rows and indicators as columns.
                                             
                                             <pre class="syntaxhighlight">
                                                 <code class="language-r"># Initialization with R
@@ -2135,15 +2140,49 @@ raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="She
                                                 Missing Values - Interpolation
                                             </h3>
                                             <div role="paragraph">
+                                                The terminology for missing value interpolation is data smoothing. For cross-sectional data and time series data, the smoothing methods are usually different. The analysis on cross-sectional data emphasize on the interaction relationships, especially causal relationship. The analysis on time series data, however, emphasize the tendency of data with respect to time. We discuss them separately.
+                                                <br><b>Cross-sectional Data Smoothing</b>
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+
+                                                <b>Time Series Data Smoothing</b>
+                                                <ol>
+                                                    <li>
+
+                                                    </li>
+                                                    <li>
+
+                                                    </li>
+                                                </ol>
+
+
+
+                                                <pre class="syntaxhighlight">
+                                                    <code class="language-r"># Data smoothing with R
                                                 
+                                                
+                                                    </code></pre>
+
+                                                <pre class="syntaxhighlight">
+                                                    <code class="language-python"># Data smoothing with Python
+                                                
+                                                
+                                                    </code></pre>
                                             </div>
 
                                             <!--  -->
                                             <h3>
                                                 Missing Values - Partial Deletion
                                             </h3>
-                                            The following code is able to identify and delete the columns and rows containing NA values and delete them.
+                                            
                                             <div role="paragraph">
+                                                The following code is able to identify and delete the columns and rows containing NA values and delete them.
                                                 <pre class="syntaxhighlight">
                                                     <code class="language-r"># Preprocessing, partial deletion with R
 # Data preprocessing deletion, column
@@ -5285,6 +5324,21 @@ cor_test(data_file, ...)</code></pre>
                                             For each method we apply, there would be error, such as confidence intervals
                                             and round up. Analysing the sources of error and make corrections
                                             accordingly is of huge significance.
+                                        </div>
+                                        <h3>
+
+                                        </h3>
+                                        <div role="paragraph">
+
+                                        </div>
+                                    </section>
+
+                                    <section id="sec-11" data-type="introduction">
+                                        <h2>
+                                            Visualization
+                                        </h2>
+                                        <div role="paragraph">
+                                            
                                         </div>
                                         <h3>
 
