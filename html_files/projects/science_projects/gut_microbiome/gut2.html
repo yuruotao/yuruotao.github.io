@@ -2140,27 +2140,220 @@ raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="She
                                                 Missing Values - Interpolation
                                             </h3>
                                             <div role="paragraph">
-                                                The terminology for missing value interpolation is data smoothing. For cross-sectional data and time series data, the smoothing methods are usually different. The analysis on cross-sectional data emphasize on the interaction relationships, especially causal relationship. The analysis on time series data, however, emphasize the tendency of data with respect to time. We discuss them separately.
-                                                <br><b>Cross-sectional Data Smoothing</b>
+                                                The terminology for missing value interpolation is data smoothing. The analysis on cross-sectional data emphasize on the interaction relationships, especially causal relationship. The analysis on time series data, however, emphasize the tendency of data with respect to time. The latter case is more complex. Some of the smoothing methods for time series data are applicable for cross-sectional data. Thus, we only discuss the smoothing methods for time series data. We use the package <a href="http://steffenmoritz.github.io/imputeTS/index.html">imputeTS</a> for time series data smoothing.
+                                                <br><b>Time Series Data Smoothing</b>:
                                                 <ol>
                                                     <li>
-                                                        
+                                                        Linear Interpolation
                                                     </li>
                                                     <li>
-
+                                                        Spline Interpolation
+                                                    </li>
+                                                    <li>
+                                                        Stineman Interpolation
+                                                    </li>
+                                                    <li>
+                                                        Structural Model and Kalman Smoothing
+                                                    </li>
+                                                    <li>
+                                                        ARIMA State Space Representation and Kalman Smoothing
+                                                    </li>
+                                                    <li>
+                                                        Last Observation Carried Forward
+                                                    </li>
+                                                    <li>
+                                                        Next Observation Carried Backward
+                                                    </li>
+                                                    <li>
+                                                        Simple Moving Average
+                                                    </li>
+                                                    <li>
+                                                        Linear Weighted Average
+                                                    </li>
+                                                    <li>
+                                                        Exponential Weighted Moving Average
+                                                    </li>
+                                                    <li>
+                                                        Imputation by Mean Value
+                                                    </li>
+                                                    <li>
+                                                        Imputation by Median Value
+                                                    </li>
+                                                    <li>
+                                                        Imputation by Mode Value
+                                                    </li>
+                                                    <li>
+                                                        Imputation by Random Sample
+                                                    </li>
+                                                    <li>
+                                                        Seasonally Decomposed Missing Value Imputation
+                                                    </li>
+                                                    <li>
+                                                        Seasonally Spitted Missing Value Imputation
                                                     </li>
                                                 </ol>
 
-                                                <b>Time Series Data Smoothing</b>
-                                                <ol>
-                                                    <li>
+                                                <h3>
+                                                    Linear Interpolation
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.interpolation(data_file, option = linear)</code>
+                                                    <br><b>Definition</b>:
 
-                                                    </li>
-                                                    <li>
 
-                                                    </li>
-                                                </ol>
+                                                </div>
+                                                <h3>
+                                                    Spline Interpolation
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.interpolation(data_file, option = spline)</code>
+                                                    <br><b>Definition</b>:
 
+
+                                                </div>
+
+                                                <h3>
+                                                    Stineman Interpolation
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.interpolation(data_file, option = stine)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Structural Model and Kalman Smoothing
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.kalman(data_file, option = StructTS)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    ARIMA State Space Representation and Kalman Smoothing
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.kalman(data_file, option = auto.arima)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Last Observation Carried Forward
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.locf(data_file, option = locf)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Next Observation Carried Backward
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.locf(data_file, option = nocb)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Simple Moving Average
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.ma(data_file, option = simple)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Linear Weighted Average
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.ma(data_file, option = linear)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Exponential Weighted Moving Average
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.ma(data_file, option = exponential)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Imputation by Mean Value
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.mean(data_file, option = mean)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Imputation by Median Value
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.mean(data_file, option = median)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Imputation by Mode Value
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.mean(data_file, option = mode)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Imputation by Random Sample
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.random(data_file)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Seasonally Decomposed Missing Value Imputation
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.seadec(data_file)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
+                                                <h3>
+                                                    Seasonally Spitted Missing Value Imputation
+                                                </h3>
+                                                <div role="paragraph">
+                                                    <b>Usage</b>:
+                                                    <br><b>Parameter</b>: <code>na.seasplit(data_file)</code>
+                                                    <br><b>Definition</b>:
+
+
+                                                </div>
 
 
                                                 <pre class="syntaxhighlight">
@@ -2348,10 +2541,10 @@ normalized_data_file3 = data_file.copy().rank()</code></pre>
                                             one. If the change in one variable cause little or no fluctuation in the
                                             other one, it is likely that the two variables are not correlated. We will
                                             introduce the coefficients used for measuring the correlation between
-                                            variables below. In this section, we use the <em>correlation</em> library for R.
+                                            variables below. In this section, we use the <a href="">correlation</a>, <a href=""></a> package for R. We discuss the usage separately.
 
                                             <pre class="syntaxhighlight">
-                                                <code class="language-r"># Correlation analysis with R
+                                                <code class="language-r"># Correlation calculation with package 'correlation'
 library("correlation")
 correlation_result = correlation(
     data_file,
@@ -2397,8 +2590,6 @@ cor_test(data_file, ...)</code></pre>
                                             <br><code>winsorize</code>: perform winsorization before performing analysis.
                                             <br><code>standardize_names</code>: get standardized column names.
                                             
-
-
                                             <br>Below are the details on correlation coefficients and correction methods.
                                         </div>
 
@@ -3298,7 +3489,7 @@ cor_test(data_file, ...)</code></pre>
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>: more robust to outliers and efficient, less type 1 error rates
-                                            <br><b>Parameter</b>: <code>"percentage</code>
+                                            <br><b>Parameter</b>: <code>"percentage"</code>
                                             <br><b>Range</b>: <math>
                                                 <semantics>
                                                     <mrow>
@@ -4403,7 +4594,7 @@ cor_test(data_file, ...)</code></pre>
                                         <div role="paragraph">
                                             <b>Usage</b>: a special case of the polychoric correlation, both observed variables are dichotomous.
                                             <br><b>Parameter</b>: <code>"tetrachoric"</code>
-                                            <br><b>Range</b>: <math >
+                                            <br><b>Range</b>: <math>
                                                 <semantics>
                                                  <mrow>
                                                   <mfenced close="]" open="[">
@@ -4415,8 +4606,48 @@ cor_test(data_file, ...)</code></pre>
                                    
                                         </div>
 
+                                        <div role="paragraph">
+                                            Here we discuss the correlation coefficient calculation using <a href=""></a>.
+                                        </div>
+                                        <pre class="syntaxhighlight">
+                                            <code class="language-r"># Correlation calculation with package ''
+                                        
+                                        
+                                            
+                                            </code></pre>
+
                                         <h3>
-                                            P-value Adjustment
+                                            
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: 
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Range</b>:
+                                            <br><b>Definition</b>:
+                                        </div>
+
+                                        <h3>
+                                            
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: 
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Range</b>:
+                                            <br><b>Definition</b>:
+                                        </div>
+
+                                        <h3>
+                                            
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: 
+                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Range</b>:
+                                            <br><b>Definition</b>:
+                                        </div>
+
+                                        <h3>
+                                            P-value Adjustment with Package Correlation
                                         </h3>
                                         <div role="paragraph">
                                             Here are the methods that used for adjusting p-values, they are applied to guarantee the significance of the result.
