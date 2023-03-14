@@ -2141,7 +2141,7 @@ raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="She
                                             </h3>
                                             <div role="paragraph">
                                                 The terminology for missing value interpolation is data smoothing. The analysis on cross-sectional data emphasize on the interaction relationships, especially causal relationship. The analysis on time series data, however, emphasize the tendency of data with respect to time. The latter case is more complex. Some of the smoothing methods for time series data are applicable for cross-sectional data. Thus, we only discuss the smoothing methods for time series data. We use the package <a href="http://steffenmoritz.github.io/imputeTS/index.html">imputeTS</a> for time series data smoothing.
-                                                <br><b>Time Series Data Smoothing</b>:
+                                                <br><br><b>Time Series Data Smoothing</b>:
                                                 <ol>
                                                     <li>
                                                         Linear Interpolation
@@ -2192,22 +2192,105 @@ raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="She
                                                         Seasonally Spitted Missing Value Imputation
                                                     </li>
                                                 </ol>
+                                                <div role="paragraph">
+                                                    We assume that the time series is <math>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <mi>x</mi><mo stretchy='false'>[</mo><msub>
+                                                           <mi>t</mi>
+                                                           <mn>1</mn>
+                                                          </msub>
+                                                          <mo stretchy='false'>]</mo><mo>,</mo><mi>x</mi><mo stretchy='false'>[</mo><msub>
+                                                           <mi>t</mi>
+                                                           <mn>2</mn>
+                                                          </msub>
+                                                          <mo stretchy='false'>]</mo><mo>,</mo><mn>...</mn><mo>,</mo><mi>x</mi><mo stretchy='false'>[</mo><msub>
+                                                           <mi>t</mi>
+                                                           <mi>n</mi>
+                                                          </msub>
+                                                          <mo stretchy='false'>]</mo></mrow>
+                                                   
+                                                        </semantics>
+                                                       </math>
+                                                       
+                                                       , and a missing value is <math>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <mi>x</mi><mo stretchy='false'>[</mo><msub>
+                                                           <mi>t</mi>
+                                                           <mi>m</mi>
+                                                          </msub>
+                                                          <mo stretchy='false'>]</mo><mo stretchy='false'>(</mo><mi>m</mi><mo>&#x003C;</mo><mi>n</mi><mo stretchy='false'>)</mo></mrow>
+                                                                                                                 </semantics>
+                                                       </math>
+                                                       .
+                                                </div>
 
                                                 <h3>
                                                     Linear Interpolation
                                                 </h3>
                                                 <div role="paragraph">
-                                                    <b>Usage</b>:
+                                                    <b>Usage</b>: time series with a linear trend
                                                     <br><b>Parameter</b>: <code>na.interpolation(data_file, option = linear)</code>
                                                     <br><b>Definition</b>:
-
-
+                                                    <math display='block'>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <mi>x</mi><mo stretchy='false'>[</mo><msub>
+                                                           <mi>t</mi>
+                                                           <mi>m</mi>
+                                                          </msub>
+                                                          <mo stretchy='false'>]</mo><mo>=</mo><mi>x</mi><mo stretchy='false'>[</mo><msub>
+                                                           <mi>t</mi>
+                                                           <mrow>
+                                                            <mi>m</mi><mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                          </msub>
+                                                          <mo stretchy='false'>]</mo><mo>+</mo><mfrac>
+                                                           <mrow>
+                                                            <mi>x</mi><mo stretchy='false'>[</mo><msub>
+                                                             <mi>t</mi>
+                                                             <mrow>
+                                                              <mi>m</mi><mo>+</mo><mn>1</mn></mrow>
+                                                            </msub>
+                                                            <mo stretchy='false'>]</mo><mo>&#x2212;</mo><mi>x</mi><mo stretchy='false'>[</mo><msub>
+                                                             <mi>t</mi>
+                                                             <mrow>
+                                                              <mi>m</mi><mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                            </msub>
+                                                            <mo stretchy='false'>]</mo></mrow>
+                                                           <mrow>
+                                                            <msub>
+                                                             <mi>t</mi>
+                                                             <mrow>
+                                                              <mi>m</mi><mo>+</mo><mn>1</mn></mrow>
+                                                            </msub>
+                                                            <mo>&#x2212;</mo><msub>
+                                                             <mi>t</mi>
+                                                             <mrow>
+                                                              <mi>m</mi><mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                            </msub>
+                                                            </mrow>
+                                                          </mfrac>
+                                                          <mo stretchy='false'>(</mo><msub>
+                                                           <mi>t</mi>
+                                                           <mi>m</mi>
+                                                          </msub>
+                                                          <mo>&#x2212;</mo><msub>
+                                                           <mi>t</mi>
+                                                           <mrow>
+                                                            <mi>m</mi><mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                          </msub>
+                                                          <mo stretchy='false'>)</mo></mrow>
+                                                  
+                                                        </semantics>
+                                                       </math>
+                                                      
                                                 </div>
                                                 <h3>
                                                     Spline Interpolation
                                                 </h3>
                                                 <div role="paragraph">
-                                                    <b>Usage</b>:
+                                                    <b>Usage</b>: the interpolant is a piecewise polynomial, fits low-degree polynomials to small subsets of the values
                                                     <br><b>Parameter</b>: <code>na.interpolation(data_file, option = spline)</code>
                                                     <br><b>Definition</b>:
 
@@ -2219,7 +2302,18 @@ raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="She
                                                 </h3>
                                                 <div role="paragraph">
                                                     <b>Usage</b>:
-                                                    <br><b>Parameter</b>: <code>na.interpolation(data_file, option = stine)</code>
+                                                    <ol>
+                                                        <li>
+                                                            If values of the ordinates of the specified points change monotonically, and the slopes of the line segments joining the points change monotonically, then the interpolating curve and its slope will change monotonically.
+                                                        </li>
+                                                        <li>
+                                                            If the slopes of the line segments joining the specified points change monotonically, then the slopes of the interpolating curve will change monotonically.
+                                                        </li>
+                                                        <li>
+                                                            Suppose that the conditions in (1) or (2) are satisfied by a set of points, but a small change in the ordinate or slope at one of the points will result conditions (1) or (2) being not longer satisfied. Then making this small change in the ordinate or slope at a point will cause no more than a small change in the interpolating curve.
+                                                        </li>
+                                                    </ol>
+                                                    <b>Parameter</b>: <code>na.interpolation(data_file, option = stine)</code>
                                                     <br><b>Definition</b>:
 
 
@@ -2229,6 +2323,7 @@ raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="She
                                                 </h3>
                                                 <div role="paragraph">
                                                     <b>Usage</b>:
+                                                    
                                                     <br><b>Parameter</b>: <code>na.kalman(data_file, option = StructTS)</code>
                                                     <br><b>Definition</b>:
 
@@ -2298,7 +2393,7 @@ raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="She
                                                     Imputation by Mean Value
                                                 </h3>
                                                 <div role="paragraph">
-                                                    <b>Usage</b>:
+                                                    <b>Usage</b>: when data has a tendency of centering around a value
                                                     <br><b>Parameter</b>: <code>na.mean(data_file, option = mean)</code>
                                                     <br><b>Definition</b>:
 
@@ -2308,17 +2403,15 @@ raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="She
                                                     Imputation by Median Value
                                                 </h3>
                                                 <div role="paragraph">
-                                                    <b>Usage</b>:
+                                                    <b>Usage</b>: when data is centered around a region of values
                                                     <br><b>Parameter</b>: <code>na.mean(data_file, option = median)</code>
                                                     <br><b>Definition</b>:
-
-
                                                 </div>
                                                 <h3>
                                                     Imputation by Mode Value
                                                 </h3>
                                                 <div role="paragraph">
-                                                    <b>Usage</b>:
+                                                    <b>Usage</b>: when the mode takes up a large proportion of the sample
                                                     <br><b>Parameter</b>: <code>na.mean(data_file, option = mode)</code>
                                                     <br><b>Definition</b>:
 
@@ -2358,9 +2451,49 @@ raw_data_summary.to_excel("./output/data/raw_data_summary.xlsx", sheet_name="She
 
                                                 <pre class="syntaxhighlight">
                                                     <code class="language-r"># Data smoothing with R
-                                                
-                                                
-                                                    </code></pre>
+# Data preprocessing imputation
+data_file_num = remove_empty(data_file_num)
+data_file_char = remove_empty(data_file_char)
+
+# Time series imputation
+library("imputeTS")
+
+# Plot the missing data information
+missing_value_plot_time_all = list()
+missing_value_plot_time_1_all = list()
+# plot the information on missing data itself
+missing_value_plot_time_2_all = list()
+
+counter = 1
+for (col_name in colnames(data_file_num)){
+  missing_value_plot_time_all[[counter]] = ggplot_na_distribution(x = data_file_num[col_name], xlab = "haha", ylab = "yoxi")
+  missing_value_plot_time_1_all[[counter]] = ggplot_na_distribution2(data_file_num[col_name], xlab = "haha", ylab = "yoxi")
+  # missing_value_plot_time_2_all[[counter]] = ggplot_na_gapsize(data_file_num[col_name])
+  counter <- counter + 1
+}
+
+
+if (any(is.na(data_file_num))){
+# Perform interpolation and compare the result
+data_file_time_filled <- list()
+interpolate_result_all <- list()
+
+# Numerical data interpolation
+counter = 1
+for (col_name in colnames(data_file_num)){
+  if (any(is.na(data_file_num))){
+    data_file_time_filled[[counter]] <- na_interpolation(data_file_num[col_name])
+    # Visualization
+    interpolate_result_all[[counter]] = ggplot_na_imputations(data_file_num[col_name], data_file_time_filled[[counter]])
+  }
+  else {
+    data_file_time_filled[[counter]] <- data.frame(data_file_num[col_name])
+    interpolate_result_all[[counter]] = 0
+  }
+  counter <- counter + 1
+}
+data_file_num = data_file_time_filled
+}</code></pre>
 
                                                 <pre class="syntaxhighlight">
                                                     <code class="language-python"># Data smoothing with Python
@@ -5067,15 +5200,14 @@ cor_test(data_file, ...)</code></pre>
                                                     Euclidean Distance
                                                 </li>
                                                 <li>
-                                                    Mahalanobis Distance
-                                                </li>
-                                                <li>
                                                     Chebyshev Distance
                                                 </li>
                                                 <li>
                                                     Minkowski Distance
                                                 </li>
-                                          
+                                                <li>
+                                                    Camberra Distance
+                                                </li>
                                             </ol>
                                         </div>
 
@@ -5085,7 +5217,7 @@ cor_test(data_file, ...)</code></pre>
                                         </h3>
                                         <div role="paragraph">
                                            
-                                            <b>Parameter</b>: <code>""</code>
+                                            <b>Parameter</b>: <code>dist(data, method="manhattan")</code>
                                             <br><b>Definition</b>:
                                             <math display='block'>
                                                 <semantics>
@@ -5150,7 +5282,7 @@ cor_test(data_file, ...)</code></pre>
                                         </h3>
                                         <div role="paragraph">
                                            
-                                            <b>Parameter</b>: <code>""</code>
+                                            <b>Parameter</b>: <code>dist(data, method="euclidean")</code>
                                             <br><b>Definition</b>:
                                             <math display='block'>
                                                 <semantics>
@@ -5192,60 +5324,6 @@ cor_test(data_file, ...)</code></pre>
                                                   </mrow>
                                                 </semantics>
                                                </math>          
-                                        </div>
-
-                                        <!-- Mahalanobis Distance -->
-                                        <h3>
-                                            Mahalanobis Distance
-                                        </h3>
-                                        <div role="paragraph">
-                                            <b>Usage</b>: a measure of the distance between a point P and a distribution D, how many standard deviations away P is from the mean of D
-                                            <br><b>Parameter</b>: <code>""</code>
-                                            <br><b>Definition</b>:
-                                            <math display='block'>
-                                                <semantics>
-                                                 <mrow>
-                                                  <msub>
-                                                   <mi>d</mi>
-                                                   <mi>M</mi>
-                                                  </msub>
-                                                  <mo stretchy='false'>(</mo><mover accent='true'>
-                                                   <mi>x</mi>
-                                                   <mo stretchy='true'>&#x2192;</mo>
-                                                  </mover>
-                                                  <mo>,</mo><mi>Q</mi><mo stretchy='false'>)</mo><mo>=</mo><msqrt>
-                                                   <mrow>
-                                                    <msup>
-                                                     <mrow>
-                                                      <mo stretchy='false'>(</mo><mover accent='true'>
-                                                       <mi>x</mi>
-                                                       <mo stretchy='true'>&#x2192;</mo>
-                                                      </mover>
-                                                      <mo>&#x2212;</mo><mover accent='true'>
-                                                       <mi>&#x03BC;</mi>
-                                                       <mo stretchy='true'>&#x2192;</mo>
-                                                      </mover>
-                                                      <mo stretchy='false'>)</mo></mrow>
-                                                     <mi>T</mi>
-                                                    </msup>
-                                                    <msup>
-                                                     <mi>S</mi>
-                                                     <mrow>
-                                                      <mo>&#x2212;</mo><mn>1</mn></mrow>
-                                                    </msup>
-                                                    <mo stretchy='false'>(</mo><mover accent='true'>
-                                                     <mi>x</mi>
-                                                     <mo stretchy='true'>&#x2192;</mo>
-                                                    </mover>
-                                                    <mo>&#x2212;</mo><mover accent='true'>
-                                                     <mi>&#x03BC;</mi>
-                                                     <mo stretchy='true'>&#x2192;</mo>
-                                                    </mover>
-                                                    <mo stretchy='false'>)</mo></mrow>
-                                                  </msqrt>
-                                                  </mrow>
-                                                </semantics>
-                                               </math>
                                         </div>
 
                                         <!--  -->
@@ -5300,7 +5378,7 @@ cor_test(data_file, ...)</code></pre>
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>: a generalization of both the Euclidean distance and the Manhattan distance
-                                            <br><b>Parameter</b>: <code>""</code>
+                                            <br><b>Parameter</b>: <code>dist(data, method="minkowski")</code>
                                             <br><b>Definition</b>:
                                             <math display='block'>
                                                 <semantics>
@@ -5358,88 +5436,209 @@ cor_test(data_file, ...)</code></pre>
                                         </div>
 
                                         <h3>
+                                            Camberra Distance
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>: a weighted version of Manhattan distance
+                                            <br><b>Parameter</b>: <code>dist(data, method="canberra")</code>
+                                            <br><b>Definition</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>d</mi><mo stretchy='false'>(</mo><mover accent='true'>
+                                                   <mi>x</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo>,</mo><mover accent='true'>
+                                                   <mi>y</mi>
+                                                   <mo stretchy='true'>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo stretchy='false'>)</mo><mo>=</mo><mstyle displaystyle='true'>
+                                                   <munderover>
+                                                    <mo>&#x2211;</mo>
+                                                    <mrow>
+                                                     <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                    <mi>n</mi>
+                                                   </munderover>
+                                                   <mrow>
+                                                    <mfrac>
+                                                     <mrow>
+                                                      <mfenced close="|" open="|">
+                                                       <mrow>
+                                                        <mover accent='true'>
+                                                         <mi>x</mi>
+                                                         <mo stretchy='true'>&#x2192;</mo>
+                                                        </mover>
+                                                        <mo>&#x2212;</mo><mover accent='true'>
+                                                         <mi>y</mi>
+                                                         <mo stretchy='true'>&#x2192;</mo>
+                                                        </mover>
+                                                        </mrow>
+                                                      </mfenced></mrow>
+                                                     <mrow>
+                                                      <mfenced close="|" open="|">
+                                                       <mrow>
+                                                        <mover accent='true'>
+                                                         <mi>x</mi>
+                                                         <mo stretchy='true'>&#x2192;</mo>
+                                                        </mover>
+                                                        </mrow>
+                                                      </mfenced><mo>+</mo><mfenced close="|" open="|">
+                                                       <mrow>
+                                                        <mover accent='true'>
+                                                         <mi>y</mi>
+                                                         <mo stretchy='true'>&#x2192;</mo>
+                                                        </mover>
+                                                        </mrow>
+                                                      </mfenced></mrow>
+                                                    </mfrac>
+                                                    </mrow>
+                                                  </mstyle></mrow>
+                                                </semantics>
+                                               </math>
+                                               
+                                        </div>
+
+                                        <h3>
                                             Optimization Goals
                                         </h3>
                                         <div role="paragraph">
-
+                                            Different goals for optimization produce diversed results. The selection of optimization goal is based on the purpose for clustering. The common optimization goals are listed below.
+                                            <ol>
+                                                <li>
+                                                    Single Linkage
+                                                </li>
+                                                <li>
+                                                    Complete Linkage
+                                                </li>
+                                                <li>
+                                                    Average Linkage
+                                                </li>
+                                                <li>
+                                                    Centroid Method
+                                                </li>
+                                                <li>
+                                                    Wards Method
+                                                </li>
+                                            </ol>
                                         </div>
-                                        <!--  -->
                                         <h3>
-                                            Pearson Correlation Coefficient
+                                            Single Linkage
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                        Coefficient</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    hello
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
+                                            <br><b>Parameter</b>: <code>
+                                                method="single"
+                                            </code>
+                                            <br><b>Definition</b>:
                                         </div>
+
+                                        <h3>
+                                            Complete Linkage
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>:
+                                            <br><b>Parameter</b>: <code>
+                                                method="complete"
+                                            </code>
+                                            <br><b>Definition</b>:
+                                        </div>
+
+                                        <h3>
+                                            Average Linkage
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>:
+                                            <br><b>Parameter</b>: <code>
+                                                method="average"
+                                            </code>
+                                            <br><b>Definition</b>:
+                                        </div>
+
+                                        <h3>
+                                            Centroid Method
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>:
+                                            <br><b>Parameter</b>: <code>
+                                                method="centroid"
+                                            </code>
+                                            <br><b>Definition</b>:
+                                        </div>
+
+                                        <h3>
+                                            Wards Method
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>:
+                                            <br><b>Parameter</b>: <code>
+                                                method="ward.D2"
+                                            </code>
+                                            <br><b>Definition</b>:
+                                        </div>
+
 
                                         <h3>
                                             Clustering Methods
                                         </h3>
                                         <div role="paragraph">
-
+                                            When considering the relationships in clustering analysis, 2 types of relationships emerge. One is the relationship within the clusters, the other one is the relationship among the clusters. We can describe such relationships with the words compactness and connectedness. Methods that focus on compactness seek to minimize the distances within clusters, and methods focus on connectedness seek to maximize the dissimilarity among clusters. Thus, the methods for clustering analysis are categorized into 2 types:
+                                            <ol>
+                                                <li>
+                                                    Compactness-based:
+                                                    <ul>
+                                                        <li>
+                                                            Hierarchical Clustering
+                                                        </li>
+                                                        <li>
+                                                            Partitional Clustering
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    Connectedness-based:
+                                                    <ul>
+                                                        <li>
+                                                            Spectral Clustering
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ol>
                                         </div>
-                                        <!--  -->
                                         <h3>
-                                            Pearson Correlation Coefficient
+                                            Hierarchical Clustering
                                         </h3>
                                         <div role="paragraph">
                                             <b>Usage</b>:
-                                            <br><b>Range</b>:
-                                            <br><b>Prerequisites</b>:
-                                            <ol>
-                                                <li>
-
-                                                </li>
-                                                <li>
-
-                                                </li>
-                                            </ol>
-                                            <b>Definition</b>:
-
-
-                                            <div
-                                                class="news-article__tracker bg-very-light-gray news-article__tracker--related-story px-1x pt-2 pb-1_5x pb-md-2x mb-2x border-left border-thick border-black-gray">
-                                                <span
-                                                    class="font-weight-bold text-primary text-xxs text-uppercase">Code</span>
-                                                <h2 class="my-0"><span class="mr-2">Pearson Correlation
-                                                        Coefficient</span>
-                                                </h2>
-                                                <span class="text-gray text-xxs">
-                                                    hello
-                                                </span>
-                                                <div class="mt-2">
-                                                    <p></p>
-
-                                                </div>
-                                            </div>
+                                            <br><b>Parameter</b>: <code>
+                                                
+                                            </code>
+                                            <br><b>Definition</b>:
                                         </div>
+
+                                        <h3>
+                                            Partitional Clustering
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>:
+                                            <br><b>Parameter</b>: <code>
+                                                
+                                            </code>
+                                            <br><b>Definition</b>:
+                                        </div>
+
+                                        <h3>
+                                            Spectral Clustering
+                                        </h3>
+                                        <div role="paragraph">
+                                            <b>Usage</b>:
+                                            <br><b>Parameter</b>: <code>
+                                                
+                                            </code>
+                                            <br><b>Definition</b>:
+                                        </div>
+ 
+                             
                                     </section>
 
 
