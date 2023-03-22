@@ -1,0 +1,147 @@
+<!-- sci prj 1 -->
+<article class="card-do">
+    <div class="card-content">
+        <div class="card-header">
+            <h3 class="card__title">
+                <!--  -->
+                <a href="/html_files\projects\science_projects\graduate\graduate0.html"
+                    title="Major, School, and Tutor" class="text-reset animation-underline">Major, School, and Tutor
+
+                </a>
+            </h3>
+            <ul class="card-meta align-middle pl-0">
+                <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2"
+                    data-visible-items-md="4" data-visible-items="9" data-truncate-less="less"
+                    data-truncate-more="authors" data-truncate-dots="true">
+                    <span>By</span>
+                    <!-- author info here -->
+                    <ul class="list-inline comma-separated" title="list of authors">
+                        <li class="list-inline-item">
+                            <span class="hlFld-ContribAuthor">yu ruotao</span>
+                        </li>
+                        <li class="list-inline-item"><span></span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+<!-- sci prj 2 -->
+<article class="card-do">
+    <div class="card-content">
+        <div class="card-header">
+            <h3 class="card__title">
+                <!--  -->
+                <a href="/html_files\projects\science_projects\graduate\graduate1.html"
+                    title="Calculus, Probability Theory, Linear Algebra"
+                    class="text-reset animation-underline">Calculus, Probability Theory, Linear Algebra
+
+                </a>
+            </h3>
+            <ul class="card-meta align-middle pl-0">
+                <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2"
+                    data-visible-items-md="4" data-visible-items="9" data-truncate-less="less"
+                    data-truncate-more="authors" data-truncate-dots="true">
+                    <span>By</span>
+                    <!-- author info here -->
+                    <ul class="list-inline comma-separated" title="list of authors">
+                        <li class="list-inline-item">
+                            <span class="hlFld-ContribAuthor">yu ruotao</span>
+                        </li>
+                        <li class="list-inline-item"><span></span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+<!-- sci prj 3 -->
+<article class="card-do">
+    <div class="card-content">
+        <div class="card-header">
+            <h3 class="card__title">
+                <!--  -->
+                <a href="/html_files\projects\science_projects\graduate\graduate2.html"
+                    title="English"
+                    class="text-reset animation-underline">English
+
+                </a>
+            </h3>
+            <ul class="card-meta align-middle pl-0">
+                <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2"
+                    data-visible-items-md="4" data-visible-items="9" data-truncate-less="less"
+                    data-truncate-more="authors" data-truncate-dots="true">
+                    <span>By</span>
+                    <!-- author info here -->
+                    <ul class="list-inline comma-separated" title="list of authors">
+                        <li class="list-inline-item">
+                            <span class="hlFld-ContribAuthor">yu ruotao</span>
+                        </li>
+                        <li class="list-inline-item"><span></span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+<!-- sci prj 4 -->
+<article class="card-do">
+    <div class="card-content">
+        <div class="card-header">
+            <h3 class="card__title">
+                <!--  -->
+                <a href="/html_files\projects\science_projects\graduate\graduate3.html"
+                    title="Major"
+                    class="text-reset animation-underline">Major
+                </a>
+            </h3>
+            <ul class="card-meta align-middle pl-0">
+                <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2"
+                    data-visible-items-md="4" data-visible-items="9" data-truncate-less="less"
+                    data-truncate-more="authors" data-truncate-dots="true">
+                    <span>By</span>
+                    <!-- author info here -->
+                    <ul class="list-inline comma-separated" title="list of authors">
+                        <li class="list-inline-item">
+                            <span class="hlFld-ContribAuthor">yu ruotao</span>
+                        </li>
+                        <li class="list-inline-item"><span></span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+<!-- sci prj 5 -->
+<article class="card-do">
+    <div class="card-content">
+        <div class="card-header">
+            <h3 class="card__title">
+                <!--  -->
+                <a href="/html_files\projects\science_projects\graduate\graduate4.html"
+                    title="Politics"
+                    class="text-reset animation-underline">Politics
+
+                </a>
+            </h3>
+            <ul class="card-meta align-middle pl-0">
+                <li class="card-contribs text-uppercase comma-separated mb-0" data-visible-items-sm="2"
+                    data-visible-items-md="4" data-visible-items="9" data-truncate-less="less"
+                    data-truncate-more="authors" data-truncate-dots="true">
+                    <span>By</span>
+                    <!-- author info here -->
+                    <ul class="list-inline comma-separated" title="list of authors">
+                        <li class="list-inline-item">
+                            <span class="hlFld-ContribAuthor">yu ruotao</span>
+                        </li>
+                        <li class="list-inline-item"><span></span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
