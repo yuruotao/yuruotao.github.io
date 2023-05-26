@@ -4,30 +4,30 @@
 <head data-pb-dropzone="head">
     <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
     </link>
-    <title id="page_title">PLC控制及组态软件</title>
+    <title id="page_title">基于S7-1200的升降梯</title>
 
     <!-- here is the updating script -->
     <script>
         page_title_1 = document.getElementById("page_title").innerText;
-        author = ["于若涛"];
+        author = ["yu ruotao"];
 
         var name_datas = {
             page_title: page_title_1,
-            current_directory: "learning",
-            current_directory_path: "/learning.html",
-            date: "2023 JANUARY 20",
+            current_directory: "small project",
+            current_directory_path: "/html_files/projects/small_ones.html",
+            date: "2023 May 21",
             authors: author,
-            article_type: "note",
-            article_field: "",
+            article_type: "small project",
+            article_field: "PLC",
 
-            previous_article_link: "/html_files/learning/learn23.html",
-            next_article_link: "/html_files/learning/learn25.html",
-            previous_article_title: "电力系统规划与可靠性",
-            next_article_title: "发电厂电气部分",
+            previous_article_link: "/html_files/projects/science_projects/small_prj/small4.html",
+            next_article_link: "/html_files/projects/science_projects/small_prj/small6.html",
+            previous_article_title: "基于Python的流体力学仿真程序",
+            next_article_title: "",
 
-            pdf_link: "#",
+            pdf_link: "/content_files/projects/small/small5/基于西门子PLC的升降梯.pdf",
             paper_state: "yes",
-            section_names: ["",],
+            section_names: ["升降梯介绍与功能分析", "升降梯程序编写", "升降梯PLC选型与I/O分配表","总结"],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1168,7 +1168,7 @@
                                                         <!-- link to the outstanding image of the field -->
                                                         <!--  -->
                                                         <a href="#" title="current column cover image" class="d-block">
-                                                            <img src="/resources/images/beautiful_pic6.jpg"
+                                                            <img src="/resources/images/beautiful_pic7.jpg"
                                                                 alt="cover image"></a>
                                                     </div>
                                                 </div>
@@ -1178,19 +1178,20 @@
                                                 class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
                                                 <div class="multi-search">
-                                                    <div id="learning_content_update">
+                                                    <div id="project_small_update">
 
                                                         <script>
-                                                            fetch("/update/learning_content_update.html")
+                                                            fetch("/update/project_small_update.html")
                                                                 .then(response => response.text())
-                                                                .then(text => document.getElementById('learning_content_update').innerHTML = text)
+                                                                .then(text => document.getElementById("project_small_update").innerHTML = text)
                                                         </script>
 
 
                                                     </div>
                                                     <div class="d-flex justify-content-end btn--more__wrapper">
                                                         <!-- direct to the current folder -->
-                                                        <a id="more_path_update" href="/learning.html"
+                                                        <a id="more_path_update"
+                                                            href="/html_files/projects/small_ones.html"
                                                             class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
                                                             <span>More</span>
                                                             <span aria-hidden="true" class="icon-arrow-right"></span>
@@ -1263,12 +1264,13 @@
                                         <div role="paragraph">
 
                                             <p>
-                                                T
+                                                In this essay, the author analyzed the control logic of an elevator. By separating into multiple function blocks, the author then write TIA portal programs accordingly. After that, the CPU model and surrounding functional devices are chosen. The basic functions of an elevator are initialization, calling, door-opening, floor number display, door control, and halt.
                                             </p>
+
 
                                             <p>
                                                 <b>
-                                                    Keywords: PLC, Siemens, 
+                                                    Keywords: PLC, Industrial Control System Design, S7-1200, Elevator
                                                 </b>
                                             </p>
                                         </div>
@@ -1281,96 +1283,108 @@
                             <section id="bodymatter" data-extent="bodymatter" property="articleBody" typeof="Text">
                                 <div class="core-container">
 
-
                                     <section id="sec-1" data-type="introduction">
+                                        <h2>
+                                            基于S7-1200的升降梯
+                                        </h2>
+
+
+
+                                        <div id="adobe-dc-view_1" style="width: auto;"></div>
+                                        <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
+                                        <script type="text/javascript">
+                                            document.addEventListener("adobe_dc_view_sdk.ready", function () {
+                                                var adobeDCView = new AdobeDC.View({ clientId: "1deff10f0f7143a6af32cc9c356b2b99", divId: "adobe-dc-view_1" });
+                                                adobeDCView.previewFile({
+                                                    content: { location: { url: "https://yuruotao.com/content_files/projects/small/small5/基于S7-1200的升降梯.pdf" } },
+                                                    metaData: { fileName: "基于S7-1200的升降梯.pdf" }
+                                                }, { embedMode: "IN_LINE" });
+                                            });
+                                        </script>
+
 
                                     </section>
-
-
-
 
 
 
                                     <section id="acknowledgments" role="doc-acknowledgments">
                                         <h2>Acknowledgments</h2>
                                         <div role="paragraph">
-                                            <b>Resources: </b>The recommended online course for this subject can be found <a href="">here</a>, provided by a learning institute. The course project can be found <a href="">here</a>, an elevator control system.
+                                            <b>Submit: </b>The manuscript is the same manuscript for the course
+                                            "PLC Control".
                                         </div>
 
                                         <div role="paragraph"><b>Competing interests:</b> no competing
                                             interests.
                                         </div>
 
+                                    </section>
+                                    <section id="backmatter" data-extent="backmatter">
+                                        <div id="bibliography_exist_update" class="core-container">
+                                            <!-- supplementary materials -->
+                                            <section id="supplementary-materials" class="core-supplementary-materials">
 
+                                                <h2>Supplementary Materials</h2>
+                                                <section id="sec-5-1">
+                                                    <h3>Appendix:</h3>
+                                                    <div class="core-supplementary-material">
+                                                        <div class="core-description">
+                                                            <div>Code</div>
+
+                                                        </div>
+                                                        <div class="core-link">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="https://github.com/yuruotao/PLC_project"
+                                                                        download="Appendix">Github</a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </section>
+
+
+                                            </section>
+
+                                            <section id="bibliography" role="doc-bibliography">
+                                                <div id="citation_insert" role="list">
+
+                                                    <script type="application/javascript">
+                                                        citations = [
+
+
+
+                                                        ];
+                                                        iterate_num = citations.length;
+                                                        html_model_num1 = '<div role="doc-biblioentry listitem" data-has="label"><div class="label">';
+                                                        html_model_num2 = '</div><div id="R';
+                                                        html_model_content_front = '" class="citations"><div class="citation"><div class="citation-content">';
+                                                        html_model_content_end = '</div><div class="external-links"><div><a href="" target="_blank"></a></div></div></div></div></div>';
+                                                        final_insert = '';
+                                                        for (i = 0; i < iterate_num; i++) {
+                                                            final_insert += html_model_num1 + String((i + 1)) + html_model_num2 + String((i + 1)) + html_model_content_front + citations[i] + html_model_content_end;
+                                                        }
+                                                        document.getElementById("citation_insert").innerHTML = '<h2>REFERENCES AND NOTES</h2>' + final_insert;
+
+
+
+                                                    </script>
+
+
+
+
+
+                                                </div>
+                                            </section>
                                     </section>
                                 </div>
                             </section>
 
-                            <section id="backmatter" data-extent="backmatter">
-                                <div id="bibliography_exist_update" class="core-container">
-                                    <!-- supplementary materials -->
-                                    <section id="supplementary-materials" class="core-supplementary-materials">
 
-                                        <h2>Supplementary Materials</h2>
-                                        <section id="sec-5-1">
-                                            <h3>Appendix:</h3>
-                                            <div class="core-supplementary-material">
-                                                <div class="core-description">
-                                                    <div>Figures: </div>Figure 1 - Figure 6
-
-                                                </div>
-                                                <div class="core-link">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="/" download="Appendix">Download</a>
-                                                        </li>
-                                                        <li>1.27 MB</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </section>
-
-
-                                    </section>
-
-
-                                    <section id="bibliography" role="doc-bibliography">
-                                        <div id="citation_insert" role="list">
-
-
-
-
-
-
-
-
-
-                                            <script type="application/javascript">
-                                                citations = [
-
-                                                ];
-                                                iterate_num = citations.length;
-                                                html_model_num1 = '<div role="doc-biblioentry listitem" data-has="label"><div class="label">';
-                                                html_model_num2 = '</div><div id="R';
-                                                html_model_content_front = '" class="citations"><div class="citation"><div class="citation-content">';
-                                                html_model_content_end = '</div><div class="external-links"><div><a href="" target="_blank"></a></div></div></div></div></div>';
-                                                final_insert = '';
-                                                for (i = 0; i < iterate_num; i++) {
-                                                    final_insert += html_model_num1 + String((i + 1)) + html_model_num2 + String((i + 1)) + html_model_content_front + citations[i] + html_model_content_end;
-                                                }
-                                                document.getElementById("citation_insert").innerHTML = '<h2>REFERENCES AND NOTES</h2>' + final_insert;
-
-
-
-                                            </script>
-
-
-
-
-
-                                        </div>
-                                    </section>
-                            </section>
 
 
 
