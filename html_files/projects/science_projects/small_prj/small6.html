@@ -4,30 +4,30 @@
 <head data-pb-dropzone="head">
     <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
     </link>
-    <title id="page_title">电气工程概预算</title>
+    <title id="page_title">研究生室内办公区域设计方案</title>
 
     <!-- here is the updating script -->
     <script>
         page_title_1 = document.getElementById("page_title").innerText;
-        author = ["于若涛"];
+        author = ["yu ruotao", "ding yingzhe"];
 
         var name_datas = {
             page_title: page_title_1,
-            current_directory: "learning",
-            current_directory_path: "/learning.html",
-            date: "2023 JANUARY 20",
+            current_directory: "small project",
+            current_directory_path: "/html_files/projects/small_ones.html",
+            date: "2023 May 24",
             authors: author,
-            article_type: "note",
-            article_field: "",
+            article_type: "small project",
+            article_field: "PLC",
 
-            previous_article_link: "/html_files/learning/learn20.html",
-            next_article_link: "/html_files/learning/learn22.html",
-            previous_article_title: "高压电技术",
-            next_article_title: "电磁场理论",
+            previous_article_link: "/html_files/projects/science_projects/small_prj/small4.html",
+            next_article_link: "/html_files/projects/science_projects/small_prj/small6.html",
+            previous_article_title: "基于S7-1200的升降梯",
+            next_article_title: "",
 
-            pdf_link: "#",
+            pdf_link: "/content_files/projects/small/small6/室内办公区域设计方案.pdf",
             paper_state: "yes",
-            section_names: ["工程概预算概论", "电气工程基础", "电气安装工程概预算",],
+            section_names: ["建筑碳排放计算背景", "电气工程学院楼年电力负荷需求计算", "电气工程学院楼研究生办公区", "研究生办公区设计概算", "结论"],
         };
 
         window.sessionStorage.setItem("name_datas", JSON.stringify(name_datas));
@@ -1168,7 +1168,7 @@
                                                         <!-- link to the outstanding image of the field -->
                                                         <!--  -->
                                                         <a href="#" title="current column cover image" class="d-block">
-                                                            <img src="/resources/images/beautiful_pic6.jpg"
+                                                            <img src="/resources/images/beautiful_pic7.jpg"
                                                                 alt="cover image"></a>
                                                     </div>
                                                 </div>
@@ -1178,19 +1178,20 @@
                                                 class="current-issue-aside__multisearch pt-0 pt-md-3 pt-xl-0 pl-0 pl-md-3 pl-xl-0">
 
                                                 <div class="multi-search">
-                                                    <div id="learning_content_update">
+                                                    <div id="project_small_update">
 
                                                         <script>
-                                                            fetch("/update/learning_content_update.html")
+                                                            fetch("/update/project_small_update.html")
                                                                 .then(response => response.text())
-                                                                .then(text => document.getElementById('learning_content_update').innerHTML = text)
+                                                                .then(text => document.getElementById("project_small_update").innerHTML = text)
                                                         </script>
 
 
                                                     </div>
                                                     <div class="d-flex justify-content-end btn--more__wrapper">
                                                         <!-- direct to the current folder -->
-                                                        <a id="more_path_update" href="/learning.html"
+                                                        <a id="more_path_update"
+                                                            href="/html_files/projects/small_ones.html"
                                                             class="btn btn--more animation-icon-shift text-uppercase font-weight-bold">
                                                             <span>More</span>
                                                             <span aria-hidden="true" class="icon-arrow-right"></span>
@@ -1263,12 +1264,13 @@
                                         <div role="paragraph">
 
                                             <p>
-
+                                                In this essay, the authors first analyzed the yearly load requirement of the college of electrical engineering of Guangxi University. Then the authors designed an office for graduate students, along with the calculation of its budget.
                                             </p>
+
 
                                             <p>
                                                 <b>
-                                                    Budgeting, Electrical Engineering,
+                                                    Keywords: Budget Estimation, Construction Carbon Emission, Load Requirement Estimation
                                                 </b>
                                             </p>
                                         </div>
@@ -1283,1454 +1285,116 @@
 
                                     <section id="sec-1" data-type="introduction">
                                         <h2>
-                                            工程概预算概论
-                                        </h2>
-                                        <div class="figure-wrap">
-                                            <figure id="T1" class="table">
-                                                <div class="table-wrap">
-                                                    <div class="collapsible-wrapper" aria-expanded="true">
-                                                        <table>
-                                                            <thead>
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="col">
-                                                                        <b>Symbol</b>
-                                                                    </th>
-                                                                    <th data-xml-align="center" scope="col">
-                                                                        <b>Description</b>
-                                                                    </th>
-                                                                </tr>
-                                                            </thead>
-
-                                                            <tbody>
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <math display='block'>
-                                                                            <semantics>
-                                                                                <mrow>
-                                                                                    <mi>P</mi>
-                                                                                    <mi>F</mi>
-                                                                                </mrow>
-                                                                            </semantics>
-                                                                        </math>
-
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        价差预备费
-                                                                    </td>
-                                                                </tr>
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <math display='block'>
-                                                                            <semantics>
-                                                                                <mrow>
-                                                                                    <mi>n</mi>
-                                                                                </mrow>
-                                                                            </semantics>
-                                                                        </math>
-
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        建设期年份数
-                                                                    </td>
-                                                                </tr>
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <math display='block'>
-                                                                            <semantics>
-                                                                                <mrow>
-                                                                                    <msub>
-                                                                                        <mi>I</mi>
-                                                                                        <mi>t</mi>
-                                                                                    </msub>
-                                                                                </mrow>
-                                                                            </semantics>
-                                                                        </math>
-
-
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        估算静态投资额中第t年投入的工程费用
-                                                                    </td>
-                                                                </tr>
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <math display='block'>
-                                                                            <semantics>
-                                                                                <mrow>
-                                                                                    <mi>f</mi>
-                                                                                </mrow>
-                                                                            </semantics>
-                                                                        </math>
-
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        年涨价率（按规定或预测）
-                                                                    </td>
-                                                                </tr>
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <math display='block'>
-                                                                            <semantics>
-                                                                                <mrow>
-                                                                                    <mi>m</mi>
-                                                                                </mrow>
-                                                                            </semantics>
-                                                                        </math>
-
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        建设前期年限（编制估算到开工建设）
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <math display='block'>
-                                                                            <semantics>
-                                                                                <mrow>
-                                                                                    <msub>
-                                                                                        <mi>q</mi>
-                                                                                        <mi>j</mi>
-                                                                                    </msub>
-                                                                                </mrow>
-                                                                            </semantics>
-                                                                        </math>
-
-
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        建设期第j年应计利息
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <math display='block'>
-                                                                            <semantics>
-                                                                                <mrow>
-                                                                                    <msub>
-                                                                                        <mi>p</mi>
-                                                                                        <mrow>
-                                                                                            <mi>j</mi>
-                                                                                            <mo>&#x2212;</mo>
-                                                                                            <mn>1</mn>
-                                                                                        </mrow>
-                                                                                    </msub>
-                                                                                </mrow>
-                                                                            </semantics>
-                                                                        </math>
-
-
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        建设期第（j-1）年末累计贷款本金与利息之和
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <math display='block'>
-                                                                            <semantics>
-                                                                                <mrow>
-                                                                                    <mi>m</mi>
-                                                                                </mrow>
-                                                                            </semantics>
-                                                                        </math>
-
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        建设期第j年贷款金额
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr data-xml-align="center" data-xml-valign="middle">
-                                                                    <th data-xml-align="center" scope="row">
-                                                                        <math display='block'>
-                                                                            <semantics>
-                                                                                <mrow>
-                                                                                    <mi>i</mi>
-                                                                                </mrow>
-                                                                            </semantics>
-                                                                        </math>
-
-                                                                    </th>
-                                                                    <td data-xml-align="center" scope="col">
-                                                                        年利率
-                                                                    </td>
-                                                                </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-
-                                                </div>
-                                                <figcaption>
-                                                    <div class="caption"><span class="heading">Table 1</span>. The
-                                                        table of notations.</div>
-
-                                                    <div class="notes">
-                                                        <div role="doc-footnote">
-
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-
-                                            <a href="#T1" class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                data-index="0">
-                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                <span>Open in viewer</span>
-                                            </a>
-                                        </div>
-                                        <h3>
-                                            概预算基础知识
-                                        </h3>
-                                        <div role="paragraph">
-                                            <b>基本建设内容</b>：
-                                            <ul>
-                                                <li>
-                                                    建筑安装工程；
-                                                </li>
-                                                <li>
-                                                    设备购置；
-                                                </li>
-                                                <li>
-                                                    勘察、设计、科研实验、征地等工作；
-                                                </li>
-                                            </ul>
-                                            <b>基本建设程序</b>：基本建设项目从前期决策到投产过程的基本程序；
-                                            <ol>
-                                                <li>
-                                                    <b>前期论证阶段</b>
-                                                    <ul>
-                                                        <li>
-                                                            <em>编制项目建议书：</em>分析必要性与可行性，进行初步估算；
-                                                        </li>
-                                                        <li>
-                                                            <em>可行性研究：</em>对多方面进行分析论证；
-                                                        </li>
-                                                        <li>
-                                                            <em>可行性研究报告审批：</em>有资格的工程咨询机构进行评估并通过；
-                                                        </li>
-                                                        <li>
-                                                            <em>设计任务书：</em>确定工程项目和建设方案的基本文件，编制设计文件的主要依据；
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <b>设计阶段</b>
-                                                    <ul>
-                                                        <li>
-                                                            <em>初步设计：</em>未最终定稿前的设计，需编写初步设计概算；
-                                                        </li>
-                                                        <li>
-                                                            <em>施工图设计：</em>初步设计批准后，更加具体、精确的设计图纸，需同时编写设计预算书；
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <b>施工阶段</b>
-                                                    <ul>
-                                                        <li>
-                                                            <em>施工准备：</em>三通一平（水电道路、土地），落实施工力量、组织物资等准备工作，用电超50kW需做施工组织供电设计；
-                                                        </li>
-                                                        <li>
-                                                            <em>组织施工</em>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <b>竣工验收、投产阶段</b>
-                                                    <ul>
-                                                        <li>
-                                                            <em>竣工验收：</em>开发单位与各单位、部门对项目是否符合规划设计要求、建筑施工、设备安全质量进行检验；（建设过程中已进行分阶段验收）
-                                                        </li>
-                                                        <li>
-                                                            <em>项目后评价：</em>项目运行1~2年内完成；
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ol>
-
-                                            <b>基本建设项目</b>：<ul>
-                                                <li>按一个总体设计组织施工、</li>
-                                                <li>由一个或几个单项工程组成、</li>
-                                                <li>经济上统一核算、</li>
-                                                <li>行政上统一管理、</li>
-                                                <li>建成后有完整的系统、</li>
-                                                <li>可独立形成生产能力/使用价值</li>
-                                            </ul>的建设工程；
-                                            <br>
-                                            <br><b>基本建设项目组成</b>：
-                                            <ol>
-                                                <li>
-                                                    <em>单项工程：</em>具有独立设计文件，建成后可独立发挥生产能力/工程效益；
-                                                </li>
-                                                <li>
-                                                    <em>分部工程：</em>用于计算工程量和套用定额时的分类；（基础工程、电气工程、通风工程）
-                                                </li>
-                                                <li>
-                                                    <em>分项工程：</em>通过较简单的施工过程可生产，以适当计量单位可进行工程量及单价计算的工程；（土方工程、钢筋工程）
-                                                </li>
-                                            </ol>
-                                            <ul>
-                                                <li>
-                                                    <em>单位工程：</em>具有独立设计，可独立组织施工、建成后一般不能进行生产/发挥效益；（土建工程、安装工程）
-                                                </li>
-                                            </ul>
-
-                                            <b>工程概预算</b>：对应设计阶段的概算和预算；
-                                            <ul>
-                                                <li>
-                                                    <em>设计概算：</em>经批准后一般不得调整；
-                                                </li>
-                                                <li>
-                                                    <em>施工图预算：</em>按照施工图设计文件，在工程施工前对工程费用进行的预测和计算；
-                                                </li>
-                                            </ul>
-                                            <b>工程造价</b>：按照确定的建设内容、规模、标准、要求将工程项目全部建成，在建设期预计/实际支出的建设费用；
-                                            <br>工程概算价和工程预算价为工程造价的不同计价形式（存在其他计价形式）；
-                                        </div>
-
-                                        <h3>
-                                            工程造价构成
-                                        </h3>
-                                        <div role="paragraph">
-                                            <b>我国建设项目总投资构成</b>：
-                                            <ul>
-                                                <li>
-                                                    固定资产投资（工程造价）
-                                                    <ol>
-                                                        <li>
-                                                            设备及工具、器具购置费用
-                                                        </li>
-                                                        <li>
-                                                            建筑安装工程费用
-                                                        </li>
-                                                        <li>
-                                                            工程建设其他费用
-                                                        </li>
-                                                        <li>
-                                                            预备费
-                                                        </li>
-                                                        <li>
-                                                            建设期贷款利息
-                                                        </li>
-                                                        <li>
-                                                            固定资产方向调节税（暂停征收）
-                                                        </li>
-
-                                                    </ol>
-                                                </li>
-                                                <li>
-                                                    流动资产投资（流动资金）
-                                                </li>
-                                            </ul>
-                                            <b>世界银行工程造价构成</b>：
-                                            <ul>
-                                                <li>
-                                                    项目直接建设成本
-                                                </li>
-                                                <li>
-                                                    项目间接建设成本
-                                                </li>
-                                                <li>
-                                                    应急费
-                                                </li>
-                                                <li>
-                                                    建设成本上升费用
-                                                </li>
-                                            </ul>
-                                            <b>1. 设备及工具、器具购置费用</b>:
-                                            <br>设备购置费 = （国产/进口）设备原价 + 设备运杂费
-                                            <ul>
-                                                <li>
-                                                    国产设备原价
-                                                    <ul>
-                                                        <li>
-                                                            <em>国产标准设备原价：</em>查询相关交易市场价格/设备生产厂家询价；
-                                                        </li>
-                                                        <li>
-                                                            <em>国产非标准设备原价：</em>按成本构成估算价格；
-
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    进口设备原价
-                                                    <br>进口设备原价：进口设备的抵岸价，由CIF与进口从属费构成；
-                                                    <ul>
-                                                        <li>
-                                                            交易价格
-                                                            <ul>
-                                                                <li>
-                                                                    <em>FOB：</em>装运港船上交货/离岸价格，货物在指定的装运港越过船舷，卖方完成交货义务；
-                                                                </li>
-                                                                <li>
-                                                                    <em>CFR：</em>成本加运费/运费在内价，卖方还需支付将货物运至指定目的港所需费用；
-                                                                </li>
-                                                                <li>
-                                                                    <em>CIF：</em>成本加保险费、运费/到岸价格，除与CFR相同义务，还需购买最低险别海运保险；
-                                                                </li>
-
-                                                            </ul>
-                                                        </li>
-
-                                                        <li>
-                                                            到岸价的构成与计算
-                                                            <ul>
-                                                                <li>
-                                                                    CIF = FOB + 国际运费 + 运输保险费 = CFR + 运输保险费
-                                                                </li>
-                                                                <li>
-                                                                    <em>货价：</em>一般指FOB；
-                                                                </li>
-                                                                <li>
-                                                                    国际运费 = FOB * 运费率 = 单位运价 * 运量
-                                                                </li>
-                                                                <li>
-                                                                    运输保险费 = （FOB + 国外运费）* 保险费率 / （1 - 保险费率）
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-
-                                                        <li>
-                                                            进口从属费的构成与计算
-                                                            <br>进口从属费 = 银行财务费 + 外贸手续费 + 关税 + 消费税 + 进口环节增值税 + 车辆购置税
-
-                                                            <ul>
-                                                                <li>
-                                                                    银行财务费 = FOB * 人民币外汇汇率 * 银行财务费率
-                                                                </li>
-                                                                <li>
-                                                                    外贸手续费 = CIF * 人民币外汇汇率 * 外贸手续费率（1.5%）
-                                                                </li>
-                                                                <li>
-                                                                    关税 = CIF * 人民币外汇汇率 * 进口关税税率
-                                                                </li>
-                                                                <li>
-                                                                    消费税 = （CIF * 人民币外汇汇率 + 关税）* 消费税税率 /（1 - 消费税税率）
-                                                                </li>
-                                                                <li>
-                                                                    进口环节增值税额 = 组成计税价格 * 增值税税率
-                                                                    <br>组成计税价格 = 关税完税价格 + 关税 + 消费税
-                                                                </li>
-                                                                <li>
-                                                                    车辆购置税 = 组成计税价格 * 车辆购置税税率
-                                                                </li>
-
-                                                            </ul>
-                                                        </li>
-
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    设备运杂费
-                                                    <ul>
-                                                        <li>
-                                                            设备运杂费 = 设备原价 * 设备运杂费率
-                                                            <br>设备运杂费率由各部门规定；
-                                                        </li>
-                                                        <li>
-                                                            工器具及家具购置费 = 设备购置费 * 定额费率
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                            <b>2. 建筑安装工程费用</b>
-                                            <ol>
-                                                <li>
-                                                    直接费
-                                                    <ul>
-                                                        <li>
-                                                            直接工程费：人工费、材料费、施工机械使用费；
-                                                        </li>
-                                                        <li>
-                                                            措施费：安全文明施工费、夜间施工增加费、非夜间施工照明费、二次搬运费...
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    间接费
-                                                    <ul>
-                                                        <li>
-                                                            规费：政府和有关权力部门规定必须缴纳的费用；
-                                                        </li>
-                                                        <li>
-                                                            企业管理费：施工单位为组织施工生产和经营管理所需费用；
-                                                            <br>应纳税额 = 应纳增值税额 * x%（由规定确定）
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    利润：施工企业完成承包工程获得的盈利；
-                                                    <ul>
-                                                        <li>
-                                                            以直接费为计算基础
-                                                            <br>利润 = （直接费 + 间接费）* 相应利润率
-                                                        </li>
-                                                        <li>
-                                                            以人工费和机械费为计算基础
-                                                            <br>利润 = 直接费中人工费和机械费合计 * 相应利润率
-                                                        </li>
-                                                        <li>
-                                                            以人工费为计算基础
-                                                            <br>利润 = 直接费中人工费合计 * 相应利润率
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    税金：增值税，对在我国境内销售货物、提供加工、修理修配劳务、进口货物的单位/个人，就其取得增值额为计算依据征收的税；
-                                                    <br>纳税人：
-                                                    <ul>
-                                                        <li>
-                                                            一般纳税人：税率11%或6%
-                                                            <br>应纳增值税额 = 当期销项税额 - 当期进项税额
-                                                            <br>销项税额 = 销售额 * 相应税率
-                                                        </li>
-                                                        <li>
-                                                            小规模纳税人：不可抵扣进项税，税率为3%，存在分包时：
-                                                            <br>应纳税额 = （全部价款 + 价外费用 - 支付的分包款）/ （1 + 3%）* 3%
-                                                        </li>
-                                                    </ul>
-
-                                                </li>
-                                            </ol>
-                                            <b>3. 工程建设其他费用</b>：
-                                            <ol>
-                                                <li>
-                                                    建设用地费
-                                                    <br>国有土地使用权获得方式
-                                                    <ul>
-                                                        <li>
-                                                            出让方式
-                                                        </li>
-                                                        <li>
-                                                            划拨方式
-                                                        </li>
-                                                    </ul>
-                                                    建设用地取得费用
-                                                    <ul>
-                                                        <li>
-                                                            征地补偿费用
-                                                        </li>
-                                                        <li>
-                                                            拆迁补偿费用
-                                                        </li>
-                                                        <li>
-                                                            出让金、土地转让金
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    与项目建设有关的其他费用
-                                                </li>
-                                                <li>
-                                                    与未来生产经营有关的其他费用
-                                                </li>
-                                            </ol>
-                                            <b>4. 预备费和建设期利息</b>：
-                                            <ol>
-                                                <li>
-                                                    预备费
-                                                    <ul>
-                                                        <li>
-                                                            基本预备费：为项目实施过程中难以预料的支出预留的费用
-                                                            <br>基本预备费 = （工程费用 + 工程建设其他费用）* 基本预备费费率
-                                                        </li>
-                                                        <li>
-                                                            价差预备费：为建设期内利率、汇率、价格等因素变化预留的费用
-                                                            <math display='block'>
-                                                                <semantics>
-                                                                    <mrow>
-                                                                        <mi>P</mi>
-                                                                        <mi>F</mi>
-                                                                        <mo>=</mo>
-                                                                        <mstyle displaystyle='true'>
-                                                                            <munderover>
-                                                                                <mo>&#x2211;</mo>
-                                                                                <mrow>
-                                                                                    <mi>t</mi>
-                                                                                    <mo>=</mo>
-                                                                                    <mn>1</mn>
-                                                                                </mrow>
-                                                                                <mi>n</mi>
-                                                                            </munderover>
-                                                                            <mrow>
-                                                                                <msub>
-                                                                                    <mi>I</mi>
-                                                                                    <mi>t</mi>
-                                                                                </msub>
-                                                                                <mo stretchy='false'>[</mo>
-                                                                                <msup>
-                                                                                    <mrow>
-                                                                                        <mo stretchy='false'>(</mo>
-                                                                                        <mn>1</mn>
-                                                                                        <mo>+</mo>
-                                                                                        <mi>f</mi>
-                                                                                        <mo stretchy='false'>)</mo>
-                                                                                    </mrow>
-                                                                                    <mrow>
-                                                                                        <mi>m</mi>
-                                                                                        <mo>+</mo>
-                                                                                        <mi>t</mi>
-                                                                                        <mo>&#x2212;</mo>
-                                                                                        <mn>0.5</mn>
-                                                                                    </mrow>
-                                                                                </msup>
-                                                                                <mo>&#x2212;</mo>
-                                                                                <mn>1</mn>
-                                                                                <mo stretchy='false'>]</mo>
-                                                                            </mrow>
-                                                                        </mstyle>
-                                                                    </mrow>
-                                                                </semantics>
-                                                            </math>
-
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    建设期贷款利息
-                                                    <br>建设期利息：当年贷款按半年计算，上年贷款按全年计算
-                                                    <math display='block'>
-                                                        <semantics>
-                                                            <mrow>
-                                                                <msub>
-                                                                    <mi>q</mi>
-                                                                    <mi>j</mi>
-                                                                </msub>
-                                                                <mo>=</mo>
-                                                                <mo stretchy='false'>(</mo>
-                                                                <msub>
-                                                                    <mi>P</mi>
-                                                                    <mrow>
-                                                                        <mi>j</mi>
-                                                                        <mo>&#x2212;</mo>
-                                                                        <mn>1</mn>
-                                                                    </mrow>
-                                                                </msub>
-                                                                <mo>+</mo>
-                                                                <mn>0.5</mn>
-                                                                <msub>
-                                                                    <mi>A</mi>
-                                                                    <mi>j</mi>
-                                                                </msub>
-                                                                <mo stretchy='false'>)</mo>
-                                                                <mo>*</mo>
-                                                                <mi>i</mi>
-                                                            </mrow>
-
-                                                        </semantics>
-                                                    </math>
-
-                                                </li>
-                                            </ol>
-
-
-                                        </div>
-                                        <h3>
-                                            工程计价方法与计价依据
-                                        </h3>
-                                        <div role="paragraph">
-                                            <b>工程计价</b>：
-                                            <ul>
-                                                <li>
-                                                    定义：对工程造价及其构成内容进行估计和确定的行为；
-                                                </li>
-                                                <li>
-                                                    思路：将建设项目细分至最基本的构造单元，找到适当的计量单位、当时当地单价，采取一定计价方法，进行分布组合汇总，计算相应的工程造价
-                                                </li>
-                                                <li>
-                                                    环节：
-                                                    <ol>
-                                                        <li>
-                                                            工程计量
-                                                            <ul>
-                                                                <li>
-                                                                    工程项目的划分：单位工程基本构造单元的确定
-                                                                </li>
-                                                                <li>
-                                                                    工程量的计算
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            工程计价
-                                                            <ul>
-                                                                <li>
-                                                                    工程单价的确定
-                                                                    <ul>
-                                                                        <li>
-                                                                            直接工程费单价/供料单价：
-                                                                            <br>工料单价 = sum(人材机消耗量*相应单价)
-                                                                        </li>
-                                                                        <li>
-                                                                            综合单价：包含人工费、材料费、机械台班费、企业管理费、利润、风险因素
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    总价的计算
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                    </ol>
-                                                </li>
-                                            </ul>
-
-                                            <b>工程计价标准与依据</b>：
-                                            <ul>
-                                                <li>
-                                                    工程定额：用于在项目建设前期各阶段对建设投资的预测和估计
-                                                </li>
-                                                <li>
-                                                    依据：
-                                                    <ul>
-                                                        <li>
-                                                            计价活动的相关规章规程
-                                                        </li>
-                                                        <li>
-                                                            工程量清单计价（合同价形成、合同价格管理）、计量规范
-                                                        </li>
-                                                        <li>
-                                                            工程定额
-                                                        </li>
-                                                        <li>
-                                                            工程造价信息
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <b>工程定额体系</b>
-                                            <ul>
-                                                <li>
-                                                    工程建设体系：在工程建设中单位产品上人工、机械、材料、资金消耗的规定额度
-                                                                                                    </li>
-                                                <li>
-                                                    工程建设定额分类：
-                                                    <ol>
-                                                        <li>
-                                                            按反映的生产要素消耗内容：
-                                                            <ul>
-                                                                <li>
-                                                                    劳动消耗定额
-                                                                </li>
-                                                                <li>
-                                                                    机械消耗定额
-                                                                </li>
-                                                                <li>
-                                                                    材料消耗定额
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            按编制程序和用途分类：
-                                                            <ul>
-                                                                <li>
-                                                                    施工定额：完成一定计量单位的某施工过程/基本工序消耗的人工、材料、机械台班数量标准
-                                                                    <br>分项最细、定额子目最多
-                                                                    <br>生产性定额
-                                                                </li>
-                                                                <li>
-                                                                    预算定额：完成一定计量单位合格分项工程和结构构件所需人材机的数量标准与费用标准
-                                                                    <br>以施工定额为基础扩大编制
-                                                                </li>
-                                                                <li>
-                                                                    概算定额：完成单位合格扩大分项工程/结构构件所需人材机的数量标准与费用标准
-                                                                </li>
-                                                                <li>
-                                                                    概算指标：以单位工程为对象，反映完成一个规定计量单位建筑安装产品的经济消耗指标
-                                                                   
-                                                                </li>
-                                                                <li>
-                                                                    投资估算指标：以建设项目、单项工程、单位工程为对象，反映建设总投资与各项费用构成的经济指标
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            按专业性质分类：
-                                                            <ul>
-                                                                <li>
-                                                                    建筑工程：建筑及装饰...
-                                                                </li>
-                                                                <li>
-                                                                    安装工程：电气设备安装工程定额...
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            按主编单位和管理权限分类：全国、行业、地区、企业、补充
-                                                        </li>
-                                                    </ol>
-                                                </li>
-                                                <li>
-                                                    电力建设工程定额：
-                                                    <ul>
-                                                        <li>
-                                                            电力建设工程概算定额
-                                                        </li>
-                                                        <li>
-                                                            电力建设工程预算定额
-                                                        </li>
-                                                        <li>
-                                                            电力建设工程定额编码：见<a href="#T2">表2</a>
-                                                        </li>
-                                                        <li>
-                                                            定额子目编码格式：
-                                                            <br>代码+章号+节号
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <div class="figure-wrap">
-                                                <figure id="T2" class="table">
-                                                    <div class="table-wrap">
-                                                        <div class="collapsible-wrapper" aria-expanded="true">
-                                                            <table>
-                                                                <thead>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>工程书目</b>
-                                                                        </th>
-                                                                        <th data-xml-align="center" scope="col">
-                                                                            <b>编码</b>
-                                                                        </th>
-                                                                    </tr>
-                                                                </thead>
-                                        
-                                                                <tbody>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设投资估算指标——火电工程》
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>ZF</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设投资估算指标——送电线路工程》
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>ZX</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设概算定额 第一册 建筑工程》
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>GT</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设概算定额 第二册 热力设备安装工程》
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>GJ</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设概算定额 第三册 电气设备安装工程》
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>GD</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设概算定额 第四册 调试工程》
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>GS</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设概算定额 第五册 通信工程》
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>GZ</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设预算定额》第1册 建筑工程
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>YT</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设预算定额》第2册 热力设备安装工程
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>YJ</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设预算定额》第3册 电气设备安装工程
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>YD</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设预算定额》第4册 输电线路工程
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>YX</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设预算定额》第5册 调试工程
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>YS</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设预算定额》第6册 通信工程
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>YZ</b>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="center" scope="row">
-                                                                            《电力工程建设预算定额》第7册 加工配置品工程
-                                                                        </th>
-                                                                        <td data-xml-align="center" scope="col">
-                                                                            <b>YP</b>
-                                                                        </td>
-                                                                    </tr>
-                                        
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                        
-                                                    </div>
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Table 2</span>. 电力建设工程定额编码.</div>
-                                        
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">
-                                                            </div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                        
-                                                <a href="#T" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
-                                                    <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                    <span>Open in viewer</span>
-                                                </a>
-                                            </div>
-                                            <b>工程量清单计价</b>：
-                                            <ul>
-                                                <li>
-                                                    工程量清单：载明建设工程分部分项工程项目、措施项目、其他项目的数量、规费、税金等内容的清单
-                                                    <br>招标工程量清单：招标人根据实际情况编制的工程量清单
-                                                    <br>已标价工程量清单：投标档组成部分的，已标明价格、经确认的工程量清单
-                                                </li>
-                                                <li>
-                                                    工程量清单计价作用：
-                                                    <ol>
-                                                        <li>
-                                                            提供平等竞争条件
-                                                        </li>
-                                                        <li>
-                                                            满足市场经济条件下竞争的需要
-                                                        </li>
-                                                        <li>
-                                                            提高工程计价效率，快速报价
-                                                        </li>
-                                                        <li>
-                                                            利于工程款拨付、工程造价结算
-                                                        </li>
-                                                        <li>
-                                                            利于业主对投资的控制
-                                                        </li>
-                                                    </ol>
-                                                </li>
-                                                <li>
-                                                    工程量清单内容：
-                                                    <ul>
-                                                        <li>
-                                                            分部分项工程项目清单
-                                                        </li>
-                                                        <li>
-                                                            措施项目清单
-                                                        </li>
-                                                        <li>
-                                                            其他项目清单
-                                                        </li>
-                                                        <li>
-                                                            规费、税金项目清单
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                            </ul>
-                                            <b>分部分项工程项目清单</b>：
-                                            <ul>
-                                           
-                                                    内容：
-                                                    <ol>
-                                                        <li>
-                                                            项目编码：五级编码，共12位阿拉伯数字
-                                                            <ul>
-                                                                <li>
-                                                                    第一级：工程分类顺序码（2）
-                                                                </li>
-                                                                <li>
-                                                                    第二级：专业工程顺序码（2）
-                                                                </li>
-                                                                <li>
-                                                                    第三级：分部工程顺序码（2）
-                                                                </li>
-                                                                <li>
-                                                                    第四级：分项工程项目名称顺序码（3）
-                                                                </li>
-                                                                <li>
-                                                                    第五级：工程量清单项目名称顺序码（3）
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            项目名称
-                                                        </li>
-                                                        <li>
-                                                            项目特征
-                                                        </li>
-                                                        <li>
-                                                            计量单位
-                                                        </li>
-                                                        <li>
-                                                            工程数量的计算
-                                                        </li>
-                                                    </ol>
-                                            
-                                            </ul>
-
-                                            <b>措施项目清单</b>：
-                                            <ul>
-                                                <li>
-                                                    措施项目：发生于工程施工准备与施工过程中的技术、生活、安全、环境保护等方面的项目
-                                                </li>
-                                                <li>
-                                                    标准格式：
-                                                    <ul>
-                                                        <li>
-                                                            可计算的项目采用分部分项工程量清单方式编制
-                                                        </li>
-                                                        <li>
-                                                            不能计算工程量的项目清单，以“项”为单位编制
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                            <b>其他项目清单</b>：
-                                            <ul>
-                                                <li>
-                                                    因招标人特殊要求发生的，与拟建工程有关的其他费用项目、相应数量的清单
-                                                </li>
-                                                <li>
-                                                    项目名称：
-                                                    <ul>
-                                                        <li>
-                                                            暂列金额：用于合同签订时尚未确定/不可预见的材料、设备、服务的采购，工程变更，合同价款调整等
-                                                        </li>
-                                                        <li>
-                                                            暂估价：用于支付必然发生但暂时不能确定价格的材料、工程设备的单价、专业工程的金额
-                                                            <br>包括除规费和税金以外的管理费、利润等取费内容
-                                                        </li>
-                                                        <li>
-                                                            计日工：承包人向发包人提出的工程合同范围外的零星项目/工作，按合同中约定单价计价的方式
-                                                        </li>
-                                                        <li>
-                                                            总承包服务费：总承包人为配合协调发包人进行的专业工程发包、对发包人自行采购材料，工程设备等进行保管、施工现场管理等服务费
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                            <b>规费、税金项目清单</b>：
-                                            <ul>
-                                                <li>
-                                                    规费项目清单：社会保障费（养老保险、失业保险、医疗保险、工伤保险、生育保险、住房公积金、工程排污费）
-                            
-                                                </li>
-                                                <li>
-                                                    税金项目清单：增值税、城市维护建设税、教育费附加、地方教育附加
-                                                </li>
-                                            </ul>
-
-                                            <b>工程量清单计价程序</b>：
-                                            <ul>
-                                                <li>
-                                                    统一工程量清单项目设置
-                                                </li>
-                                                <li>
-                                                    制订工程量清单计量规则
-                                                </li>
-                                                <li>
-                                                    根据具体图纸计算各清单项目工程量
-                                                </li>
-                                                <li>
-                                                    根据工程造价信息、经验数据计算，得到工程造价
-                                                </li>
-                                            </ul>
-
-                                            <b>综合单价</b>：
-                                            <ul>
-                                                <li>
-                                                    分项工程单价综合了直接工程费与多项费用
-                                                </li>
-                                                <li>
-                                                    分类：
-                                                    <ul>
-                                                        <li>
-                                                            全费用综合单价：
-                                                            <br>预算造价 = sum(分项工程量 * 分项工程全费用单价) + 措施项目完全价格
-                                                        </li>
-                                                        <li>
-                                                            清单综合单价：
-                                                            <br>预算造价 = sum(分项工程量 * 分项工程不完全单价) + 措施项目不完全价格 + 规费 + 税金
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        
-                                        </div>
-                                        <h3>
-                                            工程概预算及相关造价文件编制
-                                        </h3>
-                                        <div role="paragraph">
-                                            <b>工程概算编制方法</b>：
-                                            <br>设计概算：
-                                            <ul>
-                                                <li>
-                                                    目的：产生设计概算书
-                                                </li>
-                                                <li>
-                                                    编制内容：
-                                                    <ul>
-                                                        <li>
-                                                            静态投资
-                                                        </li>
-                                                        <li>
-                                                            动态投资
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    概算体系：
-                                                    <ul>
-                                                        <li>
-                                                            单位工程概算
-                                                        </li>
-                                                        <li>
-                                                            单项工程概算
-                                                        </li>
-                                                        <li>
-                                                            建设项目总概算
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    单位工程概算编制：
-                                                    <ul>
-                                                        <li>
-                                                            <b>建筑工程概算编制方法</b>：
-                                                            <ul>
-                                                                <li>
-                                                                    概算定额法：
-                                                                    <ol>
-                                                                        <li>
-                                                                            搜集资料
-                                                                        </li>
-                                                                        <li>
-                                                                            列出分项工程、扩大分项工程项目，计算工程量
-                                                                        </li>
-                                                                        <li>
-                                                                            确定各分项项目概算定额单价（人材机）
-                                                                        </li>
-                                                                        <li>
-                                                                            计算单位工程直接工程费、措施费
-                                                                        </li>
-                                                                        <li>
-                                                                            计算间接费、利润、税金
-                                                                            <br>间接费 = 直接费 * 间接费费率
-                                                                            <br>利润 = （直接费 + 间接费）* 利润率
-                                                                            <br>税金 = （直接费 + 间接费 + 利润）* 综合税率
-                                                                        </li>
-                                                                        <li>
-                                                                            计算单位工程概算造价
-                                                                            <br>造价 = 直接费 + 间接费 + 利润 + 税金
-                                                                        </li>
-                                                                        <li>
-                                                                            编写概算编制说明
-                                                                        </li>
-                                                                    </ol>
-                                                                </li>
-                                                                <li>
-                                                                    概算指标法
-                                                                </li>
-                                                                <li>
-                                                                    类似工程预算法
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            <b>设备及安装工程概算编制方法</b>：
-
-                                                            <ol>
-                                                                <li>
-                                                                    预算单价法
-                                                                </li>
-                                                                <li>
-                                                                    扩大单价法
-                                                                </li>
-                                                                <li>
-                                                                    设备价值百分比法
-                                                                </li>
-                                                                <li>
-                                                                    综合吨位指标法
-                                                                </li>
-                                                            </ol>
-                                                        </li>
-                                                        <li>
-                                                            单项工程综合概算书
-                                                            <ul>
-                                                                <li>
-                                                                    编制说明
-                                                                </li>
-                                                                <li>
-                                                                    综合概算表
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            建设项目总概算
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <b>工程施工图预算编制</b>：
-                                            <ul>
-                                                <li>
-                                                    编制步骤：
-                                                    <ul>
-                                                        <li>
-                                                            单位工程施工图预算
-                                                        </li>
-                                                        <li>
-                                                            单项工程综合预算编制
-                                                        </li>
-                                                        <li>
-                                                            建设项目总预算编制
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    单位工程施工图预算方法
-                                                    <ul>
-                                                        <li>
-                                                            定额单价法：分部分项工程单价为直接工程费单价
-                                                            <br>造价 = sum(分项工程量 * 分项工程工料单价) + 措施费 + 间接费 + 利润 + 税金
-                                                            <ol>
-                                                                <li>
-                                                                    准备工作
-                                                                </li>
-                                                                <li>
-                                                                    列项并计算工程量
-                                                                </li>
-                                                                <li>
-                                                                    套用定额预算单价，计算直接工程费
-                                                                </li>
-                                                                <li>
-                                                                    编制工料分析表（人工、材料消耗量）
-                                                                </li>
-                                                                <li>
-                                                                    计算主材费，调整直接工程费
-                                                                </li>
-                                                                <li>
-                                                                    按几家程序计取其他费用，汇总造价
-                                                                </li>
-                                                                <li>
-                                                                    复核
-                                                                </li>
-                                                                <li>
-                                                                    填写封面、编制说明
-                                                                </li>
-                                                            </ol>
-                                                        </li>
-                                                        <li>
-                                                            实物法：将人材机当时当地市场单价计入预算价格
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <b>工程施工预算编制</b>：
-                                            <ul>
-                                                <li>
-                                                    施工预算：企业加强内部经济核算，在预算控制下的技术经济文件（编制说明、预算表格）
-                                                </li>
-                                                <li>
-                                                    “两算”：施工图预算与施工预算
-                                                    <br>对比方法：
-                                                    <ul>
-                                                        <li>
-                                                            实物量对比法
-                                                        </li>
-                                                        <li>
-                                                            实物金额对比法
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                            </ul>
-                                            <b>工程竣工结算编制</b>：
-                                            <ul>
-                                                <li>
-                                                    分类：中间结算、竣工结算
-                                                </li>
-                                            </ul>
-                                            <b>工程竣工决算编制</b>：
-                                            <ul>
-                                                <li>
-                                                    所有建设项目竣工后的报告，全面反映竣工项目建设成果、财务情况的总结性文件
-                                                </li>
-                                                <li>
-                                                    内容：
-                                                    <ul>
-                                                        <li>
-                                                            竣工决算报告情况说明书
-                                                        </li>
-                                                        <li>
-                                                            竣工财务决算报表
-                                                        </li>
-                                                        <li>
-                                                            建设工程竣工图
-                                                        </li>
-                                                        <li>
-                                                            工程造价比较分析
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </section>
-
-                                    <section id="sec-2" data-type="introduction">
-                                        <h2>
-                                            电气工程基础
+                                            室内办公区域设计方案
                                         </h2>
 
+
+
+                                        <div id="adobe-dc-view_01" style="width: auto;"></div>
+                                        <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
+                                        <script type="text/javascript">
+                                            document.addEventListener("adobe_dc_view_sdk.ready", function () {
+                                                var adobeDCView = new AdobeDC.View({ clientId: "1deff10f0f7143a6af32cc9c356b2b99", divId: "adobe-dc-view_01" });
+                                                adobeDCView.previewFile({
+                                                    content: { location: { url: "https://yuruotao.com/content_files/projects/small/small6/室内办公区域设计方案.pdf" } },
+                                                    metaData: { fileName: "室内办公区域设计方案.pdf" }
+                                                }, { embedMode: "IN_LINE" });
+                                            });
+                                        </script>
+
+
                                     </section>
-
-                                    <section id="sec-3" data-type="introduction">
-                                        <h2>
-                                            电气安装工程概预算
-                                        </h2>
-                                        
-                                    </section>
-
-
-
 
 
 
                                     <section id="acknowledgments" role="doc-acknowledgments">
                                         <h2>Acknowledgments</h2>
                                         <div role="paragraph">
-                                            <b>Resources: </b>The project for this course can be found <a href="/html_files/projects/science_projects/small_prj/small6.html">here</a>. The recommend sites for information lookup are included within the project.
+                                            <b>Submit: </b>The manuscript is the same manuscript for the course
+                                            "Budget Estimation for Electrical Engineering".
                                         </div>
 
                                         <div role="paragraph"><b>Competing interests:</b> no competing
                                             interests.
                                         </div>
 
+                                    </section>
+                                    <section id="backmatter" data-extent="backmatter">
+                                        <div id="bibliography_exist_update" class="core-container">
+                                            <!-- supplementary materials -->
+                                            <section id="supplementary-materials" class="core-supplementary-materials">
 
+                                                <h2>Supplementary Materials</h2>
+                                                <section id="sec-5-1">
+                                                    <h3>Appendix:</h3>
+                                                    <div class="core-supplementary-material">
+                                                        <div class="core-description">
+                                                            <div>Excel form of the calculation</div>
+
+                                                        </div>
+                                                        <div class="core-link">
+                                                         
+                                                                    <a href="/content_files/projects/small/small6/安装工程.xlsx"
+                                                                        download="Appendix">Calculation Table</a>
+                                                              
+                                                        </div>
+                                                        <div>
+                                                            &emsp13;
+                                                        </div>
+                                                        <div class="core-description">
+                                                            <div>Design Figure in DWG format</div>
+
+                                                        </div>
+                                                        <div class="core-link">
+                                                           
+                                                                    <a href="/content_files/projects/small/small6/设计/classroom.dwg"
+                                                                        download="Appendix">DWG Figure</a>
+                                                              
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </section>
+
+
+                                            </section>
+
+                                            <section id="bibliography" role="doc-bibliography">
+                                                <div id="citation_insert" role="list">
+
+                                                    <script type="application/javascript">
+                                                        citations = [
+
+
+
+                                                        ];
+                                                        iterate_num = citations.length;
+                                                        html_model_num1 = '<div role="doc-biblioentry listitem" data-has="label"><div class="label">';
+                                                        html_model_num2 = '</div><div id="R';
+                                                        html_model_content_front = '" class="citations"><div class="citation"><div class="citation-content">';
+                                                        html_model_content_end = '</div><div class="external-links"><div><a href="" target="_blank"></a></div></div></div></div></div>';
+                                                        final_insert = '';
+                                                        for (i = 0; i < iterate_num; i++) {
+                                                            final_insert += html_model_num1 + String((i + 1)) + html_model_num2 + String((i + 1)) + html_model_content_front + citations[i] + html_model_content_end;
+                                                        }
+                                                        document.getElementById("citation_insert").innerHTML = '<h2>REFERENCES AND NOTES</h2>' + final_insert;
+
+
+
+                                                    </script>
+
+
+
+
+
+                                                </div>
+                                            </section>
                                     </section>
                                 </div>
                             </section>
 
-                            <section id="backmatter" data-extent="backmatter">
-                                <div id="bibliography_exist_update" class="core-container">
-                                    <!-- supplementary materials -->
-                                    <section id="supplementary-materials" class="core-supplementary-materials">
 
-                                        <h2>Supplementary Materials</h2>
-                                        <section id="sec-5-1">
-                                            <h3>Appendix:</h3>
-                                            <div class="core-supplementary-material">
-                                                <div class="core-description">
-                                                    <div>Figures: </div>Figure 1 - Figure 6
-
-                                                </div>
-                                                <div class="core-link">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="/" download="Appendix">Download</a>
-                                                        </li>
-                                                        <li>1.27 MB</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </section>
-
-
-                                    </section>
-
-
-                                    <section id="bibliography" role="doc-bibliography">
-                                        <div id="citation_insert" role="list">
-
-
-
-
-
-
-
-
-
-                                            <script type="application/javascript">
-                                                citations = [
-
-                                                ];
-                                                iterate_num = citations.length;
-                                                html_model_num1 = '<div role="doc-biblioentry listitem" data-has="label"><div class="label">';
-                                                html_model_num2 = '</div><div id="R';
-                                                html_model_content_front = '" class="citations"><div class="citation"><div class="citation-content">';
-                                                html_model_content_end = '</div><div class="external-links"><div><a href="" target="_blank"></a></div></div></div></div></div>';
-                                                final_insert = '';
-                                                for (i = 0; i < iterate_num; i++) {
-                                                    final_insert += html_model_num1 + String((i + 1)) + html_model_num2 + String((i + 1)) + html_model_content_front + citations[i] + html_model_content_end;
-                                                }
-                                                document.getElementById("citation_insert").innerHTML = '<h2>REFERENCES AND NOTES</h2>' + final_insert;
-
-
-
-                                            </script>
-
-
-
-
-
-                                        </div>
-                                    </section>
-                            </section>
 
 
 
