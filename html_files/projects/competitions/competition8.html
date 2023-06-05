@@ -26,7 +26,7 @@
             previous_article_title: "iGEM2022 - An Interaction Network for Fluctuation of Glucose and Lactate in Triple-negative Breast Cancer",
             next_article_title: "no next article",
 
-            pdf_link: "/content_files/projects/competition/undergraduate/COMAP_2023/",
+            pdf_link: "/content_files/projects/competition/undergraduate/COMAP_2023/comap2023revised.pdf",
             paper_state: "yes",
             section_names: ["Introduction", "Correlation Analysis", "Clustering Analysis", "Regression Analysis", "Potential Regional Effect of Hong Kong SAR", "Model Assessment", "Conclusions", "Appendix B: Notation Table and Formulas", "Appendix C: Data Source", "Appendix D: Code Workflow"],
         };
@@ -45,6 +45,16 @@
 
     <script src="jquery-3.5.1.js">
     </script>
+
+    <link rel="stylesheet" href="/resources/highlight/styles/stackoverflow-light.min.css">
+    <script src="/resources/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style type='text/css'>
+        .hljs {
+            white-space: pre;
+            overflow-x: auto;
+        }
+    </style>
 
     <!-- font, color and icons -->
     <link rel="stylesheet" href="/products/aaas/releasedAssets/css/build-5421643ead8b85d2264d.css" media="all"
@@ -1465,9 +1475,826 @@
                                         <h2>
                                             Appendix B. Notation Table and Formulas
                                         </h2>
-                           
+                                        <!-- notation table -->
+    <div class="figure-wrap">
+        <figure id="T4" class="table">
+            <div class="table-wrap">
+                <div class="collapsible-wrapper" aria-expanded="true">
+                    <table>
+                        <thead>
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="col">
+                                    <b>Symbol</b>
+                                </th>
+                                <th data-xml-align="center" scope="col">
+                                    <b>Description</b>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math display='block'>
+                                        <semantics>
+                                         <mover accent='true'>
+                                          <mi>x</mi>
+                                          <mo>&#x00AF;</mo>
+                                         </mover>
+                                         
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The average value of statistic x
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math display='block'>
+                                        <semantics>
+                                         <mi>n</mi>
+                                        
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The size of the sample
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math>
+                                        <semantics>
+                                         <mrow>
+                                          <mi>m</mi><mi>e</mi><mi>d</mi><mo stretchy='false'>(</mo><mo stretchy='false'>)</mo></mrow>
+                                        
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The median of a variable
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math display='block'>
+                                        <semantics>
+                                         <mi>&#x03C3;</mi>
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The variance of the sample
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math display='block'>
+                                        <semantics>
+                                         <mrow>
+                                          <mover accent='true'>
+                                           <mrow>
+                                            <msub>
+                                             <mi>&#x03BC;</mi>
+                                             <mn>3</mn>
+                                            </msub>
+                                            </mrow>
+                                           <mo stretchy='true'>&#x02DC;</mo>
+                                          </mover>
+                                          </mrow>
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    Skewness
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math>
+                                        <semantics>
+                                         <mrow>
+                                          <msub>
+                                           <mi>&#x03BC;</mi>
+                                           <mn>4</mn>
+                                          </msub>
+                                          </mrow>
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The 4th central moment
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math display='block'>
+                                        <semantics>
+                                         <mrow>
+                                          <msub>
+                                           <mi>D</mi>
+                                           <mi>M</mi>
+                                          </msub>
+                                          </mrow>
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    Minkowski distance
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math display='block'>
+                                        <semantics>
+                                         <mi>p</mi>
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The number of indicators
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math display='block'>
+                                        <semantics>
+                                         <mrow>
+                                          <msub>
+                                           <mi>N</mi>
+                                           <mi>C</mi>
+                                          </msub>
+                                          </mrow>
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The number of concordant pairs
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math display='block'>
+                                        <semantics>
+                                         <mrow>
+                                          <msub>
+                                           <mi>N</mi>
+                                           <mi>B</mi>
+                                          </msub>
+                                          </mrow>
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The number of disconcordant pairs
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math>
+                                        <semantics>
+                                         <mi>E</mi>
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The entropy
+                                </td>
+                            </tr>
+
+                            <tr data-xml-align="center" data-xml-valign="middle">
+                                <th data-xml-align="center" scope="row">
+                                    <math>
+                                        <semantics>
+                                         <mrow>
+                                          <mi>E</mi><mo stretchy='false'>(</mo><mo stretchy='false'>)</mo></mrow>
+                                    
+                                        </semantics>
+                                       </math>
+                                       
+                                </th>
+                                <td data-xml-align="center" scope="col">
+                                    The function of expectation
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <figcaption>
+                <div class="caption"><span class="heading">Table 4</span>. The
+                    table of notations.</div>
+
+                <div class="notes">
+                    <div role="doc-footnote">
+                        Here contains the notations used in the essay and the mathematical expressions below.
+                    </div>
+                </div>
+            </figcaption>
+        </figure>
+
+        <a href="#T4" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+            <i aria-hidden="true" class="icon-extlink-smooth"></i>
+            <span>Open in viewer</span>
+        </a>
+    </div>
                                         <div role="paragraph">
-                                            
+                                        <b>Skewness</b>:
+                                            <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mover accent='true'>
+                                                   <mrow>
+                                                    <msub>
+                                                     <mi>&#x03BC;</mi>
+                                                     <mn>3</mn>
+                                                    </msub>
+                                                    </mrow>
+                                                   <mo stretchy='true'>&#x02DC;</mo>
+                                                  </mover>
+                                                  <mo>=</mo><mfrac>
+                                                   <mrow>
+                                                    <munderover>
+                                                     <mstyle mathsize='140%' displaystyle='true'><mo>&#x2211;</mo></mstyle>
+                                                     <mi>i</mi>
+                                                     <mi>n</mi>
+                                                    </munderover >
+                                                    <msup>
+                                                     <mrow>
+                                                      <mo stretchy='false'>(</mo><msub>
+                                                       <mi>x</mi>
+                                                       <mi>i</mi>
+                                                      </msub>
+                                                      <mo>&#x2212;</mo><mover accent='true'>
+                                                       <mi>x</mi>
+                                                       <mo>&#x00AF;</mo>
+                                                      </mover>
+                                                      <mo stretchy='false'>)</mo></mrow>
+                                                     <mn>3</mn>
+                                                    </msup>
+                                                    </mrow>
+                                                   <mrow>
+                                                    <mo stretchy='false'>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo stretchy='false'>)</mo><msup>
+                                                     <mi>&#x03C3;</mi>
+                                                     <mn>3</mn>
+                                                    </msup>
+                                                    </mrow>
+                                                  </mfrac>
+                                                  </mrow>
+                                                
+                                                </semantics>
+                                               </math>
+                                            <b>Kurtosis</b>:
+                                               <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>K</mi><mi>u</mi><mi>r</mi><mi>t</mi><mo>=</mo><mfrac>
+                                                   <mrow>
+                                                    <msub>
+                                                     <mi>&#x03BC;</mi>
+                                                     <mn>4</mn>
+                                                    </msub>
+                                                    </mrow>
+                                                   <mrow>
+                                                    <msup>
+                                                     <mi>&#x03C3;</mi>
+                                                     <mn>4</mn>
+                                                    </msup>
+                                                    </mrow>
+                                                  </mfrac>
+                                                  </mrow>
+                                                </semantics>
+                                               </math>
+                                            <b>Blomqvist Correlation Coefficient</b>:<br>
+                                               Divide the x-y plane using two lines, <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>x</mi><mo>=</mo><mi>m</mi><mi>e</mi><mi>d</mi><mo stretchy='false'>(</mo><mi>X</mi><mo stretchy='false'>)</mo></mrow>
+                                                 
+                                                </semantics>
+                                               </math> and <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>y</mi><mo>=</mo><mi>m</mi><mi>e</mi><mi>d</mi><mo stretchy='false'>(</mo><mi>Y</mi><mo stretchy='false'>)</mo></mrow>
+                                               
+                                                </semantics>
+                                               </math>. <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>n</mi>
+                                                   <mn>1</mn>
+                                                  </msub>
+                                                  </mrow>
+                                                </semantics>
+                                               </math> is the number of sample points on the 1st or the 3rd quadrant, <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>n</mi>
+                                                   <mn>2</mn>
+                                                  </msub>
+                                                  </mrow>
+                                                </semantics>
+                                               </math> for the other 2 quadrants.
+                                               <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>q</mi><mo>=</mo><mfrac>
+                                                   <mrow>
+                                                    <mn>2</mn><mi>n</mi><mmultiscripts>
+                                                     <mrow></mrow>
+                                                     <mprescripts></mprescripts>
+                                                     <mn>1</mn>
+                                                     <mrow></mrow>
+                                                    </mmultiscripts>
+                                                    </mrow>
+                                                   <mrow>
+                                                    <mi>n</mi><mmultiscripts>
+                                                     <mo>+</mo>
+                                                     <mprescripts></mprescripts>
+                                                     <mn>1</mn>
+                                                     <mrow></mrow>
+                                                    </mmultiscripts>
+                                                    <mi>n</mi><mmultiscripts>
+                                                     <mrow></mrow>
+                                                     <mprescripts></mprescripts>
+                                                     <mn>2</mn>
+                                                     <mrow></mrow>
+                                                    </mmultiscripts>
+                                                    </mrow>
+                                                  </mfrac>
+                                                  <mo>&#x2212;</mo><mn>1</mn></mrow>
+                                                
+                                                </semantics>
+                                               </math>
+                                               <b>Gamma Correlation Coefficient</b>:
+                                               <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <mi>G</mi><mo>=</mo><mfrac>
+                                                   <mrow>
+                                                    <msub>
+                                                     <mi>N</mi>
+                                                     <mi>C</mi>
+                                                    </msub>
+                                                    <mo>&#x2212;</mo><msub>
+                                                     <mi>N</mi>
+                                                     <mi>R</mi>
+                                                    </msub>
+                                                    </mrow>
+                                                   <mrow>
+                                                    <msub>
+                                                     <mi>N</mi>
+                                                     <mi>C</mi>
+                                                    </msub>
+                                                    <mo>+</mo><msub>
+                                                     <mi>N</mi>
+                                                     <mi>R</mi>
+                                                    </msub>
+                                                    </mrow>
+                                                  </mfrac>
+                                                  </mrow>
+                                                 
+                                                </semantics>
+                                               </math>
+                                               <b>Minkowski Distance</b> (<math>
+                                                <semantics>
+                                                 <mover accent='true'>
+                                                  <mi>x</mi>
+                                                  <mo>&#x2192;</mo>
+                                                 </mover>
+                                                </semantics>
+                                               </math>
+                                               ,  <math>
+                                                <semantics>
+                                                 <mover accent='true'>
+                                                  <mi>y</mi>
+                                                  <mo>&#x2192;</mo>
+                                                 </mover>
+                                                </semantics>
+                                               </math>
+                                               are two example vectors):
+                                               <math display='block'>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>D</mi>
+                                                   <mi>M</mi>
+                                                  </msub>
+                                                  <mo stretchy='false'>(</mo><mover accent='true'>
+                                                   <mi>x</mi>
+                                                   <mo>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo>,</mo><mover accent='true'>
+                                                   <mi>y</mi>
+                                                   <mo>&#x2192;</mo>
+                                                  </mover>
+                                                  <mo stretchy='false'>)</mo><mo>=</mo><msup>
+                                                   <mrow>
+                                                    <mo stretchy='false'>(</mo><munderover>
+                                                     <mstyle mathsize='140%' displaystyle='true'><mo>&#x2211;</mo></mstyle>
+                                                     <mrow>
+                                                      <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                     <mi>n</mi>
+                                                    </munderover >
+                                                    <msup>
+                                                     <mrow>
+                                                      <mfenced close="|" open="|">
+                                                       <mrow>
+                                                        <msub>
+                                                         <mi>x</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo><msub>
+                                                         <mi>y</mi>
+                                                         <mi>i</mi>
+                                                        </msub>
+                                                        </mrow>
+                                                      </mfenced></mrow>
+                                                     <mi>p</mi>
+                                                    </msup>
+                                                    <mo stretchy='false'>)</mo></mrow>
+                                                   <mrow>
+                                                    <mfrac>
+                                                     <mn>1</mn>
+                                                     <mi>p</mi>
+                                                    </mfrac>
+                                                    </mrow>
+                                                  </msup>
+                                                  </mrow>
+                                                </semantics>
+                                               </math>
+                                        <b>Spectral Clustering Procedure</b>:<br>
+                                        Input: the similarity matrix <math>
+                                            <semantics>
+                                             <mrow>
+                                              <mi>S</mi><mo>&#x2208;</mo><msup>
+                                               <mi>&#x211D;</mi>
+                                               <mrow>
+                                                <mi>n</mi><mo>&#x00D7;</mo><mi>n</mi></mrow>
+                                              </msup>
+                                              </mrow>
+                                            </semantics>
+                                           </math>, number <math>
+                                            <semantics>
+                                             <mi>k</mi>
+                                            </semantics>
+                                           </math> of clusters to construct.<br>
+                                           Let <math>
+                                            <semantics>
+                                             <mi>W</mi>
+                                            </semantics>
+                                           </math>
+                                            be the weighted adjacency matrix of the similarity graph.<br>
+                                            1. Compute the normalized Laplacian matrix <math>
+                                                <semantics>
+                                                 <mrow>
+                                                  <msub>
+                                                   <mi>L</mi>
+                                                   <mrow>
+                                                    <mi>s</mi><mi>y</mi><mi>m</mi></mrow>
+                                                  </msub>
+                                                  </mrow>
+                                                </semantics>
+                                               </math><br>
+                                               2. Compute the first <math>
+                                                <semantics>
+                                                 <mi>k</mi>
+                                                </semantics>
+                                               </math>
+                                                eigenvectors <math>
+                                                    <semantics>
+                                                     <mrow>
+                                                      <msub>
+                                                       <mi>u</mi>
+                                                       <mn>1</mn>
+                                                      </msub>
+                                                      <mo>,</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>,</mo><msub>
+                                                       <mi>u</mi>
+                                                       <mi>k</mi>
+                                                      </msub>
+                                                      </mrow>
+                                                    </semantics>
+                                                   </math>
+                                                    of the Laplacian matrix<br>
+                                                3. <math >
+                                                    <semantics>
+                                                     <mrow>
+                                                      <mi>U</mi><mo>=</mo><mo stretchy='false'>[</mo><msub>
+                                                       <mi>u</mi>
+                                                       <mn>1</mn>
+                                                      </msub>
+                                                      <mo>,</mo><mo>&#x2026;</mo><mo>,</mo><msub>
+                                                       <mi>u</mi>
+                                                       <mi>k</mi>
+                                                      </msub>
+                                                      <mo stretchy='false'>]</mo></mrow>
+                                                     
+                                                    </semantics>
+                                                   </math><br>
+                                                   4. Normalize <math>
+                                                    <semantics>
+                                                     <mi>U</mi>
+                                                    </semantics>
+                                                   </math>
+                                                    and set the normalized matrix to be <math >
+                                                        <semantics>
+                                                         <mi>T</mi>
+                                                        </semantics>
+                                                       </math>, <math>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <mi>T</mi><mo>=</mo><mfenced close="]" open="[">
+                                                           <mrow>
+                                                            <mtable equalrows='true' equalcolumns='true'>
+                                                             <mtr>
+                                                              <mtd>
+                                                               <mrow>
+                                                                <msub>
+                                                                 <mi>y</mi>
+                                                                 <mn>1</mn>
+                                                                </msub>
+                                                                </mrow>
+                                                              </mtd>
+                                                             </mtr>
+                                                             <mtr>
+                                                              <mtd>
+                                                               <mo>&#x22EE;</mo>
+                                                              </mtd>
+                                                             </mtr>
+                                                             <mtr>
+                                                              <mtd>
+                                                               <mrow>
+                                                                <msub>
+                                                                 <mi>y</mi>
+                                                                 <mi>k</mi>
+                                                                </msub>
+                                                                </mrow>
+                                                              </mtd>
+                                                             </mtr>
+                                                             
+                                                            </mtable></mrow>
+                                                          </mfenced></mrow>
+                                                        </semantics>
+                                                       </math><br>
+                                                       5. Cluster the points <math>
+                                                        <semantics>
+                                                         <mrow>
+                                                          <msub>
+                                                           <mrow>
+                                                            <mo stretchy='false'>(</mo><msub>
+                                                             <mi>y</mi>
+                                                             <mi>i</mi>
+                                                            </msub>
+                                                            <mo stretchy='false'>)</mo></mrow>
+                                                           <mrow>
+                                                            <mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>,</mo><mi>n</mi></mrow>
+                                                          </msub>
+                                                          </mrow>
+                                                        </semantics>
+                                                       </math>
+                                                        with k-means algorithm, into clusters <math>
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>C</mi>
+                                                               <mn>1</mn>
+                                                              </msub>
+                                                              <mo>,</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>,</mo><msub>
+                                                               <mi>C</mi>
+                                                               <mi>k</mi>
+                                                              </msub>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math>.<br>
+                                                           Output: the clusters <math>
+                                                            <semantics>
+                                                             <mrow>
+                                                              <msub>
+                                                               <mi>A</mi>
+                                                               <mn>1</mn>
+                                                              </msub>
+                                                              <mo>,</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>&#x22C5;</mo><mo>,</mo><msub>
+                                                               <mi>A</mi>
+                                                               <mi>k</mi>
+                                                              </msub>
+                                                              </mrow>
+                                                            </semantics>
+                                                           </math>
+                                                            with <math>
+                                                                <semantics>
+                                                                 <mrow>
+                                                                  <msub>
+                                                                   <mi>A</mi>
+                                                                   <mi>i</mi>
+                                                                  </msub>
+                                                                  <mo>=</mo><mfenced close="}" open="{">
+                                                                   <mrow>
+                                                                    <mi>j</mi><mo>&#x007C;</mo><msub>
+                                                                     <mi>y</mi>
+                                                                     <mi>i</mi>
+                                                                    </msub>
+                                                                    <mo>&#x2208;</mo><msub>
+                                                                     <mi>C</mi>
+                                                                     <mi>i</mi>
+                                                                    </msub>
+                                                                    </mrow>
+                                                                  </mfenced></mrow>
+                                                                </semantics>
+                                                               </math>
+                                                               .<br>
+                                                            <b>Entropy Weight Method</b>:
+                                                            <math display='block'>
+                                                                <semantics>
+                                                                 <mrow>
+                                                                  <mtable equalrows='true' equalcolumns='true'>
+                                                                   <mtr>
+                                                                    <mtd>
+                                                                     <mrow>
+                                                                      <msub>
+                                                                       <mi>p</mi>
+                                                                       <mrow>
+                                                                        <mi>i</mi><mi>j</mi></mrow>
+                                                                      </msub>
+                                                                      <mo>=</mo><mfrac>
+                                                                       <mrow>
+                                                                        <msub>
+                                                                         <mi>x</mi>
+                                                                         <mrow>
+                                                                          <mi>i</mi><mi>j</mi></mrow>
+                                                                        </msub>
+                                                                        </mrow>
+                                                                       <mrow>
+                                                                        <mstyle displaystyle='true'>
+                                                                         <msubsup>
+                                                                          <mo>&#x2211;</mo>
+                                                                          <mrow>
+                                                                           <mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+                                                                          <mi>n</mi>
+                                                                         </msubsup>
+                                                                         <mrow>
+                                                                          <msub>
+                                                                           <mi>x</mi>
+                                                                           <mrow>
+                                                                            <mi>i</mi><mi>j</mi></mrow>
+                                                                          </msub>
+                                                                          </mrow>
+                                                                        </mstyle></mrow>
+                                                                      </mfrac>
+                                                                      </mrow>
+                                                                    </mtd>
+                                                                   </mtr>
+                                                                   <mtr>
+                                                                    <mtd>
+                                                                     <mrow>
+                                                                      <msub>
+                                                                       <mi>E</mi>
+                                                                       <mi>i</mi>
+                                                                      </msub>
+                                                                      <mo>=</mo><mo>&#x2212;</mo><mfrac>
+                                                                       <mrow>
+                                                                        <mstyle displaystyle='true'>
+                                                                         <msubsup>
+                                                                          <mo>&#x2211;</mo>
+                                                                          <mrow>
+                                                                           <mi>j</mi><mo>=</mo><mn>1</mn></mrow>
+                                                                          <mi>n</mi>
+                                                                         </msubsup>
+                                                                         <mrow>
+                                                                          <msub>
+                                                                           <mi>p</mi>
+                                                                           <mrow>
+                                                                            <mi>i</mi><mi>j</mi></mrow>
+                                                                          </msub>
+                                                                          <mo>&#x22C5;</mo><mi>ln</mi><msub>
+                                                                           <mi>p</mi>
+                                                                           <mrow>
+                                                                            <mi>i</mi><mi>j</mi></mrow>
+                                                                          </msub>
+                                                                          </mrow>
+                                                                        </mstyle></mrow>
+                                                                       <mrow>
+                                                                        <mi>ln</mi><mi>n</mi></mrow>
+                                                                      </mfrac>
+                                                                      </mrow>
+                                                                    </mtd>
+                                                                   </mtr>
+                                                                   <mtr>
+                                                                    <mtd>
+                                                                     <mrow>
+                                                                      <msub>
+                                                                       <mi>w</mi>
+                                                                       <mi>i</mi>
+                                                                      </msub>
+                                                                      <mo>=</mo><mfrac>
+                                                                       <mrow>
+                                                                        <mn>1</mn><mo>&#x2212;</mo><msub>
+                                                                         <mi>E</mi>
+                                                                         <mi>i</mi>
+                                                                        </msub>
+                                                                        </mrow>
+                                                                       <mrow>
+                                                                        <mstyle displaystyle='true'>
+                                                                         <msubsup>
+                                                                          <mo>&#x2211;</mo>
+                                                                          <mrow>
+                                                                           <mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+                                                                          <mi>m</mi>
+                                                                         </msubsup>
+                                                                         <mrow>
+                                                                          <mo stretchy='false'>(</mo><mn>1</mn><mo>&#x2212;</mo><msub>
+                                                                           <mi>E</mi>
+                                                                           <mi>i</mi>
+                                                                          </msub>
+                                                                          <mo stretchy='false'>)</mo></mrow>
+                                                                        </mstyle></mrow>
+                                                                      </mfrac>
+                                                                      </mrow>
+                                                                    </mtd>
+                                                                   </mtr>
+                                                                   
+                                                                  </mtable></mrow>
+                                                                </semantics>
+                                                               </math><br>
+                                                               <b>Poisson Regression</b>:
+                                                               <math display='block'>
+                                                                <semantics>
+                                                                 <mrow>
+                                                                  <mtable equalrows='true' equalcolumns='true'>
+                                                                   <mtr>
+                                                                    <mtd>
+                                                                     <mrow>
+                                                                      <mi>log</mi><mo stretchy='false'>(</mo><mi>E</mi><mo stretchy='false'>(</mo><mi>Y</mi><mo>&#x007C;</mo><mover accent='true'>
+                                                                       <mi>x</mi>
+                                                                       <mo stretchy='true'>&#x2192;</mo>
+                                                                      </mover>
+                                                                      <mo stretchy='false'>)</mo><mo stretchy='false'>)</mo><mo>=</mo><mi>&#x03B1;</mi><mo>+</mo><msup>
+                                                                       <mi>&#x03B2;</mi>
+                                                                       <mo>&#x0027;</mo>
+                                                                      </msup>
+                                                                      <mover accent='true'>
+                                                                       <mi>x</mi>
+                                                                       <mo stretchy='true'>&#x2192;</mo>
+                                                                      </mover>
+                                                                      </mrow>
+                                                                    </mtd>
+                                                                   </mtr>
+                                                                   <mtr>
+                                                                    <mtd>
+                                                                     <mrow>
+                                                                      <mi>E</mi><mo stretchy='false'>(</mo><mi>Y</mi><mo>&#x007C;</mo><mover accent='true'>
+                                                                       <mi>x</mi>
+                                                                       <mo stretchy='true'>&#x2192;</mo>
+                                                                      </mover>
+                                                                      <mo stretchy='false'>)</mo><mo>=</mo><msup>
+                                                                       <mi>e</mi>
+                                                                       <mrow>
+                                                                        <msup>
+                                                                         <mi>&#x03B8;</mi>
+                                                                         <mo>&#x0027;</mo>
+                                                                        </msup>
+                                                                        <mover accent='true'>
+                                                                         <mi>x</mi>
+                                                                         <mo stretchy='true'>&#x2192;</mo>
+                                                                        </mover>
+                                                                        </mrow>
+                                                                      </msup>
+                                                                      </mrow>
+                                                                    </mtd>
+                                                                   </mtr>
+                                                                   
+                                                                  </mtable></mrow>
+                                                                </semantics>
+                                                               </math>
+                                                               
+                                                               
                                         </div>
                                     
                                     </section>
@@ -1478,7 +2305,89 @@
                                         </h2>
                            
                                         <div role="paragraph">
-                                            
+                                            <div class="figure-wrap">
+                                                <figure id="T5" class="table">
+                                                    <div class="table-wrap">
+                                                        <div class="collapsible-wrapper" aria-expanded="true">
+                                                            <table>
+                                                                <thead>
+                                                                    <tr data-xml-align="center" data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="col">
+                                                                            <b>Data</b>
+                                                                        </th>
+                                                                        <th scope="col">
+                                                                            <b>Data Source</b>
+                                                                        </th>
+                                                                    
+                                                                    </tr>
+                                                                </thead>
+                                        
+                                                                <tbody>
+                                                                    <tr data-xml-align="center" data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="row">
+                                                                            Raw Data
+                                                                        </th>
+                                                                        <td>
+                                                                            Provided by COMAP official
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr data-xml-align="center" data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="row">
+                                                                            Economics Data
+                                                                        </th>
+                                                                        <td>
+                                                                            World Bank (https://databank.worldbank.org)
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr data-xml-align="center" data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="row">
+                                                                            Sailboat Statistics
+                                                                        </th>
+                                                                        <td>
+                                                                            Sailboat Data (https://sailboatdata.com)
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr data-xml-align="center" data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="row">
+                                                                            Sailboat Price 1
+                                                                        </th>
+                                                                        <td>
+                                                                            Hongkong Boats (https://hongkongboats.hk)
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr data-xml-align="center" data-xml-valign="middle">
+                                                                        <th data-xml-align="center" scope="row">
+                                                                            Sailboat Price 2
+                                                                        </th>
+                                                                        <td>
+                                                                            Sailboat Listings (https://www.sailboatlistings.com)
+                                                                        </td>
+                                                                    </tr>
+                                        
+                                                                    
+                                        
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                        
+                                                    </div>
+                                                    <figcaption>
+                                                        <div class="caption"><span class="heading">Table 5</span>. The
+                                                            source of data.</div>
+                                        
+                                                        <div class="notes">
+                                                            <div role="doc-footnote">
+                                                                All of the data collected are listed here.
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                        
+                                                <a href="#T5" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                                    <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                    <span>Open in viewer</span>
+                                                </a>
+                                            </div>
                                         </div>
                                     
                                     </section>
@@ -1489,7 +2398,38 @@
                                         </h2>
                            
                                         <div role="paragraph">
-                                            
+                                            The code we wrote are uploaded to Github and archived to provide convenience for realization and improvements, named with our control number. Here we list the structure of our documents and explain the function in correspondence.
+                                            <pre class="syntaxhighlight">
+                                                <code class="language-python"># File Structure for analysis				
+COMAP-2332190                   # Name of the folder
+├───code_py                     # Contains scripts written in Python
+│   ├───crawler.py              # Crawl the sailboat prices
+│   ├───another_crawler.py      # Crawl other sailboat prices
+│   ├───economic.py             # Merge the collected economic data
+│   ├───ship_price_split.py     # Split the crawled data
+│   └───webdriver               # Contain the webdriver for data crawl
+│
+├───code_R                      # Contains scripts written in R
+│   ├───main.R                  # Contains the main programs
+│   ├───plot.R                  # Plot by data
+│   ├───network.R               # Construct the correlation network
+│   └───hk_analysis.R           # Analyze the Hong Kong boat market
+│
+├───raw_data                    # Contains the input data
+│   ├───raw_data.xlsx           # Provided data
+│   ├───eco_data.xlsx           # Economic data
+│   ├───boat_data.xlsx          # Crawled boat data
+│   └───boat_info.xlsx          # Crawled boat info
+│
+├───output
+│   ├───figure                  # Contains the output figure
+│   │   └───
+│   └───data                    # Contains the output data
+</code>
+                                            </pre>
+                                        </div>
+                                        <div role="paragraph">
+                                            For R scripts, analyses were conducted using the R Statistical language (version 4.2.2; R Core Team, 2022) on Windows 10 x64 (build 22621), using the packages qqplotr (version 0.0.6; Almeida A et al., 2018), ggdendro (version 0.1.23; de Vries A, Ripley BD, 2022), poorman (version 0.2.6; Eastwood N, 2022), creditmodel (version 1.3.1; Fan D, 2022), viridis (version 0.6.2; Garnier et al., 2021), viridisLite (version 0.4.1; Garnier et al., 2022), Hmisc (version 5.0.1; Harrell Jr F, 2023), ggmosaic (version 0.3.3; Jeppson H et al., 2021), factoextra (version 1.0.7; Kassambara A, Mundt F, 2020), caret (version 6.0.93; Kuhn M, 2022), lindia (version 0.9; Lee Y, Ventura S, 2017), sjPlot (version 2.8.13; Lüdecke D, 2023), performance (version 0.10.2; Lüdecke D et al., 2021), see (version 0.7.4; Lüdecke D et al., 2021), cluster (version 2.1.4; Maechler M et al., 2022), correlation (version 0.8.3; Makowski D et al., 2020), report (version 0.5.6; Makowski D et al., 2023), vcd (version 1.4.11; Meyer D et al., 2023), imputeTS (version 3.3; Moritz S, Bartz-Beielstein T, 2017), writexl (version 1.4.2; Ooms J, 2023), datawizard (version 0.6.5; Patil I et al., 2022), ggraph (version 2.1.0; Pedersen T, 2022), patchwork (version 1.1.2; Pedersen T, 2022), sClust (version 1.0; Poisson-Caillault E, Vincent E, 2021), hrbrthemes (version 0.8.0; Rudis B, 2020), lattice (version 0.20.45; Sarkar D, 2008), ggrepel (version 0.9.3; Slowikowski K, 2023), reshape2 (version 1.4.4; Wickham H, 2007), ggplot2 (version 3.4.1; Wickham H, 2016), readxl (version 1.4.2; Wickham H, Bryan J, 2023), dplyr (version 1.1.0; Wickham H et al., 2023), svglite (version 2.1.1; Wickham H et al., 2023) and tidyr (version 1.3.0; Wickham H et al., 2023).
                                         </div>
                                     
                                     </section>
