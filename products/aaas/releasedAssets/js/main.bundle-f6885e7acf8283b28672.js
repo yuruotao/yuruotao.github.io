@@ -19405,11 +19405,7 @@
             (v.getTitle = function getTitle() {
               var v = this.element.getAttribute("data-original-title");
               return (
-                v ||
-                  (v =
-                    "function" == typeof this.config.title
-                      ? this.config.title.call(this.element)
-                      : this.config.title),
+
                 v
               );
             }),
@@ -20985,7 +20981,7 @@
                       ) {
                         var X = new Date(v, g - 1, x[J]);
                         V.push(
-                          '<td class="prev-month\n                    '
+                          '<td class="prev-month    '
                             .concat(X < Q || X > K ? "disabled" : "", '">')
                             .concat(x[J], "</td>")
                         );
@@ -20998,7 +20994,7 @@
                             "<td data-day "
                               .concat(
                                 ee ? "data-selected" : "",
-                                " class='current-day\n                        "
+                                " class='current-day        "
                               )
                               .concat(te < Q || te > K ? "disabled" : "", "'>")
                               .concat(Z, "</td>")
@@ -21007,7 +21003,7 @@
                           var ne = "<td data-day "
                             .concat(
                               ee ? "data-selected" : "",
-                              " \n                        class='"
+                              "         class='"
                             )
                             .concat(te < Q || te > K ? "disabled" : "", "'>")
                             .concat(Z, "</td>");
@@ -21021,10 +21017,10 @@
                           re % 7 == 0 &&
                             V.push("".concat(0 !== ae ? "</tr>" : "", "<tr>")),
                           V.push(
-                            '<td class="next-month\n                    '
+                            '<td class="next-month    '
                               .concat(
                                 ie < Q || ie > K ? "disabled" : "",
-                                '\n                    ">'
+                                '    ">'
                               )
                               .concat(ae, "</td>")
                           ),
@@ -36496,12 +36492,12 @@
                 ),
                 x = v.classList.contains("active") ? "text-primary" : "";
               return '\n            <li class="nav-item '
-                .concat(g, ' ">\n                <a class="nav-link ')
+                .concat(g, ' "><a class="nav-link ')
                 .concat(x, '" href="')
-                .concat(v.getAttribute("href"), '">\n                    ')
+                .concat(v.getAttribute("href"), '">    ')
                 .concat(
                   v.textContent,
-                  "\n                </a>\n            </li>"
+                  "</a>\n            </li>"
                 );
             },
           },
@@ -36512,11 +36508,11 @@
                 ? "nav-item--primary font-weight-bolder"
                 : "nav-item--secondary font-weight-bold";
               return '\n            <li class="nav-item '
-                .concat(g, ' ">\n                <a class="nav-link " href="')
-                .concat(v.getAttribute("href"), '">\n                    ')
+                .concat(g, ' "><a class="nav-link " href="')
+                .concat(v.getAttribute("href"), '">    ')
                 .concat(
                   v.textContent,
-                  "\n                </a>\n            </li>"
+                  "</a>\n            </li>"
                 );
             },
           },
@@ -38708,7 +38704,7 @@
             {
               key: "featuredVideoControlHTML",
               get: function get() {
-                return '<div class="featured-video-control-wrapper">\n            <button class="btn featured-video-control__play d-none" title="Play video">\n                <i class="icon-play" aria-hidden="true"></i>\n                <span class="sr-only">Play</span>\n            </button>\n            <button class="btn featured-video-control__pause" title="Pause video">\n                <i class="icon-pause" aria-hidden="true"></i>\n                <span class="sr-only">Pause</span>\n            </button>\n        </div>';
+                return '<div class="featured-video-control-wrapper">\n            <button class="btn featured-video-control__play d-none" title="Play video"><i class="icon-play" aria-hidden="true"></i><span class="sr-only">Play</span>\n            </button>\n            <button class="btn featured-video-control__pause" title="Pause video"><i class="icon-pause" aria-hidden="true"></i><span class="sr-only">Pause</span>\n            </button>\n        </div>';
               },
             },
             {
@@ -51958,7 +51954,7 @@
           {
             key: "loadingHtml",
             get: function get() {
-              return '<div class="d-flex justify-content-center align-items-center h-100">\n                    <div class="spinner-border text-gray loi__spinner" role="status">\n                        <span class="sr-only">Loading...</span>\n                    </div>\n                </div>';
+              return '<div class="d-flex justify-content-center align-items-center h-100">    <div class="spinner-border text-gray loi__spinner" role="status">        <span class="sr-only">Loading...</span>    </div></div>';
             },
           },
           {
@@ -52724,7 +52720,7 @@
           {
             key: "loadingHtml",
             get: function get() {
-              return '<div class="d-flex justify-content-center align-items-center h-100">\n                  <svg class="loi__spinner" width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#707070"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle><path d="M36 18c0-9.94-8.06-18-18-18" class="loi__spinner__spinner-inner"></path></g></g></svg>\n                </div>';
+              return '<div class="d-flex justify-content-center align-items-center h-100">  <svg class="loi__spinner" width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#707070"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle><path d="M36 18c0-9.94-8.06-18-18-18" class="loi__spinner__spinner-inner"></path></g></g></svg></div>';
             },
           },
         ]),
@@ -55542,7 +55538,7 @@
           {
             key: "seeMore",
             value: function seeMore(v) {
-              return '\n            <li class="cited-by__entry--see-more">\n                <a href="javascript:void(0)" data-source="'.concat(
+              return '\n            <li class="cited-by__entry--see-more"><a href="javascript:void(0)" data-source="'.concat(
                 v,
                 '" class="cited-by__see-more">See more</a>\n            </li>\n        '
               );
@@ -55556,12 +55552,12 @@
                   .map(function (v) {
                     var g = v.firstName,
                       x = v.surname;
-                    return '\n                <li class="list-inline-item cited-by__entry__author">\n                    '
+                    return '<li class="list-inline-item cited-by__entry__author">    '
                       .concat(g, " ")
-                      .concat(x, ",\n                 </li>");
+                      .concat(x, ", </li>");
                   })
                   .join("");
-                return '\n            <ul class="cited-by__entry__authors list-inline">\n                '.concat(
+                return '\n            <ul class="cited-by__entry__authors list-inline">'.concat(
                   g,
                   "\n            </ul>"
                 );
@@ -55628,7 +55624,7 @@
                 .concat(k, '" class="cited-by__entry__doi">')
                 .concat(
                   x,
-                  '</a>\n            <div class="cited-by__entry__extra-links">\n                <a href="'
+                  '</a>\n            <div class="cited-by__entry__extra-links"><a href="'
                 )
                 .concat(x, '" class="cited-by__entry__visitable">')
                 .concat(k, "</a>\n            </div>\n        </li>\n        ");
@@ -58359,7 +58355,7 @@
           animation: !1,
           offset: "50px",
           template:
-            '\n                <div class="tooltip section-info-tooltip" role="tooltip">\n                    <div class="arrow d-block"></div>\n                    <div class="tooltip-inner"></div>\n                </div>',
+            '<div class="tooltip section-info-tooltip" role="tooltip"><div class="arrow d-block"></div><div class="tooltip-inner"></div></div>',
           trigger: "manual",
           delay: { show: 0, hide: 250 },
         }),
