@@ -1308,51 +1308,69 @@
                                             Problem Background
                                         </h3>
                                         <div role="paragraph">
-                                            
+                                            As Langston Hughes puts it, the sea is a desert of waves, a wilderness of water.1 The beauty of the sea is inspiring an increasing number of people to take up sailing as a form of entertainment as well as a way to connect with nature. Emerged in prehistorical periods, sailing serves as a means of transportation and communication.2 The flourishing of fast-sailing connects the world as one, through war and trade.3,4
                                         </div>
+                                        <div role="paragraph">
+                                            In contemporary times, sailing, specifically sailboat sailing, is becoming more than just a recreational activity like fishing and cruising, but also a professional sport.5,6 This increasing enthusiasm inspired new sailboat structure designs and more effective controlling strategies, while also attracting international attention, resulting in higher speed, better materials, and broader recognition.7–9
+                                        </div>
+                                        <div role="paragraph">
+                                            Despite the thriving sailing business, the drawbacks are significant. To begin with, the cost of a sailboat is high, and the maintenance cost is even higher, accounting for approximately 10% of the initial cost.10 Not to mention the insurance and storage fee. Second, the retired sailboat is a pollution source to the atmosphere and must follow all applicable laws and regulations.11,12 As a result, used ship trading is important because it prevents further waste of resources and eliminates possible harm to the natural environment.
+                                        </div>
+
                                         <h3>
                                             Problem Restatement
                                         </h3>
                                         <div role="paragraph">
-
+In this article, we are required to conduct a statistical analysis of the used sailboat trading business. The tasks are summarized below.
+<br><em>Task 1</em>. Find the predictors that affects the price of sailboats and analyze their relationships;
+<br><em>Task 2</em>. Collect data of the predictors accordingly, document data sources;
+<br><em>Task 3</em>. Analyze the precision of the model on sailboats;
+<br><em>Task 4</em>. Quantify the effect of region on prices, and check the consistency on sailboat variants;
+<br><em>Task 5</em>. Rationalize the utility of effect of region on price on informative subsets of data;
+<br><em>Task 6</em>. Draw inferences from data analysis;
+<br><em>Task 7</em>. Prepare a report for Hong Kong (SAR) sailboat broker;
                                         </div>
                                         <h3>
                                             Analysis Workflow
                                         </h3>
                                         <div role="paragraph">
+                                            We can split the tasks into three main processes by breaking down the problem: predictor selection, relationship quantification, and accuracy validation. The first stage is to gather and preprocess the raw data, as statistical noise and other types of errors may invalidate the analysis later on. The processed data is then subjected to correlation analysis. The purpose of performing correlation analysis on provided data is to see the relationship between indicators as well as the relationship between price and indicators. Price-related factors are referred to as predictors.
                                             
-                                            <!-- figure 1 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F1" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure1.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F1"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 1</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
-                                                    </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F1"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
                                         </div>
+                                        <div role="paragraph">
+                                            When the correlation study is finished, we eliminate the indicators that are statistically unrelated to the price. If the correlation between predictors is strong, it means the predictors are interacting with one another. To determine how much a predictor affects the price, we must perform weight calculation for each predictor. To make things easier, we can combine the correlated predictors so that the new predictors are statistically irrelevant. Clustering analysis is required to group the predictors, and the weight should be computed within each cluster to synthesize an output. The workflow is depicted in <a href="#F1">Figure 1</a>.
+                                        </div>
+                                        <!-- figure 1 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F1" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure1.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F1"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 1</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F1"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
+                                          </div>
                                         <h3>
                                             Essay Structure
                                         </h3>
                                         <div role="paragraph">
-                                            
+                                            We structure our solutions in accordance with the workflow described above. Section 2 begins from the description of raw data. The analysis is then carried out in the subsequent sections, and the conclusions are reached in Section 7. Appendix A includes the references. Appendix B contains the formulas. Appendix C documents the sources of data, and Appendix D portrays the script structure and the flow of data.
                                         </div>
 
                                     </section>
@@ -1361,354 +1379,384 @@
                                         <h2>
                                             Correlation Analysis
                                         </h2>
+                                        Since the provided dataset includes few indicators about the initial price of a sailboat, we must first identify the indicators that affect the price of a sailboat. The first section introduces the collection of data and introduction of indicators, along with the preprocessing procedure of raw data. The following section analyzes the correlation between sailboat price and indicators, so that the predictors of a sailboat’s price can be determined.
                                         <h3>
                                             Data Collection and Preprocessing
                                         </h3>
                                         <div role="paragraph">
-
-                                            <!-- figure 2 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F2" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure2.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F2"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 2</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
-                                                    </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F2"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
-
-
-                                              
+                                            After literature review on sailboat structure and data mining, we include the following 8 indicators to portray the sailboat: length overall (LOA), widest width (Beam), rated power (HP), sail area divided by displacement (SA/Disp), ballast divided by displacement (Ball/Disp), displacement divided by length (Disp/Len), comfort ratio (CR), and capsize screening formula (CSF).13–15     
+                                        </div>
+                                        <div role="paragraph">
+                                            To account for economic variables, we include four coefficients, annual GDP per capita, GDP per capita growth, annual GNI per capita, and GNI per capita growth, to depict a country's cross-sectional economic features since GDP and GNI may not capture the full picture of economic status, growth terms are adjusted using PPP method. GDP per capita growth, according to the World Bank, depicts the change rate of average gross value contributed by all resident producers, whereas GNP per capita growth depicts the change rate of average dollar value of a country's final income.16
+                                        </div>
+                                        <div role="paragraph">
+                                            The data sources are documented in Appendix C. Due to the diverse categorization method of geological location, many missing values emerge in economic variables. In general cases, for both convenience for future analysis and maximum usage of information, the interpolation is applied. Here we adopt the Kalman Smoothing method on the state space representation of an ARIMA model for imputation. A representative figure of missing data before and after interpolation is shown in Figure 2 below. This figure portrays the missing value condition with respect to GDP per capita. The figure on the left is the raw data along with the imputed values while the figure on the right depicts the percentage of missing data on different levels of value.
+                                        </div>
+                                        <!-- figure 2 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F2" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure2.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F2"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 2</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F2"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
                                         </div>
                                         <h3>
                                             Raw Data Statistical Features
                                         </h3>
-                                        <div role="paragraph">
-                                            <!-- table 1 -->
-                                            <div class="figure-wrap">
-                                                <figure id="T1" class="table">
-                                                    <div class="table-wrap">
-                                                        <div class="collapsible-wrapper" aria-expanded="true">
-                                                            <table>
-                                                                <thead>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="left" scope="col">
-                                                                            <b>Variable</b>
-                                                                        </th>
-                                                                        <th scope="col">
-                                                                            <b>Mean</b>
-                                                                        </th>
-                                                                        <th scope="col">
-                                                                            <b>SD</b>
-                                                                        </th>
-                                                                        <th scope="col">
-                                                                            <b>IQR</b>
-                                                                        </th>
-                                                                        <th scope="col">
-                                                                            <b>Skewness</b>
-                                                                        </th>
-                                                                        <th scope="col">
-                                                                            <b>Kurtosis</b>
-                                                                        </th>
-                                                                        <th scope="col">
-                                                                            <b>n</b>
-                                                                        </th>
-                                                                        <th scope="col">
-                                                                            <b>n_Missing</b>
-                                                                        </th>
-                                                                    </tr>
-                                                                </thead>
-                                        
-                                                                <tbody>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="left" scope="row">
-                                                                            <b>Price</b>
-                                                                        </th>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                    </tr>
-                                                                    
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="left" scope="row">
-                                                                            <b>Year</b>
-                                                                        </th>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="left" scope="row">
-                                                                            <b>GDP growth</b>
-                                                                        </th>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="left" scope="row">
-                                                                            <b>Disp/Len</b>
-                                                                        </th>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="left" scope="row">
-                                                                            <b>CSF</b>
-                                                                        </th>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr data-xml-align="center" data-xml-valign="middle">
-                                                                        <th data-xml-align="left" scope="row">
-                                                                            <b>MC</b>
-                                                                        </th>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                        <td>
-                                                                            
-                                                                        </td>
-                                                                    </tr>
-                                        
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                        
-                                                    </div>
-                                                    <figcaption>
-                                                        <div class="caption"><span class="heading">Table 1</span>. The
-                                                            caption of table1.</div>
-                                        
-                                                        <div class="notes">
-                                                            <div role="doc-footnote">
-                                                                description of the table
-                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cum odio consequatur libero
-                                                                iusto explicabo id sequi, nemo, dolorem ex similique? Nam enim sunt ipsa officiis quaerat animi
-                                                                rem modi?
-                                                            </div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                        
-                                                <a href="#T1" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
-                                                    <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                    <span>Open in viewer</span>
-                                                </a>
-                                            </div>
 
-                                            <!-- figure 3 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F3" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure3.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F3"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 3</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
+                                        <div role="paragraph">
+                                            In <a href="#T1">Table 1</a>, we list some statistical features of the provided and collected data. For those whose missing values take up more than 1/3 of the whole dataset, we analyze their statistical features in the selected informative subset. We add the parameters skewness and kurtosis to portray the distribution of data, along with an illustration in <a href="#F3">Figure 3</a>. 
+                                        </div>
+                                        <!-- table 1 -->
+                                        <div class="figure-wrap">
+                                            <figure id="T1" class="table">
+                                                <div class="table-wrap">
+                                                    <div class="collapsible-wrapper" aria-expanded="true">
+                                                        <table>
+                                                            <thead>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="left" scope="col">
+                                                                        <b>Variable</b>
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        <b>Mean</b>
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        <b>SD</b>
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        <b>IQR</b>
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        <b>Skewness</b>
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        <b>Kurtosis</b>
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        <b>n</b>
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        <b>n_Missing</b>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                    
+                                                            <tbody>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="left" scope="row">
+                                                                        <b>Price</b>
+                                                                    </th>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="left" scope="row">
+                                                                        <b>Year</b>
+                                                                    </th>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="left" scope="row">
+                                                                        <b>GDP growth</b>
+                                                                    </th>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="left" scope="row">
+                                                                        <b>Disp/Len</b>
+                                                                    </th>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="left" scope="row">
+                                                                        <b>CSF</b>
+                                                                    </th>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                                <tr data-xml-align="center" data-xml-valign="middle">
+                                                                    <th data-xml-align="left" scope="row">
+                                                                        <b>MC</b>
+                                                                    </th>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                    <td>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                    
+                                                            </tbody>
+                                                        </table>
                                                     </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F3"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
+                                    
+                                                </div>
+                                                <figcaption>
+                                                    <div class="caption"><span class="heading">Table 1</span>. The
+                                                        caption of table1.</div>
+                                    
+                                                    <div class="notes">
+                                                        <div role="doc-footnote">
+                                                            description of the table
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cum odio consequatur libero
+                                                            iusto explicabo id sequi, nemo, dolorem ex similique? Nam enim sunt ipsa officiis quaerat animi
+                                                            rem modi?
+                                                        </div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                    
+                                            <a href="#T1" class="open-in-viewer btn btn-dark figure-pop-btn" data-index="0">
+                                                <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                                <span>Open in viewer</span>
+                                            </a>
+                                        </div>
+                                        <div role="paragraph">
+                                            The variables listed above include the information about the sailboats, such as manufacture year, CSF, and MC, which indicates the type of the sailboat, 1 for monohulled sailboats and 0 for catamarans.
+                                        </div>
+                                        <!-- figure 3 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F3" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure3.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F3"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 3</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F3"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
+                                        </div>
+                                        <div role="paragraph">
+                                            Figure 3-1 portrays the distribution of the type of sailboats with respect to geological regions. We can intuitively see that USA has the biggest percentage of monohulled sailboats than the other two, while Caribbean has the biggest percentage of catamarans. Also, monohulled sailboats takes up the larger part of market in all regions. Figure 3-2 plots the distribution of sailboats’ power among geological regions. We can see that sailboats of certain power level are preferred in all regions, especially the 2 peaks in Europe. Figure 3-3 has manufacture companies as horizontal axis and geological regions as vertical axis. This indicates the distribution of manufacture in different regions. Europe has a higher market occupancy rate and most manufacture companies, with USA and Caribbean following, same as surveyed in the citation here.17 Figure 3-4 has LOA values for horizontal axis and beam length for vertical axis. It is obvious that there are 2 major clusters in the figure, each corresponding to one type of sailboat.
                                         </div>
                                         <h3>
                                             Correlation Between Sailboat Price and Indicators
                                         </h3>
                                         <div role="paragraph">
-
-
-                                            <!-- figure 4 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F4" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure4.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F4"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 4</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
-                                                    </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F4"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
-
-
-                                            <!-- figure 5 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F5" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure5.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F5"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 5</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
-                                                    </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F5"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
+                                            The core idea of correlation analysis is to measure the relationship between data sets, specifically how changes in one variable affect changes in the other.18,19 If a shift in one variable causes little or no change in the other, the two variables are probably unrelated. Based on the categorization of data types, we select correlation coefficients accordingly.20–22
+                                        </div>
+                                        <div role="paragraph">
+                                            Only categorical and numerical statistics are included in our selection.23 Because categorical indicators are more difficult to manipulate, we transform each of them to dummy variables.24 We use the Blomqvist coefficient, which is based on the median and thus more robust, to evaluate the correlation between numerical indicators.25 The Gamma coefficient is used to measure correlation between categorical variables. Gamma coefficient is also used to measure the relationship between categorical and numerical indicators.26 Figure 4 depicts the correlation among numerical variables.
                                         </div>
                                     
+                                        <!-- figure 4 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F4" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure4.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F4"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 4</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F4"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
+                                          </div>
+                                        <div role="paragraph">
+                                            From the result above, we can make a statement on the consistency of regional effect on sailboat price that the regional effect is significant on the price of sailboats. To further prove this point, we conduct the analysis of variance on region and sailboat variant.27 The ANOVA (formula: listing price ~ geological region) suggests that the main effect of geological region is statistically significant but very small (F(2, 4633) = 11.11, p < .001; Eta2 = 4.77e-03, 95% CI [1.85e-03, 1.00]). The effect sizes were labelled following Field's recommendations.28
+                                        </div>
+                                        <div role="paragraph">
+                                            A closer look at the sailboat variants reveals that Europe is slightly less impacted by regional effect than the other two areas. This, in our opinion, is owing to the distribution of sailboat variants. As shown in Figure 3-3, Europe is home to the majority of the variants, making it less susceptible to geological effects.
+                                        </div>
+                                        <div role="paragraph">
+                                            Similarly, for monohull sailboats and catamarans, we conclude that the manufacture year, Ball/Disp, CSF, Disp/Len, which are sailboat parameters, have the greatest effect on the listed price. The price is inversely linked to the year of manufacture. The price is only slightly affected by economic factors. As a result, we are confident to state that it is critical to consider the sailboat's parameters as well as the year of production when estimating the price. This will be discussed in later sections.
+                                        </div>
+                                        <div role="paragraph">
+                                            Aside from the regional impacts, we can draw other conclusions. The correlation among the design factors shows that they are highly correlated. According to our study of literature, this is because sailboats are designed to meet certain requirements for strength, speed, safety, and durability.8,9 Moreover, the manufacture year of the sailboat shows strong correlation with indicators like the type of sailboat and some design parameters. In general, catamarans are more likely to decay in comparison with monohulled sailboats. We can say that manufacture year is a significant parameter when purchasing catamarans.
+                                        </div>
+                                        <div role="paragraph">
+                                            Based on the calculated coefficients, we can visualize the correlation among categorical variables and numerical variables as shown in Figure 5. The figure on the left shows the categorical variable correlation network. The degree of correlation is indicated by the depth of hue.
+                                        </div>
+
+                                        <!-- figure 5 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F5" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure5.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F5"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 5</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F5"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
+                                        </div>
+                                        <div role="paragraph">
+                                            In conclusion, we discover that the impact of region on listing prices is statistically significant, but confined to a certain bound. For variants, the regional impact is greatest in the Caribbean and least in Europe. Although the regional impact is minor, due to regional inconsistency, strategies can be devised to exploit this information barrier.
+                                        </div>
 
                                     </section>
                                 
@@ -1717,160 +1765,174 @@
                                         <h2>
                                             Clustering Analysis
                                         </h2>
+                                        <div role="paragraph">
+                                            The first step in clustering is to specify a distance measure that will be used to describe the proximity of indicators. Then, determine optimize the distance between clusters or the distance of all indicators to the center of their cluster. There is no one-size-fits-all clustering method, instead, there are numerous approaches for different goals.
+                                        </div>
                                        <h3>
                                         Distance and Optimization Objective
                                        </h3>
                                         <div role="paragraph">
-                                            
+                                            Since the number of indicators in our dataset is diverse, we choose Minkowski distance to measure the distance between data points because it works as a generalization of both the Euclidean distance and the Manhattan distance.29
+                                        </div>
+                                        <div role="paragraph">
+                                            Then we choose our optimization objective. Different optimization goals yield varying results. The optimization goal is chosen based on the reason of clustering, resulting in various clustering methods.30 When clustering analysis is applied to relationships, two kinds of relationships appear. The first is the connection within the clusters, and the second is the relationship between the clusters. Such connections can be described using the terms compactness and connectedness. Methods based on compactness seek to minimize distances within clusters, while methods based on connectedness seek to optimize dissimilarity between clusters.31
                                         </div>
                                         <h3>
                                             Clustering Result
                                         </h3>
-                                        <div role="paragraph">
 
+                                        <!-- figure 6 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F6" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure6.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F6"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 6</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F6"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
+                                          </div>
 
-                                            <!-- figure 6 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F6" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure6.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F6"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 6</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
-                                                    </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F6"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
+                                          <div role="paragraph">
 
-                                            <!-- figure 7 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F7" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure7_1.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F7"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 7</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
-                                                    </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F7"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
+                                          </div>
+                                        
+                                        <!-- figure 7 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F7" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure7_1.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F7"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 7</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F7"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
+                                          </div>
+                                          <div role="paragraph">
 
+                                          </div>
 
-                                            <!-- figure 8 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F8" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure7_2.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F8"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 8</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
-                                                    </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F8"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
+                                        <!-- figure 8 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F8" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure7_2.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F8"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 8</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F8"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
+                                          </div>
+                                          <div role="paragraph">
 
-                                            <!-- figure 9 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F9" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure8.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F9"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 9</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
-                                                    </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F9"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
-                                        </div>
+                                          </div>
+
+                                        <!-- figure 9 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F9" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure8.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F9"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 9</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F9"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
+                                          </div>
+                                          <div role="paragraph">
+                                            With the calculation of similarity matrix and state space, we are able to calculate the cluster for each sailboat. By examination, the result of clustering is consistent. Thus, we obtain equivalent independent predictors. Next, we determine the weight of indicators within each predictor.
+                                          </div>
                                         <h3>
                                             Weight Calculation
                                         </h3>
                                         <div role="paragraph">
 
-
-                                            <!-- figure 10 -->
-                                            <div class="figure-wrap" data-specific-use="distribute">
-                                                <figure id="F10" class="graphic">
-                                                  <img
-                                                    src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure9.png"
-                                                    height="3071"
-                                                    width="4333"
-                                                    aria-labelledby="F10"
-                                                    loading="lazy"
-                                                  />
-                                                  <figcaption>
-                                                    <div class="caption"><span class="heading">Figure 3</span>. The</div>
-                                                    <div class="notes">
-                                                      <div role="doc-footnote">The .</div>
-                                                    </div>
-                                                  </figcaption>
-                                                </figure>
-                                                <a
-                                                  href="#F10"
-                                                  class="open-in-viewer btn btn-dark figure-pop-btn"
-                                                  data-index="0"
-                                                >
-                                                  <i aria-hidden="true" class="icon-extlink-smooth"></i>
-                                                  <span>Open in viewer</span>
-                                                </a>
-                                              </div>
                                         </div>
+                                        <!-- figure 10 -->
+                                        <div class="figure-wrap" data-specific-use="distribute">
+                                            <figure id="F10" class="graphic">
+                                              <img
+                                                src="/content_files/projects/competition/undergraduate/COMAP_2023/figure/figure9.png"
+                                                height="3071"
+                                                width="4333"
+                                                aria-labelledby="F10"
+                                                loading="lazy"
+                                              />
+                                              <figcaption>
+                                                <div class="caption"><span class="heading">Figure 3</span>. The</div>
+                                                <div class="notes">
+                                                  <div role="doc-footnote">The .</div>
+                                                </div>
+                                              </figcaption>
+                                            </figure>
+                                            <a
+                                              href="#F10"
+                                              class="open-in-viewer btn btn-dark figure-pop-btn"
+                                              data-index="0"
+                                            >
+                                              <i aria-hidden="true" class="icon-extlink-smooth"></i>
+                                              <span>Open in viewer</span>
+                                            </a>
+                                          </div>
 
                                     </section>
 
@@ -3198,9 +3260,9 @@ COMAP-2332190                   # Name of the folder
                                     <section id="acknowledgments" role="doc-acknowledgments">
                                         <h2>Acknowledgments</h2>
                                         <div role="paragraph">
-                                            <b>Submit:</b> this article is a document of 2023 COMAP competition,
+                                            <b>Submit:</b> this article is the document of 2023 COMAP competition,
                                             the manuscript is submitted and awarded with <a
-                                                href="/content_files/projects/competition/undergraduate/competition_certificates/2023comap.pdf"><b>???</b></a>.
+                                                href="/content_files/projects/competition/undergraduate/competition_certificates/2023comap.pdf"><b>Meritorius winner</b></a>.
                                         </div>
                                         <div role="paragraph">
                                             <b>Author contributions:</b> All authors contributed to the setup of
