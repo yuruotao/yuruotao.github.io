@@ -58386,7 +58386,7 @@
           g.tooltip({
             html: !0,
             template:
-              '\n            <div class="tooltip become-member-tooltip" role="tooltip">\n            <div class="arrow"></div>\n            <div class="tooltip-inner"></div>\n            </div>',
+              '<div class="tooltip become-member-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
             offset: "-25%, 16px",
           });
       };
