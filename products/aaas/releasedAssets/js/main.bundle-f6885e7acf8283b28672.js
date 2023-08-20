@@ -19405,7 +19405,11 @@
             (v.getTitle = function getTitle() {
               var v = this.element.getAttribute("data-original-title");
               return (
-
+                v ||
+                  (v =
+                    "function" == typeof this.config.title
+                      ? this.config.title.call(this.element)
+                      : this.config.title),
                 v
               );
             }),
